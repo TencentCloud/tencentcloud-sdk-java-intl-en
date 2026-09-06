@@ -38,16 +38,14 @@ public class InstanceInfo extends AbstractModel {
     private String Zone;
 
     /**
-    * <p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CreateVersion")
     @Expose
     private String CreateVersion;
 
     /**
-    * <p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("InitParams")
     @Expose
@@ -75,16 +73,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long StorageNodeNum;
 
     /**
-    * <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
 
     /**
-    * <p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("InstanceName")
     @Expose
@@ -161,64 +157,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String StatusDesc;
 
     /**
-    * <p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MCCpu")
     @Expose
     private Long MCCpu;
 
     /**
-    * <p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MCMem")
     @Expose
     private Long MCMem;
 
     /**
-    * <p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ComputerNodeCpu")
     @Expose
     private Long ComputerNodeCpu;
 
     /**
-    * <p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ComputerNodeMem")
     @Expose
     private Long ComputerNodeMem;
 
     /**
-    * <p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StorageNodeCpu")
     @Expose
     private Long StorageNodeCpu;
 
     /**
-    * <p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StorageNodeMem")
     @Expose
     private Long StorageNodeMem;
 
     /**
-    * <p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MCNum")
     @Expose
     private Long MCNum;
 
     /**
-    * <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -232,24 +220,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PayMode;
 
     /**
-    * <p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AccountTag")
     @Expose
     private String AccountTag;
 
     /**
-    * <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StorageType")
     @Expose
@@ -257,7 +242,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DestroyedAt")
     @Expose
@@ -265,7 +249,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireAt")
     @Expose
@@ -273,7 +256,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolatedAt")
     @Expose
@@ -281,7 +263,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolatedFrom")
     @Expose
@@ -289,7 +270,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Replications")
     @Expose
@@ -303,40 +283,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long FullReplications;
 
     /**
-    * <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SubAccountUin")
     @Expose
     private String SubAccountUin;
 
     /**
-    * <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * <p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * <p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Nodes")
     @Expose
@@ -371,24 +346,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CdcNodeNum;
 
     /**
-    * <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AZMode")
     @Expose
     private Long AZMode;
 
     /**
-    * <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StandbyFlag")
     @Expose
     private Long StandbyFlag;
 
     /**
-    * <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StandbySecondaryNum")
     @Expose
@@ -486,11 +458,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AnalysisRelationInfo [] AnalysisRelationInfos;
 
     /**
-    * <p>Analysis engine instance info</p>
+    * <p>Analysis engine instance information</p>
     */
     @SerializedName("AnalysisInstanceInfo")
     @Expose
     private AnalysisInstanceInfo AnalysisInstanceInfo;
+
+    /**
+    * 
+    */
+    @SerializedName("AutoScaleConfigs")
+    @Expose
+    private AutoScalingConfig [] AutoScaleConfigs;
 
     /**
      * Get <p>Number of compute nodes</p> 
@@ -529,40 +508,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateVersion <p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CreateVersion 
      */
     public String getCreateVersion() {
         return this.CreateVersion;
     }
 
     /**
-     * Set <p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateVersion <p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CreateVersion 
      */
     public void setCreateVersion(String CreateVersion) {
         this.CreateVersion = CreateVersion;
     }
 
     /**
-     * Get <p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InitParams <p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return InitParams 
      */
     public InstanceParam [] getInitParams() {
         return this.InitParams;
     }
 
     /**
-     * Set <p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InitParams <p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param InitParams 
      */
     public void setInitParams(InstanceParam [] InitParams) {
         this.InitParams = InitParams;
@@ -617,40 +588,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourceTags <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ResourceTags 
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceTags <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ResourceTags 
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get <p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName <p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return InstanceName 
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set <p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName <p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param InstanceName 
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -825,10 +788,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MCCpu <p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MCCpu 
      * @deprecated
      */
     @Deprecated
@@ -837,10 +798,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set <p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MCCpu <p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MCCpu 
      * @deprecated
      */
     @Deprecated
@@ -849,10 +808,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MCMem <p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MCMem 
      * @deprecated
      */
     @Deprecated
@@ -861,10 +818,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set <p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MCMem <p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MCMem 
      * @deprecated
      */
     @Deprecated
@@ -873,10 +828,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComputerNodeCpu <p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ComputerNodeCpu 
      * @deprecated
      */
     @Deprecated
@@ -885,10 +838,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set <p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComputerNodeCpu <p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ComputerNodeCpu 
      * @deprecated
      */
     @Deprecated
@@ -897,10 +848,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComputerNodeMem <p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ComputerNodeMem 
      * @deprecated
      */
     @Deprecated
@@ -909,10 +858,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set <p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComputerNodeMem <p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ComputerNodeMem 
      * @deprecated
      */
     @Deprecated
@@ -921,50 +868,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageNodeCpu <p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StorageNodeCpu 
      */
     public Long getStorageNodeCpu() {
         return this.StorageNodeCpu;
     }
 
     /**
-     * Set <p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageNodeCpu <p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StorageNodeCpu 
      */
     public void setStorageNodeCpu(Long StorageNodeCpu) {
         this.StorageNodeCpu = StorageNodeCpu;
     }
 
     /**
-     * Get <p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageNodeMem <p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StorageNodeMem 
      */
     public Long getStorageNodeMem() {
         return this.StorageNodeMem;
     }
 
     /**
-     * Set <p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageNodeMem <p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StorageNodeMem 
      */
     public void setStorageNodeMem(Long StorageNodeMem) {
         this.StorageNodeMem = StorageNodeMem;
     }
 
     /**
-     * Get <p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MCNum <p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MCNum 
      * @deprecated
      */
     @Deprecated
@@ -973,10 +910,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set <p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MCNum <p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MCNum 
      * @deprecated
      */
     @Deprecated
@@ -985,20 +920,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RenewFlag <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RenewFlag 
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RenewFlag <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RenewFlag 
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -1021,70 +952,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccountTag <p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AccountTag 
      */
     public String getAccountTag() {
         return this.AccountTag;
     }
 
     /**
-     * Set <p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccountTag <p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AccountTag 
      */
     public void setAccountTag(String AccountTag) {
         this.AccountTag = AccountTag;
     }
 
     /**
-     * Get <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return InstanceType 
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param InstanceType 
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StorageType 
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StorageType 
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>&quot;0000-00-00 00:00:00&quot;</p> 
      * @return DestroyedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDestroyedAt() {
         return this.DestroyedAt;
@@ -1092,19 +1009,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DestroyedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDestroyedAt(String DestroyedAt) {
         this.DestroyedAt = DestroyedAt;
     }
 
     /**
-     * Get <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>&quot;0000-00-00 00:00:00&quot;</p> 
      * @return ExpireAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpireAt() {
         return this.ExpireAt;
@@ -1112,19 +1025,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExpireAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireAt(String ExpireAt) {
         this.ExpireAt = ExpireAt;
     }
 
     /**
-     * Get <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>&quot;0000-00-00 00:00:00&quot;</p> 
      * @return IsolatedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolatedAt() {
         return this.IsolatedAt;
@@ -1132,19 +1041,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsolatedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolatedAt(String IsolatedAt) {
         this.IsolatedAt = IsolatedAt;
     }
 
     /**
-     * Get <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>&quot;0000-00-00 00:00:00&quot;</p> 
      * @return IsolatedFrom <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolatedFrom() {
         return this.IsolatedFrom;
@@ -1152,19 +1057,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsolatedFrom <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolatedFrom(String IsolatedFrom) {
         this.IsolatedFrom = IsolatedFrom;
     }
 
     /**
-     * Get <p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>1</p> 
      * @return Replications <p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getReplications() {
         return this.Replications;
@@ -1172,9 +1073,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Replications <p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReplications(Long Replications) {
         this.Replications = Replications;
@@ -1197,100 +1096,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppId <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AppId 
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppId <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AppId 
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubAccountUin <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SubAccountUin 
      */
     public String getSubAccountUin() {
         return this.SubAccountUin;
     }
 
     /**
-     * Set <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubAccountUin <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SubAccountUin 
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;
     }
 
     /**
-     * Get <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uin <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Uin 
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uin <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Uin 
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get <p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Zones <p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Zones 
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set <p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Zones <p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Zones 
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get <p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Nodes <p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Nodes 
      */
     public InstanceNode [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set <p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Nodes <p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Nodes 
      */
     public void setNodes(InstanceNode [] Nodes) {
         this.Nodes = Nodes;
@@ -1373,60 +1252,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AZMode <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AZMode 
      */
     public Long getAZMode() {
         return this.AZMode;
     }
 
     /**
-     * Set <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AZMode <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AZMode 
      */
     public void setAZMode(Long AZMode) {
         this.AZMode = AZMode;
     }
 
     /**
-     * Get <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StandbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StandbyFlag 
      */
     public Long getStandbyFlag() {
         return this.StandbyFlag;
     }
 
     /**
-     * Set <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StandbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StandbyFlag 
      */
     public void setStandbyFlag(Long StandbyFlag) {
         this.StandbyFlag = StandbyFlag;
     }
 
     /**
-     * Get <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StandbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StandbySecondaryNum 
      */
     public Long getStandbySecondaryNum() {
         return this.StandbySecondaryNum;
     }
 
     /**
-     * Set <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StandbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StandbySecondaryNum 
      */
     public void setStandbySecondaryNum(Long StandbySecondaryNum) {
         this.StandbySecondaryNum = StandbySecondaryNum;
@@ -1645,19 +1512,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Analysis engine instance info</p> 
-     * @return AnalysisInstanceInfo <p>Analysis engine instance info</p>
+     * Get <p>Analysis engine instance information</p> 
+     * @return AnalysisInstanceInfo <p>Analysis engine instance information</p>
      */
     public AnalysisInstanceInfo getAnalysisInstanceInfo() {
         return this.AnalysisInstanceInfo;
     }
 
     /**
-     * Set <p>Analysis engine instance info</p>
-     * @param AnalysisInstanceInfo <p>Analysis engine instance info</p>
+     * Set <p>Analysis engine instance information</p>
+     * @param AnalysisInstanceInfo <p>Analysis engine instance information</p>
      */
     public void setAnalysisInstanceInfo(AnalysisInstanceInfo AnalysisInstanceInfo) {
         this.AnalysisInstanceInfo = AnalysisInstanceInfo;
+    }
+
+    /**
+     * Get  
+     * @return AutoScaleConfigs 
+     */
+    public AutoScalingConfig [] getAutoScaleConfigs() {
+        return this.AutoScaleConfigs;
+    }
+
+    /**
+     * Set 
+     * @param AutoScaleConfigs 
+     */
+    public void setAutoScaleConfigs(AutoScalingConfig [] AutoScaleConfigs) {
+        this.AutoScaleConfigs = AutoScaleConfigs;
     }
 
     public InstanceInfo() {
@@ -1872,6 +1755,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AnalysisInstanceInfo != null) {
             this.AnalysisInstanceInfo = new AnalysisInstanceInfo(source.AnalysisInstanceInfo);
         }
+        if (source.AutoScaleConfigs != null) {
+            this.AutoScaleConfigs = new AutoScalingConfig[source.AutoScaleConfigs.length];
+            for (int i = 0; i < source.AutoScaleConfigs.length; i++) {
+                this.AutoScaleConfigs[i] = new AutoScalingConfig(source.AutoScaleConfigs[i]);
+            }
+        }
     }
 
 
@@ -1942,6 +1831,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AnalysisMode", this.AnalysisMode);
         this.setParamArrayObj(map, prefix + "AnalysisRelationInfos.", this.AnalysisRelationInfos);
         this.setParamObj(map, prefix + "AnalysisInstanceInfo.", this.AnalysisInstanceInfo);
+        this.setParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
 
     }
 }

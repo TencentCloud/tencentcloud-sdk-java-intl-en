@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.tdmysql.v20211122.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
+public class DescribeFlowTypesRequest extends AbstractModel {
 
-    /**
-    * <p>Cluster ID.</p>
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
-     * Get <p>Cluster ID.</p> 
-     * @return ClusterId <p>Cluster ID.</p>
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set <p>Cluster ID.</p>
-     * @param ClusterId <p>Cluster ID.</p>
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    public TransferStoragePrepayToPostpayRequest() {
+    public DescribeFlowTypesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TransferStoragePrepayToPostpayRequest(TransferStoragePrepayToPostpayRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
-        }
+    public DescribeFlowTypesRequest(DescribeFlowTypesRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

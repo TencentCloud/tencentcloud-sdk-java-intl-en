@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.tdmysql.v20211122.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
+public class DescribeStandbyDBInstanceRelationDetailRequest extends AbstractModel {
 
     /**
-    * <p>Cluster ID.</p>
+    * Instance ID
     */
-    @SerializedName("ClusterId")
+    @SerializedName("InstanceIds")
     @Expose
-    private String ClusterId;
+    private String [] InstanceIds;
 
     /**
-     * Get <p>Cluster ID.</p> 
-     * @return ClusterId <p>Cluster ID.</p>
+     * Get Instance ID 
+     * @return InstanceIds Instance ID
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
     }
 
     /**
-     * Set <p>Cluster ID.</p>
-     * @param ClusterId <p>Cluster ID.</p>
+     * Set Instance ID
+     * @param InstanceIds Instance ID
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
     }
 
-    public TransferStoragePrepayToPostpayRequest() {
+    public DescribeStandbyDBInstanceRelationDetailRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TransferStoragePrepayToPostpayRequest(TransferStoragePrepayToPostpayRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public DescribeStandbyDBInstanceRelationDetailRequest(DescribeStandbyDBInstanceRelationDetailRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

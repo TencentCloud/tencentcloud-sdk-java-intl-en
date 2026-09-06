@@ -21,7 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesRequest extends AbstractModel {
+public class CreateStandbyDBInstanceRequest extends AbstractModel {
+
+    /**
+    * <p>Primary instance id</p>
+    */
+    @SerializedName("PrimaryInstanceId")
+    @Expose
+    private String PrimaryInstanceId;
 
     /**
     * <p>Creating an Instance Region</p>
@@ -73,25 +80,11 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private Long Replications;
 
     /**
-    * <p>Instance count. Maximum is 10.</p>
-    */
-    @SerializedName("InstanceCount")
-    @Expose
-    private Long InstanceCount;
-
-    /**
     * <p>Number of replicas</p>
     */
     @SerializedName("FullReplications")
     @Expose
     private Long FullReplications;
-
-    /**
-    * <p>Create an instance version, using the current latest version by default</p>
-    */
-    @SerializedName("CreateVersion")
-    @Expose
-    private String CreateVersion;
 
     /**
     * <p>Instance name. The required length is 1-60. It can contain Chinese characters, English case, digits, hyphens (-), and underscores (_).</p>
@@ -101,21 +94,7 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * <p>Tag key-value pair array</p>
-    */
-    @SerializedName("ResourceTags")
-    @Expose
-    private ResourceTag [] ResourceTags;
-
-    /**
-    * <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
-    */
-    @SerializedName("InitParams")
-    @Expose
-    private InstanceParam [] InitParams;
-
-    /**
-    * <p>Time unit, m: month</p>
+    * <p>Time unit. y: year, m: month, d: day</p>
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -150,13 +129,6 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String PayMode;
 
     /**
-    * <p>Number of control nodes</p>
-    */
-    @SerializedName("MCNum")
-    @Expose
-    private Long MCNum;
-
-    /**
     * <p>Custom port</p>
     */
     @SerializedName("Vport")
@@ -185,7 +157,7 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String [] VoucherIds;
 
     /**
-    * <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+    * <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -199,53 +171,25 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String StorageType;
 
     /**
-    * <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
+    * <p>Tag key-value pair array</p>
     */
-    @SerializedName("AZMode")
+    @SerializedName("ResourceTags")
     @Expose
-    private Long AZMode;
+    private ResourceTag [] ResourceTags;
 
     /**
-    * <p>Instance mode</p>
+    * <p>Region of the primary instance</p>
+    */
+    @SerializedName("PrimaryInstanceRegion")
+    @Expose
+    private String PrimaryInstanceRegion;
+
+    /**
+    * <p>Instance mode, normal: standard type; enhanced: enhanced</p>
     */
     @SerializedName("InstanceMode")
     @Expose
     private String InstanceMode;
-
-    /**
-    * <p>Parameter template id</p>
-    */
-    @SerializedName("TemplateId")
-    @Expose
-    private String TemplateId;
-
-    /**
-    * <p>Compatible mode, enum:MySQL,HBase</p>
-    */
-    @SerializedName("SQLMode")
-    @Expose
-    private String SQLMode;
-
-    /**
-    * 
-    */
-    @SerializedName("AutoScaleConfig")
-    @Expose
-    private AutoScalingConfig AutoScaleConfig;
-
-    /**
-    * <p>Security group binding list</p>
-    */
-    @SerializedName("SecurityGroupIds")
-    @Expose
-    private String [] SecurityGroupIds;
-
-    /**
-    * <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-    */
-    @SerializedName("UserName")
-    @Expose
-    private String UserName;
 
     /**
     * <p>dbaadmin password</p>
@@ -255,18 +199,27 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String Password;
 
     /**
-    * <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+    * <p>Bind the security group id list</p>
     */
-    @SerializedName("EncryptionEnable")
+    @SerializedName("SecurityGroupIds")
     @Expose
-    private Long EncryptionEnable;
+    private String [] SecurityGroupIds;
 
     /**
-    * 
-    */
-    @SerializedName("AutoScaleConfigs")
-    @Expose
-    private AutoScalingConfig [] AutoScaleConfigs;
+     * Get <p>Primary instance id</p> 
+     * @return PrimaryInstanceId <p>Primary instance id</p>
+     */
+    public String getPrimaryInstanceId() {
+        return this.PrimaryInstanceId;
+    }
+
+    /**
+     * Set <p>Primary instance id</p>
+     * @param PrimaryInstanceId <p>Primary instance id</p>
+     */
+    public void setPrimaryInstanceId(String PrimaryInstanceId) {
+        this.PrimaryInstanceId = PrimaryInstanceId;
+    }
 
     /**
      * Get <p>Creating an Instance Region</p> 
@@ -381,22 +334,6 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance count. Maximum is 10.</p> 
-     * @return InstanceCount <p>Instance count. Maximum is 10.</p>
-     */
-    public Long getInstanceCount() {
-        return this.InstanceCount;
-    }
-
-    /**
-     * Set <p>Instance count. Maximum is 10.</p>
-     * @param InstanceCount <p>Instance count. Maximum is 10.</p>
-     */
-    public void setInstanceCount(Long InstanceCount) {
-        this.InstanceCount = InstanceCount;
-    }
-
-    /**
      * Get <p>Number of replicas</p> 
      * @return FullReplications <p>Number of replicas</p>
      */
@@ -410,22 +347,6 @@ public class CreateDBInstancesRequest extends AbstractModel {
      */
     public void setFullReplications(Long FullReplications) {
         this.FullReplications = FullReplications;
-    }
-
-    /**
-     * Get <p>Create an instance version, using the current latest version by default</p> 
-     * @return CreateVersion <p>Create an instance version, using the current latest version by default</p>
-     */
-    public String getCreateVersion() {
-        return this.CreateVersion;
-    }
-
-    /**
-     * Set <p>Create an instance version, using the current latest version by default</p>
-     * @param CreateVersion <p>Create an instance version, using the current latest version by default</p>
-     */
-    public void setCreateVersion(String CreateVersion) {
-        this.CreateVersion = CreateVersion;
     }
 
     /**
@@ -445,48 +366,16 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Tag key-value pair array</p> 
-     * @return ResourceTags <p>Tag key-value pair array</p>
-     */
-    public ResourceTag [] getResourceTags() {
-        return this.ResourceTags;
-    }
-
-    /**
-     * Set <p>Tag key-value pair array</p>
-     * @param ResourceTags <p>Tag key-value pair array</p>
-     */
-    public void setResourceTags(ResourceTag [] ResourceTags) {
-        this.ResourceTags = ResourceTags;
-    }
-
-    /**
-     * Get <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p> 
-     * @return InitParams <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
-     */
-    public InstanceParam [] getInitParams() {
-        return this.InitParams;
-    }
-
-    /**
-     * Set <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
-     * @param InitParams <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
-     */
-    public void setInitParams(InstanceParam [] InitParams) {
-        this.InitParams = InitParams;
-    }
-
-    /**
-     * Get <p>Time unit, m: month</p> 
-     * @return TimeUnit <p>Time unit, m: month</p>
+     * Get <p>Time unit. y: year, m: month, d: day</p> 
+     * @return TimeUnit <p>Time unit. y: year, m: month, d: day</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set <p>Time unit, m: month</p>
-     * @param TimeUnit <p>Time unit, m: month</p>
+     * Set <p>Time unit. y: year, m: month, d: day</p>
+     * @param TimeUnit <p>Time unit. y: year, m: month, d: day</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
@@ -557,22 +446,6 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Number of control nodes</p> 
-     * @return MCNum <p>Number of control nodes</p>
-     */
-    public Long getMCNum() {
-        return this.MCNum;
-    }
-
-    /**
-     * Set <p>Number of control nodes</p>
-     * @param MCNum <p>Number of control nodes</p>
-     */
-    public void setMCNum(Long MCNum) {
-        this.MCNum = MCNum;
-    }
-
-    /**
      * Get <p>Custom port</p> 
      * @return Vport <p>Custom port</p>
      */
@@ -637,16 +510,16 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p> 
-     * @return InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+     * Get <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p> 
+     * @return InstanceType <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
-     * @param InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+     * Set <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
+     * @param InstanceType <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -669,115 +542,51 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p> 
-     * @return AZMode <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
+     * Get <p>Tag key-value pair array</p> 
+     * @return ResourceTags <p>Tag key-value pair array</p>
      */
-    public Long getAZMode() {
-        return this.AZMode;
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
     }
 
     /**
-     * Set <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
-     * @param AZMode <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
+     * Set <p>Tag key-value pair array</p>
+     * @param ResourceTags <p>Tag key-value pair array</p>
      */
-    public void setAZMode(Long AZMode) {
-        this.AZMode = AZMode;
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get <p>Instance mode</p> 
-     * @return InstanceMode <p>Instance mode</p>
+     * Get <p>Region of the primary instance</p> 
+     * @return PrimaryInstanceRegion <p>Region of the primary instance</p>
+     */
+    public String getPrimaryInstanceRegion() {
+        return this.PrimaryInstanceRegion;
+    }
+
+    /**
+     * Set <p>Region of the primary instance</p>
+     * @param PrimaryInstanceRegion <p>Region of the primary instance</p>
+     */
+    public void setPrimaryInstanceRegion(String PrimaryInstanceRegion) {
+        this.PrimaryInstanceRegion = PrimaryInstanceRegion;
+    }
+
+    /**
+     * Get <p>Instance mode, normal: standard type; enhanced: enhanced</p> 
+     * @return InstanceMode <p>Instance mode, normal: standard type; enhanced: enhanced</p>
      */
     public String getInstanceMode() {
         return this.InstanceMode;
     }
 
     /**
-     * Set <p>Instance mode</p>
-     * @param InstanceMode <p>Instance mode</p>
+     * Set <p>Instance mode, normal: standard type; enhanced: enhanced</p>
+     * @param InstanceMode <p>Instance mode, normal: standard type; enhanced: enhanced</p>
      */
     public void setInstanceMode(String InstanceMode) {
         this.InstanceMode = InstanceMode;
-    }
-
-    /**
-     * Get <p>Parameter template id</p> 
-     * @return TemplateId <p>Parameter template id</p>
-     */
-    public String getTemplateId() {
-        return this.TemplateId;
-    }
-
-    /**
-     * Set <p>Parameter template id</p>
-     * @param TemplateId <p>Parameter template id</p>
-     */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
-    }
-
-    /**
-     * Get <p>Compatible mode, enum:MySQL,HBase</p> 
-     * @return SQLMode <p>Compatible mode, enum:MySQL,HBase</p>
-     */
-    public String getSQLMode() {
-        return this.SQLMode;
-    }
-
-    /**
-     * Set <p>Compatible mode, enum:MySQL,HBase</p>
-     * @param SQLMode <p>Compatible mode, enum:MySQL,HBase</p>
-     */
-    public void setSQLMode(String SQLMode) {
-        this.SQLMode = SQLMode;
-    }
-
-    /**
-     * Get  
-     * @return AutoScaleConfig 
-     */
-    public AutoScalingConfig getAutoScaleConfig() {
-        return this.AutoScaleConfig;
-    }
-
-    /**
-     * Set 
-     * @param AutoScaleConfig 
-     */
-    public void setAutoScaleConfig(AutoScalingConfig AutoScaleConfig) {
-        this.AutoScaleConfig = AutoScaleConfig;
-    }
-
-    /**
-     * Get <p>Security group binding list</p> 
-     * @return SecurityGroupIds <p>Security group binding list</p>
-     */
-    public String [] getSecurityGroupIds() {
-        return this.SecurityGroupIds;
-    }
-
-    /**
-     * Set <p>Security group binding list</p>
-     * @param SecurityGroupIds <p>Security group binding list</p>
-     */
-    public void setSecurityGroupIds(String [] SecurityGroupIds) {
-        this.SecurityGroupIds = SecurityGroupIds;
-    }
-
-    /**
-     * Get <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p> 
-     * @return UserName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-     */
-    public String getUserName() {
-        return this.UserName;
-    }
-
-    /**
-     * Set <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-     * @param UserName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-     */
-    public void setUserName(String UserName) {
-        this.UserName = UserName;
     }
 
     /**
@@ -797,45 +606,32 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p> 
-     * @return EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+     * Get <p>Bind the security group id list</p> 
+     * @return SecurityGroupIds <p>Bind the security group id list</p>
      */
-    public Long getEncryptionEnable() {
-        return this.EncryptionEnable;
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
     }
 
     /**
-     * Set <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
-     * @param EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+     * Set <p>Bind the security group id list</p>
+     * @param SecurityGroupIds <p>Bind the security group id list</p>
      */
-    public void setEncryptionEnable(Long EncryptionEnable) {
-        this.EncryptionEnable = EncryptionEnable;
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
     }
 
-    /**
-     * Get  
-     * @return AutoScaleConfigs 
-     */
-    public AutoScalingConfig [] getAutoScaleConfigs() {
-        return this.AutoScaleConfigs;
-    }
-
-    /**
-     * Set 
-     * @param AutoScaleConfigs 
-     */
-    public void setAutoScaleConfigs(AutoScalingConfig [] AutoScaleConfigs) {
-        this.AutoScaleConfigs = AutoScaleConfigs;
-    }
-
-    public CreateDBInstancesRequest() {
+    public CreateStandbyDBInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDBInstancesRequest(CreateDBInstancesRequest source) {
+    public CreateStandbyDBInstanceRequest(CreateStandbyDBInstanceRequest source) {
+        if (source.PrimaryInstanceId != null) {
+            this.PrimaryInstanceId = new String(source.PrimaryInstanceId);
+        }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
@@ -857,29 +653,11 @@ public class CreateDBInstancesRequest extends AbstractModel {
         if (source.Replications != null) {
             this.Replications = new Long(source.Replications);
         }
-        if (source.InstanceCount != null) {
-            this.InstanceCount = new Long(source.InstanceCount);
-        }
         if (source.FullReplications != null) {
             this.FullReplications = new Long(source.FullReplications);
         }
-        if (source.CreateVersion != null) {
-            this.CreateVersion = new String(source.CreateVersion);
-        }
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
-        }
-        if (source.ResourceTags != null) {
-            this.ResourceTags = new ResourceTag[source.ResourceTags.length];
-            for (int i = 0; i < source.ResourceTags.length; i++) {
-                this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
-            }
-        }
-        if (source.InitParams != null) {
-            this.InitParams = new InstanceParam[source.InitParams.length];
-            for (int i = 0; i < source.InitParams.length; i++) {
-                this.InitParams[i] = new InstanceParam(source.InitParams[i]);
-            }
         }
         if (source.TimeUnit != null) {
             this.TimeUnit = new String(source.TimeUnit);
@@ -895,9 +673,6 @@ public class CreateDBInstancesRequest extends AbstractModel {
         }
         if (source.PayMode != null) {
             this.PayMode = new String(source.PayMode);
-        }
-        if (source.MCNum != null) {
-            this.MCNum = new Long(source.MCNum);
         }
         if (source.Vport != null) {
             this.Vport = new Long(source.Vport);
@@ -923,40 +698,25 @@ public class CreateDBInstancesRequest extends AbstractModel {
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
-        if (source.AZMode != null) {
-            this.AZMode = new Long(source.AZMode);
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new ResourceTag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
+            }
+        }
+        if (source.PrimaryInstanceRegion != null) {
+            this.PrimaryInstanceRegion = new String(source.PrimaryInstanceRegion);
         }
         if (source.InstanceMode != null) {
             this.InstanceMode = new String(source.InstanceMode);
         }
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
-        }
-        if (source.SQLMode != null) {
-            this.SQLMode = new String(source.SQLMode);
-        }
-        if (source.AutoScaleConfig != null) {
-            this.AutoScaleConfig = new AutoScalingConfig(source.AutoScaleConfig);
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
         }
         if (source.SecurityGroupIds != null) {
             this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
             for (int i = 0; i < source.SecurityGroupIds.length; i++) {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
-            }
-        }
-        if (source.UserName != null) {
-            this.UserName = new String(source.UserName);
-        }
-        if (source.Password != null) {
-            this.Password = new String(source.Password);
-        }
-        if (source.EncryptionEnable != null) {
-            this.EncryptionEnable = new Long(source.EncryptionEnable);
-        }
-        if (source.AutoScaleConfigs != null) {
-            this.AutoScaleConfigs = new AutoScalingConfig[source.AutoScaleConfigs.length];
-            for (int i = 0; i < source.AutoScaleConfigs.length; i++) {
-                this.AutoScaleConfigs[i] = new AutoScalingConfig(source.AutoScaleConfigs[i]);
             }
         }
     }
@@ -966,6 +726,7 @@ public class CreateDBInstancesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PrimaryInstanceId", this.PrimaryInstanceId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
@@ -973,34 +734,24 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Disk", this.Disk);
         this.setParamSimple(map, prefix + "StorageNodeNum", this.StorageNodeNum);
         this.setParamSimple(map, prefix + "Replications", this.Replications);
-        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "FullReplications", this.FullReplications);
-        this.setParamSimple(map, prefix + "CreateVersion", this.CreateVersion);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
-        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
-        this.setParamArrayObj(map, prefix + "InitParams.", this.InitParams);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "StorageNodeCpu", this.StorageNodeCpu);
         this.setParamSimple(map, prefix + "StorageNodeMem", this.StorageNodeMem);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamSimple(map, prefix + "MCNum", this.MCNum);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
-        this.setParamSimple(map, prefix + "AZMode", this.AZMode);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "PrimaryInstanceRegion", this.PrimaryInstanceRegion);
         this.setParamSimple(map, prefix + "InstanceMode", this.InstanceMode);
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamSimple(map, prefix + "SQLMode", this.SQLMode);
-        this.setParamObj(map, prefix + "AutoScaleConfig.", this.AutoScaleConfig);
-        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
-        this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Password", this.Password);
-        this.setParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
-        this.setParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

@@ -45,11 +45,25 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+    * <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
+
+    /**
+    * 
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
 
     /**
      * Get <p>Filter parameters</p> 
@@ -100,19 +114,51 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul> 
-     * @return EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+     * Get <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul> 
+     * @return EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
-     * @param EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+     * Set <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
+     * @param EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;
+    }
+
+    /**
+     * Get  
+     * @return OrderBy 
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 
+     * @param OrderBy 
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get  
+     * @return OrderDirection 
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 
+     * @param OrderDirection 
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
     }
 
     public DescribeDBInstancesRequest() {
@@ -138,6 +184,12 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         if (source.EngineType != null) {
             this.EngineType = new String(source.EngineType);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

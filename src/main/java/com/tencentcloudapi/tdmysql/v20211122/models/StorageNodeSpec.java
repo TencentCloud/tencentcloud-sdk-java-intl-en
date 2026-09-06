@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class StorageNodeSpec extends AbstractModel {
 
     /**
-    * <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SpecCode")
     @Expose
@@ -74,16 +73,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long StorageNodeMinDisk;
 
     /**
-    * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StorageNodeDefaultDisk")
     @Expose
@@ -104,20 +101,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DiskTypeCategory;
 
     /**
-     * Get <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpecCode <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SpecCode 
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpecCode <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SpecCode 
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -220,40 +213,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StorageType 
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StorageType 
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StorageNodeDefaultDisk 
      */
     public Long getStorageNodeDefaultDisk() {
         return this.StorageNodeDefaultDisk;
     }
 
     /**
-     * Set <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StorageNodeDefaultDisk 
      */
     public void setStorageNodeDefaultDisk(Long StorageNodeDefaultDisk) {
         this.StorageNodeDefaultDisk = StorageNodeDefaultDisk;

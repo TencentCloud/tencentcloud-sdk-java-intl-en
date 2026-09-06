@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class InstanceNode extends AbstractModel {
 
     /**
-    * Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("InstanceId")
     @Expose
@@ -41,241 +39,207 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EniIp")
     @Expose
     private String EniIp;
 
     /**
-    * Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Disk")
     @Expose
     private Long Disk;
 
     /**
-    * Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("LocalDNS")
     @Expose
     private String LocalDNS;
 
     /**
-    * Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("LogDisk")
     @Expose
     private Long LogDisk;
 
     /**
-    * Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DataDisk")
     @Expose
     private Long DataDisk;
 
     /**
-    * Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ZoneID")
     @Expose
     private String ZoneID;
 
     /**
-    * Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Replicas")
     @Expose
     private Long Replicas;
 
     /**
-    * Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Shards")
     @Expose
     private Long Shards;
 
     /**
-    * Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DataReplicas")
     @Expose
     private Long DataReplicas;
 
     /**
-    * Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Params")
     @Expose
     private String Params;
 
     /**
-    * Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-     * Get Primary key
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ID Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ID 
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ID Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ID 
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return InstanceId 
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param InstanceId 
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Node Id
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Node Id 
      * @return NodeId Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNodeId() {
         return this.NodeId;
@@ -283,469 +247,375 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NodeId Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Ip Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Ip 
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Ip Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Ip 
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EniIp Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EniIp 
      */
     public String getEniIp() {
         return this.EniIp;
     }
 
     /**
-     * Set Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EniIp Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EniIp 
      */
     public void setEniIp(String EniIp) {
         this.EniIp = EniIp;
     }
 
     /**
-     * Get Instance Port
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Port Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Port 
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Port Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Port 
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpecCode Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SpecCode 
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpecCode Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SpecCode 
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NodeName Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return NodeName 
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeName Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param NodeName 
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Cpu Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Cpu 
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Cpu Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Cpu 
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Instance memory
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Mem Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Mem 
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Mem Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Mem 
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Disk Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Disk 
      */
     public Long getDisk() {
         return this.Disk;
     }
 
     /**
-     * Set Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Disk Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Disk 
      */
     public void setDisk(Long Disk) {
         this.Disk = Disk;
     }
 
     /**
-     * Get Instance type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Instance status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get instance version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Version instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Version 
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set instance version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Version instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Version 
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Zone Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Zone 
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Zone Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Zone 
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LocalDNS Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return LocalDNS 
      */
     public String getLocalDNS() {
         return this.LocalDNS;
     }
 
     /**
-     * Set Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LocalDNS Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param LocalDNS 
      */
     public void setLocalDNS(String LocalDNS) {
         this.LocalDNS = LocalDNS;
     }
 
     /**
-     * Get Instance Region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Region 
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Region 
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogDisk Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return LogDisk 
      */
     public Long getLogDisk() {
         return this.LogDisk;
     }
 
     /**
-     * Set Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogDisk Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param LogDisk 
      */
     public void setLogDisk(Long LogDisk) {
         this.LogDisk = LogDisk;
     }
 
     /**
-     * Get Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataDisk Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DataDisk 
      */
     public Long getDataDisk() {
         return this.DataDisk;
     }
 
     /**
-     * Set Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataDisk Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DataDisk 
      */
     public void setDataDisk(Long DataDisk) {
         this.DataDisk = DataDisk;
     }
 
     /**
-     * Get Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneID Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ZoneID 
      */
     public String getZoneID() {
         return this.ZoneID;
     }
 
     /**
-     * Set Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneID Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ZoneID 
      */
     public void setZoneID(String ZoneID) {
         this.ZoneID = ZoneID;
     }
 
     /**
-     * Get Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SpecName Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SpecName 
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SpecName Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SpecName 
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Replicas Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Replicas 
      */
     public Long getReplicas() {
         return this.Replicas;
     }
 
     /**
-     * Set Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Replicas Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Replicas 
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
     }
 
     /**
-     * Get Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Shards Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Shards 
      */
     public Long getShards() {
         return this.Shards;
     }
 
     /**
-     * Set Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Shards Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Shards 
      */
     public void setShards(Long Shards) {
         this.Shards = Shards;
     }
 
     /**
-     * Get Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataReplicas Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DataReplicas 
      */
     public Long getDataReplicas() {
         return this.DataReplicas;
     }
 
     /**
-     * Set Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataReplicas Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DataReplicas 
      */
     public void setDataReplicas(Long DataReplicas) {
         this.DataReplicas = DataReplicas;
     }
 
     /**
-     * Get Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Params Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Params 
      */
     public String getParams() {
         return this.Params;
     }
 
     /**
-     * Set Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Params Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Params 
      */
     public void setParams(String Params) {
         this.Params = Params;
     }
 
     /**
-     * Get Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StorageType 
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StorageType 
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

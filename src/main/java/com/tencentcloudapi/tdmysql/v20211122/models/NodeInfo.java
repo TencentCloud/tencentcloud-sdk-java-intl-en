@@ -24,48 +24,42 @@ import java.util.HashMap;
 public class NodeInfo extends AbstractModel {
 
     /**
-    * <p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * <p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * <p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * <p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * <p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * <p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Host")
     @Expose
@@ -100,120 +94,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long DataDisk;
 
     /**
-     * Get <p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IP <p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return IP 
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set <p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IP <p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param IP 
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get <p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type <p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type <p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get <p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NodeId <p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return NodeId 
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set <p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeId <p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param NodeId 
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get <p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Port <p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Port 
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set <p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Port <p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Port 
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get <p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Zone <p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Zone 
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set <p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Zone <p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Zone 
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get <p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Host <p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Host 
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set <p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Host <p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Host 
      */
     public void setHost(String Host) {
         this.Host = Host;

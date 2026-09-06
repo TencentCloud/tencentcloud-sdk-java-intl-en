@@ -24,59 +24,72 @@ import java.util.HashMap;
 public class AutoScalingConfig extends AbstractModel {
 
     /**
-    * <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RangeMin")
     @Expose
     private Float RangeMin;
 
     /**
-    * <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RangeMax")
     @Expose
     private Float RangeMax;
 
     /**
-     * Get <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RangeMin <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+     * Get  
+     * @return RangeMin 
      */
     public Float getRangeMin() {
         return this.RangeMin;
     }
 
     /**
-     * Set <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RangeMin <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RangeMin 
      */
     public void setRangeMin(Float RangeMin) {
         this.RangeMin = RangeMin;
     }
 
     /**
-     * Get <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RangeMax <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RangeMax 
      */
     public Float getRangeMax() {
         return this.RangeMax;
     }
 
     /**
-     * Set <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RangeMax <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RangeMax 
      */
     public void setRangeMax(Float RangeMax) {
         this.RangeMax = RangeMax;
+    }
+
+    /**
+     * Get  
+     * @return ResourceType 
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 
+     * @param ResourceType 
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
     }
 
     public AutoScalingConfig() {
@@ -93,6 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RangeMax != null) {
             this.RangeMax = new Float(source.RangeMax);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
     }
 
 
@@ -102,6 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RangeMin", this.RangeMin);
         this.setParamSimple(map, prefix + "RangeMax", this.RangeMax);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }
 }

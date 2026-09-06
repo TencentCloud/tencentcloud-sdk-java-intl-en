@@ -21,70 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServerlessCcu extends AbstractModel {
+public class ServerlessNodeNumSpec extends AbstractModel {
 
     /**
-    * <p>ccu minimum value</p>
+    * 
     */
-    @SerializedName("MinCcu")
+    @SerializedName("MinNodeNum")
     @Expose
-    private Float MinCcu;
+    private Long MinNodeNum;
 
     /**
-    * <p>Maximum value of ccu</p>
+    * 
     */
-    @SerializedName("MaxCcu")
+    @SerializedName("MaxNodeNum")
     @Expose
-    private Float [] MaxCcu;
+    private Long MaxNodeNum;
 
     /**
-     * Get <p>ccu minimum value</p> 
-     * @return MinCcu <p>ccu minimum value</p>
+     * Get  
+     * @return MinNodeNum 
      */
-    public Float getMinCcu() {
-        return this.MinCcu;
+    public Long getMinNodeNum() {
+        return this.MinNodeNum;
     }
 
     /**
-     * Set <p>ccu minimum value</p>
-     * @param MinCcu <p>ccu minimum value</p>
+     * Set 
+     * @param MinNodeNum 
      */
-    public void setMinCcu(Float MinCcu) {
-        this.MinCcu = MinCcu;
+    public void setMinNodeNum(Long MinNodeNum) {
+        this.MinNodeNum = MinNodeNum;
     }
 
     /**
-     * Get <p>Maximum value of ccu</p> 
-     * @return MaxCcu <p>Maximum value of ccu</p>
+     * Get  
+     * @return MaxNodeNum 
      */
-    public Float [] getMaxCcu() {
-        return this.MaxCcu;
+    public Long getMaxNodeNum() {
+        return this.MaxNodeNum;
     }
 
     /**
-     * Set <p>Maximum value of ccu</p>
-     * @param MaxCcu <p>Maximum value of ccu</p>
+     * Set 
+     * @param MaxNodeNum 
      */
-    public void setMaxCcu(Float [] MaxCcu) {
-        this.MaxCcu = MaxCcu;
+    public void setMaxNodeNum(Long MaxNodeNum) {
+        this.MaxNodeNum = MaxNodeNum;
     }
 
-    public ServerlessCcu() {
+    public ServerlessNodeNumSpec() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ServerlessCcu(ServerlessCcu source) {
-        if (source.MinCcu != null) {
-            this.MinCcu = new Float(source.MinCcu);
+    public ServerlessNodeNumSpec(ServerlessNodeNumSpec source) {
+        if (source.MinNodeNum != null) {
+            this.MinNodeNum = new Long(source.MinNodeNum);
         }
-        if (source.MaxCcu != null) {
-            this.MaxCcu = new Float[source.MaxCcu.length];
-            for (int i = 0; i < source.MaxCcu.length; i++) {
-                this.MaxCcu[i] = new Float(source.MaxCcu[i]);
-            }
+        if (source.MaxNodeNum != null) {
+            this.MaxNodeNum = new Long(source.MaxNodeNum);
         }
     }
 
@@ -93,8 +90,8 @@ public class ServerlessCcu extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MinCcu", this.MinCcu);
-        this.setParamArraySimple(map, prefix + "MaxCcu.", this.MaxCcu);
+        this.setParamSimple(map, prefix + "MinNodeNum", this.MinNodeNum);
+        this.setParamSimple(map, prefix + "MaxNodeNum", this.MaxNodeNum);
 
     }
 }

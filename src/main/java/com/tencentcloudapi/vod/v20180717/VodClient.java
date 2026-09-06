@@ -73,6 +73,28 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to initiate a voice cloning task. It generates an exclusive voice based on reference audio. The generated voice can be used for subsequent text to speech. Voice cloning is an asynchronous task. The voice ID and audio audition are generated after task completion.
+     * @param req CloneVoiceAsyncRequest
+     * @return CloneVoiceAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneVoiceAsyncResponse CloneVoiceAsync(CloneVoiceAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloneVoiceAsync", CloneVoiceAsyncResponse.class);
+    }
+
+    /**
+     *This API is used to initiate a voice cloning task to clone an exclusive voice based on reference audio. The generated voice can be used for subsequent text to speech.
+     * @param req CloneVoiceSyncRequest
+     * @return CloneVoiceSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneVoiceSyncResponse CloneVoiceSync(CloneVoiceSyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloneVoiceSync", CloneVoiceSyncResponse.class);
+    }
+
+    /**
      *This API is used to confirm the result of uploading a media file (and cover file) to VOD, store the media information, and return the playback address and ID of the file.
      * @param req CommitUploadRequest
      * @return CommitUploadResponse
@@ -1050,6 +1072,19 @@ This API is used to delete a player configuration.
     }
 
     /**
+     *This API is used to delete a specified voice by voice ID. Deletion is irreversible and the voice cannot be used for subsequent APIs. It only supports deletion of voices for this account. System preset voices cannot be deleted.
+
+Note: Newly designed or cloned voice types cannot be deleted before activation (not found means non-operational). They are activated only after the newly created voice type is used for TTS once.
+     * @param req DeleteVoiceRequest
+     * @return DeleteVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVoiceResponse DeleteVoice(DeleteVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVoice", DeleteVoiceResponse.class);
+    }
+
+    /**
      *This API is used to delete a custom watermarking template.
      * @param req DeleteWatermarkTemplateRequest
      * @return DeleteWatermarkTemplateResponse
@@ -1773,6 +1808,19 @@ This API is used to query player configurations. It supports pagination.
     }
 
     /**
+     *Query the available timbre list under the current account. It supports filtering by optional conditions such as voice ID, kind, name, gender, age, language, tag, and scenario.
+
+Note: Newly designed or cloned voice types cannot be queried before activation. They are activated only after the newly created voice type is used for TTS once.
+     * @param req DescribeVoicesRequest
+     * @return DescribeVoicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoicesResponse DescribeVoices(DescribeVoicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVoices", DescribeVoicesResponse.class);
+    }
+
+    /**
      *This API is used to query custom watermarking templates and supports paged queries by filters.
      * @param req DescribeWatermarkTemplatesRequest
      * @return DescribeWatermarkTemplatesResponse
@@ -1792,6 +1840,17 @@ This API is used to query player configurations. It supports pagination.
     public DescribeWordSamplesResponse DescribeWordSamples(DescribeWordSamplesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWordSamples", DescribeWordSamplesResponse.class);
+    }
+
+    /**
+     *This API is used to initiate a voice design task. It generates a custom voice based on a natural language description. You can also specify a voice profile, such as name, gender, age, language, tag, and scenario. If trial text is attached upon submission, an audio audition is generated after task completion. Voice design is an asynchronous task, and the voice ID is generated after task completion.
+     * @param req DesignVoiceAsyncRequest
+     * @return DesignVoiceAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DesignVoiceAsyncResponse DesignVoiceAsync(DesignVoiceAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DesignVoiceAsync", DesignVoiceAsyncResponse.class);
     }
 
     /**
@@ -2783,6 +2842,28 @@ The advantage of editing not being solidified is that the editing operation is r
     }
 
     /**
+     *Initiate a speech synthesis task to convert text into speech, oriented towards long text scenarios (maximum 200,000 characters), supporting specified timbre and synthesis parameters such as speaking rate, volume, pitch, sampling rate, and output format. Speech synthesis is an asynchronous task, and audio results are generated upon completion.
+     * @param req TextToSpeechAsyncRequest
+     * @return TextToSpeechAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechAsyncResponse TextToSpeechAsync(TextToSpeechAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeechAsync", TextToSpeechAsyncResponse.class);
+    }
+
+    /**
+     *Initiate a speech synthesis task to convert text into speech.
+     * @param req TextToSpeechSyncRequest
+     * @return TextToSpeechSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechSyncResponse TextToSpeechSync(TextToSpeechSyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeechSync", TextToSpeechSyncResponse.class);
+    }
+
+    /**
      *This API is used to create a Token for invoking the AIGC API. After creation, data sync has a delay. It becomes queryable or deletable after about 30 seconds.
      * @param req UpdateAigcApiTokenRequest
      * @return UpdateAigcApiTokenResponse
@@ -2791,6 +2872,19 @@ The advantage of editing not being solidified is that the editing operation is r
     public UpdateAigcApiTokenResponse UpdateAigcApiToken(UpdateAigcApiTokenRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAigcApiToken", UpdateAigcApiTokenResponse.class);
+    }
+
+    /**
+     *This API is used to update the profile of a voice by voice ID, including its name, description, gender, age, language, tags, and scenarios, and returns the complete voice information after the update. Only voices under this account can be updated. System preset voices do not support update.
+
+Note: Newly designed or cloned voice types cannot be updated before activation. They are activated only after the newly created voice type is used for TTS once.
+     * @param req UpdateVoiceRequest
+     * @return UpdateVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateVoiceResponse UpdateVoice(UpdateVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateVoice", UpdateVoiceResponse.class);
     }
 
     /**

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.tdmysql.v20211122.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
+public class ResetDbaAdminPrivilegesRequest extends AbstractModel {
 
     /**
-    * <p>Cluster ID.</p>
+    * <p>Instance id</p>
     */
-    @SerializedName("ClusterId")
+    @SerializedName("InstanceId")
     @Expose
-    private String ClusterId;
+    private String InstanceId;
 
     /**
-     * Get <p>Cluster ID.</p> 
-     * @return ClusterId <p>Cluster ID.</p>
+     * Get <p>Instance id</p> 
+     * @return InstanceId <p>Instance id</p>
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set <p>Cluster ID.</p>
-     * @param ClusterId <p>Cluster ID.</p>
+     * Set <p>Instance id</p>
+     * @param InstanceId <p>Instance id</p>
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public TransferStoragePrepayToPostpayRequest() {
+    public ResetDbaAdminPrivilegesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TransferStoragePrepayToPostpayRequest(TransferStoragePrepayToPostpayRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public ResetDbaAdminPrivilegesRequest(ResetDbaAdminPrivilegesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -64,7 +64,7 @@ public class TransferStoragePrepayToPostpayRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }
