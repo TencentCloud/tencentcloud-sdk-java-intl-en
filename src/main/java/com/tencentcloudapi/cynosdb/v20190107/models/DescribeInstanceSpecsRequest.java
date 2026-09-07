@@ -45,7 +45,7 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
     private String DeviceType;
 
     /**
-    * <p>Cluster level, optional. For example P0, P1</p>
+    * <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
     */
     @SerializedName("ClusterLevel")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Cluster level, optional. For example P0, P1</p> 
-     * @return ClusterLevel <p>Cluster level, optional. For example P0, P1</p>
+     * Get <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p> 
+     * @return ClusterLevel <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
     }
 
     /**
-     * Set <p>Cluster level, optional. For example P0, P1</p>
-     * @param ClusterLevel <p>Cluster level, optional. For example P0, P1</p>
+     * Set <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
+     * @param ClusterLevel <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;

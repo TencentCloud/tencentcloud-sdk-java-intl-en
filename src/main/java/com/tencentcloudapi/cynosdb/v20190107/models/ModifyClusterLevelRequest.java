@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransferClusterPrepayToPostpayRequest extends AbstractModel {
+public class ModifyClusterLevelRequest extends AbstractModel {
 
     /**
     * <p>Cluster ID.</p>
@@ -29,6 +29,13 @@ public class TransferClusterPrepayToPostpayRequest extends AbstractModel {
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
+
+    /**
+    * <p>Cluster level</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
 
     /**
      * Get <p>Cluster ID.</p> 
@@ -46,16 +53,35 @@ public class TransferClusterPrepayToPostpayRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
-    public TransferClusterPrepayToPostpayRequest() {
+    /**
+     * Get <p>Cluster level</p> 
+     * @return ClusterLevel <p>Cluster level</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>Cluster level</p>
+     * @param ClusterLevel <p>Cluster level</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    public ModifyClusterLevelRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TransferClusterPrepayToPostpayRequest(TransferClusterPrepayToPostpayRequest source) {
+    public ModifyClusterLevelRequest(ModifyClusterLevelRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
         }
     }
 
@@ -65,6 +91,7 @@ public class TransferClusterPrepayToPostpayRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
 
     }
 }

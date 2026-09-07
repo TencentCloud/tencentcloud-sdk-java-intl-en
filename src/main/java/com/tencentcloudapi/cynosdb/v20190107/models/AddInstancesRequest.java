@@ -59,7 +59,7 @@ public class AddInstancesRequest extends AbstractModel {
     private String DeviceType;
 
     /**
-    * <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+    * <p>This field has been deprecated. The current version no longer transmits this value.</p>
     */
     @SerializedName("InstanceGrpId")
     @Expose
@@ -230,8 +230,8 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p> 
-     * @return InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+     * Get <p>This field has been deprecated. The current version no longer transmits this value.</p> 
+     * @return InstanceGrpId <p>This field has been deprecated. The current version no longer transmits this value.</p>
      * @deprecated
      */
     @Deprecated
@@ -240,8 +240,8 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
-     * @param InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+     * Set <p>This field has been deprecated. The current version no longer transmits this value.</p>
+     * @param InstanceGrpId <p>This field has been deprecated. The current version no longer transmits this value.</p>
      * @deprecated
      */
     @Deprecated

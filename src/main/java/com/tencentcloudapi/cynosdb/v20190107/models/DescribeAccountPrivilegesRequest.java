@@ -45,21 +45,21 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     private String Host;
 
     /**
-    * When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
+    * Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
     */
     @SerializedName("Db")
     @Expose
     private String Db;
 
     /**
-    * Object type in a specified database. Valid values: `table`, `*`.
+    * Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The database name can be specified when `Type` is 'table'.
+    * When Type is "table", it is used to specify the table name. Required when Type is "table".
     */
     @SerializedName("TableName")
     @Expose
@@ -114,48 +114,48 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     }
 
     /**
-     * Get When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified. 
-     * @return Db When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
+     * Get Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`. 
+     * @return Db Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
      */
     public String getDb() {
         return this.Db;
     }
 
     /**
-     * Set When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
-     * @param Db When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
+     * Set Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
+     * @param Db Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
      */
     public void setDb(String Db) {
         this.Db = Db;
     }
 
     /**
-     * Get Object type in a specified database. Valid values: `table`, `*`. 
-     * @return Type Object type in a specified database. Valid values: `table`, `*`.
+     * Get Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table. 
+     * @return Type Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Object type in a specified database. Valid values: `table`, `*`.
-     * @param Type Object type in a specified database. Valid values: `table`, `*`.
+     * Set Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
+     * @param Type Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The database name can be specified when `Type` is 'table'. 
-     * @return TableName The database name can be specified when `Type` is 'table'.
+     * Get When Type is "table", it is used to specify the table name. Required when Type is "table". 
+     * @return TableName When Type is "table", it is used to specify the table name. Required when Type is "table".
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set The database name can be specified when `Type` is 'table'.
-     * @param TableName The database name can be specified when `Type` is 'table'.
+     * Set When Type is "table", it is used to specify the table name. Required when Type is "table".
+     * @param TableName When Type is "table", it is used to specify the table name. Required when Type is "table".
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;

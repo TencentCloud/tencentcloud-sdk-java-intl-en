@@ -831,6 +831,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the automated storage expansion configuration.
+     * @param req DescribeClusterStorageAutoExpandRequest
+     * @return DescribeClusterStorageAutoExpandResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterStorageAutoExpandResponse DescribeClusterStorageAutoExpand(DescribeClusterStorageAutoExpandRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterStorageAutoExpand", DescribeClusterStorageAutoExpandResponse.class);
+    }
+
+    /**
      *This API is used to query cluster transparent encryption information.
      * @param req DescribeClusterTransparentEncryptInfoRequest
      * @return DescribeClusterTransparentEncryptInfoResponse
@@ -1708,6 +1719,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryption(ModifyClusterGlobalEncryptionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterGlobalEncryption", ModifyClusterGlobalEncryptionResponse.class);
+    }
+
+    /**
+     *Modify cluster
+     * @param req ModifyClusterLevelRequest
+     * @return ModifyClusterLevelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterLevelResponse ModifyClusterLevel(ModifyClusterLevelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterLevel", ModifyClusterLevelResponse.class);
     }
 
     /**

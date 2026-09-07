@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeClusterDetailDatabasesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Offset. Default value: `0`.
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. Default value: `20`. Maximum value: `100`.
+    * <p>Number of returned results. Default: 20; maximum: 100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Database name
+    * <p>Database name. Perform substring match by this field.</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Offset. Default value: `0`. 
-     * @return Offset Offset. Default value: `0`.
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: `0`.
-     * @param Offset Offset. Default value: `0`.
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. Default value: `20`. Maximum value: `100`. 
-     * @return Limit Number of returned results. Default value: `20`. Maximum value: `100`.
+     * Get <p>Number of returned results. Default: 20; maximum: 100</p> 
+     * @return Limit <p>Number of returned results. Default: 20; maximum: 100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: `20`. Maximum value: `100`.
-     * @param Limit Number of returned results. Default value: `20`. Maximum value: `100`.
+     * Set <p>Number of returned results. Default: 20; maximum: 100</p>
+     * @param Limit <p>Number of returned results. Default: 20; maximum: 100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Database name 
-     * @return DbName Database name
+     * Get <p>Database name. Perform substring match by this field.</p> 
+     * @return DbName <p>Database name. Perform substring match by this field.</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set Database name
-     * @param DbName Database name
+     * Set <p>Database name. Perform substring match by this field.</p>
+     * @param DbName <p>Database name. Perform substring match by this field.</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;

@@ -87,7 +87,7 @@ public class CynosdbInstance extends AbstractModel {
     private String Zone;
 
     /**
-    * <p>Instance status</p>
+    * <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -588,16 +588,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance status</p> 
-     * @return Status <p>Instance status</p>
+     * Get <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul> 
+     * @return Status <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Instance status</p>
-     * @param Status <p>Instance status</p>
+     * Set <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+     * @param Status <p>Instance status</p><p>Enumeration values:</p><ul><li>creating: Under creation</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

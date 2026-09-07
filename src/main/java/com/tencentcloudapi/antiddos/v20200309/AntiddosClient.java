@@ -61,6 +61,17 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to purchase Anti-DDoS packages.
+     * @param req CreateBgpInstanceRequest
+     * @return CreateBgpInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBgpInstanceResponse CreateBgpInstance(CreateBgpInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBgpInstance", CreateBgpInstanceResponse.class);
+    }
+
+    /**
      *This API is used to add an Anti-DDoS IP blocklist/allowlist.
      * @param req CreateBlackWhiteIpListRequest
      * @return CreateBlackWhiteIpListResponse

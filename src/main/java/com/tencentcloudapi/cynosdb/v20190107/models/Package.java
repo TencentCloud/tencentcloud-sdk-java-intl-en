@@ -53,6 +53,14 @@ CCU: compute resource package. DISK: storage resource package.
     private String PackageType;
 
     /**
+    * Resource package edition
+base - basic, common - general, enterprise - business
+    */
+    @SerializedName("PackageVersion")
+    @Expose
+    private String PackageVersion;
+
+    /**
     * Resource package region of use.
 China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
     */
@@ -188,6 +196,26 @@ CCU: compute resource package. DISK: storage resource package.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
+    }
+
+    /**
+     * Get Resource package edition
+base - basic, common - general, enterprise - business 
+     * @return PackageVersion Resource package edition
+base - basic, common - general, enterprise - business
+     */
+    public String getPackageVersion() {
+        return this.PackageVersion;
+    }
+
+    /**
+     * Set Resource package edition
+base - basic, common - general, enterprise - business
+     * @param PackageVersion Resource package edition
+base - basic, common - general, enterprise - business
+     */
+    public void setPackageVersion(String PackageVersion) {
+        this.PackageVersion = PackageVersion;
     }
 
     /**
@@ -382,6 +410,9 @@ Specifies that the fee has been refunded.
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.PackageVersion != null) {
+            this.PackageVersion = new String(source.PackageVersion);
+        }
         if (source.PackageRegion != null) {
             this.PackageRegion = new String(source.PackageRegion);
         }
@@ -426,6 +457,7 @@ Specifies that the fee has been refunded.
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
         this.setParamSimple(map, prefix + "PackageRegion", this.PackageRegion);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PackageTotalSpec", this.PackageTotalSpec);

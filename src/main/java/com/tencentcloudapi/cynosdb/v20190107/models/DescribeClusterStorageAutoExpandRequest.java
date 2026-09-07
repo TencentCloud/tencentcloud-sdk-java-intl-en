@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.antiddos.v20200309.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagInfo extends AbstractModel {
+public class DescribeClusterStorageAutoExpandRequest extends AbstractModel {
 
     /**
-    * Tag key.
+    * <p>Cluster ID.</p>
     */
-    @SerializedName("TagKey")
+    @SerializedName("ClusterId")
     @Expose
-    private String TagKey;
+    private String ClusterId;
 
     /**
-    * Tag value.
-    */
-    @SerializedName("TagValue")
-    @Expose
-    private String TagValue;
-
-    /**
-     * Get Tag key. 
-     * @return TagKey Tag key.
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
-    public String getTagKey() {
-        return this.TagKey;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set Tag key.
-     * @param TagKey Tag key.
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
-    /**
-     * Get Tag value. 
-     * @return TagValue Tag value.
-     */
-    public String getTagValue() {
-        return this.TagValue;
-    }
-
-    /**
-     * Set Tag value.
-     * @param TagValue Tag value.
-     */
-    public void setTagValue(String TagValue) {
-        this.TagValue = TagValue;
-    }
-
-    public TagInfo() {
+    public DescribeClusterStorageAutoExpandRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TagInfo(TagInfo source) {
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
-        }
-        if (source.TagValue != null) {
-            this.TagValue = new String(source.TagValue);
+    public DescribeClusterStorageAutoExpandRequest(DescribeClusterStorageAutoExpandRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
     }
 
@@ -90,8 +64,7 @@ public class TagInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
-        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }
