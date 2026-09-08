@@ -1,7 +1,16 @@
 package com.tencentcloudapi.captcha.v20190722;
 public enum CaptchaErrorCode {
+     /* CAM signature/authentication error. */
+     AUTHFAILURE("AuthFailure"),
+     
+     /* Request not authorized by CAM. */
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
      /* Internal error. */
      INTERNALERROR("InternalError"),
+     
+     /* Parameter error. */
+     INVALIDPARAMETER("InvalidParameter"),
      
      /* Missing parameter. */
      MISSINGPARAMETER("MissingParameter"),

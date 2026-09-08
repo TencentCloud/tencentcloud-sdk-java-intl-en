@@ -39,6 +39,50 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
+     *Create a captcha: You can create multiple Captcha based on different business needs. Each verification has different client types and security policies. The limit for new Captcha is 50.
+     * @param req CreateCaptchaInfoInternationalRequest
+     * @return CreateCaptchaInfoInternationalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCaptchaInfoInternationalResponse CreateCaptchaInfoInternational(CreateCaptchaInfoInternationalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCaptchaInfoInternational", CreateCaptchaInfoInternationalResponse.class);
+    }
+
+    /**
+     *Create an IP allowlist: You can create an IP allowlist based on different business needs.
+     * @param req CreateIpWhiteListInternationalRequest
+     * @return CreateIpWhiteListInternationalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIpWhiteListInternationalResponse CreateIpWhiteListInternational(CreateIpWhiteListInternationalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIpWhiteListInternational", CreateIpWhiteListInternationalResponse.class);
+    }
+
+    /**
+     *Delete an IP allowlist: You can delete an IP allowlist based on different business needs.
+     * @param req DeleteIpWhiteListInternationalRequest
+     * @return DeleteIpWhiteListInternationalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIpWhiteListInternationalResponse DeleteIpWhiteListInternational(DeleteIpWhiteListInternationalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIpWhiteListInternational", DeleteIpWhiteListInternationalResponse.class);
+    }
+
+    /**
+     *Query the Captcha list to obtain all verification CaptchaAppIds, verification names, and other information internationally.
+     * @param req DescribeCaptchaInfoListInternationalRequest
+     * @return DescribeCaptchaInfoListInternationalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaptchaInfoListInternationalResponse DescribeCaptchaInfoListInternational(DescribeCaptchaInfoListInternationalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCaptchaInfoListInternational", DescribeCaptchaInfoListInternationalResponse.class);
+    }
+
+    /**
      *This API is used to query the result of CAPTCHA ticket verification (web and app).
      * @param req DescribeCaptchaResultRequest
      * @return DescribeCaptchaResultResponse
@@ -47,6 +91,50 @@ public class CaptchaClient extends AbstractClient{
     public DescribeCaptchaResultResponse DescribeCaptchaResult(DescribeCaptchaResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCaptchaResult", DescribeCaptchaResultResponse.class);
+    }
+
+    /**
+     *IP allowlist list: You can query the IP whitelist list based on different business needs.
+     * @param req DescribeIpWhiteListInternationalRequest
+     * @return DescribeIpWhiteListInternationalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpWhiteListInternationalResponse DescribeIpWhiteListInternational(DescribeIpWhiteListInternationalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpWhiteListInternational", DescribeIpWhiteListInternationalResponse.class);
+    }
+
+    /**
+     *Change the captcha configuration, including basic, appearance, and security settings such as captcha name, prompt language, and validation type.
+     * @param req ModifyCaptchaInfoInternationalRequest
+     * @return ModifyCaptchaInfoInternationalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCaptchaInfoInternationalResponse ModifyCaptchaInfoInternational(ModifyCaptchaInfoInternationalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCaptchaInfoInternational", ModifyCaptchaInfoInternationalResponse.class);
+    }
+
+    /**
+     *Edit IP allowlist: You can edit the IP allowlist based on different business needs.
+     * @param req ModifyIpWhiteListInternationalRequest
+     * @return ModifyIpWhiteListInternationalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIpWhiteListInternationalResponse ModifyIpWhiteListInternational(ModifyIpWhiteListInternationalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIpWhiteListInternational", ModifyIpWhiteListInternationalResponse.class);
+    }
+
+    /**
+     *Delete a captcha: once deleted, verification scenarios using this CaptchaAppId will fail to load the verification code on the frontend, and invoice verification will report an error on the backend. Proceed with caution.
+     * @param req RemoveCaptchaInfoInternationalRequest
+     * @return RemoveCaptchaInfoInternationalResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveCaptchaInfoInternationalResponse RemoveCaptchaInfoInternational(RemoveCaptchaInfoInternationalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveCaptchaInfoInternational", RemoveCaptchaInfoInternationalResponse.class);
     }
 
 }
