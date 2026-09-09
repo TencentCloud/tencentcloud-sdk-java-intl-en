@@ -52,7 +52,7 @@ public class TextToSpeechSyncRequest extends AbstractModel {
     private String LanguageBoost;
 
     /**
-    * <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
+    * <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
     */
     @SerializedName("Output")
     @Expose
@@ -130,16 +130,16 @@ public class TextToSpeechSyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p> 
-     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
+     * Get <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p> 
+     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
      */
     public TextToSpeechSyncOutputOption getOutput() {
         return this.Output;
     }
 
     /**
-     * Set <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
-     * @param Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
+     * Set <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
+     * @param Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
      */
     public void setOutput(TextToSpeechSyncOutputOption Output) {
         this.Output = Output;
