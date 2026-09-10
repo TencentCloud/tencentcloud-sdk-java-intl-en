@@ -52,6 +52,13 @@ public class ControlAIConversationRequest extends AbstractModel {
     private InvokeLLM InvokeLLM;
 
     /**
+    * Information passed through to the client
+    */
+    @SerializedName("TransparentData")
+    @Expose
+    private TransparentData TransparentData;
+
+    /**
      * Get Task unique identifier. 
      * @return TaskId Task unique identifier.
      */
@@ -115,6 +122,22 @@ public class ControlAIConversationRequest extends AbstractModel {
         this.InvokeLLM = InvokeLLM;
     }
 
+    /**
+     * Get Information passed through to the client 
+     * @return TransparentData Information passed through to the client
+     */
+    public TransparentData getTransparentData() {
+        return this.TransparentData;
+    }
+
+    /**
+     * Set Information passed through to the client
+     * @param TransparentData Information passed through to the client
+     */
+    public void setTransparentData(TransparentData TransparentData) {
+        this.TransparentData = TransparentData;
+    }
+
     public ControlAIConversationRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ControlAIConversationRequest extends AbstractModel {
         if (source.InvokeLLM != null) {
             this.InvokeLLM = new InvokeLLM(source.InvokeLLM);
         }
+        if (source.TransparentData != null) {
+            this.TransparentData = new TransparentData(source.TransparentData);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ControlAIConversationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
         this.setParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
+        this.setParamObj(map, prefix + "TransparentData.", this.TransparentData);
 
     }
 }

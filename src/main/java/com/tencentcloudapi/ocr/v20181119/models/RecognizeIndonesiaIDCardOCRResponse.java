@@ -152,7 +152,7 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
     /**
     * Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
@@ -464,7 +464,7 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
     /**
      * Get Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
@@ -475,7 +475,7 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
 -9109 This capability is not enabled. Please contact customer support to activate the alert service 
      * @return WarnCardInfos Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
@@ -492,7 +492,7 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
     /**
      * Set Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate
@@ -503,7 +503,7 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
 -9109 This capability is not enabled. Please contact customer support to activate the alert service
      * @param WarnCardInfos Card Warning Information
 
--9101 Alarm for covered certificate
+-9101 Alarm for incomplete or covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
 -9104 Alarm for tamper certificate

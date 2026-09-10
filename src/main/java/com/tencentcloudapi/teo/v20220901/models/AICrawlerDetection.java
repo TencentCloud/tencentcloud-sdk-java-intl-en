@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AICrawlerDetection extends AbstractModel {
 
     /**
-    * Whether AI crawler detection is enabled. valid values:.
+    * Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
@@ -34,22 +34,22 @@ public class AICrawlerDetection extends AbstractModel {
     private String Enabled;
 
     /**
-    * AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
+    * Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
     */
     @SerializedName("Action")
     @Expose
     private SecurityAction Action;
 
     /**
-     * Get Whether AI crawler detection is enabled. valid values:.
+     * Get Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
  
-     * @return Enabled Whether AI crawler detection is enabled. valid values:.
+     * @return Enabled Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
@@ -59,11 +59,11 @@ public class AICrawlerDetection extends AbstractModel {
     }
 
     /**
-     * Set Whether AI crawler detection is enabled. valid values:.
+     * Set Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
-     * @param Enabled Whether AI crawler detection is enabled. valid values:.
+     * @param Enabled Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
@@ -73,32 +73,32 @@ public class AICrawlerDetection extends AbstractModel {
     }
 
     /**
-     * Get AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>. 
-     * @return Action AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
+     * Get Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li> 
+     * @return Action Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
      */
     public SecurityAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
-     * @param Action AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
+     * Set Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
+     * @param Action Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
      */
     public void setAction(SecurityAction Action) {
         this.Action = Action;
