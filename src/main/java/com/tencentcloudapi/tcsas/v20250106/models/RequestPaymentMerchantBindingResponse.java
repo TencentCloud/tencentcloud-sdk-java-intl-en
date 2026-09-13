@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RequestPaymentMerchantBindingResponse extends AbstractModel {
 
     /**
-    * <p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p>
+    * <p>Response parameters structure for requesting payment merchant binding by a mini program team.</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class RequestPaymentMerchantBindingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p> 
-     * @return Data <p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p>
+     * Get <p>Response parameters structure for requesting payment merchant binding by a mini program team.</p> 
+     * @return Data <p>Response parameters structure for requesting payment merchant binding by a mini program team.</p>
      */
     public MerchantBindApprovalResp getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p>
-     * @param Data <p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p>
+     * Set <p>Response parameters structure for requesting payment merchant binding by a mini program team.</p>
+     * @param Data <p>Response parameters structure for requesting payment merchant binding by a mini program team.</p>
      */
     public void setData(MerchantBindApprovalResp Data) {
         this.Data = Data;

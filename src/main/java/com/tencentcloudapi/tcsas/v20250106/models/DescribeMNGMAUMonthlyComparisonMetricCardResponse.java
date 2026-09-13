@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMNGMAUMonthlyComparisonMetricCardResponse extends AbstractModel {
 
     /**
-    * Data display at the top of the page.
+    * Response data.
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMNGMAUMonthlyComparisonMetricCardResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get Data display at the top of the page. 
-     * @return Data Data display at the top of the page.
+     * Get Response data. 
+     * @return Data Response data.
      */
     public MAUIndicatorCard getData() {
         return this.Data;
     }
 
     /**
-     * Set Data display at the top of the page.
-     * @param Data Data display at the top of the page.
+     * Set Response data.
+     * @param Data Response data.
      */
     public void setData(MAUIndicatorCard Data) {
         this.Data = Data;

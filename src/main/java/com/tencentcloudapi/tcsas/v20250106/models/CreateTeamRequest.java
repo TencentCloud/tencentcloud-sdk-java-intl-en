@@ -24,141 +24,187 @@ import java.util.HashMap;
 public class CreateTeamRequest extends AbstractModel {
 
     /**
-    * Team name.
+    * <p>Team name.</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Admin name.
+    * <p>Administrator name.</p>
     */
     @SerializedName("AdminUserId")
     @Expose
     private String AdminUserId;
 
     /**
-    * Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+    * <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
     */
     @SerializedName("TeamRoleTypeList")
     @Expose
     private Long [] TeamRoleTypeList;
 
     /**
-    * Remark.
+    * <p>Remarks.</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Platform ID, required for API call.
+    * <p>Platform ID, required for API call.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Associated team ID.
+    * <p>Associated team ID.</p>
     */
     @SerializedName("RelatedTeamId")
     @Expose
     private String RelatedTeamId;
 
     /**
-     * Get Team name. 
-     * @return TeamName Team name.
+    * <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+    */
+    @SerializedName("ExpiryTime")
+    @Expose
+    private Long ExpiryTime;
+
+    /**
+    * <p>Administrator user IDs.</p>
+    */
+    @SerializedName("AdminUserIds")
+    @Expose
+    private String [] AdminUserIds;
+
+    /**
+     * Get <p>Team name.</p> 
+     * @return TeamName <p>Team name.</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name.
-     * @param TeamName Team name.
+     * Set <p>Team name.</p>
+     * @param TeamName <p>Team name.</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Admin name. 
-     * @return AdminUserId Admin name.
+     * Get <p>Administrator name.</p> 
+     * @return AdminUserId <p>Administrator name.</p>
      */
     public String getAdminUserId() {
         return this.AdminUserId;
     }
 
     /**
-     * Set Admin name.
-     * @param AdminUserId Admin name.
+     * Set <p>Administrator name.</p>
+     * @param AdminUserId <p>Administrator name.</p>
      */
     public void setAdminUserId(String AdminUserId) {
         this.AdminUserId = AdminUserId;
     }
 
     /**
-     * Get Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported). 
-     * @return TeamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+     * Get <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p> 
+     * @return TeamRoleTypeList <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
      */
     public Long [] getTeamRoleTypeList() {
         return this.TeamRoleTypeList;
     }
 
     /**
-     * Set Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
-     * @param TeamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+     * Set <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
+     * @param TeamRoleTypeList <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
      */
     public void setTeamRoleTypeList(Long [] TeamRoleTypeList) {
         this.TeamRoleTypeList = TeamRoleTypeList;
     }
 
     /**
-     * Get Remark. 
-     * @return Remark Remark.
+     * Get <p>Remarks.</p> 
+     * @return Remark <p>Remarks.</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remark.
-     * @param Remark Remark.
+     * Set <p>Remarks.</p>
+     * @param Remark <p>Remarks.</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Platform ID, required for API call. 
-     * @return PlatformId Platform ID, required for API call.
+     * Get <p>Platform ID, required for API call.</p> 
+     * @return PlatformId <p>Platform ID, required for API call.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID, required for API call.
-     * @param PlatformId Platform ID, required for API call.
+     * Set <p>Platform ID, required for API call.</p>
+     * @param PlatformId <p>Platform ID, required for API call.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Associated team ID. 
-     * @return RelatedTeamId Associated team ID.
+     * Get <p>Associated team ID.</p> 
+     * @return RelatedTeamId <p>Associated team ID.</p>
      */
     public String getRelatedTeamId() {
         return this.RelatedTeamId;
     }
 
     /**
-     * Set Associated team ID.
-     * @param RelatedTeamId Associated team ID.
+     * Set <p>Associated team ID.</p>
+     * @param RelatedTeamId <p>Associated team ID.</p>
      */
     public void setRelatedTeamId(String RelatedTeamId) {
         this.RelatedTeamId = RelatedTeamId;
+    }
+
+    /**
+     * Get <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p> 
+     * @return ExpiryTime <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+     */
+    public Long getExpiryTime() {
+        return this.ExpiryTime;
+    }
+
+    /**
+     * Set <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+     * @param ExpiryTime <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+     */
+    public void setExpiryTime(Long ExpiryTime) {
+        this.ExpiryTime = ExpiryTime;
+    }
+
+    /**
+     * Get <p>Administrator user IDs.</p> 
+     * @return AdminUserIds <p>Administrator user IDs.</p>
+     */
+    public String [] getAdminUserIds() {
+        return this.AdminUserIds;
+    }
+
+    /**
+     * Set <p>Administrator user IDs.</p>
+     * @param AdminUserIds <p>Administrator user IDs.</p>
+     */
+    public void setAdminUserIds(String [] AdminUserIds) {
+        this.AdminUserIds = AdminUserIds;
     }
 
     public CreateTeamRequest() {
@@ -190,6 +236,15 @@ public class CreateTeamRequest extends AbstractModel {
         if (source.RelatedTeamId != null) {
             this.RelatedTeamId = new String(source.RelatedTeamId);
         }
+        if (source.ExpiryTime != null) {
+            this.ExpiryTime = new Long(source.ExpiryTime);
+        }
+        if (source.AdminUserIds != null) {
+            this.AdminUserIds = new String[source.AdminUserIds.length];
+            for (int i = 0; i < source.AdminUserIds.length; i++) {
+                this.AdminUserIds[i] = new String(source.AdminUserIds[i]);
+            }
+        }
     }
 
 
@@ -203,6 +258,8 @@ public class CreateTeamRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "RelatedTeamId", this.RelatedTeamId);
+        this.setParamSimple(map, prefix + "ExpiryTime", this.ExpiryTime);
+        this.setParamArraySimple(map, prefix + "AdminUserIds.", this.AdminUserIds);
 
     }
 }

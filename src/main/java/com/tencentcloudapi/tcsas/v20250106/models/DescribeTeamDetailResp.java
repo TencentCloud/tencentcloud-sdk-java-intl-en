@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class DescribeTeamDetailResp extends AbstractModel {
 
     /**
-    * Team name.
+    * <p>Team name.</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+    * <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
     */
     @SerializedName("TeamRoleType")
     @Expose
     private Long TeamRoleType;
 
     /**
-    * Admin account.
+    * <p>Administrator account.</p>
     */
     @SerializedName("AdminUserAccount")
     @Expose
     private String AdminUserAccount;
 
     /**
-    * Creator.
+    * <p>Creator.</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Creation time.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Number of team members.
+    * <p>Number of team members.</p>
     */
     @SerializedName("MemberCount")
     @Expose
     private Long MemberCount;
 
     /**
-    * Number of bound mini program teams.
+    * <p>Number of bound mini program teams.</p>
     */
     @SerializedName("BindMiniTeamCount")
     @Expose
     private Long BindMiniTeamCount;
 
     /**
-    * Name of the bound team.
+    * <p>Team name.</p>
     */
     @SerializedName("BindTeamName")
     @Expose
     private String BindTeamName;
 
     /**
-    * Team registration link.
+    * <p>Team registration link.</p>
     */
     @SerializedName("RegisterLink")
     @Expose
     private String RegisterLink;
 
     /**
-    * Superapp name. Only returned for mini program teams.
+    * <p>Superapp name. Only returned for querying details of mini program teams.</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Team expiration time. 0 indicates no expiration. 
+    * <p>Team expiration time. 0 indicates no expiration.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+    * <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Team name. 
-     * @return TeamName Team name.
+    * <p>Administrator name.</p>
+    */
+    @SerializedName("AdminUserName")
+    @Expose
+    private String AdminUserName;
+
+    /**
+     * Get <p>Team name.</p> 
+     * @return TeamName <p>Team name.</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name.
-     * @param TeamName Team name.
+     * Set <p>Team name.</p>
+     * @param TeamName <p>Team name.</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Team role type. Valid values: 1: Mini program team; 2: Superapp team. 
-     * @return TeamRoleType Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+     * Get <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p> 
+     * @return TeamRoleType <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
      */
     public Long getTeamRoleType() {
         return this.TeamRoleType;
     }
 
     /**
-     * Set Team role type. Valid values: 1: Mini program team; 2: Superapp team.
-     * @param TeamRoleType Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+     * Set <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
+     * @param TeamRoleType <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
      */
     public void setTeamRoleType(Long TeamRoleType) {
         this.TeamRoleType = TeamRoleType;
     }
 
     /**
-     * Get Admin account. 
-     * @return AdminUserAccount Admin account.
+     * Get <p>Administrator account.</p> 
+     * @return AdminUserAccount <p>Administrator account.</p>
      */
     public String getAdminUserAccount() {
         return this.AdminUserAccount;
     }
 
     /**
-     * Set Admin account.
-     * @param AdminUserAccount Admin account.
+     * Set <p>Administrator account.</p>
+     * @param AdminUserAccount <p>Administrator account.</p>
      */
     public void setAdminUserAccount(String AdminUserAccount) {
         this.AdminUserAccount = AdminUserAccount;
     }
 
     /**
-     * Get Creator. 
-     * @return CreateUser Creator.
+     * Get <p>Creator.</p> 
+     * @return CreateUser <p>Creator.</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator.
-     * @param CreateUser Creator.
+     * Set <p>Creator.</p>
+     * @param CreateUser <p>Creator.</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Number of team members. 
-     * @return MemberCount Number of team members.
+     * Get <p>Number of team members.</p> 
+     * @return MemberCount <p>Number of team members.</p>
      */
     public Long getMemberCount() {
         return this.MemberCount;
     }
 
     /**
-     * Set Number of team members.
-     * @param MemberCount Number of team members.
+     * Set <p>Number of team members.</p>
+     * @param MemberCount <p>Number of team members.</p>
      */
     public void setMemberCount(Long MemberCount) {
         this.MemberCount = MemberCount;
     }
 
     /**
-     * Get Number of bound mini program teams. 
-     * @return BindMiniTeamCount Number of bound mini program teams.
+     * Get <p>Number of bound mini program teams.</p> 
+     * @return BindMiniTeamCount <p>Number of bound mini program teams.</p>
      */
     public Long getBindMiniTeamCount() {
         return this.BindMiniTeamCount;
     }
 
     /**
-     * Set Number of bound mini program teams.
-     * @param BindMiniTeamCount Number of bound mini program teams.
+     * Set <p>Number of bound mini program teams.</p>
+     * @param BindMiniTeamCount <p>Number of bound mini program teams.</p>
      */
     public void setBindMiniTeamCount(Long BindMiniTeamCount) {
         this.BindMiniTeamCount = BindMiniTeamCount;
     }
 
     /**
-     * Get Name of the bound team. 
-     * @return BindTeamName Name of the bound team.
+     * Get <p>Team name.</p> 
+     * @return BindTeamName <p>Team name.</p>
      */
     public String getBindTeamName() {
         return this.BindTeamName;
     }
 
     /**
-     * Set Name of the bound team.
-     * @param BindTeamName Name of the bound team.
+     * Set <p>Team name.</p>
+     * @param BindTeamName <p>Team name.</p>
      */
     public void setBindTeamName(String BindTeamName) {
         this.BindTeamName = BindTeamName;
     }
 
     /**
-     * Get Team registration link. 
-     * @return RegisterLink Team registration link.
+     * Get <p>Team registration link.</p> 
+     * @return RegisterLink <p>Team registration link.</p>
      */
     public String getRegisterLink() {
         return this.RegisterLink;
     }
 
     /**
-     * Set Team registration link.
-     * @param RegisterLink Team registration link.
+     * Set <p>Team registration link.</p>
+     * @param RegisterLink <p>Team registration link.</p>
      */
     public void setRegisterLink(String RegisterLink) {
         this.RegisterLink = RegisterLink;
     }
 
     /**
-     * Get Superapp name. Only returned for mini program teams. 
-     * @return ApplicationName Superapp name. Only returned for mini program teams.
+     * Get <p>Superapp name. Only returned for querying details of mini program teams.</p> 
+     * @return ApplicationName <p>Superapp name. Only returned for querying details of mini program teams.</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Superapp name. Only returned for mini program teams.
-     * @param ApplicationName Superapp name. Only returned for mini program teams.
+     * Set <p>Superapp name. Only returned for querying details of mini program teams.</p>
+     * @param ApplicationName <p>Superapp name. Only returned for querying details of mini program teams.</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Team expiration time. 0 indicates no expiration.  
-     * @return ExpireTime Team expiration time. 0 indicates no expiration. 
+     * Get <p>Team expiration time. 0 indicates no expiration.</p> 
+     * @return ExpireTime <p>Team expiration time. 0 indicates no expiration.</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Team expiration time. 0 indicates no expiration. 
-     * @param ExpireTime Team expiration time. 0 indicates no expiration. 
+     * Set <p>Team expiration time. 0 indicates no expiration.</p>
+     * @param ExpireTime <p>Team expiration time. 0 indicates no expiration.</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.  
-     * @return Status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+     * Get <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p> 
+     * @return Status <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
-     * @param Status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+     * Set <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
+     * @param Status <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>Administrator name.</p> 
+     * @return AdminUserName <p>Administrator name.</p>
+     */
+    public String getAdminUserName() {
+        return this.AdminUserName;
+    }
+
+    /**
+     * Set <p>Administrator name.</p>
+     * @param AdminUserName <p>Administrator name.</p>
+     */
+    public void setAdminUserName(String AdminUserName) {
+        this.AdminUserName = AdminUserName;
     }
 
     public DescribeTeamDetailResp() {
@@ -343,6 +366,9 @@ public class DescribeTeamDetailResp extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.AdminUserName != null) {
+            this.AdminUserName = new String(source.AdminUserName);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class DescribeTeamDetailResp extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "AdminUserName", this.AdminUserName);
 
     }
 }

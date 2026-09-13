@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class ModifyTeamRequest extends AbstractModel {
 
     /**
-    * Team ID.
+    * <p>Team ID.</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team name.
+    * <p>Team name.</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Platform ID.
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Team administrator.
+    * <p>Team admin.</p>
     */
     @SerializedName("AdminUserId")
     @Expose
     private String AdminUserId;
 
     /**
-     * Get Team ID. 
-     * @return TeamId Team ID.
+    * <p>Team admin user IDs.</p>
+    */
+    @SerializedName("AdminUserIds")
+    @Expose
+    private String [] AdminUserIds;
+
+    /**
+     * Get <p>Team ID.</p> 
+     * @return TeamId <p>Team ID.</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID.
-     * @param TeamId Team ID.
+     * Set <p>Team ID.</p>
+     * @param TeamId <p>Team ID.</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name. 
-     * @return TeamName Team name.
+     * Get <p>Team name.</p> 
+     * @return TeamName <p>Team name.</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name.
-     * @param TeamName Team name.
+     * Set <p>Team name.</p>
+     * @param TeamName <p>Team name.</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Platform ID. 
-     * @return PlatformId Platform ID.
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID.
-     * @param PlatformId Platform ID.
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Team administrator. 
-     * @return AdminUserId Team administrator.
+     * Get <p>Team admin.</p> 
+     * @return AdminUserId <p>Team admin.</p>
      */
     public String getAdminUserId() {
         return this.AdminUserId;
     }
 
     /**
-     * Set Team administrator.
-     * @param AdminUserId Team administrator.
+     * Set <p>Team admin.</p>
+     * @param AdminUserId <p>Team admin.</p>
      */
     public void setAdminUserId(String AdminUserId) {
         this.AdminUserId = AdminUserId;
+    }
+
+    /**
+     * Get <p>Team admin user IDs.</p> 
+     * @return AdminUserIds <p>Team admin user IDs.</p>
+     */
+    public String [] getAdminUserIds() {
+        return this.AdminUserIds;
+    }
+
+    /**
+     * Set <p>Team admin user IDs.</p>
+     * @param AdminUserIds <p>Team admin user IDs.</p>
+     */
+    public void setAdminUserIds(String [] AdminUserIds) {
+        this.AdminUserIds = AdminUserIds;
     }
 
     public ModifyTeamRequest() {
@@ -135,6 +158,12 @@ public class ModifyTeamRequest extends AbstractModel {
         if (source.AdminUserId != null) {
             this.AdminUserId = new String(source.AdminUserId);
         }
+        if (source.AdminUserIds != null) {
+            this.AdminUserIds = new String[source.AdminUserIds.length];
+            for (int i = 0; i < source.AdminUserIds.length; i++) {
+                this.AdminUserIds[i] = new String(source.AdminUserIds[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class ModifyTeamRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TeamName", this.TeamName);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "AdminUserId", this.AdminUserId);
+        this.setParamArraySimple(map, prefix + "AdminUserIds.", this.AdminUserIds);
 
     }
 }

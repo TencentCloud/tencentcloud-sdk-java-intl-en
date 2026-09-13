@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeTeamListRequest extends AbstractModel {
 
     /**
-    * Pagination offset.
+    * <p>Pagination offset.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of entries per page.
+    * <p>Pagination count.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Platform ID.
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Search keyword (team name).
+    * <p>Team name.</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get Pagination offset. 
-     * @return Offset Pagination offset.
+     * Get <p>Pagination offset.</p> 
+     * @return Offset <p>Pagination offset.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset.
-     * @param Offset Pagination offset.
+     * Set <p>Pagination offset.</p>
+     * @param Offset <p>Pagination offset.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of entries per page. 
-     * @return Limit Number of entries per page.
+     * Get <p>Pagination count.</p> 
+     * @return Limit <p>Pagination count.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page.
-     * @param Limit Number of entries per page.
+     * Set <p>Pagination count.</p>
+     * @param Limit <p>Pagination count.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Platform ID. 
-     * @return PlatformId Platform ID.
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID.
-     * @param PlatformId Platform ID.
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Search keyword (team name). 
-     * @return Keyword Search keyword (team name).
+     * Get <p>Team name.</p> 
+     * @return Keyword <p>Team name.</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Search keyword (team name).
-     * @param Keyword Search keyword (team name).
+     * Set <p>Team name.</p>
+     * @param Keyword <p>Team name.</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

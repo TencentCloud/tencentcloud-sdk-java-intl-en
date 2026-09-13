@@ -71,4 +71,15 @@ public class RceClient extends AbstractClient{
         return this.internalRequest(req, "AssessEnvironmentRisk", AssessEnvironmentRiskResponse.class);
     }
 
+    /**
+     *Used to report events that do not require real-time decision-making in your business. Our engine will perform computations and apply machine learning to mine risk features from these events, which are then used to support real-time event risk assessment.
+     * @param req ReportEventRequest
+     * @return ReportEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportEventResponse ReportEvent(ReportEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReportEvent", ReportEventResponse.class);
+    }
+
 }
