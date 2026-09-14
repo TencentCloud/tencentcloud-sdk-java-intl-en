@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class MediaProcessTaskInput extends AbstractModel {
 
     /**
-    * List of transcoding tasks.
+    * Video transcoding task list.
     */
     @SerializedName("TranscodeTaskSet")
     @Expose
     private TranscodeTaskInput [] TranscodeTaskSet;
 
     /**
-    * List of animated image screenshot tasks.
+    * List of video-to-GIF tasks.
     */
     @SerializedName("AnimatedGraphicTaskSet")
     @Expose
     private AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet;
 
     /**
-    * List of time point screenshot tasks.
+    * List of time point screenshot tasks for videos.
     */
     @SerializedName("SnapshotByTimeOffsetTaskSet")
     @Expose
     private SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet;
 
     /**
-    * List of sampled screenshot tasks.
+    * List of sampled screenshot tasks for videos.
     */
     @SerializedName("SampleSnapshotTaskSet")
     @Expose
     private SampleSnapshotTaskInput [] SampleSnapshotTaskSet;
 
     /**
-    * List of image sprite screenshot tasks.
+    * List of image sprite tasks for videos.
     */
     @SerializedName("ImageSpriteTaskSet")
     @Expose
@@ -66,80 +66,80 @@ public class MediaProcessTaskInput extends AbstractModel {
     private AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet;
 
     /**
-     * Get List of transcoding tasks. 
-     * @return TranscodeTaskSet List of transcoding tasks.
+     * Get Video transcoding task list. 
+     * @return TranscodeTaskSet Video transcoding task list.
      */
     public TranscodeTaskInput [] getTranscodeTaskSet() {
         return this.TranscodeTaskSet;
     }
 
     /**
-     * Set List of transcoding tasks.
-     * @param TranscodeTaskSet List of transcoding tasks.
+     * Set Video transcoding task list.
+     * @param TranscodeTaskSet Video transcoding task list.
      */
     public void setTranscodeTaskSet(TranscodeTaskInput [] TranscodeTaskSet) {
         this.TranscodeTaskSet = TranscodeTaskSet;
     }
 
     /**
-     * Get List of animated image screenshot tasks. 
-     * @return AnimatedGraphicTaskSet List of animated image screenshot tasks.
+     * Get List of video-to-GIF tasks. 
+     * @return AnimatedGraphicTaskSet List of video-to-GIF tasks.
      */
     public AnimatedGraphicTaskInput [] getAnimatedGraphicTaskSet() {
         return this.AnimatedGraphicTaskSet;
     }
 
     /**
-     * Set List of animated image screenshot tasks.
-     * @param AnimatedGraphicTaskSet List of animated image screenshot tasks.
+     * Set List of video-to-GIF tasks.
+     * @param AnimatedGraphicTaskSet List of video-to-GIF tasks.
      */
     public void setAnimatedGraphicTaskSet(AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet) {
         this.AnimatedGraphicTaskSet = AnimatedGraphicTaskSet;
     }
 
     /**
-     * Get List of time point screenshot tasks. 
-     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks.
+     * Get List of time point screenshot tasks for videos. 
+     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
      */
     public SnapshotByTimeOffsetTaskInput [] getSnapshotByTimeOffsetTaskSet() {
         return this.SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Set List of time point screenshot tasks.
-     * @param SnapshotByTimeOffsetTaskSet List of time point screenshot tasks.
+     * Set List of time point screenshot tasks for videos.
+     * @param SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
      */
     public void setSnapshotByTimeOffsetTaskSet(SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet) {
         this.SnapshotByTimeOffsetTaskSet = SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Get List of sampled screenshot tasks. 
-     * @return SampleSnapshotTaskSet List of sampled screenshot tasks.
+     * Get List of sampled screenshot tasks for videos. 
+     * @return SampleSnapshotTaskSet List of sampled screenshot tasks for videos.
      */
     public SampleSnapshotTaskInput [] getSampleSnapshotTaskSet() {
         return this.SampleSnapshotTaskSet;
     }
 
     /**
-     * Set List of sampled screenshot tasks.
-     * @param SampleSnapshotTaskSet List of sampled screenshot tasks.
+     * Set List of sampled screenshot tasks for videos.
+     * @param SampleSnapshotTaskSet List of sampled screenshot tasks for videos.
      */
     public void setSampleSnapshotTaskSet(SampleSnapshotTaskInput [] SampleSnapshotTaskSet) {
         this.SampleSnapshotTaskSet = SampleSnapshotTaskSet;
     }
 
     /**
-     * Get List of image sprite screenshot tasks. 
-     * @return ImageSpriteTaskSet List of image sprite screenshot tasks.
+     * Get List of image sprite tasks for videos. 
+     * @return ImageSpriteTaskSet List of image sprite tasks for videos.
      */
     public ImageSpriteTaskInput [] getImageSpriteTaskSet() {
         return this.ImageSpriteTaskSet;
     }
 
     /**
-     * Set List of image sprite screenshot tasks.
-     * @param ImageSpriteTaskSet List of image sprite screenshot tasks.
+     * Set List of image sprite tasks for videos.
+     * @param ImageSpriteTaskSet List of image sprite tasks for videos.
      */
     public void setImageSpriteTaskSet(ImageSpriteTaskInput [] ImageSpriteTaskSet) {
         this.ImageSpriteTaskSet = ImageSpriteTaskSet;

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeMediaMetaDataRequest extends AbstractModel {
 
     /**
-    * Input information of the file that needs to get meta information.
+    * <p>Input information of the file that needs to get meta information.</p>
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-     * Get Input information of the file that needs to get meta information. 
-     * @return InputInfo Input information of the file that needs to get meta information.
+    * <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+     * Get <p>Input information of the file that needs to get meta information.</p> 
+     * @return InputInfo <p>Input information of the file that needs to get meta information.</p>
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Input information of the file that needs to get meta information.
-     * @param InputInfo Input information of the file that needs to get meta information.
+     * Set <p>Input information of the file that needs to get meta information.</p>
+     * @param InputInfo <p>Input information of the file that needs to get meta information.</p>
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
+    }
+
+    /**
+     * Get <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul> 
+     * @return Mode <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+     * @param Mode <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
     }
 
     public DescribeMediaMetaDataRequest() {
@@ -57,6 +80,9 @@ public class DescribeMediaMetaDataRequest extends AbstractModel {
         if (source.InputInfo != null) {
             this.InputInfo = new MediaInputInfo(source.InputInfo);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeMediaMetaDataRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
 
     }
 }

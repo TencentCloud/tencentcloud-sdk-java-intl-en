@@ -31,7 +31,7 @@ public class ImageSpriteTaskInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -52,7 +52,7 @@ public class ImageSpriteTaskInput extends AbstractModel {
     private String WebVttObjectName;
 
     /**
-    * <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
+    * 
     */
     @SerializedName("ObjectNumberFormat")
     @Expose
@@ -82,16 +82,16 @@ public class ImageSpriteTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p> 
-     * @return OutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-     * @param OutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -130,16 +130,16 @@ public class ImageSpriteTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p> 
-     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
+     * Get  
+     * @return ObjectNumberFormat 
      */
     public NumberFormat getObjectNumberFormat() {
         return this.ObjectNumberFormat;
     }
 
     /**
-     * Set <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-     * @param ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
+     * Set 
+     * @param ObjectNumberFormat 
      */
     public void setObjectNumberFormat(NumberFormat ObjectNumberFormat) {
         this.ObjectNumberFormat = ObjectNumberFormat;

@@ -73,7 +73,7 @@ public class TaskNotifyConfig extends AbstractModel {
     private String QueueName;
 
     /**
-    * <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+    * 
     */
     @SerializedName("AwsSQS")
     @Expose
@@ -199,16 +199,16 @@ public class TaskNotifyConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p> 
-     * @return AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+     * Get  
+     * @return AwsSQS 
      */
     public AwsSQS getAwsSQS() {
         return this.AwsSQS;
     }
 
     /**
-     * Set <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-     * @param AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+     * Set 
+     * @param AwsSQS 
      */
     public void setAwsSQS(AwsSQS AwsSQS) {
         this.AwsSQS = AwsSQS;

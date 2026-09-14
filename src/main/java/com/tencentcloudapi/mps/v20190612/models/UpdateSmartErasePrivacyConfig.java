@@ -24,66 +24,46 @@ import java.util.HashMap;
 public class UpdateSmartErasePrivacyConfig extends AbstractModel {
 
     /**
-    * Privacy protection removal method.
-- Blur: blur detection
-- mosaic
+    * 
     */
     @SerializedName("PrivacyModel")
     @Expose
     private String PrivacyModel;
 
     /**
-    * Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate.
+    * 
     */
     @SerializedName("PrivacyTargets")
     @Expose
     private String [] PrivacyTargets;
 
     /**
-     * Get Privacy protection removal method.
-- Blur: blur detection
-- mosaic 
-     * @return PrivacyModel Privacy protection removal method.
-- Blur: blur detection
-- mosaic
+     * Get  
+     * @return PrivacyModel 
      */
     public String getPrivacyModel() {
         return this.PrivacyModel;
     }
 
     /**
-     * Set Privacy protection removal method.
-- Blur: blur detection
-- mosaic
-     * @param PrivacyModel Privacy protection removal method.
-- Blur: blur detection
-- mosaic
+     * Set 
+     * @param PrivacyModel 
      */
     public void setPrivacyModel(String PrivacyModel) {
         this.PrivacyModel = PrivacyModel;
     }
 
     /**
-     * Get Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate. 
-     * @return PrivacyTargets Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate.
+     * Get  
+     * @return PrivacyTargets 
      */
     public String [] getPrivacyTargets() {
         return this.PrivacyTargets;
     }
 
     /**
-     * Set Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate.
-     * @param PrivacyTargets Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
-- face: human face
-- plate: license plate.
+     * Set 
+     * @param PrivacyTargets 
      */
     public void setPrivacyTargets(String [] PrivacyTargets) {
         this.PrivacyTargets = PrivacyTargets;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AigcAudioExtraParam extends AbstractModel {
 
     /**
-    * <p>Resource ID. Specify this based on your needs.</p>
+    * 
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-     * Get <p>Resource ID. Specify this based on your needs.</p> 
-     * @return ResourceId <p>Resource ID. Specify this based on your needs.</p>
+     * Get  
+     * @return ResourceId 
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set <p>Resource ID. Specify this based on your needs.</p>
-     * @param ResourceId <p>Resource ID. Specify this based on your needs.</p>
+     * Set 
+     * @param ResourceId 
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDesignTaskResponse extends AbstractModel {
 
     /**
-    * <p>Error code. 0 is returned if the request is successful.</p>
+    * <p>Error code. 0 is returned if the request is successful, and 100 is returned if it is being processed.</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * <p>Error message. success is returned if the request is successful.</p>
+    * 
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
+    * 
     */
     @SerializedName("Status")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     private String VoiceId;
 
     /**
-    * <p>Audition audio URL.</p>
+    * 
     */
     @SerializedName("AudioUrl")
     @Expose
@@ -73,48 +73,48 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Error code. 0 is returned if the request is successful.</p> 
-     * @return ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
+     * Get <p>Error code. 0 is returned if the request is successful, and 100 is returned if it is being processed.</p> 
+     * @return ErrorCode <p>Error code. 0 is returned if the request is successful, and 100 is returned if it is being processed.</p>
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set <p>Error code. 0 is returned if the request is successful.</p>
-     * @param ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
+     * Set <p>Error code. 0 is returned if the request is successful, and 100 is returned if it is being processed.</p>
+     * @param ErrorCode <p>Error code. 0 is returned if the request is successful, and 100 is returned if it is being processed.</p>
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get <p>Error message. success is returned if the request is successful.</p> 
-     * @return Msg <p>Error message. success is returned if the request is successful.</p>
+     * Get  
+     * @return Msg 
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set <p>Error message. success is returned if the request is successful.</p>
-     * @param Msg <p>Error message. success is returned if the request is successful.</p>
+     * Set 
+     * @param Msg 
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul> 
-     * @return Status <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
-     * @param Status <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -137,16 +137,16 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Audition audio URL.</p> 
-     * @return AudioUrl <p>Audition audio URL.</p>
+     * Get  
+     * @return AudioUrl 
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set <p>Audition audio URL.</p>
-     * @param AudioUrl <p>Audition audio URL.</p>
+     * Set 
+     * @param AudioUrl 
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;

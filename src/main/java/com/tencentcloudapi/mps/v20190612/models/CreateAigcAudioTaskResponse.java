@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskResponse extends AbstractModel {
 
     /**
-    * <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
+    * 
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAigcAudioTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p> 
-     * @return TaskId <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
-     * @param TaskId <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

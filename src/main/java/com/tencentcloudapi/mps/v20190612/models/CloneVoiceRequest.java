@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CloneVoiceRequest extends AbstractModel {
 
     /**
-    * <p>Clone audio base64 encoding</p>
+    * 
     */
     @SerializedName("AudioData")
     @Expose
     private String AudioData;
 
     /**
-    * <p>Cloning audio URL. Valid when AudioData is empty.</p>
+    * 
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-    * <p>Cloning audio language. The default language is Chinese. Currently supported languages are the same as those for Text To Speech (TTS) TextLang.</p>
+    * 
     */
     @SerializedName("AudioLang")
     @Expose
     private String AudioLang;
 
     /**
-    * <p>Voice attribute. Voice type querying and match usage.</p>
+    * 
     */
     @SerializedName("VoiceProfile")
     @Expose
     private VoiceProfile VoiceProfile;
 
     /**
-    * <p>Audition text</p>
+    * 
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * <p>Language of the audition text, by default if left blank, auto-detection. Current supported languages are the same as Text To Speech.</p>
+    * 
     */
     @SerializedName("TextLang")
     @Expose
     private String TextLang;
 
     /**
-    * <p>Output parameters. Specifies the output audio format, etc. The default output audio format is base64.</p>
+    * 
     */
     @SerializedName("Output")
     @Expose
     private SyncDubbingOutputOption Output;
 
     /**
-    * <p>Extended parameters in the format of a JSON string.</p>
+    * 
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-     * Get <p>Clone audio base64 encoding</p> 
-     * @return AudioData <p>Clone audio base64 encoding</p>
+     * Get  
+     * @return AudioData 
      */
     public String getAudioData() {
         return this.AudioData;
     }
 
     /**
-     * Set <p>Clone audio base64 encoding</p>
-     * @param AudioData <p>Clone audio base64 encoding</p>
+     * Set 
+     * @param AudioData 
      */
     public void setAudioData(String AudioData) {
         this.AudioData = AudioData;
     }
 
     /**
-     * Get <p>Cloning audio URL. Valid when AudioData is empty.</p> 
-     * @return AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * Get  
+     * @return AudioUrl 
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
-     * @param AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * Set 
+     * @param AudioUrl 
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
     }
 
     /**
-     * Get <p>Cloning audio language. The default language is Chinese. Currently supported languages are the same as those for Text To Speech (TTS) TextLang.</p> 
-     * @return AudioLang <p>Cloning audio language. The default language is Chinese. Currently supported languages are the same as those for Text To Speech (TTS) TextLang.</p>
+     * Get  
+     * @return AudioLang 
      */
     public String getAudioLang() {
         return this.AudioLang;
     }
 
     /**
-     * Set <p>Cloning audio language. The default language is Chinese. Currently supported languages are the same as those for Text To Speech (TTS) TextLang.</p>
-     * @param AudioLang <p>Cloning audio language. The default language is Chinese. Currently supported languages are the same as those for Text To Speech (TTS) TextLang.</p>
+     * Set 
+     * @param AudioLang 
      */
     public void setAudioLang(String AudioLang) {
         this.AudioLang = AudioLang;
     }
 
     /**
-     * Get <p>Voice attribute. Voice type querying and match usage.</p> 
-     * @return VoiceProfile <p>Voice attribute. Voice type querying and match usage.</p>
+     * Get  
+     * @return VoiceProfile 
      */
     public VoiceProfile getVoiceProfile() {
         return this.VoiceProfile;
     }
 
     /**
-     * Set <p>Voice attribute. Voice type querying and match usage.</p>
-     * @param VoiceProfile <p>Voice attribute. Voice type querying and match usage.</p>
+     * Set 
+     * @param VoiceProfile 
      */
     public void setVoiceProfile(VoiceProfile VoiceProfile) {
         this.VoiceProfile = VoiceProfile;
     }
 
     /**
-     * Get <p>Audition text</p> 
-     * @return Text <p>Audition text</p>
+     * Get  
+     * @return Text 
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set <p>Audition text</p>
-     * @param Text <p>Audition text</p>
+     * Set 
+     * @param Text 
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get <p>Language of the audition text, by default if left blank, auto-detection. Current supported languages are the same as Text To Speech.</p> 
-     * @return TextLang <p>Language of the audition text, by default if left blank, auto-detection. Current supported languages are the same as Text To Speech.</p>
+     * Get  
+     * @return TextLang 
      */
     public String getTextLang() {
         return this.TextLang;
     }
 
     /**
-     * Set <p>Language of the audition text, by default if left blank, auto-detection. Current supported languages are the same as Text To Speech.</p>
-     * @param TextLang <p>Language of the audition text, by default if left blank, auto-detection. Current supported languages are the same as Text To Speech.</p>
+     * Set 
+     * @param TextLang 
      */
     public void setTextLang(String TextLang) {
         this.TextLang = TextLang;
     }
 
     /**
-     * Get <p>Output parameters. Specifies the output audio format, etc. The default output audio format is base64.</p> 
-     * @return Output <p>Output parameters. Specifies the output audio format, etc. The default output audio format is base64.</p>
+     * Get  
+     * @return Output 
      */
     public SyncDubbingOutputOption getOutput() {
         return this.Output;
     }
 
     /**
-     * Set <p>Output parameters. Specifies the output audio format, etc. The default output audio format is base64.</p>
-     * @param Output <p>Output parameters. Specifies the output audio format, etc. The default output audio format is base64.</p>
+     * Set 
+     * @param Output 
      */
     public void setOutput(SyncDubbingOutputOption Output) {
         this.Output = Output;
     }
 
     /**
-     * Get <p>Extended parameters in the format of a JSON string.</p> 
-     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
+     * Get  
+     * @return ExtParam 
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set <p>Extended parameters in the format of a JSON string.</p>
-     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p>
+     * Set 
+     * @param ExtParam 
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;

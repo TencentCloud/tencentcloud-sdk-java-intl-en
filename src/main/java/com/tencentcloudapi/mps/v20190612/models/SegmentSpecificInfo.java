@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class SegmentSpecificInfo extends AbstractModel {
 
     /**
-    * Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Segment duration at startup. Unit: second
+    * 
     */
     @SerializedName("FragmentTime")
     @Expose
     private Long FragmentTime;
 
     /**
-    * Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+    * 
     */
     @SerializedName("FragmentEndNum")
     @Expose
     private Long FragmentEndNum;
 
     /**
-     * Get Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off 
-     * @return Switch Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
-     * @param Switch Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Segment duration at startup. Unit: second 
-     * @return FragmentTime Segment duration at startup. Unit: second
+     * Get  
+     * @return FragmentTime 
      */
     public Long getFragmentTime() {
         return this.FragmentTime;
     }
 
     /**
-     * Set Segment duration at startup. Unit: second
-     * @param FragmentTime Segment duration at startup. Unit: second
+     * Set 
+     * @param FragmentTime 
      */
     public void setFragmentTime(Long FragmentTime) {
         this.FragmentTime = FragmentTime;
     }
 
     /**
-     * Get Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1 
-     * @return FragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+     * Get  
+     * @return FragmentEndNum 
      */
     public Long getFragmentEndNum() {
         return this.FragmentEndNum;
     }
 
     /**
-     * Set Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-     * @param FragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+     * Set 
+     * @param FragmentEndNum 
      */
     public void setFragmentEndNum(Long FragmentEndNum) {
         this.FragmentEndNum = FragmentEndNum;

@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class SelectingSubtitleAreasConfig extends AbstractModel {
 
     /**
-    * Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
+    * 
     */
     @SerializedName("AutoAreas")
     @Expose
     private EraseArea [] AutoAreas;
 
     /**
-    * Width of the sample video or image, in pixels.
+    * 
     */
     @SerializedName("SampleWidth")
     @Expose
     private Long SampleWidth;
 
     /**
-    * Height of the sample video or image, in pixels.
+    * 
     */
     @SerializedName("SampleHeight")
     @Expose
     private Long SampleHeight;
 
     /**
-     * Get Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content. 
-     * @return AutoAreas Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
+     * Get  
+     * @return AutoAreas 
      */
     public EraseArea [] getAutoAreas() {
         return this.AutoAreas;
     }
 
     /**
-     * Set Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
-     * @param AutoAreas Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
+     * Set 
+     * @param AutoAreas 
      */
     public void setAutoAreas(EraseArea [] AutoAreas) {
         this.AutoAreas = AutoAreas;
     }
 
     /**
-     * Get Width of the sample video or image, in pixels. 
-     * @return SampleWidth Width of the sample video or image, in pixels.
+     * Get  
+     * @return SampleWidth 
      */
     public Long getSampleWidth() {
         return this.SampleWidth;
     }
 
     /**
-     * Set Width of the sample video or image, in pixels.
-     * @param SampleWidth Width of the sample video or image, in pixels.
+     * Set 
+     * @param SampleWidth 
      */
     public void setSampleWidth(Long SampleWidth) {
         this.SampleWidth = SampleWidth;
     }
 
     /**
-     * Get Height of the sample video or image, in pixels. 
-     * @return SampleHeight Height of the sample video or image, in pixels.
+     * Get  
+     * @return SampleHeight 
      */
     public Long getSampleHeight() {
         return this.SampleHeight;
     }
 
     /**
-     * Set Height of the sample video or image, in pixels.
-     * @param SampleHeight Height of the sample video or image, in pixels.
+     * Set 
+     * @param SampleHeight 
      */
     public void setSampleHeight(Long SampleHeight) {
         this.SampleHeight = SampleHeight;

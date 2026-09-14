@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class MediaAudioStreamItem extends AbstractModel {
 
     /**
-    * Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Bitrate of the audio stream. Unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sampling rate of the audio stream. Unit: hz.
     */
     @SerializedName("SamplingRate")
     @Expose
     private Long SamplingRate;
 
     /**
-    * Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Audio stream encoding format, for example, aac.
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * Number of audio channels, for example 2.
+    * 
     */
     @SerializedName("Channel")
     @Expose
     private Long Channel;
 
     /**
-    * Audio Codecs.
+    * 
     */
     @SerializedName("Codecs")
     @Expose
     private String Codecs;
 
     /**
-    * Audio loudness.
+    * 
     */
     @SerializedName("Loudness")
     @Expose
     private Float Loudness;
 
     /**
-     * Get Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Bitrate Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Bitrate of the audio stream. Unit: bps. 
+     * @return Bitrate Bitrate of the audio stream. Unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Bitrate Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bitrate of the audio stream. Unit: bps.
+     * @param Bitrate Bitrate of the audio stream. Unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SamplingRate Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sampling rate of the audio stream. Unit: hz. 
+     * @return SamplingRate Sampling rate of the audio stream. Unit: hz.
      */
     public Long getSamplingRate() {
         return this.SamplingRate;
     }
 
     /**
-     * Set Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SamplingRate Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sampling rate of the audio stream. Unit: hz.
+     * @param SamplingRate Sampling rate of the audio stream. Unit: hz.
      */
     public void setSamplingRate(Long SamplingRate) {
         this.SamplingRate = SamplingRate;
     }
 
     /**
-     * Get Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Codec Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Audio stream encoding format, for example, aac. 
+     * @return Codec Audio stream encoding format, for example, aac.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Codec Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Audio stream encoding format, for example, aac.
+     * @param Codec Audio stream encoding format, for example, aac.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get Number of audio channels, for example 2. 
-     * @return Channel Number of audio channels, for example 2.
+     * Get  
+     * @return Channel 
      */
     public Long getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set Number of audio channels, for example 2.
-     * @param Channel Number of audio channels, for example 2.
+     * Set 
+     * @param Channel 
      */
     public void setChannel(Long Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get Audio Codecs. 
-     * @return Codecs Audio Codecs.
+     * Get  
+     * @return Codecs 
      */
     public String getCodecs() {
         return this.Codecs;
     }
 
     /**
-     * Set Audio Codecs.
-     * @param Codecs Audio Codecs.
+     * Set 
+     * @param Codecs 
      */
     public void setCodecs(String Codecs) {
         this.Codecs = Codecs;
     }
 
     /**
-     * Get Audio loudness. 
-     * @return Loudness Audio loudness.
+     * Get  
+     * @return Loudness 
      */
     public Float getLoudness() {
         return this.Loudness;
     }
 
     /**
-     * Set Audio loudness.
-     * @param Loudness Audio loudness.
+     * Set 
+     * @param Loudness 
      */
     public void setLoudness(Float Loudness) {
         this.Loudness = Loudness;

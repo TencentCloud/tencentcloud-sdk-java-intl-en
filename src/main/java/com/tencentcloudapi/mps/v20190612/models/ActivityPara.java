@@ -24,302 +24,325 @@ import java.util.HashMap;
 public class ActivityPara extends AbstractModel {
 
     /**
-    * 
+    * <p>Video transcoding task</p>
     */
     @SerializedName("TranscodeTask")
     @Expose
     private TranscodeTaskInput TranscodeTask;
 
     /**
-    * 
+    * <p>Video-to-GIF task</p>
     */
     @SerializedName("AnimatedGraphicTask")
     @Expose
     private AnimatedGraphicTaskInput AnimatedGraphicTask;
 
     /**
-    * 
+    * <p>Video time point screenshot task</p>
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
     private SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask;
 
     /**
-    * 
+    * <p>Video sampling screenshot task</p>
     */
     @SerializedName("SampleSnapshotTask")
     @Expose
     private SampleSnapshotTaskInput SampleSnapshotTask;
 
     /**
-    * 
+    * <p>Video image sprite task</p>
     */
     @SerializedName("ImageSpriteTask")
     @Expose
     private ImageSpriteTaskInput ImageSpriteTask;
 
     /**
-    * 
+    * <p>Adaptive bitrate streaming task</p>
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
     private AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask;
 
     /**
-    * 
+    * <p>Video content review task</p>
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * 
+    * <p>Video content analysis task</p>
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * 
+    * <p>Video content recognition task</p>
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * 
+    * <p>Media quality inspection task</p>
     */
     @SerializedName("QualityControlTask")
     @Expose
     private AiQualityControlTaskInput QualityControlTask;
 
     /**
-    * 
+    * <p>Conditional judgment of the task.</p>
     */
     @SerializedName("ExecRulesTask")
     @Expose
     private ExecRulesTask ExecRulesTask;
 
     /**
-    * 
+    * <p>Smart subtitle task.</p>
     */
     @SerializedName("SmartSubtitlesTask")
     @Expose
     private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
-    * 
+    * <p>Intelligent erasure task</p>
     */
     @SerializedName("SmartEraseTask")
     @Expose
     private SmartEraseTaskInput SmartEraseTask;
 
     /**
-     * Get  
-     * @return TranscodeTask 
+    * <p>AI Dubbing task.</p>
+    */
+    @SerializedName("AIDubbingTask")
+    @Expose
+    private AIDubbingTaskInput AIDubbingTask;
+
+    /**
+     * Get <p>Video transcoding task</p> 
+     * @return TranscodeTask <p>Video transcoding task</p>
      */
     public TranscodeTaskInput getTranscodeTask() {
         return this.TranscodeTask;
     }
 
     /**
-     * Set 
-     * @param TranscodeTask 
+     * Set <p>Video transcoding task</p>
+     * @param TranscodeTask <p>Video transcoding task</p>
      */
     public void setTranscodeTask(TranscodeTaskInput TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get  
-     * @return AnimatedGraphicTask 
+     * Get <p>Video-to-GIF task</p> 
+     * @return AnimatedGraphicTask <p>Video-to-GIF task</p>
      */
     public AnimatedGraphicTaskInput getAnimatedGraphicTask() {
         return this.AnimatedGraphicTask;
     }
 
     /**
-     * Set 
-     * @param AnimatedGraphicTask 
+     * Set <p>Video-to-GIF task</p>
+     * @param AnimatedGraphicTask <p>Video-to-GIF task</p>
      */
     public void setAnimatedGraphicTask(AnimatedGraphicTaskInput AnimatedGraphicTask) {
         this.AnimatedGraphicTask = AnimatedGraphicTask;
     }
 
     /**
-     * Get  
-     * @return SnapshotByTimeOffsetTask 
+     * Get <p>Video time point screenshot task</p> 
+     * @return SnapshotByTimeOffsetTask <p>Video time point screenshot task</p>
      */
     public SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Set 
-     * @param SnapshotByTimeOffsetTask 
+     * Set <p>Video time point screenshot task</p>
+     * @param SnapshotByTimeOffsetTask <p>Video time point screenshot task</p>
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get  
-     * @return SampleSnapshotTask 
+     * Get <p>Video sampling screenshot task</p> 
+     * @return SampleSnapshotTask <p>Video sampling screenshot task</p>
      */
     public SampleSnapshotTaskInput getSampleSnapshotTask() {
         return this.SampleSnapshotTask;
     }
 
     /**
-     * Set 
-     * @param SampleSnapshotTask 
+     * Set <p>Video sampling screenshot task</p>
+     * @param SampleSnapshotTask <p>Video sampling screenshot task</p>
      */
     public void setSampleSnapshotTask(SampleSnapshotTaskInput SampleSnapshotTask) {
         this.SampleSnapshotTask = SampleSnapshotTask;
     }
 
     /**
-     * Get  
-     * @return ImageSpriteTask 
+     * Get <p>Video image sprite task</p> 
+     * @return ImageSpriteTask <p>Video image sprite task</p>
      */
     public ImageSpriteTaskInput getImageSpriteTask() {
         return this.ImageSpriteTask;
     }
 
     /**
-     * Set 
-     * @param ImageSpriteTask 
+     * Set <p>Video image sprite task</p>
+     * @param ImageSpriteTask <p>Video image sprite task</p>
      */
     public void setImageSpriteTask(ImageSpriteTaskInput ImageSpriteTask) {
         this.ImageSpriteTask = ImageSpriteTask;
     }
 
     /**
-     * Get  
-     * @return AdaptiveDynamicStreamingTask 
+     * Get <p>Adaptive bitrate streaming task</p> 
+     * @return AdaptiveDynamicStreamingTask <p>Adaptive bitrate streaming task</p>
      */
     public AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Set 
-     * @param AdaptiveDynamicStreamingTask 
+     * Set <p>Adaptive bitrate streaming task</p>
+     * @param AdaptiveDynamicStreamingTask <p>Adaptive bitrate streaming task</p>
      */
     public void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Get  
-     * @return AiContentReviewTask 
+     * Get <p>Video content review task</p> 
+     * @return AiContentReviewTask <p>Video content review task</p>
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set 
-     * @param AiContentReviewTask 
+     * Set <p>Video content review task</p>
+     * @param AiContentReviewTask <p>Video content review task</p>
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get  
-     * @return AiAnalysisTask 
+     * Get <p>Video content analysis task</p> 
+     * @return AiAnalysisTask <p>Video content analysis task</p>
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set 
-     * @param AiAnalysisTask 
+     * Set <p>Video content analysis task</p>
+     * @param AiAnalysisTask <p>Video content analysis task</p>
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get  
-     * @return AiRecognitionTask 
+     * Get <p>Video content recognition task</p> 
+     * @return AiRecognitionTask <p>Video content recognition task</p>
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set 
-     * @param AiRecognitionTask 
+     * Set <p>Video content recognition task</p>
+     * @param AiRecognitionTask <p>Video content recognition task</p>
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
     /**
-     * Get  
-     * @return QualityControlTask 
+     * Get <p>Media quality inspection task</p> 
+     * @return QualityControlTask <p>Media quality inspection task</p>
      */
     public AiQualityControlTaskInput getQualityControlTask() {
         return this.QualityControlTask;
     }
 
     /**
-     * Set 
-     * @param QualityControlTask 
+     * Set <p>Media quality inspection task</p>
+     * @param QualityControlTask <p>Media quality inspection task</p>
      */
     public void setQualityControlTask(AiQualityControlTaskInput QualityControlTask) {
         this.QualityControlTask = QualityControlTask;
     }
 
     /**
-     * Get  
-     * @return ExecRulesTask 
+     * Get <p>Conditional judgment of the task.</p> 
+     * @return ExecRulesTask <p>Conditional judgment of the task.</p>
      */
     public ExecRulesTask getExecRulesTask() {
         return this.ExecRulesTask;
     }
 
     /**
-     * Set 
-     * @param ExecRulesTask 
+     * Set <p>Conditional judgment of the task.</p>
+     * @param ExecRulesTask <p>Conditional judgment of the task.</p>
      */
     public void setExecRulesTask(ExecRulesTask ExecRulesTask) {
         this.ExecRulesTask = ExecRulesTask;
     }
 
     /**
-     * Get  
-     * @return SmartSubtitlesTask 
+     * Get <p>Smart subtitle task.</p> 
+     * @return SmartSubtitlesTask <p>Smart subtitle task.</p>
      */
     public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
         return this.SmartSubtitlesTask;
     }
 
     /**
-     * Set 
-     * @param SmartSubtitlesTask 
+     * Set <p>Smart subtitle task.</p>
+     * @param SmartSubtitlesTask <p>Smart subtitle task.</p>
      */
     public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
     /**
-     * Get  
-     * @return SmartEraseTask 
+     * Get <p>Intelligent erasure task</p> 
+     * @return SmartEraseTask <p>Intelligent erasure task</p>
      */
     public SmartEraseTaskInput getSmartEraseTask() {
         return this.SmartEraseTask;
     }
 
     /**
-     * Set 
-     * @param SmartEraseTask 
+     * Set <p>Intelligent erasure task</p>
+     * @param SmartEraseTask <p>Intelligent erasure task</p>
      */
     public void setSmartEraseTask(SmartEraseTaskInput SmartEraseTask) {
         this.SmartEraseTask = SmartEraseTask;
+    }
+
+    /**
+     * Get <p>AI Dubbing task.</p> 
+     * @return AIDubbingTask <p>AI Dubbing task.</p>
+     */
+    public AIDubbingTaskInput getAIDubbingTask() {
+        return this.AIDubbingTask;
+    }
+
+    /**
+     * Set <p>AI Dubbing task.</p>
+     * @param AIDubbingTask <p>AI Dubbing task.</p>
+     */
+    public void setAIDubbingTask(AIDubbingTaskInput AIDubbingTask) {
+        this.AIDubbingTask = AIDubbingTask;
     }
 
     public ActivityPara() {
@@ -369,6 +392,9 @@ public class ActivityPara extends AbstractModel {
         if (source.SmartEraseTask != null) {
             this.SmartEraseTask = new SmartEraseTaskInput(source.SmartEraseTask);
         }
+        if (source.AIDubbingTask != null) {
+            this.AIDubbingTask = new AIDubbingTaskInput(source.AIDubbingTask);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class ActivityPara extends AbstractModel {
         this.setParamObj(map, prefix + "ExecRulesTask.", this.ExecRulesTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
         this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
+        this.setParamObj(map, prefix + "AIDubbingTask.", this.AIDubbingTask);
 
     }
 }

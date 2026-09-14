@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeImageTasksRequest extends AbstractModel {
 
     /**
-    * <p>Task status filter condition.</p>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * <p>Number of returned records.</p>
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+    * 
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-    * <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+    * 
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+    * 
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * <p>Filter subtask status.</p>
+    * 
     */
     @SerializedName("SubTaskHasFailed")
     @Expose
     private Boolean SubTaskHasFailed;
 
     /**
-     * Get <p>Task status filter condition.</p> 
-     * @return Status <p>Task status filter condition.</p>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Task status filter condition.</p>
-     * @param Status <p>Task status filter condition.</p>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Number of returned records.</p> 
-     * @return Limit <p>Number of returned records.</p>
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Number of returned records.</p>
-     * @param Limit <p>Number of returned records.</p>
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p> 
-     * @return ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+     * Get  
+     * @return ScrollToken 
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
-     * @param ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+     * Set 
+     * @param ScrollToken 
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;
     }
 
     /**
-     * Get <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p> 
-     * @return StartTime <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Get  
+     * @return StartTime 
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param StartTime <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Set 
+     * @param StartTime 
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p> 
-     * @return EndTime <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Get  
+     * @return EndTime 
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param EndTime <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Set 
+     * @param EndTime 
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get <p>Filter subtask status.</p> 
-     * @return SubTaskHasFailed <p>Filter subtask status.</p>
+     * Get  
+     * @return SubTaskHasFailed 
      */
     public Boolean getSubTaskHasFailed() {
         return this.SubTaskHasFailed;
     }
 
     /**
-     * Set <p>Filter subtask status.</p>
-     * @param SubTaskHasFailed <p>Filter subtask status.</p>
+     * Set 
+     * @param SubTaskHasFailed 
      */
     public void setSubTaskHasFailed(Boolean SubTaskHasFailed) {
         this.SubTaskHasFailed = SubTaskHasFailed;

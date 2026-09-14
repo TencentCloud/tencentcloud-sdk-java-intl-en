@@ -31,12 +31,7 @@ public class AiAnalysisTaskInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+    * 
     */
     @SerializedName("ExtendedParameter")
     @Expose
@@ -59,36 +54,16 @@ Note: This parameter is used to meet customization requirements. See the followi
     }
 
     /**
-     * Get Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1) 
-     * @return ExtendedParameter Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+     * Get  
+     * @return ExtendedParameter 
      */
     public String getExtendedParameter() {
         return this.ExtendedParameter;
     }
 
     /**
-     * Set Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
-     * @param ExtendedParameter Additional parameters, whose value is a serialized json string.
-Note: This parameter is used to meet customization requirements. See the following:
-[Smart Erase Tutorial](https://www.tencentcloud.com/document/product/862/101530?from_cn_redirect=1)
-[Video Splitting (Long Videos to Short Videos) Tutorial](https://www.tencentcloud.com/document/product/862/112098?from_cn_redirect=1)
-[Intelligent Highlights Tutorial](https://www.tencentcloud.com/document/product/862/107280?from_cn_redirect=1)
-[Horizontal-to-Video Transformation](https://www.tencentcloud.com/document/product/862/112112?from_cn_redirect=1)
+     * Set 
+     * @param ExtendedParameter 
      */
     public void setExtendedParameter(String ExtendedParameter) {
         this.ExtendedParameter = ExtendedParameter;

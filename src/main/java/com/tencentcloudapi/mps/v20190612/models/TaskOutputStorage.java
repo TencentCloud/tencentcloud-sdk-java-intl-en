@@ -24,107 +24,107 @@ import java.util.HashMap;
 public class TaskOutputStorage extends AbstractModel {
 
     /**
-    * Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
+    * Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+    * 
     */
     @SerializedName("CosOutputStorage")
     @Expose
     private CosOutputStorage CosOutputStorage;
 
     /**
-    * Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+    * 
     */
     @SerializedName("S3OutputStorage")
     @Expose
     private S3OutputStorage S3OutputStorage;
 
     /**
-    * Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+    * 
     */
     @SerializedName("VODOutputStorage")
     @Expose
     private VODOutputStorage VODOutputStorage;
 
     /**
-     * Get Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>. 
-     * @return Type Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
+     * Get Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li> 
+     * @return Type Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
-     * @param Type Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
+     * Set Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
+     * @param Type Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location. 
-     * @return CosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+     * Get  
+     * @return CosOutputStorage 
      */
     public CosOutputStorage getCosOutputStorage() {
         return this.CosOutputStorage;
     }
 
     /**
-     * Set Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
-     * @param CosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+     * Set 
+     * @param CosOutputStorage 
      */
     public void setCosOutputStorage(CosOutputStorage CosOutputStorage) {
         this.CosOutputStorage = CosOutputStorage;
     }
 
     /**
-     * Get Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing. 
-     * @return S3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+     * Get  
+     * @return S3OutputStorage 
      */
     public S3OutputStorage getS3OutputStorage() {
         return this.S3OutputStorage;
     }
 
     /**
-     * Set Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
-     * @param S3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+     * Set 
+     * @param S3OutputStorage 
      */
     public void setS3OutputStorage(S3OutputStorage S3OutputStorage) {
         this.S3OutputStorage = S3OutputStorage;
     }
 
     /**
-     * Get Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location. 
-     * @return VODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+     * Get  
+     * @return VODOutputStorage 
      */
     public VODOutputStorage getVODOutputStorage() {
         return this.VODOutputStorage;
     }
 
     /**
-     * Set Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
-     * @param VODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+     * Set 
+     * @param VODOutputStorage 
      */
     public void setVODOutputStorage(VODOutputStorage VODOutputStorage) {
         this.VODOutputStorage = VODOutputStorage;

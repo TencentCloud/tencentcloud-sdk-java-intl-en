@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SmartEraseTaskInput extends AbstractModel {
 
     /**
-    * Smart erasing template id.
+    * 
     */
     @SerializedName("Definition")
     @Expose
@@ -38,7 +38,7 @@ public class SmartEraseTaskInput extends AbstractModel {
     private RawSmartEraseParameter RawParameter;
 
     /**
-    * Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+    * 
     */
     @SerializedName("OverrideParameter")
     @Expose
@@ -52,31 +52,23 @@ public class SmartEraseTaskInput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
+    * 
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-     * Get Smart erasing template id. 
-     * @return Definition Smart erasing template id.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Smart erasing template id.
-     * @param Definition Smart erasing template id.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -99,16 +91,16 @@ Absolute path example:
     }
 
     /**
-     * Get Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters. 
-     * @return OverrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+     * Get  
+     * @return OverrideParameter 
      */
     public OverrideEraseParameter getOverrideParameter() {
         return this.OverrideParameter;
     }
 
     /**
-     * Set Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
-     * @param OverrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+     * Set 
+     * @param OverrideParameter 
      */
     public void setOverrideParameter(OverrideEraseParameter OverrideParameter) {
         this.OverrideParameter = OverrideParameter;
@@ -131,48 +123,16 @@ Absolute path example:
     }
 
     /**
-     * Get Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API. 
-     * @return OutputObjectPath Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
+     * Get  
+     * @return OutputObjectPath 
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
-     * @param OutputObjectPath Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
+     * Set 
+     * @param OutputObjectPath 
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;

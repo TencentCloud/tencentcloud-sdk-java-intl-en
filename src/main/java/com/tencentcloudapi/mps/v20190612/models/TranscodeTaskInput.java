@@ -24,24 +24,22 @@ import java.util.HashMap;
 public class TranscodeTaskInput extends AbstractModel {
 
     /**
-    * ID of a video transcoding template.
+    * Video transcoding template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Custom video transcoding parameter. valid when Definition is set to 0.
-This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
+    * Custom video transcoding parameter. It takes effect when Definition is set to 0.
+This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify transcoding parameters.
     */
     @SerializedName("RawParameter")
     @Expose
     private RawTranscodeParameter RawParameter;
 
     /**
-    * Custom video transcoding parameter. It takes effect when Definition is not set to 0.
-When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
-This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+    * 
     */
     @SerializedName("OverrideParameter")
     @Expose
@@ -55,41 +53,41 @@ This parameter is used in high customization scenarios. It is recommended that y
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * Digital watermark parameters.
+    * 
     */
     @SerializedName("BlindWatermark")
     @Expose
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * List of blurs. Up to 10 ones can be supported.
+    * Mosaic list. A maximum of 10 images is supported.
     */
     @SerializedName("MosaicSet")
     @Expose
     private MosaicInput [] MosaicSet;
 
     /**
-    * Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+    * Start time offset of the transcoded video, in seconds.
+<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+    * End time offset of the transcoded video, in seconds.
+<li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -97,93 +95,87 @@ This parameter is used in high customization scenarios. It is recommended that y
 
     /**
     * Output path of the main file after transcoding, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}.</li>
 Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-    * Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
+    * Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
     */
     @SerializedName("SegmentObjectName")
     @Expose
     private String SegmentObjectName;
 
     /**
-    * Rule of the `{number}` variable in the output path after transcoding.
+    * 
     */
     @SerializedName("ObjectNumberFormat")
     @Expose
     private NumberFormat ObjectNumberFormat;
 
     /**
-    * Video opening/closing credits parameter.
+    * 
     */
     @SerializedName("HeadTailParameter")
     @Expose
     private HeadTailParameter HeadTailParameter;
 
     /**
-     * Get ID of a video transcoding template. 
-     * @return Definition ID of a video transcoding template.
+     * Get Video transcoding template ID. 
+     * @return Definition Video transcoding template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set ID of a video transcoding template.
-     * @param Definition ID of a video transcoding template.
+     * Set Video transcoding template ID.
+     * @param Definition Video transcoding template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Custom video transcoding parameter. valid when Definition is set to 0.
-This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters. 
-     * @return RawParameter Custom video transcoding parameter. valid when Definition is set to 0.
-This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
+     * Get Custom video transcoding parameter. It takes effect when Definition is set to 0.
+This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify transcoding parameters. 
+     * @return RawParameter Custom video transcoding parameter. It takes effect when Definition is set to 0.
+This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify transcoding parameters.
      */
     public RawTranscodeParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set Custom video transcoding parameter. valid when Definition is set to 0.
-This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
-     * @param RawParameter Custom video transcoding parameter. valid when Definition is set to 0.
-This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
+     * Set Custom video transcoding parameter. It takes effect when Definition is set to 0.
+This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify transcoding parameters.
+     * @param RawParameter Custom video transcoding parameter. It takes effect when Definition is set to 0.
+This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify transcoding parameters.
      */
     public void setRawParameter(RawTranscodeParameter RawParameter) {
         this.RawParameter = RawParameter;
     }
 
     /**
-     * Get Custom video transcoding parameter. It takes effect when Definition is not set to 0.
-When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
-This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters. 
-     * @return OverrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
-When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
-This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+     * Get  
+     * @return OverrideParameter 
      */
     public OverrideTranscodeParameter getOverrideParameter() {
         return this.OverrideParameter;
     }
 
     /**
-     * Set Custom video transcoding parameter. It takes effect when Definition is not set to 0.
-When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
-This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
-     * @param OverrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
-When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
-This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+     * Set 
+     * @param OverrideParameter 
      */
     public void setOverrideParameter(OverrideTranscodeParameter OverrideParameter) {
         this.OverrideParameter = OverrideParameter;
@@ -206,104 +198,104 @@ This parameter is used in high customization scenarios. It is recommended that y
     }
 
     /**
-     * Get Digital watermark parameters. 
-     * @return BlindWatermark Digital watermark parameters.
+     * Get  
+     * @return BlindWatermark 
      */
     public BlindWatermarkInput getBlindWatermark() {
         return this.BlindWatermark;
     }
 
     /**
-     * Set Digital watermark parameters.
-     * @param BlindWatermark Digital watermark parameters.
+     * Set 
+     * @param BlindWatermark 
      */
     public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
         this.BlindWatermark = BlindWatermark;
     }
 
     /**
-     * Get List of blurs. Up to 10 ones can be supported. 
-     * @return MosaicSet List of blurs. Up to 10 ones can be supported.
+     * Get Mosaic list. A maximum of 10 images is supported. 
+     * @return MosaicSet Mosaic list. A maximum of 10 images is supported.
      */
     public MosaicInput [] getMosaicSet() {
         return this.MosaicSet;
     }
 
     /**
-     * Set List of blurs. Up to 10 ones can be supported.
-     * @param MosaicSet List of blurs. Up to 10 ones can be supported.
+     * Set Mosaic list. A maximum of 10 images is supported.
+     * @param MosaicSet Mosaic list. A maximum of 10 images is supported.
      */
     public void setMosaicSet(MosaicInput [] MosaicSet) {
         this.MosaicSet = MosaicSet;
     }
 
     /**
-     * Get Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li> 
-     * @return StartTimeOffset Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * Get Start time offset of the transcoded video, in seconds.
+<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li> 
+     * @return StartTimeOffset Start time offset of the transcoded video, in seconds.
+<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
-     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * Set Start time offset of the transcoded video, in seconds.
+<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+     * @param StartTimeOffset Start time offset of the transcoded video, in seconds.
+<li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li> 
-     * @return EndTimeOffset End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     * Get End time offset of the transcoded video, in seconds.
+<li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li> 
+     * @return EndTimeOffset End time offset of the transcoded video, in seconds.
+<li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
-     * @param EndTimeOffset End time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     * Set End time offset of the transcoded video, in seconds.
+<li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+     * @param EndTimeOffset End time offset of the transcoded video, in seconds.
+<li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
+<li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value. 
-     * @return OutputStorage Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
-     * @param OutputStorage Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -311,19 +303,23 @@ This parameter is used in high customization scenarios. It is recommended that y
 
     /**
      * Get Output path of the main file after transcoding, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}.</li>
 Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`. 
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+ 
      * @return OutputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}.</li>
 Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
@@ -331,67 +327,71 @@ If left empty, a relative path is used by default: `{inputName}_transcode_{defin
 
     /**
      * Set Output path of the main file after transcoding, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}.</li>
 Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+
      * @param OutputObjectPath Output path of the main file after transcoding, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}.</li>
 Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_transcode_{definition}.{format}`.
+<li>/Custom path/Filename_{Variable name}.{format}</li>
+If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
     }
 
     /**
-     * Get Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`. 
-     * @return SegmentObjectName Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
+     * Get Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`. 
+     * @return SegmentObjectName Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
      */
     public String getSegmentObjectName() {
         return this.SegmentObjectName;
     }
 
     /**
-     * Set Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
-     * @param SegmentObjectName Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
+     * Set Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
+     * @param SegmentObjectName Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
      */
     public void setSegmentObjectName(String SegmentObjectName) {
         this.SegmentObjectName = SegmentObjectName;
     }
 
     /**
-     * Get Rule of the `{number}` variable in the output path after transcoding. 
-     * @return ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
+     * Get  
+     * @return ObjectNumberFormat 
      */
     public NumberFormat getObjectNumberFormat() {
         return this.ObjectNumberFormat;
     }
 
     /**
-     * Set Rule of the `{number}` variable in the output path after transcoding.
-     * @param ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
+     * Set 
+     * @param ObjectNumberFormat 
      */
     public void setObjectNumberFormat(NumberFormat ObjectNumberFormat) {
         this.ObjectNumberFormat = ObjectNumberFormat;
     }
 
     /**
-     * Get Video opening/closing credits parameter. 
-     * @return HeadTailParameter Video opening/closing credits parameter.
+     * Get  
+     * @return HeadTailParameter 
      */
     public HeadTailParameter getHeadTailParameter() {
         return this.HeadTailParameter;
     }
 
     /**
-     * Set Video opening/closing credits parameter.
-     * @param HeadTailParameter Video opening/closing credits parameter.
+     * Set 
+     * @param HeadTailParameter 
      */
     public void setHeadTailParameter(HeadTailParameter HeadTailParameter) {
         this.HeadTailParameter = HeadTailParameter;

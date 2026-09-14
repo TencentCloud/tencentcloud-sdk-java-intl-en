@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class VODInputInfo extends AbstractModel {
 
     /**
-    * <p><em>Bucket ID</em> where the media processing object file resides</p>
+    * 
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * <p>Region of the Bucket where the media processing object file resides</p>
+    * 
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * <p>Input path of the media processing object file</p>
+    * 
     */
     @SerializedName("Object")
     @Expose
     private String Object;
 
     /**
-    * <p>VOD application ID.</p>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+    * 
     */
     @SerializedName("VodBasic")
     @Expose
     private Long VodBasic;
 
     /**
-    * <p>VOD Standard Edition FileId</p>
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get <p><em>Bucket ID</em> where the media processing object file resides</p> 
-     * @return Bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
+     * Get  
+     * @return Bucket 
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set <p><em>Bucket ID</em> where the media processing object file resides</p>
-     * @param Bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
+     * Set 
+     * @param Bucket 
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get <p>Region of the Bucket where the media processing object file resides</p> 
-     * @return Region <p>Region of the Bucket where the media processing object file resides</p>
+     * Get  
+     * @return Region 
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>Region of the Bucket where the media processing object file resides</p>
-     * @param Region <p>Region of the Bucket where the media processing object file resides</p>
+     * Set 
+     * @param Region 
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get <p>Input path of the media processing object file</p> 
-     * @return Object <p>Input path of the media processing object file</p>
+     * Get  
+     * @return Object 
      */
     public String getObject() {
         return this.Object;
     }
 
     /**
-     * Set <p>Input path of the media processing object file</p>
-     * @param Object <p>Input path of the media processing object file</p>
+     * Set 
+     * @param Object 
      */
     public void setObject(String Object) {
         this.Object = Object;
     }
 
     /**
-     * Get <p>VOD application ID.</p> 
-     * @return SubAppId <p>VOD application ID.</p>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>VOD application ID.</p>
-     * @param SubAppId <p>VOD application ID.</p>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p> 
-     * @return VodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+     * Get  
+     * @return VodBasic 
      */
     public Long getVodBasic() {
         return this.VodBasic;
     }
 
     /**
-     * Set <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
-     * @param VodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+     * Set 
+     * @param VodBasic 
      */
     public void setVodBasic(Long VodBasic) {
         this.VodBasic = VodBasic;
     }
 
     /**
-     * Get <p>VOD Standard Edition FileId</p> 
-     * @return FileId <p>VOD Standard Edition FileId</p>
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>VOD Standard Edition FileId</p>
-     * @param FileId <p>VOD Standard Edition FileId</p>
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

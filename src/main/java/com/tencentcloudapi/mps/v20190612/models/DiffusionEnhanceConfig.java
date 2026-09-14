@@ -25,6 +25,7 @@ public class DiffusionEnhanceConfig extends AbstractModel {
 
     /**
     * Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
@@ -34,12 +35,7 @@ Default value: OFF.
     private String Switch;
 
     /**
-    * Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+    * 
     */
     @SerializedName("Type")
     @Expose
@@ -47,10 +43,12 @@ Default value: normal.
 
     /**
      * Get Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF. 
      * @return Switch Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
@@ -61,10 +59,12 @@ Default value: OFF.
 
     /**
      * Set Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
      * @param Switch Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
@@ -74,36 +74,16 @@ Default value: OFF.
     }
 
     /**
-     * Get Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal. 
-     * @return Type Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
-     * @param Type Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

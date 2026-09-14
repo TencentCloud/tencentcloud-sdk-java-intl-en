@@ -24,114 +24,84 @@ import java.util.HashMap;
 public class AudioSeparateConfig extends AbstractModel {
 
     /**
-    * Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+    * Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Scenario type. Valid values:
-<li>normal: Voice background audio scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Output audio track. Available values:
-<li>vocal: output voice.</li>
-<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
-Default value: vocal.
+    * 
     */
     @SerializedName("Track")
     @Expose
     private String Track;
 
     /**
-     * Get Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`. 
-     * @return Switch Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+     * Get Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON. 
+     * @return Switch Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
-     * @param Switch Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+     * Set Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON.
+     * @param Switch Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+Default value: ON.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Scenario type. Valid values:
-<li>normal: Voice background audio scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal. 
-     * @return Type Scenario type. Valid values:
-<li>normal: Voice background audio scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Scenario type. Valid values:
-<li>normal: Voice background audio scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal.
-     * @param Type Scenario type. Valid values:
-<li>normal: Voice background audio scenario</li>
-<li>music: Singing accompaniment scenario</li>
-Default value: normal.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Output audio track. Available values:
-<li>vocal: output voice.</li>
-<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
-Default value: vocal. 
-     * @return Track Output audio track. Available values:
-<li>vocal: output voice.</li>
-<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
-Default value: vocal.
+     * Get  
+     * @return Track 
      */
     public String getTrack() {
         return this.Track;
     }
 
     /**
-     * Set Output audio track. Available values:
-<li>vocal: output voice.</li>
-<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
-Default value: vocal.
-     * @param Track Output audio track. Available values:
-<li>vocal: output voice.</li>
-<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
-Default value: vocal.
+     * Set 
+     * @param Track 
      */
     public void setTrack(String Track) {
         this.Track = Track;

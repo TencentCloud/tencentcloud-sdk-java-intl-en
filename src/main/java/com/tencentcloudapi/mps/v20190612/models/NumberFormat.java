@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class NumberFormat extends AbstractModel {
 
     /**
-    * Start value of the `{number}` variable. Default value: 0.
+    * The starting value of the `{number}` variable. Default value: 0.
     */
     @SerializedName("InitialValue")
     @Expose
     private Long InitialValue;
 
     /**
-    * Increment of the `{number}` variable. Default value: 1.
+    * The growth step length of the `{number}` variable, with a default value of 1.
     */
     @SerializedName("Increment")
     @Expose
     private Long Increment;
 
     /**
-    * Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+    * Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
     */
     @SerializedName("MinLength")
     @Expose
     private Long MinLength;
 
     /**
-    * Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+    * Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
     */
     @SerializedName("PlaceHolder")
     @Expose
     private String PlaceHolder;
 
     /**
-     * Get Start value of the `{number}` variable. Default value: 0. 
-     * @return InitialValue Start value of the `{number}` variable. Default value: 0.
+     * Get The starting value of the `{number}` variable. Default value: 0. 
+     * @return InitialValue The starting value of the `{number}` variable. Default value: 0.
      */
     public Long getInitialValue() {
         return this.InitialValue;
     }
 
     /**
-     * Set Start value of the `{number}` variable. Default value: 0.
-     * @param InitialValue Start value of the `{number}` variable. Default value: 0.
+     * Set The starting value of the `{number}` variable. Default value: 0.
+     * @param InitialValue The starting value of the `{number}` variable. Default value: 0.
      */
     public void setInitialValue(Long InitialValue) {
         this.InitialValue = InitialValue;
     }
 
     /**
-     * Get Increment of the `{number}` variable. Default value: 1. 
-     * @return Increment Increment of the `{number}` variable. Default value: 1.
+     * Get The growth step length of the `{number}` variable, with a default value of 1. 
+     * @return Increment The growth step length of the `{number}` variable, with a default value of 1.
      */
     public Long getIncrement() {
         return this.Increment;
     }
 
     /**
-     * Set Increment of the `{number}` variable. Default value: 1.
-     * @param Increment Increment of the `{number}` variable. Default value: 1.
+     * Set The growth step length of the `{number}` variable, with a default value of 1.
+     * @param Increment The growth step length of the `{number}` variable, with a default value of 1.
      */
     public void setIncrement(Long Increment) {
         this.Increment = Increment;
     }
 
     /**
-     * Get Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1. 
-     * @return MinLength Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+     * Get Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1. 
+     * @return MinLength Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
      */
     public Long getMinLength() {
         return this.MinLength;
     }
 
     /**
-     * Set Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
-     * @param MinLength Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+     * Set Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
+     * @param MinLength Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
      */
     public void setMinLength(Long MinLength) {
         this.MinLength = MinLength;
     }
 
     /**
-     * Get Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0. 
-     * @return PlaceHolder Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+     * Get Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0". 
+     * @return PlaceHolder Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
      */
     public String getPlaceHolder() {
         return this.PlaceHolder;
     }
 
     /**
-     * Set Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
-     * @param PlaceHolder Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+     * Set Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
+     * @param PlaceHolder Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
      */
     public void setPlaceHolder(String PlaceHolder) {
         this.PlaceHolder = PlaceHolder;

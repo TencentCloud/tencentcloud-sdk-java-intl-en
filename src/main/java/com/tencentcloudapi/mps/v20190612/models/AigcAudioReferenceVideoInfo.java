@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AigcAudioReferenceVideoInfo extends AbstractModel {
 
     /**
-    * <p>Reference video URL, which must be accessible from the public network.</p>
+    * 
     */
     @SerializedName("VideoUrl")
     @Expose
     private String VideoUrl;
 
     /**
-     * Get <p>Reference video URL, which must be accessible from the public network.</p> 
-     * @return VideoUrl <p>Reference video URL, which must be accessible from the public network.</p>
+     * Get  
+     * @return VideoUrl 
      */
     public String getVideoUrl() {
         return this.VideoUrl;
     }
 
     /**
-     * Set <p>Reference video URL, which must be accessible from the public network.</p>
-     * @param VideoUrl <p>Reference video URL, which must be accessible from the public network.</p>
+     * Set 
+     * @param VideoUrl 
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;

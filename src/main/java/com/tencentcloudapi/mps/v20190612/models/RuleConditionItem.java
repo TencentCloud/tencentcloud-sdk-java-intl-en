@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RuleConditionItem extends AbstractModel {
 
     /**
-    * Key of the quality inspection item condition.
+    * 
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Value corresponding to the condition.
+    * 
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Key of the quality inspection item condition. 
-     * @return Key Key of the quality inspection item condition.
+     * Get  
+     * @return Key 
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key of the quality inspection item condition.
-     * @param Key Key of the quality inspection item condition.
+     * Set 
+     * @param Key 
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Value corresponding to the condition. 
-     * @return Value Value corresponding to the condition.
+     * Get  
+     * @return Value 
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Value corresponding to the condition.
-     * @param Value Value corresponding to the condition.
+     * Set 
+     * @param Value 
      */
     public void setValue(String Value) {
         this.Value = Value;

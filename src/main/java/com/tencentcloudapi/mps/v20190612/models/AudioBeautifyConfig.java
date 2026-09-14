@@ -24,76 +24,46 @@ import java.util.HashMap;
 public class AudioBeautifyConfig extends AbstractModel {
 
     /**
-    * Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+    * <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+    * <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
     */
     @SerializedName("Types")
     @Expose
     private String [] Types;
 
     /**
-     * Get Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`. 
-     * @return Switch Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+     * Get <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON. 
+     * @return Switch <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
-     * @param Switch Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+     * Set <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
+     * @param Switch <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick. 
-     * @return Types Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+     * Get <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick. 
+     * @return Types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
      */
     public String [] getTypes() {
         return this.Types;
     }
 
     /**
-     * Set Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
-     * @param Types Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+     * Set <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+     * @param Types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
      */
     public void setTypes(String [] Types) {
         this.Types = Types;

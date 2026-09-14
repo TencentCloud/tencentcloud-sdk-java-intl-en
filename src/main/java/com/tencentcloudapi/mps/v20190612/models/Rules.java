@@ -38,10 +38,7 @@ public class Rules extends AbstractModel {
     private RuleConditionItem [] Conditions;
 
     /**
-    * Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+    * 
     */
     @SerializedName("Linker")
     @Expose
@@ -87,28 +84,16 @@ public class Rules extends AbstractModel {
     }
 
     /**
-     * Get Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR 
-     * @return Linker Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+     * Get  
+     * @return Linker 
      */
     public String getLinker() {
         return this.Linker;
     }
 
     /**
-     * Set Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
-     * @param Linker Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+     * Set 
+     * @param Linker 
      */
     public void setLinker(String Linker) {
         this.Linker = Linker;

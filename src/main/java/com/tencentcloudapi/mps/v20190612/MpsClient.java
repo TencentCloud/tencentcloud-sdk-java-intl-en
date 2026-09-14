@@ -51,6 +51,17 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     }
 
     /**
+     *Synchronize tone conversion to convert the input audio into the specified timbre based on the input audio and specified timbre.
+     * @param req ChangeVoiceRequest
+     * @return ChangeVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeVoiceResponse ChangeVoice(ChangeVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChangeVoice", ChangeVoiceResponse.class);
+    }
+
+    /**
      *Clone a hit product. Input a reference video of a hit product and a product image to generate a video with aligned style and pace.
      * @param req CloneViralRequest
      * @return CloneViralResponse
@@ -205,7 +216,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     }
 
     /**
-     *This API is used to create an AIGC documentation generation video task.
+     *Creates an AIGC document-to-video task.
 This API is used to query tasks.
      * @param req CreateDocToVideoTaskRequest
      * @return CreateDocToVideoTaskResponse
@@ -1362,6 +1373,19 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *Modify the status of an AIGC document-to-video task.
+
+Contains two actions: confirm and regenerate.
+     * @param req ModifyDocToVideoTaskStatusRequest
+     * @return ModifyDocToVideoTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDocToVideoTaskStatusResponse ModifyDocToVideoTaskStatus(ModifyDocToVideoTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDocToVideoTaskStatus", ModifyDocToVideoTaskStatusResponse.class);
+    }
+
+    /**
      *This API is used to modify a custom image sprite generating template.
      * @param req ModifyImageSpriteTemplateRequest
      * @return ModifyImageSpriteTemplateResponse
@@ -1574,18 +1598,18 @@ Live stream processing event notification supports HTTP callbacks and also suppo
     }
 
     /**
-     *This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-- Audio/Video transcoding (such as standard transcoding, top speed codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
+     *This API is used to initiate a processing task for URL video links or media files in COS. Features include:
+- Audio/Video transcoding (such as standard transcoding, Top Speed Codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
 - Adaptive bitrate streaming conversion for audios/videos.
 - Video-to-GIF conversion.
-- Time point screenshot of videos.
+- Screenshot taking at specified time points.
 - Sampled screenshot of videos.
 - Image sprite of video screenshots.
-- Media quality inspection (such as media format diagnosis, audio/video content detection, and scoring without reference, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
+- Media quality inspection (such as media format diagnosis, audio/video content detection, and no-reference scoring, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
 - Smart subtitle (such as subtitle generation and translation).
 - Smart erasing (such as watermark removal, subtitle removal, and privacy protection).
-- Smart content moderation (such as pornography detection and sensitive information detection).
-- Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
+- Intelligent content moderation (such as pornography detection and sensitive information detection).
+-.
 - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
      * @param req ProcessMediaRequest
      * @return ProcessMediaResponse

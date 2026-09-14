@@ -38,7 +38,7 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
     private DocToVideoCosInfo CosInfo;
 
     /**
-    * 
+    * <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
     */
     @SerializedName("ResourceId")
     @Expose
@@ -77,16 +77,16 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ResourceId 
+     * Get <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p> 
+     * @return ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 
-     * @param ResourceId 
+     * Set <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+     * @param ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

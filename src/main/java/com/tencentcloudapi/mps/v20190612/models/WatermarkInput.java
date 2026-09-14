@@ -24,208 +24,138 @@ import java.util.HashMap;
 public class WatermarkInput extends AbstractModel {
 
     /**
-    * ID of a watermarking template.
+    * <p>Watermark template ID.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Custom watermark parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
-Custom watermark parameter is not available for screenshot.
+    * <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
     */
     @SerializedName("RawParameter")
     @Expose
     private RawWatermarkParameter RawParameter;
 
     /**
-    * Text content of up to 100 characters. This field is required only when the watermark type is text.
-Text watermark is not available for screenshot.
+    * <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
     */
     @SerializedName("TextContent")
     @Expose
     private String TextContent;
 
     /**
-    * SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
-SVG watermark is not available for screenshot.
+    * <p>SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.<br>SVG watermark does not support screenshot watermarking.</p>
     */
     @SerializedName("SvgContent")
     @Expose
     private String SvgContent;
 
     /**
-    * Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
-<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported.
+    * <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a watermark, in seconds.
-<li>If not set or set to 0, a watermark will last until the end of a video.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported.
+    * <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get ID of a watermarking template. 
-     * @return Definition ID of a watermarking template.
+     * Get <p>Watermark template ID.</p> 
+     * @return Definition <p>Watermark template ID.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set ID of a watermarking template.
-     * @param Definition ID of a watermarking template.
+     * Set <p>Watermark template ID.</p>
+     * @param Definition <p>Watermark template ID.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Custom watermark parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
-Custom watermark parameter is not available for screenshot. 
-     * @return RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
-Custom watermark parameter is not available for screenshot.
+     * Get <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p> 
+     * @return RawParameter <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
      */
     public RawWatermarkParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set Custom watermark parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
-Custom watermark parameter is not available for screenshot.
-     * @param RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
-Custom watermark parameter is not available for screenshot.
+     * Set <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
+     * @param RawParameter <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
      */
     public void setRawParameter(RawWatermarkParameter RawParameter) {
         this.RawParameter = RawParameter;
     }
 
     /**
-     * Get Text content of up to 100 characters. This field is required only when the watermark type is text.
-Text watermark is not available for screenshot. 
-     * @return TextContent Text content of up to 100 characters. This field is required only when the watermark type is text.
-Text watermark is not available for screenshot.
+     * Get <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p> 
+     * @return TextContent <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
      */
     public String getTextContent() {
         return this.TextContent;
     }
 
     /**
-     * Set Text content of up to 100 characters. This field is required only when the watermark type is text.
-Text watermark is not available for screenshot.
-     * @param TextContent Text content of up to 100 characters. This field is required only when the watermark type is text.
-Text watermark is not available for screenshot.
+     * Set <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
+     * @param TextContent <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
      */
     public void setTextContent(String TextContent) {
         this.TextContent = TextContent;
     }
 
     /**
-     * Get SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
-SVG watermark is not available for screenshot. 
-     * @return SvgContent SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
-SVG watermark is not available for screenshot.
+     * Get <p>SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.<br>SVG watermark does not support screenshot watermarking.</p> 
+     * @return SvgContent <p>SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.<br>SVG watermark does not support screenshot watermarking.</p>
      */
     public String getSvgContent() {
         return this.SvgContent;
     }
 
     /**
-     * Set SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
-SVG watermark is not available for screenshot.
-     * @param SvgContent SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
-SVG watermark is not available for screenshot.
+     * Set <p>SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.<br>SVG watermark does not support screenshot watermarking.</p>
+     * @param SvgContent <p>SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.<br>SVG watermark does not support screenshot watermarking.</p>
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;
     }
 
     /**
-     * Get Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
-<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported. 
-     * @return StartTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
-<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported.
+     * Get <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it. 
+     * @return StartTimeOffset <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
-<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported.
-     * @param StartTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
-<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported.
+     * Set <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
+     * @param StartTimeOffset <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a watermark, in seconds.
-<li>If not set or set to 0, a watermark will last until the end of a video.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported. 
-     * @return EndTimeOffset End time offset of a watermark, in seconds.
-<li>If not set or set to 0, a watermark will last until the end of a video.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported.
+     * Get <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported. 
+     * @return EndTimeOffset <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a watermark, in seconds.
-<li>If not set or set to 0, a watermark will last until the end of a video.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported.
-     * @param EndTimeOffset End time offset of a watermark, in seconds.
-<li>If not set or set to 0, a watermark will last until the end of a video.</li>
-<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
-
-Note: It is only used for video scenarios. Screenshots are not supported.
+     * Set <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
+     * @param EndTimeOffset <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

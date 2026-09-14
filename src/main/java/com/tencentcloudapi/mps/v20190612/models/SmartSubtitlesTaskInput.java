@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SmartSubtitlesTaskInput extends AbstractModel {
 
     /**
-    * Smart subtitle template ID.	
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * User extension field, which does not need to be filled in for general scenarios.
+    * 
     */
     @SerializedName("UserExtPara")
     @Expose
@@ -52,49 +52,39 @@ public class SmartSubtitlesTaskInput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+    * 
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-     * Get Smart subtitle template ID.	 
-     * @return Definition Smart subtitle template ID.	
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Smart subtitle template ID.	
-     * @param Definition Smart subtitle template ID.	
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get User extension field, which does not need to be filled in for general scenarios. 
-     * @return UserExtPara User extension field, which does not need to be filled in for general scenarios.
+     * Get  
+     * @return UserExtPara 
      */
     public String getUserExtPara() {
         return this.UserExtPara;
     }
 
     /**
-     * Set User extension field, which does not need to be filled in for general scenarios.
-     * @param UserExtPara User extension field, which does not need to be filled in for general scenarios.
+     * Set 
+     * @param UserExtPara 
      */
     public void setUserExtPara(String UserExtPara) {
         this.UserExtPara = UserExtPara;
@@ -133,56 +123,16 @@ If this field is left unspecified, the default value is the relative path in the
     }
 
     /**
-     * Get Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}. 
-     * @return OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+     * Get  
+     * @return OutputObjectPath 
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
-     * @param OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-
-Relative path example:
-- File name_{variable name}.{format}
--File name.{format}
-
-Absolute path example:
--/Custom path/Filename_{variable name}.{format}
-
-If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
+     * Set 
+     * @param OutputObjectPath 
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;

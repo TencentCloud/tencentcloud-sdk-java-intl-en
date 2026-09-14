@@ -52,6 +52,13 @@ public class DescribeMNPTeamMerchantInfoRes extends AbstractModel {
     private String MerchantName;
 
     /**
+    * <p>Payment currency.</p>
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
      * Get <p>Merchant ID.</p> 
      * @return MerchantID <p>Merchant ID.</p>
      */
@@ -115,6 +122,22 @@ public class DescribeMNPTeamMerchantInfoRes extends AbstractModel {
         this.MerchantName = MerchantName;
     }
 
+    /**
+     * Get <p>Payment currency.</p> 
+     * @return Currency <p>Payment currency.</p>
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set <p>Payment currency.</p>
+     * @param Currency <p>Payment currency.</p>
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
     public DescribeMNPTeamMerchantInfoRes() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeMNPTeamMerchantInfoRes extends AbstractModel {
         if (source.MerchantName != null) {
             this.MerchantName = new String(source.MerchantName);
         }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeMNPTeamMerchantInfoRes extends AbstractModel {
         this.setParamSimple(map, prefix + "ApprovalStatus", this.ApprovalStatus);
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
 
     }
 }

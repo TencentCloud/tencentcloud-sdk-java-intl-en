@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class S3OutputStorage extends AbstractModel {
 
     /**
-    * S3 bucket.
+    * S3 bucket。
     */
     @SerializedName("S3Bucket")
     @Expose
     private String S3Bucket;
 
     /**
-    * Region of the S3 bucket.
+    * 
     */
     @SerializedName("S3Region")
     @Expose
     private String S3Region;
 
     /**
-    * Secret key id for uploading media content to the AWS private network.
+    * 
     */
     @SerializedName("S3SecretId")
     @Expose
     private String S3SecretId;
 
     /**
-    * Upload the secret key for media content on the AWS private network.
+    * 
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-     * Get S3 bucket. 
-     * @return S3Bucket S3 bucket.
+     * Get S3 bucket。 
+     * @return S3Bucket S3 bucket。
      */
     public String getS3Bucket() {
         return this.S3Bucket;
     }
 
     /**
-     * Set S3 bucket.
-     * @param S3Bucket S3 bucket.
+     * Set S3 bucket。
+     * @param S3Bucket S3 bucket。
      */
     public void setS3Bucket(String S3Bucket) {
         this.S3Bucket = S3Bucket;
     }
 
     /**
-     * Get Region of the S3 bucket. 
-     * @return S3Region Region of the S3 bucket.
+     * Get  
+     * @return S3Region 
      */
     public String getS3Region() {
         return this.S3Region;
     }
 
     /**
-     * Set Region of the S3 bucket.
-     * @param S3Region Region of the S3 bucket.
+     * Set 
+     * @param S3Region 
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;
     }
 
     /**
-     * Get Secret key id for uploading media content to the AWS private network. 
-     * @return S3SecretId Secret key id for uploading media content to the AWS private network.
+     * Get  
+     * @return S3SecretId 
      */
     public String getS3SecretId() {
         return this.S3SecretId;
     }
 
     /**
-     * Set Secret key id for uploading media content to the AWS private network.
-     * @param S3SecretId Secret key id for uploading media content to the AWS private network.
+     * Set 
+     * @param S3SecretId 
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get Upload the secret key for media content on the AWS private network. 
-     * @return S3SecretKey Upload the secret key for media content on the AWS private network.
+     * Get  
+     * @return S3SecretKey 
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
     }
 
     /**
-     * Set Upload the secret key for media content on the AWS private network.
-     * @param S3SecretKey Upload the secret key for media content on the AWS private network.
+     * Set 
+     * @param S3SecretKey 
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;

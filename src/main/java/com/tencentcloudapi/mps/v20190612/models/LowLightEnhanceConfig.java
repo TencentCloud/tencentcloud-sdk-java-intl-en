@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class LowLightEnhanceConfig extends AbstractModel {
 
     /**
-    * Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+    * Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,22 +34,20 @@ Default value: ON.
     private String Switch;
 
     /**
-    * Type. Valid values:
-<li>normal</li>
-Default value: normal.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * Get Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON. 
-     * @return Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @return Switch Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -57,13 +55,13 @@ Default value: ON.
     }
 
     /**
-     * Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * Set Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @param Switch Capability configuration switch. Valid values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -71,24 +69,16 @@ Default value: ON.
     }
 
     /**
-     * Get Type. Valid values:
-<li>normal</li>
-Default value: normal. 
-     * @return Type Type. Valid values:
-<li>normal</li>
-Default value: normal.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type. Valid values:
-<li>normal</li>
-Default value: normal.
-     * @param Type Type. Valid values:
-<li>normal</li>
-Default value: normal.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

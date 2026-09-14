@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SimpleAesDrm extends AbstractModel {
 
     /**
-    * Request decryption key uri address.
+    * 
     */
     @SerializedName("Uri")
     @Expose
     private String Uri;
 
     /**
-    * Encryption key (32-byte hexadecimal string).
+    * 
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Encryption initialization vector (32-byte hexadecimal string).
+    * 
     */
     @SerializedName("Vector")
     @Expose
     private String Vector;
 
     /**
-     * Get Request decryption key uri address. 
-     * @return Uri Request decryption key uri address.
+     * Get  
+     * @return Uri 
      */
     public String getUri() {
         return this.Uri;
     }
 
     /**
-     * Set Request decryption key uri address.
-     * @param Uri Request decryption key uri address.
+     * Set 
+     * @param Uri 
      */
     public void setUri(String Uri) {
         this.Uri = Uri;
     }
 
     /**
-     * Get Encryption key (32-byte hexadecimal string). 
-     * @return Key Encryption key (32-byte hexadecimal string).
+     * Get  
+     * @return Key 
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Encryption key (32-byte hexadecimal string).
-     * @param Key Encryption key (32-byte hexadecimal string).
+     * Set 
+     * @param Key 
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Encryption initialization vector (32-byte hexadecimal string). 
-     * @return Vector Encryption initialization vector (32-byte hexadecimal string).
+     * Get  
+     * @return Vector 
      */
     public String getVector() {
         return this.Vector;
     }
 
     /**
-     * Set Encryption initialization vector (32-byte hexadecimal string).
-     * @param Vector Encryption initialization vector (32-byte hexadecimal string).
+     * Set 
+     * @param Vector 
      */
     public void setVector(String Vector) {
         this.Vector = Vector;

@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class AigcVideoReferenceVideoInfo extends AbstractModel {
 
     /**
-    * Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
+    * <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
     */
     @SerializedName("VideoUrl")
     @Expose
     private String VideoUrl;
 
     /**
-    * The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
+    * <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
     */
     @SerializedName("ReferType")
     @Expose
     private String ReferType;
 
     /**
-    * The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
+    * <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
     */
     @SerializedName("KeepOriginalSound")
     @Expose
     private String KeepOriginalSound;
 
     /**
-     * Get Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined. 
-     * @return VideoUrl Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
+     * Get <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p> 
+     * @return VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
      */
     public String getVideoUrl() {
         return this.VideoUrl;
     }
 
     /**
-     * Set Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
-     * @param VideoUrl Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
+     * Set <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+     * @param VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
     }
 
     /**
-     * Get The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing. 
-     * @return ReferType The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
+     * Get <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p> 
+     * @return ReferType <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
      */
     public String getReferType() {
         return this.ReferType;
     }
 
     /**
-     * Set The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-     * @param ReferType The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
+     * Set <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
+     * @param ReferType <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
      */
     public void setReferType(String ReferType) {
         this.ReferType = ReferType;
     }
 
     /**
-     * Get The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature). 
-     * @return KeepOriginalSound The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
+     * Get <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p> 
+     * @return KeepOriginalSound <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
      */
     public String getKeepOriginalSound() {
         return this.KeepOriginalSound;
     }
 
     /**
-     * Set The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
-     * @param KeepOriginalSound The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
+     * Set <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
+     * @param KeepOriginalSound <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
      */
     public void setKeepOriginalSound(String KeepOriginalSound) {
         this.KeepOriginalSound = KeepOriginalSound;

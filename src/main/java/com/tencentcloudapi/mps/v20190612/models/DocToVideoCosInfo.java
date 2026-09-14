@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DocToVideoCosInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>cos bucket region</p>
     */
     @SerializedName("CosBucketRegion")
     @Expose
     private String CosBucketRegion;
 
     /**
-    * 
+    * <p>cos bucket name</p>
     */
     @SerializedName("CosBucketName")
     @Expose
     private String CosBucketName;
 
     /**
-    * 
+    * <p>cos bucket path</p>
     */
     @SerializedName("CosBucketPath")
     @Expose
     private String CosBucketPath;
 
     /**
-     * Get  
-     * @return CosBucketRegion 
+     * Get <p>cos bucket region</p> 
+     * @return CosBucketRegion <p>cos bucket region</p>
      */
     public String getCosBucketRegion() {
         return this.CosBucketRegion;
     }
 
     /**
-     * Set 
-     * @param CosBucketRegion 
+     * Set <p>cos bucket region</p>
+     * @param CosBucketRegion <p>cos bucket region</p>
      */
     public void setCosBucketRegion(String CosBucketRegion) {
         this.CosBucketRegion = CosBucketRegion;
     }
 
     /**
-     * Get  
-     * @return CosBucketName 
+     * Get <p>cos bucket name</p> 
+     * @return CosBucketName <p>cos bucket name</p>
      */
     public String getCosBucketName() {
         return this.CosBucketName;
     }
 
     /**
-     * Set 
-     * @param CosBucketName 
+     * Set <p>cos bucket name</p>
+     * @param CosBucketName <p>cos bucket name</p>
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
     }
 
     /**
-     * Get  
-     * @return CosBucketPath 
+     * Get <p>cos bucket path</p> 
+     * @return CosBucketPath <p>cos bucket path</p>
      */
     public String getCosBucketPath() {
         return this.CosBucketPath;
     }
 
     /**
-     * Set 
-     * @param CosBucketPath 
+     * Set <p>cos bucket path</p>
+     * @param CosBucketPath <p>cos bucket path</p>
      */
     public void setCosBucketPath(String CosBucketPath) {
         this.CosBucketPath = CosBucketPath;

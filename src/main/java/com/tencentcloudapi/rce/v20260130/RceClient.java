@@ -72,6 +72,17 @@ public class RceClient extends AbstractClient{
     }
 
     /**
+     *Used to obtain real-time risk information for events. It evaluates and returns risk decision results, risk scores, and risk tags based on device risk, environmental risk, account risk, behavioral risk, and historical reported event data for critical events in your business.
+     * @param req AssessRiskRequest
+     * @return AssessRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssessRiskResponse AssessRisk(AssessRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssessRisk", AssessRiskResponse.class);
+    }
+
+    /**
      *Used to report events that do not require real-time decision-making in your business. Our engine will perform computations and apply machine learning to mine risk features from these events, which are then used to support real-time event risk assessment.
      * @param req ReportEventRequest
      * @return ReportEventResponse

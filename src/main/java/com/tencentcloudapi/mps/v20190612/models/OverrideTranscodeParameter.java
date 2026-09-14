@@ -24,67 +24,67 @@ import java.util.HashMap;
 public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
-    * Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
+    * Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
+    * Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
+    * Indicates whether to remove audio data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * Video stream configuration parameter.
+    * Video stream configuration parameters.
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfoForUpdate VideoTemplate;
 
     /**
-    * Audio stream configuration parameter.
+    * Audio stream configuration parameters.
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * Top Speed Codec transcoding parameter.
+    * 
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
-    * Subtitle stream configuration parameter.
+    * Subtitle stream configuration parameters.
     */
     @SerializedName("SubtitleTemplate")
     @Expose
     private SubtitleTemplate SubtitleTemplate;
 
     /**
-    * Specifies the external audio track parameter.
+    * External audio track parameter.
     */
     @SerializedName("AddonAudioStream")
     @Expose
     private MediaInputInfo [] AddonAudioStream;
 
     /**
-    * Extension field for transcoding.
+    * Transcoding extension field.
     */
     @SerializedName("StdExtInfo")
     @Expose
@@ -98,160 +98,160 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private AddOnSubtitle [] AddOnSubtitles;
 
     /**
-     * Get Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files. 
-     * @return Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
+     * Get Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files. 
+     * @return Container Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
-     * @param Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
+     * Set Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+     * @param Container Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li> 
-     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
+     * Get Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li> 
+     * @return RemoveVideo Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-     * @param RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
+     * Set Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
+     * @param RemoveVideo Indicates whether to remove video data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li> 
-     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
+     * Get Indicates whether to remove audio data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li> 
+     * @return RemoveAudio Indicates whether to remove audio data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-     * @param RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
+     * Set Indicates whether to remove audio data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
+     * @param RemoveAudio Indicates whether to remove audio data. Parameter value:
+<li>`0`: retention;</li>
+<li>1: Remove.</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get Video stream configuration parameter. 
-     * @return VideoTemplate Video stream configuration parameter.
+     * Get Video stream configuration parameters. 
+     * @return VideoTemplate Video stream configuration parameters.
      */
     public VideoTemplateInfoForUpdate getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set Video stream configuration parameter.
-     * @param VideoTemplate Video stream configuration parameter.
+     * Set Video stream configuration parameters.
+     * @param VideoTemplate Video stream configuration parameters.
      */
     public void setVideoTemplate(VideoTemplateInfoForUpdate VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get Audio stream configuration parameter. 
-     * @return AudioTemplate Audio stream configuration parameter.
+     * Get Audio stream configuration parameters. 
+     * @return AudioTemplate Audio stream configuration parameters.
      */
     public AudioTemplateInfoForUpdate getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set Audio stream configuration parameter.
-     * @param AudioTemplate Audio stream configuration parameter.
+     * Set Audio stream configuration parameters.
+     * @param AudioTemplate Audio stream configuration parameters.
      */
     public void setAudioTemplate(AudioTemplateInfoForUpdate AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get Top Speed Codec transcoding parameter. 
-     * @return TEHDConfig Top Speed Codec transcoding parameter.
+     * Get  
+     * @return TEHDConfig 
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set Top Speed Codec transcoding parameter.
-     * @param TEHDConfig Top Speed Codec transcoding parameter.
+     * Set 
+     * @param TEHDConfig 
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get Subtitle stream configuration parameter. 
-     * @return SubtitleTemplate Subtitle stream configuration parameter.
+     * Get Subtitle stream configuration parameters. 
+     * @return SubtitleTemplate Subtitle stream configuration parameters.
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
     }
 
     /**
-     * Set Subtitle stream configuration parameter.
-     * @param SubtitleTemplate Subtitle stream configuration parameter.
+     * Set Subtitle stream configuration parameters.
+     * @param SubtitleTemplate Subtitle stream configuration parameters.
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;
     }
 
     /**
-     * Get Specifies the external audio track parameter. 
-     * @return AddonAudioStream Specifies the external audio track parameter.
+     * Get External audio track parameter. 
+     * @return AddonAudioStream External audio track parameter.
      */
     public MediaInputInfo [] getAddonAudioStream() {
         return this.AddonAudioStream;
     }
 
     /**
-     * Set Specifies the external audio track parameter.
-     * @param AddonAudioStream Specifies the external audio track parameter.
+     * Set External audio track parameter.
+     * @param AddonAudioStream External audio track parameter.
      */
     public void setAddonAudioStream(MediaInputInfo [] AddonAudioStream) {
         this.AddonAudioStream = AddonAudioStream;
     }
 
     /**
-     * Get Extension field for transcoding. 
-     * @return StdExtInfo Extension field for transcoding.
+     * Get Transcoding extension field. 
+     * @return StdExtInfo Transcoding extension field.
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
     }
 
     /**
-     * Set Extension field for transcoding.
-     * @param StdExtInfo Extension field for transcoding.
+     * Set Transcoding extension field.
+     * @param StdExtInfo Transcoding extension field.
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RawSmartEraseParameter extends AbstractModel {
 
     /**
-    * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+    * 
     */
     @SerializedName("EraseType")
     @Expose
@@ -52,37 +52,37 @@ public class RawSmartEraseParameter extends AbstractModel {
     private SmartErasePrivacyConfig ErasePrivacyConfig;
 
     /**
-    * <p>id of the subtitle removal suppression template.</p>
+    * 
     */
     @SerializedName("SubtitleEmbedId")
     @Expose
     private Long SubtitleEmbedId;
 
     /**
-    * <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+    * 
     */
     @SerializedName("UseOriginalPos")
     @Expose
     private Long UseOriginalPos;
 
     /**
-    * <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+    * 
     */
     @SerializedName("UseOriginalSize")
     @Expose
     private Long UseOriginalSize;
 
     /**
-     * Get <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul> 
-     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * Get  
+     * @return EraseType 
      */
     public String getEraseType() {
         return this.EraseType;
     }
 
     /**
-     * Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
-     * @param EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * Set 
+     * @param EraseType 
      */
     public void setEraseType(String EraseType) {
         this.EraseType = EraseType;
@@ -137,48 +137,48 @@ public class RawSmartEraseParameter extends AbstractModel {
     }
 
     /**
-     * Get <p>id of the subtitle removal suppression template.</p> 
-     * @return SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     * Get  
+     * @return SubtitleEmbedId 
      */
     public Long getSubtitleEmbedId() {
         return this.SubtitleEmbedId;
     }
 
     /**
-     * Set <p>id of the subtitle removal suppression template.</p>
-     * @param SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     * Set 
+     * @param SubtitleEmbedId 
      */
     public void setSubtitleEmbedId(Long SubtitleEmbedId) {
         this.SubtitleEmbedId = SubtitleEmbedId;
     }
 
     /**
-     * Get <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p> 
-     * @return UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     * Get  
+     * @return UseOriginalPos 
      */
     public Long getUseOriginalPos() {
         return this.UseOriginalPos;
     }
 
     /**
-     * Set <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
-     * @param UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     * Set 
+     * @param UseOriginalPos 
      */
     public void setUseOriginalPos(Long UseOriginalPos) {
         this.UseOriginalPos = UseOriginalPos;
     }
 
     /**
-     * Get <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p> 
-     * @return UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     * Get  
+     * @return UseOriginalSize 
      */
     public Long getUseOriginalSize() {
         return this.UseOriginalSize;
     }
 
     /**
-     * Set <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
-     * @param UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     * Set 
+     * @param UseOriginalSize 
      */
     public void setUseOriginalSize(Long UseOriginalSize) {
         this.UseOriginalSize = UseOriginalSize;

@@ -24,253 +24,230 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskRequest extends AbstractModel {
 
     /**
-    * <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
+    * <p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
+    * <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * <p>Specifies the scenario for audio generation. Music: music.</p>
+    * 
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-    * <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
+    * <p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>Reference video information, which is supported by some models.</p>
+    * <p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
     */
     @SerializedName("VideoInfos")
     @Expose
     private AigcAudioReferenceVideoInfo [] VideoInfos;
 
     /**
-    * <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
+    * <p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
     */
     @SerializedName("AudioInfos")
     @Expose
     private AigcAudioReferenceAudioInfo [] AudioInfos;
 
     /**
-    * <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-    */
-    @SerializedName("OutputAudioFormat")
-    @Expose
-    private String OutputAudioFormat;
-
-    /**
-    * <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
+    * 
     */
     @SerializedName("StoreCosParam")
     @Expose
     private AigcStoreCosParam StoreCosParam;
 
     /**
-    * <p>Additional parameters required.</p>
+    * 
     */
     @SerializedName("ExtraParameters")
     @Expose
     private AigcAudioExtraParam ExtraParameters;
 
     /**
-    * <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+    * <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
     */
     @SerializedName("AdditionalParameters")
     @Expose
     private String AdditionalParameters;
 
     /**
-    * <p>API operator name.</p>
+    * 
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p> 
-     * @return ModelName <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
+     * Get <p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p> 
+     * @return ModelName <p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
-     * @param ModelName <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
+     * Set <p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
+     * @param ModelName <p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p> 
-     * @return ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
+     * Get <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p> 
+     * @return ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
-     * @param ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
+     * Set <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
+     * @param ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get <p>Specifies the scenario for audio generation. Music: music.</p> 
-     * @return SceneType <p>Specifies the scenario for audio generation. Music: music.</p>
+     * Get  
+     * @return SceneType 
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>Specifies the scenario for audio generation. Music: music.</p>
-     * @param SceneType <p>Specifies the scenario for audio generation. Music: music.</p>
+     * Set 
+     * @param SceneType 
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p> 
-     * @return Prompt <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
+     * Get <p>Description of the generated music. (Note: supports up to 2,000 characters).</p> 
+     * @return Prompt <p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
-     * @param Prompt <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
+     * Set <p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
+     * @param Prompt <p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>Reference video information, which is supported by some models.</p> 
-     * @return VideoInfos <p>Reference video information, which is supported by some models.</p>
+     * Get <p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol> 
+     * @return VideoInfos <p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
      */
     public AigcAudioReferenceVideoInfo [] getVideoInfos() {
         return this.VideoInfos;
     }
 
     /**
-     * Set <p>Reference video information, which is supported by some models.</p>
-     * @param VideoInfos <p>Reference video information, which is supported by some models.</p>
+     * Set <p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
+     * @param VideoInfos <p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
      */
     public void setVideoInfos(AigcAudioReferenceVideoInfo [] VideoInfos) {
         this.VideoInfos = VideoInfos;
     }
 
     /**
-     * Get <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p> 
-     * @return AudioInfos <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
+     * Get <p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p> 
+     * @return AudioInfos <p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
      */
     public AigcAudioReferenceAudioInfo [] getAudioInfos() {
         return this.AudioInfos;
     }
 
     /**
-     * Set <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
-     * @param AudioInfos <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
+     * Set <p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
+     * @param AudioInfos <p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
      */
     public void setAudioInfos(AigcAudioReferenceAudioInfo [] AudioInfos) {
         this.AudioInfos = AudioInfos;
     }
 
     /**
-     * Get <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p> 
-     * @return OutputAudioFormat <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-     */
-    public String getOutputAudioFormat() {
-        return this.OutputAudioFormat;
-    }
-
-    /**
-     * Set <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-     * @param OutputAudioFormat <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-     */
-    public void setOutputAudioFormat(String OutputAudioFormat) {
-        this.OutputAudioFormat = OutputAudioFormat;
-    }
-
-    /**
-     * Get <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p> 
-     * @return StoreCosParam <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
+     * Get  
+     * @return StoreCosParam 
      */
     public AigcStoreCosParam getStoreCosParam() {
         return this.StoreCosParam;
     }
 
     /**
-     * Set <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
-     * @param StoreCosParam <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
+     * Set 
+     * @param StoreCosParam 
      */
     public void setStoreCosParam(AigcStoreCosParam StoreCosParam) {
         this.StoreCosParam = StoreCosParam;
     }
 
     /**
-     * Get <p>Additional parameters required.</p> 
-     * @return ExtraParameters <p>Additional parameters required.</p>
+     * Get  
+     * @return ExtraParameters 
      */
     public AigcAudioExtraParam getExtraParameters() {
         return this.ExtraParameters;
     }
 
     /**
-     * Set <p>Additional parameters required.</p>
-     * @param ExtraParameters <p>Additional parameters required.</p>
+     * Set 
+     * @param ExtraParameters 
      */
     public void setExtraParameters(AigcAudioExtraParam ExtraParameters) {
         this.ExtraParameters = ExtraParameters;
     }
 
     /**
-     * Get <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol> 
-     * @return AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+     * Get <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol> 
+     * @return AdditionalParameters <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
      */
     public String getAdditionalParameters() {
         return this.AdditionalParameters;
     }
 
     /**
-     * Set <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
-     * @param AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+     * Set <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
+     * @param AdditionalParameters <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
      */
     public void setAdditionalParameters(String AdditionalParameters) {
         this.AdditionalParameters = AdditionalParameters;
     }
 
     /**
-     * Get <p>API operator name.</p> 
-     * @return Operator <p>API operator name.</p>
+     * Get  
+     * @return Operator 
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set <p>API operator name.</p>
-     * @param Operator <p>API operator name.</p>
+     * Set 
+     * @param Operator 
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
@@ -308,9 +285,6 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
                 this.AudioInfos[i] = new AigcAudioReferenceAudioInfo(source.AudioInfos[i]);
             }
         }
-        if (source.OutputAudioFormat != null) {
-            this.OutputAudioFormat = new String(source.OutputAudioFormat);
-        }
         if (source.StoreCosParam != null) {
             this.StoreCosParam = new AigcStoreCosParam(source.StoreCosParam);
         }
@@ -336,7 +310,6 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
         this.setParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
-        this.setParamSimple(map, prefix + "OutputAudioFormat", this.OutputAudioFormat);
         this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
         this.setParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
         this.setParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class OverrideEraseParameter extends AbstractModel {
 
     /**
-    * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+    * 
     */
     @SerializedName("EraseType")
     @Expose
     private String EraseType;
 
     /**
-    * <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+    * 
     */
     @SerializedName("EraseSubtitleConfig")
     @Expose
     private UpdateSmartEraseSubtitleConfig EraseSubtitleConfig;
 
     /**
-    * <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+    * 
     */
     @SerializedName("EraseWatermarkConfig")
     @Expose
     private UpdateSmartEraseWatermarkConfig EraseWatermarkConfig;
 
     /**
-    * <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+    * 
     */
     @SerializedName("ErasePrivacyConfig")
     @Expose
     private UpdateSmartErasePrivacyConfig ErasePrivacyConfig;
 
     /**
-    * <p>id of the subtitle removal suppression template.</p>
+    * 
     */
     @SerializedName("SubtitleEmbedId")
     @Expose
     private Long SubtitleEmbedId;
 
     /**
-     * Get <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul> 
-     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * Get  
+     * @return EraseType 
      */
     public String getEraseType() {
         return this.EraseType;
     }
 
     /**
-     * Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
-     * @param EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * Set 
+     * @param EraseType 
      */
     public void setEraseType(String EraseType) {
         this.EraseType = EraseType;
     }
 
     /**
-     * Get <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p> 
-     * @return EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+     * Get  
+     * @return EraseSubtitleConfig 
      */
     public UpdateSmartEraseSubtitleConfig getEraseSubtitleConfig() {
         return this.EraseSubtitleConfig;
     }
 
     /**
-     * Set <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-     * @param EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+     * Set 
+     * @param EraseSubtitleConfig 
      */
     public void setEraseSubtitleConfig(UpdateSmartEraseSubtitleConfig EraseSubtitleConfig) {
         this.EraseSubtitleConfig = EraseSubtitleConfig;
     }
 
     /**
-     * Get <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p> 
-     * @return EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+     * Get  
+     * @return EraseWatermarkConfig 
      */
     public UpdateSmartEraseWatermarkConfig getEraseWatermarkConfig() {
         return this.EraseWatermarkConfig;
     }
 
     /**
-     * Set <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-     * @param EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+     * Set 
+     * @param EraseWatermarkConfig 
      */
     public void setEraseWatermarkConfig(UpdateSmartEraseWatermarkConfig EraseWatermarkConfig) {
         this.EraseWatermarkConfig = EraseWatermarkConfig;
     }
 
     /**
-     * Get <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p> 
-     * @return ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+     * Get  
+     * @return ErasePrivacyConfig 
      */
     public UpdateSmartErasePrivacyConfig getErasePrivacyConfig() {
         return this.ErasePrivacyConfig;
     }
 
     /**
-     * Set <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-     * @param ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+     * Set 
+     * @param ErasePrivacyConfig 
      */
     public void setErasePrivacyConfig(UpdateSmartErasePrivacyConfig ErasePrivacyConfig) {
         this.ErasePrivacyConfig = ErasePrivacyConfig;
     }
 
     /**
-     * Get <p>id of the subtitle removal suppression template.</p> 
-     * @return SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     * Get  
+     * @return SubtitleEmbedId 
      */
     public Long getSubtitleEmbedId() {
         return this.SubtitleEmbedId;
     }
 
     /**
-     * Set <p>id of the subtitle removal suppression template.</p>
-     * @param SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     * Set 
+     * @param SubtitleEmbedId 
      */
     public void setSubtitleEmbedId(Long SubtitleEmbedId) {
         this.SubtitleEmbedId = SubtitleEmbedId;

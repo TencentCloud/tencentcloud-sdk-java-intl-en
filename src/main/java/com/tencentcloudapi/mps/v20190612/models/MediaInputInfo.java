@@ -24,135 +24,135 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel {
 
     /**
-    * Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
+    * Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
+    * Required when `Type` is `COS`. It represents the COS object information for media processing.
     */
     @SerializedName("CosInputInfo")
     @Expose
     private CosInputInfo CosInputInfo;
 
     /**
-    * Valid when Type is URL. This item is required and indicates the media processing URL object information.
+    * 
     */
     @SerializedName("UrlInputInfo")
     @Expose
     private UrlInputInfo UrlInputInfo;
 
     /**
-    * Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+    * 
     */
     @SerializedName("S3InputInfo")
     @Expose
     private S3InputInfo S3InputInfo;
 
     /**
-    * Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+    * 
     */
     @SerializedName("VODInputInfo")
     @Expose
     private VODInputInfo VODInputInfo;
 
     /**
-     * Get Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li> 
-     * @return Type Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
+     * Get Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li> 
+     * @return Type Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
-     * @param Type Type of input source object. valid values:.
-<Li>COS: specifies the cos origin.</li>
-<Li>URL: the url source.</li>
-<Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-<Li>VOD: video-on-demand pro edition (VOD Pro). </li>
+     * Set Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li>
+     * @param Type Type of the input source object. Supported values:
+<li>COS: COS origin</li>
+<li> URL: URL source</li>
+<li> AWS-S3: AWS source, currently only support transcoding task </li>
+<li> VOD: VOD Pro Edition </li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The information of the COS object to process. This parameter is valid and required when `Type` is `COS`. 
-     * @return CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
+     * Get Required when `Type` is `COS`. It represents the COS object information for media processing. 
+     * @return CosInputInfo Required when `Type` is `COS`. It represents the COS object information for media processing.
      */
     public CosInputInfo getCosInputInfo() {
         return this.CosInputInfo;
     }
 
     /**
-     * Set The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
-     * @param CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
+     * Set Required when `Type` is `COS`. It represents the COS object information for media processing.
+     * @param CosInputInfo Required when `Type` is `COS`. It represents the COS object information for media processing.
      */
     public void setCosInputInfo(CosInputInfo CosInputInfo) {
         this.CosInputInfo = CosInputInfo;
     }
 
     /**
-     * Get Valid when Type is URL. This item is required and indicates the media processing URL object information. 
-     * @return UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
+     * Get  
+     * @return UrlInputInfo 
      */
     public UrlInputInfo getUrlInputInfo() {
         return this.UrlInputInfo;
     }
 
     /**
-     * Set Valid when Type is URL. This item is required and indicates the media processing URL object information.
-     * @param UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
+     * Set 
+     * @param UrlInputInfo 
      */
     public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {
         this.UrlInputInfo = UrlInputInfo;
     }
 
     /**
-     * Get Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing. 
-     * @return S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+     * Get  
+     * @return S3InputInfo 
      */
     public S3InputInfo getS3InputInfo() {
         return this.S3InputInfo;
     }
 
     /**
-     * Set Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
-     * @param S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+     * Set 
+     * @param S3InputInfo 
      */
     public void setS3InputInfo(S3InputInfo S3InputInfo) {
         this.S3InputInfo = S3InputInfo;
     }
 
     /**
-     * Get Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information. 
-     * @return VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+     * Get  
+     * @return VODInputInfo 
      */
     public VODInputInfo getVODInputInfo() {
         return this.VODInputInfo;
     }
 
     /**
-     * Set Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
-     * @param VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+     * Set 
+     * @param VODInputInfo 
      */
     public void setVODInputInfo(VODInputInfo VODInputInfo) {
         this.VODInputInfo = VODInputInfo;

@@ -38,8 +38,8 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private VideoTemplateInfo Video;
 
     /**
-    * Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+    * Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
     */
     @SerializedName("RemoveAudio")
@@ -47,8 +47,8 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private Long RemoveAudio;
 
     /**
-    * Whether to remove video stream. Valid values:
-<li>0: no,</li>
+    * Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
     */
     @SerializedName("RemoveVideo")
@@ -56,8 +56,7 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private Long RemoveVideo;
 
     /**
-    * Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+    * 
     */
     @SerializedName("AudioList")
     @Expose
@@ -96,11 +95,11 @@ Note: This parameter is used when self-adaptive transcoding uses audio track mer
     }
 
     /**
-     * Get Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+     * Get Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li> 
-     * @return RemoveAudio Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+     * @return RemoveAudio Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
      */
     public Long getRemoveAudio() {
@@ -108,11 +107,11 @@ Note: This parameter is used when self-adaptive transcoding uses audio track mer
     }
 
     /**
-     * Set Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+     * Set Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
-     * @param RemoveAudio Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+     * @param RemoveAudio Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
@@ -120,11 +119,11 @@ Note: This parameter is used when self-adaptive transcoding uses audio track mer
     }
 
     /**
-     * Get Whether to remove video stream. Valid values:
-<li>0: no,</li>
+     * Get Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li> 
-     * @return RemoveVideo Whether to remove video stream. Valid values:
-<li>0: no,</li>
+     * @return RemoveVideo Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
      */
     public Long getRemoveVideo() {
@@ -132,11 +131,11 @@ Note: This parameter is used when self-adaptive transcoding uses audio track mer
     }
 
     /**
-     * Set Whether to remove video stream. Valid values:
-<li>0: no,</li>
+     * Set Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
-     * @param RemoveVideo Whether to remove video stream. Valid values:
-<li>0: no,</li>
+     * @param RemoveVideo Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
@@ -144,20 +143,16 @@ Note: This parameter is used when self-adaptive transcoding uses audio track mer
     }
 
     /**
-     * Get Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64. 
-     * @return AudioList Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+     * Get  
+     * @return AudioList 
      */
     public AudioTemplateInfo [] getAudioList() {
         return this.AudioList;
     }
 
     /**
-     * Set Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
-     * @param AudioList Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+     * Set 
+     * @param AudioList 
      */
     public void setAudioList(AudioTemplateInfo [] AudioList) {
         this.AudioList = AudioList;

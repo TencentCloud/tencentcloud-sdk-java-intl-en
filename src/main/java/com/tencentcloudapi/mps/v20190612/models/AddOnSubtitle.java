@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AddOnSubtitle extends AbstractModel {
 
     /**
-    * <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * <p>Subtitle file.</p>
+    * 
     */
     @SerializedName("Subtitle")
     @Expose
     private MediaInputInfo Subtitle;
 
     /**
-    * <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+    * 
     */
     @SerializedName("SubtitleName")
     @Expose
@@ -66,48 +66,48 @@ public class AddOnSubtitle extends AbstractModel {
     private Boolean DefaultTrack;
 
     /**
-     * Get <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li> 
-     * @return Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-     * @param Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get <p>Subtitle file.</p> 
-     * @return Subtitle <p>Subtitle file.</p>
+     * Get  
+     * @return Subtitle 
      */
     public MediaInputInfo getSubtitle() {
         return this.Subtitle;
     }
 
     /**
-     * Set <p>Subtitle file.</p>
-     * @param Subtitle <p>Subtitle file.</p>
+     * Set 
+     * @param Subtitle 
      */
     public void setSubtitle(MediaInputInfo Subtitle) {
         this.Subtitle = Subtitle;
     }
 
     /**
-     * Get <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p> 
-     * @return SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+     * Get  
+     * @return SubtitleName 
      */
     public String getSubtitleName() {
         return this.SubtitleName;
     }
 
     /**
-     * Set <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-     * @param SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+     * Set 
+     * @param SubtitleName 
      */
     public void setSubtitleName(String SubtitleName) {
         this.SubtitleName = SubtitleName;

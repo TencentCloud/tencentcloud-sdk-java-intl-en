@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class SuperResolutionConfig extends AbstractModel {
 
     /**
-    * Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+    * Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,32 +34,27 @@ Default value: ON.
     private String Switch;
 
     /**
-    * Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+    * 
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-     * Get Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * Get Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON. 
-     * @return Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @return Switch Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -67,13 +62,13 @@ Default value: ON.
     }
 
     /**
-     * Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * Set Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @param Switch Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -81,52 +76,32 @@ Default value: ON.
     }
 
     /**
-     * Get Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq. 
-     * @return Type Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
-     * @param Type Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2. 
-     * @return Size Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+     * Get  
+     * @return Size 
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
-     * @param Size Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+     * Set 
+     * @param Size 
      */
     public void setSize(Long Size) {
         this.Size = Size;

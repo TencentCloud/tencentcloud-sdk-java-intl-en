@@ -24,56 +24,49 @@ import java.util.HashMap;
 public class MediaMetaData extends AbstractModel {
 
     /**
-    * Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container type, for example, m4a and mp4.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Maximum height of a video stream. Unit: px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Maximum video stream width in px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Video duration, unit: seconds.
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Selection angle during video shooting. Unit: degree.
     */
     @SerializedName("Rotate")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VideoStreamSet")
     @Expose
@@ -89,173 +81,140 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AudioStreamSet")
     @Expose
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
-    * Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Video duration, unit: seconds.
     */
     @SerializedName("VideoDuration")
     @Expose
     private Float VideoDuration;
 
     /**
-    * Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Audio duration, in seconds.
     */
     @SerializedName("AudioDuration")
     @Expose
     private Float AudioDuration;
 
     /**
-     * Get Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Size Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte. 
+     * @return Size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Size Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+     * @param Size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Container Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container type, for example, m4a and mp4. 
+     * @return Container Container type, for example, m4a and mp4.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Container Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container type, for example, m4a and mp4.
+     * @param Container Container type, for example, m4a and mp4.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps. 
+     * @return Bitrate Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
+     * @param Bitrate Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Height Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Maximum height of a video stream. Unit: px. 
+     * @return Height Maximum height of a video stream. Unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Height Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Maximum height of a video stream. Unit: px.
+     * @param Height Maximum height of a video stream. Unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Width Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Maximum video stream width in px. 
+     * @return Width Maximum video stream width in px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Width Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Maximum video stream width in px.
+     * @param Width Maximum video stream width in px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Duration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Video duration, unit: seconds. 
+     * @return Duration Video duration, unit: seconds.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Duration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Video duration, unit: seconds.
+     * @param Duration Video duration, unit: seconds.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Rotate Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Selection angle during video shooting. Unit: degree. 
+     * @return Rotate Selection angle during video shooting. Unit: degree.
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Rotate Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Selection angle during video shooting. Unit: degree.
+     * @param Rotate Selection angle during video shooting. Unit: degree.
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
     }
 
     /**
-     * Get Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Video stream information. 
      * @return VideoStreamSet Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
         return this.VideoStreamSet;
@@ -263,19 +222,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VideoStreamSet Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
     }
 
     /**
-     * Get Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Audio stream information. 
      * @return AudioStreamSet Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
         return this.AudioStreamSet;
@@ -283,49 +238,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AudioStreamSet Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
         this.AudioStreamSet = AudioStreamSet;
     }
 
     /**
-     * Get Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VideoDuration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Video duration, unit: seconds. 
+     * @return VideoDuration Video duration, unit: seconds.
      */
     public Float getVideoDuration() {
         return this.VideoDuration;
     }
 
     /**
-     * Set Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoDuration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Video duration, unit: seconds.
+     * @param VideoDuration Video duration, unit: seconds.
      */
     public void setVideoDuration(Float VideoDuration) {
         this.VideoDuration = VideoDuration;
     }
 
     /**
-     * Get Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioDuration Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Audio duration, in seconds. 
+     * @return AudioDuration Audio duration, in seconds.
      */
     public Float getAudioDuration() {
         return this.AudioDuration;
     }
 
     /**
-     * Set Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioDuration Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Audio duration, in seconds.
+     * @param AudioDuration Audio duration, in seconds.
      */
     public void setAudioDuration(Float AudioDuration) {
         this.AudioDuration = AudioDuration;

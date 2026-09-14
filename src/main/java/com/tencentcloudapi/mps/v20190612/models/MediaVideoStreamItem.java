@@ -24,301 +24,276 @@ import java.util.HashMap;
 public class MediaVideoStreamItem extends AbstractModel {
 
     /**
-    * Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Bitrate of the video stream. Unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Height of a video stream. Unit: px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Video stream width in px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Video stream encoding format, for example, h264.
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Frame rate. Measurement unit: hz.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Colorspace.
+    * 
     */
     @SerializedName("ColorPrimaries")
     @Expose
     private String ColorPrimaries;
 
     /**
-    * Colorspace.
+    * 
     */
     @SerializedName("ColorSpace")
     @Expose
     private String ColorSpace;
 
     /**
-    * Colorspace.
+    * 
     */
     @SerializedName("ColorTransfer")
     @Expose
     private String ColorTransfer;
 
     /**
-    * HDR type.
+    * 
     */
     @SerializedName("HdrType")
     @Expose
     private String HdrType;
 
     /**
-    * Video Codecs.
+    * 
     */
     @SerializedName("Codecs")
     @Expose
     private String Codecs;
 
     /**
-    * Numerator of the frame rate
+    * 
     */
     @SerializedName("FpsNumerator")
     @Expose
     private Long FpsNumerator;
 
     /**
-    * Denominator of the frame rate
+    * 
     */
     @SerializedName("FpsDenominator")
     @Expose
     private Long FpsDenominator;
 
     /**
-     * Get Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Bitrate Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Bitrate of the video stream. Unit: bps. 
+     * @return Bitrate Bitrate of the video stream. Unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Bitrate Bitrate of a video stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bitrate of the video stream. Unit: bps.
+     * @param Bitrate Bitrate of the video stream. Unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Height Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Height of a video stream. Unit: px. 
+     * @return Height Height of a video stream. Unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Height Height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Height of a video stream. Unit: px.
+     * @param Height Height of a video stream. Unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Width Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Video stream width in px. 
+     * @return Width Video stream width in px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Width Width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Video stream width in px.
+     * @param Width Video stream width in px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Codec Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Video stream encoding format, for example, h264. 
+     * @return Codec Video stream encoding format, for example, h264.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Codec Video stream codec, such as h264.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Video stream encoding format, for example, h264.
+     * @param Codec Video stream encoding format, for example, h264.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Fps Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Frame rate. Measurement unit: hz. 
+     * @return Fps Frame rate. Measurement unit: hz.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Fps Frame rate in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Frame rate. Measurement unit: hz.
+     * @param Fps Frame rate. Measurement unit: hz.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Colorspace. 
-     * @return ColorPrimaries Colorspace.
+     * Get  
+     * @return ColorPrimaries 
      */
     public String getColorPrimaries() {
         return this.ColorPrimaries;
     }
 
     /**
-     * Set Colorspace.
-     * @param ColorPrimaries Colorspace.
+     * Set 
+     * @param ColorPrimaries 
      */
     public void setColorPrimaries(String ColorPrimaries) {
         this.ColorPrimaries = ColorPrimaries;
     }
 
     /**
-     * Get Colorspace. 
-     * @return ColorSpace Colorspace.
+     * Get  
+     * @return ColorSpace 
      */
     public String getColorSpace() {
         return this.ColorSpace;
     }
 
     /**
-     * Set Colorspace.
-     * @param ColorSpace Colorspace.
+     * Set 
+     * @param ColorSpace 
      */
     public void setColorSpace(String ColorSpace) {
         this.ColorSpace = ColorSpace;
     }
 
     /**
-     * Get Colorspace. 
-     * @return ColorTransfer Colorspace.
+     * Get  
+     * @return ColorTransfer 
      */
     public String getColorTransfer() {
         return this.ColorTransfer;
     }
 
     /**
-     * Set Colorspace.
-     * @param ColorTransfer Colorspace.
+     * Set 
+     * @param ColorTransfer 
      */
     public void setColorTransfer(String ColorTransfer) {
         this.ColorTransfer = ColorTransfer;
     }
 
     /**
-     * Get HDR type. 
-     * @return HdrType HDR type.
+     * Get  
+     * @return HdrType 
      */
     public String getHdrType() {
         return this.HdrType;
     }
 
     /**
-     * Set HDR type.
-     * @param HdrType HDR type.
+     * Set 
+     * @param HdrType 
      */
     public void setHdrType(String HdrType) {
         this.HdrType = HdrType;
     }
 
     /**
-     * Get Video Codecs. 
-     * @return Codecs Video Codecs.
+     * Get  
+     * @return Codecs 
      */
     public String getCodecs() {
         return this.Codecs;
     }
 
     /**
-     * Set Video Codecs.
-     * @param Codecs Video Codecs.
+     * Set 
+     * @param Codecs 
      */
     public void setCodecs(String Codecs) {
         this.Codecs = Codecs;
     }
 
     /**
-     * Get Numerator of the frame rate 
-     * @return FpsNumerator Numerator of the frame rate
+     * Get  
+     * @return FpsNumerator 
      */
     public Long getFpsNumerator() {
         return this.FpsNumerator;
     }
 
     /**
-     * Set Numerator of the frame rate
-     * @param FpsNumerator Numerator of the frame rate
+     * Set 
+     * @param FpsNumerator 
      */
     public void setFpsNumerator(Long FpsNumerator) {
         this.FpsNumerator = FpsNumerator;
     }
 
     /**
-     * Get Denominator of the frame rate 
-     * @return FpsDenominator Denominator of the frame rate
+     * Get  
+     * @return FpsDenominator 
      */
     public Long getFpsDenominator() {
         return this.FpsDenominator;
     }
 
     /**
-     * Set Denominator of the frame rate
-     * @param FpsDenominator Denominator of the frame rate
+     * Set 
+     * @param FpsDenominator 
      */
     public void setFpsDenominator(Long FpsDenominator) {
         this.FpsDenominator = FpsDenominator;

@@ -45,7 +45,7 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -114,16 +114,16 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p> 
-     * @return OutputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
-     * @param OutputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

@@ -24,61 +24,46 @@ import java.util.HashMap;
 public class TEHDConfigForUpdate extends AbstractModel {
 
     /**
-    * Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Upper limit of video bitrate. Leave blank to keep unchanged.
+    * 
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged. 
-     * @return Type Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged.
-     * @param Type Top Speed Codec type. Available values:
-<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-Leave it blank to keep it unchanged.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Upper limit of video bitrate. Leave blank to keep unchanged. 
-     * @return MaxVideoBitrate Upper limit of video bitrate. Leave blank to keep unchanged.
+     * Get  
+     * @return MaxVideoBitrate 
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set Upper limit of video bitrate. Leave blank to keep unchanged.
-     * @param MaxVideoBitrate Upper limit of video bitrate. Leave blank to keep unchanged.
+     * Set 
+     * @param MaxVideoBitrate 
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;
