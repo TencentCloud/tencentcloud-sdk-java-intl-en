@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateInstancesResponse extends AbstractModel {
 
     /**
-    * List of successfully created instance IDs.
+    * <p>List of successfully created instance IDs.</p>
     */
     @SerializedName("InstanceIdSet")
     @Expose
     private String [] InstanceIdSet;
 
     /**
-    * Count of failed instances. This field is returned only when partially failed, not returned when all successful.
+    * <p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p>
     */
     @SerializedName("FailedCount")
     @Expose
@@ -45,32 +45,32 @@ public class CreateInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of successfully created instance IDs. 
-     * @return InstanceIdSet List of successfully created instance IDs.
+     * Get <p>List of successfully created instance IDs.</p> 
+     * @return InstanceIdSet <p>List of successfully created instance IDs.</p>
      */
     public String [] getInstanceIdSet() {
         return this.InstanceIdSet;
     }
 
     /**
-     * Set List of successfully created instance IDs.
-     * @param InstanceIdSet List of successfully created instance IDs.
+     * Set <p>List of successfully created instance IDs.</p>
+     * @param InstanceIdSet <p>List of successfully created instance IDs.</p>
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
         this.InstanceIdSet = InstanceIdSet;
     }
 
     /**
-     * Get Count of failed instances. This field is returned only when partially failed, not returned when all successful. 
-     * @return FailedCount Count of failed instances. This field is returned only when partially failed, not returned when all successful.
+     * Get <p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p> 
+     * @return FailedCount <p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p>
      */
     public Long getFailedCount() {
         return this.FailedCount;
     }
 
     /**
-     * Set Count of failed instances. This field is returned only when partially failed, not returned when all successful.
-     * @param FailedCount Count of failed instances. This field is returned only when partially failed, not returned when all successful.
+     * Set <p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p>
+     * @param FailedCount <p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p>
      */
     public void setFailedCount(Long FailedCount) {
         this.FailedCount = FailedCount;

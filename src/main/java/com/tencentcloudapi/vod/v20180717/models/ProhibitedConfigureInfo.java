@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ProhibitedConfigureInfo extends AbstractModel {
 
     /**
-    * Voice prohibition control parameter.
+    * 
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private ProhibitedAsrReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * Text prohibited control parameters.
+    * 
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private ProhibitedOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Voice prohibition control parameter. 
-     * @return AsrReviewInfo Voice prohibition control parameter.
+     * Get  
+     * @return AsrReviewInfo 
      */
     public ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Voice prohibition control parameter.
-     * @param AsrReviewInfo Voice prohibition control parameter.
+     * Set 
+     * @param AsrReviewInfo 
      */
     public void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Text prohibited control parameters. 
-     * @return OcrReviewInfo Text prohibited control parameters.
+     * Get  
+     * @return OcrReviewInfo 
      */
     public ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Text prohibited control parameters.
-     * @param OcrReviewInfo Text prohibited control parameters.
+     * Set 
+     * @param OcrReviewInfo 
      */
     public void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RemoveWaterMarkTaskInput extends AbstractModel {
 
     /**
-    * The ID of the media file.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get The ID of the media file. 
-     * @return FileId The ID of the media file.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The ID of the media file.
-     * @param FileId The ID of the media file.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

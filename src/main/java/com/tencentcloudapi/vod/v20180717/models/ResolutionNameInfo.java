@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ResolutionNameInfo extends AbstractModel {
 
     /**
-    * Length of video short side in px.
+    * 
     */
     @SerializedName("MinEdgeLength")
     @Expose
     private Long MinEdgeLength;
 
     /**
-    * Display name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Length of video short side in px. 
-     * @return MinEdgeLength Length of video short side in px.
+     * Get  
+     * @return MinEdgeLength 
      */
     public Long getMinEdgeLength() {
         return this.MinEdgeLength;
     }
 
     /**
-     * Set Length of video short side in px.
-     * @param MinEdgeLength Length of video short side in px.
+     * Set 
+     * @param MinEdgeLength 
      */
     public void setMinEdgeLength(Long MinEdgeLength) {
         this.MinEdgeLength = MinEdgeLength;
     }
 
     /**
-     * Get Display name. 
-     * @return Name Display name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Display name.
-     * @param Name Display name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -24,71 +24,46 @@ import java.util.HashMap;
 public class ArtifactRepairInfo extends AbstractModel {
 
     /**
-    * Whether to enable artifact removal. Valid values:
-<li>`ON`</li>
-<li>`OFF</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The artifact removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable artifact removal. Valid values:
-<li>`ON`</li>
-<li>`OFF</li> 
-     * @return Switch Whether to enable artifact removal. Valid values:
-<li>`ON`</li>
-<li>`OFF</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable artifact removal. Valid values:
-<li>`ON`</li>
-<li>`OFF</li>
-     * @param Switch Whether to enable artifact removal. Valid values:
-<li>`ON`</li>
-<li>`OFF</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The artifact removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`. 
-     * @return Type The artifact removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The artifact removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
-     * @param Type The artifact removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

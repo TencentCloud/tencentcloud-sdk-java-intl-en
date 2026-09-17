@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class ImageOperation extends AbstractModel {
 
     /**
-    * Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The scaling details. This parameter is valid only if `Type` is `Scale`.
+    * 
     */
     @SerializedName("Scale")
     @Expose
     private ImageScale Scale;
 
     /**
-    * The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+    * 
     */
     @SerializedName("CenterCut")
     @Expose
     private ImageCenterCut CenterCut;
 
     /**
-    * Image blurring. This parameter is valid only if `Type` is `Blur`.
+    * 
     */
     @SerializedName("Blur")
     @Expose
     private ImageBlur Blur;
 
     /**
-     * Get Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li> 
-     * @return Type Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
-     * @param Type Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The scaling details. This parameter is valid only if `Type` is `Scale`. 
-     * @return Scale The scaling details. This parameter is valid only if `Type` is `Scale`.
+     * Get  
+     * @return Scale 
      */
     public ImageScale getScale() {
         return this.Scale;
     }
 
     /**
-     * Set The scaling details. This parameter is valid only if `Type` is `Scale`.
-     * @param Scale The scaling details. This parameter is valid only if `Type` is `Scale`.
+     * Set 
+     * @param Scale 
      */
     public void setScale(ImageScale Scale) {
         this.Scale = Scale;
     }
 
     /**
-     * Get The cropping details. This parameter is valid only if `Type` is `CenterCut`. 
-     * @return CenterCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+     * Get  
+     * @return CenterCut 
      */
     public ImageCenterCut getCenterCut() {
         return this.CenterCut;
     }
 
     /**
-     * Set The cropping details. This parameter is valid only if `Type` is `CenterCut`.
-     * @param CenterCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+     * Set 
+     * @param CenterCut 
      */
     public void setCenterCut(ImageCenterCut CenterCut) {
         this.CenterCut = CenterCut;
     }
 
     /**
-     * Get Image blurring. This parameter is valid only if `Type` is `Blur`. 
-     * @return Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+     * Get  
+     * @return Blur 
      */
     public ImageBlur getBlur() {
         return this.Blur;
     }
 
     /**
-     * Set Image blurring. This parameter is valid only if `Type` is `Blur`.
-     * @param Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+     * Set 
+     * @param Blur 
      */
     public void setBlur(ImageBlur Blur) {
         this.Blur = Blur;

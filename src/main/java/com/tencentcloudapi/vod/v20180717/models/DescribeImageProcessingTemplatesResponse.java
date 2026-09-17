@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeImageProcessingTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of image processing template details.
+    * 
     */
     @SerializedName("ImageProcessingTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeImageProcessingTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of image processing template details. 
-     * @return ImageProcessingTemplateSet List of image processing template details.
+     * Get  
+     * @return ImageProcessingTemplateSet 
      */
     public ImageProcessingTemplate [] getImageProcessingTemplateSet() {
         return this.ImageProcessingTemplateSet;
     }
 
     /**
-     * Set List of image processing template details.
-     * @param ImageProcessingTemplateSet List of image processing template details.
+     * Set 
+     * @param ImageProcessingTemplateSet 
      */
     public void setImageProcessingTemplateSet(ImageProcessingTemplate [] ImageProcessingTemplateSet) {
         this.ImageProcessingTemplateSet = ImageProcessingTemplateSet;

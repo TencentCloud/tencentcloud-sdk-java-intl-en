@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class VideoFrameInterpolationInfo extends AbstractModel {
 
     /**
-    * Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+    * 
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-     * Get Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li> 
-     * @return Switch Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param Switch Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used. 
-     * @return Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+     * Get  
+     * @return Fps 
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
-     * @param Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+     * Set 
+     * @param Fps 
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class JitterConfigureInfo extends AbstractModel {
 
     /**
-    * Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li> 
-     * @return Switch Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
-     * @param Switch Video shake and ghost detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

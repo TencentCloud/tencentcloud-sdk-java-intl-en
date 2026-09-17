@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiReviewTerrorismTaskInput extends AbstractModel {
 
     /**
-    * ID of the template for recognition of terrorism content
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get ID of the template for recognition of terrorism content 
-     * @return Definition ID of the template for recognition of terrorism content
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set ID of the template for recognition of terrorism content
-     * @param Definition ID of the template for recognition of terrorism content
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

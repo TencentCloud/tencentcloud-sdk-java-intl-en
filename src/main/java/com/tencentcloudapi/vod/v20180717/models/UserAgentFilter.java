@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class UserAgentFilter extends AbstractModel {
 
     /**
-    * UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+    * UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * UA blacklist/whitelist effect rule list
+    * 
     */
     @SerializedName("FilterRules")
     @Expose
     private UserAgentFilterRule [] FilterRules;
 
     /**
-     * Get UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Get UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Set UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch UserAgent allowlist/blocklist configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get UA blacklist/whitelist effect rule list 
-     * @return FilterRules UA blacklist/whitelist effect rule list
+     * Get  
+     * @return FilterRules 
      */
     public UserAgentFilterRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set UA blacklist/whitelist effect rule list
-     * @param FilterRules UA blacklist/whitelist effect rule list
+     * Set 
+     * @param FilterRules 
      */
     public void setFilterRules(UserAgentFilterRule [] FilterRules) {
         this.FilterRules = FilterRules;

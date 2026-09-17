@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiSampleFaceInfo extends AbstractModel {
 
     /**
-    * Face image ID.
+    * 
     */
     @SerializedName("FaceId")
     @Expose
     private String FaceId;
 
     /**
-    * Face image address.
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get Face image ID. 
-     * @return FaceId Face image ID.
+     * Get  
+     * @return FaceId 
      */
     public String getFaceId() {
         return this.FaceId;
     }
 
     /**
-     * Set Face image ID.
-     * @param FaceId Face image ID.
+     * Set 
+     * @param FaceId 
      */
     public void setFaceId(String FaceId) {
         this.FaceId = FaceId;
     }
 
     /**
-     * Get Face image address. 
-     * @return Url Face image address.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Face image address.
-     * @param Url Face image address.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;

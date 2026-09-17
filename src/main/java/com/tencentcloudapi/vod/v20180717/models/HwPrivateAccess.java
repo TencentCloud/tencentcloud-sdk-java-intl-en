@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class HwPrivateAccess extends AbstractModel {
 
     /**
-    * Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+    * Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Access ID
+    * 
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * Key
+    * 
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * BucketName
+    * 
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-     * Get Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+     * Get Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+     * Set Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Access ID 
-     * @return AccessKey Access ID
+     * Get  
+     * @return AccessKey 
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set Access ID
-     * @param AccessKey Access ID
+     * Set 
+     * @param AccessKey 
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get Key 
-     * @return SecretKey Key
+     * Get  
+     * @return SecretKey 
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set Key
-     * @param SecretKey Key
+     * Set 
+     * @param SecretKey 
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get BucketName 
-     * @return Bucket BucketName
+     * Get  
+     * @return Bucket 
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set BucketName
-     * @param Bucket BucketName
+     * Set 
+     * @param Bucket 
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;

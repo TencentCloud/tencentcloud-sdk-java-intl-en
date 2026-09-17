@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MediaAiAnalysisCoverItem extends AbstractModel {
 
     /**
-    * Address of intelligently generated cover.
+    * 
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-    * Confidence of intelligently generated cover between 0 and 100.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Address of intelligently generated cover. 
-     * @return CoverUrl Address of intelligently generated cover.
+     * Get  
+     * @return CoverUrl 
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set Address of intelligently generated cover.
-     * @param CoverUrl Address of intelligently generated cover.
+     * Set 
+     * @param CoverUrl 
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
     }
 
     /**
-     * Get Confidence of intelligently generated cover between 0 and 100. 
-     * @return Confidence Confidence of intelligently generated cover between 0 and 100.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of intelligently generated cover between 0 and 100.
-     * @param Confidence Confidence of intelligently generated cover between 0 and 100.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

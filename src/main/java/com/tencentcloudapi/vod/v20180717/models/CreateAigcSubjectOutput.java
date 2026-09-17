@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateAigcSubjectOutput extends AbstractModel {
 
     /**
-    * <p>Subject ID.</p>
+    * 
     */
     @SerializedName("SubjectId")
     @Expose
     private String SubjectId;
 
     /**
-    * <p>Entity information.</p>
+    * 
     */
     @SerializedName("SubjectInfo")
     @Expose
     private String SubjectInfo;
 
     /**
-     * Get <p>Subject ID.</p> 
-     * @return SubjectId <p>Subject ID.</p>
+     * Get  
+     * @return SubjectId 
      */
     public String getSubjectId() {
         return this.SubjectId;
     }
 
     /**
-     * Set <p>Subject ID.</p>
-     * @param SubjectId <p>Subject ID.</p>
+     * Set 
+     * @param SubjectId 
      */
     public void setSubjectId(String SubjectId) {
         this.SubjectId = SubjectId;
     }
 
     /**
-     * Get <p>Entity information.</p> 
-     * @return SubjectInfo <p>Entity information.</p>
+     * Get  
+     * @return SubjectInfo 
      */
     public String getSubjectInfo() {
         return this.SubjectInfo;
     }
 
     /**
-     * Set <p>Entity information.</p>
-     * @param SubjectInfo <p>Entity information.</p>
+     * Set 
+     * @param SubjectInfo 
      */
     public void setSubjectInfo(String SubjectInfo) {
         this.SubjectInfo = SubjectInfo;

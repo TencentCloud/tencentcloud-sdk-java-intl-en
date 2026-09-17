@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CustomVoiceInfo extends AbstractModel {
 
     /**
-    * <p>Voice ID.</p>
+    * 
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * <p>Tone information.</p>
+    * 
     */
     @SerializedName("VoiceInfo")
     @Expose
     private String VoiceInfo;
 
     /**
-     * Get <p>Voice ID.</p> 
-     * @return VoiceId <p>Voice ID.</p>
+     * Get  
+     * @return VoiceId 
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Voice ID.</p>
-     * @param VoiceId <p>Voice ID.</p>
+     * Set 
+     * @param VoiceId 
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get <p>Tone information.</p> 
-     * @return VoiceInfo <p>Tone information.</p>
+     * Get  
+     * @return VoiceInfo 
      */
     public String getVoiceInfo() {
         return this.VoiceInfo;
     }
 
     /**
-     * Set <p>Tone information.</p>
-     * @param VoiceInfo <p>Tone information.</p>
+     * Set 
+     * @param VoiceInfo 
      */
     public void setVoiceInfo(String VoiceInfo) {
         this.VoiceInfo = VoiceInfo;

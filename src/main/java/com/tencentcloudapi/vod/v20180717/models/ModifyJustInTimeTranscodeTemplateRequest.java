@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyJustInTimeTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * Template name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Video parameter configuration.
+    * 
     */
     @SerializedName("VideoConfigure")
     @Expose
     private VideoConfigureInfoForUpdate VideoConfigure;
 
     /**
-    * Watermark parameter configuration.
+    * 
     */
     @SerializedName("WatermarkConfigure")
     @Expose
     private WatermarkConfigureInfoForUpdate WatermarkConfigure;
 
     /**
-    * Template description. The length cannot exceed 256 characters.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-     * Get Template name. 
-     * @return Name Template name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template name.
-     * @param Name Template name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Video parameter configuration. 
-     * @return VideoConfigure Video parameter configuration.
+     * Get  
+     * @return VideoConfigure 
      */
     public VideoConfigureInfoForUpdate getVideoConfigure() {
         return this.VideoConfigure;
     }
 
     /**
-     * Set Video parameter configuration.
-     * @param VideoConfigure Video parameter configuration.
+     * Set 
+     * @param VideoConfigure 
      */
     public void setVideoConfigure(VideoConfigureInfoForUpdate VideoConfigure) {
         this.VideoConfigure = VideoConfigure;
     }
 
     /**
-     * Get Watermark parameter configuration. 
-     * @return WatermarkConfigure Watermark parameter configuration.
+     * Get  
+     * @return WatermarkConfigure 
      */
     public WatermarkConfigureInfoForUpdate getWatermarkConfigure() {
         return this.WatermarkConfigure;
     }
 
     /**
-     * Set Watermark parameter configuration.
-     * @param WatermarkConfigure Watermark parameter configuration.
+     * Set 
+     * @param WatermarkConfigure 
      */
     public void setWatermarkConfigure(WatermarkConfigureInfoForUpdate WatermarkConfigure) {
         this.WatermarkConfigure = WatermarkConfigure;
     }
 
     /**
-     * Get Template description. The length cannot exceed 256 characters. 
-     * @return Comment Template description. The length cannot exceed 256 characters.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. The length cannot exceed 256 characters.
-     * @param Comment Template description. The length cannot exceed 256 characters.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

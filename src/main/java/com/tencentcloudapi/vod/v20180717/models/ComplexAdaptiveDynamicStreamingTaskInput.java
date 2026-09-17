@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
-    * Adaptive Bitrate Parameters.
+    * 
     */
     @SerializedName("StreamPara")
     @Expose
     private ComplexAdaptiveDynamicStreamingTaskStreamPara StreamPara;
 
     /**
-     * Get Adaptive Bitrate Parameters. 
-     * @return StreamPara Adaptive Bitrate Parameters.
+     * Get  
+     * @return StreamPara 
      */
     public ComplexAdaptiveDynamicStreamingTaskStreamPara getStreamPara() {
         return this.StreamPara;
     }
 
     /**
-     * Set Adaptive Bitrate Parameters.
-     * @param StreamPara Adaptive Bitrate Parameters.
+     * Set 
+     * @param StreamPara 
      */
     public void setStreamPara(ComplexAdaptiveDynamicStreamingTaskStreamPara StreamPara) {
         this.StreamPara = StreamPara;

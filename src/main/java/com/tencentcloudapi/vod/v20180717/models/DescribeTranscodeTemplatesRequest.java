@@ -24,262 +24,207 @@ import java.util.HashMap;
 public class DescribeTranscodeTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
+    * 
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Muxing format filter condition. Available values:
-<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
-<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
+    * 
     */
     @SerializedName("ContainerType")
     @Expose
     private String ContainerType;
 
     /**
-    * Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
-<li>Common: standard transcoding template.</li>
-<li>TEHD: Ultra-HD template.</li>
+    * 
     */
     @SerializedName("TEHDType")
     @Expose
     private String TEHDType;
 
     /**
-    * Pagination offset. Default value: 0.
+    * 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned entries. Default value: 10. Maximum value: 100.
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Enhancement type. Valid values:
-<li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance (audio enhancement only).</li>
-<li>AudioVideoEnhance: audio and video enhancement included.</li>
-<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
-<li>None (non-enhanced)</li>
+    * 
     */
     @SerializedName("EnhanceType")
     @Expose
     private String EnhanceType;
 
     /**
-    * Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
+    * 
     */
     @SerializedName("EnhanceScenarioType")
     @Expose
     private String EnhanceScenarioType;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers. 
-     * @return Definitions Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
+     * Get  
+     * @return Definitions 
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
-     * @param Definitions Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
+     * Set 
+     * @param Definitions 
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li> 
-     * @return Type Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
-     * @param Type Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Muxing format filter condition. Available values:
-<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
-<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li> 
-     * @return ContainerType Muxing format filter condition. Available values:
-<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
-<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
+     * Get  
+     * @return ContainerType 
      */
     public String getContainerType() {
         return this.ContainerType;
     }
 
     /**
-     * Set Muxing format filter condition. Available values:
-<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
-<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
-     * @param ContainerType Muxing format filter condition. Available values:
-<li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
-<li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
+     * Set 
+     * @param ContainerType 
      */
     public void setContainerType(String ContainerType) {
         this.ContainerType = ContainerType;
     }
 
     /**
-     * Get Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
-<li>Common: standard transcoding template.</li>
-<li>TEHD: Ultra-HD template.</li> 
-     * @return TEHDType Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
-<li>Common: standard transcoding template.</li>
-<li>TEHD: Ultra-HD template.</li>
+     * Get  
+     * @return TEHDType 
      */
     public String getTEHDType() {
         return this.TEHDType;
     }
 
     /**
-     * Set Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
-<li>Common: standard transcoding template.</li>
-<li>TEHD: Ultra-HD template.</li>
-     * @param TEHDType Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
-<li>Common: standard transcoding template.</li>
-<li>TEHD: Ultra-HD template.</li>
+     * Set 
+     * @param TEHDType 
      */
     public void setTEHDType(String TEHDType) {
         this.TEHDType = TEHDType;
     }
 
     /**
-     * Get Pagination offset. Default value: 0. 
-     * @return Offset Pagination offset. Default value: 0.
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Default value: 0.
-     * @param Offset Pagination offset. Default value: 0.
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
-     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Enhancement type. Valid values:
-<li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance (audio enhancement only).</li>
-<li>AudioVideoEnhance: audio and video enhancement included.</li>
-<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
-<li>None (non-enhanced)</li> 
-     * @return EnhanceType Enhancement type. Valid values:
-<li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance (audio enhancement only).</li>
-<li>AudioVideoEnhance: audio and video enhancement included.</li>
-<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
-<li>None (non-enhanced)</li>
+     * Get  
+     * @return EnhanceType 
      */
     public String getEnhanceType() {
         return this.EnhanceType;
     }
 
     /**
-     * Set Enhancement type. Valid values:
-<li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance (audio enhancement only).</li>
-<li>AudioVideoEnhance: audio and video enhancement included.</li>
-<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
-<li>None (non-enhanced)</li>
-     * @param EnhanceType Enhancement type. Valid values:
-<li>VideoEnhance: video enhancement only.</li>
-<li>AudioEnhance (audio enhancement only).</li>
-<li>AudioVideoEnhance: audio and video enhancement included.</li>
-<li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
-<li>None (non-enhanced)</li>
+     * Set 
+     * @param EnhanceType 
      */
     public void setEnhanceType(String EnhanceType) {
         this.EnhanceType = EnhanceType;
     }
 
     /**
-     * Get Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li> 
-     * @return EnhanceScenarioType Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
+     * Get  
+     * @return EnhanceScenarioType 
      */
     public String getEnhanceScenarioType() {
         return this.EnhanceScenarioType;
     }
 
     /**
-     * Set Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
-     * @param EnhanceScenarioType Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
+     * Set 
+     * @param EnhanceScenarioType 
      */
     public void setEnhanceScenarioType(String EnhanceScenarioType) {
         this.EnhanceScenarioType = EnhanceScenarioType;

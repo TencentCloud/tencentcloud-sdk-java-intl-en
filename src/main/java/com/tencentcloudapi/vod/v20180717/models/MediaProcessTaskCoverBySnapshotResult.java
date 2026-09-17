@@ -24,212 +24,207 @@ import java.util.HashMap;
 public class MediaProcessTaskCoverBySnapshotResult extends AbstractModel {
 
     /**
-    * Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Input of cover generating task.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private CoverBySnapshotTaskInput Input;
 
     /**
-    * Output of cover generating task.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private CoverBySnapshotTaskOutput Output;
 
     /**
-    * The progress of a video screenshot (thumbnail) task. Value range: 0-100.
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+    * 
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+    * 
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-     * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
-     * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145). 
-     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`. 
-     * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-     * @param ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Input of cover generating task. 
-     * @return Input Input of cover generating task.
+     * Get  
+     * @return Input 
      */
     public CoverBySnapshotTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of cover generating task.
-     * @param Input Input of cover generating task.
+     * Set 
+     * @param Input 
      */
     public void setInput(CoverBySnapshotTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of cover generating task. 
-     * @return Output Output of cover generating task.
+     * Get  
+     * @return Output 
      */
     public CoverBySnapshotTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of cover generating task.
-     * @param Output Output of cover generating task.
+     * Set 
+     * @param Output 
      */
     public void setOutput(CoverBySnapshotTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get The progress of a video screenshot (thumbnail) task. Value range: 0-100. 
-     * @return Progress The progress of a video screenshot (thumbnail) task. Value range: 0-100.
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set The progress of a video screenshot (thumbnail) task. Value range: 0-100.
-     * @param Progress The progress of a video screenshot (thumbnail) task. Value range: 0-100.
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
-     * @return BeginProcessTime The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Get  
+     * @return BeginProcessTime 
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param BeginProcessTime The time when the screenshot making cover task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Set 
+     * @param BeginProcessTime 
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
-     * @return FinishTime Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Get  
+     * @return FinishTime 
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param FinishTime Screenshot the time when the cover task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Set 
+     * @param FinishTime 
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

@@ -38,7 +38,7 @@ public class LiveRealTimeClipResponse extends AbstractModel {
     private String FileId;
 
     /**
-    * <p>ID of the edited video task flow after solidification.</p>
+    * <p>Edited video task flow ID after solidification.</p>
     */
     @SerializedName("VodTaskId")
     @Expose
@@ -46,7 +46,6 @@ public class LiveRealTimeClipResponse extends AbstractModel {
 
     /**
     * <p>Edited video metadata.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MetaData")
     @Expose
@@ -99,26 +98,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>ID of the edited video task flow after solidification.</p> 
-     * @return VodTaskId <p>ID of the edited video task flow after solidification.</p>
+     * Get <p>Edited video task flow ID after solidification.</p> 
+     * @return VodTaskId <p>Edited video task flow ID after solidification.</p>
      */
     public String getVodTaskId() {
         return this.VodTaskId;
     }
 
     /**
-     * Set <p>ID of the edited video task flow after solidification.</p>
-     * @param VodTaskId <p>ID of the edited video task flow after solidification.</p>
+     * Set <p>Edited video task flow ID after solidification.</p>
+     * @param VodTaskId <p>Edited video task flow ID after solidification.</p>
      */
     public void setVodTaskId(String VodTaskId) {
         this.VodTaskId = VodTaskId;
     }
 
     /**
-     * Get <p>Edited video metadata.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Edited video metadata.</p> 
      * @return MetaData <p>Edited video metadata.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
@@ -126,9 +123,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Edited video metadata.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MetaData <p>Edited video metadata.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

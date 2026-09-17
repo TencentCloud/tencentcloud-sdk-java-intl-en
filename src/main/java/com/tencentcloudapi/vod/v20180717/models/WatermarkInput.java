@@ -24,155 +24,115 @@ import java.util.HashMap;
 public class WatermarkInput extends AbstractModel {
 
     /**
-    * Watermarking template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
+    * 
     */
     @SerializedName("TextContent")
     @Expose
     private String TextContent;
 
     /**
-    * SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
+    * 
     */
     @SerializedName("SvgContent")
     @Expose
     private String SvgContent;
 
     /**
-    * Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get Watermarking template ID. 
-     * @return Definition Watermarking template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Watermarking template ID.
-     * @param Definition Watermarking template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots. 
-     * @return TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
+     * Get  
+     * @return TextContent 
      */
     public String getTextContent() {
         return this.TextContent;
     }
 
     /**
-     * Set Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
-     * @param TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
+     * Set 
+     * @param TextContent 
      */
     public void setTextContent(String TextContent) {
         this.TextContent = TextContent;
     }
 
     /**
-     * Get SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots. 
-     * @return SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
+     * Get  
+     * @return SvgContent 
      */
     public String getSvgContent() {
         return this.SvgContent;
     }
 
     /**
-     * Set SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
-     * @param SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
+     * Set 
+     * @param SvgContent 
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;
     }
 
     /**
-     * Get Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li> 
-     * @return StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
-     * @param StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li> 
-     * @return EndTimeOffset End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
-     * @param EndTimeOffset End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

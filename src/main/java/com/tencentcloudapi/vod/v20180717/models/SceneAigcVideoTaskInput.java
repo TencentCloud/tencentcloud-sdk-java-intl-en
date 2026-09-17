@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SceneAigcVideoTaskInput extends AbstractModel {
 
     /**
-    * Scenario-based image generation parameter configuration.
+    * 
     */
     @SerializedName("SceneInfo")
     @Expose
     private AigcVideoSceneInfo SceneInfo;
 
     /**
-    * Input image list.
+    * 
     */
     @SerializedName("FileInfos")
     @Expose
     private SceneAigcVideoTaskInputFileInfo [] FileInfos;
 
     /**
-    * Output media file configuration for scenario-based image generation tasks.
+    * 
     */
     @SerializedName("OutputConfig")
     @Expose
     private SceneAigcVideoOutputConfig OutputConfig;
 
     /**
-     * Get Scenario-based image generation parameter configuration. 
-     * @return SceneInfo Scenario-based image generation parameter configuration.
+     * Get  
+     * @return SceneInfo 
      */
     public AigcVideoSceneInfo getSceneInfo() {
         return this.SceneInfo;
     }
 
     /**
-     * Set Scenario-based image generation parameter configuration.
-     * @param SceneInfo Scenario-based image generation parameter configuration.
+     * Set 
+     * @param SceneInfo 
      */
     public void setSceneInfo(AigcVideoSceneInfo SceneInfo) {
         this.SceneInfo = SceneInfo;
     }
 
     /**
-     * Get Input image list. 
-     * @return FileInfos Input image list.
+     * Get  
+     * @return FileInfos 
      */
     public SceneAigcVideoTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set Input image list.
-     * @param FileInfos Input image list.
+     * Set 
+     * @param FileInfos 
      */
     public void setFileInfos(SceneAigcVideoTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get Output media file configuration for scenario-based image generation tasks. 
-     * @return OutputConfig Output media file configuration for scenario-based image generation tasks.
+     * Get  
+     * @return OutputConfig 
      */
     public SceneAigcVideoOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Output media file configuration for scenario-based image generation tasks.
-     * @param OutputConfig Output media file configuration for scenario-based image generation tasks.
+     * Set 
+     * @param OutputConfig 
      */
     public void setOutputConfig(SceneAigcVideoOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

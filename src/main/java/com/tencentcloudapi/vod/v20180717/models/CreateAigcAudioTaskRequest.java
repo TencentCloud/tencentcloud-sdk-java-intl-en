@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskRequest extends AbstractModel {
 
     /**
-    * <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Model name.</p>
+    * 
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
+    * 
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * <p>Designated scenarios currently support sfx (sound effects) and music.</p>
+    * 
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-    * <p>Description of the generated audio</p>
+    * 
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>Reference video info</p>
+    * 
     */
     @SerializedName("VideoInfos")
     @Expose
     private AigcAudioReferenceVideoInfo [] VideoInfos;
 
     /**
-    * <p>Input the reference audio content.</p><p>For example, input is required for music generation.</p>
+    * 
     */
     @SerializedName("AudioInfos")
     @Expose
     private AigcAudioReferenceAudioInfo [] AudioInfos;
 
     /**
-    * <p>Output parameter</p>
+    * 
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcAudioOutputConfig OutputConfig;
 
     /**
-    * <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
+    * 
     */
     @SerializedName("AdditionalParameters")
     @Expose
     private String AdditionalParameters;
 
     /**
-     * Get <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p> 
-     * @return SubAppId <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
-     * @param SubAppId <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Model name.</p> 
-     * @return ModelName <p>Model name.</p>
+     * Get  
+     * @return ModelName 
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>Model name.</p>
-     * @param ModelName <p>Model name.</p>
+     * Set 
+     * @param ModelName 
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p> 
-     * @return ModelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
+     * Get  
+     * @return ModelVersion 
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
-     * @param ModelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
+     * Set 
+     * @param ModelVersion 
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get <p>Designated scenarios currently support sfx (sound effects) and music.</p> 
-     * @return SceneType <p>Designated scenarios currently support sfx (sound effects) and music.</p>
+     * Get  
+     * @return SceneType 
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>Designated scenarios currently support sfx (sound effects) and music.</p>
-     * @param SceneType <p>Designated scenarios currently support sfx (sound effects) and music.</p>
+     * Set 
+     * @param SceneType 
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get <p>Description of the generated audio</p> 
-     * @return Prompt <p>Description of the generated audio</p>
+     * Get  
+     * @return Prompt 
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Description of the generated audio</p>
-     * @param Prompt <p>Description of the generated audio</p>
+     * Set 
+     * @param Prompt 
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>Reference video info</p> 
-     * @return VideoInfos <p>Reference video info</p>
+     * Get  
+     * @return VideoInfos 
      */
     public AigcAudioReferenceVideoInfo [] getVideoInfos() {
         return this.VideoInfos;
     }
 
     /**
-     * Set <p>Reference video info</p>
-     * @param VideoInfos <p>Reference video info</p>
+     * Set 
+     * @param VideoInfos 
      */
     public void setVideoInfos(AigcAudioReferenceVideoInfo [] VideoInfos) {
         this.VideoInfos = VideoInfos;
     }
 
     /**
-     * Get <p>Input the reference audio content.</p><p>For example, input is required for music generation.</p> 
-     * @return AudioInfos <p>Input the reference audio content.</p><p>For example, input is required for music generation.</p>
+     * Get  
+     * @return AudioInfos 
      */
     public AigcAudioReferenceAudioInfo [] getAudioInfos() {
         return this.AudioInfos;
     }
 
     /**
-     * Set <p>Input the reference audio content.</p><p>For example, input is required for music generation.</p>
-     * @param AudioInfos <p>Input the reference audio content.</p><p>For example, input is required for music generation.</p>
+     * Set 
+     * @param AudioInfos 
      */
     public void setAudioInfos(AigcAudioReferenceAudioInfo [] AudioInfos) {
         this.AudioInfos = AudioInfos;
     }
 
     /**
-     * Get <p>Output parameter</p> 
-     * @return OutputConfig <p>Output parameter</p>
+     * Get  
+     * @return OutputConfig 
      */
     public AigcAudioOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output parameter</p>
-     * @param OutputConfig <p>Output parameter</p>
+     * Set 
+     * @param OutputConfig 
      */
     public void setOutputConfig(AigcAudioOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p> 
-     * @return AdditionalParameters <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
+     * Get  
+     * @return AdditionalParameters 
      */
     public String getAdditionalParameters() {
         return this.AdditionalParameters;
     }
 
     /**
-     * Set <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
-     * @param AdditionalParameters <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
+     * Set 
+     * @param AdditionalParameters 
      */
     public void setAdditionalParameters(String AdditionalParameters) {
         this.AdditionalParameters = AdditionalParameters;

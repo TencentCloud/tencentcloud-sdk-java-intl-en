@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeReviewTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Review template detail list.
+    * 
     */
     @SerializedName("ReviewTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeReviewTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Review template detail list. 
-     * @return ReviewTemplateSet Review template detail list.
+     * Get  
+     * @return ReviewTemplateSet 
      */
     public ReviewTemplate [] getReviewTemplateSet() {
         return this.ReviewTemplateSet;
     }
 
     /**
-     * Set Review template detail list.
-     * @param ReviewTemplateSet Review template detail list.
+     * Set 
+     * @param ReviewTemplateSet 
      */
     public void setReviewTemplateSet(ReviewTemplate [] ReviewTemplateSet) {
         this.ReviewTemplateSet = ReviewTemplateSet;

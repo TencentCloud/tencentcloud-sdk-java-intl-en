@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
-    * <p>Total number of log download links.</p>
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
+    * 
     */
     @SerializedName("OverseaCdnLogs")
     @Expose
     private CdnLogInfo [] OverseaCdnLogs;
 
     /**
-    * <p>Log Download List of Domestic CDN Nodes.</p>
+    * 
     */
     @SerializedName("DomesticCdnLogs")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeCdnLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Total number of log download links.</p> 
-     * @return TotalCount <p>Total number of log download links.</p>
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of log download links.</p>
-     * @param TotalCount <p>Total number of log download links.</p>
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p> 
-     * @return OverseaCdnLogs <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
+     * Get  
+     * @return OverseaCdnLogs 
      */
     public CdnLogInfo [] getOverseaCdnLogs() {
         return this.OverseaCdnLogs;
     }
 
     /**
-     * Set <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
-     * @param OverseaCdnLogs <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
+     * Set 
+     * @param OverseaCdnLogs 
      */
     public void setOverseaCdnLogs(CdnLogInfo [] OverseaCdnLogs) {
         this.OverseaCdnLogs = OverseaCdnLogs;
     }
 
     /**
-     * Get <p>Log Download List of Domestic CDN Nodes.</p> 
-     * @return DomesticCdnLogs <p>Log Download List of Domestic CDN Nodes.</p>
+     * Get  
+     * @return DomesticCdnLogs 
      */
     public CdnLogInfo [] getDomesticCdnLogs() {
         return this.DomesticCdnLogs;
     }
 
     /**
-     * Set <p>Log Download List of Domestic CDN Nodes.</p>
-     * @param DomesticCdnLogs <p>Log Download List of Domestic CDN Nodes.</p>
+     * Set 
+     * @param DomesticCdnLogs 
      */
     public void setDomesticCdnLogs(CdnLogInfo [] DomesticCdnLogs) {
         this.DomesticCdnLogs = DomesticCdnLogs;

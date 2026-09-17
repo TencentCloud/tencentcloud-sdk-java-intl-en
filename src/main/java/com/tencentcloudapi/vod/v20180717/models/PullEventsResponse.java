@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class PullEventsResponse extends AbstractModel {
 
     /**
-    * event list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EventSet")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get event list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EventSet event list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EventSet 
      */
     public EventContent [] getEventSet() {
         return this.EventSet;
     }
 
     /**
-     * Set event list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EventSet event list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EventSet 
      */
     public void setEventSet(EventContent [] EventSet) {
         this.EventSet = EventSet;

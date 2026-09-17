@@ -24,345 +24,391 @@ import java.util.HashMap;
 public class ModifyQualityInspectTemplateRequest extends AbstractModel {
 
     /**
-    * Template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Template name. The length cannot exceed 64 characters.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description, with a length limit of 256 characters.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Frame interception interval, unit: seconds, minimum value 1.
+    * 
+    */
+    @SerializedName("Configs")
+    @Expose
+    private QualityInspectConfig [] Configs;
+
+    /**
+    * 
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private QualityInspectStrategy Strategy;
+
+    /**
+    * 
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-    * Control parameters for video frame jitter and ghosting detection.
+    * 
     */
     @SerializedName("JitterConfigure")
     @Expose
     private JitterConfigureInfoForUpdate JitterConfigure;
 
     /**
-    * Control parameters for video frame blur detection.
+    * 
     */
     @SerializedName("BlurConfigure")
     @Expose
     private BlurConfigureInfoForUpdate BlurConfigure;
 
     /**
-    * Control parameters for low-light and overexposure detection in video frames.
+    * 
     */
     @SerializedName("AbnormalLightingConfigure")
     @Expose
     private AbnormalLightingConfigureInfoForUpdate AbnormalLightingConfigure;
 
     /**
-    * Control parameters for screen glitch detection in video footage.
+    * 
     */
     @SerializedName("CrashScreenConfigure")
     @Expose
     private CrashScreenConfigureInfoForUpdate CrashScreenConfigure;
 
     /**
-    * Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+    * 
     */
     @SerializedName("BlackWhiteEdgeConfigure")
     @Expose
     private BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure;
 
     /**
-    * Control parameters for video frame noise detection.
+    * 
     */
     @SerializedName("NoiseConfigure")
     @Expose
     private NoiseConfigureInfoForUpdate NoiseConfigure;
 
     /**
-    * Control parameters for video frame mosaic detection.
+    * 
     */
     @SerializedName("MosaicConfigure")
     @Expose
     private MosaicConfigureInfoForUpdate MosaicConfigure;
 
     /**
-    * Control parameters for video frame QR code detection.
+    * 
     */
     @SerializedName("QRCodeConfigure")
     @Expose
     private QRCodeConfigureInfoForUpdate QRCodeConfigure;
 
     /**
-    * Audio (mute, bass, clipping) detection control parameters.
+    * 
     */
     @SerializedName("VoiceConfigure")
     @Expose
     private VoiceConfigureInfoForUpdate VoiceConfigure;
 
     /**
-    * Control parameters for video frame quality evaluation.
+    * 
     */
     @SerializedName("QualityEvaluationConfigure")
     @Expose
     private QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure;
 
     /**
-     * Get Template ID. 
-     * @return Definition Template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Template ID.
-     * @param Definition Template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Template name. The length cannot exceed 64 characters. 
-     * @return Name Template name. The length cannot exceed 64 characters.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template name. The length cannot exceed 64 characters.
-     * @param Name Template name. The length cannot exceed 64 characters.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description, with a length limit of 256 characters. 
-     * @return Comment Template description, with a length limit of 256 characters.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description, with a length limit of 256 characters.
-     * @param Comment Template description, with a length limit of 256 characters.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Frame interception interval, unit: seconds, minimum value 1. 
-     * @return ScreenshotInterval Frame interception interval, unit: seconds, minimum value 1.
+     * Get  
+     * @return Configs 
+     */
+    public QualityInspectConfig [] getConfigs() {
+        return this.Configs;
+    }
+
+    /**
+     * Set 
+     * @param Configs 
+     */
+    public void setConfigs(QualityInspectConfig [] Configs) {
+        this.Configs = Configs;
+    }
+
+    /**
+     * Get  
+     * @return Strategy 
+     */
+    public QualityInspectStrategy getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set 
+     * @param Strategy 
+     */
+    public void setStrategy(QualityInspectStrategy Strategy) {
+        this.Strategy = Strategy;
+    }
+
+    /**
+     * Get  
+     * @return ScreenshotInterval 
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame interception interval, unit: seconds, minimum value 1.
-     * @param ScreenshotInterval Frame interception interval, unit: seconds, minimum value 1.
+     * Set 
+     * @param ScreenshotInterval 
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
     /**
-     * Get Control parameters for video frame jitter and ghosting detection. 
-     * @return JitterConfigure Control parameters for video frame jitter and ghosting detection.
+     * Get  
+     * @return JitterConfigure 
      */
     public JitterConfigureInfoForUpdate getJitterConfigure() {
         return this.JitterConfigure;
     }
 
     /**
-     * Set Control parameters for video frame jitter and ghosting detection.
-     * @param JitterConfigure Control parameters for video frame jitter and ghosting detection.
+     * Set 
+     * @param JitterConfigure 
      */
     public void setJitterConfigure(JitterConfigureInfoForUpdate JitterConfigure) {
         this.JitterConfigure = JitterConfigure;
     }
 
     /**
-     * Get Control parameters for video frame blur detection. 
-     * @return BlurConfigure Control parameters for video frame blur detection.
+     * Get  
+     * @return BlurConfigure 
      */
     public BlurConfigureInfoForUpdate getBlurConfigure() {
         return this.BlurConfigure;
     }
 
     /**
-     * Set Control parameters for video frame blur detection.
-     * @param BlurConfigure Control parameters for video frame blur detection.
+     * Set 
+     * @param BlurConfigure 
      */
     public void setBlurConfigure(BlurConfigureInfoForUpdate BlurConfigure) {
         this.BlurConfigure = BlurConfigure;
     }
 
     /**
-     * Get Control parameters for low-light and overexposure detection in video frames. 
-     * @return AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
+     * Get  
+     * @return AbnormalLightingConfigure 
      */
     public AbnormalLightingConfigureInfoForUpdate getAbnormalLightingConfigure() {
         return this.AbnormalLightingConfigure;
     }
 
     /**
-     * Set Control parameters for low-light and overexposure detection in video frames.
-     * @param AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
+     * Set 
+     * @param AbnormalLightingConfigure 
      */
     public void setAbnormalLightingConfigure(AbnormalLightingConfigureInfoForUpdate AbnormalLightingConfigure) {
         this.AbnormalLightingConfigure = AbnormalLightingConfigure;
     }
 
     /**
-     * Get Control parameters for screen glitch detection in video footage. 
-     * @return CrashScreenConfigure Control parameters for screen glitch detection in video footage.
+     * Get  
+     * @return CrashScreenConfigure 
      */
     public CrashScreenConfigureInfoForUpdate getCrashScreenConfigure() {
         return this.CrashScreenConfigure;
     }
 
     /**
-     * Set Control parameters for screen glitch detection in video footage.
-     * @param CrashScreenConfigure Control parameters for screen glitch detection in video footage.
+     * Set 
+     * @param CrashScreenConfigure 
      */
     public void setCrashScreenConfigure(CrashScreenConfigureInfoForUpdate CrashScreenConfigure) {
         this.CrashScreenConfigure = CrashScreenConfigure;
     }
 
     /**
-     * Get Control parameters for video picture black edge, white edge, black screen, and white screen detection. 
-     * @return BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+     * Get  
+     * @return BlackWhiteEdgeConfigure 
      */
     public BlackWhiteEdgeConfigureInfoForUpdate getBlackWhiteEdgeConfigure() {
         return this.BlackWhiteEdgeConfigure;
     }
 
     /**
-     * Set Control parameters for video picture black edge, white edge, black screen, and white screen detection.
-     * @param BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+     * Set 
+     * @param BlackWhiteEdgeConfigure 
      */
     public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure) {
         this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
     }
 
     /**
-     * Get Control parameters for video frame noise detection. 
-     * @return NoiseConfigure Control parameters for video frame noise detection.
+     * Get  
+     * @return NoiseConfigure 
      */
     public NoiseConfigureInfoForUpdate getNoiseConfigure() {
         return this.NoiseConfigure;
     }
 
     /**
-     * Set Control parameters for video frame noise detection.
-     * @param NoiseConfigure Control parameters for video frame noise detection.
+     * Set 
+     * @param NoiseConfigure 
      */
     public void setNoiseConfigure(NoiseConfigureInfoForUpdate NoiseConfigure) {
         this.NoiseConfigure = NoiseConfigure;
     }
 
     /**
-     * Get Control parameters for video frame mosaic detection. 
-     * @return MosaicConfigure Control parameters for video frame mosaic detection.
+     * Get  
+     * @return MosaicConfigure 
      */
     public MosaicConfigureInfoForUpdate getMosaicConfigure() {
         return this.MosaicConfigure;
     }
 
     /**
-     * Set Control parameters for video frame mosaic detection.
-     * @param MosaicConfigure Control parameters for video frame mosaic detection.
+     * Set 
+     * @param MosaicConfigure 
      */
     public void setMosaicConfigure(MosaicConfigureInfoForUpdate MosaicConfigure) {
         this.MosaicConfigure = MosaicConfigure;
     }
 
     /**
-     * Get Control parameters for video frame QR code detection. 
-     * @return QRCodeConfigure Control parameters for video frame QR code detection.
+     * Get  
+     * @return QRCodeConfigure 
      */
     public QRCodeConfigureInfoForUpdate getQRCodeConfigure() {
         return this.QRCodeConfigure;
     }
 
     /**
-     * Set Control parameters for video frame QR code detection.
-     * @param QRCodeConfigure Control parameters for video frame QR code detection.
+     * Set 
+     * @param QRCodeConfigure 
      */
     public void setQRCodeConfigure(QRCodeConfigureInfoForUpdate QRCodeConfigure) {
         this.QRCodeConfigure = QRCodeConfigure;
     }
 
     /**
-     * Get Audio (mute, bass, clipping) detection control parameters. 
-     * @return VoiceConfigure Audio (mute, bass, clipping) detection control parameters.
+     * Get  
+     * @return VoiceConfigure 
      */
     public VoiceConfigureInfoForUpdate getVoiceConfigure() {
         return this.VoiceConfigure;
     }
 
     /**
-     * Set Audio (mute, bass, clipping) detection control parameters.
-     * @param VoiceConfigure Audio (mute, bass, clipping) detection control parameters.
+     * Set 
+     * @param VoiceConfigure 
      */
     public void setVoiceConfigure(VoiceConfigureInfoForUpdate VoiceConfigure) {
         this.VoiceConfigure = VoiceConfigure;
     }
 
     /**
-     * Get Control parameters for video frame quality evaluation. 
-     * @return QualityEvaluationConfigure Control parameters for video frame quality evaluation.
+     * Get  
+     * @return QualityEvaluationConfigure 
      */
     public QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() {
         return this.QualityEvaluationConfigure;
     }
 
     /**
-     * Set Control parameters for video frame quality evaluation.
-     * @param QualityEvaluationConfigure Control parameters for video frame quality evaluation.
+     * Set 
+     * @param QualityEvaluationConfigure 
      */
     public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure) {
         this.QualityEvaluationConfigure = QualityEvaluationConfigure;
@@ -387,6 +433,15 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
+        }
+        if (source.Configs != null) {
+            this.Configs = new QualityInspectConfig[source.Configs.length];
+            for (int i = 0; i < source.Configs.length; i++) {
+                this.Configs[i] = new QualityInspectConfig(source.Configs[i]);
+            }
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new QualityInspectStrategy(source.Strategy);
         }
         if (source.ScreenshotInterval != null) {
             this.ScreenshotInterval = new Float(source.ScreenshotInterval);
@@ -432,6 +487,8 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamArrayObj(map, prefix + "Configs.", this.Configs);
+        this.setParamObj(map, prefix + "Strategy.", this.Strategy);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         this.setParamObj(map, prefix + "JitterConfigure.", this.JitterConfigure);
         this.setParamObj(map, prefix + "BlurConfigure.", this.BlurConfigure);

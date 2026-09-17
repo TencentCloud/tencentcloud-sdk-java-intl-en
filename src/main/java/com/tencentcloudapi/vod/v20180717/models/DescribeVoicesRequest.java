@@ -24,258 +24,253 @@ import java.util.HashMap;
 public class DescribeVoicesRequest extends AbstractModel {
 
     /**
-    * <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private String SubAppId;
 
     /**
-    * <p>Voice ID.</p>
+    * 
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
+    * 
     */
     @SerializedName("VoiceType")
     @Expose
     private String VoiceType;
 
     /**
-    * <p>Voice name.</p>
+    * 
     */
     @SerializedName("VoiceName")
     @Expose
     private String VoiceName;
 
     /**
-    * <p>Voice description.</p>
+    * 
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+    * 
     */
     @SerializedName("Gender")
     @Expose
     private String Gender;
 
     /**
-    * <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+    * 
     */
     @SerializedName("Age")
     @Expose
     private String Age;
 
     /**
-    * <p>Language.</p>
+    * 
     */
     @SerializedName("Languages")
     @Expose
     private String [] Languages;
 
     /**
-    * <p>Tag.</p>
+    * 
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-    * <p>Scenario.</p>
+    * 
     */
     @SerializedName("Scenes")
     @Expose
     private String [] Scenes;
 
     /**
-    * <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
+    * 
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-     * Get <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p> 
-     * @return SubAppId <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+     * Get  
+     * @return SubAppId 
      */
     public String getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
-     * @param SubAppId <p>VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must set this field to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Voice ID.</p> 
-     * @return VoiceId <p>Voice ID.</p>
+     * Get  
+     * @return VoiceId 
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Voice ID.</p>
-     * @param VoiceId <p>Voice ID.</p>
+     * Set 
+     * @param VoiceId 
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul> 
-     * @return VoiceType <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
+     * Get  
+     * @return VoiceType 
      */
     public String getVoiceType() {
         return this.VoiceType;
     }
 
     /**
-     * Set <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
-     * @param VoiceType <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
+     * Set 
+     * @param VoiceType 
      */
     public void setVoiceType(String VoiceType) {
         this.VoiceType = VoiceType;
     }
 
     /**
-     * Get <p>Voice name.</p> 
-     * @return VoiceName <p>Voice name.</p>
+     * Get  
+     * @return VoiceName 
      */
     public String getVoiceName() {
         return this.VoiceName;
     }
 
     /**
-     * Set <p>Voice name.</p>
-     * @param VoiceName <p>Voice name.</p>
+     * Set 
+     * @param VoiceName 
      */
     public void setVoiceName(String VoiceName) {
         this.VoiceName = VoiceName;
     }
 
     /**
-     * Get <p>Voice description.</p> 
-     * @return Description <p>Voice description.</p>
+     * Get  
+     * @return Description 
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Voice description.</p>
-     * @param Description <p>Voice description.</p>
+     * Set 
+     * @param Description 
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul> 
-     * @return Gender <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+     * Get  
+     * @return Gender 
      */
     public String getGender() {
         return this.Gender;
     }
 
     /**
-     * Set <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
-     * @param Gender <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+     * Set 
+     * @param Gender 
      */
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * Get <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul> 
-     * @return Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     * Get  
+     * @return Age 
      */
     public String getAge() {
         return this.Age;
     }
 
     /**
-     * Set <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
-     * @param Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     * Set 
+     * @param Age 
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get <p>Language.</p> 
-     * @return Languages <p>Language.</p>
+     * Get  
+     * @return Languages 
      */
     public String [] getLanguages() {
         return this.Languages;
     }
 
     /**
-     * Set <p>Language.</p>
-     * @param Languages <p>Language.</p>
+     * Set 
+     * @param Languages 
      */
     public void setLanguages(String [] Languages) {
         this.Languages = Languages;
     }
 
     /**
-     * Get <p>Tag.</p> 
-     * @return Labels <p>Tag.</p>
+     * Get  
+     * @return Labels 
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set <p>Tag.</p>
-     * @param Labels <p>Tag.</p>
+     * Set 
+     * @param Labels 
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get <p>Scenario.</p> 
-     * @return Scenes <p>Scenario.</p>
+     * Get  
+     * @return Scenes 
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set <p>Scenario.</p>
-     * @param Scenes <p>Scenario.</p>
+     * Set 
+     * @param Scenes 
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;
     }
 
     /**
-     * Get <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p> 
-     * @return ExtParam <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
+     * Get  
+     * @return ExtParam 
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
-     * @param ExtParam <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
-voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
+     * Set 
+     * @param ExtParam 
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;

@@ -31,6 +31,20 @@ public class DescribeInstanceTypesRequest extends AbstractModel {
     private String Zone;
 
     /**
+    * Pagination offset. Default value: 0.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Pagination size. Default value: 20. Maximum value: 100.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get Availability zone code, such as ap-guangzhou-1. If not passed, return models under the account in all AZs. 
      * @return Zone Availability zone code, such as ap-guangzhou-1. If not passed, return models under the account in all AZs.
      */
@@ -46,6 +60,38 @@ public class DescribeInstanceTypesRequest extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Pagination size. Default value: 20. Maximum value: 100. 
+     * @return Limit Pagination size. Default value: 20. Maximum value: 100.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Pagination size. Default value: 20. Maximum value: 100.
+     * @param Limit Pagination size. Default value: 20. Maximum value: 100.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeInstanceTypesRequest() {
     }
 
@@ -57,6 +103,12 @@ public class DescribeInstanceTypesRequest extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeInstanceTypesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

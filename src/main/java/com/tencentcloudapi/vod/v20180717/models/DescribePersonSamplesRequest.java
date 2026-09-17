@@ -24,186 +24,161 @@ import java.util.HashMap;
 public class DescribePersonSamplesRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Material ID, with an array length limit of 100.
+    * 
     */
     @SerializedName("PersonIds")
     @Expose
     private String [] PersonIds;
 
     /**
-    * Material name. Array length limit: 20.
+    * 
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * Material tag. Array length limit: 20.
+    * 
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * Pagination offset. Default value: 0.
+    * 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned entries. Default value: 100. Maximum value: 100.
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one. 
-     * @return Type Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
-     * @param Type Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Material ID, with an array length limit of 100. 
-     * @return PersonIds Material ID, with an array length limit of 100.
+     * Get  
+     * @return PersonIds 
      */
     public String [] getPersonIds() {
         return this.PersonIds;
     }
 
     /**
-     * Set Material ID, with an array length limit of 100.
-     * @param PersonIds Material ID, with an array length limit of 100.
+     * Set 
+     * @param PersonIds 
      */
     public void setPersonIds(String [] PersonIds) {
         this.PersonIds = PersonIds;
     }
 
     /**
-     * Get Material name. Array length limit: 20. 
-     * @return Names Material name. Array length limit: 20.
+     * Get  
+     * @return Names 
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Material name. Array length limit: 20.
-     * @param Names Material name. Array length limit: 20.
+     * Set 
+     * @param Names 
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get Material tag. Array length limit: 20. 
-     * @return Tags Material tag. Array length limit: 20.
+     * Get  
+     * @return Tags 
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Material tag. Array length limit: 20.
-     * @param Tags Material tag. Array length limit: 20.
+     * Set 
+     * @param Tags 
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Pagination offset. Default value: 0. 
-     * @return Offset Pagination offset. Default value: 0.
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Default value: 0.
-     * @param Offset Pagination offset. Default value: 0.
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned entries. Default value: 100. Maximum value: 100. 
-     * @return Limit Number of returned entries. Default value: 100. Maximum value: 100.
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. Default value: 100. Maximum value: 100.
-     * @param Limit Number of returned entries. Default value: 100. Maximum value: 100.
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,176 +24,161 @@ import java.util.HashMap;
 public class ModifyPersonSampleRequest extends AbstractModel {
 
     /**
-    * Material ID.
+    * 
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Name. Length limit: 128 characters.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description. Length limit: 1024 characters.
+    * 
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
+    * 
     */
     @SerializedName("Usages")
     @Expose
     private String [] Usages;
 
     /**
-    * Facial operation information.
+    * 
     */
     @SerializedName("FaceOperationInfo")
     @Expose
     private AiSampleFaceOperation FaceOperationInfo;
 
     /**
-    * Tag operation information.
+    * 
     */
     @SerializedName("TagOperationInfo")
     @Expose
     private AiSampleTagOperation TagOperationInfo;
 
     /**
-     * Get Material ID. 
-     * @return PersonId Material ID.
+     * Get  
+     * @return PersonId 
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Material ID.
-     * @param PersonId Material ID.
+     * Set 
+     * @param PersonId 
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Name. Length limit: 128 characters. 
-     * @return Name Name. Length limit: 128 characters.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name. Length limit: 128 characters.
-     * @param Name Name. Length limit: 128 characters.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description. Length limit: 1024 characters. 
-     * @return Description Description. Length limit: 1024 characters.
+     * Get  
+     * @return Description 
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description. Length limit: 1024 characters.
-     * @param Description Description. Length limit: 1024 characters.
+     * Set 
+     * @param Description 
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2. 
-     * @return Usages Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
+     * Get  
+     * @return Usages 
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
-     * @param Usages Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
+     * Set 
+     * @param Usages 
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
     }
 
     /**
-     * Get Facial operation information. 
-     * @return FaceOperationInfo Facial operation information.
+     * Get  
+     * @return FaceOperationInfo 
      */
     public AiSampleFaceOperation getFaceOperationInfo() {
         return this.FaceOperationInfo;
     }
 
     /**
-     * Set Facial operation information.
-     * @param FaceOperationInfo Facial operation information.
+     * Set 
+     * @param FaceOperationInfo 
      */
     public void setFaceOperationInfo(AiSampleFaceOperation FaceOperationInfo) {
         this.FaceOperationInfo = FaceOperationInfo;
     }
 
     /**
-     * Get Tag operation information. 
-     * @return TagOperationInfo Tag operation information.
+     * Get  
+     * @return TagOperationInfo 
      */
     public AiSampleTagOperation getTagOperationInfo() {
         return this.TagOperationInfo;
     }
 
     /**
-     * Set Tag operation information.
-     * @param TagOperationInfo Tag operation information.
+     * Set 
+     * @param TagOperationInfo 
      */
     public void setTagOperationInfo(AiSampleTagOperation TagOperationInfo) {
         this.TagOperationInfo = TagOperationInfo;

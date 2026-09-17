@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateAigcCustomVoiceOutput extends AbstractModel {
 
     /**
-    * <p>Custom timbre list.</p>
+    * 
     */
     @SerializedName("InfoList")
     @Expose
     private CustomVoiceInfo [] InfoList;
 
     /**
-     * Get <p>Custom timbre list.</p> 
-     * @return InfoList <p>Custom timbre list.</p>
+     * Get  
+     * @return InfoList 
      */
     public CustomVoiceInfo [] getInfoList() {
         return this.InfoList;
     }
 
     /**
-     * Set <p>Custom timbre list.</p>
-     * @param InfoList <p>Custom timbre list.</p>
+     * Set 
+     * @param InfoList 
      */
     public void setInfoList(CustomVoiceInfo [] InfoList) {
         this.InfoList = InfoList;

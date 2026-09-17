@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FaceRecognitionOutputFileInfo extends AbstractModel {
 
     /**
-    * <p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
+    * 
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * <p>File URL of face recognition output</p>
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get <p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul> 
-     * @return FileType <p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
+     * Get  
+     * @return FileType 
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set <p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
-     * @param FileType <p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
+     * Set 
+     * @param FileType 
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get <p>File URL of face recognition output</p> 
-     * @return Url <p>File URL of face recognition output</p>
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>File URL of face recognition output</p>
-     * @param Url <p>File URL of face recognition output</p>
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;

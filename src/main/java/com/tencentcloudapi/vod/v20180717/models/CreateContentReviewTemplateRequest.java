@@ -24,250 +24,230 @@ import java.util.HashMap;
 public class CreateContentReviewTemplateRequest extends AbstractModel {
 
     /**
-    * Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+    * 
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
     private String ReviewWallSwitch;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Content review template name. Length limit: 64 characters.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Content review template description, with a length limit of 256 characters.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Control parameters for offensive information.
+    * 
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfo PornConfigure;
 
     /**
-    * Control parameters for unsafe information.
+    * 
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * Uncomfortable control parameters.
+    * 
     */
     @SerializedName("PoliticalConfigure")
     @Expose
     private PoliticalConfigureInfo PoliticalConfigure;
 
     /**
-    * Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
+    * 
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
     private ProhibitedConfigureInfo ProhibitedConfigure;
 
     /**
-    * User-defined content review control parameters.
+    * 
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-    * Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
+    * 
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-     * Get Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
-<li>ON: yes</li>
-<li>OFF: No.</li> 
-     * @return ReviewWallSwitch Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+     * Get  
+     * @return ReviewWallSwitch 
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
     }
 
     /**
-     * Set Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
-     * @param ReviewWallSwitch Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+     * Set 
+     * @param ReviewWallSwitch 
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Content review template name. Length limit: 64 characters. 
-     * @return Name Content review template name. Length limit: 64 characters.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Content review template name. Length limit: 64 characters.
-     * @param Name Content review template name. Length limit: 64 characters.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Content review template description, with a length limit of 256 characters. 
-     * @return Comment Content review template description, with a length limit of 256 characters.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Content review template description, with a length limit of 256 characters.
-     * @param Comment Content review template description, with a length limit of 256 characters.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Control parameters for offensive information. 
-     * @return PornConfigure Control parameters for offensive information.
+     * Get  
+     * @return PornConfigure 
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Control parameters for offensive information.
-     * @param PornConfigure Control parameters for offensive information.
+     * Set 
+     * @param PornConfigure 
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Control parameters for unsafe information. 
-     * @return TerrorismConfigure Control parameters for unsafe information.
+     * Get  
+     * @return TerrorismConfigure 
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Control parameters for unsafe information.
-     * @param TerrorismConfigure Control parameters for unsafe information.
+     * Set 
+     * @param TerrorismConfigure 
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Uncomfortable control parameters. 
-     * @return PoliticalConfigure Uncomfortable control parameters.
+     * Get  
+     * @return PoliticalConfigure 
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Uncomfortable control parameters.
-     * @param PoliticalConfigure Uncomfortable control parameters.
+     * Set 
+     * @param PoliticalConfigure 
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
     }
 
     /**
-     * Get Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li> 
-     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
+     * Get  
+     * @return ProhibitedConfigure 
      */
     public ProhibitedConfigureInfo getProhibitedConfigure() {
         return this.ProhibitedConfigure;
     }
 
     /**
-     * Set Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
-     * @param ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
+     * Set 
+     * @param ProhibitedConfigure 
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;
     }
 
     /**
-     * Get User-defined content review control parameters. 
-     * @return UserDefineConfigure User-defined content review control parameters.
+     * Get  
+     * @return UserDefineConfigure 
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set User-defined content review control parameters.
-     * @param UserDefineConfigure User-defined content review control parameters.
+     * Set 
+     * @param UserDefineConfigure 
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
     }
 
     /**
-     * Get Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds. 
-     * @return ScreenshotInterval Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
+     * Get  
+     * @return ScreenshotInterval 
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
-     * @param ScreenshotInterval Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
+     * Set 
+     * @param ScreenshotInterval 
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;

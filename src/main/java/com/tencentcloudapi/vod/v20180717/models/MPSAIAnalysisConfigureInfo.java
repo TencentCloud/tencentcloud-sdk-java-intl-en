@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MPSAIAnalysisConfigureInfo extends AbstractModel {
 
     /**
-    * <p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get <p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p> 
-     * @return Switch <p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set <p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
-     * @param Switch <p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

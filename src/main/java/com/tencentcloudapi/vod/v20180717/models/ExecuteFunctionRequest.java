@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ExecuteFunctionRequest extends AbstractModel {
 
     /**
-    * Backend interface name invoked.
+    * 
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * API parameter. Coordinate with the backend for specific parameter format during invocation.
+    * 
     */
     @SerializedName("FunctionArg")
     @Expose
     private String FunctionArg;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Reserved field, used when special purpose.
+    * 
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get Backend interface name invoked. 
-     * @return FunctionName Backend interface name invoked.
+     * Get  
+     * @return FunctionName 
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Backend interface name invoked.
-     * @param FunctionName Backend interface name invoked.
+     * Set 
+     * @param FunctionName 
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get API parameter. Coordinate with the backend for specific parameter format during invocation. 
-     * @return FunctionArg API parameter. Coordinate with the backend for specific parameter format during invocation.
+     * Get  
+     * @return FunctionArg 
      */
     public String getFunctionArg() {
         return this.FunctionArg;
     }
 
     /**
-     * Set API parameter. Coordinate with the backend for specific parameter format during invocation.
-     * @param FunctionArg API parameter. Coordinate with the backend for specific parameter format during invocation.
+     * Set 
+     * @param FunctionArg 
      */
     public void setFunctionArg(String FunctionArg) {
         this.FunctionArg = FunctionArg;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
-     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
-     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Reserved field, used when special purpose. 
-     * @return ExtInfo Reserved field, used when special purpose.
+     * Get  
+     * @return ExtInfo 
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved field, used when special purpose.
-     * @param ExtInfo Reserved field, used when special purpose.
+     * Set 
+     * @param ExtInfo 
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

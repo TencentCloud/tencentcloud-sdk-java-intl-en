@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</b></p>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+    * 
     */
     @SerializedName("FileInfo")
     @Expose
     private AigcVideoRedrawTaskInputFileInfo FileInfo;
 
     /**
-    * <p>Parameters for the AIGC video conversion task.</p>
+    * 
     */
     @SerializedName("TaskInfo")
     @Expose
     private AigcVideoRedrawTaskInfo TaskInfo;
 
     /**
-    * <p>Output media file configuration for the AIGC video conversion task.</p>
+    * 
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcVideoRedrawOutputConfig OutputConfig;
 
     /**
-    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+    * 
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * <p>Reserved field, used when special purpose.</p>
+    * 
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</b></p>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</b></p>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p> 
-     * @return FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+     * Get  
+     * @return FileInfo 
      */
     public AigcVideoRedrawTaskInputFileInfo getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
-     * @param FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+     * Set 
+     * @param FileInfo 
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;
     }
 
     /**
-     * Get <p>Parameters for the AIGC video conversion task.</p> 
-     * @return TaskInfo <p>Parameters for the AIGC video conversion task.</p>
+     * Get  
+     * @return TaskInfo 
      */
     public AigcVideoRedrawTaskInfo getTaskInfo() {
         return this.TaskInfo;
     }
 
     /**
-     * Set <p>Parameters for the AIGC video conversion task.</p>
-     * @param TaskInfo <p>Parameters for the AIGC video conversion task.</p>
+     * Set 
+     * @param TaskInfo 
      */
     public void setTaskInfo(AigcVideoRedrawTaskInfo TaskInfo) {
         this.TaskInfo = TaskInfo;
     }
 
     /**
-     * Get <p>Output media file configuration for the AIGC video conversion task.</p> 
-     * @return OutputConfig <p>Output media file configuration for the AIGC video conversion task.</p>
+     * Get  
+     * @return OutputConfig 
      */
     public AigcVideoRedrawOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output media file configuration for the AIGC video conversion task.</p>
-     * @param OutputConfig <p>Output media file configuration for the AIGC video conversion task.</p>
+     * Set 
+     * @param OutputConfig 
      */
     public void setOutputConfig(AigcVideoRedrawOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
-     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p> 
-     * @return SessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param SessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p> 
-     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+     * Get  
+     * @return TasksPriority 
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
-     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+     * Set 
+     * @param TasksPriority 
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get <p>Reserved field, used when special purpose.</p> 
-     * @return ExtInfo <p>Reserved field, used when special purpose.</p>
+     * Get  
+     * @return ExtInfo 
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>Reserved field, used when special purpose.</p>
-     * @param ExtInfo <p>Reserved field, used when special purpose.</p>
+     * Set 
+     * @param ExtInfo 
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

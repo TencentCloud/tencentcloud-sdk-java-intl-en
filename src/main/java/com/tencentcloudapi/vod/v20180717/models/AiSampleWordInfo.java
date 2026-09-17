@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class AiSampleWordInfo extends AbstractModel {
 
     /**
-    * Keyword. Length limit: 20 characters.
+    * 
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * Keyword tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+    * 
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get Keyword. Length limit: 20 characters. 
-     * @return Keyword Keyword. Length limit: 20 characters.
+     * Get  
+     * @return Keyword 
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keyword. Length limit: 20 characters.
-     * @param Keyword Keyword. Length limit: 20 characters.
+     * Set 
+     * @param Keyword 
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get Keyword tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li> 
-     * @return Tags Keyword tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+     * Get  
+     * @return Tags 
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Keyword tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
-     * @param Tags Keyword tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+     * Set 
+     * @param Tags 
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

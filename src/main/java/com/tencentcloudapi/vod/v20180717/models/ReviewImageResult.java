@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class ReviewImageResult extends AbstractModel {
 
     /**
-    * Image review result suggestion. Value ranges from...to...
-<li>pass: it is recommended to pass;</li>
-<li>review: suggest re-examination;</li>
-<li>block: Suggest banning.</li>
+    * 
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+    * 
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on the screen.</li>
+    * 
     */
     @SerializedName("Form")
     @Expose
     private String Form;
 
     /**
-    * Video clips suspected of containing violation information.
-<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+    * 
     */
     @SerializedName("SegmentSet")
     @Expose
     private ReviewImageSegmentItem [] SegmentSet;
 
     /**
-    * URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+    * 
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Image review result suggestion. Value ranges from...to...
-<li>pass: it is recommended to pass;</li>
-<li>review: suggest re-examination;</li>
-<li>block: Suggest banning.</li> 
-     * @return Suggestion Image review result suggestion. Value ranges from...to...
-<li>pass: it is recommended to pass;</li>
-<li>review: suggest re-examination;</li>
-<li>block: Suggest banning.</li>
+     * Get  
+     * @return Suggestion 
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Image review result suggestion. Value ranges from...to...
-<li>pass: it is recommended to pass;</li>
-<li>review: suggest re-examination;</li>
-<li>block: Suggest banning.</li>
-     * @param Suggestion Image review result suggestion. Value ranges from...to...
-<li>pass: it is recommended to pass;</li>
-<li>review: suggest re-examination;</li>
-<li>block: Suggest banning.</li>
+     * Set 
+     * @param Suggestion 
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li> 
-     * @return Label The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+     * Get  
+     * @return Label 
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
-     * @param Label The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+     * Set 
+     * @param Label 
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on the screen.</li> 
-     * @return Form Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on the screen.</li>
+     * Get  
+     * @return Form 
      */
     public String getForm() {
         return this.Form;
     }
 
     /**
-     * Set Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on the screen.</li>
-     * @param Form Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on the screen.</li>
+     * Set 
+     * @param Form 
      */
     public void setForm(String Form) {
         this.Form = Form;
     }
 
     /**
-     * Get Video clips suspected of containing violation information.
-<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl. 
-     * @return SegmentSet Video clips suspected of containing violation information.
-<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+     * Get  
+     * @return SegmentSet 
      */
     public ReviewImageSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Video clips suspected of containing violation information.
-<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
-     * @param SegmentSet Video clips suspected of containing violation information.
-<font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+     * Set 
+     * @param SegmentSet 
      */
     public void setSegmentSet(ReviewImageSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.) 
-     * @return SegmentSetFileUrl URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+     * Get  
+     * @return SegmentSetFileUrl 
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
-     * @param SegmentSetFileUrl URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+     * Set 
+     * @param SegmentSetFileUrl 
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return SegmentSetFileUrlExpireTime URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return SegmentSetFileUrlExpireTime 
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param SegmentSetFileUrlExpireTime URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param SegmentSetFileUrlExpireTime 
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

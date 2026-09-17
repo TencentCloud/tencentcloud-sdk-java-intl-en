@@ -24,270 +24,230 @@ import java.util.HashMap;
 public class ComposeMediaTask extends AbstractModel {
 
     /**
-    * Task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Progress of a media file composing task. Value range: [0, 100]
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input of the media file creation task.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private ComposeMediaTaskInput Input;
 
     /**
-    * Output of the media file creation task.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private ComposeMediaTaskOutput Output;
 
     /**
-    * The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Status Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Status Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Progress of a media file composing task. Value range: [0, 100] 
-     * @return Progress Progress of a media file composing task. Value range: [0, 100]
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of a media file composing task. Value range: [0, 100]
-     * @param Progress Progress of a media file composing task. Value range: [0, 100]
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input of the media file creation task. 
-     * @return Input Input of the media file creation task.
+     * Get  
+     * @return Input 
      */
     public ComposeMediaTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the media file creation task.
-     * @param Input Input of the media file creation task.
+     * Set 
+     * @param Input 
      */
     public void setInput(ComposeMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of the media file creation task. 
-     * @return Output Output of the media file creation task.
+     * Get  
+     * @return Output 
      */
     public ComposeMediaTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the media file creation task.
-     * @param Output Output of the media file creation task.
+     * Set 
+     * @param Output 
      */
     public void setOutput(ComposeMediaTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return MetaData The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param MetaData The metadata of the output video.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed. 
-     * @return SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
-     * @param SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

@@ -24,201 +24,161 @@ import java.util.HashMap;
 public class WechatMiniProgramPublishTask extends AbstractModel {
 
     /**
-    * Task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * ID of published video file.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * ID of the transcoding template corresponding to the published video. 0 represents the source video.
+    * 
     */
     @SerializedName("SourceDefinition")
     @Expose
     private Long SourceDefinition;
 
     /**
-    * Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li>
+    * 
     */
     @SerializedName("PublishResult")
     @Expose
     private String PublishResult;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed. 
-     * @return Status Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
-     * @param Status Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code
-<li>0: success;</li>
-<li>Other values: failure.</li> 
-     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-     * @param ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get ID of published video file. 
-     * @return FileId ID of published video file.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set ID of published video file.
-     * @param FileId ID of published video file.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get ID of the transcoding template corresponding to the published video. 0 represents the source video. 
-     * @return SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+     * Get  
+     * @return SourceDefinition 
      */
     public Long getSourceDefinition() {
         return this.SourceDefinition;
     }
 
     /**
-     * Set ID of the transcoding template corresponding to the published video. 0 represents the source video.
-     * @param SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+     * Set 
+     * @param SourceDefinition 
      */
     public void setSourceDefinition(Long SourceDefinition) {
         this.SourceDefinition = SourceDefinition;
     }
 
     /**
-     * Get Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li> 
-     * @return PublishResult Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li>
+     * Get  
+     * @return PublishResult 
      */
     public String getPublishResult() {
         return this.PublishResult;
     }
 
     /**
-     * Set Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li>
-     * @param PublishResult Status of video release on WeChat Mini Program. Valid values:
-<li>Pass: successfully published;</li>
-<li>Failed: failed to publish;</li>
-<li>Rejected: rejected.</li>
+     * Set 
+     * @param PublishResult 
      */
     public void setPublishResult(String PublishResult) {
         this.PublishResult = PublishResult;

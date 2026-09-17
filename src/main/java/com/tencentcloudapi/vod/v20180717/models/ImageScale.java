@@ -24,140 +24,115 @@ import java.util.HashMap;
 public class ImageScale extends AbstractModel {
 
     /**
-    * The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+    * 
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+    * 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+    * 
     */
     @SerializedName("LongEdge")
     @Expose
     private Long LongEdge;
 
     /**
-    * The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+    * 
     */
     @SerializedName("ShortEdge")
     @Expose
     private Long ShortEdge;
 
     /**
-     * Get The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li> 
-     * @return Type The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
-     * @param Type The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`. 
-     * @return Height The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+     * Get  
+     * @return Height 
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
-     * @param Height The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+     * Set 
+     * @param Height 
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`. 
-     * @return Width The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+     * Get  
+     * @return Width 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
-     * @param Width The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+     * Set 
+     * @param Width 
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`. 
-     * @return LongEdge The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+     * Get  
+     * @return LongEdge 
      */
     public Long getLongEdge() {
         return this.LongEdge;
     }
 
     /**
-     * Set The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
-     * @param LongEdge The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+     * Set 
+     * @param LongEdge 
      */
     public void setLongEdge(Long LongEdge) {
         this.LongEdge = LongEdge;
     }
 
     /**
-     * Get The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`. 
-     * @return ShortEdge The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+     * Get  
+     * @return ShortEdge 
      */
     public Long getShortEdge() {
         return this.ShortEdge;
     }
 
     /**
-     * Set The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
-     * @param ShortEdge The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+     * Set 
+     * @param ShortEdge 
      */
     public void setShortEdge(Long ShortEdge) {
         this.ShortEdge = ShortEdge;

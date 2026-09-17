@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class LLMComprehendAsrForUpdate extends AbstractModel {
 
     /**
-    * Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task. 
-     * @return Switch Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
-     * @param Switch Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

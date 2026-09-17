@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeWatermarkTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Watermark template details list.
+    * 
     */
     @SerializedName("WatermarkTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeWatermarkTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Watermark template details list. 
-     * @return WatermarkTemplateSet Watermark template details list.
+     * Get  
+     * @return WatermarkTemplateSet 
      */
     public WatermarkTemplate [] getWatermarkTemplateSet() {
         return this.WatermarkTemplateSet;
     }
 
     /**
-     * Set Watermark template details list.
-     * @param WatermarkTemplateSet Watermark template details list.
+     * Set 
+     * @param WatermarkTemplateSet 
      */
     public void setWatermarkTemplateSet(WatermarkTemplate [] WatermarkTemplateSet) {
         this.WatermarkTemplateSet = WatermarkTemplateSet;

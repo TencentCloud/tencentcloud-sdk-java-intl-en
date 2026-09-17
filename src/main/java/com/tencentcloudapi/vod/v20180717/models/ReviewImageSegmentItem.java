@@ -24,204 +24,184 @@ import java.util.HashMap;
 public class ReviewImageSegmentItem extends AbstractModel {
 
     /**
-    * Score of offensive information involved in suspected clips.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Result suggestions for identifying violations in suspected clips. Value ranges from...to...
-<li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+    * 
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+    * 
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * Rule violation subtag.
+    * 
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * Suspected segment is prohibited in the form of, value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on screen.</li>
+    * 
     */
     @SerializedName("Form")
     @Expose
     private String Form;
 
     /**
-    * Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+    * 
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Valid when Form is OCR, means the OCR Text Content that comes out.
+    * 
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
+    * 
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-     * Get Score of offensive information involved in suspected clips. 
-     * @return Confidence Score of offensive information involved in suspected clips.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of offensive information involved in suspected clips.
-     * @param Confidence Score of offensive information involved in suspected clips.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Result suggestions for identifying violations in suspected clips. Value ranges from...to...
-<li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li> 
-     * @return Suggestion Result suggestions for identifying violations in suspected clips. Value ranges from...to...
-<li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+     * Get  
+     * @return Suggestion 
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Result suggestions for identifying violations in suspected clips. Value ranges from...to...
-<li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
-     * @param Suggestion Result suggestions for identifying violations in suspected clips. Value ranges from...to...
-<li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+     * Set 
+     * @param Suggestion 
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li> 
-     * @return Label The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+     * Get  
+     * @return Label 
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li>
-     * @param Label The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+     * Set 
+     * @param Label 
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Rule violation subtag. 
-     * @return SubLabel Rule violation subtag.
+     * Get  
+     * @return SubLabel 
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set Rule violation subtag.
-     * @param SubLabel Rule violation subtag.
+     * Set 
+     * @param SubLabel 
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get Suspected segment is prohibited in the form of, value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on screen.</li> 
-     * @return Form Suspected segment is prohibited in the form of, value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on screen.</li>
+     * Get  
+     * @return Form 
      */
     public String getForm() {
         return this.Form;
     }
 
     /**
-     * Set Suspected segment is prohibited in the form of, value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on screen.</li>
-     * @param Form Suspected segment is prohibited in the form of, value ranges from...to...
-<li>Image: The figure or icon on the screen;</li>
-<li>OCR: Text on screen.</li>
+     * Set 
+     * @param Form 
      */
     public void setForm(String Form) {
         this.Form = Form;
     }
 
     /**
-     * Get Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner. 
-     * @return AreaCoordSet Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+     * Get  
+     * @return AreaCoordSet 
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
-     * @param AreaCoordSet Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+     * Set 
+     * @param AreaCoordSet 
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Valid when Form is OCR, means the OCR Text Content that comes out. 
-     * @return Text Valid when Form is OCR, means the OCR Text Content that comes out.
+     * Get  
+     * @return Text 
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Valid when Form is OCR, means the OCR Text Content that comes out.
-     * @param Text Valid when Form is OCR, means the OCR Text Content that comes out.
+     * Set 
+     * @param Text 
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments. 
-     * @return KeywordSet Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
+     * Get  
+     * @return KeywordSet 
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
-     * @param KeywordSet Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
+     * Set 
+     * @param KeywordSet 
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ExtractCopyRightWatermarkTaskOutput extends AbstractModel {
 
     /**
-    * Copyright information
+    * 
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get Copyright information 
-     * @return Text Copyright information
+     * Get  
+     * @return Text 
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Copyright information
-     * @param Text Copyright information
+     * Set 
+     * @param Text 
      */
     public void setText(String Text) {
         this.Text = Text;

@@ -24,150 +24,115 @@ import java.util.HashMap;
 public class ClipFileInfo2017 extends AbstractModel {
 
     /**
-    * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error description.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Output target file ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Output target file address.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * Output target file type.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-     * Get Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error description.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error description.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Message Error description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Output target file ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileId Output target file ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Output target file ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileId Output target file ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Output target file address.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileUrl Output target file address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileUrl 
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set Output target file address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileUrl Output target file address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileUrl 
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get Output target file type.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileType Output target file type.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileType 
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set Output target file type.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileType Output target file type.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileType 
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class QualityEvaluationConfigureInfo extends AbstractModel {
 
     /**
-    * Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60.
+    * 
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li> 
-     * @return Switch Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-     * @param Switch Video quality evaluation switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60. 
-     * @return Score Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60.
+     * Get  
+     * @return Score 
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60.
-     * @param Score Video quality evaluation filter threshold, the result only returns the time periods lower than this value, the default value is 60.
+     * Set 
+     * @param Score 
      */
     public void setScore(Long Score) {
         this.Score = Score;

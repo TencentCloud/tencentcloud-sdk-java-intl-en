@@ -24,232 +24,207 @@ import java.util.HashMap;
 public class ExtractCopyRightWatermarkTask extends AbstractModel {
 
     /**
-    * Task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Input of the copyright watermark extraction task.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private ExtractCopyRightWatermarkTaskInput Input;
 
     /**
-    * Output message of the Copyright Watermark Extraction Task.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private ExtractCopyRightWatermarkTaskOutput Output;
 
     /**
-    * Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li> 
-     * @return Status Task status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
-     * @param Status Task status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li> 
-     * @return ErrCode Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
-     * @param ErrCode Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list. 
-     * @return ErrCodeExt Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
-     * @param ErrCodeExt Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Input of the copyright watermark extraction task. 
-     * @return Input Input of the copyright watermark extraction task.
+     * Get  
+     * @return Input 
      */
     public ExtractCopyRightWatermarkTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the copyright watermark extraction task.
-     * @param Input Input of the copyright watermark extraction task.
+     * Set 
+     * @param Input 
      */
     public void setInput(ExtractCopyRightWatermarkTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output message of the Copyright Watermark Extraction Task. 
-     * @return Output Output message of the Copyright Watermark Extraction Task.
+     * Get  
+     * @return Output 
      */
     public ExtractCopyRightWatermarkTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output message of the Copyright Watermark Extraction Task.
-     * @param Output Output message of the Copyright Watermark Extraction Task.
+     * Set 
+     * @param Output 
      */
     public void setOutput(ExtractCopyRightWatermarkTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication. 
-     * @return SessionId Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
-     * @param SessionId Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters. 
-     * @return SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
-     * @param SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

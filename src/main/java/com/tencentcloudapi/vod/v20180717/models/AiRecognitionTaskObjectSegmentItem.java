@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AiRecognitionTaskObjectSegmentItem extends AbstractModel {
 
     /**
-    * Identifies the offset time of the beginning of the segment, in seconds.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * Offset time to identify the end of the segment, in seconds.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Identify segment confidence. Value: 0~100.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The area coordinates of the recognition result. The array contains 4 elements [x1, y1, x2, y2], which in turn represent the horizontal and vertical coordinates of the upper left point and lower right point of the area.
+    * 
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get Identifies the offset time of the beginning of the segment, in seconds. 
-     * @return StartTimeOffset Identifies the offset time of the beginning of the segment, in seconds.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Identifies the offset time of the beginning of the segment, in seconds.
-     * @param StartTimeOffset Identifies the offset time of the beginning of the segment, in seconds.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Offset time to identify the end of the segment, in seconds. 
-     * @return EndTimeOffset Offset time to identify the end of the segment, in seconds.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Offset time to identify the end of the segment, in seconds.
-     * @param EndTimeOffset Offset time to identify the end of the segment, in seconds.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Identify segment confidence. Value: 0~100. 
-     * @return Confidence Identify segment confidence. Value: 0~100.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Identify segment confidence. Value: 0~100.
-     * @param Confidence Identify segment confidence. Value: 0~100.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The area coordinates of the recognition result. The array contains 4 elements [x1, y1, x2, y2], which in turn represent the horizontal and vertical coordinates of the upper left point and lower right point of the area. 
-     * @return AreaCoordSet The area coordinates of the recognition result. The array contains 4 elements [x1, y1, x2, y2], which in turn represent the horizontal and vertical coordinates of the upper left point and lower right point of the area.
+     * Get  
+     * @return AreaCoordSet 
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set The area coordinates of the recognition result. The array contains 4 elements [x1, y1, x2, y2], which in turn represent the horizontal and vertical coordinates of the upper left point and lower right point of the area.
-     * @param AreaCoordSet The area coordinates of the recognition result. The array contains 4 elements [x1, y1, x2, y2], which in turn represent the horizontal and vertical coordinates of the upper left point and lower right point of the area.
+     * Set 
+     * @param AreaCoordSet 
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

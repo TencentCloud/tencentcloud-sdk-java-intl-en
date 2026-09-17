@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSampleSnapshotTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Sampling screenshot template detail list.
+    * 
     */
     @SerializedName("SampleSnapshotTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSampleSnapshotTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Sampling screenshot template detail list. 
-     * @return SampleSnapshotTemplateSet Sampling screenshot template detail list.
+     * Get  
+     * @return SampleSnapshotTemplateSet 
      */
     public SampleSnapshotTemplate [] getSampleSnapshotTemplateSet() {
         return this.SampleSnapshotTemplateSet;
     }
 
     /**
-     * Set Sampling screenshot template detail list.
-     * @param SampleSnapshotTemplateSet Sampling screenshot template detail list.
+     * Set 
+     * @param SampleSnapshotTemplateSet 
      */
     public void setSampleSnapshotTemplateSet(SampleSnapshotTemplate [] SampleSnapshotTemplateSet) {
         this.SampleSnapshotTemplateSet = SampleSnapshotTemplateSet;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyProcessImageAsyncTemplateRequest extends AbstractModel {
 
     /**
-    * Unique identifier of the image asynchronous processing template.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Image async processing template name. The length cannot exceed 64 characters.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Image asynchronous processing configuration.
+    * 
     */
     @SerializedName("ProcessImageConfigure")
     @Expose
     private ProcessImageAsyncTask ProcessImageConfigure;
 
     /**
-     * Get Unique identifier of the image asynchronous processing template. 
-     * @return Definition Unique identifier of the image asynchronous processing template.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the image asynchronous processing template.
-     * @param Definition Unique identifier of the image asynchronous processing template.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Image async processing template name. The length cannot exceed 64 characters. 
-     * @return Name Image async processing template name. The length cannot exceed 64 characters.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Image async processing template name. The length cannot exceed 64 characters.
-     * @param Name Image async processing template name. The length cannot exceed 64 characters.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description information of the image asynchronous processing template. The length cannot exceed 256 characters. 
-     * @return Comment Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
-     * @param Comment Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Image asynchronous processing configuration. 
-     * @return ProcessImageConfigure Image asynchronous processing configuration.
+     * Get  
+     * @return ProcessImageConfigure 
      */
     public ProcessImageAsyncTask getProcessImageConfigure() {
         return this.ProcessImageConfigure;
     }
 
     /**
-     * Set Image asynchronous processing configuration.
-     * @param ProcessImageConfigure Image asynchronous processing configuration.
+     * Set 
+     * @param ProcessImageConfigure 
      */
     public void setProcessImageConfigure(ProcessImageAsyncTask ProcessImageConfigure) {
         this.ProcessImageConfigure = ProcessImageConfigure;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskOutputMediaInfo extends AbstractModel {
 
     /**
-    * Media file ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
@@ -38,16 +38,16 @@ public class TaskOutputMediaInfo extends AbstractModel {
     private MediaBasicInfo MediaBasicInfo;
 
     /**
-     * Get Media file ID. 
-     * @return FileId Media file ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID.
-     * @param FileId Media file ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

@@ -86,7 +86,9 @@ public class ModifyInstanceAttributeRequest extends AbstractModel {
     /**
      * Get New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName. 
      * @return NewPublicIp New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
+     * @deprecated
      */
+    @Deprecated
     public String getNewPublicIp() {
         return this.NewPublicIp;
     }
@@ -94,7 +96,9 @@ public class ModifyInstanceAttributeRequest extends AbstractModel {
     /**
      * Set New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
      * @param NewPublicIp New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
+     * @deprecated
      */
+    @Deprecated
     public void setNewPublicIp(String NewPublicIp) {
         this.NewPublicIp = NewPublicIp;
     }
@@ -102,7 +106,9 @@ public class ModifyInstanceAttributeRequest extends AbstractModel {
     /**
      * Get IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified. 
      * @return IpType IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
+     * @deprecated
      */
+    @Deprecated
     public String getIpType() {
         return this.IpType;
     }
@@ -110,7 +116,9 @@ public class ModifyInstanceAttributeRequest extends AbstractModel {
     /**
      * Set IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
      * @param IpType IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
+     * @deprecated
      */
+    @Deprecated
     public void setIpType(String IpType) {
         this.IpType = IpType;
     }

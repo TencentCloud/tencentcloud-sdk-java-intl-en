@@ -24,239 +24,211 @@ import java.util.HashMap;
 public class ProcedureTemplate extends AbstractModel {
 
     /**
-    * Task flow name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MediaProcessTask")
     @Expose
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * Parameters for the AI content recognition task.
+    * 
     */
     @SerializedName("AiRecognitionTaskSet")
     @Expose
     private AiRecognitionTaskInput [] AiRecognitionTaskSet;
 
     /**
-    * This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MiniProgramPublishTask")
     @Expose
     private WechatMiniProgramPublishTaskInput MiniProgramPublishTask;
 
     /**
-    * The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ReviewAudioVideoTask")
     @Expose
     private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
-    * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
+    */
+    @SerializedName("ImportMediaKnowledgeTaskSet")
+    @Expose
+    private ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet;
+
+    /**
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Task flow name. 
-     * @return Name Task flow name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task flow name.
-     * @param Name Task flow name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li> 
-     * @return Type Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
-     * @param Type Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MediaProcessTask Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MediaProcessTask 
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTask Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MediaProcessTask 
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
     }
 
     /**
-     * Get The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AiContentReviewTask The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AiContentReviewTask 
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiContentReviewTask The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AiContentReviewTask 
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AiAnalysisTask Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AiAnalysisTask 
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisTask Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AiAnalysisTask 
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get Parameters for the AI content recognition task. 
-     * @return AiRecognitionTaskSet Parameters for the AI content recognition task.
+     * Get  
+     * @return AiRecognitionTaskSet 
      */
     public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
         return this.AiRecognitionTaskSet;
     }
 
     /**
-     * Set Parameters for the AI content recognition task.
-     * @param AiRecognitionTaskSet Parameters for the AI content recognition task.
+     * Set 
+     * @param AiRecognitionTaskSet 
      */
     public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
         this.AiRecognitionTaskSet = AiRecognitionTaskSet;
     }
 
     /**
-     * Get This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AiRecognitionTask 
      * @deprecated
      */
     @Deprecated
@@ -265,10 +237,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AiRecognitionTask 
      * @deprecated
      */
     @Deprecated
@@ -277,72 +247,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MiniProgramPublishTask Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MiniProgramPublishTask 
      */
     public WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() {
         return this.MiniProgramPublishTask;
     }
 
     /**
-     * Set Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MiniProgramPublishTask Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MiniProgramPublishTask 
      */
     public void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput MiniProgramPublishTask) {
         this.MiniProgramPublishTask = MiniProgramPublishTask;
     }
 
     /**
-     * Get The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReviewAudioVideoTask The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ReviewAudioVideoTask 
      */
     public ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() {
         return this.ReviewAudioVideoTask;
     }
 
     /**
-     * Set The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReviewAudioVideoTask The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ReviewAudioVideoTask 
      */
     public void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask) {
         this.ReviewAudioVideoTask = ReviewAudioVideoTask;
     }
 
     /**
-     * Get Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return ImportMediaKnowledgeTaskSet 
+     */
+    public ImportMediaKnowledgeTaskInput [] getImportMediaKnowledgeTaskSet() {
+        return this.ImportMediaKnowledgeTaskSet;
+    }
+
+    /**
+     * Set 
+     * @param ImportMediaKnowledgeTaskSet 
+     */
+    public void setImportMediaKnowledgeTaskSet(ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet) {
+        this.ImportMediaKnowledgeTaskSet = ImportMediaKnowledgeTaskSet;
+    }
+
+    /**
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -389,6 +367,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ReviewAudioVideoTask != null) {
             this.ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput(source.ReviewAudioVideoTask);
         }
+        if (source.ImportMediaKnowledgeTaskSet != null) {
+            this.ImportMediaKnowledgeTaskSet = new ImportMediaKnowledgeTaskInput[source.ImportMediaKnowledgeTaskSet.length];
+            for (int i = 0; i < source.ImportMediaKnowledgeTaskSet.length; i++) {
+                this.ImportMediaKnowledgeTaskSet[i] = new ImportMediaKnowledgeTaskInput(source.ImportMediaKnowledgeTaskSet[i]);
+            }
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -412,6 +396,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
+        this.setParamArrayObj(map, prefix + "ImportMediaKnowledgeTaskSet.", this.ImportMediaKnowledgeTaskSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

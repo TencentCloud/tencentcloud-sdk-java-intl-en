@@ -24,171 +24,161 @@ import java.util.HashMap;
 public class ReviewTemplate extends AbstractModel {
 
     /**
-    * Unique tag of the moderation template.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * The template name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The template description.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The violation labels used.
+    * 
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-    * The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Unique tag of the moderation template. 
-     * @return Definition Unique tag of the moderation template.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique tag of the moderation template.
-     * @param Definition Unique tag of the moderation template.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get The template name. 
-     * @return Name The template name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The template name.
-     * @param Name The template name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The template description. 
-     * @return Comment The template description.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set The template description.
-     * @param Comment The template description.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li> 
-     * @return Type The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
-     * @param Type The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The violation labels used. 
-     * @return Labels The violation labels used.
+     * Get  
+     * @return Labels 
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set The violation labels used.
-     * @param Labels The violation labels used.
+     * Set 
+     * @param Labels 
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

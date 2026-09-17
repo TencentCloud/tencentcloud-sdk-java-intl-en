@@ -24,143 +24,138 @@ import java.util.HashMap;
 public class ComposeMediaTaskOutput extends AbstractModel {
 
     /**
-    * File type, such as mp4 and mp3.
+    * 
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * Media file ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Media file playback address.
+    * 
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * Filename of up to 64 characters.
+    * 
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
+    * 
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get File type, such as mp4 and mp3. 
-     * @return FileType File type, such as mp4 and mp3.
+     * Get  
+     * @return FileType 
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set File type, such as mp4 and mp3.
-     * @param FileType File type, such as mp4 and mp3.
+     * Set 
+     * @param FileType 
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get Media file ID. 
-     * @return FileId Media file ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID.
-     * @param FileId Media file ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Media file playback address. 
-     * @return FileUrl Media file playback address.
+     * Get  
+     * @return FileUrl 
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set Media file playback address.
-     * @param FileUrl Media file playback address.
+     * Set 
+     * @param FileUrl 
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get Filename of up to 64 characters. 
-     * @return MediaName Filename of up to 64 characters.
+     * Get  
+     * @return MediaName 
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Filename of up to 64 characters.
-     * @param MediaName Filename of up to 64 characters.
+     * Set 
+     * @param MediaName 
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li> 
-     * @return ClassId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
+     * Get  
+     * @return ClassId 
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
-     * @param ClassId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
+     * Set 
+     * @param ClassId 
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return ExpireTime 
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param ExpireTime 
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

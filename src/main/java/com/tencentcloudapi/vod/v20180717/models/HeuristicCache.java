@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class HeuristicCache extends AbstractModel {
 
     /**
-    * Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+    * Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -40,24 +40,24 @@ public class HeuristicCache extends AbstractModel {
     private HeuristicCacheConfig CacheConfig;
 
     /**
-     * Get Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li> 
-     * @return Switch Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+     * Get Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
-     * @param Switch Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+     * Set Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

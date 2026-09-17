@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateClassRequest extends AbstractModel {
 
     /**
-    * Parent category ID. Fill in -1 for the first-level category.
+    * 
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-    * Category name. Length limit: 1-64 characters.
+    * 
     */
     @SerializedName("ClassName")
     @Expose
     private String ClassName;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Parent category ID. Fill in -1 for the first-level category. 
-     * @return ParentId Parent category ID. Fill in -1 for the first-level category.
+     * Get  
+     * @return ParentId 
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set Parent category ID. Fill in -1 for the first-level category.
-     * @param ParentId Parent category ID. Fill in -1 for the first-level category.
+     * Set 
+     * @param ParentId 
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get Category name. Length limit: 1-64 characters. 
-     * @return ClassName Category name. Length limit: 1-64 characters.
+     * Get  
+     * @return ClassName 
      */
     public String getClassName() {
         return this.ClassName;
     }
 
     /**
-     * Set Category name. Length limit: 1-64 characters.
-     * @param ClassName Category name. Length limit: 1-64 characters.
+     * Set 
+     * @param ClassName 
      */
     public void setClassName(String ClassName) {
         this.ClassName = ClassName;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

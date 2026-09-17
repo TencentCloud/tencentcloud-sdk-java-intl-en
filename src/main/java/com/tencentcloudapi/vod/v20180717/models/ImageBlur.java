@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class ImageBlur extends AbstractModel {
 
     /**
-    * The blur type. Valid values:
-<li>`Gaussian`</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
+    * 
     */
     @SerializedName("Radius")
     @Expose
     private Long Radius;
 
     /**
-    * The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+    * 
     */
     @SerializedName("Sigma")
     @Expose
     private Long Sigma;
 
     /**
-     * Get The blur type. Valid values:
-<li>`Gaussian`</li> 
-     * @return Type The blur type. Valid values:
-<li>`Gaussian`</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The blur type. Valid values:
-<li>`Gaussian`</li>
-     * @param Type The blur type. Valid values:
-<li>`Gaussian`</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`. 
-     * @return Radius The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
+     * Get  
+     * @return Radius 
      */
     public Long getRadius() {
         return this.Radius;
     }
 
     /**
-     * Set The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
-     * @param Radius The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
+     * Set 
+     * @param Radius 
      */
     public void setRadius(Long Radius) {
         this.Radius = Radius;
     }
 
     /**
-     * Get The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`. 
-     * @return Sigma The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+     * Get  
+     * @return Sigma 
      */
     public Long getSigma() {
         return this.Sigma;
     }
 
     /**
-     * Set The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
-     * @param Sigma The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+     * Set 
+     * @param Sigma 
      */
     public void setSigma(Long Sigma) {
         this.Sigma = Sigma;

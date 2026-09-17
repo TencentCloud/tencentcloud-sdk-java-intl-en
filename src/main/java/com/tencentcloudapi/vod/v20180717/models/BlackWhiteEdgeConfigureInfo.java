@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class BlackWhiteEdgeConfigureInfo extends AbstractModel {
 
     /**
-    * Video screen black border, white border, black screen, white screen detection switch, optional values: 
-<li>ON: turn on; </li>
-<li>OFF: turn off. </li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Video screen black border, white border, black screen, white screen detection switch, optional values: 
-<li>ON: turn on; </li>
-<li>OFF: turn off. </li> 
-     * @return Switch Video screen black border, white border, black screen, white screen detection switch, optional values: 
-<li>ON: turn on; </li>
-<li>OFF: turn off. </li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Video screen black border, white border, black screen, white screen detection switch, optional values: 
-<li>ON: turn on; </li>
-<li>OFF: turn off. </li>
-     * @param Switch Video screen black border, white border, black screen, white screen detection switch, optional values: 
-<li>ON: turn on; </li>
-<li>OFF: turn off. </li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCLSTopicsResponse extends AbstractModel {
 
     /**
-    * Total number of log topics.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Log topic list.
+    * 
     */
     @SerializedName("Topics")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCLSTopicsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of log topics. 
-     * @return TotalCount Total number of log topics.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of log topics.
-     * @param TotalCount Total number of log topics.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Log topic list. 
-     * @return Topics Log topic list.
+     * Get  
+     * @return Topics 
      */
     public CLSTopicInfo [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set Log topic list.
-     * @param Topics Log topic list.
+     * Set 
+     * @param Topics 
      */
     public void setTopics(CLSTopicInfo [] Topics) {
         this.Topics = Topics;

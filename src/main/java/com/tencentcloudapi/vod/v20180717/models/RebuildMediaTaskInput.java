@@ -24,391 +24,391 @@ import java.util.HashMap;
 public class RebuildMediaTaskInput extends AbstractModel {
 
     /**
-    * The file ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Audio and video quality rebirth template number.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * The video quality remastering parameters.
+    * 
     */
     @SerializedName("RepairInfo")
     @Expose
     private RepairInfo RepairInfo;
 
     /**
-    * The smart frame interpolation parameters.
+    * 
     */
     @SerializedName("VideoFrameInterpolationInfo")
     @Expose
     private VideoFrameInterpolationInfo VideoFrameInterpolationInfo;
 
     /**
-    * The super resolution parameters.
+    * 
     */
     @SerializedName("SuperResolutionInfo")
     @Expose
     private SuperResolutionInfo SuperResolutionInfo;
 
     /**
-    * The high dynamic range (HDR) parameters.
+    * 
     */
     @SerializedName("HDRInfo")
     @Expose
     private HDRInfo HDRInfo;
 
     /**
-    * The image noise removal parameters.
+    * 
     */
     @SerializedName("VideoDenoiseInfo")
     @Expose
     private VideoDenoiseInfo VideoDenoiseInfo;
 
     /**
-    * The noise removal parameters.
+    * 
     */
     @SerializedName("AudioDenoiseInfo")
     @Expose
     private AudioDenoiseInfo AudioDenoiseInfo;
 
     /**
-    * The color enhancement parameters.
+    * 
     */
     @SerializedName("ColorInfo")
     @Expose
     private ColorEnhanceInfo ColorInfo;
 
     /**
-    * The detail enhancement parameters.
+    * 
     */
     @SerializedName("SharpInfo")
     @Expose
     private SharpEnhanceInfo SharpInfo;
 
     /**
-    * The face enhancement parameters.
+    * 
     */
     @SerializedName("FaceInfo")
     @Expose
     private FaceEnhanceInfo FaceInfo;
 
     /**
-    * The low-light enhancement parameters.
+    * 
     */
     @SerializedName("LowLightInfo")
     @Expose
     private LowLightEnhanceInfo LowLightInfo;
 
     /**
-    * The banding removal parameters.
+    * 
     */
     @SerializedName("ScratchRepairInfo")
     @Expose
     private ScratchRepairInfo ScratchRepairInfo;
 
     /**
-    * The artifact removal (smoothing) parameters.
+    * 
     */
     @SerializedName("ArtifactRepairInfo")
     @Expose
     private ArtifactRepairInfo ArtifactRepairInfo;
 
     /**
-    * The output parameters of the file.
+    * 
     */
     @SerializedName("TargetInfo")
     @Expose
     private RebuildMediaTargetInfo TargetInfo;
 
     /**
-     * Get The file ID. 
-     * @return FileId The file ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The file ID.
-     * @param FileId The file ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video. 
-     * @return StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-     * @param StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get The end offset (seconds). If you do not specify this, the segment will end at the end of the video. 
-     * @return EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-     * @param EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Audio and video quality rebirth template number. 
-     * @return Definition Audio and video quality rebirth template number.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Audio and video quality rebirth template number.
-     * @param Definition Audio and video quality rebirth template number.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get The video quality remastering parameters. 
-     * @return RepairInfo The video quality remastering parameters.
+     * Get  
+     * @return RepairInfo 
      */
     public RepairInfo getRepairInfo() {
         return this.RepairInfo;
     }
 
     /**
-     * Set The video quality remastering parameters.
-     * @param RepairInfo The video quality remastering parameters.
+     * Set 
+     * @param RepairInfo 
      */
     public void setRepairInfo(RepairInfo RepairInfo) {
         this.RepairInfo = RepairInfo;
     }
 
     /**
-     * Get The smart frame interpolation parameters. 
-     * @return VideoFrameInterpolationInfo The smart frame interpolation parameters.
+     * Get  
+     * @return VideoFrameInterpolationInfo 
      */
     public VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() {
         return this.VideoFrameInterpolationInfo;
     }
 
     /**
-     * Set The smart frame interpolation parameters.
-     * @param VideoFrameInterpolationInfo The smart frame interpolation parameters.
+     * Set 
+     * @param VideoFrameInterpolationInfo 
      */
     public void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo VideoFrameInterpolationInfo) {
         this.VideoFrameInterpolationInfo = VideoFrameInterpolationInfo;
     }
 
     /**
-     * Get The super resolution parameters. 
-     * @return SuperResolutionInfo The super resolution parameters.
+     * Get  
+     * @return SuperResolutionInfo 
      */
     public SuperResolutionInfo getSuperResolutionInfo() {
         return this.SuperResolutionInfo;
     }
 
     /**
-     * Set The super resolution parameters.
-     * @param SuperResolutionInfo The super resolution parameters.
+     * Set 
+     * @param SuperResolutionInfo 
      */
     public void setSuperResolutionInfo(SuperResolutionInfo SuperResolutionInfo) {
         this.SuperResolutionInfo = SuperResolutionInfo;
     }
 
     /**
-     * Get The high dynamic range (HDR) parameters. 
-     * @return HDRInfo The high dynamic range (HDR) parameters.
+     * Get  
+     * @return HDRInfo 
      */
     public HDRInfo getHDRInfo() {
         return this.HDRInfo;
     }
 
     /**
-     * Set The high dynamic range (HDR) parameters.
-     * @param HDRInfo The high dynamic range (HDR) parameters.
+     * Set 
+     * @param HDRInfo 
      */
     public void setHDRInfo(HDRInfo HDRInfo) {
         this.HDRInfo = HDRInfo;
     }
 
     /**
-     * Get The image noise removal parameters. 
-     * @return VideoDenoiseInfo The image noise removal parameters.
+     * Get  
+     * @return VideoDenoiseInfo 
      */
     public VideoDenoiseInfo getVideoDenoiseInfo() {
         return this.VideoDenoiseInfo;
     }
 
     /**
-     * Set The image noise removal parameters.
-     * @param VideoDenoiseInfo The image noise removal parameters.
+     * Set 
+     * @param VideoDenoiseInfo 
      */
     public void setVideoDenoiseInfo(VideoDenoiseInfo VideoDenoiseInfo) {
         this.VideoDenoiseInfo = VideoDenoiseInfo;
     }
 
     /**
-     * Get The noise removal parameters. 
-     * @return AudioDenoiseInfo The noise removal parameters.
+     * Get  
+     * @return AudioDenoiseInfo 
      */
     public AudioDenoiseInfo getAudioDenoiseInfo() {
         return this.AudioDenoiseInfo;
     }
 
     /**
-     * Set The noise removal parameters.
-     * @param AudioDenoiseInfo The noise removal parameters.
+     * Set 
+     * @param AudioDenoiseInfo 
      */
     public void setAudioDenoiseInfo(AudioDenoiseInfo AudioDenoiseInfo) {
         this.AudioDenoiseInfo = AudioDenoiseInfo;
     }
 
     /**
-     * Get The color enhancement parameters. 
-     * @return ColorInfo The color enhancement parameters.
+     * Get  
+     * @return ColorInfo 
      */
     public ColorEnhanceInfo getColorInfo() {
         return this.ColorInfo;
     }
 
     /**
-     * Set The color enhancement parameters.
-     * @param ColorInfo The color enhancement parameters.
+     * Set 
+     * @param ColorInfo 
      */
     public void setColorInfo(ColorEnhanceInfo ColorInfo) {
         this.ColorInfo = ColorInfo;
     }
 
     /**
-     * Get The detail enhancement parameters. 
-     * @return SharpInfo The detail enhancement parameters.
+     * Get  
+     * @return SharpInfo 
      */
     public SharpEnhanceInfo getSharpInfo() {
         return this.SharpInfo;
     }
 
     /**
-     * Set The detail enhancement parameters.
-     * @param SharpInfo The detail enhancement parameters.
+     * Set 
+     * @param SharpInfo 
      */
     public void setSharpInfo(SharpEnhanceInfo SharpInfo) {
         this.SharpInfo = SharpInfo;
     }
 
     /**
-     * Get The face enhancement parameters. 
-     * @return FaceInfo The face enhancement parameters.
+     * Get  
+     * @return FaceInfo 
      */
     public FaceEnhanceInfo getFaceInfo() {
         return this.FaceInfo;
     }
 
     /**
-     * Set The face enhancement parameters.
-     * @param FaceInfo The face enhancement parameters.
+     * Set 
+     * @param FaceInfo 
      */
     public void setFaceInfo(FaceEnhanceInfo FaceInfo) {
         this.FaceInfo = FaceInfo;
     }
 
     /**
-     * Get The low-light enhancement parameters. 
-     * @return LowLightInfo The low-light enhancement parameters.
+     * Get  
+     * @return LowLightInfo 
      */
     public LowLightEnhanceInfo getLowLightInfo() {
         return this.LowLightInfo;
     }
 
     /**
-     * Set The low-light enhancement parameters.
-     * @param LowLightInfo The low-light enhancement parameters.
+     * Set 
+     * @param LowLightInfo 
      */
     public void setLowLightInfo(LowLightEnhanceInfo LowLightInfo) {
         this.LowLightInfo = LowLightInfo;
     }
 
     /**
-     * Get The banding removal parameters. 
-     * @return ScratchRepairInfo The banding removal parameters.
+     * Get  
+     * @return ScratchRepairInfo 
      */
     public ScratchRepairInfo getScratchRepairInfo() {
         return this.ScratchRepairInfo;
     }
 
     /**
-     * Set The banding removal parameters.
-     * @param ScratchRepairInfo The banding removal parameters.
+     * Set 
+     * @param ScratchRepairInfo 
      */
     public void setScratchRepairInfo(ScratchRepairInfo ScratchRepairInfo) {
         this.ScratchRepairInfo = ScratchRepairInfo;
     }
 
     /**
-     * Get The artifact removal (smoothing) parameters. 
-     * @return ArtifactRepairInfo The artifact removal (smoothing) parameters.
+     * Get  
+     * @return ArtifactRepairInfo 
      */
     public ArtifactRepairInfo getArtifactRepairInfo() {
         return this.ArtifactRepairInfo;
     }
 
     /**
-     * Set The artifact removal (smoothing) parameters.
-     * @param ArtifactRepairInfo The artifact removal (smoothing) parameters.
+     * Set 
+     * @param ArtifactRepairInfo 
      */
     public void setArtifactRepairInfo(ArtifactRepairInfo ArtifactRepairInfo) {
         this.ArtifactRepairInfo = ArtifactRepairInfo;
     }
 
     /**
-     * Get The output parameters of the file. 
-     * @return TargetInfo The output parameters of the file.
+     * Get  
+     * @return TargetInfo 
      */
     public RebuildMediaTargetInfo getTargetInfo() {
         return this.TargetInfo;
     }
 
     /**
-     * Set The output parameters of the file.
-     * @param TargetInfo The output parameters of the file.
+     * Set 
+     * @param TargetInfo 
      */
     public void setTargetInfo(RebuildMediaTargetInfo TargetInfo) {
         this.TargetInfo = TargetInfo;

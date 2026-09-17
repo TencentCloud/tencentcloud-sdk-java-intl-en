@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateAigcAdvancedCustomElementInput extends AbstractModel {
 
     /**
-    * <p>Subject name.</p>
+    * 
     */
     @SerializedName("ElementName")
     @Expose
     private String ElementName;
 
     /**
-    * <p>Subject description.</p>
+    * 
     */
     @SerializedName("ElementDescription")
     @Expose
     private String ElementDescription;
 
     /**
-    * <p>Subject reference method.</p>
+    * 
     */
     @SerializedName("ReferenceType")
     @Expose
     private String ReferenceType;
 
     /**
-    * <p>Main voice type.</p>
+    * 
     */
     @SerializedName("ElementVoiceId")
     @Expose
     private String ElementVoiceId;
 
     /**
-    * <p>Reference video.</p>
+    * 
     */
     @SerializedName("ElementVideoList")
     @Expose
     private String ElementVideoList;
 
     /**
-    * <p>Subject reference diagram.</p>
+    * 
     */
     @SerializedName("ElementImageList")
     @Expose
     private String ElementImageList;
 
     /**
-    * <p>Subject configuration tag.</p>
+    * 
     */
     @SerializedName("TagList")
     @Expose
     private String TagList;
 
     /**
-     * Get <p>Subject name.</p> 
-     * @return ElementName <p>Subject name.</p>
+     * Get  
+     * @return ElementName 
      */
     public String getElementName() {
         return this.ElementName;
     }
 
     /**
-     * Set <p>Subject name.</p>
-     * @param ElementName <p>Subject name.</p>
+     * Set 
+     * @param ElementName 
      */
     public void setElementName(String ElementName) {
         this.ElementName = ElementName;
     }
 
     /**
-     * Get <p>Subject description.</p> 
-     * @return ElementDescription <p>Subject description.</p>
+     * Get  
+     * @return ElementDescription 
      */
     public String getElementDescription() {
         return this.ElementDescription;
     }
 
     /**
-     * Set <p>Subject description.</p>
-     * @param ElementDescription <p>Subject description.</p>
+     * Set 
+     * @param ElementDescription 
      */
     public void setElementDescription(String ElementDescription) {
         this.ElementDescription = ElementDescription;
     }
 
     /**
-     * Get <p>Subject reference method.</p> 
-     * @return ReferenceType <p>Subject reference method.</p>
+     * Get  
+     * @return ReferenceType 
      */
     public String getReferenceType() {
         return this.ReferenceType;
     }
 
     /**
-     * Set <p>Subject reference method.</p>
-     * @param ReferenceType <p>Subject reference method.</p>
+     * Set 
+     * @param ReferenceType 
      */
     public void setReferenceType(String ReferenceType) {
         this.ReferenceType = ReferenceType;
     }
 
     /**
-     * Get <p>Main voice type.</p> 
-     * @return ElementVoiceId <p>Main voice type.</p>
+     * Get  
+     * @return ElementVoiceId 
      */
     public String getElementVoiceId() {
         return this.ElementVoiceId;
     }
 
     /**
-     * Set <p>Main voice type.</p>
-     * @param ElementVoiceId <p>Main voice type.</p>
+     * Set 
+     * @param ElementVoiceId 
      */
     public void setElementVoiceId(String ElementVoiceId) {
         this.ElementVoiceId = ElementVoiceId;
     }
 
     /**
-     * Get <p>Reference video.</p> 
-     * @return ElementVideoList <p>Reference video.</p>
+     * Get  
+     * @return ElementVideoList 
      */
     public String getElementVideoList() {
         return this.ElementVideoList;
     }
 
     /**
-     * Set <p>Reference video.</p>
-     * @param ElementVideoList <p>Reference video.</p>
+     * Set 
+     * @param ElementVideoList 
      */
     public void setElementVideoList(String ElementVideoList) {
         this.ElementVideoList = ElementVideoList;
     }
 
     /**
-     * Get <p>Subject reference diagram.</p> 
-     * @return ElementImageList <p>Subject reference diagram.</p>
+     * Get  
+     * @return ElementImageList 
      */
     public String getElementImageList() {
         return this.ElementImageList;
     }
 
     /**
-     * Set <p>Subject reference diagram.</p>
-     * @param ElementImageList <p>Subject reference diagram.</p>
+     * Set 
+     * @param ElementImageList 
      */
     public void setElementImageList(String ElementImageList) {
         this.ElementImageList = ElementImageList;
     }
 
     /**
-     * Get <p>Subject configuration tag.</p> 
-     * @return TagList <p>Subject configuration tag.</p>
+     * Get  
+     * @return TagList 
      */
     public String getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set <p>Subject configuration tag.</p>
-     * @param TagList <p>Subject configuration tag.</p>
+     * Set 
+     * @param TagList 
      */
     public void setTagList(String TagList) {
         this.TagList = TagList;

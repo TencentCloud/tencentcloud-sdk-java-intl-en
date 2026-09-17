@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeFileAttributesTaskOutput extends AbstractModel {
 
     /**
-    * The MD5 hash of the file.
+    * 
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * The Sha1 value of the media file.
+    * 
     */
     @SerializedName("Sha1")
     @Expose
     private String Sha1;
 
     /**
-     * Get The MD5 hash of the file. 
-     * @return Md5 The MD5 hash of the file.
+     * Get  
+     * @return Md5 
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set The MD5 hash of the file.
-     * @param Md5 The MD5 hash of the file.
+     * Set 
+     * @param Md5 
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get The Sha1 value of the media file. 
-     * @return Sha1 The Sha1 value of the media file.
+     * Get  
+     * @return Sha1 
      */
     public String getSha1() {
         return this.Sha1;
     }
 
     /**
-     * Set The Sha1 value of the media file.
-     * @param Sha1 The Sha1 value of the media file.
+     * Set 
+     * @param Sha1 
      */
     public void setSha1(String Sha1) {
         this.Sha1 = Sha1;

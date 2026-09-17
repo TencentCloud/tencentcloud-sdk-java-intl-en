@@ -24,71 +24,46 @@ import java.util.HashMap;
 public class AudioVolumeBalanceInfo extends AbstractModel {
 
     /**
-    * Volume equalization control switch. Available values:
-<li>ON: enable volume equalization;</li>
-<li>OFF: Disable volume normalization.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Type, available values:
-<li>loudNorm: Loudness normalization</li>
-<li>gainControl: Reduce abrupt change</li>
-Default value: loudNorm.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Volume equalization control switch. Available values:
-<li>ON: enable volume equalization;</li>
-<li>OFF: Disable volume normalization.</li> 
-     * @return Switch Volume equalization control switch. Available values:
-<li>ON: enable volume equalization;</li>
-<li>OFF: Disable volume normalization.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Volume equalization control switch. Available values:
-<li>ON: enable volume equalization;</li>
-<li>OFF: Disable volume normalization.</li>
-     * @param Switch Volume equalization control switch. Available values:
-<li>ON: enable volume equalization;</li>
-<li>OFF: Disable volume normalization.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Type, available values:
-<li>loudNorm: Loudness normalization</li>
-<li>gainControl: Reduce abrupt change</li>
-Default value: loudNorm. 
-     * @return Type Type, available values:
-<li>loudNorm: Loudness normalization</li>
-<li>gainControl: Reduce abrupt change</li>
-Default value: loudNorm.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type, available values:
-<li>loudNorm: Loudness normalization</li>
-<li>gainControl: Reduce abrupt change</li>
-Default value: loudNorm.
-     * @param Type Type, available values:
-<li>loudNorm: Loudness normalization</li>
-<li>gainControl: Reduce abrupt change</li>
-Default value: loudNorm.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

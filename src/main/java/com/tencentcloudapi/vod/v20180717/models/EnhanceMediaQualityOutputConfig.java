@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class EnhanceMediaQualityOutputConfig extends AbstractModel {
 
     /**
-    * Output file name, up to 64 characters. The system will specify the file name by default
+    * 
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li>
+    * 
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get Output file name, up to 64 characters. The system will specify the file name by default 
-     * @return MediaName Output file name, up to 64 characters. The system will specify the file name by default
+     * Get  
+     * @return MediaName 
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output file name, up to 64 characters. The system will specify the file name by default
-     * @param MediaName Output file name, up to 64 characters. The system will specify the file name by default
+     * Set 
+     * @param MediaName 
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li> 
-     * @return ClassId Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li>
+     * Get  
+     * @return ClassId 
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li>
-     * @param ClassId Category ID, used for media classification management, can be obtained by [creating a category](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface, create a category, get the category ID.
-<li>Default value: 0, which means other categories.</li>
+     * Set 
+     * @param ClassId 
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return ExpireTime 
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime The expiration time of the output file, the file will be deleted after this time, the default is never to expire, the format is in accordance with the ISO 8601 standard, see [ISO date format description](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param ExpireTime 
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

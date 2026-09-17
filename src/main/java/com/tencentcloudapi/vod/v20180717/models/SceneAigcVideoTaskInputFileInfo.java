@@ -24,99 +24,69 @@ import java.util.HashMap;
 public class SceneAigcVideoTaskInputFileInfo extends AbstractModel {
 
     /**
-    * Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Media file ID of the image file, which is the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [VOD console](https://console.cloud.tencent.com/vod/media). This parameter is valid when the Type value is File.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Accessible file URL. This parameter is valid when the Type value is Url.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp.
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> 
-     * @return Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
-     * @param Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Media file ID of the image file, which is the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [VOD console](https://console.cloud.tencent.com/vod/media). This parameter is valid when the Type value is File.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp. 
-     * @return FileId Media file ID of the image file, which is the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [VOD console](https://console.cloud.tencent.com/vod/media). This parameter is valid when the Type value is File.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID of the image file, which is the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [VOD console](https://console.cloud.tencent.com/vod/media). This parameter is valid when the Type value is File.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp.
-     * @param FileId Media file ID of the image file, which is the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [VOD console](https://console.cloud.tencent.com/vod/media). This parameter is valid when the Type value is File.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Accessible file URL. This parameter is valid when the Type value is Url.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp. 
-     * @return Url Accessible file URL. This parameter is valid when the Type value is Url.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Accessible file URL. This parameter is valid when the Type value is Url.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp.
-     * @param Url Accessible file URL. This parameter is valid when the Type value is Url.
-Description:
-1. Use images less than 7M.
-Image format. Valid values: jpeg, jpg, png, and webp.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;

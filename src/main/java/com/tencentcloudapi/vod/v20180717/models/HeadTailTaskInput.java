@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class HeadTailTaskInput extends AbstractModel {
 
     /**
-    * Video opening/closing credits configuration template ID
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Video opening/closing credits configuration template ID 
-     * @return Definition Video opening/closing credits configuration template ID
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Video opening/closing credits configuration template ID
-     * @param Definition Video opening/closing credits configuration template ID
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

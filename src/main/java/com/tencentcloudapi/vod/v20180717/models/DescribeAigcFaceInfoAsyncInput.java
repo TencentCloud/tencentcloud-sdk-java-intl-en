@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAigcFaceInfoAsyncInput extends AbstractModel {
 
     /**
-    * <p>Input video information that needs to get face information.</p>
+    * 
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcFaceInputFileInfo [] FileInfos;
 
     /**
-     * Get <p>Input video information that needs to get face information.</p> 
-     * @return FileInfos <p>Input video information that needs to get face information.</p>
+     * Get  
+     * @return FileInfos 
      */
     public AigcFaceInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set <p>Input video information that needs to get face information.</p>
-     * @param FileInfos <p>Input video information that needs to get face information.</p>
+     * Set 
+     * @param FileInfos 
      */
     public void setFileInfos(AigcFaceInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;

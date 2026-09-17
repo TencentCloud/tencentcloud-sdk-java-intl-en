@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMPSTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * <p>Total number of records that meet filter conditions.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * MPS task template details list.
+    * <p>MPS task template details list.</p>
     */
     @SerializedName("MPSTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMPSTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get <p>Total number of records that meet filter conditions.</p> 
+     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set <p>Total number of records that meet filter conditions.</p>
+     * @param TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get MPS task template details list. 
-     * @return MPSTemplateSet MPS task template details list.
+     * Get <p>MPS task template details list.</p> 
+     * @return MPSTemplateSet <p>MPS task template details list.</p>
      */
     public MPSTemplate [] getMPSTemplateSet() {
         return this.MPSTemplateSet;
     }
 
     /**
-     * Set MPS task template details list.
-     * @param MPSTemplateSet MPS task template details list.
+     * Set <p>MPS task template details list.</p>
+     * @param MPSTemplateSet <p>MPS task template details list.</p>
      */
     public void setMPSTemplateSet(MPSTemplate [] MPSTemplateSet) {
         this.MPSTemplateSet = MPSTemplateSet;

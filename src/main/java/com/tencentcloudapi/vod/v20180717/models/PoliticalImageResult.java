@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class PoliticalImageResult extends AbstractModel {
 
     /**
-    * The confidence score for the moderation result. Value range: 0-100.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+    * 
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * The name of the politically sensitive content or banned icon detected.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+    * 
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get The confidence score for the moderation result. Value range: 0-100. 
-     * @return Confidence The confidence score for the moderation result. Value range: 0-100.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score for the moderation result. Value range: 0-100.
-     * @param Confidence The confidence score for the moderation result. Value range: 0-100.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li> 
-     * @return Suggestion The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+     * Get  
+     * @return Suggestion 
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
-     * @param Suggestion The suggestion for handling the detected politically sensitive content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+     * Set 
+     * @param Suggestion 
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get The name of the politically sensitive content or banned icon detected. 
-     * @return Name The name of the politically sensitive content or banned icon detected.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The name of the politically sensitive content or banned icon detected.
-     * @param Name The name of the politically sensitive content or banned icon detected.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2]. 
-     * @return AreaCoordSet The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+     * Get  
+     * @return AreaCoordSet 
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
-     * @param AreaCoordSet The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+     * Set 
+     * @param AreaCoordSet 
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

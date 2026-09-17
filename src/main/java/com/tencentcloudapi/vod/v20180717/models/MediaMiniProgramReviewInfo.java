@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MediaMiniProgramReviewInfo extends AbstractModel {
 
     /**
-    * Audit information list.
+    * 
     */
     @SerializedName("MiniProgramReviewList")
     @Expose
     private MediaMiniProgramReviewInfoItem [] MiniProgramReviewList;
 
     /**
-     * Get Audit information list. 
-     * @return MiniProgramReviewList Audit information list.
+     * Get  
+     * @return MiniProgramReviewList 
      */
     public MediaMiniProgramReviewInfoItem [] getMiniProgramReviewList() {
         return this.MiniProgramReviewList;
     }
 
     /**
-     * Set Audit information list.
-     * @param MiniProgramReviewList Audit information list.
+     * Set 
+     * @param MiniProgramReviewList 
      */
     public void setMiniProgramReviewList(MediaMiniProgramReviewInfoItem [] MiniProgramReviewList) {
         this.MiniProgramReviewList = MiniProgramReviewList;

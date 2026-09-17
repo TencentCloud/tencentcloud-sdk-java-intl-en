@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
 
     /**
-    * <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
+    * 
     */
     @SerializedName("SDMCInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p> 
-     * @return SDMCInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
+     * Get  
+     * @return SDMCInfo 
      */
     public SDMCDrmKeyProviderInfo getSDMCInfo() {
         return this.SDMCInfo;
     }
 
     /**
-     * Set <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
-     * @param SDMCInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
+     * Set 
+     * @param SDMCInfo 
      */
     public void setSDMCInfo(SDMCDrmKeyProviderInfo SDMCInfo) {
         this.SDMCInfo = SDMCInfo;

@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class TEHDConfig extends AbstractModel {
 
     /**
-    * TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+    * 
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li> 
-     * @return Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
-     * @param Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap. 
-     * @return MaxVideoBitrate Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+     * Get  
+     * @return MaxVideoBitrate 
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
-     * @param MaxVideoBitrate Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+     * Set 
+     * @param MaxVideoBitrate 
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

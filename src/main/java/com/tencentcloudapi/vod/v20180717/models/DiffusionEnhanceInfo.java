@@ -24,76 +24,46 @@ import java.util.HashMap;
 public class DiffusionEnhanceInfo extends AbstractModel {
 
     /**
-    * Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li> 
-     * @return Switch Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
-     * @param Switch Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal. 
-     * @return Type Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
-     * @param Type Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

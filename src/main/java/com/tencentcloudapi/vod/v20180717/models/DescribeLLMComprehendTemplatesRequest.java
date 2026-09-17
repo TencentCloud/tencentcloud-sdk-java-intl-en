@@ -24,92 +24,115 @@ import java.util.HashMap;
 public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
 
     /**
-    * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+    * 
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * <p>Paging offset. Default value: 0.</p>
+    * 
+    */
+    @SerializedName("Sort")
+    @Expose
+    private SortBy Sort;
+
+    /**
+    * 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p> 
-     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
-     * @param SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p> 
-     * @return Definitions <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+     * Get  
+     * @return Definitions 
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
-     * @param Definitions <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+     * Set 
+     * @param Definitions 
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get <p>Paging offset. Default value: 0.</p> 
-     * @return Offset <p>Paging offset. Default value: 0.</p>
+     * Get  
+     * @return Sort 
+     */
+    public SortBy getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 
+     * @param Sort 
+     */
+    public void setSort(SortBy Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paging offset. Default value: 0.</p>
-     * @param Offset <p>Paging offset. Default value: 0.</p>
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Number of returned entries. Default value: 10. Maximum value: 100.</p> 
-     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
-     * @param Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -132,6 +155,9 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
                 this.Definitions[i] = new Long(source.Definitions[i]);
             }
         }
+        if (source.Sort != null) {
+            this.Sort = new SortBy(source.Sort);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -147,6 +173,7 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+        this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

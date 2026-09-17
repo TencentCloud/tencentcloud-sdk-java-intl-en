@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskSubtitleInput extends AbstractModel {
 
     /**
-    * Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+    * 
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Set as the default subtitle for adaptive bitrate. Value:
-<li>YES: Set as default subtitle;</li>
-<li>NO: Not set as default subtitle (default value).</li>
+    * 
     */
     @SerializedName("Default")
     @Expose
     private String Default;
 
     /**
-     * Get Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task. 
-     * @return Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+     * Get  
+     * @return Id 
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
-     * @param Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+     * Set 
+     * @param Id 
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Set as the default subtitle for adaptive bitrate. Value:
-<li>YES: Set as default subtitle;</li>
-<li>NO: Not set as default subtitle (default value).</li> 
-     * @return Default Set as the default subtitle for adaptive bitrate. Value:
-<li>YES: Set as default subtitle;</li>
-<li>NO: Not set as default subtitle (default value).</li>
+     * Get  
+     * @return Default 
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set Set as the default subtitle for adaptive bitrate. Value:
-<li>YES: Set as default subtitle;</li>
-<li>NO: Not set as default subtitle (default value).</li>
-     * @param Default Set as the default subtitle for adaptive bitrate. Value:
-<li>YES: Set as default subtitle;</li>
-<li>NO: Not set as default subtitle (default value).</li>
+     * Set 
+     * @param Default 
      */
     public void setDefault(String Default) {
         this.Default = Default;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskFrameTagInput extends AbstractModel {
 
     /**
-    * Intelligent frame-specific video tagging template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Intelligent frame-specific video tagging template ID. 
-     * @return Definition Intelligent frame-specific video tagging template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Intelligent frame-specific video tagging template ID.
-     * @param Definition Intelligent frame-specific video tagging template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

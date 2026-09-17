@@ -24,76 +24,46 @@ import java.util.HashMap;
 public class RepairInfo extends AbstractModel {
 
     /**
-    * Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li> 
-     * @return Switch Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param Switch Whether to enable video quality remastering. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`. 
-     * @return Type The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
-     * @param Type The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

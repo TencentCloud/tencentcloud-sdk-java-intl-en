@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateSubAppIdRequest extends AbstractModel {
 
     /**
-    * <p>Application name, length limited to 40 characters.</p>
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
+    * 
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+    * 
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+    * 
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * <p>tag that needs to be bound to this application</p>
+    * 
     */
     @SerializedName("Tags")
     @Expose
     private ResourceTag [] Tags;
 
     /**
-     * Get <p>Application name, length limited to 40 characters.</p> 
-     * @return Name <p>Application name, length limited to 40 characters.</p>
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Application name, length limited to 40 characters.</p>
-     * @param Name <p>Application name, length limited to 40 characters.</p>
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p> 
-     * @return Description <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
+     * Get  
+     * @return Description 
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
-     * @param Description <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
+     * Set 
+     * @param Description 
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p> 
-     * @return Type <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
-     * @param Type <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul> 
-     * @return Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+     * Get  
+     * @return Mode 
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
-     * @param Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+     * Set 
+     * @param Mode 
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p> 
-     * @return StorageRegion <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+     * Get  
+     * @return StorageRegion 
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
-     * @param StorageRegion <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+     * Set 
+     * @param StorageRegion 
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get <p>tag that needs to be bound to this application</p> 
-     * @return Tags <p>tag that needs to be bound to this application</p>
+     * Get  
+     * @return Tags 
      */
     public ResourceTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set <p>tag that needs to be bound to this application</p>
-     * @param Tags <p>tag that needs to be bound to this application</p>
+     * Set 
+     * @param Tags 
      */
     public void setTags(ResourceTag [] Tags) {
         this.Tags = Tags;

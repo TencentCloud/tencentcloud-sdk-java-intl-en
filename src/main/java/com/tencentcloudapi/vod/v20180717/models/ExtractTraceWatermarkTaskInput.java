@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ExtractTraceWatermarkTaskInput extends AbstractModel {
 
     /**
-    * The URL of the media on which digital watermark extraction is to be performed.
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Media file ID. The original media file ID corresponding to the URL.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get The URL of the media on which digital watermark extraction is to be performed. 
-     * @return Url The URL of the media on which digital watermark extraction is to be performed.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The URL of the media on which digital watermark extraction is to be performed.
-     * @param Url The URL of the media on which digital watermark extraction is to be performed.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Media file ID. The original media file ID corresponding to the URL. 
-     * @return FileId Media file ID. The original media file ID corresponding to the URL.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID. The original media file ID corresponding to the URL.
-     * @param FileId Media file ID. The original media file ID corresponding to the URL.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

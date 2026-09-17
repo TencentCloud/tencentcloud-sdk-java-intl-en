@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class ProcessImageAsyncTask extends AbstractModel {
 
     /**
-    * <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EncodeConfig")
     @Expose
     private ImageEncodeConfig EncodeConfig;
 
     /**
-    * <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private ImageEnhanceConfig EnhanceConfig;
 
     /**
-    * <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("BeautyConfig")
     @Expose
     private ImageBeautyConfig BeautyConfig;
 
     /**
-     * Get <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EncodeConfig <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
+    */
+    @SerializedName("AiCutOutConfig")
+    @Expose
+    private AiCutOutConfig AiCutOutConfig;
+
+    /**
+     * Get  
+     * @return EncodeConfig 
      */
     public ImageEncodeConfig getEncodeConfig() {
         return this.EncodeConfig;
     }
 
     /**
-     * Set <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EncodeConfig <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EncodeConfig 
      */
     public void setEncodeConfig(ImageEncodeConfig EncodeConfig) {
         this.EncodeConfig = EncodeConfig;
     }
 
     /**
-     * Get <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EnhanceConfig 
      */
     public ImageEnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EnhanceConfig 
      */
     public void setEnhanceConfig(ImageEnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BeautyConfig <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return BeautyConfig 
      */
     public ImageBeautyConfig getBeautyConfig() {
         return this.BeautyConfig;
     }
 
     /**
-     * Set <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BeautyConfig <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param BeautyConfig 
      */
     public void setBeautyConfig(ImageBeautyConfig BeautyConfig) {
         this.BeautyConfig = BeautyConfig;
+    }
+
+    /**
+     * Get  
+     * @return AiCutOutConfig 
+     */
+    public AiCutOutConfig getAiCutOutConfig() {
+        return this.AiCutOutConfig;
+    }
+
+    /**
+     * Set 
+     * @param AiCutOutConfig 
+     */
+    public void setAiCutOutConfig(AiCutOutConfig AiCutOutConfig) {
+        this.AiCutOutConfig = AiCutOutConfig;
     }
 
     public ProcessImageAsyncTask() {
@@ -124,6 +132,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BeautyConfig != null) {
             this.BeautyConfig = new ImageBeautyConfig(source.BeautyConfig);
         }
+        if (source.AiCutOutConfig != null) {
+            this.AiCutOutConfig = new AiCutOutConfig(source.AiCutOutConfig);
+        }
     }
 
 
@@ -134,6 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
+        this.setParamObj(map, prefix + "AiCutOutConfig.", this.AiCutOutConfig);
 
     }
 }

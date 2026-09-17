@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class TranscodeTaskInput extends AbstractModel {
 
     /**
-    * <p>Video transcoding template ID.</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+    * 
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * <p>Traceable watermark.</p>
+    * 
     */
     @SerializedName("TraceWatermark")
     @Expose
     private TraceWatermarkInput TraceWatermark;
 
     /**
-    * <p>Copyright watermark.</p>
+    * 
     */
     @SerializedName("CopyRightWatermark")
     @Expose
     private CopyRightWatermarkInput CopyRightWatermark;
 
     /**
-    * <p>Digital watermark.</p>
+    * 
     */
     @SerializedName("BlindWatermark")
     @Expose
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * <p>Mosaic list. Up to 10 are supported.</p>
+    * 
     */
     @SerializedName("MosaicSet")
     @Expose
     private MosaicInput [] MosaicSet;
 
     /**
-    * <p>Opening and ending list. Up to 10 opening and ending sequences are supported.</p>
+    * 
     */
     @SerializedName("HeadTailSet")
     @Expose
     private HeadTailTaskInput [] HeadTailSet;
 
     /**
-    * <p>Start time offset of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video starts from the start position of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video starts from the nth second position of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * <p>Custom video transcoding parameters.</p>
+    * 
     */
     @SerializedName("OverrideParameter")
     @Expose
     private OverrideTranscodeParameter OverrideParameter;
 
     /**
-    * <p>List of subtitle suppression information. Up to 2 are supported.</p>
+    * 
     */
     @SerializedName("SubtitleInfoSet")
     @Expose
     private SubtitleInfoInput [] SubtitleInfoSet;
 
     /**
-     * Get <p>Video transcoding template ID.</p> 
-     * @return Definition <p>Video transcoding template ID.</p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Video transcoding template ID.</p>
-     * @param Definition <p>Video transcoding template ID.</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Watermark list. Up to 10 image or text watermarks are supported.</p> 
-     * @return WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * Get  
+     * @return WatermarkSet 
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
-     * @param WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * Set 
+     * @param WatermarkSet 
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
     }
 
     /**
-     * Get <p>Traceable watermark.</p> 
-     * @return TraceWatermark <p>Traceable watermark.</p>
+     * Get  
+     * @return TraceWatermark 
      */
     public TraceWatermarkInput getTraceWatermark() {
         return this.TraceWatermark;
     }
 
     /**
-     * Set <p>Traceable watermark.</p>
-     * @param TraceWatermark <p>Traceable watermark.</p>
+     * Set 
+     * @param TraceWatermark 
      */
     public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
         this.TraceWatermark = TraceWatermark;
     }
 
     /**
-     * Get <p>Copyright watermark.</p> 
-     * @return CopyRightWatermark <p>Copyright watermark.</p>
+     * Get  
+     * @return CopyRightWatermark 
      */
     public CopyRightWatermarkInput getCopyRightWatermark() {
         return this.CopyRightWatermark;
     }
 
     /**
-     * Set <p>Copyright watermark.</p>
-     * @param CopyRightWatermark <p>Copyright watermark.</p>
+     * Set 
+     * @param CopyRightWatermark 
      */
     public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
         this.CopyRightWatermark = CopyRightWatermark;
     }
 
     /**
-     * Get <p>Digital watermark.</p> 
-     * @return BlindWatermark <p>Digital watermark.</p>
+     * Get  
+     * @return BlindWatermark 
      */
     public BlindWatermarkInput getBlindWatermark() {
         return this.BlindWatermark;
     }
 
     /**
-     * Set <p>Digital watermark.</p>
-     * @param BlindWatermark <p>Digital watermark.</p>
+     * Set 
+     * @param BlindWatermark 
      */
     public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
         this.BlindWatermark = BlindWatermark;
     }
 
     /**
-     * Get <p>Mosaic list. Up to 10 are supported.</p> 
-     * @return MosaicSet <p>Mosaic list. Up to 10 are supported.</p>
+     * Get  
+     * @return MosaicSet 
      */
     public MosaicInput [] getMosaicSet() {
         return this.MosaicSet;
     }
 
     /**
-     * Set <p>Mosaic list. Up to 10 are supported.</p>
-     * @param MosaicSet <p>Mosaic list. Up to 10 are supported.</p>
+     * Set 
+     * @param MosaicSet 
      */
     public void setMosaicSet(MosaicInput [] MosaicSet) {
         this.MosaicSet = MosaicSet;
     }
 
     /**
-     * Get <p>Opening and ending list. Up to 10 opening and ending sequences are supported.</p> 
-     * @return HeadTailSet <p>Opening and ending list. Up to 10 opening and ending sequences are supported.</p>
+     * Get  
+     * @return HeadTailSet 
      */
     public HeadTailTaskInput [] getHeadTailSet() {
         return this.HeadTailSet;
     }
 
     /**
-     * Set <p>Opening and ending list. Up to 10 opening and ending sequences are supported.</p>
-     * @param HeadTailSet <p>Opening and ending list. Up to 10 opening and ending sequences are supported.</p>
+     * Set 
+     * @param HeadTailSet 
      */
     public void setHeadTailSet(HeadTailTaskInput [] HeadTailSet) {
         this.HeadTailSet = HeadTailSet;
     }
 
     /**
-     * Get <p>Start time offset of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video starts from the start position of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video starts from the nth second position of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li> 
-     * @return StartTimeOffset <p>Start time offset of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video starts from the start position of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video starts from the nth second position of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set <p>Start time offset of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video starts from the start position of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video starts from the nth second position of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
-     * @param StartTimeOffset <p>Start time offset of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video starts from the start position of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video starts from the nth second position of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li> 
-     * @return EndTimeOffset <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
-     * @param EndTimeOffset <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get <p>Custom video transcoding parameters.</p> 
-     * @return OverrideParameter <p>Custom video transcoding parameters.</p>
+     * Get  
+     * @return OverrideParameter 
      */
     public OverrideTranscodeParameter getOverrideParameter() {
         return this.OverrideParameter;
     }
 
     /**
-     * Set <p>Custom video transcoding parameters.</p>
-     * @param OverrideParameter <p>Custom video transcoding parameters.</p>
+     * Set 
+     * @param OverrideParameter 
      */
     public void setOverrideParameter(OverrideTranscodeParameter OverrideParameter) {
         this.OverrideParameter = OverrideParameter;
     }
 
     /**
-     * Get <p>List of subtitle suppression information. Up to 2 are supported.</p> 
-     * @return SubtitleInfoSet <p>List of subtitle suppression information. Up to 2 are supported.</p>
+     * Get  
+     * @return SubtitleInfoSet 
      */
     public SubtitleInfoInput [] getSubtitleInfoSet() {
         return this.SubtitleInfoSet;
     }
 
     /**
-     * Set <p>List of subtitle suppression information. Up to 2 are supported.</p>
-     * @param SubtitleInfoSet <p>List of subtitle suppression information. Up to 2 are supported.</p>
+     * Set 
+     * @param SubtitleInfoSet 
      */
     public void setSubtitleInfoSet(SubtitleInfoInput [] SubtitleInfoSet) {
         this.SubtitleInfoSet = SubtitleInfoSet;

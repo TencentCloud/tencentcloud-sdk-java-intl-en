@@ -24,296 +24,276 @@ import java.util.HashMap;
 public class ContentReviewTemplateItem extends AbstractModel {
 
     /**
-    * Unique ID of an intelligent recognition template
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Name of an intelligent recognition template. Max 64 characters
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of an intelligent recognition template. Max 256 characters
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Authentication involves control parameters for offensive information.
+    * 
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfo PornConfigure;
 
     /**
-    * Authentication involves control parameters for unsafe information.
+    * 
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * Authentication involves control parameters for inappropriate information.
+    * 
     */
     @SerializedName("PoliticalConfigure")
     @Expose
     private PoliticalConfigureInfo PoliticalConfigure;
 
     /**
-    * Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li>
+    * 
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
     private ProhibitedConfigureInfo ProhibitedConfigure;
 
     /**
-    * Customize video moderation control parameters.
+    * 
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-    * Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li>
+    * 
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
     private String ReviewWallSwitch;
 
     /**
-    * Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+    * 
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-    * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Unique ID of an intelligent recognition template 
-     * @return Definition Unique ID of an intelligent recognition template
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of an intelligent recognition template
-     * @param Definition Unique ID of an intelligent recognition template
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Name of an intelligent recognition template. Max 64 characters 
-     * @return Name Name of an intelligent recognition template. Max 64 characters
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of an intelligent recognition template. Max 64 characters
-     * @param Name Name of an intelligent recognition template. Max 64 characters
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of an intelligent recognition template. Max 256 characters 
-     * @return Comment Description of an intelligent recognition template. Max 256 characters
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of an intelligent recognition template. Max 256 characters
-     * @param Comment Description of an intelligent recognition template. Max 256 characters
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Authentication involves control parameters for offensive information. 
-     * @return PornConfigure Authentication involves control parameters for offensive information.
+     * Get  
+     * @return PornConfigure 
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Authentication involves control parameters for offensive information.
-     * @param PornConfigure Authentication involves control parameters for offensive information.
+     * Set 
+     * @param PornConfigure 
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Authentication involves control parameters for unsafe information. 
-     * @return TerrorismConfigure Authentication involves control parameters for unsafe information.
+     * Get  
+     * @return TerrorismConfigure 
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Authentication involves control parameters for unsafe information.
-     * @param TerrorismConfigure Authentication involves control parameters for unsafe information.
+     * Set 
+     * @param TerrorismConfigure 
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Authentication involves control parameters for inappropriate information. 
-     * @return PoliticalConfigure Authentication involves control parameters for inappropriate information.
+     * Get  
+     * @return PoliticalConfigure 
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Authentication involves control parameters for inappropriate information.
-     * @param PoliticalConfigure Authentication involves control parameters for inappropriate information.
+     * Set 
+     * @param PoliticalConfigure 
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
     }
 
     /**
-     * Get Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li> 
-     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li>
+     * Get  
+     * @return ProhibitedConfigure 
      */
     public ProhibitedConfigureInfo getProhibitedConfigure() {
         return this.ProhibitedConfigure;
     }
 
     /**
-     * Set Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li>
-     * @param ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related illegal activities.</li>
+     * Set 
+     * @param ProhibitedConfigure 
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;
     }
 
     /**
-     * Get Customize video moderation control parameters. 
-     * @return UserDefineConfigure Customize video moderation control parameters.
+     * Get  
+     * @return UserDefineConfigure 
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set Customize video moderation control parameters.
-     * @param UserDefineConfigure Customize video moderation control parameters.
+     * Set 
+     * @param UserDefineConfigure 
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
     }
 
     /**
-     * Get Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li> 
-     * @return ReviewWallSwitch Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li>
+     * Get  
+     * @return ReviewWallSwitch 
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
     }
 
     /**
-     * Set Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li>
-     * @param ReviewWallSwitch Whether to subject the recognition result to human review
-<li>ON</li>
-<li>OFF</li>
+     * Set 
+     * @param ReviewWallSwitch 
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;
     }
 
     /**
-     * Get Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds. 
-     * @return ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+     * Get  
+     * @return ScreenshotInterval 
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
-     * @param ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+     * Set 
+     * @param ScreenshotInterval 
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
     /**
-     * Get Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

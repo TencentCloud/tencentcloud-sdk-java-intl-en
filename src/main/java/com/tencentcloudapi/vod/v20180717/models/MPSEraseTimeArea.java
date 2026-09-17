@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MPSEraseTimeArea extends AbstractModel {
 
     /**
-    * <p>Start time, unit: ms</p>
+    * 
     */
     @SerializedName("BeginMs")
     @Expose
     private Long BeginMs;
 
     /**
-    * <p>End time, unit: ms</p>
+    * 
     */
     @SerializedName("EndMs")
     @Expose
     private Long EndMs;
 
     /**
-    * <p>Domain list for erasure within the period</p>
+    * 
     */
     @SerializedName("Areas")
     @Expose
     private MPSEraseArea [] Areas;
 
     /**
-     * Get <p>Start time, unit: ms</p> 
-     * @return BeginMs <p>Start time, unit: ms</p>
+     * Get  
+     * @return BeginMs 
      */
     public Long getBeginMs() {
         return this.BeginMs;
     }
 
     /**
-     * Set <p>Start time, unit: ms</p>
-     * @param BeginMs <p>Start time, unit: ms</p>
+     * Set 
+     * @param BeginMs 
      */
     public void setBeginMs(Long BeginMs) {
         this.BeginMs = BeginMs;
     }
 
     /**
-     * Get <p>End time, unit: ms</p> 
-     * @return EndMs <p>End time, unit: ms</p>
+     * Get  
+     * @return EndMs 
      */
     public Long getEndMs() {
         return this.EndMs;
     }
 
     /**
-     * Set <p>End time, unit: ms</p>
-     * @param EndMs <p>End time, unit: ms</p>
+     * Set 
+     * @param EndMs 
      */
     public void setEndMs(Long EndMs) {
         this.EndMs = EndMs;
     }
 
     /**
-     * Get <p>Domain list for erasure within the period</p> 
-     * @return Areas <p>Domain list for erasure within the period</p>
+     * Get  
+     * @return Areas 
      */
     public MPSEraseArea [] getAreas() {
         return this.Areas;
     }
 
     /**
-     * Set <p>Domain list for erasure within the period</p>
-     * @param Areas <p>Domain list for erasure within the period</p>
+     * Set 
+     * @param Areas 
      */
     public void setAreas(MPSEraseArea [] Areas) {
         this.Areas = Areas;

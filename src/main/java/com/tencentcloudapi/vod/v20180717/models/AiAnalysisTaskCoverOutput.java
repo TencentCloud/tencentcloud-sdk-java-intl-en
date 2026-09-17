@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class AiAnalysisTaskCoverOutput extends AbstractModel {
 
     /**
-    * List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+    * 
     */
     @SerializedName("CoverSet")
     @Expose
     private MediaAiAnalysisCoverItem [] CoverSet;
 
     /**
-    * URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+    * 
     */
     @SerializedName("CoverSetFileUrl")
     @Expose
     private String CoverSetFileUrl;
 
     /**
-    * Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    * 
     */
     @SerializedName("CoverSetFileUrlExpireTime")
     @Expose
     private String CoverSetFileUrlExpireTime;
 
     /**
-     * Get List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`. 
-     * @return CoverSet List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+     * Get  
+     * @return CoverSet 
      */
     public MediaAiAnalysisCoverItem [] getCoverSet() {
         return this.CoverSet;
     }
 
     /**
-     * Set List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
-     * @param CoverSet List of intelligently generated thumbnails
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+     * Set 
+     * @param CoverSet 
      */
     public void setCoverSet(MediaAiAnalysisCoverItem [] CoverSet) {
         this.CoverSet = CoverSet;
     }
 
     /**
-     * Get URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`. 
-     * @return CoverSetFileUrl URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+     * Get  
+     * @return CoverSetFileUrl 
      */
     public String getCoverSetFileUrl() {
         return this.CoverSetFileUrl;
     }
 
     /**
-     * Set URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
-     * @param CoverSetFileUrl URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+     * Set 
+     * @param CoverSetFileUrl 
      */
     public void setCoverSetFileUrl(String CoverSetFileUrl) {
         this.CoverSetFileUrl = CoverSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
-     * @return CoverSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Get  
+     * @return CoverSetFileUrlExpireTime 
      */
     public String getCoverSetFileUrlExpireTime() {
         return this.CoverSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-     * @param CoverSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Set 
+     * @param CoverSetFileUrlExpireTime 
      */
     public void setCoverSetFileUrlExpireTime(String CoverSetFileUrlExpireTime) {
         this.CoverSetFileUrlExpireTime = CoverSetFileUrlExpireTime;

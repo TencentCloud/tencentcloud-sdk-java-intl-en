@@ -24,48 +24,38 @@ import java.util.HashMap;
 public class TraceWatermarkInput extends AbstractModel {
 
     /**
-    * Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * This parameter has been deprecated.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li> 
-     * @return Switch Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
-     * @param Switch Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get This parameter has been deprecated. 
-     * @return Definition This parameter has been deprecated.
+     * Get  
+     * @return Definition 
      * @deprecated
      */
     @Deprecated
@@ -74,8 +64,8 @@ public class TraceWatermarkInput extends AbstractModel {
     }
 
     /**
-     * Set This parameter has been deprecated.
-     * @param Definition This parameter has been deprecated.
+     * Set 
+     * @param Definition 
      * @deprecated
      */
     @Deprecated

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ProcessImageAsyncInput extends AbstractModel {
 
     /**
-    * <p>FileId of image processing.</p>
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <p>Image URL.</p>
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * <p>Image processing parameter.</p>
+    * 
     */
     @SerializedName("ImageTaskInput")
     @Expose
     private ProcessImageAsyncTaskInput ImageTaskInput;
 
     /**
-    * <p>Output media file configuration for the image processing task.</p>
+    * 
     */
     @SerializedName("OutputConfig")
     @Expose
     private ProcessImageAsyncOutputConfig OutputConfig;
 
     /**
-     * Get <p>FileId of image processing.</p> 
-     * @return FileId <p>FileId of image processing.</p>
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>FileId of image processing.</p>
-     * @param FileId <p>FileId of image processing.</p>
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <p>Image URL.</p> 
-     * @return Url <p>Image URL.</p>
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>Image URL.</p>
-     * @param Url <p>Image URL.</p>
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get <p>Image processing parameter.</p> 
-     * @return ImageTaskInput <p>Image processing parameter.</p>
+     * Get  
+     * @return ImageTaskInput 
      */
     public ProcessImageAsyncTaskInput getImageTaskInput() {
         return this.ImageTaskInput;
     }
 
     /**
-     * Set <p>Image processing parameter.</p>
-     * @param ImageTaskInput <p>Image processing parameter.</p>
+     * Set 
+     * @param ImageTaskInput 
      */
     public void setImageTaskInput(ProcessImageAsyncTaskInput ImageTaskInput) {
         this.ImageTaskInput = ImageTaskInput;
     }
 
     /**
-     * Get <p>Output media file configuration for the image processing task.</p> 
-     * @return OutputConfig <p>Output media file configuration for the image processing task.</p>
+     * Get  
+     * @return OutputConfig 
      */
     public ProcessImageAsyncOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output media file configuration for the image processing task.</p>
-     * @param OutputConfig <p>Output media file configuration for the image processing task.</p>
+     * Set 
+     * @param OutputConfig 
      */
     public void setOutputConfig(ProcessImageAsyncOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

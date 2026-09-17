@@ -24,201 +24,184 @@ import java.util.HashMap;
 public class LogFormat extends AbstractModel {
 
     /**
-    * Predefined output format for log shipping. Valid values:
-<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
-<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
+    * <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
     */
     @SerializedName("FormatType")
     @Expose
     private String FormatType;
 
     /**
-    * A string added before each log delivery batch. Each log delivery batch may contain multiple log records.
+    * <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p>
     */
     @SerializedName("BatchPrefix")
     @Expose
     private String BatchPrefix;
 
     /**
-    * A string appended after each log delivery batch.
+    * <p>A string appended after each log delivery batch.</p>
     */
     @SerializedName("BatchSuffix")
     @Expose
     private String BatchSuffix;
 
     /**
-    * A string added before each log record.
+    * <p>Log prefix, a string added before each log record.</p>
     */
     @SerializedName("RecordPrefix")
     @Expose
     private String RecordPrefix;
 
     /**
-    * A string appended after each log record.
+    * <p>Single-line log suffix, a string appended after each log record.</p>
     */
     @SerializedName("RecordSuffix")
     @Expose
     private String RecordSuffix;
 
     /**
-    * A string inserted between log records as a separator. Valid values:
-<li>\n: line break;</li>
-<li>\t: tab character;</li>
-<li>,: Half-width comma. </li>
+    * <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
     */
     @SerializedName("RecordDelimiter")
     @Expose
     private String RecordDelimiter;
 
     /**
-    * A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: tab character;</li>
-<li>,: half-width comma;</li>
-<li>;: Half-width semicolon. </li>
+    * <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+    */
+    @SerializedName("RecordTemplate")
+    @Expose
+    private String RecordTemplate;
+
+    /**
+    * <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
     */
     @SerializedName("FieldDelimiter")
     @Expose
     private String FieldDelimiter;
 
     /**
-     * Get Predefined output format for log shipping. Valid values:
-<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
-<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li> 
-     * @return FormatType Predefined output format for log shipping. Valid values:
-<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
-<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
+     * Get <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul> 
+     * @return FormatType <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
      */
     public String getFormatType() {
         return this.FormatType;
     }
 
     /**
-     * Set Predefined output format for log shipping. Valid values:
-<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
-<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
-     * @param FormatType Predefined output format for log shipping. Valid values:
-<li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
-<li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
+     * Set <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
+     * @param FormatType <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
      */
     public void setFormatType(String FormatType) {
         this.FormatType = FormatType;
     }
 
     /**
-     * Get A string added before each log delivery batch. Each log delivery batch may contain multiple log records. 
-     * @return BatchPrefix A string added before each log delivery batch. Each log delivery batch may contain multiple log records.
+     * Get <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p> 
+     * @return BatchPrefix <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p>
      */
     public String getBatchPrefix() {
         return this.BatchPrefix;
     }
 
     /**
-     * Set A string added before each log delivery batch. Each log delivery batch may contain multiple log records.
-     * @param BatchPrefix A string added before each log delivery batch. Each log delivery batch may contain multiple log records.
+     * Set <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p>
+     * @param BatchPrefix <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p>
      */
     public void setBatchPrefix(String BatchPrefix) {
         this.BatchPrefix = BatchPrefix;
     }
 
     /**
-     * Get A string appended after each log delivery batch. 
-     * @return BatchSuffix A string appended after each log delivery batch.
+     * Get <p>A string appended after each log delivery batch.</p> 
+     * @return BatchSuffix <p>A string appended after each log delivery batch.</p>
      */
     public String getBatchSuffix() {
         return this.BatchSuffix;
     }
 
     /**
-     * Set A string appended after each log delivery batch.
-     * @param BatchSuffix A string appended after each log delivery batch.
+     * Set <p>A string appended after each log delivery batch.</p>
+     * @param BatchSuffix <p>A string appended after each log delivery batch.</p>
      */
     public void setBatchSuffix(String BatchSuffix) {
         this.BatchSuffix = BatchSuffix;
     }
 
     /**
-     * Get A string added before each log record. 
-     * @return RecordPrefix A string added before each log record.
+     * Get <p>Log prefix, a string added before each log record.</p> 
+     * @return RecordPrefix <p>Log prefix, a string added before each log record.</p>
      */
     public String getRecordPrefix() {
         return this.RecordPrefix;
     }
 
     /**
-     * Set A string added before each log record.
-     * @param RecordPrefix A string added before each log record.
+     * Set <p>Log prefix, a string added before each log record.</p>
+     * @param RecordPrefix <p>Log prefix, a string added before each log record.</p>
      */
     public void setRecordPrefix(String RecordPrefix) {
         this.RecordPrefix = RecordPrefix;
     }
 
     /**
-     * Get A string appended after each log record. 
-     * @return RecordSuffix A string appended after each log record.
+     * Get <p>Single-line log suffix, a string appended after each log record.</p> 
+     * @return RecordSuffix <p>Single-line log suffix, a string appended after each log record.</p>
      */
     public String getRecordSuffix() {
         return this.RecordSuffix;
     }
 
     /**
-     * Set A string appended after each log record.
-     * @param RecordSuffix A string appended after each log record.
+     * Set <p>Single-line log suffix, a string appended after each log record.</p>
+     * @param RecordSuffix <p>Single-line log suffix, a string appended after each log record.</p>
      */
     public void setRecordSuffix(String RecordSuffix) {
         this.RecordSuffix = RecordSuffix;
     }
 
     /**
-     * Get A string inserted between log records as a separator. Valid values:
-<li>\n: line break;</li>
-<li>\t: tab character;</li>
-<li>,: Half-width comma. </li> 
-     * @return RecordDelimiter A string inserted between log records as a separator. Valid values:
-<li>\n: line break;</li>
-<li>\t: tab character;</li>
-<li>,: Half-width comma. </li>
+     * Get <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul> 
+     * @return RecordDelimiter <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
      */
     public String getRecordDelimiter() {
         return this.RecordDelimiter;
     }
 
     /**
-     * Set A string inserted between log records as a separator. Valid values:
-<li>\n: line break;</li>
-<li>\t: tab character;</li>
-<li>,: Half-width comma. </li>
-     * @param RecordDelimiter A string inserted between log records as a separator. Valid values:
-<li>\n: line break;</li>
-<li>\t: tab character;</li>
-<li>,: Half-width comma. </li>
+     * Set <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
+     * @param RecordDelimiter <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
      */
     public void setRecordDelimiter(String RecordDelimiter) {
         this.RecordDelimiter = RecordDelimiter;
     }
 
     /**
-     * Get A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: tab character;</li>
-<li>,: half-width comma;</li>
-<li>;: Half-width semicolon. </li> 
-     * @return FieldDelimiter A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: tab character;</li>
-<li>,: half-width comma;</li>
-<li>;: Half-width semicolon. </li>
+     * Get <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p> 
+     * @return RecordTemplate <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+     */
+    public String getRecordTemplate() {
+        return this.RecordTemplate;
+    }
+
+    /**
+     * Set <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+     * @param RecordTemplate <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+     */
+    public void setRecordTemplate(String RecordTemplate) {
+        this.RecordTemplate = RecordTemplate;
+    }
+
+    /**
+     * Get <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul> 
+     * @return FieldDelimiter <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
      */
     public String getFieldDelimiter() {
         return this.FieldDelimiter;
     }
 
     /**
-     * Set A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: tab character;</li>
-<li>,: half-width comma;</li>
-<li>;: Half-width semicolon. </li>
-     * @param FieldDelimiter A string inserted between fields as a separator within a single log record. Valid values:
-<li>\t: tab character;</li>
-<li>,: half-width comma;</li>
-<li>;: Half-width semicolon. </li>
+     * Set <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
+     * @param FieldDelimiter <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
      */
     public void setFieldDelimiter(String FieldDelimiter) {
         this.FieldDelimiter = FieldDelimiter;
@@ -250,6 +233,9 @@ public class LogFormat extends AbstractModel {
         if (source.RecordDelimiter != null) {
             this.RecordDelimiter = new String(source.RecordDelimiter);
         }
+        if (source.RecordTemplate != null) {
+            this.RecordTemplate = new String(source.RecordTemplate);
+        }
         if (source.FieldDelimiter != null) {
             this.FieldDelimiter = new String(source.FieldDelimiter);
         }
@@ -266,6 +252,7 @@ public class LogFormat extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordPrefix", this.RecordPrefix);
         this.setParamSimple(map, prefix + "RecordSuffix", this.RecordSuffix);
         this.setParamSimple(map, prefix + "RecordDelimiter", this.RecordDelimiter);
+        this.setParamSimple(map, prefix + "RecordTemplate", this.RecordTemplate);
         this.setParamSimple(map, prefix + "FieldDelimiter", this.FieldDelimiter);
 
     }

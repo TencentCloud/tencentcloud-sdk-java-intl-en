@@ -24,275 +24,230 @@ import java.util.HashMap;
 public class FileContent extends AbstractModel {
 
     /**
-    * Object key.
+    * 
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z.
+    * 
     */
     @SerializedName("LastModified")
     @Expose
     private String LastModified;
 
     /**
-    * The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+    * 
     */
     @SerializedName("ETag")
     @Expose
     private String ETag;
 
     /**
-    * Object size in bytes.
+    * 
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE.
+    * 
     */
     @SerializedName("StorageClass")
     @Expose
     private String StorageClass;
 
     /**
-    * Unique identifier of the media file for this file.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
+    * 
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
-
+    * 
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * Video template ID. For template definition, please refer to transcoding template.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Subtitle ID.
-Only valid when FileType=SubtitleFiles.
+    * 
     */
     @SerializedName("SubtitleID")
     @Expose
     private String SubtitleID;
 
     /**
-     * Get Object key. 
-     * @return Key Object key.
+     * Get  
+     * @return Key 
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Object key.
-     * @param Key Object key.
+     * Set 
+     * @param Key 
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z. 
-     * @return LastModified Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z.
+     * Get  
+     * @return LastModified 
      */
     public String getLastModified() {
         return this.LastModified;
     }
 
     /**
-     * Set Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z.
-     * @param LastModified Last modification time in ISO8601 format, such as 2019-05-24T10:56:40Z.
+     * Set 
+     * @param LastModified 
      */
     public void setLastModified(String LastModified) {
         this.LastModified = LastModified;
     }
 
     /**
-     * Get The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed. 
-     * @return ETag The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+     * Get  
+     * @return ETag 
      */
     public String getETag() {
         return this.ETag;
     }
 
     /**
-     * Set The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
-     * @param ETag The Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+     * Set 
+     * @param ETag 
      */
     public void setETag(String ETag) {
         this.ETag = ETag;
     }
 
     /**
-     * Get Object size in bytes. 
-     * @return Size Object size in bytes.
+     * Get  
+     * @return Size 
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Object size in bytes.
-     * @param Size Object size in bytes.
+     * Set 
+     * @param Size 
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE. 
-     * @return StorageClass For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE.
+     * Get  
+     * @return StorageClass 
      */
     public String getStorageClass() {
         return this.StorageClass;
     }
 
     /**
-     * Set For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE.
-     * @param StorageClass For enumeration values, please refer to the storage type document (https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1), such as STANDARD_IA and ARCHIVE.
+     * Set 
+     * @param StorageClass 
      */
     public void setStorageClass(String StorageClass) {
         this.StorageClass = StorageClass;
     }
 
     /**
-     * Get Unique identifier of the media file for this file. 
-     * @return FileId Unique identifier of the media file for this file.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Unique identifier of the media file for this file.
-     * @param FileId Unique identifier of the media file for this file.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li> 
-     * @return Category File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
+     * Get  
+     * @return Category 
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
-     * @param Category File classification: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
+     * Set 
+     * @param Category 
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
- 
-     * @return FileType Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
-
+     * Get  
+     * @return FileType 
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
-
-     * @param FileType Optional values:
--OriginalFiles: source file
--TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: Convert to adaptive bitrate stream file.
--SubtitleFiles: Subtitle file
--SampleSnapshotFiles: sampled screenshot files.
--ImageSpriteFiles: Sprite image screenshot files
--SnapshotByTimeOffsetFiles: Time point screenshot files.
-
+     * Set 
+     * @param FileType 
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get Video template ID. For template definition, please refer to transcoding template. 
-     * @return Definition Video template ID. For template definition, please refer to transcoding template.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Video template ID. For template definition, please refer to transcoding template.
-     * @param Definition Video template ID. For template definition, please refer to transcoding template.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Subtitle ID.
-Only valid when FileType=SubtitleFiles. 
-     * @return SubtitleID Subtitle ID.
-Only valid when FileType=SubtitleFiles.
+     * Get  
+     * @return SubtitleID 
      */
     public String getSubtitleID() {
         return this.SubtitleID;
     }
 
     /**
-     * Set Subtitle ID.
-Only valid when FileType=SubtitleFiles.
-     * @param SubtitleID Subtitle ID.
-Only valid when FileType=SubtitleFiles.
+     * Set 
+     * @param SubtitleID 
      */
     public void setSubtitleID(String SubtitleID) {
         this.SubtitleID = SubtitleID;

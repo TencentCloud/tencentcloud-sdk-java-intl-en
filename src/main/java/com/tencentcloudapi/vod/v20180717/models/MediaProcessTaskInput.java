@@ -24,196 +24,161 @@ import java.util.HashMap;
 public class MediaProcessTaskInput extends AbstractModel {
 
     /**
-    * List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TranscodeTaskSet")
     @Expose
     private TranscodeTaskInput [] TranscodeTaskSet;
 
     /**
-    * List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AnimatedGraphicTaskSet")
     @Expose
     private AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet;
 
     /**
-    * List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SnapshotByTimeOffsetTaskSet")
     @Expose
     private SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet;
 
     /**
-    * List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SampleSnapshotTaskSet")
     @Expose
     private SampleSnapshotTaskInput [] SampleSnapshotTaskSet;
 
     /**
-    * List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ImageSpriteTaskSet")
     @Expose
     private ImageSpriteTaskInput [] ImageSpriteTaskSet;
 
     /**
-    * List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CoverBySnapshotTaskSet")
     @Expose
     private CoverBySnapshotTaskInput [] CoverBySnapshotTaskSet;
 
     /**
-    * List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AdaptiveDynamicStreamingTaskSet")
     @Expose
     private AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet;
 
     /**
-     * Get List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TranscodeTaskSet List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TranscodeTaskSet 
      */
     public TranscodeTaskInput [] getTranscodeTaskSet() {
         return this.TranscodeTaskSet;
     }
 
     /**
-     * Set List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TranscodeTaskSet List of transcoding tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TranscodeTaskSet 
      */
     public void setTranscodeTaskSet(TranscodeTaskInput [] TranscodeTaskSet) {
         this.TranscodeTaskSet = TranscodeTaskSet;
     }
 
     /**
-     * Get List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AnimatedGraphicTaskSet List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AnimatedGraphicTaskSet 
      */
     public AnimatedGraphicTaskInput [] getAnimatedGraphicTaskSet() {
         return this.AnimatedGraphicTaskSet;
     }
 
     /**
-     * Set List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AnimatedGraphicTaskSet List of animated image generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AnimatedGraphicTaskSet 
      */
     public void setAnimatedGraphicTaskSet(AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet) {
         this.AnimatedGraphicTaskSet = AnimatedGraphicTaskSet;
     }
 
     /**
-     * Get List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SnapshotByTimeOffsetTaskSet 
      */
     public SnapshotByTimeOffsetTaskInput [] getSnapshotByTimeOffsetTaskSet() {
         return this.SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Set List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SnapshotByTimeOffsetTaskSet 
      */
     public void setSnapshotByTimeOffsetTaskSet(SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet) {
         this.SnapshotByTimeOffsetTaskSet = SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Get List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SampleSnapshotTaskSet List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SampleSnapshotTaskSet 
      */
     public SampleSnapshotTaskInput [] getSampleSnapshotTaskSet() {
         return this.SampleSnapshotTaskSet;
     }
 
     /**
-     * Set List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SampleSnapshotTaskSet List of sampled screencapturing tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SampleSnapshotTaskSet 
      */
     public void setSampleSnapshotTaskSet(SampleSnapshotTaskInput [] SampleSnapshotTaskSet) {
         this.SampleSnapshotTaskSet = SampleSnapshotTaskSet;
     }
 
     /**
-     * Get List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ImageSpriteTaskSet List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ImageSpriteTaskSet 
      */
     public ImageSpriteTaskInput [] getImageSpriteTaskSet() {
         return this.ImageSpriteTaskSet;
     }
 
     /**
-     * Set List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImageSpriteTaskSet List of image sprite generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ImageSpriteTaskSet 
      */
     public void setImageSpriteTaskSet(ImageSpriteTaskInput [] ImageSpriteTaskSet) {
         this.ImageSpriteTaskSet = ImageSpriteTaskSet;
     }
 
     /**
-     * Get List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoverBySnapshotTaskSet List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CoverBySnapshotTaskSet 
      */
     public CoverBySnapshotTaskInput [] getCoverBySnapshotTaskSet() {
         return this.CoverBySnapshotTaskSet;
     }
 
     /**
-     * Set List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverBySnapshotTaskSet List of cover generating tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CoverBySnapshotTaskSet 
      */
     public void setCoverBySnapshotTaskSet(CoverBySnapshotTaskInput [] CoverBySnapshotTaskSet) {
         this.CoverBySnapshotTaskSet = CoverBySnapshotTaskSet;
     }
 
     /**
-     * Get List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AdaptiveDynamicStreamingTaskSet 
      */
     public AdaptiveDynamicStreamingTaskInput [] getAdaptiveDynamicStreamingTaskSet() {
         return this.AdaptiveDynamicStreamingTaskSet;
     }
 
     /**
-     * Set List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AdaptiveDynamicStreamingTaskSet 
      */
     public void setAdaptiveDynamicStreamingTaskSet(AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet) {
         this.AdaptiveDynamicStreamingTaskSet = AdaptiveDynamicStreamingTaskSet;

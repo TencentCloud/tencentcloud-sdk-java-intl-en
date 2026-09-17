@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class ImageProcessingTemplate extends AbstractModel {
 
     /**
-    * The template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The template name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The template description.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+    * 
     */
     @SerializedName("Operations")
     @Expose
     private ImageOperation [] Operations;
 
     /**
-    * The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format).
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get The template ID. 
-     * @return Definition The template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The template ID.
-     * @param Definition The template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li> 
-     * @return Type The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
-     * @param Type The template type. Valid values:
-<li>Preset</li>
-<li>Custom</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The template name. 
-     * @return Name The template name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The template name.
-     * @param Name The template name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The template description. 
-     * @return Comment The template description.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set The template description.
-     * @param Comment The template description.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li> 
-     * @return Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+     * Get  
+     * @return Operations 
      */
     public ImageOperation [] getOperations() {
         return this.Operations;
     }
 
     /**
-     * Set An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
-     * @param Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+     * Set 
+     * @param Operations 
      */
     public void setOperations(ImageOperation [] Operations) {
         this.Operations = Operations;
     }
 
     /**
-     * Get The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format). 
-     * @return CreateTime The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format).
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format).
-     * @param CreateTime The template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?lang=en&pg=#iso-date-format).
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

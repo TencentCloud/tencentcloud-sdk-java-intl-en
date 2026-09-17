@@ -24,252 +24,207 @@ import java.util.HashMap;
 public class ComposeMediaOutput extends AbstractModel {
 
     /**
-    * Filename of up to 64 characters.
+    * 
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Description, which can contain up to 128 characters.
+    * 
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
+    * 
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Container. Valid values: mp4, mp3. mp3 is for audio files.
+    * 
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Information of output video.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VideoStream")
     @Expose
     private OutputVideoStream VideoStream;
 
     /**
-    * Information of output audio.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AudioStream")
     @Expose
     private OutputAudioStream AudioStream;
 
     /**
-    * Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+    * 
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+    * 
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-     * Get Filename of up to 64 characters. 
-     * @return FileName Filename of up to 64 characters.
+     * Get  
+     * @return FileName 
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename of up to 64 characters.
-     * @param FileName Filename of up to 64 characters.
+     * Set 
+     * @param FileName 
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Description, which can contain up to 128 characters. 
-     * @return Description Description, which can contain up to 128 characters.
+     * Get  
+     * @return Description 
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description, which can contain up to 128 characters.
-     * @param Description Description, which can contain up to 128 characters.
+     * Set 
+     * @param Description 
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li> 
-     * @return ClassId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
+     * Get  
+     * @return ClassId 
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
-     * @param ClassId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, which means "Other".</li>
+     * Set 
+     * @param ClassId 
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return ExpireTime 
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param ExpireTime 
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Container. Valid values: mp4, mp3. mp3 is for audio files. 
-     * @return Container Container. Valid values: mp4, mp3. mp3 is for audio files.
+     * Get  
+     * @return Container 
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container. Valid values: mp4, mp3. mp3 is for audio files.
-     * @param Container Container. Valid values: mp4, mp3. mp3 is for audio files.
+     * Set 
+     * @param Container 
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Information of output video.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VideoStream Information of output video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VideoStream 
      */
     public OutputVideoStream getVideoStream() {
         return this.VideoStream;
     }
 
     /**
-     * Set Information of output video.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VideoStream Information of output video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VideoStream 
      */
     public void setVideoStream(OutputVideoStream VideoStream) {
         this.VideoStream = VideoStream;
     }
 
     /**
-     * Get Information of output audio.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioStream Information of output audio.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AudioStream 
      */
     public OutputAudioStream getAudioStream() {
         return this.AudioStream;
     }
 
     /**
-     * Set Information of output audio.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioStream Information of output audio.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AudioStream 
      */
     public void setAudioStream(OutputAudioStream AudioStream) {
         this.AudioStream = AudioStream;
     }
 
     /**
-     * Get Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0. 
-     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * Get  
+     * @return RemoveVideo 
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-     * @param RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * Set 
+     * @param RemoveVideo 
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0. 
-     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * Get  
+     * @return RemoveAudio 
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-     * @param RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * Set 
+     * @param RemoveAudio 
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;

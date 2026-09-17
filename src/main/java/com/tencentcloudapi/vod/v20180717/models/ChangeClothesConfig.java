@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ChangeClothesConfig extends AbstractModel {
 
     /**
-    * <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+    * 
     */
     @SerializedName("ClothesFileInfos")
     @Expose
     private SceneAigcImageTaskInputFileInfo [] ClothesFileInfos;
 
     /**
-    * <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+    * 
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-     * Get <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul> 
-     * @return ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * Get  
+     * @return ClothesFileInfos 
      */
     public SceneAigcImageTaskInputFileInfo [] getClothesFileInfos() {
         return this.ClothesFileInfos;
     }
 
     /**
-     * Set <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
-     * @param ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum support for each kind:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * Set 
+     * @param ClothesFileInfos 
      */
     public void setClothesFileInfos(SceneAigcImageTaskInputFileInfo [] ClothesFileInfos) {
         this.ClothesFileInfos = ClothesFileInfos;
     }
 
     /**
-     * Get <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p> 
-     * @return Prompt <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+     * Get  
+     * @return Prompt 
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
-     * @param Prompt <p>Prompt for AI clothing change. <strong>Valid only when Type is change_clothes.</strong></p>
+     * Set 
+     * @param Prompt 
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;

@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
 
     /**
-    * Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Transcoding progress, with a value range of [0-100].
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input of adaptive bitrate streaming.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private ComplexAdaptiveDynamicStreamingTaskInput Input;
 
     /**
-    * Output of adaptive bitrate streaming.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private ComplexAdaptiveDynamicStreamingTaskOutput Output;
 
     /**
-     * Get Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li> 
-     * @return Status Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
-     * @param Status Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Transcoding progress, with a value range of [0-100]. 
-     * @return Progress Transcoding progress, with a value range of [0-100].
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Transcoding progress, with a value range of [0-100].
-     * @param Progress Transcoding progress, with a value range of [0-100].
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input of adaptive bitrate streaming. 
-     * @return Input Input of adaptive bitrate streaming.
+     * Get  
+     * @return Input 
      */
     public ComplexAdaptiveDynamicStreamingTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of adaptive bitrate streaming.
-     * @param Input Input of adaptive bitrate streaming.
+     * Set 
+     * @param Input 
      */
     public void setInput(ComplexAdaptiveDynamicStreamingTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of adaptive bitrate streaming. 
-     * @return Output Output of adaptive bitrate streaming.
+     * Get  
+     * @return Output 
      */
     public ComplexAdaptiveDynamicStreamingTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of adaptive bitrate streaming.
-     * @param Output Output of adaptive bitrate streaming.
+     * Set 
+     * @param Output 
      */
     public void setOutput(ComplexAdaptiveDynamicStreamingTaskOutput Output) {
         this.Output = Output;

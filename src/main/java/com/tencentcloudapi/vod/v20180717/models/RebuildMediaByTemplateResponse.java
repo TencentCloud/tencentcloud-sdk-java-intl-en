@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RebuildMediaByTemplateResponse extends AbstractModel {
 
     /**
-    * Video Rebirth Task ID. The status of the video re-creation task can be queried through this ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class RebuildMediaByTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Video Rebirth Task ID. The status of the video re-creation task can be queried through this ID. 
-     * @return TaskId Video Rebirth Task ID. The status of the video re-creation task can be queried through this ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Video Rebirth Task ID. The status of the video re-creation task can be queried through this ID.
-     * @param TaskId Video Rebirth Task ID. The status of the video re-creation task can be queried through this ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

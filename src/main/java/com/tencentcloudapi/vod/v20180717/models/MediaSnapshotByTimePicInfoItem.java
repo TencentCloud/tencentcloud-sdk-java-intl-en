@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
 
     /**
-    * Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TimeOffset")
     @Expose
     private Float TimeOffset;
 
     /**
-    * Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
     private Long [] WaterMarkDefinition;
 
     /**
-     * Get Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TimeOffset 
      */
     public Float getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TimeOffset 
      */
     public void setTimeOffset(Float TimeOffset) {
         this.TimeOffset = TimeOffset;
     }
 
     /**
-     * Get Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Url Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Url Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WaterMarkDefinition 
      */
     public Long [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
     }
 
     /**
-     * Set List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WaterMarkDefinition 
      */
     public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;

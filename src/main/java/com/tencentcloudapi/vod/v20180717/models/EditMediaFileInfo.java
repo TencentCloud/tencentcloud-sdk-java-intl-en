@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class EditMediaFileInfo extends AbstractModel {
 
     /**
-    * Video ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Offset time of the start of the video clip, unit: seconds.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * Offset time at the end of the video clip, unit: seconds.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get Video ID. 
-     * @return FileId Video ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Video ID.
-     * @param FileId Video ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Offset time of the start of the video clip, unit: seconds. 
-     * @return StartTimeOffset Offset time of the start of the video clip, unit: seconds.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Offset time of the start of the video clip, unit: seconds.
-     * @param StartTimeOffset Offset time of the start of the video clip, unit: seconds.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Offset time at the end of the video clip, unit: seconds. 
-     * @return EndTimeOffset Offset time at the end of the video clip, unit: seconds.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Offset time at the end of the video clip, unit: seconds.
-     * @param EndTimeOffset Offset time at the end of the video clip, unit: seconds.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

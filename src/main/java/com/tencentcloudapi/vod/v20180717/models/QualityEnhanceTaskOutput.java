@@ -24,143 +24,138 @@ import java.util.HashMap;
 public class QualityEnhanceTaskOutput extends AbstractModel {
 
     /**
-    * File types such as mp4, flv, etc.
+    * 
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * Media file playback address.
+    * 
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * Media file ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Output file name, up to 64 characters. By default, the generated file name is specified by the system.
+    * 
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li>
+    * 
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+    * 
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get File types such as mp4, flv, etc. 
-     * @return FileType File types such as mp4, flv, etc.
+     * Get  
+     * @return FileType 
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set File types such as mp4, flv, etc.
-     * @param FileType File types such as mp4, flv, etc.
+     * Set 
+     * @param FileType 
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get Media file playback address. 
-     * @return FileUrl Media file playback address.
+     * Get  
+     * @return FileUrl 
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set Media file playback address.
-     * @param FileUrl Media file playback address.
+     * Set 
+     * @param FileUrl 
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get Media file ID. 
-     * @return FileId Media file ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID.
-     * @param FileId Media file ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Output file name, up to 64 characters. By default, the generated file name is specified by the system. 
-     * @return MediaName Output file name, up to 64 characters. By default, the generated file name is specified by the system.
+     * Get  
+     * @return MediaName 
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output file name, up to 64 characters. By default, the generated file name is specified by the system.
-     * @param MediaName Output file name, up to 64 characters. By default, the generated file name is specified by the system.
+     * Set 
+     * @param MediaName 
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li> 
-     * @return ClassId Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li>
+     * Get  
+     * @return ClassId 
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li>
-     * @param ClassId Classification ID is used to classify media. You can create a classification through the [Create Classification](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) interface to obtain the classification ID. 
-<li>Default value: 0, indicating other categories. </li>
+     * Set 
+     * @param ClassId 
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
-     * @return ExpireTime The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Get  
+     * @return ExpireTime 
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param ExpireTime The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Set 
+     * @param ExpireTime 
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

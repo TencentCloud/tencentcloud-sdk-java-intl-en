@@ -24,81 +24,46 @@ import java.util.HashMap;
 public class AudioVolumeParam extends AbstractModel {
 
     /**
-    * Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
+    * 
     */
     @SerializedName("Mute")
     @Expose
     private Long Mute;
 
     /**
-    * Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+    * 
     */
     @SerializedName("Gain")
     @Expose
     private Float Gain;
 
     /**
-     * Get Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0. 
-     * @return Mute Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
+     * Get  
+     * @return Mute 
      */
     public Long getMute() {
         return this.Mute;
     }
 
     /**
-     * Set Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
-     * @param Mute Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
+     * Set 
+     * @param Mute 
      */
     public void setMute(Long Mute) {
         this.Mute = Mute;
     }
 
     /**
-     * Get Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0. 
-     * @return Gain Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+     * Get  
+     * @return Gain 
      */
     public Float getGain() {
         return this.Gain;
     }
 
     /**
-     * Set Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
-     * @param Gain Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+     * Set 
+     * @param Gain 
      */
     public void setGain(Float Gain) {
         this.Gain = Gain;

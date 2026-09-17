@@ -24,147 +24,92 @@ import java.util.HashMap;
 public class QualityInspectItem extends AbstractModel {
 
     /**
-    * Offset time of abnormal segment start, in seconds.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of an abnormal fragment, in seconds.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li>
+    * 
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Confidence degree, value ranges from 0 to 100.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li>
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-     * Get Offset time of abnormal segment start, in seconds. 
-     * @return StartTimeOffset Offset time of abnormal segment start, in seconds.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Offset time of abnormal segment start, in seconds.
-     * @param StartTimeOffset Offset time of abnormal segment start, in seconds.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of an abnormal fragment, in seconds. 
-     * @return EndTimeOffset End time offset of an abnormal fragment, in seconds.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of an abnormal fragment, in seconds.
-     * @param EndTimeOffset End time offset of an abnormal fragment, in seconds.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li> 
-     * @return AreaCoordSet Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li>
+     * Get  
+     * @return AreaCoordSet 
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li>
-     * @param AreaCoordSet Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li>
+     * Set 
+     * @param AreaCoordSet 
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Confidence degree, value ranges from 0 to 100.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li> 
-     * @return Confidence Confidence degree, value ranges from 0 to 100.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li>
+     * Get  
+     * @return Confidence 
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence degree, value ranges from 0 to 100.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li>
-     * @param Confidence Confidence degree, value ranges from 0 to 100.
-<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode.</li>
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;

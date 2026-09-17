@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class DescribeVodDomainsRequest extends AbstractModel {
 
     /**
-    * Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
+    * 
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * Maximum number of results returned for pagination pull. Default value: 20.
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Starting offset for pagination pull. Default value: 0.
+    * 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li> 
-     * @return Domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
+     * Get  
+     * @return Domains 
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
-     * @param Domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
+     * Set 
+     * @param Domains 
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get Maximum number of results returned for pagination pull. Default value: 20. 
-     * @return Limit Maximum number of results returned for pagination pull. Default value: 20.
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of results returned for pagination pull. Default value: 20.
-     * @param Limit Maximum number of results returned for pagination pull. Default value: 20.
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Starting offset for pagination pull. Default value: 0. 
-     * @return Offset Starting offset for pagination pull. Default value: 0.
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Starting offset for pagination pull. Default value: 0.
-     * @param Offset Starting offset for pagination pull. Default value: 0.
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

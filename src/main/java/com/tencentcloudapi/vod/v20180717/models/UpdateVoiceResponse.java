@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateVoiceResponse extends AbstractModel {
 
     /**
-    * <p>Voice information after the update.</p>
+    * 
     */
     @SerializedName("Voice")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateVoiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Voice information after the update.</p> 
-     * @return Voice <p>Voice information after the update.</p>
+     * Get  
+     * @return Voice 
      */
     public VoiceInfo getVoice() {
         return this.Voice;
     }
 
     /**
-     * Set <p>Voice information after the update.</p>
-     * @param Voice <p>Voice information after the update.</p>
+     * Set 
+     * @param Voice 
      */
     public void setVoice(VoiceInfo Voice) {
         this.Voice = Voice;

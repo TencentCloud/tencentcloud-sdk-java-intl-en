@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AigcFaceInfo extends AbstractModel {
 
     /**
-    * Principal ID. Need to do it yourself to record the returned principal ID.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Face information list.
+    * 
     */
     @SerializedName("FaceInfoList")
     @Expose
     private AigcFaceIdentityInfo [] FaceInfoList;
 
     /**
-     * Get Principal ID. Need to do it yourself to record the returned principal ID. 
-     * @return SessionId Principal ID. Need to do it yourself to record the returned principal ID.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Principal ID. Need to do it yourself to record the returned principal ID.
-     * @param SessionId Principal ID. Need to do it yourself to record the returned principal ID.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Face information list. 
-     * @return FaceInfoList Face information list.
+     * Get  
+     * @return FaceInfoList 
      */
     public AigcFaceIdentityInfo [] getFaceInfoList() {
         return this.FaceInfoList;
     }
 
     /**
-     * Set Face information list.
-     * @param FaceInfoList Face information list.
+     * Set 
+     * @param FaceInfoList 
      */
     public void setFaceInfoList(AigcFaceIdentityInfo [] FaceInfoList) {
         this.FaceInfoList = FaceInfoList;

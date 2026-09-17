@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class LLMComprehendSummary extends AbstractModel {
 
     /**
-    * Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary.
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+    * 
     */
     @SerializedName("ExtendedParameter")
     @Expose
     private String ExtendedParameter;
 
     /**
-     * Get Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary. 
-     * @return Switch Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary.
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary.
-     * @param Switch Segment summary task switch, available values:
--ON: Enable segment summary task.
--OFF: Disable segment summary.
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note). 
-     * @return ExtendedParameter Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+     * Get  
+     * @return ExtendedParameter 
      */
     public String getExtendedParameter() {
         return this.ExtendedParameter;
     }
 
     /**
-     * Set Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
-     * @param ExtendedParameter Extended parameter, which is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+     * Set 
+     * @param ExtendedParameter 
      */
     public void setExtendedParameter(String ExtendedParameter) {
         this.ExtendedParameter = ExtendedParameter;

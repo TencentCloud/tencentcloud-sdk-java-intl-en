@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel {
 
     /**
-    * Confidence of recognized opening credits. Value range: 0-100.
+    * 
     */
     @SerializedName("HeadConfidence")
     @Expose
     private Float HeadConfidence;
 
     /**
-    * End time point of video opening credits in seconds.
+    * 
     */
     @SerializedName("HeadTimeOffset")
     @Expose
     private Float HeadTimeOffset;
 
     /**
-    * Confidence of recognized closing credits. Value range: 0-100.
+    * 
     */
     @SerializedName("TailConfidence")
     @Expose
     private Float TailConfidence;
 
     /**
-    * Start time point of video closing credits in seconds.
+    * 
     */
     @SerializedName("TailTimeOffset")
     @Expose
     private Float TailTimeOffset;
 
     /**
-     * Get Confidence of recognized opening credits. Value range: 0-100. 
-     * @return HeadConfidence Confidence of recognized opening credits. Value range: 0-100.
+     * Get  
+     * @return HeadConfidence 
      */
     public Float getHeadConfidence() {
         return this.HeadConfidence;
     }
 
     /**
-     * Set Confidence of recognized opening credits. Value range: 0-100.
-     * @param HeadConfidence Confidence of recognized opening credits. Value range: 0-100.
+     * Set 
+     * @param HeadConfidence 
      */
     public void setHeadConfidence(Float HeadConfidence) {
         this.HeadConfidence = HeadConfidence;
     }
 
     /**
-     * Get End time point of video opening credits in seconds. 
-     * @return HeadTimeOffset End time point of video opening credits in seconds.
+     * Get  
+     * @return HeadTimeOffset 
      */
     public Float getHeadTimeOffset() {
         return this.HeadTimeOffset;
     }
 
     /**
-     * Set End time point of video opening credits in seconds.
-     * @param HeadTimeOffset End time point of video opening credits in seconds.
+     * Set 
+     * @param HeadTimeOffset 
      */
     public void setHeadTimeOffset(Float HeadTimeOffset) {
         this.HeadTimeOffset = HeadTimeOffset;
     }
 
     /**
-     * Get Confidence of recognized closing credits. Value range: 0-100. 
-     * @return TailConfidence Confidence of recognized closing credits. Value range: 0-100.
+     * Get  
+     * @return TailConfidence 
      */
     public Float getTailConfidence() {
         return this.TailConfidence;
     }
 
     /**
-     * Set Confidence of recognized closing credits. Value range: 0-100.
-     * @param TailConfidence Confidence of recognized closing credits. Value range: 0-100.
+     * Set 
+     * @param TailConfidence 
      */
     public void setTailConfidence(Float TailConfidence) {
         this.TailConfidence = TailConfidence;
     }
 
     /**
-     * Get Start time point of video closing credits in seconds. 
-     * @return TailTimeOffset Start time point of video closing credits in seconds.
+     * Get  
+     * @return TailTimeOffset 
      */
     public Float getTailTimeOffset() {
         return this.TailTimeOffset;
     }
 
     /**
-     * Set Start time point of video closing credits in seconds.
-     * @param TailTimeOffset Start time point of video closing credits in seconds.
+     * Set 
+     * @param TailTimeOffset 
      */
     public void setTailTimeOffset(Float TailTimeOffset) {
         this.TailTimeOffset = TailTimeOffset;

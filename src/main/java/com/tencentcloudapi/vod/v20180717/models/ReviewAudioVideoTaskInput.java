@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class ReviewAudioVideoTaskInput extends AbstractModel {
 
     /**
-    * The ID of the media file.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The moderation template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
+    * 
     */
     @SerializedName("ReviewContents")
     @Expose
     private String [] ReviewContents;
 
     /**
-     * Get The ID of the media file. 
-     * @return FileId The ID of the media file.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The ID of the media file.
-     * @param FileId The ID of the media file.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The moderation template ID. 
-     * @return Definition The moderation template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The moderation template ID.
-     * @param Definition The moderation template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li> 
-     * @return ReviewContents The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
+     * Get  
+     * @return ReviewContents 
      */
     public String [] getReviewContents() {
         return this.ReviewContents;
     }
 
     /**
-     * Set The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-     * @param ReviewContents The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
+     * Set 
+     * @param ReviewContents 
      */
     public void setReviewContents(String [] ReviewContents) {
         this.ReviewContents = ReviewContents;

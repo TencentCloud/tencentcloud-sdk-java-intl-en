@@ -24,61 +24,46 @@ import java.util.HashMap;
 public class ProcedureReviewAudioVideoTaskInput extends AbstractModel {
 
     /**
-    * The moderation template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used.
+    * 
     */
     @SerializedName("ReviewContents")
     @Expose
     private String [] ReviewContents;
 
     /**
-     * Get The moderation template ID. 
-     * @return Definition The moderation template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The moderation template ID.
-     * @param Definition The moderation template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used. 
-     * @return ReviewContents The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     * Get  
+     * @return ReviewContents 
      */
     public String [] getReviewContents() {
         return this.ReviewContents;
     }
 
     /**
-     * Set The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used.
-     * @param ReviewContents The type of moderated content. Valid values:
-<li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li>
-If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     * Set 
+     * @param ReviewContents 
      */
     public void setReviewContents(String [] ReviewContents) {
         this.ReviewContents = ReviewContents;

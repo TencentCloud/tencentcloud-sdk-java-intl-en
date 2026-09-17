@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class SceneAigcVideoTask extends AbstractModel {
 
     /**
-    * Task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Task progress, with a value range of [0-100].
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input of the AIGC video generation task.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private SceneAigcVideoTaskInput Input;
 
     /**
-    * Output information of the AIGC video task.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private SceneAigcVideoTaskOutput Output;
 
     /**
-    * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li> 
-     * @return Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-     * @param Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task. 
-     * @return ErrCode Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
-     * @param ErrCode Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Task progress, with a value range of [0-100]. 
-     * @return Progress Task progress, with a value range of [0-100].
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress, with a value range of [0-100].
-     * @param Progress Task progress, with a value range of [0-100].
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input of the AIGC video generation task. 
-     * @return Input Input of the AIGC video generation task.
+     * Get  
+     * @return Input 
      */
     public SceneAigcVideoTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the AIGC video generation task.
-     * @param Input Input of the AIGC video generation task.
+     * Set 
+     * @param Input 
      */
     public void setInput(SceneAigcVideoTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output information of the AIGC video task. 
-     * @return Output Output information of the AIGC video task.
+     * Get  
+     * @return Output 
      */
     public SceneAigcVideoTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of the AIGC video task.
-     * @param Output Output information of the AIGC video task.
+     * Set 
+     * @param Output 
      */
     public void setOutput(SceneAigcVideoTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
-     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
-     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaAudioStreamItem extends AbstractModel {
 
     /**
-    * <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+    * <p>Audio stream bitrate, in bps.</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * <p>Sampling rate of the audio stream, unit: hz.</p>
+    * <p>Sampling rate of the audio stream. Unit: hz.</p>
     */
     @SerializedName("SamplingRate")
     @Expose
     private Long SamplingRate;
 
     /**
-    * <p>Audio stream encoding format, such as aac.</p>
+    * <p>Audio stream encoding format, for example, aac.</p>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-     * Get <p>Bitrate of the audio stream. Measurement unit: bps.</p> 
-     * @return Bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+     * Get <p>Audio stream bitrate, in bps.</p> 
+     * @return Bitrate <p>Audio stream bitrate, in bps.</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set <p>Bitrate of the audio stream. Measurement unit: bps.</p>
-     * @param Bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+     * Set <p>Audio stream bitrate, in bps.</p>
+     * @param Bitrate <p>Audio stream bitrate, in bps.</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get <p>Sampling rate of the audio stream, unit: hz.</p> 
-     * @return SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
+     * Get <p>Sampling rate of the audio stream. Unit: hz.</p> 
+     * @return SamplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
      */
     public Long getSamplingRate() {
         return this.SamplingRate;
     }
 
     /**
-     * Set <p>Sampling rate of the audio stream, unit: hz.</p>
-     * @param SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
+     * Set <p>Sampling rate of the audio stream. Unit: hz.</p>
+     * @param SamplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
      */
     public void setSamplingRate(Long SamplingRate) {
         this.SamplingRate = SamplingRate;
     }
 
     /**
-     * Get <p>Audio stream encoding format, such as aac.</p> 
-     * @return Codec <p>Audio stream encoding format, such as aac.</p>
+     * Get <p>Audio stream encoding format, for example, aac.</p> 
+     * @return Codec <p>Audio stream encoding format, for example, aac.</p>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set <p>Audio stream encoding format, such as aac.</p>
-     * @param Codec <p>Audio stream encoding format, such as aac.</p>
+     * Set <p>Audio stream encoding format, for example, aac.</p>
+     * @param Codec <p>Audio stream encoding format, for example, aac.</p>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;

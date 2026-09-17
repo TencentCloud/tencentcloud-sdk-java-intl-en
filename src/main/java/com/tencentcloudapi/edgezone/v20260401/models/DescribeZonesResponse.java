@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeZonesResponse extends AbstractModel {
 
     /**
-    * Availability zone list of all regions.
+    * <p>AZ list of all regions.</p>
     */
     @SerializedName("ZoneSet")
     @Expose
     private ZoneInfo [] ZoneSet;
 
     /**
-    * Total number of availability zones.
+    * <p>Total number of availability zones.</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeZonesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Availability zone list of all regions. 
-     * @return ZoneSet Availability zone list of all regions.
+     * Get <p>AZ list of all regions.</p> 
+     * @return ZoneSet <p>AZ list of all regions.</p>
      */
     public ZoneInfo [] getZoneSet() {
         return this.ZoneSet;
     }
 
     /**
-     * Set Availability zone list of all regions.
-     * @param ZoneSet Availability zone list of all regions.
+     * Set <p>AZ list of all regions.</p>
+     * @param ZoneSet <p>AZ list of all regions.</p>
      */
     public void setZoneSet(ZoneInfo [] ZoneSet) {
         this.ZoneSet = ZoneSet;
     }
 
     /**
-     * Get Total number of availability zones. 
-     * @return TotalCount Total number of availability zones.
+     * Get <p>Total number of availability zones.</p> 
+     * @return TotalCount <p>Total number of availability zones.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of availability zones.
-     * @param TotalCount Total number of availability zones.
+     * Set <p>Total number of availability zones.</p>
+     * @param TotalCount <p>Total number of availability zones.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -24,223 +24,138 @@ import java.util.HashMap;
 public class MediaSubtitleItem extends AbstractModel {
 
     /**
-    * Unique subtitle ID
+    * 
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Subtitle name
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+    * 
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * Subtitle format. Valid value:
-<li>vtt</li>
+    * 
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Subtitle URL
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
+    * 
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-     * Get Unique subtitle ID 
-     * @return Id Unique subtitle ID
+     * Get  
+     * @return Id 
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique subtitle ID
-     * @param Id Unique subtitle ID
+     * Set 
+     * @param Id 
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Subtitle name 
-     * @return Name Subtitle name
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Subtitle name
-     * @param Name Subtitle name
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646) 
-     * @return Language Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+     * Get  
+     * @return Language 
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
-     * @param Language Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+     * Set 
+     * @param Language 
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get Subtitle format. Valid value:
-<li>vtt</li> 
-     * @return Format Subtitle format. Valid value:
-<li>vtt</li>
+     * Get  
+     * @return Format 
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Subtitle format. Valid value:
-<li>vtt</li>
-     * @param Format Subtitle format. Valid value:
-<li>vtt</li>
+     * Set 
+     * @param Format 
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Subtitle URL 
-     * @return Url Subtitle URL
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Subtitle URL
-     * @param Url Subtitle URL
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li> 
-     * @return Source Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
+     * Get  
+     * @return Source 
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
-     * @param Source Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
+     * Set 
+     * @param Source 
      */
     public void setSource(String Source) {
         this.Source = Source;

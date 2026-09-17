@@ -24,147 +24,92 @@ import java.util.HashMap;
 public class ModifyMediaStorageClassRequest extends AbstractModel {
 
     /**
-    * Unique identifier list of media files. Maximum length: 100.
+    * 
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+    * 
     */
     @SerializedName("StorageClass")
     @Expose
     private String StorageClass;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li>
+    * 
     */
     @SerializedName("RestoreTier")
     @Expose
     private String RestoreTier;
 
     /**
-     * Get Unique identifier list of media files. Maximum length: 100. 
-     * @return FileIds Unique identifier list of media files. Maximum length: 100.
+     * Get  
+     * @return FileIds 
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set Unique identifier list of media files. Maximum length: 100.
-     * @param FileIds Unique identifier list of media files. Maximum length: 100.
+     * Set 
+     * @param FileIds 
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li> 
-     * @return StorageClass Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+     * Get  
+     * @return StorageClass 
      */
     public String getStorageClass() {
         return this.StorageClass;
     }
 
     /**
-     * Set Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
-     * @param StorageClass Target storage type. Valid values:
-<li> STANDARD: Standard storage.</li>
-<li> STANDARD_IA: Infrequent storage.</li>
-<li>ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+     * Set 
+     * @param StorageClass 
      */
     public void setStorageClass(String StorageClass) {
         this.StorageClass = StorageClass;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li> 
-     * @return RestoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li>
+     * Get  
+     * @return RestoreTier 
      */
     public String getRestoreTier() {
         return this.RestoreTier;
     }
 
     /**
-     * Set Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li>
-     * @param RestoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-When the current storage type of a media file is archive storage, the following values are available:
-<li>Expedited: Speed mode.</li>
-<li>Standard: Standard mode.</li>
-<li>Bulk: batch mode.</li>
-When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard: Standard mode.</li>
-<li>Bulk: Batch mode.</li>
+     * Set 
+     * @param RestoreTier 
      */
     public void setRestoreTier(String RestoreTier) {
         this.RestoreTier = RestoreTier;

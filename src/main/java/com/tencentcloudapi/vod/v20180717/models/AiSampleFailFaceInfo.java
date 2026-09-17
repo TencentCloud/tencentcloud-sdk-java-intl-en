@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class AiSampleFailFaceInfo extends AbstractModel {
 
     /**
-    * It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
+    * 
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-    * Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li>
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0. 
-     * @return Index It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
+     * Get  
+     * @return Index 
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
-     * @param Index It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
+     * Set 
+     * @param Index 
      */
     public void setIndex(Long Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li> 
-     * @return ErrCode Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li>
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li>
-     * @param ErrCode Error code. Valid values:
-<li>0: success;</li>
-<li>Other values: failure.</li>
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;

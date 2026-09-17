@@ -24,322 +24,368 @@ import java.util.HashMap;
 public class CreateQualityInspectTemplateRequest extends AbstractModel {
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Audio and video quality inspection template name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Audio and video quality inspection template description.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Frame interception interval, unit: seconds, minimum value 1. If left blank, the default frame interval is 1 second.
+    * 
+    */
+    @SerializedName("Configs")
+    @Expose
+    private QualityInspectConfig [] Configs;
+
+    /**
+    * 
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private QualityInspectStrategy Strategy;
+
+    /**
+    * 
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-    * Control parameters for video frame jitter and ghosting detection.
+    * 
     */
     @SerializedName("JitterConfigure")
     @Expose
     private JitterConfigureInfo JitterConfigure;
 
     /**
-    * Control parameters for video frame blur detection.
+    * 
     */
     @SerializedName("BlurConfigure")
     @Expose
     private BlurConfigureInfo BlurConfigure;
 
     /**
-    * Control parameters for low-light and overexposure detection in video frames.
+    * 
     */
     @SerializedName("AbnormalLightingConfigure")
     @Expose
     private AbnormalLightingConfigureInfo AbnormalLightingConfigure;
 
     /**
-    * Control parameters for screen glitch detection in video footage.
+    * 
     */
     @SerializedName("CrashScreenConfigure")
     @Expose
     private CrashScreenConfigureInfo CrashScreenConfigure;
 
     /**
-    * Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+    * 
     */
     @SerializedName("BlackWhiteEdgeConfigure")
     @Expose
     private BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure;
 
     /**
-    * Control parameters for video frame noise detection.
+    * 
     */
     @SerializedName("NoiseConfigure")
     @Expose
     private NoiseConfigureInfo NoiseConfigure;
 
     /**
-    * Control parameters for video frame mosaic detection.
+    * 
     */
     @SerializedName("MosaicConfigure")
     @Expose
     private MosaicConfigureInfo MosaicConfigure;
 
     /**
-    * Control parameters for video frame QR code detection.
+    * 
     */
     @SerializedName("QRCodeConfigure")
     @Expose
     private QRCodeConfigureInfo QRCodeConfigure;
 
     /**
-    * Audio (mute, bass, clipping) detection control parameters.
+    * 
     */
     @SerializedName("VoiceConfigure")
     @Expose
     private VoiceConfigureInfo VoiceConfigure;
 
     /**
-    * Control parameters for video frame quality evaluation.
+    * 
     */
     @SerializedName("QualityEvaluationConfigure")
     @Expose
     private QualityEvaluationConfigureInfo QualityEvaluationConfigure;
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Audio and video quality inspection template name. 
-     * @return Name Audio and video quality inspection template name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio and video quality inspection template name.
-     * @param Name Audio and video quality inspection template name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Audio and video quality inspection template description. 
-     * @return Comment Audio and video quality inspection template description.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Audio and video quality inspection template description.
-     * @param Comment Audio and video quality inspection template description.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Frame interception interval, unit: seconds, minimum value 1. If left blank, the default frame interval is 1 second. 
-     * @return ScreenshotInterval Frame interception interval, unit: seconds, minimum value 1. If left blank, the default frame interval is 1 second.
+     * Get  
+     * @return Configs 
+     */
+    public QualityInspectConfig [] getConfigs() {
+        return this.Configs;
+    }
+
+    /**
+     * Set 
+     * @param Configs 
+     */
+    public void setConfigs(QualityInspectConfig [] Configs) {
+        this.Configs = Configs;
+    }
+
+    /**
+     * Get  
+     * @return Strategy 
+     */
+    public QualityInspectStrategy getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set 
+     * @param Strategy 
+     */
+    public void setStrategy(QualityInspectStrategy Strategy) {
+        this.Strategy = Strategy;
+    }
+
+    /**
+     * Get  
+     * @return ScreenshotInterval 
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame interception interval, unit: seconds, minimum value 1. If left blank, the default frame interval is 1 second.
-     * @param ScreenshotInterval Frame interception interval, unit: seconds, minimum value 1. If left blank, the default frame interval is 1 second.
+     * Set 
+     * @param ScreenshotInterval 
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
     /**
-     * Get Control parameters for video frame jitter and ghosting detection. 
-     * @return JitterConfigure Control parameters for video frame jitter and ghosting detection.
+     * Get  
+     * @return JitterConfigure 
      */
     public JitterConfigureInfo getJitterConfigure() {
         return this.JitterConfigure;
     }
 
     /**
-     * Set Control parameters for video frame jitter and ghosting detection.
-     * @param JitterConfigure Control parameters for video frame jitter and ghosting detection.
+     * Set 
+     * @param JitterConfigure 
      */
     public void setJitterConfigure(JitterConfigureInfo JitterConfigure) {
         this.JitterConfigure = JitterConfigure;
     }
 
     /**
-     * Get Control parameters for video frame blur detection. 
-     * @return BlurConfigure Control parameters for video frame blur detection.
+     * Get  
+     * @return BlurConfigure 
      */
     public BlurConfigureInfo getBlurConfigure() {
         return this.BlurConfigure;
     }
 
     /**
-     * Set Control parameters for video frame blur detection.
-     * @param BlurConfigure Control parameters for video frame blur detection.
+     * Set 
+     * @param BlurConfigure 
      */
     public void setBlurConfigure(BlurConfigureInfo BlurConfigure) {
         this.BlurConfigure = BlurConfigure;
     }
 
     /**
-     * Get Control parameters for low-light and overexposure detection in video frames. 
-     * @return AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
+     * Get  
+     * @return AbnormalLightingConfigure 
      */
     public AbnormalLightingConfigureInfo getAbnormalLightingConfigure() {
         return this.AbnormalLightingConfigure;
     }
 
     /**
-     * Set Control parameters for low-light and overexposure detection in video frames.
-     * @param AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
+     * Set 
+     * @param AbnormalLightingConfigure 
      */
     public void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo AbnormalLightingConfigure) {
         this.AbnormalLightingConfigure = AbnormalLightingConfigure;
     }
 
     /**
-     * Get Control parameters for screen glitch detection in video footage. 
-     * @return CrashScreenConfigure Control parameters for screen glitch detection in video footage.
+     * Get  
+     * @return CrashScreenConfigure 
      */
     public CrashScreenConfigureInfo getCrashScreenConfigure() {
         return this.CrashScreenConfigure;
     }
 
     /**
-     * Set Control parameters for screen glitch detection in video footage.
-     * @param CrashScreenConfigure Control parameters for screen glitch detection in video footage.
+     * Set 
+     * @param CrashScreenConfigure 
      */
     public void setCrashScreenConfigure(CrashScreenConfigureInfo CrashScreenConfigure) {
         this.CrashScreenConfigure = CrashScreenConfigure;
     }
 
     /**
-     * Get Control parameters for video picture black edge, white edge, black screen, and white screen detection. 
-     * @return BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+     * Get  
+     * @return BlackWhiteEdgeConfigure 
      */
     public BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() {
         return this.BlackWhiteEdgeConfigure;
     }
 
     /**
-     * Set Control parameters for video picture black edge, white edge, black screen, and white screen detection.
-     * @param BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+     * Set 
+     * @param BlackWhiteEdgeConfigure 
      */
     public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure) {
         this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
     }
 
     /**
-     * Get Control parameters for video frame noise detection. 
-     * @return NoiseConfigure Control parameters for video frame noise detection.
+     * Get  
+     * @return NoiseConfigure 
      */
     public NoiseConfigureInfo getNoiseConfigure() {
         return this.NoiseConfigure;
     }
 
     /**
-     * Set Control parameters for video frame noise detection.
-     * @param NoiseConfigure Control parameters for video frame noise detection.
+     * Set 
+     * @param NoiseConfigure 
      */
     public void setNoiseConfigure(NoiseConfigureInfo NoiseConfigure) {
         this.NoiseConfigure = NoiseConfigure;
     }
 
     /**
-     * Get Control parameters for video frame mosaic detection. 
-     * @return MosaicConfigure Control parameters for video frame mosaic detection.
+     * Get  
+     * @return MosaicConfigure 
      */
     public MosaicConfigureInfo getMosaicConfigure() {
         return this.MosaicConfigure;
     }
 
     /**
-     * Set Control parameters for video frame mosaic detection.
-     * @param MosaicConfigure Control parameters for video frame mosaic detection.
+     * Set 
+     * @param MosaicConfigure 
      */
     public void setMosaicConfigure(MosaicConfigureInfo MosaicConfigure) {
         this.MosaicConfigure = MosaicConfigure;
     }
 
     /**
-     * Get Control parameters for video frame QR code detection. 
-     * @return QRCodeConfigure Control parameters for video frame QR code detection.
+     * Get  
+     * @return QRCodeConfigure 
      */
     public QRCodeConfigureInfo getQRCodeConfigure() {
         return this.QRCodeConfigure;
     }
 
     /**
-     * Set Control parameters for video frame QR code detection.
-     * @param QRCodeConfigure Control parameters for video frame QR code detection.
+     * Set 
+     * @param QRCodeConfigure 
      */
     public void setQRCodeConfigure(QRCodeConfigureInfo QRCodeConfigure) {
         this.QRCodeConfigure = QRCodeConfigure;
     }
 
     /**
-     * Get Audio (mute, bass, clipping) detection control parameters. 
-     * @return VoiceConfigure Audio (mute, bass, clipping) detection control parameters.
+     * Get  
+     * @return VoiceConfigure 
      */
     public VoiceConfigureInfo getVoiceConfigure() {
         return this.VoiceConfigure;
     }
 
     /**
-     * Set Audio (mute, bass, clipping) detection control parameters.
-     * @param VoiceConfigure Audio (mute, bass, clipping) detection control parameters.
+     * Set 
+     * @param VoiceConfigure 
      */
     public void setVoiceConfigure(VoiceConfigureInfo VoiceConfigure) {
         this.VoiceConfigure = VoiceConfigure;
     }
 
     /**
-     * Get Control parameters for video frame quality evaluation. 
-     * @return QualityEvaluationConfigure Control parameters for video frame quality evaluation.
+     * Get  
+     * @return QualityEvaluationConfigure 
      */
     public QualityEvaluationConfigureInfo getQualityEvaluationConfigure() {
         return this.QualityEvaluationConfigure;
     }
 
     /**
-     * Set Control parameters for video frame quality evaluation.
-     * @param QualityEvaluationConfigure Control parameters for video frame quality evaluation.
+     * Set 
+     * @param QualityEvaluationConfigure 
      */
     public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo QualityEvaluationConfigure) {
         this.QualityEvaluationConfigure = QualityEvaluationConfigure;
@@ -361,6 +407,15 @@ public class CreateQualityInspectTemplateRequest extends AbstractModel {
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
+        }
+        if (source.Configs != null) {
+            this.Configs = new QualityInspectConfig[source.Configs.length];
+            for (int i = 0; i < source.Configs.length; i++) {
+                this.Configs[i] = new QualityInspectConfig(source.Configs[i]);
+            }
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new QualityInspectStrategy(source.Strategy);
         }
         if (source.ScreenshotInterval != null) {
             this.ScreenshotInterval = new Float(source.ScreenshotInterval);
@@ -405,6 +460,8 @@ public class CreateQualityInspectTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamArrayObj(map, prefix + "Configs.", this.Configs);
+        this.setParamObj(map, prefix + "Strategy.", this.Strategy);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         this.setParamObj(map, prefix + "JitterConfigure.", this.JitterConfigure);
         this.setParamObj(map, prefix + "BlurConfigure.", this.BlurConfigure);

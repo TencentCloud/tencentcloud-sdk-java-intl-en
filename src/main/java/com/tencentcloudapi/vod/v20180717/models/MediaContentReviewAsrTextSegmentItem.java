@@ -24,150 +24,115 @@ import java.util.HashMap;
 public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
 
     /**
-    * Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+    * 
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-     * Get Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StartTimeOffset Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StartTimeOffset Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EndTimeOffset End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EndTimeOffset End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Confidence Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Confidence Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li> 
-     * @return Suggestion Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Get  
+     * @return Suggestion 
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param Suggestion Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Set 
+     * @param Suggestion 
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeywordSet List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return KeywordSet 
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeywordSet List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param KeywordSet 
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;

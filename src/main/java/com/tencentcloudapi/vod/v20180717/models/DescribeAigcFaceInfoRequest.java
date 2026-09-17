@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeAigcFaceInfoRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Need to get the input video information for face information, containing at most one file.
+    * 
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcFaceInputFileInfo [] FileInfos;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Need to get the input video information for face information, containing at most one file. 
-     * @return FileInfos Need to get the input video information for face information, containing at most one file.
+     * Get  
+     * @return FileInfos 
      */
     public AigcFaceInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set Need to get the input video information for face information, containing at most one file.
-     * @param FileInfos Need to get the input video information for face information, containing at most one file.
+     * Set 
+     * @param FileInfos 
      */
     public void setFileInfos(AigcFaceInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;

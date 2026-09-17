@@ -24,89 +24,69 @@ import java.util.HashMap;
 public class DeleteMPSTemplateRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+    * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li>
+    * <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * Template Unique Identifier of the MPS task.
+    * <p>Unique identifier of the MPS task template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * Get <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p> 
+     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li> 
-     * @return TemplateType Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li>
+     * Get <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li> 
+     * @return TemplateType <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li>
-     * @param TemplateType Type of the MPS Template that needs to be deleted. Value:
-<li>Transcode: delete transcoding template.</li>
-<li>AIAnalysis: Create intelligent analysis template.</li>
-<li>SmartSubtitle: Create an intelligent subtitle template.</li>
-<li>SmartErase: Create an intelligent erasure template.</li>
+     * Set <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
+     * @param TemplateType <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get Template Unique Identifier of the MPS task. 
-     * @return Definition Template Unique Identifier of the MPS task.
+     * Get <p>Unique identifier of the MPS task template.</p> 
+     * @return Definition <p>Unique identifier of the MPS task template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Template Unique Identifier of the MPS task.
-     * @param Definition Template Unique Identifier of the MPS task.
+     * Set <p>Unique identifier of the MPS task template.</p>
+     * @param Definition <p>Unique identifier of the MPS task template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

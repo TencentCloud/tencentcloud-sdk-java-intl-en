@@ -24,76 +24,46 @@ import java.util.HashMap;
 public class ImageDenoiseConfig extends AbstractModel {
 
     /**
-    * Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li>
-Default value: ON.
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li>
-Default value: ON. 
-     * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li>
-Default value: ON.
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li>
-Default value: ON.
-     * @param Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li>
-Default value: ON.
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak. 
-     * @return Type Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
-     * @param Type Type, available values:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

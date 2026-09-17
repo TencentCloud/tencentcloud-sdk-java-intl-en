@@ -24,160 +24,160 @@ import java.util.HashMap;
 public class DescribeRoundPlaysRequest extends AbstractModel {
 
     /**
-    * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Filter criteria: playlist identifier, array length limit: 100.
+    * 
     */
     @SerializedName("RoundPlayIds")
     @Expose
     private String [] RoundPlayIds;
 
     /**
-    * Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Filter criteria: playlist creation time.
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private TimeRange CreateTime;
 
     /**
-    * Filter criteria: playlist update time.
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private TimeRange UpdateTime;
 
     /**
-    * Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
+    * 
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-    * Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
+    * 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned entries. default value: 10. maximum value: 100.
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>. 
-     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
-     * @param SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Filter criteria: playlist identifier, array length limit: 100. 
-     * @return RoundPlayIds Filter criteria: playlist identifier, array length limit: 100.
+     * Get  
+     * @return RoundPlayIds 
      */
     public String [] getRoundPlayIds() {
         return this.RoundPlayIds;
     }
 
     /**
-     * Set Filter criteria: playlist identifier, array length limit: 100.
-     * @param RoundPlayIds Filter criteria: playlist identifier, array length limit: 100.
+     * Set 
+     * @param RoundPlayIds 
      */
     public void setRoundPlayIds(String [] RoundPlayIds) {
         this.RoundPlayIds = RoundPlayIds;
     }
 
     /**
-     * Get Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>. 
-     * @return Status Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
-     * @param Status Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Filter criteria: playlist creation time. 
-     * @return CreateTime Filter criteria: playlist creation time.
+     * Get  
+     * @return CreateTime 
      */
     public TimeRange getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Filter criteria: playlist creation time.
-     * @param CreateTime Filter criteria: playlist creation time.
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(TimeRange CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Filter criteria: playlist update time. 
-     * @return UpdateTime Filter criteria: playlist update time.
+     * Get  
+     * @return UpdateTime 
      */
     public TimeRange getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Filter criteria: playlist update time.
-     * @param UpdateTime Filter criteria: playlist update time.
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(TimeRange UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry. 
-     * @return ScrollToken Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
+     * Get  
+     * @return ScrollToken 
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
-     * @param ScrollToken Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
+     * Set 
+     * @param ScrollToken 
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;
     }
 
     /**
-     * Get Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries. 
-     * @return Offset Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
+     * Get  
+     * @return Offset 
      * @deprecated
      */
     @Deprecated
@@ -186,8 +186,8 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     }
 
     /**
-     * Set Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
-     * @param Offset Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
+     * Set 
+     * @param Offset 
      * @deprecated
      */
     @Deprecated
@@ -196,16 +196,16 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of returned entries. default value: 10. maximum value: 100. 
-     * @return Limit Number of returned entries. default value: 10. maximum value: 100.
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. default value: 10. maximum value: 100.
-     * @param Limit Number of returned entries. default value: 10. maximum value: 100.
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

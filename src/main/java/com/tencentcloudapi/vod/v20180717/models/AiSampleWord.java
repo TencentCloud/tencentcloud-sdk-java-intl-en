@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AiSampleWord extends AbstractModel {
 
     /**
-    * Keyword.
+    * 
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * Keyword tag.
+    * 
     */
     @SerializedName("TagSet")
     @Expose
     private String [] TagSet;
 
     /**
-    * Keyword use case.
+    * 
     */
     @SerializedName("UsageSet")
     @Expose
     private String [] UsageSet;
 
     /**
-    * Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Keyword. 
-     * @return Keyword Keyword.
+     * Get  
+     * @return Keyword 
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keyword.
-     * @param Keyword Keyword.
+     * Set 
+     * @param Keyword 
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get Keyword tag. 
-     * @return TagSet Keyword tag.
+     * Get  
+     * @return TagSet 
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Keyword tag.
-     * @param TagSet Keyword tag.
+     * Set 
+     * @param TagSet 
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get Keyword use case. 
-     * @return UsageSet Keyword use case.
+     * Get  
+     * @return UsageSet 
      */
     public String [] getUsageSet() {
         return this.UsageSet;
     }
 
     /**
-     * Set Keyword use case.
-     * @param UsageSet Keyword use case.
+     * Set 
+     * @param UsageSet 
      */
     public void setUsageSet(String [] UsageSet) {
         this.UsageSet = UsageSet;
     }
 
     /**
-     * Get Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

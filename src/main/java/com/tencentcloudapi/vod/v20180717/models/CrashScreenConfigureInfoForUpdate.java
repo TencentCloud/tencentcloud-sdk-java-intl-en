@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class CrashScreenConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Video screen distortion detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Video screen distortion detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li> 
-     * @return Switch Video screen distortion detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Video screen distortion detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
-     * @param Switch Video screen distortion detection switch, optional values:
-<li>ON: turn on;</li>
-<li>OFF: turn off. </li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

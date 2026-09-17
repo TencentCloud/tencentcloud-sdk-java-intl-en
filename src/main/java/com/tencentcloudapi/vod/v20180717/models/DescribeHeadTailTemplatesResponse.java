@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHeadTailTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Header and trailer template detail list.
+    * 
     */
     @SerializedName("HeadTailTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHeadTailTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Header and trailer template detail list. 
-     * @return HeadTailTemplateSet Header and trailer template detail list.
+     * Get  
+     * @return HeadTailTemplateSet 
      */
     public HeadTailTemplate [] getHeadTailTemplateSet() {
         return this.HeadTailTemplateSet;
     }
 
     /**
-     * Set Header and trailer template detail list.
-     * @param HeadTailTemplateSet Header and trailer template detail list.
+     * Set 
+     * @param HeadTailTemplateSet 
      */
     public void setHeadTailTemplateSet(HeadTailTemplate [] HeadTailTemplateSet) {
         this.HeadTailTemplateSet = HeadTailTemplateSet;

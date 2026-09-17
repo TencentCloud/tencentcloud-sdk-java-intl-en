@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class HighlightsConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li> 
-     * @return Switch Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
-     * @param Switch Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

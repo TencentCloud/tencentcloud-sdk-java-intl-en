@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class ModifyPersonSampleResponse extends AbstractModel {
 
     /**
-    * Material information.
+    * 
     */
     @SerializedName("Person")
     @Expose
     private AiSamplePerson Person;
 
     /**
-    * Failed processing of facial features.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FailFaceInfoSet")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Material information. 
-     * @return Person Material information.
+     * Get  
+     * @return Person 
      */
     public AiSamplePerson getPerson() {
         return this.Person;
     }
 
     /**
-     * Set Material information.
-     * @param Person Material information.
+     * Set 
+     * @param Person 
      */
     public void setPerson(AiSamplePerson Person) {
         this.Person = Person;
     }
 
     /**
-     * Get Failed processing of facial features.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailFaceInfoSet Failed processing of facial features.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FailFaceInfoSet 
      */
     public AiSampleFailFaceInfo [] getFailFaceInfoSet() {
         return this.FailFaceInfoSet;
     }
 
     /**
-     * Set Failed processing of facial features.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailFaceInfoSet Failed processing of facial features.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FailFaceInfoSet 
      */
     public void setFailFaceInfoSet(AiSampleFailFaceInfo [] FailFaceInfoSet) {
         this.FailFaceInfoSet = FailFaceInfoSet;

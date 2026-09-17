@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li>av1 and H.266 encoding containers currently only support mp4;</li><li>H.266 currently only supports fixed CRF bitrate control method.</li>
+    * 
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * <p>Video frame rate. Value ranges from 0 to 100. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
+    * 
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * <p>Bitrate of video stream. Value ranges from 0 to [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
+    * 
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * <p>Resolution adaptation, available values:</p><li>open: Enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li><li>close: Disable. At this point, Width represents the width of the video, and Height indicates the height.</li>
+    * 
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
     private String ResolutionAdaptive;
 
     /**
-    * <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>
+    * 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * <p>Maximum value of the video stream height (or short side). Value ranges from 0 to [128, 8192]. Measurement unit: px.</p>
+    * 
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * <p>Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:</p><li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Maintain video aspect ratio with edges filled with black.</li><li>white: Maintain video aspect ratio with edge remainder filled with white.</li><li>gauss: Maintain video aspect ratio with Gaussian blur filling for the rest of the edges.</li>
+    * 
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-    * <p>Control factor for constant video bitrate. Value range: [1, 51]. Enter 0 to indicate that it is disabled.</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect).</li><li>When the encoding format of the specified video stream is H.266, this field is required. The recommended value is 28.</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+    * 
     */
     @SerializedName("Vcrf")
     @Expose
     private Long Vcrf;
 
     /**
-    * <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
+    * 
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * <p>Whether the transcoding output remains HDR when the original video is HDR (High Dynamic Range). Value ranges from:</p><li>ON: If the raw file is HDR, the transcoding output remains HDR; otherwise, the output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the raw file is HDR or SDR, the transcoding output is SDR.</li>
+    * 
     */
     @SerializedName("PreserveHDRSwitch")
     @Expose
     private String PreserveHDRSwitch;
 
     /**
-    * <p>Encoding tag, valid only when the video stream encoding format is H.265. Value range:</p><li>hvc1 means hvc1 tag;</li><li>hev1 means hev1 tag.</li>Default value: hvc1.
+    * 
     */
     @SerializedName("CodecTag")
     @Expose
     private String CodecTag;
 
     /**
-    * <p>Gop value unit.</p><p>Enumeration value:</p><ul><li>frame: Represents the number of frames.</li><li>second: Represents seconds.</li></ul><p>Default value: frame</p>
+    * 
     */
     @SerializedName("GopUnit")
     @Expose
     private String GopUnit;
 
     /**
-    * <p>Bitrate control mode.</p><p>Enumeration value:</p><ul><li>VBR: Variable Bit Rate, dynamic bitrate (VBR), adjusts the output bitrate based on the complexity of the video image to ensure higher image quality, suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate, average bitrate, maintains a stable average bitrate of the output video as much as possible but allows short-term bitrate fluctuation, suitable for scenarios where minimizing overall bitrate is needed while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate, constant bitrate, maintains a constant output bitrate regardless of image complexity changes, suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant Rate Factor, constant quality factor, controls video quality by setting a quality factor to achieve constant quality encoding of videos, with bitrate adjustment based on content complexity, suitable for scenarios where maintaining a certain quality is desired.</li></ul><p>Default value: VBR</p>
+    * 
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * <p>Maximum number of consecutive B-frames, set to auto by default. -1 means change to automatic value.</p><p>Value ranges from -1 to 16.</p>
+    * 
     */
     @SerializedName("Bframes")
     @Expose
     private Long Bframes;
 
     /**
-    * <p>Average segment duration. 0 or blank means auto, which automatically chooses appropriate segment duration based on video features such as GOP.</p><p>Value ranges from 0 to 10.</p><p>Measurement unit: seconds.</p><p>Supports only transcoding templates, not currently supported for adaptive bitrate templates.</p>
+    * 
     */
     @SerializedName("HlsTime")
     @Expose
     private Long HlsTime;
 
     /**
-    * <p>A predefined group of encoding tools or features allowed by the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls and mobile video.</li><li>main: Mainstream Profile, provides I, p, and B frames, and supports both interlaced and non-interlaced modes. Primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: Highest encoding level, adds 8X8 prediction to the main Profile and supports custom quantification. Widely used in Blu-ray storage and HDTV scenarios.</li><li>default: Automatic filling along with the original video.</li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+    * 
     */
     @SerializedName("VideoProfile")
     @Expose
     private String VideoProfile;
 
     /**
-     * Get <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li>av1 and H.266 encoding containers currently only support mp4;</li><li>H.266 currently only supports fixed CRF bitrate control method.</li> 
-     * @return Codec <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li>av1 and H.266 encoding containers currently only support mp4;</li><li>H.266 currently only supports fixed CRF bitrate control method.</li>
+     * Get  
+     * @return Codec 
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li>av1 and H.266 encoding containers currently only support mp4;</li><li>H.266 currently only supports fixed CRF bitrate control method.</li>
-     * @param Codec <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li>av1 and H.266 encoding containers currently only support mp4;</li><li>H.266 currently only supports fixed CRF bitrate control method.</li>
+     * Set 
+     * @param Codec 
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get <p>Video frame rate. Value ranges from 0 to 100. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p> 
-     * @return Fps <p>Video frame rate. Value ranges from 0 to 100. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
+     * Get  
+     * @return Fps 
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set <p>Video frame rate. Value ranges from 0 to 100. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
-     * @param Fps <p>Video frame rate. Value ranges from 0 to 100. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
+     * Set 
+     * @param Fps 
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get <p>Bitrate of video stream. Value ranges from 0 to [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p> 
-     * @return Bitrate <p>Bitrate of video stream. Value ranges from 0 to [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
+     * Get  
+     * @return Bitrate 
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set <p>Bitrate of video stream. Value ranges from 0 to [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
-     * @param Bitrate <p>Bitrate of video stream. Value ranges from 0 to [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
+     * Set 
+     * @param Bitrate 
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get <p>Resolution adaptation, available values:</p><li>open: Enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li><li>close: Disable. At this point, Width represents the width of the video, and Height indicates the height.</li> 
-     * @return ResolutionAdaptive <p>Resolution adaptation, available values:</p><li>open: Enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li><li>close: Disable. At this point, Width represents the width of the video, and Height indicates the height.</li>
+     * Get  
+     * @return ResolutionAdaptive 
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
     }
 
     /**
-     * Set <p>Resolution adaptation, available values:</p><li>open: Enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li><li>close: Disable. At this point, Width represents the width of the video, and Height indicates the height.</li>
-     * @param ResolutionAdaptive <p>Resolution adaptation, available values:</p><li>open: Enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li><li>close: Disable. At this point, Width represents the width of the video, and Height indicates the height.</li>
+     * Set 
+     * @param ResolutionAdaptive 
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
-     * Get <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li> 
-     * @return Width <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>
+     * Get  
+     * @return Width 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>
-     * @param Width <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>
+     * Set 
+     * @param Width 
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get <p>Maximum value of the video stream height (or short side). Value ranges from 0 to [128, 8192]. Measurement unit: px.</p> 
-     * @return Height <p>Maximum value of the video stream height (or short side). Value ranges from 0 to [128, 8192]. Measurement unit: px.</p>
+     * Get  
+     * @return Height 
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set <p>Maximum value of the video stream height (or short side). Value ranges from 0 to [128, 8192]. Measurement unit: px.</p>
-     * @param Height <p>Maximum value of the video stream height (or short side). Value ranges from 0 to [128, 8192]. Measurement unit: px.</p>
+     * Set 
+     * @param Height 
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get <p>Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:</p><li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Maintain video aspect ratio with edges filled with black.</li><li>white: Maintain video aspect ratio with edge remainder filled with white.</li><li>gauss: Maintain video aspect ratio with Gaussian blur filling for the rest of the edges.</li> 
-     * @return FillType <p>Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:</p><li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Maintain video aspect ratio with edges filled with black.</li><li>white: Maintain video aspect ratio with edge remainder filled with white.</li><li>gauss: Maintain video aspect ratio with Gaussian blur filling for the rest of the edges.</li>
+     * Get  
+     * @return FillType 
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set <p>Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:</p><li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Maintain video aspect ratio with edges filled with black.</li><li>white: Maintain video aspect ratio with edge remainder filled with white.</li><li>gauss: Maintain video aspect ratio with Gaussian blur filling for the rest of the edges.</li>
-     * @param FillType <p>Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:</p><li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Maintain video aspect ratio with edges filled with black.</li><li>white: Maintain video aspect ratio with edge remainder filled with white.</li><li>gauss: Maintain video aspect ratio with Gaussian blur filling for the rest of the edges.</li>
+     * Set 
+     * @param FillType 
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
     }
 
     /**
-     * Get <p>Control factor for constant video bitrate. Value range: [1, 51]. Enter 0 to indicate that it is disabled.</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect).</li><li>When the encoding format of the specified video stream is H.266, this field is required. The recommended value is 28.</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li> 
-     * @return Vcrf <p>Control factor for constant video bitrate. Value range: [1, 51]. Enter 0 to indicate that it is disabled.</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect).</li><li>When the encoding format of the specified video stream is H.266, this field is required. The recommended value is 28.</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+     * Get  
+     * @return Vcrf 
      */
     public Long getVcrf() {
         return this.Vcrf;
     }
 
     /**
-     * Set <p>Control factor for constant video bitrate. Value range: [1, 51]. Enter 0 to indicate that it is disabled.</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect).</li><li>When the encoding format of the specified video stream is H.266, this field is required. The recommended value is 28.</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
-     * @param Vcrf <p>Control factor for constant video bitrate. Value range: [1, 51]. Enter 0 to indicate that it is disabled.</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect).</li><li>When the encoding format of the specified video stream is H.266, this field is required. The recommended value is 28.</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+     * Set 
+     * @param Vcrf 
      */
     public void setVcrf(Long Vcrf) {
         this.Vcrf = Vcrf;
     }
 
     /**
-     * Get <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p> 
-     * @return Gop <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
+     * Get  
+     * @return Gop 
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
-     * @param Gop <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
+     * Set 
+     * @param Gop 
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get <p>Whether the transcoding output remains HDR when the original video is HDR (High Dynamic Range). Value ranges from:</p><li>ON: If the raw file is HDR, the transcoding output remains HDR; otherwise, the output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the raw file is HDR or SDR, the transcoding output is SDR.</li> 
-     * @return PreserveHDRSwitch <p>Whether the transcoding output remains HDR when the original video is HDR (High Dynamic Range). Value ranges from:</p><li>ON: If the raw file is HDR, the transcoding output remains HDR; otherwise, the output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the raw file is HDR or SDR, the transcoding output is SDR.</li>
+     * Get  
+     * @return PreserveHDRSwitch 
      */
     public String getPreserveHDRSwitch() {
         return this.PreserveHDRSwitch;
     }
 
     /**
-     * Set <p>Whether the transcoding output remains HDR when the original video is HDR (High Dynamic Range). Value ranges from:</p><li>ON: If the raw file is HDR, the transcoding output remains HDR; otherwise, the output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the raw file is HDR or SDR, the transcoding output is SDR.</li>
-     * @param PreserveHDRSwitch <p>Whether the transcoding output remains HDR when the original video is HDR (High Dynamic Range). Value ranges from:</p><li>ON: If the raw file is HDR, the transcoding output remains HDR; otherwise, the output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the raw file is HDR or SDR, the transcoding output is SDR.</li>
+     * Set 
+     * @param PreserveHDRSwitch 
      */
     public void setPreserveHDRSwitch(String PreserveHDRSwitch) {
         this.PreserveHDRSwitch = PreserveHDRSwitch;
     }
 
     /**
-     * Get <p>Encoding tag, valid only when the video stream encoding format is H.265. Value range:</p><li>hvc1 means hvc1 tag;</li><li>hev1 means hev1 tag.</li>Default value: hvc1. 
-     * @return CodecTag <p>Encoding tag, valid only when the video stream encoding format is H.265. Value range:</p><li>hvc1 means hvc1 tag;</li><li>hev1 means hev1 tag.</li>Default value: hvc1.
+     * Get  
+     * @return CodecTag 
      */
     public String getCodecTag() {
         return this.CodecTag;
     }
 
     /**
-     * Set <p>Encoding tag, valid only when the video stream encoding format is H.265. Value range:</p><li>hvc1 means hvc1 tag;</li><li>hev1 means hev1 tag.</li>Default value: hvc1.
-     * @param CodecTag <p>Encoding tag, valid only when the video stream encoding format is H.265. Value range:</p><li>hvc1 means hvc1 tag;</li><li>hev1 means hev1 tag.</li>Default value: hvc1.
+     * Set 
+     * @param CodecTag 
      */
     public void setCodecTag(String CodecTag) {
         this.CodecTag = CodecTag;
     }
 
     /**
-     * Get <p>Gop value unit.</p><p>Enumeration value:</p><ul><li>frame: Represents the number of frames.</li><li>second: Represents seconds.</li></ul><p>Default value: frame</p> 
-     * @return GopUnit <p>Gop value unit.</p><p>Enumeration value:</p><ul><li>frame: Represents the number of frames.</li><li>second: Represents seconds.</li></ul><p>Default value: frame</p>
+     * Get  
+     * @return GopUnit 
      */
     public String getGopUnit() {
         return this.GopUnit;
     }
 
     /**
-     * Set <p>Gop value unit.</p><p>Enumeration value:</p><ul><li>frame: Represents the number of frames.</li><li>second: Represents seconds.</li></ul><p>Default value: frame</p>
-     * @param GopUnit <p>Gop value unit.</p><p>Enumeration value:</p><ul><li>frame: Represents the number of frames.</li><li>second: Represents seconds.</li></ul><p>Default value: frame</p>
+     * Set 
+     * @param GopUnit 
      */
     public void setGopUnit(String GopUnit) {
         this.GopUnit = GopUnit;
     }
 
     /**
-     * Get <p>Bitrate control mode.</p><p>Enumeration value:</p><ul><li>VBR: Variable Bit Rate, dynamic bitrate (VBR), adjusts the output bitrate based on the complexity of the video image to ensure higher image quality, suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate, average bitrate, maintains a stable average bitrate of the output video as much as possible but allows short-term bitrate fluctuation, suitable for scenarios where minimizing overall bitrate is needed while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate, constant bitrate, maintains a constant output bitrate regardless of image complexity changes, suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant Rate Factor, constant quality factor, controls video quality by setting a quality factor to achieve constant quality encoding of videos, with bitrate adjustment based on content complexity, suitable for scenarios where maintaining a certain quality is desired.</li></ul><p>Default value: VBR</p> 
-     * @return Mode <p>Bitrate control mode.</p><p>Enumeration value:</p><ul><li>VBR: Variable Bit Rate, dynamic bitrate (VBR), adjusts the output bitrate based on the complexity of the video image to ensure higher image quality, suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate, average bitrate, maintains a stable average bitrate of the output video as much as possible but allows short-term bitrate fluctuation, suitable for scenarios where minimizing overall bitrate is needed while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate, constant bitrate, maintains a constant output bitrate regardless of image complexity changes, suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant Rate Factor, constant quality factor, controls video quality by setting a quality factor to achieve constant quality encoding of videos, with bitrate adjustment based on content complexity, suitable for scenarios where maintaining a certain quality is desired.</li></ul><p>Default value: VBR</p>
+     * Get  
+     * @return Mode 
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set <p>Bitrate control mode.</p><p>Enumeration value:</p><ul><li>VBR: Variable Bit Rate, dynamic bitrate (VBR), adjusts the output bitrate based on the complexity of the video image to ensure higher image quality, suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate, average bitrate, maintains a stable average bitrate of the output video as much as possible but allows short-term bitrate fluctuation, suitable for scenarios where minimizing overall bitrate is needed while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate, constant bitrate, maintains a constant output bitrate regardless of image complexity changes, suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant Rate Factor, constant quality factor, controls video quality by setting a quality factor to achieve constant quality encoding of videos, with bitrate adjustment based on content complexity, suitable for scenarios where maintaining a certain quality is desired.</li></ul><p>Default value: VBR</p>
-     * @param Mode <p>Bitrate control mode.</p><p>Enumeration value:</p><ul><li>VBR: Variable Bit Rate, dynamic bitrate (VBR), adjusts the output bitrate based on the complexity of the video image to ensure higher image quality, suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate, average bitrate, maintains a stable average bitrate of the output video as much as possible but allows short-term bitrate fluctuation, suitable for scenarios where minimizing overall bitrate is needed while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate, constant bitrate, maintains a constant output bitrate regardless of image complexity changes, suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant Rate Factor, constant quality factor, controls video quality by setting a quality factor to achieve constant quality encoding of videos, with bitrate adjustment based on content complexity, suitable for scenarios where maintaining a certain quality is desired.</li></ul><p>Default value: VBR</p>
+     * Set 
+     * @param Mode 
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get <p>Maximum number of consecutive B-frames, set to auto by default. -1 means change to automatic value.</p><p>Value ranges from -1 to 16.</p> 
-     * @return Bframes <p>Maximum number of consecutive B-frames, set to auto by default. -1 means change to automatic value.</p><p>Value ranges from -1 to 16.</p>
+     * Get  
+     * @return Bframes 
      */
     public Long getBframes() {
         return this.Bframes;
     }
 
     /**
-     * Set <p>Maximum number of consecutive B-frames, set to auto by default. -1 means change to automatic value.</p><p>Value ranges from -1 to 16.</p>
-     * @param Bframes <p>Maximum number of consecutive B-frames, set to auto by default. -1 means change to automatic value.</p><p>Value ranges from -1 to 16.</p>
+     * Set 
+     * @param Bframes 
      */
     public void setBframes(Long Bframes) {
         this.Bframes = Bframes;
     }
 
     /**
-     * Get <p>Average segment duration. 0 or blank means auto, which automatically chooses appropriate segment duration based on video features such as GOP.</p><p>Value ranges from 0 to 10.</p><p>Measurement unit: seconds.</p><p>Supports only transcoding templates, not currently supported for adaptive bitrate templates.</p> 
-     * @return HlsTime <p>Average segment duration. 0 or blank means auto, which automatically chooses appropriate segment duration based on video features such as GOP.</p><p>Value ranges from 0 to 10.</p><p>Measurement unit: seconds.</p><p>Supports only transcoding templates, not currently supported for adaptive bitrate templates.</p>
+     * Get  
+     * @return HlsTime 
      */
     public Long getHlsTime() {
         return this.HlsTime;
     }
 
     /**
-     * Set <p>Average segment duration. 0 or blank means auto, which automatically chooses appropriate segment duration based on video features such as GOP.</p><p>Value ranges from 0 to 10.</p><p>Measurement unit: seconds.</p><p>Supports only transcoding templates, not currently supported for adaptive bitrate templates.</p>
-     * @param HlsTime <p>Average segment duration. 0 or blank means auto, which automatically chooses appropriate segment duration based on video features such as GOP.</p><p>Value ranges from 0 to 10.</p><p>Measurement unit: seconds.</p><p>Supports only transcoding templates, not currently supported for adaptive bitrate templates.</p>
+     * Set 
+     * @param HlsTime 
      */
     public void setHlsTime(Long HlsTime) {
         this.HlsTime = HlsTime;
     }
 
     /**
-     * Get <p>A predefined group of encoding tools or features allowed by the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls and mobile video.</li><li>main: Mainstream Profile, provides I, p, and B frames, and supports both interlaced and non-interlaced modes. Primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: Highest encoding level, adds 8X8 prediction to the main Profile and supports custom quantification. Widely used in Blu-ray storage and HDTV scenarios.</li><li>default: Automatic filling along with the original video.</li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p> 
-     * @return VideoProfile <p>A predefined group of encoding tools or features allowed by the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls and mobile video.</li><li>main: Mainstream Profile, provides I, p, and B frames, and supports both interlaced and non-interlaced modes. Primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: Highest encoding level, adds 8X8 prediction to the main Profile and supports custom quantification. Widely used in Blu-ray storage and HDTV scenarios.</li><li>default: Automatic filling along with the original video.</li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+     * Get  
+     * @return VideoProfile 
      */
     public String getVideoProfile() {
         return this.VideoProfile;
     }
 
     /**
-     * Set <p>A predefined group of encoding tools or features allowed by the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls and mobile video.</li><li>main: Mainstream Profile, provides I, p, and B frames, and supports both interlaced and non-interlaced modes. Primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: Highest encoding level, adds 8X8 prediction to the main Profile and supports custom quantification. Widely used in Blu-ray storage and HDTV scenarios.</li><li>default: Automatic filling along with the original video.</li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
-     * @param VideoProfile <p>A predefined group of encoding tools or features allowed by the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls and mobile video.</li><li>main: Mainstream Profile, provides I, p, and B frames, and supports both interlaced and non-interlaced modes. Primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: Highest encoding level, adds 8X8 prediction to the main Profile and supports custom quantification. Widely used in Blu-ray storage and HDTV scenarios.</li><li>default: Automatic filling along with the original video.</li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+     * Set 
+     * @param VideoProfile 
      */
     public void setVideoProfile(String VideoProfile) {
         this.VideoProfile = VideoProfile;

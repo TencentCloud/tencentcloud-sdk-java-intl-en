@@ -24,348 +24,253 @@ import java.util.HashMap;
 public class VideoEnhanceConfig extends AbstractModel {
 
     /**
-    * Enhancement scenario configuration. Valid values:
-<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
-<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
-<li>Input of a null string indicates that the enhancement scenario is not used.</li>
+    * 
     */
     @SerializedName("EnhanceScenarioType")
     @Expose
     private String EnhanceScenarioType;
 
     /**
-    * Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SuperResolution")
     @Expose
     private SuperResolutionInfo SuperResolution;
 
     /**
-    * HDR configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Hdr")
     @Expose
     private HDRInfo Hdr;
 
     /**
-    * Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Denoise")
     @Expose
     private VideoDenoiseInfo Denoise;
 
     /**
-    * Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ImageQualityEnhance")
     @Expose
     private ImageQualityEnhanceInfo ImageQualityEnhance;
 
     /**
-    * Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ColorEnhance")
     @Expose
     private ColorEnhanceInfo ColorEnhance;
 
     /**
-    * Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("LowLightEnhance")
     @Expose
     private LowLightEnhanceInfo LowLightEnhance;
 
     /**
-    * Remove scratch configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ScratchRepair")
     @Expose
     private ScratchRepairInfo ScratchRepair;
 
     /**
-    * Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ArtifactRepair")
     @Expose
     private ArtifactRepairInfo ArtifactRepair;
 
     /**
-    * Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DiffusionEnhance")
     @Expose
     private DiffusionEnhanceInfo DiffusionEnhance;
 
     /**
-    * Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FrameRateWithDen")
     @Expose
     private FrameRateWithDenInfo FrameRateWithDen;
 
     /**
-     * Get Enhancement scenario configuration. Valid values:
-<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
-<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
-<li>Input of a null string indicates that the enhancement scenario is not used.</li> 
-     * @return EnhanceScenarioType Enhancement scenario configuration. Valid values:
-<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
-<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
-<li>Input of a null string indicates that the enhancement scenario is not used.</li>
+     * Get  
+     * @return EnhanceScenarioType 
      */
     public String getEnhanceScenarioType() {
         return this.EnhanceScenarioType;
     }
 
     /**
-     * Set Enhancement scenario configuration. Valid values:
-<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
-<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
-<li>Input of a null string indicates that the enhancement scenario is not used.</li>
-     * @param EnhanceScenarioType Enhancement scenario configuration. Valid values:
-<li>common: general enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall video quality.</li>
-<li>AIGC: overall resolution enhancement. It leverages AI technology to improve the overall video resolution and enhance image clarity.</li>
-<li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
-<li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
-<li>game (video): fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies), obtain smooth UHD effect, target the demand for UHD video from broadcasting/TV Stations and OTT, generate 4K 60fps HDR Ultra-High-Definition Standard Video. Support broadcasting scenario format standards.</li>
-<li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
-<li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
-<li>Input of a null string indicates that the enhancement scenario is not used.</li>
+     * Set 
+     * @param EnhanceScenarioType 
      */
     public void setEnhanceScenarioType(String EnhanceScenarioType) {
         this.EnhanceScenarioType = EnhanceScenarioType;
     }
 
     /**
-     * Get Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuperResolution Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SuperResolution 
      */
     public SuperResolutionInfo getSuperResolution() {
         return this.SuperResolution;
     }
 
     /**
-     * Set Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuperResolution Super-resolution configuration. The video will not be processed when the source resolution exceeds the target resolution. Note that large model enhancement cannot be enabled simultaneously.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SuperResolution 
      */
     public void setSuperResolution(SuperResolutionInfo SuperResolution) {
         this.SuperResolution = SuperResolution;
     }
 
     /**
-     * Get HDR configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Hdr HDR configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Hdr 
      */
     public HDRInfo getHdr() {
         return this.Hdr;
     }
 
     /**
-     * Set HDR configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Hdr HDR configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Hdr 
      */
     public void setHdr(HDRInfo Hdr) {
         this.Hdr = Hdr;
     }
 
     /**
-     * Get Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Denoise Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Denoise 
      */
     public VideoDenoiseInfo getDenoise() {
         return this.Denoise;
     }
 
     /**
-     * Set Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Denoise Video noise reduction configuration. Note that it cannot be enabled simultaneously with large model enhancement.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Denoise 
      */
     public void setDenoise(VideoDenoiseInfo Denoise) {
         this.Denoise = Denoise;
     }
 
     /**
-     * Get Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ImageQualityEnhance 
      */
     public ImageQualityEnhanceInfo getImageQualityEnhance() {
         return this.ImageQualityEnhance;
     }
 
     /**
-     * Set Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ImageQualityEnhance 
      */
     public void setImageQualityEnhance(ImageQualityEnhanceInfo ImageQualityEnhance) {
         this.ImageQualityEnhance = ImageQualityEnhance;
     }
 
     /**
-     * Get Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ColorEnhance Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ColorEnhance 
      */
     public ColorEnhanceInfo getColorEnhance() {
         return this.ColorEnhance;
     }
 
     /**
-     * Set Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ColorEnhance Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ColorEnhance 
      */
     public void setColorEnhance(ColorEnhanceInfo ColorEnhance) {
         this.ColorEnhance = ColorEnhance;
     }
 
     /**
-     * Get Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LowLightEnhance Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return LowLightEnhance 
      */
     public LowLightEnhanceInfo getLowLightEnhance() {
         return this.LowLightEnhance;
     }
 
     /**
-     * Set Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LowLightEnhance Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param LowLightEnhance 
      */
     public void setLowLightEnhance(LowLightEnhanceInfo LowLightEnhance) {
         this.LowLightEnhance = LowLightEnhance;
     }
 
     /**
-     * Get Remove scratch configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScratchRepair Remove scratch configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ScratchRepair 
      */
     public ScratchRepairInfo getScratchRepair() {
         return this.ScratchRepair;
     }
 
     /**
-     * Set Remove scratch configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScratchRepair Remove scratch configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ScratchRepair 
      */
     public void setScratchRepair(ScratchRepairInfo ScratchRepair) {
         this.ScratchRepair = ScratchRepair;
     }
 
     /**
-     * Get Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ArtifactRepair Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ArtifactRepair 
      */
     public ArtifactRepairInfo getArtifactRepair() {
         return this.ArtifactRepair;
     }
 
     /**
-     * Set Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ArtifactRepair Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ArtifactRepair 
      */
     public void setArtifactRepair(ArtifactRepairInfo ArtifactRepair) {
         this.ArtifactRepair = ArtifactRepair;
     }
 
     /**
-     * Get Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiffusionEnhance Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DiffusionEnhance 
      */
     public DiffusionEnhanceInfo getDiffusionEnhance() {
         return this.DiffusionEnhance;
     }
 
     /**
-     * Set Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiffusionEnhance Large model enhancement configuration. Note that you can configure only one of the large model, comprehensive enhancement, and deburr options. It cannot intersect with super-resolution or noise reduction.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DiffusionEnhance 
      */
     public void setDiffusionEnhance(DiffusionEnhanceInfo DiffusionEnhance) {
         this.DiffusionEnhance = DiffusionEnhance;
     }
 
     /**
-     * Get Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FrameRateWithDen Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FrameRateWithDen 
      */
     public FrameRateWithDenInfo getFrameRateWithDen() {
         return this.FrameRateWithDen;
     }
 
     /**
-     * Set Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FrameRateWithDen Frame interpolation frame rate configuration supports fractions. Note that it is mutually exclusive with FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FrameRateWithDen 
      */
     public void setFrameRateWithDen(FrameRateWithDenInfo FrameRateWithDen) {
         this.FrameRateWithDen = FrameRateWithDen;

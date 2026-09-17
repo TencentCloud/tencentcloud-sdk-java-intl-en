@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class ImageCenterCut extends AbstractModel {
 
     /**
-    * The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+    * 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+    * 
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * The radius of the output image. This parameter is valid if `Type` is `Circle`.
+    * 
     */
     @SerializedName("Radius")
     @Expose
     private Long Radius;
 
     /**
-     * Get The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li> 
-     * @return Type The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
-     * @param Type The cropping type. Valid values:
-<li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-<li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`. 
-     * @return Width The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+     * Get  
+     * @return Width 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
-     * @param Width The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+     * Set 
+     * @param Width 
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`. 
-     * @return Height The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+     * Get  
+     * @return Height 
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
-     * @param Height The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+     * Set 
+     * @param Height 
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get The radius of the output image. This parameter is valid if `Type` is `Circle`. 
-     * @return Radius The radius of the output image. This parameter is valid if `Type` is `Circle`.
+     * Get  
+     * @return Radius 
      */
     public Long getRadius() {
         return this.Radius;
     }
 
     /**
-     * Set The radius of the output image. This parameter is valid if `Type` is `Circle`.
-     * @param Radius The radius of the output image. This parameter is valid if `Type` is `Circle`.
+     * Set 
+     * @param Radius 
      */
     public void setRadius(Long Radius) {
         this.Radius = Radius;

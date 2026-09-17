@@ -39,7 +39,7 @@ public enum FaceidErrorCode {
      /* Comparison library source maintaining, temporarily unavailable */
      FAILEDOPERATION_COMPARELIBSERVICEUNAVAILABLE("FailedOperation.CompareLibServiceUnavailable"),
      
-     /* The comparison similarity did not reach the passing standard. */
+     /* The similarity does not reach the pass threshold. */
      FAILEDOPERATION_COMPARELOWSIMILARITY("FailedOperation.CompareLowSimilarity"),
      
      /* Error calling the comparison engine API. */
@@ -111,19 +111,19 @@ public enum FaceidErrorCode {
      /* Token not found */
      FAILEDOPERATION_INVALIDTOKENPARAMETER("FailedOperation.InvalidTokenParameter"),
      
-     /* Multiple faces are detected. */
+     /* Multiple faces detected. */
      FAILEDOPERATION_LIFEPHOTODETECTFACES("FailedOperation.LifePhotoDetectFaces"),
      
      /* Real person comparison failed. */
      FAILEDOPERATION_LIFEPHOTODETECTFAKE("FailedOperation.LifePhotoDetectFake"),
      
-     /* Failed to detect a full face. */
+     /* Full face not detected. */
      FAILEDOPERATION_LIFEPHOTODETECTNOFACES("FailedOperation.LifePhotoDetectNoFaces"),
      
-     /* The resolution of the image passed in is too low. Please upload a new one. */
+     /* The uploaded image resolution is too low. Upload it again. */
      FAILEDOPERATION_LIFEPHOTOPOORQUALITY("FailedOperation.LifePhotoPoorQuality"),
      
-     /* The image passed in is too large or too small. */
+     /* Uploaded image too large or too small. */
      FAILEDOPERATION_LIFEPHOTOSIZEERROR("FailedOperation.LifePhotoSizeError"),
      
      /* The face is not fully exposed. */
@@ -246,7 +246,7 @@ public enum FaceidErrorCode {
      /* The image passed in is too large or too small. */
      INTERNALERROR_LIFEPHOTOSIZEERROR("InternalError.LifePhotoSizeError"),
      
-     /* Unknown internal error. */
+     /* Internal unknown error. */
      INTERNALERROR_UNKNOWN("InternalError.UnKnown"),
      
      /* Invalid parameter. */

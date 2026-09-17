@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UserDefineConfigureInfo extends AbstractModel {
 
     /**
-    * User-defined character video moderation control parameter.
+    * 
     */
     @SerializedName("FaceReviewInfo")
     @Expose
     private UserDefineFaceReviewTemplateInfo FaceReviewInfo;
 
     /**
-    * User custom voice video moderation control parameter.
+    * 
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private UserDefineAsrTextReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * User custom text video moderation control parameter.
+    * 
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private UserDefineOcrTextReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get User-defined character video moderation control parameter. 
-     * @return FaceReviewInfo User-defined character video moderation control parameter.
+     * Get  
+     * @return FaceReviewInfo 
      */
     public UserDefineFaceReviewTemplateInfo getFaceReviewInfo() {
         return this.FaceReviewInfo;
     }
 
     /**
-     * Set User-defined character video moderation control parameter.
-     * @param FaceReviewInfo User-defined character video moderation control parameter.
+     * Set 
+     * @param FaceReviewInfo 
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo FaceReviewInfo) {
         this.FaceReviewInfo = FaceReviewInfo;
     }
 
     /**
-     * Get User custom voice video moderation control parameter. 
-     * @return AsrReviewInfo User custom voice video moderation control parameter.
+     * Get  
+     * @return AsrReviewInfo 
      */
     public UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set User custom voice video moderation control parameter.
-     * @param AsrReviewInfo User custom voice video moderation control parameter.
+     * Set 
+     * @param AsrReviewInfo 
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get User custom text video moderation control parameter. 
-     * @return OcrReviewInfo User custom text video moderation control parameter.
+     * Get  
+     * @return OcrReviewInfo 
      */
     public UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set User custom text video moderation control parameter.
-     * @param OcrReviewInfo User custom text video moderation control parameter.
+     * Set 
+     * @param OcrReviewInfo 
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskCoverInput extends AbstractModel {
 
     /**
-    * Intelligent video cover generating template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Intelligent video cover generating template ID. 
-     * @return Definition Intelligent video cover generating template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Intelligent video cover generating template ID.
-     * @param Definition Intelligent video cover generating template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

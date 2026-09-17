@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class AiSampleFaceOperation extends AbstractModel {
 
     /**
-    * Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Face ID set, which is required if `Type` is `delete`.
+    * 
     */
     @SerializedName("FaceIds")
     @Expose
     private String [] FaceIds;
 
     /**
-    * Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
-<li>When Type is add or reset, this field is required;</li>
-<li>Array length limit: 5 pictures. </li>
-Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
+    * 
     */
     @SerializedName("FaceContents")
     @Expose
     private String [] FaceContents;
 
     /**
-     * Get Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data. 
-     * @return Type Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
-     * @param Type Operation type. Valid values: add, delete, reset. The `reset` operation will clear the existing face data of a figure and add `FaceContents` as the specified face data.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Face ID set, which is required if `Type` is `delete`. 
-     * @return FaceIds Face ID set, which is required if `Type` is `delete`.
+     * Get  
+     * @return FaceIds 
      */
     public String [] getFaceIds() {
         return this.FaceIds;
     }
 
     /**
-     * Set Face ID set, which is required if `Type` is `delete`.
-     * @param FaceIds Face ID set, which is required if `Type` is `delete`.
+     * Set 
+     * @param FaceIds 
      */
     public void setFaceIds(String [] FaceIds) {
         this.FaceIds = FaceIds;
     }
 
     /**
-     * Get Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
-<li>When Type is add or reset, this field is required;</li>
-<li>Array length limit: 5 pictures. </li>
-Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200. 
-     * @return FaceContents Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
-<li>When Type is add or reset, this field is required;</li>
-<li>Array length limit: 5 pictures. </li>
-Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
+     * Get  
+     * @return FaceContents 
      */
     public String [] getFaceContents() {
         return this.FaceContents;
     }
 
     /**
-     * Set Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
-<li>When Type is add or reset, this field is required;</li>
-<li>Array length limit: 5 pictures. </li>
-Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
-     * @param FaceContents Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
-<li>When Type is add or reset, this field is required;</li>
-<li>Array length limit: 5 pictures. </li>
-Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
+     * Set 
+     * @param FaceContents 
      */
     public void setFaceContents(String [] FaceContents) {
         this.FaceContents = FaceContents;

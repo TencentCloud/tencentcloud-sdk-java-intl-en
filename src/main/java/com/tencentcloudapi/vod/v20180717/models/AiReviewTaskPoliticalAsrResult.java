@@ -24,166 +24,161 @@ import java.util.HashMap;
 public class AiReviewTaskPoliticalAsrResult extends AbstractModel {
 
     /**
-    * Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Input for ASR-based recognition of politically sensitive content
+    * 
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalAsrTaskInput Input;
 
     /**
-    * Output for ASR-based recognition of politically sensitive content
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiReviewPoliticalAsrTaskOutput Output;
 
     /**
-    * The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100.
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-     * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
-     * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145). 
-     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`. 
-     * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-     * @param ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Input for ASR-based recognition of politically sensitive content 
-     * @return Input Input for ASR-based recognition of politically sensitive content
+     * Get  
+     * @return Input 
      */
     public AiReviewPoliticalAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for ASR-based recognition of politically sensitive content
-     * @param Input Input for ASR-based recognition of politically sensitive content
+     * Set 
+     * @param Input 
      */
     public void setInput(AiReviewPoliticalAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output for ASR-based recognition of politically sensitive content 
-     * @return Output Output for ASR-based recognition of politically sensitive content
+     * Get  
+     * @return Output 
      */
     public AiReviewPoliticalAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output for ASR-based recognition of politically sensitive content
-     * @param Output Output for ASR-based recognition of politically sensitive content
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiReviewPoliticalAsrTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100. 
-     * @return Progress The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100.
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100.
-     * @param Progress The progress of an ASR-based moderation task (politically sensitive content). Value range: 0-100.
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

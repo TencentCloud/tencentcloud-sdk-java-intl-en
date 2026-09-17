@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DeleteNatGatewayRequest extends AbstractModel {
 
     /**
-    * The ID of the NAT gateway, such as `nat-df45454`.
+    * NAT gateway ID, for example, `nat-df45454`.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-     * Get The ID of the NAT gateway, such as `nat-df45454`. 
-     * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+    * Ignores operation risks.
+    */
+    @SerializedName("IgnoreOperationRisk")
+    @Expose
+    private Boolean IgnoreOperationRisk;
+
+    /**
+     * Get NAT gateway ID, for example, `nat-df45454`. 
+     * @return NatGatewayId NAT gateway ID, for example, `nat-df45454`.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set The ID of the NAT gateway, such as `nat-df45454`.
-     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+     * Set NAT gateway ID, for example, `nat-df45454`.
+     * @param NatGatewayId NAT gateway ID, for example, `nat-df45454`.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
+    }
+
+    /**
+     * Get Ignores operation risks. 
+     * @return IgnoreOperationRisk Ignores operation risks.
+     */
+    public Boolean getIgnoreOperationRisk() {
+        return this.IgnoreOperationRisk;
+    }
+
+    /**
+     * Set Ignores operation risks.
+     * @param IgnoreOperationRisk Ignores operation risks.
+     */
+    public void setIgnoreOperationRisk(Boolean IgnoreOperationRisk) {
+        this.IgnoreOperationRisk = IgnoreOperationRisk;
     }
 
     public DeleteNatGatewayRequest() {
@@ -57,6 +80,9 @@ public class DeleteNatGatewayRequest extends AbstractModel {
         if (source.NatGatewayId != null) {
             this.NatGatewayId = new String(source.NatGatewayId);
         }
+        if (source.IgnoreOperationRisk != null) {
+            this.IgnoreOperationRisk = new Boolean(source.IgnoreOperationRisk);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteNatGatewayRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+        this.setParamSimple(map, prefix + "IgnoreOperationRisk", this.IgnoreOperationRisk);
 
     }
 }

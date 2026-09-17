@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class RefreshDirectConnectGatewayRouteToNatGatewayRequest extends AbstractModel {
 
     /**
-    * VPC ID
+    * VPC ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The NAT gateway ID.
+    * NAT gateway ID.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+    * Whether it is pre-refresh. Valid values: true (yes) and false (no).
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get VPC ID. 
+     * @return VpcId VPC ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set VPC ID.
+     * @param VpcId VPC ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The NAT gateway ID. 
-     * @return NatGatewayId The NAT gateway ID.
+     * Get NAT gateway ID. 
+     * @return NatGatewayId NAT gateway ID.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set The NAT gateway ID.
-     * @param NatGatewayId The NAT gateway ID.
+     * Set NAT gateway ID.
+     * @param NatGatewayId NAT gateway ID.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no) 
-     * @return DryRun Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+     * Get Whether it is pre-refresh. Valid values: true (yes) and false (no). 
+     * @return DryRun Whether it is pre-refresh. Valid values: true (yes) and false (no).
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
-     * @param DryRun Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+     * Set Whether it is pre-refresh. Valid values: true (yes) and false (no).
+     * @param DryRun Whether it is pre-refresh. Valid values: true (yes) and false (no).
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

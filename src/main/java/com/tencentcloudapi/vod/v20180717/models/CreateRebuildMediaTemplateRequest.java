@@ -24,260 +24,230 @@ import java.util.HashMap;
 public class CreateRebuildMediaTemplateRequest extends AbstractModel {
 
     /**
-    * Container format. Valid values: mp4, flv, and hls.
+    * 
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Audio and video quality rebirth template name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Audio-visual quality revival video control information.
+    * 
     */
     @SerializedName("RebuildVideoInfo")
     @Expose
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * Audio-visual quality revival audio control information.
+    * 
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
     private RebuildAudioInfo RebuildAudioInfo;
 
     /**
-    * Output target video control information.
+    * 
     */
     @SerializedName("TargetVideoInfo")
     @Expose
     private RebuildMediaTargetVideoStream TargetVideoInfo;
 
     /**
-    * Output target audio control information.
+    * 
     */
     @SerializedName("TargetAudioInfo")
     @Expose
     private RebuildMediaTargetAudioStream TargetAudioInfo;
 
     /**
-    * Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0.
+    * 
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Remove audio data. Value range:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0.
+    * 
     */
     @SerializedName("RemoveAudio")
     @Expose
     private String RemoveAudio;
 
     /**
-     * Get Container format. Valid values: mp4, flv, and hls. 
-     * @return Container Container format. Valid values: mp4, flv, and hls.
+     * Get  
+     * @return Container 
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container format. Valid values: mp4, flv, and hls.
-     * @param Container Container format. Valid values: mp4, flv, and hls.
+     * Set 
+     * @param Container 
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Audio and video quality rebirth template name. 
-     * @return Name Audio and video quality rebirth template name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio and video quality rebirth template name.
-     * @param Name Audio and video quality rebirth template name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description. 
-     * @return Comment Template description.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description.
-     * @param Comment Template description.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Audio-visual quality revival video control information. 
-     * @return RebuildVideoInfo Audio-visual quality revival video control information.
+     * Get  
+     * @return RebuildVideoInfo 
      */
     public RebuildVideoInfo getRebuildVideoInfo() {
         return this.RebuildVideoInfo;
     }
 
     /**
-     * Set Audio-visual quality revival video control information.
-     * @param RebuildVideoInfo Audio-visual quality revival video control information.
+     * Set 
+     * @param RebuildVideoInfo 
      */
     public void setRebuildVideoInfo(RebuildVideoInfo RebuildVideoInfo) {
         this.RebuildVideoInfo = RebuildVideoInfo;
     }
 
     /**
-     * Get Audio-visual quality revival audio control information. 
-     * @return RebuildAudioInfo Audio-visual quality revival audio control information.
+     * Get  
+     * @return RebuildAudioInfo 
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set Audio-visual quality revival audio control information.
-     * @param RebuildAudioInfo Audio-visual quality revival audio control information.
+     * Set 
+     * @param RebuildAudioInfo 
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;
     }
 
     /**
-     * Get Output target video control information. 
-     * @return TargetVideoInfo Output target video control information.
+     * Get  
+     * @return TargetVideoInfo 
      */
     public RebuildMediaTargetVideoStream getTargetVideoInfo() {
         return this.TargetVideoInfo;
     }
 
     /**
-     * Set Output target video control information.
-     * @param TargetVideoInfo Output target video control information.
+     * Set 
+     * @param TargetVideoInfo 
      */
     public void setTargetVideoInfo(RebuildMediaTargetVideoStream TargetVideoInfo) {
         this.TargetVideoInfo = TargetVideoInfo;
     }
 
     /**
-     * Get Output target audio control information. 
-     * @return TargetAudioInfo Output target audio control information.
+     * Get  
+     * @return TargetAudioInfo 
      */
     public RebuildMediaTargetAudioStream getTargetAudioInfo() {
         return this.TargetAudioInfo;
     }
 
     /**
-     * Set Output target audio control information.
-     * @param TargetAudioInfo Output target audio control information.
+     * Set 
+     * @param TargetAudioInfo 
      */
     public void setTargetAudioInfo(RebuildMediaTargetAudioStream TargetAudioInfo) {
         this.TargetAudioInfo = TargetAudioInfo;
     }
 
     /**
-     * Get Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0. 
-     * @return RemoveVideo Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0.
+     * Get  
+     * @return RemoveVideo 
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0.
-     * @param RemoveVideo Whether to remove video data. Available values:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0.
+     * Set 
+     * @param RemoveVideo 
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Remove audio data. Value range:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0. 
-     * @return RemoveAudio Remove audio data. Value range:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0.
+     * Get  
+     * @return RemoveAudio 
      */
     public String getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Remove audio data. Value range:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0.
-     * @param RemoveAudio Remove audio data. Value range:
-<li>`0`: reserved</li>
-<li>1: Remove</li>
-The default value is 0.
+     * Set 
+     * @param RemoveAudio 
      */
     public void setRemoveAudio(String RemoveAudio) {
         this.RemoveAudio = RemoveAudio;

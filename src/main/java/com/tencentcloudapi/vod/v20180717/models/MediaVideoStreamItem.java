@@ -24,191 +24,166 @@ import java.util.HashMap;
 public class MediaVideoStreamItem extends AbstractModel {
 
     /**
-    * Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Bitrate of the video stream. Unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video stream height in px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video stream width in px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video stream encoding format, for example, h264.
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Frame rate. Measurement unit: hz.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * The codec tag. This parameter is valid only if `Codec` is `hevc`.
+    * Encoding tag. It is valid only when Codec is hevc.
     */
     @SerializedName("CodecTag")
     @Expose
     private String CodecTag;
 
     /**
-    * Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+    * Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
     */
     @SerializedName("DynamicRangeInfo")
     @Expose
     private DynamicRangeInfo DynamicRangeInfo;
 
     /**
-     * Get Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Bitrate Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Bitrate of the video stream. Unit: bps. 
+     * @return Bitrate Bitrate of the video stream. Unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Bitrate Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Bitrate of the video stream. Unit: bps.
+     * @param Bitrate Bitrate of the video stream. Unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Height Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Video stream height in px. 
+     * @return Height Video stream height in px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Height Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Video stream height in px.
+     * @param Height Video stream height in px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Width Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Video stream width in px. 
+     * @return Width Video stream width in px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Width Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Video stream width in px.
+     * @param Width Video stream width in px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Codec Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Video stream encoding format, for example, h264. 
+     * @return Codec Video stream encoding format, for example, h264.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Codec Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Video stream encoding format, for example, h264.
+     * @param Codec Video stream encoding format, for example, h264.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Fps Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Frame rate. Measurement unit: hz. 
+     * @return Fps Frame rate. Measurement unit: hz.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Fps Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Frame rate. Measurement unit: hz.
+     * @param Fps Frame rate. Measurement unit: hz.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get The codec tag. This parameter is valid only if `Codec` is `hevc`. 
-     * @return CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+     * Get Encoding tag. It is valid only when Codec is hevc. 
+     * @return CodecTag Encoding tag. It is valid only when Codec is hevc.
      */
     public String getCodecTag() {
         return this.CodecTag;
     }
 
     /**
-     * Set The codec tag. This parameter is valid only if `Codec` is `hevc`.
-     * @param CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+     * Set Encoding tag. It is valid only when Codec is hevc.
+     * @param CodecTag Encoding tag. It is valid only when Codec is hevc.
      */
     public void setCodecTag(String CodecTag) {
         this.CodecTag = CodecTag;
     }
 
     /**
-     * Get Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li> 
-     * @return DynamicRangeInfo Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+     * Get Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li> 
+     * @return DynamicRangeInfo Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public DynamicRangeInfo getDynamicRangeInfo() {
         return this.DynamicRangeInfo;
     }
 
     /**
-     * Set Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
-     * @param DynamicRangeInfo Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+     * Set Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+     * @param DynamicRangeInfo Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public void setDynamicRangeInfo(DynamicRangeInfo DynamicRangeInfo) {
         this.DynamicRangeInfo = DynamicRangeInfo;

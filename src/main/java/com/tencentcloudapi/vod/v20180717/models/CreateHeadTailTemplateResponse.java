@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateHeadTailTemplateResponse extends AbstractModel {
 
     /**
-    * Opening and ending template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateHeadTailTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Opening and ending template ID. 
-     * @return Definition Opening and ending template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Opening and ending template ID.
-     * @param Definition Opening and ending template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

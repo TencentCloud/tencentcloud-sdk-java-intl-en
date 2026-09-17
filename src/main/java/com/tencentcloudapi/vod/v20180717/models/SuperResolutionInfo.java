@@ -24,99 +24,69 @@ import java.util.HashMap;
 public class SuperResolutionInfo extends AbstractModel {
 
     /**
-    * Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+    * 
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-     * Get Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li> 
-     * @return Switch Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
-     * @param Switch Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`. 
-     * @return Type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
-     * @param Type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`. 
-     * @return Size The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+     * Get  
+     * @return Size 
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
-     * @param Size The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+     * Set 
+     * @param Size 
      */
     public void setSize(Long Size) {
         this.Size = Size;

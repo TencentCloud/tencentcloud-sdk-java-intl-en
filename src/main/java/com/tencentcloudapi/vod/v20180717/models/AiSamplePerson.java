@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class AiSamplePerson extends AbstractModel {
 
     /**
-    * Figure ID.
+    * 
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * Figure name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Figure description.
+    * 
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Face information.
+    * 
     */
     @SerializedName("FaceInfoSet")
     @Expose
     private AiSampleFaceInfo [] FaceInfoSet;
 
     /**
-    * Figure tag.
+    * 
     */
     @SerializedName("TagSet")
     @Expose
     private String [] TagSet;
 
     /**
-    * Use case.
+    * 
     */
     @SerializedName("UsageSet")
     @Expose
     private String [] UsageSet;
 
     /**
-    * Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Figure ID. 
-     * @return PersonId Figure ID.
+     * Get  
+     * @return PersonId 
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Figure ID.
-     * @param PersonId Figure ID.
+     * Set 
+     * @param PersonId 
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get Figure name. 
-     * @return Name Figure name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Figure name.
-     * @param Name Figure name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Figure description. 
-     * @return Description Figure description.
+     * Get  
+     * @return Description 
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Figure description.
-     * @param Description Figure description.
+     * Set 
+     * @param Description 
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Face information. 
-     * @return FaceInfoSet Face information.
+     * Get  
+     * @return FaceInfoSet 
      */
     public AiSampleFaceInfo [] getFaceInfoSet() {
         return this.FaceInfoSet;
     }
 
     /**
-     * Set Face information.
-     * @param FaceInfoSet Face information.
+     * Set 
+     * @param FaceInfoSet 
      */
     public void setFaceInfoSet(AiSampleFaceInfo [] FaceInfoSet) {
         this.FaceInfoSet = FaceInfoSet;
     }
 
     /**
-     * Get Figure tag. 
-     * @return TagSet Figure tag.
+     * Get  
+     * @return TagSet 
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Figure tag.
-     * @param TagSet Figure tag.
+     * Set 
+     * @param TagSet 
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get Use case. 
-     * @return UsageSet Use case.
+     * Get  
+     * @return UsageSet 
      */
     public String [] getUsageSet() {
         return this.UsageSet;
     }
 
     /**
-     * Set Use case.
-     * @param UsageSet Use case.
+     * Set 
+     * @param UsageSet 
      */
     public void setUsageSet(String [] UsageSet) {
         this.UsageSet = UsageSet;
     }
 
     /**
-     * Get Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

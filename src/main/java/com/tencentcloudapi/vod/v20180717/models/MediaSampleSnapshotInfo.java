@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class MediaSampleSnapshotInfo extends AbstractModel {
 
     /**
-    * Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SampleSnapshotSet")
     @Expose
     private MediaSampleSnapshotItem [] SampleSnapshotSet;
 
     /**
-     * Get Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SampleSnapshotSet Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SampleSnapshotSet 
      */
     public MediaSampleSnapshotItem [] getSampleSnapshotSet() {
         return this.SampleSnapshotSet;
     }
 
     /**
-     * Set Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SampleSnapshotSet Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SampleSnapshotSet 
      */
     public void setSampleSnapshotSet(MediaSampleSnapshotItem [] SampleSnapshotSet) {
         this.SampleSnapshotSet = SampleSnapshotSet;

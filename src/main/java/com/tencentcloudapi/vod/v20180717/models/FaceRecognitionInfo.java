@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class FaceRecognitionInfo extends AbstractModel {
 
     /**
-    * <p>Face recognition task list</p>
+    * 
     */
     @SerializedName("FaceRecognitionTasks")
     @Expose
     private FaceRecognitionTask [] FaceRecognitionTasks;
 
     /**
-     * Get <p>Face recognition task list</p> 
-     * @return FaceRecognitionTasks <p>Face recognition task list</p>
+     * Get  
+     * @return FaceRecognitionTasks 
      */
     public FaceRecognitionTask [] getFaceRecognitionTasks() {
         return this.FaceRecognitionTasks;
     }
 
     /**
-     * Set <p>Face recognition task list</p>
-     * @param FaceRecognitionTasks <p>Face recognition task list</p>
+     * Set 
+     * @param FaceRecognitionTasks 
      */
     public void setFaceRecognitionTasks(FaceRecognitionTask [] FaceRecognitionTasks) {
         this.FaceRecognitionTasks = FaceRecognitionTasks;

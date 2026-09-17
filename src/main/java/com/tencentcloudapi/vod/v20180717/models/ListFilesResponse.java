@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ListFilesResponse extends AbstractModel {
 
     /**
-    * Whether the response entry is truncated.
+    * 
     */
     @SerializedName("IsTruncated")
     @Expose
     private Boolean IsTruncated;
 
     /**
-    * This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request.
+    * 
     */
     @SerializedName("NextMarker")
     @Expose
     private String NextMarker;
 
     /**
-    * The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request.
+    * 
     */
     @SerializedName("CommonPrefixes")
     @Expose
     private String [] CommonPrefixes;
 
     /**
-    * Object entry.
+    * 
     */
     @SerializedName("Contents")
     @Expose
@@ -59,64 +59,64 @@ public class ListFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether the response entry is truncated. 
-     * @return IsTruncated Whether the response entry is truncated.
+     * Get  
+     * @return IsTruncated 
      */
     public Boolean getIsTruncated() {
         return this.IsTruncated;
     }
 
     /**
-     * Set Whether the response entry is truncated.
-     * @param IsTruncated Whether the response entry is truncated.
+     * Set 
+     * @param IsTruncated 
      */
     public void setIsTruncated(Boolean IsTruncated) {
         this.IsTruncated = IsTruncated;
     }
 
     /**
-     * Get This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request. 
-     * @return NextMarker This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request.
+     * Get  
+     * @return NextMarker 
      */
     public String getNextMarker() {
         return this.NextMarker;
     }
 
     /**
-     * Set This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request.
-     * @param NextMarker This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request.
+     * Set 
+     * @param NextMarker 
      */
     public void setNextMarker(String NextMarker) {
         this.NextMarker = NextMarker;
     }
 
     /**
-     * Get The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request. 
-     * @return CommonPrefixes The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request.
+     * Get  
+     * @return CommonPrefixes 
      */
     public String [] getCommonPrefixes() {
         return this.CommonPrefixes;
     }
 
     /**
-     * Set The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request.
-     * @param CommonPrefixes The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request.
+     * Set 
+     * @param CommonPrefixes 
      */
     public void setCommonPrefixes(String [] CommonPrefixes) {
         this.CommonPrefixes = CommonPrefixes;
     }
 
     /**
-     * Get Object entry. 
-     * @return Contents Object entry.
+     * Get  
+     * @return Contents 
      */
     public FileContent [] getContents() {
         return this.Contents;
     }
 
     /**
-     * Set Object entry.
-     * @param Contents Object entry.
+     * Set 
+     * @param Contents 
      */
     public void setContents(FileContent [] Contents) {
         this.Contents = Contents;

@@ -24,273 +24,253 @@ import java.util.HashMap;
 public class ReduceMediaBitrateTask extends AbstractModel {
 
     /**
-    * The task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The ID of the media file.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The name of the media file.
+    * 
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * The address of the media file.
+    * 
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * Metadata of the original video.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * The execution status and result of the bitrate reduction task.
+    * 
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
     private ReduceMediaBitrateMediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * The task priority, which can be a value from -10 to 10.
+    * 
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li>
+    * 
     */
     @SerializedName("TasksNotifyMode")
     @Expose
     private String TasksNotifyMode;
 
     /**
-    * The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get The task ID. 
-     * @return TaskId The task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID.
-     * @param TaskId The task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li> 
-     * @return Status The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
-     * @param Status The task flow status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The ID of the media file. 
-     * @return FileId The ID of the media file.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The ID of the media file.
-     * @param FileId The ID of the media file.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The name of the media file. 
-     * @return FileName The name of the media file.
+     * Get  
+     * @return FileName 
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set The name of the media file.
-     * @param FileName The name of the media file.
+     * Set 
+     * @param FileName 
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get The address of the media file. 
-     * @return FileUrl The address of the media file.
+     * Get  
+     * @return FileUrl 
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set The address of the media file.
-     * @param FileUrl The address of the media file.
+     * Set 
+     * @param FileUrl 
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get Metadata of the original video. 
-     * @return MetaData Metadata of the original video.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Metadata of the original video.
-     * @param MetaData Metadata of the original video.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get The execution status and result of the bitrate reduction task. 
-     * @return MediaProcessResultSet The execution status and result of the bitrate reduction task.
+     * Get  
+     * @return MediaProcessResultSet 
      */
     public ReduceMediaBitrateMediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set The execution status and result of the bitrate reduction task.
-     * @param MediaProcessResultSet The execution status and result of the bitrate reduction task.
+     * Set 
+     * @param MediaProcessResultSet 
      */
     public void setMediaProcessResultSet(ReduceMediaBitrateMediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get The task priority, which can be a value from -10 to 10. 
-     * @return TasksPriority The task priority, which can be a value from -10 to 10.
+     * Get  
+     * @return TasksPriority 
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set The task priority, which can be a value from -10 to 10.
-     * @param TasksPriority The task priority, which can be a value from -10 to 10.
+     * Set 
+     * @param TasksPriority 
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li> 
-     * @return TasksNotifyMode The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li>
+     * Get  
+     * @return TasksNotifyMode 
      */
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
     }
 
     /**
-     * Set The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li>
-     * @param TasksNotifyMode The notification mode for the change of task status. Valid values:
-<li>Finish: Send a notification after the task is completed.</li>
-<li>None: Do not send status change notifications for this task.</li>
+     * Set 
+     * @param TasksNotifyMode 
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }
 
     /**
-     * Get The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters. 
-     * @return SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-     * @param SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified. 
-     * @return SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
-     * @param SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

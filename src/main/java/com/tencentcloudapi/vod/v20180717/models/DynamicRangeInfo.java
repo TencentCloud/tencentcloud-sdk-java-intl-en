@@ -24,66 +24,66 @@ import java.util.HashMap;
 public class DynamicRangeInfo extends AbstractModel {
 
     /**
-    * The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
+    * Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+    * High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
     */
     @SerializedName("HDRType")
     @Expose
     private String HDRType;
 
     /**
-     * Get The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li> 
-     * @return Type The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
+     * Get Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li> 
+     * @return Type Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
-     * @param Type The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
+     * Set Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
+     * @param Type Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li> 
-     * @return HDRType The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+     * Get High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li> 
+     * @return HDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
      */
     public String getHDRType() {
         return this.HDRType;
     }
 
     /**
-     * Set The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-     * @param HDRType The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+     * Set High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+     * @param HDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
      */
     public void setHDRType(String HDRType) {
         this.HDRType = HDRType;

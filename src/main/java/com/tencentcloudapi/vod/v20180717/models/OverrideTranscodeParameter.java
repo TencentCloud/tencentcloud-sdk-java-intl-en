@@ -24,176 +24,164 @@ import java.util.HashMap;
 public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
-    * Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
+    * 
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+    * 
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+    * 
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfoForUpdate VideoTemplate;
 
     /**
-    * Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
-     * Get Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files. 
-     * @return Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
+    * 
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+     * Get  
+     * @return Container 
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
-     * @param Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
+     * Set 
+     * @param Container 
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li> 
-     * @return RemoveVideo Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+     * Get  
+     * @return RemoveVideo 
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
-     * @param RemoveVideo Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+     * Set 
+     * @param RemoveVideo 
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li> 
-     * @return RemoveAudio Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+     * Get  
+     * @return RemoveAudio 
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
-     * @param RemoveAudio Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+     * Set 
+     * @param RemoveAudio 
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VideoTemplate Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VideoTemplate 
      */
     public VideoTemplateInfoForUpdate getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoTemplate Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VideoTemplate 
      */
     public void setVideoTemplate(VideoTemplateInfoForUpdate VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioTemplate Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AudioTemplate 
      */
     public AudioTemplateInfoForUpdate getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioTemplate Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AudioTemplate 
      */
     public void setAudioTemplate(AudioTemplateInfoForUpdate AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TEHDConfig Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TEHDConfig 
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TEHDConfig Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TEHDConfig 
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
+    }
+
+    /**
+     * Get  
+     * @return StdExtInfo 
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set 
+     * @param StdExtInfo 
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
     }
 
     public OverrideTranscodeParameter() {
@@ -222,6 +210,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfigForUpdate(source.TEHDConfig);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -235,6 +226,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

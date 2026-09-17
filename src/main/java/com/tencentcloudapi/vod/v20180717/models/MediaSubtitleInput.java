@@ -24,190 +24,115 @@ import java.util.HashMap;
 public class MediaSubtitleInput extends AbstractModel {
 
     /**
-    * Subtitle name. Length limit: 64 characters
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+    * 
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * Subtitle format. Valid value:
-<li>vtt</li>
+    * 
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
+    * 
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
+    * 
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get Subtitle name. Length limit: 64 characters 
-     * @return Name Subtitle name. Length limit: 64 characters
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Subtitle name. Length limit: 64 characters
-     * @param Name Subtitle name. Length limit: 64 characters
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646) 
-     * @return Language Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+     * Get  
+     * @return Language 
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
-     * @param Language Subtitle language. Common values are as follows:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+     * Set 
+     * @param Language 
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get Subtitle format. Valid value:
-<li>vtt</li> 
-     * @return Format Subtitle format. Valid value:
-<li>vtt</li>
+     * Get  
+     * @return Format 
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Subtitle format. Valid value:
-<li>vtt</li>
-     * @param Format Subtitle format. Valid value:
-<li>vtt</li>
+     * Set 
+     * @param Format 
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings 
-     * @return Content Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
+     * Get  
+     * @return Content 
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
-     * @param Content Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
+     * Set 
+     * @param Content 
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID. 
-     * @return Id The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
+     * Get  
+     * @return Id 
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
-     * @param Id The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
+     * Set 
+     * @param Id 
      */
     public void setId(String Id) {
         this.Id = Id;

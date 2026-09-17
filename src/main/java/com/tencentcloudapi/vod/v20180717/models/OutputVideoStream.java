@@ -24,61 +24,46 @@ import java.util.HashMap;
 public class OutputVideoStream extends AbstractModel {
 
     /**
-    * Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264.
+    * 
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
+    * 
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-     * Get Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264. 
-     * @return Codec Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264.
+     * Get  
+     * @return Codec 
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264.
-     * @param Codec Video stream encoder. Valid values:
-<li>libx264: H.264</li>
-Default value: libx264.
+     * Set 
+     * @param Codec 
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track. 
-     * @return Fps Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
+     * Get  
+     * @return Fps 
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
-     * @param Fps Video frame rate in Hz. Value range: [0, 60].
-Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
+     * Set 
+     * @param Fps 
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

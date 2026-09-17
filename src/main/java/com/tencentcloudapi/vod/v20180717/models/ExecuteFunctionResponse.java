@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExecuteFunctionResponse extends AbstractModel {
 
     /**
-    * The string after packaging the processing result, specifically coordinated with the backend altogether.
+    * 
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ExecuteFunctionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The string after packaging the processing result, specifically coordinated with the backend altogether. 
-     * @return Result The string after packaging the processing result, specifically coordinated with the backend altogether.
+     * Get  
+     * @return Result 
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set The string after packaging the processing result, specifically coordinated with the backend altogether.
-     * @param Result The string after packaging the processing result, specifically coordinated with the backend altogether.
+     * Set 
+     * @param Result 
      */
     public void setResult(String Result) {
         this.Result = Result;

@@ -24,404 +24,440 @@ import java.util.HashMap;
 public class QualityInspectTemplateItem extends AbstractModel {
 
     /**
-    * Template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Template type. Available values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Template Name
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Frame interception interval in seconds.
+    * 
     */
-    @SerializedName("ScreenshotInterval")
+    @SerializedName("Configs")
     @Expose
-    private Float ScreenshotInterval;
+    private QualityInspectConfig [] Configs;
 
     /**
-    * Control parameters for video frame jitter and ghosting detection.
+    * 
     */
-    @SerializedName("JitterConfigure")
+    @SerializedName("Strategy")
     @Expose
-    private JitterConfigureInfo JitterConfigure;
+    private QualityInspectStrategy Strategy;
 
     /**
-    * Control parameters for video frame blur detection.
-    */
-    @SerializedName("BlurConfigure")
-    @Expose
-    private BlurConfigureInfo BlurConfigure;
-
-    /**
-    * Control parameters for low-light and overexposure detection in video frames.
-    */
-    @SerializedName("AbnormalLightingConfigure")
-    @Expose
-    private AbnormalLightingConfigureInfo AbnormalLightingConfigure;
-
-    /**
-    * Control parameters for screen glitch detection in video footage.
-    */
-    @SerializedName("CrashScreenConfigure")
-    @Expose
-    private CrashScreenConfigureInfo CrashScreenConfigure;
-
-    /**
-    * Control parameters for video picture black edge, white edge, black screen, and white screen detection.
-    */
-    @SerializedName("BlackWhiteEdgeConfigure")
-    @Expose
-    private BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure;
-
-    /**
-    * Control parameters for video frame noise detection.
-    */
-    @SerializedName("NoiseConfigure")
-    @Expose
-    private NoiseConfigureInfo NoiseConfigure;
-
-    /**
-    * Control parameters for video frame mosaic detection.
-    */
-    @SerializedName("MosaicConfigure")
-    @Expose
-    private MosaicConfigureInfo MosaicConfigure;
-
-    /**
-    * Control parameters for video frame QR code detection.
-    */
-    @SerializedName("QRCodeConfigure")
-    @Expose
-    private QRCodeConfigureInfo QRCodeConfigure;
-
-    /**
-    * Control parameters for video frame quality evaluation.
-    */
-    @SerializedName("QualityEvaluationConfigure")
-    @Expose
-    private QualityEvaluationConfigureInfo QualityEvaluationConfigure;
-
-    /**
-    * Control parameters for audio (mute, bass, clipping) detection.
-    */
-    @SerializedName("VoiceConfigure")
-    @Expose
-    private VoiceConfigureInfo VoiceConfigure;
-
-    /**
-    * Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Template ID. 
-     * @return Definition Template ID.
+    * 
+    */
+    @SerializedName("ScreenshotInterval")
+    @Expose
+    private Float ScreenshotInterval;
+
+    /**
+    * 
+    */
+    @SerializedName("JitterConfigure")
+    @Expose
+    private JitterConfigureInfo JitterConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("BlurConfigure")
+    @Expose
+    private BlurConfigureInfo BlurConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("AbnormalLightingConfigure")
+    @Expose
+    private AbnormalLightingConfigureInfo AbnormalLightingConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("CrashScreenConfigure")
+    @Expose
+    private CrashScreenConfigureInfo CrashScreenConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("BlackWhiteEdgeConfigure")
+    @Expose
+    private BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("NoiseConfigure")
+    @Expose
+    private NoiseConfigureInfo NoiseConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("MosaicConfigure")
+    @Expose
+    private MosaicConfigureInfo MosaicConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("QRCodeConfigure")
+    @Expose
+    private QRCodeConfigureInfo QRCodeConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("QualityEvaluationConfigure")
+    @Expose
+    private QualityEvaluationConfigureInfo QualityEvaluationConfigure;
+
+    /**
+    * 
+    */
+    @SerializedName("VoiceConfigure")
+    @Expose
+    private VoiceConfigureInfo VoiceConfigure;
+
+    /**
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Template ID.
-     * @param Definition Template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Template type. Available values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li> 
-     * @return Type Template type. Available values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type. Available values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
-     * @param Type Template type. Available values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Template Name 
-     * @return Name Template Name
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template Name
-     * @param Name Template Name
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description. 
-     * @return Comment Template description.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description.
-     * @param Comment Template description.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Frame interception interval in seconds. 
-     * @return ScreenshotInterval Frame interception interval in seconds.
+     * Get  
+     * @return Configs 
      */
-    public Float getScreenshotInterval() {
-        return this.ScreenshotInterval;
+    public QualityInspectConfig [] getConfigs() {
+        return this.Configs;
     }
 
     /**
-     * Set Frame interception interval in seconds.
-     * @param ScreenshotInterval Frame interception interval in seconds.
+     * Set 
+     * @param Configs 
      */
-    public void setScreenshotInterval(Float ScreenshotInterval) {
-        this.ScreenshotInterval = ScreenshotInterval;
+    public void setConfigs(QualityInspectConfig [] Configs) {
+        this.Configs = Configs;
     }
 
     /**
-     * Get Control parameters for video frame jitter and ghosting detection. 
-     * @return JitterConfigure Control parameters for video frame jitter and ghosting detection.
+     * Get  
+     * @return Strategy 
      */
-    public JitterConfigureInfo getJitterConfigure() {
-        return this.JitterConfigure;
+    public QualityInspectStrategy getStrategy() {
+        return this.Strategy;
     }
 
     /**
-     * Set Control parameters for video frame jitter and ghosting detection.
-     * @param JitterConfigure Control parameters for video frame jitter and ghosting detection.
+     * Set 
+     * @param Strategy 
      */
-    public void setJitterConfigure(JitterConfigureInfo JitterConfigure) {
-        this.JitterConfigure = JitterConfigure;
+    public void setStrategy(QualityInspectStrategy Strategy) {
+        this.Strategy = Strategy;
     }
 
     /**
-     * Get Control parameters for video frame blur detection. 
-     * @return BlurConfigure Control parameters for video frame blur detection.
-     */
-    public BlurConfigureInfo getBlurConfigure() {
-        return this.BlurConfigure;
-    }
-
-    /**
-     * Set Control parameters for video frame blur detection.
-     * @param BlurConfigure Control parameters for video frame blur detection.
-     */
-    public void setBlurConfigure(BlurConfigureInfo BlurConfigure) {
-        this.BlurConfigure = BlurConfigure;
-    }
-
-    /**
-     * Get Control parameters for low-light and overexposure detection in video frames. 
-     * @return AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
-     */
-    public AbnormalLightingConfigureInfo getAbnormalLightingConfigure() {
-        return this.AbnormalLightingConfigure;
-    }
-
-    /**
-     * Set Control parameters for low-light and overexposure detection in video frames.
-     * @param AbnormalLightingConfigure Control parameters for low-light and overexposure detection in video frames.
-     */
-    public void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo AbnormalLightingConfigure) {
-        this.AbnormalLightingConfigure = AbnormalLightingConfigure;
-    }
-
-    /**
-     * Get Control parameters for screen glitch detection in video footage. 
-     * @return CrashScreenConfigure Control parameters for screen glitch detection in video footage.
-     */
-    public CrashScreenConfigureInfo getCrashScreenConfigure() {
-        return this.CrashScreenConfigure;
-    }
-
-    /**
-     * Set Control parameters for screen glitch detection in video footage.
-     * @param CrashScreenConfigure Control parameters for screen glitch detection in video footage.
-     */
-    public void setCrashScreenConfigure(CrashScreenConfigureInfo CrashScreenConfigure) {
-        this.CrashScreenConfigure = CrashScreenConfigure;
-    }
-
-    /**
-     * Get Control parameters for video picture black edge, white edge, black screen, and white screen detection. 
-     * @return BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
-     */
-    public BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() {
-        return this.BlackWhiteEdgeConfigure;
-    }
-
-    /**
-     * Set Control parameters for video picture black edge, white edge, black screen, and white screen detection.
-     * @param BlackWhiteEdgeConfigure Control parameters for video picture black edge, white edge, black screen, and white screen detection.
-     */
-    public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure) {
-        this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
-    }
-
-    /**
-     * Get Control parameters for video frame noise detection. 
-     * @return NoiseConfigure Control parameters for video frame noise detection.
-     */
-    public NoiseConfigureInfo getNoiseConfigure() {
-        return this.NoiseConfigure;
-    }
-
-    /**
-     * Set Control parameters for video frame noise detection.
-     * @param NoiseConfigure Control parameters for video frame noise detection.
-     */
-    public void setNoiseConfigure(NoiseConfigureInfo NoiseConfigure) {
-        this.NoiseConfigure = NoiseConfigure;
-    }
-
-    /**
-     * Get Control parameters for video frame mosaic detection. 
-     * @return MosaicConfigure Control parameters for video frame mosaic detection.
-     */
-    public MosaicConfigureInfo getMosaicConfigure() {
-        return this.MosaicConfigure;
-    }
-
-    /**
-     * Set Control parameters for video frame mosaic detection.
-     * @param MosaicConfigure Control parameters for video frame mosaic detection.
-     */
-    public void setMosaicConfigure(MosaicConfigureInfo MosaicConfigure) {
-        this.MosaicConfigure = MosaicConfigure;
-    }
-
-    /**
-     * Get Control parameters for video frame QR code detection. 
-     * @return QRCodeConfigure Control parameters for video frame QR code detection.
-     */
-    public QRCodeConfigureInfo getQRCodeConfigure() {
-        return this.QRCodeConfigure;
-    }
-
-    /**
-     * Set Control parameters for video frame QR code detection.
-     * @param QRCodeConfigure Control parameters for video frame QR code detection.
-     */
-    public void setQRCodeConfigure(QRCodeConfigureInfo QRCodeConfigure) {
-        this.QRCodeConfigure = QRCodeConfigure;
-    }
-
-    /**
-     * Get Control parameters for video frame quality evaluation. 
-     * @return QualityEvaluationConfigure Control parameters for video frame quality evaluation.
-     */
-    public QualityEvaluationConfigureInfo getQualityEvaluationConfigure() {
-        return this.QualityEvaluationConfigure;
-    }
-
-    /**
-     * Set Control parameters for video frame quality evaluation.
-     * @param QualityEvaluationConfigure Control parameters for video frame quality evaluation.
-     */
-    public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo QualityEvaluationConfigure) {
-        this.QualityEvaluationConfigure = QualityEvaluationConfigure;
-    }
-
-    /**
-     * Get Control parameters for audio (mute, bass, clipping) detection. 
-     * @return VoiceConfigure Control parameters for audio (mute, bass, clipping) detection.
-     */
-    public VoiceConfigureInfo getVoiceConfigure() {
-        return this.VoiceConfigure;
-    }
-
-    /**
-     * Set Control parameters for audio (mute, bass, clipping) detection.
-     * @param VoiceConfigure Control parameters for audio (mute, bass, clipping) detection.
-     */
-    public void setVoiceConfigure(VoiceConfigureInfo VoiceConfigure) {
-        this.VoiceConfigure = VoiceConfigure;
-    }
-
-    /**
-     * Get Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get  
+     * @return ScreenshotInterval 
+     */
+    public Float getScreenshotInterval() {
+        return this.ScreenshotInterval;
+    }
+
+    /**
+     * Set 
+     * @param ScreenshotInterval 
+     */
+    public void setScreenshotInterval(Float ScreenshotInterval) {
+        this.ScreenshotInterval = ScreenshotInterval;
+    }
+
+    /**
+     * Get  
+     * @return JitterConfigure 
+     */
+    public JitterConfigureInfo getJitterConfigure() {
+        return this.JitterConfigure;
+    }
+
+    /**
+     * Set 
+     * @param JitterConfigure 
+     */
+    public void setJitterConfigure(JitterConfigureInfo JitterConfigure) {
+        this.JitterConfigure = JitterConfigure;
+    }
+
+    /**
+     * Get  
+     * @return BlurConfigure 
+     */
+    public BlurConfigureInfo getBlurConfigure() {
+        return this.BlurConfigure;
+    }
+
+    /**
+     * Set 
+     * @param BlurConfigure 
+     */
+    public void setBlurConfigure(BlurConfigureInfo BlurConfigure) {
+        this.BlurConfigure = BlurConfigure;
+    }
+
+    /**
+     * Get  
+     * @return AbnormalLightingConfigure 
+     */
+    public AbnormalLightingConfigureInfo getAbnormalLightingConfigure() {
+        return this.AbnormalLightingConfigure;
+    }
+
+    /**
+     * Set 
+     * @param AbnormalLightingConfigure 
+     */
+    public void setAbnormalLightingConfigure(AbnormalLightingConfigureInfo AbnormalLightingConfigure) {
+        this.AbnormalLightingConfigure = AbnormalLightingConfigure;
+    }
+
+    /**
+     * Get  
+     * @return CrashScreenConfigure 
+     */
+    public CrashScreenConfigureInfo getCrashScreenConfigure() {
+        return this.CrashScreenConfigure;
+    }
+
+    /**
+     * Set 
+     * @param CrashScreenConfigure 
+     */
+    public void setCrashScreenConfigure(CrashScreenConfigureInfo CrashScreenConfigure) {
+        this.CrashScreenConfigure = CrashScreenConfigure;
+    }
+
+    /**
+     * Get  
+     * @return BlackWhiteEdgeConfigure 
+     */
+    public BlackWhiteEdgeConfigureInfo getBlackWhiteEdgeConfigure() {
+        return this.BlackWhiteEdgeConfigure;
+    }
+
+    /**
+     * Set 
+     * @param BlackWhiteEdgeConfigure 
+     */
+    public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure) {
+        this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
+    }
+
+    /**
+     * Get  
+     * @return NoiseConfigure 
+     */
+    public NoiseConfigureInfo getNoiseConfigure() {
+        return this.NoiseConfigure;
+    }
+
+    /**
+     * Set 
+     * @param NoiseConfigure 
+     */
+    public void setNoiseConfigure(NoiseConfigureInfo NoiseConfigure) {
+        this.NoiseConfigure = NoiseConfigure;
+    }
+
+    /**
+     * Get  
+     * @return MosaicConfigure 
+     */
+    public MosaicConfigureInfo getMosaicConfigure() {
+        return this.MosaicConfigure;
+    }
+
+    /**
+     * Set 
+     * @param MosaicConfigure 
+     */
+    public void setMosaicConfigure(MosaicConfigureInfo MosaicConfigure) {
+        this.MosaicConfigure = MosaicConfigure;
+    }
+
+    /**
+     * Get  
+     * @return QRCodeConfigure 
+     */
+    public QRCodeConfigureInfo getQRCodeConfigure() {
+        return this.QRCodeConfigure;
+    }
+
+    /**
+     * Set 
+     * @param QRCodeConfigure 
+     */
+    public void setQRCodeConfigure(QRCodeConfigureInfo QRCodeConfigure) {
+        this.QRCodeConfigure = QRCodeConfigure;
+    }
+
+    /**
+     * Get  
+     * @return QualityEvaluationConfigure 
+     */
+    public QualityEvaluationConfigureInfo getQualityEvaluationConfigure() {
+        return this.QualityEvaluationConfigure;
+    }
+
+    /**
+     * Set 
+     * @param QualityEvaluationConfigure 
+     */
+    public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo QualityEvaluationConfigure) {
+        this.QualityEvaluationConfigure = QualityEvaluationConfigure;
+    }
+
+    /**
+     * Get  
+     * @return VoiceConfigure 
+     */
+    public VoiceConfigureInfo getVoiceConfigure() {
+        return this.VoiceConfigure;
+    }
+
+    /**
+     * Set 
+     * @param VoiceConfigure 
+     */
+    public void setVoiceConfigure(VoiceConfigureInfo VoiceConfigure) {
+        this.VoiceConfigure = VoiceConfigure;
     }
 
     public QualityInspectTemplateItem() {
@@ -443,6 +479,21 @@ public class QualityInspectTemplateItem extends AbstractModel {
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
+        }
+        if (source.Configs != null) {
+            this.Configs = new QualityInspectConfig[source.Configs.length];
+            for (int i = 0; i < source.Configs.length; i++) {
+                this.Configs[i] = new QualityInspectConfig(source.Configs[i]);
+            }
+        }
+        if (source.Strategy != null) {
+            this.Strategy = new QualityInspectStrategy(source.Strategy);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
         }
         if (source.ScreenshotInterval != null) {
             this.ScreenshotInterval = new Float(source.ScreenshotInterval);
@@ -477,12 +528,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
         if (source.VoiceConfigure != null) {
             this.VoiceConfigure = new VoiceConfigureInfo(source.VoiceConfigure);
         }
-        if (source.CreateTime != null) {
-            this.CreateTime = new String(source.CreateTime);
-        }
-        if (source.UpdateTime != null) {
-            this.UpdateTime = new String(source.UpdateTime);
-        }
     }
 
 
@@ -494,6 +539,10 @@ public class QualityInspectTemplateItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamArrayObj(map, prefix + "Configs.", this.Configs);
+        this.setParamObj(map, prefix + "Strategy.", this.Strategy);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         this.setParamObj(map, prefix + "JitterConfigure.", this.JitterConfigure);
         this.setParamObj(map, prefix + "BlurConfigure.", this.BlurConfigure);
@@ -505,8 +554,6 @@ public class QualityInspectTemplateItem extends AbstractModel {
         this.setParamObj(map, prefix + "QRCodeConfigure.", this.QRCodeConfigure);
         this.setParamObj(map, prefix + "QualityEvaluationConfigure.", this.QualityEvaluationConfigure);
         this.setParamObj(map, prefix + "VoiceConfigure.", this.VoiceConfigure);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

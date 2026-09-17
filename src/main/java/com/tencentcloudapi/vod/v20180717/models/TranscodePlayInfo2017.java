@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class TranscodePlayInfo2017 extends AbstractModel {
 
     /**
-    * Playback address.
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Sum of the average bitrate of a video stream and that of an audio stream in bps.
+    * 
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Maximum value of the height of a video stream in px.
+    * 
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Maximum value of the width of a video stream in px.
+    * 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-     * Get Playback address. 
-     * @return Url Playback address.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Playback address.
-     * @param Url Playback address.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF). 
-     * @return Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-     * @param Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Sum of the average bitrate of a video stream and that of an audio stream in bps. 
-     * @return Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
+     * Get  
+     * @return Bitrate 
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Sum of the average bitrate of a video stream and that of an audio stream in bps.
-     * @param Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
+     * Set 
+     * @param Bitrate 
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Maximum value of the height of a video stream in px. 
-     * @return Height Maximum value of the height of a video stream in px.
+     * Get  
+     * @return Height 
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum value of the height of a video stream in px.
-     * @param Height Maximum value of the height of a video stream in px.
+     * Set 
+     * @param Height 
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Maximum value of the width of a video stream in px. 
-     * @return Width Maximum value of the width of a video stream in px.
+     * Get  
+     * @return Width 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the width of a video stream in px.
-     * @param Width Maximum value of the width of a video stream in px.
+     * Set 
+     * @param Width 
      */
     public void setWidth(Long Width) {
         this.Width = Width;

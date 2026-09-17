@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AigcFaceIdentityInfo extends AbstractModel {
 
     /**
-    * Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s.
+    * 
     */
     @SerializedName("FaceId")
     @Expose
     private String FaceId;
 
     /**
-    * Schematic diagram of human face extracted from the video.
+    * 
     */
     @SerializedName("FaceImage")
     @Expose
     private String FaceImage;
 
     /**
-    * The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms.
+    * 
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms.
+    * 
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s. 
-     * @return FaceId Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s.
+     * Get  
+     * @return FaceId 
      */
     public String getFaceId() {
         return this.FaceId;
     }
 
     /**
-     * Set Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s.
-     * @param FaceId Face ID in the video. The same human face is considered a different ID when the interval in the middle of the video exceeds 1s.
+     * Set 
+     * @param FaceId 
      */
     public void setFaceId(String FaceId) {
         this.FaceId = FaceId;
     }
 
     /**
-     * Get Schematic diagram of human face extracted from the video. 
-     * @return FaceImage Schematic diagram of human face extracted from the video.
+     * Get  
+     * @return FaceImage 
      */
     public String getFaceImage() {
         return this.FaceImage;
     }
 
     /**
-     * Set Schematic diagram of human face extracted from the video.
-     * @param FaceImage Schematic diagram of human face extracted from the video.
+     * Set 
+     * @param FaceImage 
      */
     public void setFaceImage(String FaceImage) {
         this.FaceImage = FaceImage;
     }
 
     /**
-     * Get The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms. 
-     * @return StartTime The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms.
+     * Get  
+     * @return StartTime 
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms.
-     * @param StartTime The starting time of the lip-sync interval can be used as the best start time for lip-sync. Unit: ms.
+     * Set 
+     * @param StartTime 
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms. 
-     * @return EndTime The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms.
+     * Get  
+     * @return EndTime 
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms.
-     * @param EndTime The end time of the lip-sync interval for this face. Note: This result may have millisecond-level deviation and could be longer than the actual interval end. Unit: ms.
+     * Set 
+     * @param EndTime 
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

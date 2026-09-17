@@ -24,537 +24,437 @@ import java.util.HashMap;
 public class MediaBasicInfo extends AbstractModel {
 
     /**
-    * Media filename.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Media file description.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ClassName")
     @Expose
     private String ClassName;
 
     /**
-    * Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ClassPath")
     @Expose
     private String ClassPath;
 
     /**
-    * Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-    * Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MediaUrl")
     @Expose
     private String MediaUrl;
 
     /**
-    * Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SourceInfo")
     @Expose
     private MediaSourceData SourceInfo;
 
     /**
-    * Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+    * 
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * Media storage path.
+    * 
     */
     @SerializedName("StoragePath")
     @Expose
     private String StoragePath;
 
     /**
-    * Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TagSet")
     @Expose
     private String [] TagSet;
 
     /**
-    * Unique ID of an LVB recording file.
+    * 
     */
     @SerializedName("Vid")
     @Expose
     private String Vid;
 
     /**
-    * File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
+    * 
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * File status: Normal: normal, Forbidden: banned.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+    * 
     */
     @SerializedName("StorageClass")
     @Expose
     private String StorageClass;
 
     /**
-     * Get Media filename.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Name Media filename.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Media filename.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Name Media filename.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Media file description.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Description Media file description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Description 
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Media file description.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Description Media file description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Description 
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ExpireTime 
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ExpireTime 
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClassId Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ClassId 
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClassId Category ID of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ClassId 
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClassName Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ClassName 
      */
     public String getClassName() {
         return this.ClassName;
     }
 
     /**
-     * Set Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClassName Category name of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ClassName 
      */
     public void setClassName(String ClassName) {
         this.ClassName = ClassName;
     }
 
     /**
-     * Get Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClassPath Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ClassPath 
      */
     public String getClassPath() {
         return this.ClassPath;
     }
 
     /**
-     * Set Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClassPath Category path to media file separated by "-", such as "new first-level category - new second-level category".
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ClassPath 
      */
     public void setClassPath(String ClassPath) {
         this.ClassPath = ClassPath;
     }
 
     /**
-     * Get Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoverUrl Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CoverUrl 
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverUrl Cover image address of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CoverUrl 
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
     }
 
     /**
-     * Get Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Type Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Type Media file container, such as mp4 and flv.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MediaUrl URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MediaUrl 
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaUrl URL of source media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MediaUrl 
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
     }
 
     /**
-     * Get Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SourceInfo Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SourceInfo 
      */
     public MediaSourceData getSourceInfo() {
         return this.SourceInfo;
     }
 
     /**
-     * Set Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SourceInfo Source information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SourceInfo 
      */
     public void setSourceInfo(MediaSourceData SourceInfo) {
         this.SourceInfo = SourceInfo;
     }
 
     /**
-     * Get Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760). 
-     * @return StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+     * Get  
+     * @return StorageRegion 
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
-     * @param StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+     * Set 
+     * @param StorageRegion 
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get Media storage path. 
-     * @return StoragePath Media storage path.
+     * Get  
+     * @return StoragePath 
      */
     public String getStoragePath() {
         return this.StoragePath;
     }
 
     /**
-     * Set Media storage path.
-     * @param StoragePath Media storage path.
+     * Set 
+     * @param StoragePath 
      */
     public void setStoragePath(String StoragePath) {
         this.StoragePath = StoragePath;
     }
 
     /**
-     * Get Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TagSet Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TagSet 
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TagSet Tag information of media file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TagSet 
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get Unique ID of an LVB recording file. 
-     * @return Vid Unique ID of an LVB recording file.
+     * Get  
+     * @return Vid 
      */
     public String getVid() {
         return this.Vid;
     }
 
     /**
-     * Set Unique ID of an LVB recording file.
-     * @param Vid Unique ID of an LVB recording file.
+     * Set 
+     * @param Vid 
      */
     public void setVid(String Vid) {
         this.Vid = Vid;
     }
 
     /**
-     * Get File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li> 
-     * @return Category File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
+     * Get  
+     * @return Category 
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-     * @param Category File type:
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
+     * Set 
+     * @param Category 
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get File status: Normal: normal, Forbidden: banned. 
-     * @return Status File status: Normal: normal, Forbidden: banned.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set File status: Normal: normal, Forbidden: banned.
-     * @param Status File status: Normal: normal, Forbidden: banned.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li> 
-     * @return StorageClass Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+     * Get  
+     * @return StorageClass 
      */
     public String getStorageClass() {
         return this.StorageClass;
     }
 
     /**
-     * Set Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
-     * @param StorageClass Storage class of a media file:
-<li>STANDARD</li>
-<li>STANDARD_IA</li>
-<li>ARCHIVE</li>
-<li>DEEP_ARCHIVE</li>
+     * Set 
+     * @param StorageClass 
      */
     public void setStorageClass(String StorageClass) {
         this.StorageClass = StorageClass;

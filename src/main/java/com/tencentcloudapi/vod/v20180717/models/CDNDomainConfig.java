@@ -24,437 +24,452 @@ import java.util.HashMap;
 public class CDNDomainConfig extends AbstractModel {
 
     /**
-    * Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+    * Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>global: global acceleration.</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Origin server configuration.
+    * 
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * IP allowlist/blocklist configuration.
+    * 
     */
     @SerializedName("IpFilter")
     @Expose
     private IpFilter IpFilter;
 
     /**
-    * UA Blocklist/Allowlist Configuration.
+    * 
     */
     @SerializedName("UserAgentFilter")
     @Expose
     private UserAgentFilter UserAgentFilter;
 
     /**
-    * 301/302 origin follow configuration.
+    * 
     */
     @SerializedName("FollowRedirect")
     @Expose
     private FollowRedirect FollowRedirect;
 
     /**
-    * Request header configuration.
+    * 
     */
     @SerializedName("RequestHeader")
     @Expose
     private RequestHeader RequestHeader;
 
     /**
-    * Response header configuration.
+    * 
     */
     @SerializedName("ResponseHeader")
     @Expose
     private ResponseHeader ResponseHeader;
 
     /**
-    * Cache expiration time settings.
+    * 
     */
     @SerializedName("Cache")
     @Expose
     private Cache Cache;
 
     /**
-    * Https configuration.
+    * 
     */
     @SerializedName("Https")
     @Expose
     private Https Https;
 
     /**
-    * Timestamp hotlink protection configuration.
+    * 
     */
     @SerializedName("Authentication")
     @Expose
     private Authentication Authentication;
 
     /**
-    * Access protocol force redirection configuration.
+    * 
     */
     @SerializedName("ForceRedirect")
     @Expose
     private ForceRedirect ForceRedirect;
 
     /**
-    * Referer Anti-leech Configuration.
+    * 
     */
     @SerializedName("Referer")
     @Expose
     private Referer Referer;
 
     /**
-    * Browser cache configuration.
+    * 
     */
     @SerializedName("MaxAge")
     @Expose
     private MaxAge MaxAge;
 
     /**
-    * Ipv6 access configuration
+    * 
     */
     @SerializedName("Ipv6Access")
     @Expose
     private Ipv6Access Ipv6Access;
 
     /**
-    * Quic access configuration.
+    * 
     */
     @SerializedName("Quic")
     @Expose
     private Quic Quic;
 
     /**
-    * AWS S3 origin authentication configuration.
+    * 
     */
     @SerializedName("AwsPrivateAccess")
     @Expose
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
-    * Alibaba Cloud OSS authentication configuration.
+    * 
     */
     @SerializedName("OssPrivateAccess")
     @Expose
     private OssPrivateAccess OssPrivateAccess;
 
     /**
-    * Huawei cloud object storage back-to-origin authentication configuration.
+    * 
     */
     @SerializedName("HwPrivateAccess")
     @Expose
     private HwPrivateAccess HwPrivateAccess;
 
     /**
-    * Authentication configuration for cross-origin access to object storage of other vendors.
+    * 
     */
     @SerializedName("OthersPrivateAccess")
     @Expose
     private OthersPrivateAccess OthersPrivateAccess;
 
     /**
-     * Get Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li> 
-     * @return Area Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+     * Get Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>global: global acceleration.</li> 
+     * @return Area Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>global: global acceleration.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
-     * @param Area Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+     * Set Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>global: global acceleration.</li>
+     * @param Area Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside the Chinese mainland;</li>
+<li>global: global acceleration.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Origin server configuration. 
-     * @return Origin Origin server configuration.
+     * Get  
+     * @return Origin 
      */
     public Origin getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Origin server configuration.
-     * @param Origin Origin server configuration.
+     * Set 
+     * @param Origin 
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get IP allowlist/blocklist configuration. 
-     * @return IpFilter IP allowlist/blocklist configuration.
+     * Get  
+     * @return IpFilter 
      */
     public IpFilter getIpFilter() {
         return this.IpFilter;
     }
 
     /**
-     * Set IP allowlist/blocklist configuration.
-     * @param IpFilter IP allowlist/blocklist configuration.
+     * Set 
+     * @param IpFilter 
      */
     public void setIpFilter(IpFilter IpFilter) {
         this.IpFilter = IpFilter;
     }
 
     /**
-     * Get UA Blocklist/Allowlist Configuration. 
-     * @return UserAgentFilter UA Blocklist/Allowlist Configuration.
+     * Get  
+     * @return UserAgentFilter 
      */
     public UserAgentFilter getUserAgentFilter() {
         return this.UserAgentFilter;
     }
 
     /**
-     * Set UA Blocklist/Allowlist Configuration.
-     * @param UserAgentFilter UA Blocklist/Allowlist Configuration.
+     * Set 
+     * @param UserAgentFilter 
      */
     public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
         this.UserAgentFilter = UserAgentFilter;
     }
 
     /**
-     * Get 301/302 origin follow configuration. 
-     * @return FollowRedirect 301/302 origin follow configuration.
+     * Get  
+     * @return FollowRedirect 
      */
     public FollowRedirect getFollowRedirect() {
         return this.FollowRedirect;
     }
 
     /**
-     * Set 301/302 origin follow configuration.
-     * @param FollowRedirect 301/302 origin follow configuration.
+     * Set 
+     * @param FollowRedirect 
      */
     public void setFollowRedirect(FollowRedirect FollowRedirect) {
         this.FollowRedirect = FollowRedirect;
     }
 
     /**
-     * Get Request header configuration. 
-     * @return RequestHeader Request header configuration.
+     * Get  
+     * @return RequestHeader 
      */
     public RequestHeader getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set Request header configuration.
-     * @param RequestHeader Request header configuration.
+     * Set 
+     * @param RequestHeader 
      */
     public void setRequestHeader(RequestHeader RequestHeader) {
         this.RequestHeader = RequestHeader;
     }
 
     /**
-     * Get Response header configuration. 
-     * @return ResponseHeader Response header configuration.
+     * Get  
+     * @return ResponseHeader 
      */
     public ResponseHeader getResponseHeader() {
         return this.ResponseHeader;
     }
 
     /**
-     * Set Response header configuration.
-     * @param ResponseHeader Response header configuration.
+     * Set 
+     * @param ResponseHeader 
      */
     public void setResponseHeader(ResponseHeader ResponseHeader) {
         this.ResponseHeader = ResponseHeader;
     }
 
     /**
-     * Get Cache expiration time settings. 
-     * @return Cache Cache expiration time settings.
+     * Get  
+     * @return Cache 
      */
     public Cache getCache() {
         return this.Cache;
     }
 
     /**
-     * Set Cache expiration time settings.
-     * @param Cache Cache expiration time settings.
+     * Set 
+     * @param Cache 
      */
     public void setCache(Cache Cache) {
         this.Cache = Cache;
     }
 
     /**
-     * Get Https configuration. 
-     * @return Https Https configuration.
+     * Get  
+     * @return Https 
      */
     public Https getHttps() {
         return this.Https;
     }
 
     /**
-     * Set Https configuration.
-     * @param Https Https configuration.
+     * Set 
+     * @param Https 
      */
     public void setHttps(Https Https) {
         this.Https = Https;
     }
 
     /**
-     * Get Timestamp hotlink protection configuration. 
-     * @return Authentication Timestamp hotlink protection configuration.
+     * Get  
+     * @return Authentication 
      */
     public Authentication getAuthentication() {
         return this.Authentication;
     }
 
     /**
-     * Set Timestamp hotlink protection configuration.
-     * @param Authentication Timestamp hotlink protection configuration.
+     * Set 
+     * @param Authentication 
      */
     public void setAuthentication(Authentication Authentication) {
         this.Authentication = Authentication;
     }
 
     /**
-     * Get Access protocol force redirection configuration. 
-     * @return ForceRedirect Access protocol force redirection configuration.
+     * Get  
+     * @return ForceRedirect 
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set Access protocol force redirection configuration.
-     * @param ForceRedirect Access protocol force redirection configuration.
+     * Set 
+     * @param ForceRedirect 
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
     }
 
     /**
-     * Get Referer Anti-leech Configuration. 
-     * @return Referer Referer Anti-leech Configuration.
+     * Get  
+     * @return Referer 
      */
     public Referer getReferer() {
         return this.Referer;
     }
 
     /**
-     * Set Referer Anti-leech Configuration.
-     * @param Referer Referer Anti-leech Configuration.
+     * Set 
+     * @param Referer 
      */
     public void setReferer(Referer Referer) {
         this.Referer = Referer;
     }
 
     /**
-     * Get Browser cache configuration. 
-     * @return MaxAge Browser cache configuration.
+     * Get  
+     * @return MaxAge 
      */
     public MaxAge getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set Browser cache configuration.
-     * @param MaxAge Browser cache configuration.
+     * Set 
+     * @param MaxAge 
      */
     public void setMaxAge(MaxAge MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get Ipv6 access configuration 
-     * @return Ipv6Access Ipv6 access configuration
+     * Get  
+     * @return Ipv6Access 
      */
     public Ipv6Access getIpv6Access() {
         return this.Ipv6Access;
     }
 
     /**
-     * Set Ipv6 access configuration
-     * @param Ipv6Access Ipv6 access configuration
+     * Set 
+     * @param Ipv6Access 
      */
     public void setIpv6Access(Ipv6Access Ipv6Access) {
         this.Ipv6Access = Ipv6Access;
     }
 
     /**
-     * Get Quic access configuration. 
-     * @return Quic Quic access configuration.
+     * Get  
+     * @return Quic 
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set Quic access configuration.
-     * @param Quic Quic access configuration.
+     * Set 
+     * @param Quic 
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;
     }
 
     /**
-     * Get AWS S3 origin authentication configuration. 
-     * @return AwsPrivateAccess AWS S3 origin authentication configuration.
+     * Get  
+     * @return AwsPrivateAccess 
      */
     public AwsPrivateAccess getAwsPrivateAccess() {
         return this.AwsPrivateAccess;
     }
 
     /**
-     * Set AWS S3 origin authentication configuration.
-     * @param AwsPrivateAccess AWS S3 origin authentication configuration.
+     * Set 
+     * @param AwsPrivateAccess 
      */
     public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
         this.AwsPrivateAccess = AwsPrivateAccess;
     }
 
     /**
-     * Get Alibaba Cloud OSS authentication configuration. 
-     * @return OssPrivateAccess Alibaba Cloud OSS authentication configuration.
+     * Get  
+     * @return OssPrivateAccess 
      */
     public OssPrivateAccess getOssPrivateAccess() {
         return this.OssPrivateAccess;
     }
 
     /**
-     * Set Alibaba Cloud OSS authentication configuration.
-     * @param OssPrivateAccess Alibaba Cloud OSS authentication configuration.
+     * Set 
+     * @param OssPrivateAccess 
      */
     public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
         this.OssPrivateAccess = OssPrivateAccess;
     }
 
     /**
-     * Get Huawei cloud object storage back-to-origin authentication configuration. 
-     * @return HwPrivateAccess Huawei cloud object storage back-to-origin authentication configuration.
+     * Get  
+     * @return HwPrivateAccess 
      */
     public HwPrivateAccess getHwPrivateAccess() {
         return this.HwPrivateAccess;
     }
 
     /**
-     * Set Huawei cloud object storage back-to-origin authentication configuration.
-     * @param HwPrivateAccess Huawei cloud object storage back-to-origin authentication configuration.
+     * Set 
+     * @param HwPrivateAccess 
      */
     public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
         this.HwPrivateAccess = HwPrivateAccess;
     }
 
     /**
-     * Get Authentication configuration for cross-origin access to object storage of other vendors. 
-     * @return OthersPrivateAccess Authentication configuration for cross-origin access to object storage of other vendors.
+     * Get  
+     * @return OthersPrivateAccess 
      */
     public OthersPrivateAccess getOthersPrivateAccess() {
         return this.OthersPrivateAccess;
     }
 
     /**
-     * Set Authentication configuration for cross-origin access to object storage of other vendors.
-     * @param OthersPrivateAccess Authentication configuration for cross-origin access to object storage of other vendors.
+     * Set 
+     * @param OthersPrivateAccess 
      */
     public void setOthersPrivateAccess(OthersPrivateAccess OthersPrivateAccess) {
         this.OthersPrivateAccess = OthersPrivateAccess;

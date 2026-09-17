@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAigcFaceInfoAsyncOutput extends AbstractModel {
 
     /**
-    * <p>Face information.</p>
+    * 
     */
     @SerializedName("FaceInfoSet")
     @Expose
     private AigcFaceInfo [] FaceInfoSet;
 
     /**
-     * Get <p>Face information.</p> 
-     * @return FaceInfoSet <p>Face information.</p>
+     * Get  
+     * @return FaceInfoSet 
      */
     public AigcFaceInfo [] getFaceInfoSet() {
         return this.FaceInfoSet;
     }
 
     /**
-     * Set <p>Face information.</p>
-     * @param FaceInfoSet <p>Face information.</p>
+     * Set 
+     * @param FaceInfoSet 
      */
     public void setFaceInfoSet(AigcFaceInfo [] FaceInfoSet) {
         this.FaceInfoSet = FaceInfoSet;

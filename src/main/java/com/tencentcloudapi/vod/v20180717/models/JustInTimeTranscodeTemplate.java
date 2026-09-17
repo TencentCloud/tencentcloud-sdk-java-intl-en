@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class JustInTimeTranscodeTemplate extends AbstractModel {
 
     /**
-    * Template type.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Template name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Video parameter configuration.
+    * 
     */
     @SerializedName("VideoConfigure")
     @Expose
     private VideoConfigureInfo VideoConfigure;
 
     /**
-    * Watermark parameter configuration.
+    * 
     */
     @SerializedName("WatermarkConfigure")
     @Expose
     private WatermarkConfigureData WatermarkConfigure;
 
     /**
-     * Get Template type. 
-     * @return Type Template type.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type.
-     * @param Type Template type.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Template name. 
-     * @return Name Template name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template name.
-     * @param Name Template name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description. 
-     * @return Comment Template description.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description.
-     * @param Comment Template description.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Video parameter configuration. 
-     * @return VideoConfigure Video parameter configuration.
+     * Get  
+     * @return VideoConfigure 
      */
     public VideoConfigureInfo getVideoConfigure() {
         return this.VideoConfigure;
     }
 
     /**
-     * Set Video parameter configuration.
-     * @param VideoConfigure Video parameter configuration.
+     * Set 
+     * @param VideoConfigure 
      */
     public void setVideoConfigure(VideoConfigureInfo VideoConfigure) {
         this.VideoConfigure = VideoConfigure;
     }
 
     /**
-     * Get Watermark parameter configuration. 
-     * @return WatermarkConfigure Watermark parameter configuration.
+     * Get  
+     * @return WatermarkConfigure 
      */
     public WatermarkConfigureData getWatermarkConfigure() {
         return this.WatermarkConfigure;
     }
 
     /**
-     * Set Watermark parameter configuration.
-     * @param WatermarkConfigure Watermark parameter configuration.
+     * Set 
+     * @param WatermarkConfigure 
      */
     public void setWatermarkConfigure(WatermarkConfigureData WatermarkConfigure) {
         this.WatermarkConfigure = WatermarkConfigure;

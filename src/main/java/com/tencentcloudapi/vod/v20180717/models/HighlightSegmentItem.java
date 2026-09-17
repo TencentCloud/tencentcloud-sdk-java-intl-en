@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class HighlightSegmentItem extends AbstractModel {
 
     /**
-    * <p>Confidence degree.</p>
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * <p>Segment end time offset.</p><p>Unit: seconds</p>
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get <p>Confidence degree.</p> 
-     * @return Confidence <p>Confidence degree.</p>
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set <p>Confidence degree.</p>
-     * @param Confidence <p>Confidence degree.</p>
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get <p>Segment start time offset.</p><p>Measurement unit: seconds.</p> 
-     * @return StartTimeOffset <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
-     * @param StartTimeOffset <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get <p>Segment end time offset.</p><p>Unit: seconds</p> 
-     * @return EndTimeOffset <p>Segment end time offset.</p><p>Unit: seconds</p>
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set <p>Segment end time offset.</p><p>Unit: seconds</p>
-     * @param EndTimeOffset <p>Segment end time offset.</p><p>Unit: seconds</p>
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

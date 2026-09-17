@@ -24,222 +24,92 @@ import java.util.HashMap;
 public class RebuildMediaTargetAudioStream extends AbstractModel {
 
     /**
-    * The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li>
+    * 
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
-When the value is 0, it means VOD automatically sets the bitrate.
+    * 
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * The audio sample rate. Valid values:
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-
-Unit: Hz.
+    * 
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * The audio channels. Valid values:
-<li>`1`: Mono-channel</li>
-<li>`2`: Dual-channel</li>
-<li>`6`: Stereo</li>
-
-You cannot set this parameter to `6` if the container format is an audio format (FLAC, OGG, MP3, M4A).
-Default value: `2`.
+    * 
     */
     @SerializedName("AudioChannel")
     @Expose
     private Long AudioChannel;
 
     /**
-     * Get The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li> 
-     * @return Codec The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li>
+     * Get  
+     * @return Codec 
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li>
-     * @param Codec The audio codec.
-If `Container` is `mp3`, the valid value is:
-<li>`libmp3lame`</li>
-If `Container` is `ogg` or `flac`, the valid value is:
-<li>`flac`</li>
-If `Container` is `m4a`, the valid values are:
-<li>`libfdk_aac`</li>
-<li>`libmp3lame`</li>
-<li>`ac3`</li>
-If `Container` is `mp4` or `flv`, the valid values are:
-<li>`libfdk_aac` (Recommended for MP4)</li>
-<li>`libmp3lame` (Recommended for FLV)</li>
-<li>`mp2`</li>
-If `Container` is `hls`, the valid value is:
-<li>`libfdk_aac`</li>
+     * Set 
+     * @param Codec 
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
-When the value is 0, it means VOD automatically sets the bitrate. 
-     * @return Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
-When the value is 0, it means VOD automatically sets the bitrate.
+     * Get  
+     * @return Bitrate 
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
-When the value is 0, it means VOD automatically sets the bitrate.
-     * @param Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
-When the value is 0, it means VOD automatically sets the bitrate.
+     * Set 
+     * @param Bitrate 
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get The audio sample rate. Valid values:
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-
-Unit: Hz. 
-     * @return SampleRate The audio sample rate. Valid values:
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-
-Unit: Hz.
+     * Get  
+     * @return SampleRate 
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set The audio sample rate. Valid values:
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-
-Unit: Hz.
-     * @param SampleRate The audio sample rate. Valid values:
-<li>`32000`</li>
-<li>`44100`</li>
-<li>`48000`</li>
-
-Unit: Hz.
+     * Set 
+     * @param SampleRate 
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get The audio channels. Valid values:
-<li>`1`: Mono-channel</li>
-<li>`2`: Dual-channel</li>
-<li>`6`: Stereo</li>
-
-You cannot set this parameter to `6` if the container format is an audio format (FLAC, OGG, MP3, M4A).
-Default value: `2`. 
-     * @return AudioChannel The audio channels. Valid values:
-<li>`1`: Mono-channel</li>
-<li>`2`: Dual-channel</li>
-<li>`6`: Stereo</li>
-
-You cannot set this parameter to `6` if the container format is an audio format (FLAC, OGG, MP3, M4A).
-Default value: `2`.
+     * Get  
+     * @return AudioChannel 
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
     /**
-     * Set The audio channels. Valid values:
-<li>`1`: Mono-channel</li>
-<li>`2`: Dual-channel</li>
-<li>`6`: Stereo</li>
-
-You cannot set this parameter to `6` if the container format is an audio format (FLAC, OGG, MP3, M4A).
-Default value: `2`.
-     * @param AudioChannel The audio channels. Valid values:
-<li>`1`: Mono-channel</li>
-<li>`2`: Dual-channel</li>
-<li>`6`: Stereo</li>
-
-You cannot set this parameter to `6` if the container format is an audio format (FLAC, OGG, MP3, M4A).
-Default value: `2`.
+     * Set 
+     * @param AudioChannel 
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;

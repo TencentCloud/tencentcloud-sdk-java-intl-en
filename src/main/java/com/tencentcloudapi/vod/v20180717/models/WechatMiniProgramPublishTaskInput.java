@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class WechatMiniProgramPublishTaskInput extends AbstractModel {
 
     /**
-    * ID of the transcoding template corresponding to the published video. 0 represents the source video.
+    * 
     */
     @SerializedName("SourceDefinition")
     @Expose
     private Long SourceDefinition;
 
     /**
-     * Get ID of the transcoding template corresponding to the published video. 0 represents the source video. 
-     * @return SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+     * Get  
+     * @return SourceDefinition 
      */
     public Long getSourceDefinition() {
         return this.SourceDefinition;
     }
 
     /**
-     * Set ID of the transcoding template corresponding to the published video. 0 represents the source video.
-     * @param SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+     * Set 
+     * @param SourceDefinition 
      */
     public void setSourceDefinition(Long SourceDefinition) {
         this.SourceDefinition = SourceDefinition;

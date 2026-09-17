@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ClipTask2017 extends AbstractModel {
 
     /**
-    * Video clipping task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * ID of source file for video clipping task.
+    * 
     */
     @SerializedName("SrcFileId")
     @Expose
     private String SrcFileId;
 
     /**
-    * Information of file output by video clipping.
+    * 
     */
     @SerializedName("FileInfo")
     @Expose
     private ClipFileInfo2017 FileInfo;
 
     /**
-     * Get Video clipping task ID. 
-     * @return TaskId Video clipping task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Video clipping task ID.
-     * @param TaskId Video clipping task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get ID of source file for video clipping task. 
-     * @return SrcFileId ID of source file for video clipping task.
+     * Get  
+     * @return SrcFileId 
      */
     public String getSrcFileId() {
         return this.SrcFileId;
     }
 
     /**
-     * Set ID of source file for video clipping task.
-     * @param SrcFileId ID of source file for video clipping task.
+     * Set 
+     * @param SrcFileId 
      */
     public void setSrcFileId(String SrcFileId) {
         this.SrcFileId = SrcFileId;
     }
 
     /**
-     * Get Information of file output by video clipping. 
-     * @return FileInfo Information of file output by video clipping.
+     * Get  
+     * @return FileInfo 
      */
     public ClipFileInfo2017 getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set Information of file output by video clipping.
-     * @param FileInfo Information of file output by video clipping.
+     * Set 
+     * @param FileInfo 
      */
     public void setFileInfo(ClipFileInfo2017 FileInfo) {
         this.FileInfo = FileInfo;

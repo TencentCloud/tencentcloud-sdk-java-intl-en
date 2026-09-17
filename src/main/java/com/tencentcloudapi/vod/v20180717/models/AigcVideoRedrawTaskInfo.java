@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AigcVideoRedrawTaskInfo extends AbstractModel {
 
     /**
-    * <p>For description of style. Limited to 50 characters.</p>
+    * 
     */
     @SerializedName("Style")
     @Expose
     private String Style;
 
     /**
-     * Get <p>For description of style. Limited to 50 characters.</p> 
-     * @return Style <p>For description of style. Limited to 50 characters.</p>
+     * Get  
+     * @return Style 
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set <p>For description of style. Limited to 50 characters.</p>
-     * @param Style <p>For description of style. Limited to 50 characters.</p>
+     * Set 
+     * @param Style 
      */
     public void setStyle(String Style) {
         this.Style = Style;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CopyRightWatermarkInput extends AbstractModel {
 
     /**
-    * Copyright information, maximum length is 200 characters.
+    * 
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get Copyright information, maximum length is 200 characters. 
-     * @return Text Copyright information, maximum length is 200 characters.
+     * Get  
+     * @return Text 
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Copyright information, maximum length is 200 characters.
-     * @param Text Copyright information, maximum length is 200 characters.
+     * Set 
+     * @param Text 
      */
     public void setText(String Text) {
         this.Text = Text;

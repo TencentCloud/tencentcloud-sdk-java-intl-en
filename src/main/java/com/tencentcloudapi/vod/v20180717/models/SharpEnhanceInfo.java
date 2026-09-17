@@ -24,61 +24,46 @@ import java.util.HashMap;
 public class SharpEnhanceInfo extends AbstractModel {
 
     /**
-    * Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
+    * 
     */
     @SerializedName("Intensity")
     @Expose
     private Float Intensity;
 
     /**
-     * Get Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li> 
-     * @return Switch Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param Switch Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`. 
-     * @return Intensity The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
+     * Get  
+     * @return Intensity 
      */
     public Float getIntensity() {
         return this.Intensity;
     }
 
     /**
-     * Set The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
-     * @param Intensity The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
+     * Set 
+     * @param Intensity 
      */
     public void setIntensity(Float Intensity) {
         this.Intensity = Intensity;

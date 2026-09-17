@@ -24,132 +24,92 @@ import java.util.HashMap;
 public class RefererAuthPolicy extends AbstractModel {
 
     /**
-    * [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Referer authentication method. Valid values:
-<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
-<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
-When `Status` is set to `Enabled`, `AuthType` must be specified.
+    * 
     */
     @SerializedName("AuthType")
     @Expose
     private String AuthType;
 
     /**
-    * Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
+    * 
     */
     @SerializedName("Referers")
     @Expose
     private String [] Referers;
 
     /**
-    * Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>`Yes`</li>
-<li>`No`</li>
-When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
+    * 
     */
     @SerializedName("BlankRefererAllowed")
     @Expose
     private String BlankRefererAllowed;
 
     /**
-     * Get [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li> 
-     * @return Status [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li>
-     * @param Status [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Referer authentication method. Valid values:
-<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
-<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
-When `Status` is set to `Enabled`, `AuthType` must be specified. 
-     * @return AuthType Referer authentication method. Valid values:
-<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
-<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
-When `Status` is set to `Enabled`, `AuthType` must be specified.
+     * Get  
+     * @return AuthType 
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set Referer authentication method. Valid values:
-<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
-<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
-When `Status` is set to `Enabled`, `AuthType` must be specified.
-     * @param AuthType Referer authentication method. Valid values:
-<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
-<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
-When `Status` is set to `Enabled`, `AuthType` must be specified.
+     * Set 
+     * @param AuthType 
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format. 
-     * @return Referers Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
+     * Get  
+     * @return Referers 
      */
     public String [] getReferers() {
         return this.Referers;
     }
 
     /**
-     * Set Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
-     * @param Referers Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
+     * Set 
+     * @param Referers 
      */
     public void setReferers(String [] Referers) {
         this.Referers = Referers;
     }
 
     /**
-     * Get Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>`Yes`</li>
-<li>`No`</li>
-When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified. 
-     * @return BlankRefererAllowed Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>`Yes`</li>
-<li>`No`</li>
-When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
+     * Get  
+     * @return BlankRefererAllowed 
      */
     public String getBlankRefererAllowed() {
         return this.BlankRefererAllowed;
     }
 
     /**
-     * Set Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>`Yes`</li>
-<li>`No`</li>
-When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
-     * @param BlankRefererAllowed Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>`Yes`</li>
-<li>`No`</li>
-When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
+     * Set 
+     * @param BlankRefererAllowed 
      */
     public void setBlankRefererAllowed(String BlankRefererAllowed) {
         this.BlankRefererAllowed = BlankRefererAllowed;

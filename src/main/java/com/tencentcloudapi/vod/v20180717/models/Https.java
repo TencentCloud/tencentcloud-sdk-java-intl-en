@@ -24,69 +24,89 @@ import java.util.HashMap;
 public class Https extends AbstractModel {
 
     /**
-    * https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+    * https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+    * http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Http2")
     @Expose
     private String Http2;
 
     /**
-    * Cert configuration message.
+    * 
     */
     @SerializedName("CertInfo")
     @Expose
     private CDNCertInfo CertInfo;
 
     /**
-     * Get https configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Get https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Set https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
-     * @return Http2 http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Get http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Http2 http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param Http2 http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Set http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Http2 http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setHttp2(String Http2) {
         this.Http2 = Http2;
     }
 
     /**
-     * Get Cert configuration message. 
-     * @return CertInfo Cert configuration message.
+     * Get  
+     * @return CertInfo 
      */
     public CDNCertInfo getCertInfo() {
         return this.CertInfo;
     }
 
     /**
-     * Set Cert configuration message.
-     * @param CertInfo Cert configuration message.
+     * Set 
+     * @param CertInfo 
      */
     public void setCertInfo(CDNCertInfo CertInfo) {
         this.CertInfo = CertInfo;

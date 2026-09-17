@@ -24,152 +24,137 @@ import java.util.HashMap;
 public class RestoreMediaTask extends AbstractModel {
 
     /**
-    * File ID
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Original storage class
+    * 
     */
     @SerializedName("OriginalStorageClass")
     @Expose
     private String OriginalStorageClass;
 
     /**
-    * Target storage class. For temporary retrieval, the target storage class is the same as the original.
+    * 
     */
     @SerializedName("TargetStorageClass")
     @Expose
     private String TargetStorageClass;
 
     /**
-    * Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
+    * 
     */
     @SerializedName("RestoreTier")
     @Expose
     private String RestoreTier;
 
     /**
-    * Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
+    * 
     */
     @SerializedName("RestoreDay")
     @Expose
     private Long RestoreDay;
 
     /**
-    * This field has been disused.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * This field has been disused.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get File ID 
-     * @return FileId File ID
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set File ID
-     * @param FileId File ID
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Original storage class 
-     * @return OriginalStorageClass Original storage class
+     * Get  
+     * @return OriginalStorageClass 
      */
     public String getOriginalStorageClass() {
         return this.OriginalStorageClass;
     }
 
     /**
-     * Set Original storage class
-     * @param OriginalStorageClass Original storage class
+     * Set 
+     * @param OriginalStorageClass 
      */
     public void setOriginalStorageClass(String OriginalStorageClass) {
         this.OriginalStorageClass = OriginalStorageClass;
     }
 
     /**
-     * Get Target storage class. For temporary retrieval, the target storage class is the same as the original. 
-     * @return TargetStorageClass Target storage class. For temporary retrieval, the target storage class is the same as the original.
+     * Get  
+     * @return TargetStorageClass 
      */
     public String getTargetStorageClass() {
         return this.TargetStorageClass;
     }
 
     /**
-     * Set Target storage class. For temporary retrieval, the target storage class is the same as the original.
-     * @param TargetStorageClass Target storage class. For temporary retrieval, the target storage class is the same as the original.
+     * Set 
+     * @param TargetStorageClass 
      */
     public void setTargetStorageClass(String TargetStorageClass) {
         this.TargetStorageClass = TargetStorageClass;
     }
 
     /**
-     * Get Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li> 
-     * @return RestoreTier Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
+     * Get  
+     * @return RestoreTier 
      */
     public String getRestoreTier() {
         return this.RestoreTier;
     }
 
     /**
-     * Set Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-     * @param RestoreTier Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
+     * Set 
+     * @param RestoreTier 
      */
     public void setRestoreTier(String RestoreTier) {
         this.RestoreTier = RestoreTier;
     }
 
     /**
-     * Get Validity period (days) for a temporary copy. `0` indicates permanent retrieval. 
-     * @return RestoreDay Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
+     * Get  
+     * @return RestoreDay 
      */
     public Long getRestoreDay() {
         return this.RestoreDay;
     }
 
     /**
-     * Set Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
-     * @param RestoreDay Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
+     * Set 
+     * @param RestoreDay 
      */
     public void setRestoreDay(Long RestoreDay) {
         this.RestoreDay = RestoreDay;
     }
 
     /**
-     * Get This field has been disused. 
-     * @return Status This field has been disused.
+     * Get  
+     * @return Status 
      * @deprecated
      */
     @Deprecated
@@ -178,8 +163,8 @@ public class RestoreMediaTask extends AbstractModel {
     }
 
     /**
-     * Set This field has been disused.
-     * @param Status This field has been disused.
+     * Set 
+     * @param Status 
      * @deprecated
      */
     @Deprecated
@@ -188,8 +173,8 @@ public class RestoreMediaTask extends AbstractModel {
     }
 
     /**
-     * Get This field has been disused. 
-     * @return Message This field has been disused.
+     * Get  
+     * @return Message 
      * @deprecated
      */
     @Deprecated
@@ -198,8 +183,8 @@ public class RestoreMediaTask extends AbstractModel {
     }
 
     /**
-     * Set This field has been disused.
-     * @param Message This field has been disused.
+     * Set 
+     * @param Message 
      * @deprecated
      */
     @Deprecated

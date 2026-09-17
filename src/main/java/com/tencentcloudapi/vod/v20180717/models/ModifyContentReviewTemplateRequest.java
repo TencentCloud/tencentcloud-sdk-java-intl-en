@@ -24,273 +24,253 @@ import java.util.HashMap;
 public class ModifyContentReviewTemplateRequest extends AbstractModel {
 
     /**
-    * Unique identifier of a content review template.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Content review template name. The length cannot exceed 64 characters.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Content review template description information, with a length limit of 256 characters.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Control parameters for unsafe information.
+    * 
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfoForUpdate TerrorismConfigure;
 
     /**
-    * Control parameters for offensive information.
+    * 
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfoForUpdate PornConfigure;
 
     /**
-    * Control parameter for inappropriate information.
+    * 
     */
     @SerializedName("PoliticalConfigure")
     @Expose
     private PoliticalConfigureInfoForUpdate PoliticalConfigure;
 
     /**
-    * Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
+    * 
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
     private ProhibitedConfigureInfoForUpdate ProhibitedConfigure;
 
     /**
-    * User-defined content review control parameters.
+    * 
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfoForUpdate UserDefineConfigure;
 
     /**
-    * Frame interception interval, unit: seconds, minimum value 0.5.
+    * 
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-    * Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+    * 
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
     private String ReviewWallSwitch;
 
     /**
-     * Get Unique identifier of a content review template. 
-     * @return Definition Unique identifier of a content review template.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of a content review template.
-     * @param Definition Unique identifier of a content review template.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Content review template name. The length cannot exceed 64 characters. 
-     * @return Name Content review template name. The length cannot exceed 64 characters.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Content review template name. The length cannot exceed 64 characters.
-     * @param Name Content review template name. The length cannot exceed 64 characters.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Content review template description information, with a length limit of 256 characters. 
-     * @return Comment Content review template description information, with a length limit of 256 characters.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Content review template description information, with a length limit of 256 characters.
-     * @param Comment Content review template description information, with a length limit of 256 characters.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Control parameters for unsafe information. 
-     * @return TerrorismConfigure Control parameters for unsafe information.
+     * Get  
+     * @return TerrorismConfigure 
      */
     public TerrorismConfigureInfoForUpdate getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Control parameters for unsafe information.
-     * @param TerrorismConfigure Control parameters for unsafe information.
+     * Set 
+     * @param TerrorismConfigure 
      */
     public void setTerrorismConfigure(TerrorismConfigureInfoForUpdate TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Control parameters for offensive information. 
-     * @return PornConfigure Control parameters for offensive information.
+     * Get  
+     * @return PornConfigure 
      */
     public PornConfigureInfoForUpdate getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Control parameters for offensive information.
-     * @param PornConfigure Control parameters for offensive information.
+     * Set 
+     * @param PornConfigure 
      */
     public void setPornConfigure(PornConfigureInfoForUpdate PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Control parameter for inappropriate information. 
-     * @return PoliticalConfigure Control parameter for inappropriate information.
+     * Get  
+     * @return PoliticalConfigure 
      */
     public PoliticalConfigureInfoForUpdate getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Control parameter for inappropriate information.
-     * @param PoliticalConfigure Control parameter for inappropriate information.
+     * Set 
+     * @param PoliticalConfigure 
      */
     public void setPoliticalConfigure(PoliticalConfigureInfoForUpdate PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
     }
 
     /**
-     * Get Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li> 
-     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
+     * Get  
+     * @return ProhibitedConfigure 
      */
     public ProhibitedConfigureInfoForUpdate getProhibitedConfigure() {
         return this.ProhibitedConfigure;
     }
 
     /**
-     * Set Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
-     * @param ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
-<li>Abuse;</li>
-<li>Drug-related violation.</li>
+     * Set 
+     * @param ProhibitedConfigure 
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;
     }
 
     /**
-     * Get User-defined content review control parameters. 
-     * @return UserDefineConfigure User-defined content review control parameters.
+     * Get  
+     * @return UserDefineConfigure 
      */
     public UserDefineConfigureInfoForUpdate getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set User-defined content review control parameters.
-     * @param UserDefineConfigure User-defined content review control parameters.
+     * Set 
+     * @param UserDefineConfigure 
      */
     public void setUserDefineConfigure(UserDefineConfigureInfoForUpdate UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
     }
 
     /**
-     * Get Frame interception interval, unit: seconds, minimum value 0.5. 
-     * @return ScreenshotInterval Frame interception interval, unit: seconds, minimum value 0.5.
+     * Get  
+     * @return ScreenshotInterval 
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame interception interval, unit: seconds, minimum value 0.5.
-     * @param ScreenshotInterval Frame interception interval, unit: seconds, minimum value 0.5.
+     * Set 
+     * @param ScreenshotInterval 
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
     /**
-     * Get Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li> 
-     * @return ReviewWallSwitch Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+     * Get  
+     * @return ReviewWallSwitch 
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
     }
 
     /**
-     * Set Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
-     * @param ReviewWallSwitch Switch for whether the review result enters the review wall (manual recognition performed on the review result).
-<li>ON: yes</li>
-<li>OFF: No.</li>
+     * Set 
+     * @param ReviewWallSwitch 
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;

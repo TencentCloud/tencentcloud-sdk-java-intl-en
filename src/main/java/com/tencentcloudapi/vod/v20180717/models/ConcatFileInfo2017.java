@@ -24,150 +24,115 @@ import java.util.HashMap;
 public class ConcatFileInfo2017 extends AbstractModel {
 
     /**
-    * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-     * Get Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileId ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileId ID of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileUrl Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileUrl 
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileUrl Address of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileUrl 
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileType Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileType 
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileType Format of source file for video splicing.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileType 
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

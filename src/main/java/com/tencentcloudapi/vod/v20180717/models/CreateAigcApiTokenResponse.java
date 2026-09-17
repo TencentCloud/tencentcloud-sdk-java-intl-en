@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcApiTokenResponse extends AbstractModel {
 
     /**
-    * API Token.
+    * 
     */
     @SerializedName("ApiToken")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAigcApiTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get API Token. 
-     * @return ApiToken API Token.
+     * Get  
+     * @return ApiToken 
      */
     public String getApiToken() {
         return this.ApiToken;
     }
 
     /**
-     * Set API Token.
-     * @param ApiToken API Token.
+     * Set 
+     * @param ApiToken 
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;

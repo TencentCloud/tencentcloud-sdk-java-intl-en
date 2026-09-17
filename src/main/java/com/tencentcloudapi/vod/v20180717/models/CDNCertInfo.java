@@ -24,92 +24,97 @@ import java.util.HashMap;
 public class CDNCertInfo extends AbstractModel {
 
     /**
-    * The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+    * Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * Server certificate information.
+    * 
     */
     @SerializedName("Certificate")
     @Expose
     private String Certificate;
 
     /**
-    * Server key information.
+    * 
     */
     @SerializedName("PrivateKey")
     @Expose
     private String PrivateKey;
 
     /**
-    * Certificate expiration time; no need to fill in when configured as an input parameter.
+    * Certificate expiration time;
+No need to fill when used as an input parameter configuration.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management. 
-     * @return CertId The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+     * Get Server certificate ID is automatically generated when hosting a certificate in SSL certificate management. 
+     * @return CertId Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
-     * @param CertId The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+     * Set Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
+     * @param CertId Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get Server certificate information. 
-     * @return Certificate Server certificate information.
+     * Get  
+     * @return Certificate 
      */
     public String getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set Server certificate information.
-     * @param Certificate Server certificate information.
+     * Set 
+     * @param Certificate 
      */
     public void setCertificate(String Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get Server key information. 
-     * @return PrivateKey Server key information.
+     * Get  
+     * @return PrivateKey 
      */
     public String getPrivateKey() {
         return this.PrivateKey;
     }
 
     /**
-     * Set Server key information.
-     * @param PrivateKey Server key information.
+     * Set 
+     * @param PrivateKey 
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;
     }
 
     /**
-     * Get Certificate expiration time; no need to fill in when configured as an input parameter. 
-     * @return ExpireTime Certificate expiration time; no need to fill in when configured as an input parameter.
+     * Get Certificate expiration time;
+No need to fill when used as an input parameter configuration. 
+     * @return ExpireTime Certificate expiration time;
+No need to fill when used as an input parameter configuration.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Certificate expiration time; no need to fill in when configured as an input parameter.
-     * @param ExpireTime Certificate expiration time; no need to fill in when configured as an input parameter.
+     * Set Certificate expiration time;
+No need to fill when used as an input parameter configuration.
+     * @param ExpireTime Certificate expiration time;
+No need to fill when used as an input parameter configuration.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

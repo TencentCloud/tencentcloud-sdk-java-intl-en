@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAdaptiveDynamicStreamingTemplatesResponse extends AbstractModel {
 
     /**
-    * The total number of records matching the filter criteria.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of transcoding to adaptive bitrate streaming template details.
+    * 
     */
     @SerializedName("AdaptiveDynamicStreamingTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAdaptiveDynamicStreamingTemplatesResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get The total number of records matching the filter criteria. 
-     * @return TotalCount The total number of records matching the filter criteria.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of records matching the filter criteria.
-     * @param TotalCount The total number of records matching the filter criteria.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of transcoding to adaptive bitrate streaming template details. 
-     * @return AdaptiveDynamicStreamingTemplateSet List of transcoding to adaptive bitrate streaming template details.
+     * Get  
+     * @return AdaptiveDynamicStreamingTemplateSet 
      */
     public AdaptiveDynamicStreamingTemplate [] getAdaptiveDynamicStreamingTemplateSet() {
         return this.AdaptiveDynamicStreamingTemplateSet;
     }
 
     /**
-     * Set List of transcoding to adaptive bitrate streaming template details.
-     * @param AdaptiveDynamicStreamingTemplateSet List of transcoding to adaptive bitrate streaming template details.
+     * Set 
+     * @param AdaptiveDynamicStreamingTemplateSet 
      */
     public void setAdaptiveDynamicStreamingTemplateSet(AdaptiveDynamicStreamingTemplate [] AdaptiveDynamicStreamingTemplateSet) {
         this.AdaptiveDynamicStreamingTemplateSet = AdaptiveDynamicStreamingTemplateSet;

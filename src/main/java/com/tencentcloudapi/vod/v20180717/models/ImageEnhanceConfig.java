@@ -24,224 +24,184 @@ import java.util.HashMap;
 public class ImageEnhanceConfig extends AbstractModel {
 
     /**
-    * Super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SuperResolution")
     @Expose
     private SuperResolutionInfo SuperResolution;
 
     /**
-    * Advanced super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AdvancedSuperResolution")
     @Expose
     private AdvancedSuperResolutionConfig AdvancedSuperResolution;
 
     /**
-    * Denoising configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Denoise")
     @Expose
     private ImageDenoiseConfig Denoise;
 
     /**
-    * Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ImageQualityEnhance")
     @Expose
     private ImageQualityEnhanceInfo ImageQualityEnhance;
 
     /**
-    * Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ColorEnhance")
     @Expose
     private ColorEnhanceInfo ColorEnhance;
 
     /**
-    * Detail enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SharpEnhance")
     @Expose
     private SharpEnhanceInfo SharpEnhance;
 
     /**
-    * Face enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FaceEnhance")
     @Expose
     private FaceEnhanceInfo FaceEnhance;
 
     /**
-    * Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("LowLightEnhance")
     @Expose
     private LowLightEnhanceInfo LowLightEnhance;
 
     /**
-     * Get Super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuperResolution Super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SuperResolution 
      */
     public SuperResolutionInfo getSuperResolution() {
         return this.SuperResolution;
     }
 
     /**
-     * Set Super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuperResolution Super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SuperResolution 
      */
     public void setSuperResolution(SuperResolutionInfo SuperResolution) {
         this.SuperResolution = SuperResolution;
     }
 
     /**
-     * Get Advanced super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdvancedSuperResolution Advanced super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AdvancedSuperResolution 
      */
     public AdvancedSuperResolutionConfig getAdvancedSuperResolution() {
         return this.AdvancedSuperResolution;
     }
 
     /**
-     * Set Advanced super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedSuperResolution Advanced super-resolution configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AdvancedSuperResolution 
      */
     public void setAdvancedSuperResolution(AdvancedSuperResolutionConfig AdvancedSuperResolution) {
         this.AdvancedSuperResolution = AdvancedSuperResolution;
     }
 
     /**
-     * Get Denoising configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Denoise Denoising configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Denoise 
      */
     public ImageDenoiseConfig getDenoise() {
         return this.Denoise;
     }
 
     /**
-     * Set Denoising configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Denoise Denoising configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Denoise 
      */
     public void setDenoise(ImageDenoiseConfig Denoise) {
         this.Denoise = Denoise;
     }
 
     /**
-     * Get Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageQualityEnhance Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ImageQualityEnhance 
      */
     public ImageQualityEnhanceInfo getImageQualityEnhance() {
         return this.ImageQualityEnhance;
     }
 
     /**
-     * Set Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageQualityEnhance Comprehensive enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ImageQualityEnhance 
      */
     public void setImageQualityEnhance(ImageQualityEnhanceInfo ImageQualityEnhance) {
         this.ImageQualityEnhance = ImageQualityEnhance;
     }
 
     /**
-     * Get Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ColorEnhance Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ColorEnhance 
      */
     public ColorEnhanceInfo getColorEnhance() {
         return this.ColorEnhance;
     }
 
     /**
-     * Set Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ColorEnhance Color enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ColorEnhance 
      */
     public void setColorEnhance(ColorEnhanceInfo ColorEnhance) {
         this.ColorEnhance = ColorEnhance;
     }
 
     /**
-     * Get Detail enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SharpEnhance Detail enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SharpEnhance 
      */
     public SharpEnhanceInfo getSharpEnhance() {
         return this.SharpEnhance;
     }
 
     /**
-     * Set Detail enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SharpEnhance Detail enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SharpEnhance 
      */
     public void setSharpEnhance(SharpEnhanceInfo SharpEnhance) {
         this.SharpEnhance = SharpEnhance;
     }
 
     /**
-     * Get Face enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FaceEnhance Face enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FaceEnhance 
      */
     public FaceEnhanceInfo getFaceEnhance() {
         return this.FaceEnhance;
     }
 
     /**
-     * Set Face enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FaceEnhance Face enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FaceEnhance 
      */
     public void setFaceEnhance(FaceEnhanceInfo FaceEnhance) {
         this.FaceEnhance = FaceEnhance;
     }
 
     /**
-     * Get Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LowLightEnhance Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return LowLightEnhance 
      */
     public LowLightEnhanceInfo getLowLightEnhance() {
         return this.LowLightEnhance;
     }
 
     /**
-     * Set Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LowLightEnhance Low-light enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param LowLightEnhance 
      */
     public void setLowLightEnhance(LowLightEnhanceInfo LowLightEnhance) {
         this.LowLightEnhance = LowLightEnhance;

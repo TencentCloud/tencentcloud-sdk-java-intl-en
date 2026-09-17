@@ -24,315 +24,230 @@ import java.util.HashMap;
 public class WechatPublishTask extends AbstractModel {
 
     /**
-    * Task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * ID of published video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Release on WeChat template ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * ID of the transcoding template corresponding to the published video. 0 represents the source video.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SourceDefinition")
     @Expose
     private Long SourceDefinition;
 
     /**
-    * Release on WeChat status. Valid values:
-<li>FAIL: failure;</li>
-<li>SUCCESS: success;</li>
-<li>AUDITNOTPASS: rejected</li>
-<li>NOTTRIGGERED: release on WeChat not initiated yet.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WechatStatus")
     @Expose
     private String WechatStatus;
 
     /**
-    * WeChat `Vid`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WechatVid")
     @Expose
     private String WechatVid;
 
     /**
-    * WeChat address.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WechatUrl")
     @Expose
     private String WechatUrl;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed. 
-     * @return Status Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
-     * @param Status Task status. Valid values:
-WAITING: waiting;
-PROCESSING: processing;
-FINISH: completed.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get ID of published video file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileId ID of published video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set ID of published video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileId ID of published video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Release on WeChat template ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Definition Release on WeChat template ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Release on WeChat template ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Definition Release on WeChat template ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get ID of the transcoding template corresponding to the published video. 0 represents the source video.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SourceDefinition 
      */
     public Long getSourceDefinition() {
         return this.SourceDefinition;
     }
 
     /**
-     * Set ID of the transcoding template corresponding to the published video. 0 represents the source video.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SourceDefinition 
      */
     public void setSourceDefinition(Long SourceDefinition) {
         this.SourceDefinition = SourceDefinition;
     }
 
     /**
-     * Get Release on WeChat status. Valid values:
-<li>FAIL: failure;</li>
-<li>SUCCESS: success;</li>
-<li>AUDITNOTPASS: rejected</li>
-<li>NOTTRIGGERED: release on WeChat not initiated yet.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WechatStatus Release on WeChat status. Valid values:
-<li>FAIL: failure;</li>
-<li>SUCCESS: success;</li>
-<li>AUDITNOTPASS: rejected</li>
-<li>NOTTRIGGERED: release on WeChat not initiated yet.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WechatStatus 
      */
     public String getWechatStatus() {
         return this.WechatStatus;
     }
 
     /**
-     * Set Release on WeChat status. Valid values:
-<li>FAIL: failure;</li>
-<li>SUCCESS: success;</li>
-<li>AUDITNOTPASS: rejected</li>
-<li>NOTTRIGGERED: release on WeChat not initiated yet.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatStatus Release on WeChat status. Valid values:
-<li>FAIL: failure;</li>
-<li>SUCCESS: success;</li>
-<li>AUDITNOTPASS: rejected</li>
-<li>NOTTRIGGERED: release on WeChat not initiated yet.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WechatStatus 
      */
     public void setWechatStatus(String WechatStatus) {
         this.WechatStatus = WechatStatus;
     }
 
     /**
-     * Get WeChat `Vid`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WechatVid WeChat `Vid`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WechatVid 
      */
     public String getWechatVid() {
         return this.WechatVid;
     }
 
     /**
-     * Set WeChat `Vid`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatVid WeChat `Vid`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WechatVid 
      */
     public void setWechatVid(String WechatVid) {
         this.WechatVid = WechatVid;
     }
 
     /**
-     * Get WeChat address.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WechatUrl WeChat address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WechatUrl 
      */
     public String getWechatUrl() {
         return this.WechatUrl;
     }
 
     /**
-     * Set WeChat address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatUrl WeChat address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WechatUrl 
      */
     public void setWechatUrl(String WechatUrl) {
         this.WechatUrl = WechatUrl;

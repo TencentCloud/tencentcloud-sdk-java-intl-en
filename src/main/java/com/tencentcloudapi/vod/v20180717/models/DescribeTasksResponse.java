@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTasksResponse extends AbstractModel {
 
     /**
-    * Task summary list.
+    * 
     */
     @SerializedName("TaskSet")
     @Expose
     private TaskSimpleInfo [] TaskSet;
 
     /**
-    * Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
+    * 
     */
     @SerializedName("ScrollToken")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task summary list. 
-     * @return TaskSet Task summary list.
+     * Get  
+     * @return TaskSet 
      */
     public TaskSimpleInfo [] getTaskSet() {
         return this.TaskSet;
     }
 
     /**
-     * Set Task summary list.
-     * @param TaskSet Task summary list.
+     * Set 
+     * @param TaskSet 
      */
     public void setTaskSet(TaskSimpleInfo [] TaskSet) {
         this.TaskSet = TaskSet;
     }
 
     /**
-     * Get Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data. 
-     * @return ScrollToken Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
+     * Get  
+     * @return ScrollToken 
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
-     * @param ScrollToken Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
+     * Set 
+     * @param ScrollToken 
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

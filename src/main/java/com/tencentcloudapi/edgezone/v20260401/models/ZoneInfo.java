@@ -59,14 +59,14 @@ public class ZoneInfo extends AbstractModel {
     private String Region;
 
     /**
-    * Area code
+    * Area code.
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * Zone Name
+    * Region name.
     */
     @SerializedName("LocationName")
     @Expose
@@ -153,32 +153,32 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get Area code 
-     * @return Location Area code
+     * Get Area code. 
+     * @return Location Area code.
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set Area code
-     * @param Location Area code
+     * Set Area code.
+     * @param Location Area code.
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get Zone Name 
-     * @return LocationName Zone Name
+     * Get Region name. 
+     * @return LocationName Region name.
      */
     public String getLocationName() {
         return this.LocationName;
     }
 
     /**
-     * Set Zone Name
-     * @param LocationName Zone Name
+     * Set Region name.
+     * @param LocationName Region name.
      */
     public void setLocationName(String LocationName) {
         this.LocationName = LocationName;

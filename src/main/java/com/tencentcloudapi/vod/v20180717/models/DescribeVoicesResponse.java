@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeVoicesResponse extends AbstractModel {
 
     /**
-    * <p>Available timbre list.</p>
+    * 
     */
     @SerializedName("Voices")
     @Expose
     private VoiceInfo [] Voices;
 
     /**
-    * <p>Total number of available voices</p>
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeVoicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Available timbre list.</p> 
-     * @return Voices <p>Available timbre list.</p>
+     * Get  
+     * @return Voices 
      */
     public VoiceInfo [] getVoices() {
         return this.Voices;
     }
 
     /**
-     * Set <p>Available timbre list.</p>
-     * @param Voices <p>Available timbre list.</p>
+     * Set 
+     * @param Voices 
      */
     public void setVoices(VoiceInfo [] Voices) {
         this.Voices = Voices;
     }
 
     /**
-     * Get <p>Total number of available voices</p> 
-     * @return TotalCount <p>Total number of available voices</p>
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of available voices</p>
-     * @param TotalCount <p>Total number of available voices</p>
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

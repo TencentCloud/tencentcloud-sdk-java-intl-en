@@ -24,278 +24,253 @@ import java.util.HashMap;
 public class QualityEnhanceTask extends AbstractModel {
 
     /**
-    * Task Id.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Media quality enhance task progress, value range [0-100].
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input of the audio and video quality regeneration task.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private QualityEnhanceTaskInput Input;
 
     /**
-    * Output of the audio and video quality regeneration task.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private QualityEnhanceTaskOutput Output;
 
     /**
-    * Metadata of the output video after audio and video quality revival.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get Task Id. 
-     * @return TaskId Task Id.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task Id.
-     * @param TaskId Task Id.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li> 
-     * @return Status Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
-     * @param Status Task flow status, values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: Completed. </li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li> 
-     * @return ErrCode Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
-     * @param ErrCode Error code, 0 means success, other values u200bu200bmean failure:
-<li>40000: The input parameters are illegal, please check the input parameters;</li>
-<li>60000: Source file error (such as video data damage), Please confirm whether the source file is normal;</li>
-<li>70000: Internal service error, it is recommended to try again. </li>
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list. 
-     * @return ErrCodeExt Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
-     * @param ErrCodeExt Error code. An empty string indicates success. Other values u200bu200bindicate failure. For values, please refer to [Video Processing Error Code](https://www.tencentcloud.com/document/product/266/39145) list.
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Media quality enhance task progress, value range [0-100]. 
-     * @return Progress Media quality enhance task progress, value range [0-100].
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Media quality enhance task progress, value range [0-100].
-     * @param Progress Media quality enhance task progress, value range [0-100].
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input of the audio and video quality regeneration task. 
-     * @return Input Input of the audio and video quality regeneration task.
+     * Get  
+     * @return Input 
      */
     public QualityEnhanceTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the audio and video quality regeneration task.
-     * @param Input Input of the audio and video quality regeneration task.
+     * Set 
+     * @param Input 
      */
     public void setInput(QualityEnhanceTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of the audio and video quality regeneration task. 
-     * @return Output Output of the audio and video quality regeneration task.
+     * Get  
+     * @return Output 
      */
     public QualityEnhanceTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the audio and video quality regeneration task.
-     * @param Output Output of the audio and video quality regeneration task.
+     * Set 
+     * @param Output 
      */
     public void setOutput(QualityEnhanceTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Metadata of the output video after audio and video quality revival. 
-     * @return MetaData Metadata of the output video after audio and video quality revival.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Metadata of the output video after audio and video quality revival.
-     * @param MetaData Metadata of the output video after audio and video quality revival.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication. 
-     * @return SessionId Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
-     * @param SessionId Identification code used for deduplication. If there is a request for the same identification code within seven days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters. 
-     * @return SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
-     * @param SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class LiveRealTimeClipStreamInfo extends AbstractModel {
 
     /**
-    * The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
+    * Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+    * Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li> 
-     * @return Type The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
+     * Get Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li> 
+     * @return Type Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
-     * @param Type The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
+     * Set Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
+     * @param Type Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b> 
-     * @return TemplateId The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+     * Get Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b> 
+     * @return TemplateId Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
-     * @param TemplateId The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+     * Set Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
+     * @param TemplateId Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

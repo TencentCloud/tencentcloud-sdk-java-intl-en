@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePersonSamplesResponse extends AbstractModel {
 
     /**
-    * Total number of qualified records.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Character information.
+    * 
     */
     @SerializedName("PersonSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePersonSamplesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of qualified records. 
-     * @return TotalCount Total number of qualified records.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of qualified records.
-     * @param TotalCount Total number of qualified records.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Character information. 
-     * @return PersonSet Character information.
+     * Get  
+     * @return PersonSet 
      */
     public AiSamplePerson [] getPersonSet() {
         return this.PersonSet;
     }
 
     /**
-     * Set Character information.
-     * @param PersonSet Character information.
+     * Set 
+     * @param PersonSet 
      */
     public void setPersonSet(AiSamplePerson [] PersonSet) {
         this.PersonSet = PersonSet;

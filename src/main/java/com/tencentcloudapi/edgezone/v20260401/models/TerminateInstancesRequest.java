@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class TerminateInstancesRequest extends AbstractModel {
 
     /**
-    * Instance ID list. Maximum number of IDs: 100.
+    * <p>Instance ID list. Maximum number of IDs: 100.</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get Instance ID list. Maximum number of IDs: 100. 
-     * @return InstanceIds Instance ID list. Maximum number of IDs: 100.
+     * Get <p>Instance ID list. Maximum number of IDs: 100.</p> 
+     * @return InstanceIds <p>Instance ID list. Maximum number of IDs: 100.</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID list. Maximum number of IDs: 100.
-     * @param InstanceIds Instance ID list. Maximum number of IDs: 100.
+     * Set <p>Instance ID list. Maximum number of IDs: 100.</p>
+     * @param InstanceIds <p>Instance ID list. Maximum number of IDs: 100.</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

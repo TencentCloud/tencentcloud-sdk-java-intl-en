@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class ComposeMediaTaskInput extends AbstractModel {
 
     /**
-    * List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+    * 
     */
     @SerializedName("Tracks")
     @Expose
     private MediaTrack [] Tracks;
 
     /**
-    * Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Canvas")
     @Expose
     private Canvas Canvas;
 
     /**
-    * Information of output media file.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private ComposeMediaOutput Output;
 
     /**
-     * Get List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials. 
-     * @return Tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+     * Get  
+     * @return Tracks 
      */
     public MediaTrack [] getTracks() {
         return this.Tracks;
     }
 
     /**
-     * Set List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
-     * @param Tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+     * Set 
+     * @param Tracks 
      */
     public void setTracks(MediaTrack [] Tracks) {
         this.Tracks = Tracks;
     }
 
     /**
-     * Get Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Canvas Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Canvas 
      */
     public Canvas getCanvas() {
         return this.Canvas;
     }
 
     /**
-     * Set Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Canvas Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Canvas 
      */
     public void setCanvas(Canvas Canvas) {
         this.Canvas = Canvas;
     }
 
     /**
-     * Get Information of output media file. 
-     * @return Output Information of output media file.
+     * Get  
+     * @return Output 
      */
     public ComposeMediaOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Information of output media file.
-     * @param Output Information of output media file.
+     * Set 
+     * @param Output 
      */
     public void setOutput(ComposeMediaOutput Output) {
         this.Output = Output;

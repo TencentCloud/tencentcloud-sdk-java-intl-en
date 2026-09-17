@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateEnhanceMediaTemplateResponse extends AbstractModel {
 
     /**
-    * Audio-visual quality rebirth template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateEnhanceMediaTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Audio-visual quality rebirth template ID. 
-     * @return Definition Audio-visual quality rebirth template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Audio-visual quality rebirth template ID.
-     * @param Definition Audio-visual quality rebirth template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

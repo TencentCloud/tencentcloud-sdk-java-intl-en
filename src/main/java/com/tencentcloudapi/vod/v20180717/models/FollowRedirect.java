@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class FollowRedirect extends AbstractModel {
 
     /**
-    * Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+    * Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Get Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch Back-to-origin follow configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Set Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Follow origin configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

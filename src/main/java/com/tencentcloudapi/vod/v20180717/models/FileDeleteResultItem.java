@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FileDeleteResultItem extends AbstractModel {
 
     /**
-    * The ID of the file deleted.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Part of the file deleted this time.
+    * 
     */
     @SerializedName("DeleteParts")
     @Expose
     private MediaDeleteItem [] DeleteParts;
 
     /**
-     * Get The ID of the file deleted. 
-     * @return FileId The ID of the file deleted.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The ID of the file deleted.
-     * @param FileId The ID of the file deleted.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Part of the file deleted this time. 
-     * @return DeleteParts Part of the file deleted this time.
+     * Get  
+     * @return DeleteParts 
      */
     public MediaDeleteItem [] getDeleteParts() {
         return this.DeleteParts;
     }
 
     /**
-     * Set Part of the file deleted this time.
-     * @param DeleteParts Part of the file deleted this time.
+     * Set 
+     * @param DeleteParts 
      */
     public void setDeleteParts(MediaDeleteItem [] DeleteParts) {
         this.DeleteParts = DeleteParts;

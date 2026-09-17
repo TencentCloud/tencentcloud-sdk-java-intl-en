@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class UpdateVoiceRequest extends AbstractModel {
 
     /**
-    * <p>Voice ID.</p>
+    * 
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * <p>Fields of the updated voice.</p>
+    * 
     */
     @SerializedName("VoiceFields")
     @Expose
     private VoiceUpdateFields VoiceFields;
 
     /**
-    * <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field as the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private String SubAppId;
 
     /**
-    * <p>Extended parameters in the format of a JSON string.</p>
+    * 
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-     * Get <p>Voice ID.</p> 
-     * @return VoiceId <p>Voice ID.</p>
+     * Get  
+     * @return VoiceId 
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Voice ID.</p>
-     * @param VoiceId <p>Voice ID.</p>
+     * Set 
+     * @param VoiceId 
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get <p>Fields of the updated voice.</p> 
-     * @return VoiceFields <p>Fields of the updated voice.</p>
+     * Get  
+     * @return VoiceFields 
      */
     public VoiceUpdateFields getVoiceFields() {
         return this.VoiceFields;
     }
 
     /**
-     * Set <p>Fields of the updated voice.</p>
-     * @param VoiceFields <p>Fields of the updated voice.</p>
+     * Set 
+     * @param VoiceFields 
      */
     public void setVoiceFields(VoiceUpdateFields VoiceFields) {
         this.VoiceFields = VoiceFields;
     }
 
     /**
-     * Get <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field as the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p> 
-     * @return SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field as the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * Get  
+     * @return SubAppId 
      */
     public String getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field as the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
-     * @param SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field as the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Extended parameters in the format of a JSON string.</p> 
-     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
+     * Get  
+     * @return ExtParam 
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set <p>Extended parameters in the format of a JSON string.</p>
-     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p>
+     * Set 
+     * @param ExtParam 
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;

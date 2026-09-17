@@ -24,115 +24,155 @@ import java.util.HashMap;
 public class CacheConfigCache extends AbstractModel {
 
     /**
-    * Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+    * Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
+    * 
     */
     @SerializedName("CacheTime")
     @Expose
     private Long CacheTime;
 
     /**
-    * Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+    * Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("CompareMaxAge")
     @Expose
     private String CompareMaxAge;
 
     /**
-    * Force caching, values: <li>on: on; </li> <li>off: off. </li>
+    * Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("IgnoreCacheControl")
     @Expose
     private String IgnoreCacheControl;
 
     /**
-    * When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+    * Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li>
     */
     @SerializedName("IgnoreSetCookie")
     @Expose
     private String IgnoreSetCookie;
 
     /**
-     * Get Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Get Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Set Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Path cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li> 
-     * @return CacheTime Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
+     * Get  
+     * @return CacheTime 
      */
     public Long getCacheTime() {
         return this.CacheTime;
     }
 
     /**
-     * Set Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
-     * @param CacheTime Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
+     * Set 
+     * @param CacheTime 
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;
     }
 
     /**
-     * Get Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li> 
-     * @return CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+     * Get Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getCompareMaxAge() {
         return this.CompareMaxAge;
     }
 
     /**
-     * Set Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
-     * @param CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+     * Set Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setCompareMaxAge(String CompareMaxAge) {
         this.CompareMaxAge = CompareMaxAge;
     }
 
     /**
-     * Get Force caching, values: <li>on: on; </li> <li>off: off. </li> 
-     * @return IgnoreCacheControl Force caching, values: <li>on: on; </li> <li>off: off. </li>
+     * Get Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return IgnoreCacheControl Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getIgnoreCacheControl() {
         return this.IgnoreCacheControl;
     }
 
     /**
-     * Set Force caching, values: <li>on: on; </li> <li>off: off. </li>
-     * @param IgnoreCacheControl Force caching, values: <li>on: on; </li> <li>off: off. </li>
+     * Set Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param IgnoreCacheControl Force cache. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
         this.IgnoreCacheControl = IgnoreCacheControl;
     }
 
     /**
-     * Get When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li> 
-     * @return IgnoreSetCookie When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+     * Get Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li> 
+     * @return IgnoreSetCookie Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li>
      */
     public String getIgnoreSetCookie() {
         return this.IgnoreSetCookie;
     }
 
     /**
-     * Set When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
-     * @param IgnoreSetCookie When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+     * Set Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li>
+     * @param IgnoreSetCookie Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+<li>on: Enable. Do not cache the header or body;</li>
+<li>off: disabled, following user-defined node cache rules.</li>
      */
     public void setIgnoreSetCookie(String IgnoreSetCookie) {
         this.IgnoreSetCookie = IgnoreSetCookie;

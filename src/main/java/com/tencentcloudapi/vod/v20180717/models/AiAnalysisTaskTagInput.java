@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskTagInput extends AbstractModel {
 
     /**
-    * Intelligent video tagging template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Intelligent video tagging template ID. 
-     * @return Definition Intelligent video tagging template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Intelligent video tagging template ID.
-     * @param Definition Intelligent video tagging template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

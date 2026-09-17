@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ThirdPartyDrmInfo extends AbstractModel {
 
     /**
-    * <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
+    * 
     */
     @SerializedName("DrmTypes")
     @Expose
     private String [] DrmTypes;
 
     /**
-    * <p>External DRM vendor information.</p>
+    * 
     */
     @SerializedName("SPEKEDrm")
     @Expose
     private SPEKEDrm SPEKEDrm;
 
     /**
-     * Get <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul> 
-     * @return DrmTypes <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
+     * Get  
+     * @return DrmTypes 
      */
     public String [] getDrmTypes() {
         return this.DrmTypes;
     }
 
     /**
-     * Set <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
-     * @param DrmTypes <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
+     * Set 
+     * @param DrmTypes 
      */
     public void setDrmTypes(String [] DrmTypes) {
         this.DrmTypes = DrmTypes;
     }
 
     /**
-     * Get <p>External DRM vendor information.</p> 
-     * @return SPEKEDrm <p>External DRM vendor information.</p>
+     * Get  
+     * @return SPEKEDrm 
      */
     public SPEKEDrm getSPEKEDrm() {
         return this.SPEKEDrm;
     }
 
     /**
-     * Set <p>External DRM vendor information.</p>
-     * @param SPEKEDrm <p>External DRM vendor information.</p>
+     * Set 
+     * @param SPEKEDrm 
      */
     public void setSPEKEDrm(SPEKEDrm SPEKEDrm) {
         this.SPEKEDrm = SPEKEDrm;

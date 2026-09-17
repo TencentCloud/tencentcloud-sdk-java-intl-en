@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SearchMediaResponse extends AbstractModel {
 
     /**
-    * <p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li>
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * <p>Media file information list.</p>
+    * 
     */
     @SerializedName("MediaInfoSet")
     @Expose
@@ -45,32 +45,32 @@ public class SearchMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li> 
-     * @return TotalCount <p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li>
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li>
-     * @param TotalCount <p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li>
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>Media file information list.</p> 
-     * @return MediaInfoSet <p>Media file information list.</p>
+     * Get  
+     * @return MediaInfoSet 
      */
     public MediaInfo [] getMediaInfoSet() {
         return this.MediaInfoSet;
     }
 
     /**
-     * Set <p>Media file information list.</p>
-     * @param MediaInfoSet <p>Media file information list.</p>
+     * Set 
+     * @param MediaInfoSet 
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
         this.MediaInfoSet = MediaInfoSet;

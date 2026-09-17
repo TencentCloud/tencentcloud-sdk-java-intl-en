@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Specified time point screenshot template detail list.
+    * 
     */
     @SerializedName("SnapshotByTimeOffsetTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Specified time point screenshot template detail list. 
-     * @return SnapshotByTimeOffsetTemplateSet Specified time point screenshot template detail list.
+     * Get  
+     * @return SnapshotByTimeOffsetTemplateSet 
      */
     public SnapshotByTimeOffsetTemplate [] getSnapshotByTimeOffsetTemplateSet() {
         return this.SnapshotByTimeOffsetTemplateSet;
     }
 
     /**
-     * Set Specified time point screenshot template detail list.
-     * @param SnapshotByTimeOffsetTemplateSet Specified time point screenshot template detail list.
+     * Set 
+     * @param SnapshotByTimeOffsetTemplateSet 
      */
     public void setSnapshotByTimeOffsetTemplateSet(SnapshotByTimeOffsetTemplate [] SnapshotByTimeOffsetTemplateSet) {
         this.SnapshotByTimeOffsetTemplateSet = SnapshotByTimeOffsetTemplateSet;

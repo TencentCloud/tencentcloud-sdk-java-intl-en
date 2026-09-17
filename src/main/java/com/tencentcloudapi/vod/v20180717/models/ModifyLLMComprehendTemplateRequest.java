@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
 
     /**
-    * <p>Unique identifier of the Large Model Understanding Template</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+    * 
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * <p>Segment summary parsing configuration</p>
+    * 
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummaryForUpdate Summary;
 
     /**
-    * <p>Text transcription parsing configuration</p>
+    * 
     */
     @SerializedName("Asr")
     @Expose
     private LLMComprehendAsrForUpdate Asr;
 
     /**
-    * <p>Face identification configuration</p>
+    * 
     */
     @SerializedName("FaceRecognition")
     @Expose
     private LLMComprehendFaceRecognitionForUpdate FaceRecognition;
 
     /**
-     * Get <p>Unique identifier of the Large Model Understanding Template</p> 
-     * @return Definition <p>Unique identifier of the Large Model Understanding Template</p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Unique identifier of the Large Model Understanding Template</p>
-     * @param Definition <p>Unique identifier of the Large Model Understanding Template</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Large model parsing template name. The length cannot exceed 64 characters.</p> 
-     * @return Name <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
-     * @param Name <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Large model parses template description information. The length cannot exceed 256 characters.</p> 
-     * @return Comment <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
-     * @param Comment <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul> 
-     * @return Model <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+     * Get  
+     * @return Model 
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
-     * @param Model <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+     * Set 
+     * @param Model 
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get <p>Segment summary parsing configuration</p> 
-     * @return Summary <p>Segment summary parsing configuration</p>
+     * Get  
+     * @return Summary 
      */
     public LLMComprehendSummaryForUpdate getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set <p>Segment summary parsing configuration</p>
-     * @param Summary <p>Segment summary parsing configuration</p>
+     * Set 
+     * @param Summary 
      */
     public void setSummary(LLMComprehendSummaryForUpdate Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get <p>Text transcription parsing configuration</p> 
-     * @return Asr <p>Text transcription parsing configuration</p>
+     * Get  
+     * @return Asr 
      */
     public LLMComprehendAsrForUpdate getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set <p>Text transcription parsing configuration</p>
-     * @param Asr <p>Text transcription parsing configuration</p>
+     * Set 
+     * @param Asr 
      */
     public void setAsr(LLMComprehendAsrForUpdate Asr) {
         this.Asr = Asr;
     }
 
     /**
-     * Get <p>Face identification configuration</p> 
-     * @return FaceRecognition <p>Face identification configuration</p>
+     * Get  
+     * @return FaceRecognition 
      */
     public LLMComprehendFaceRecognitionForUpdate getFaceRecognition() {
         return this.FaceRecognition;
     }
 
     /**
-     * Set <p>Face identification configuration</p>
-     * @param FaceRecognition <p>Face identification configuration</p>
+     * Set 
+     * @param FaceRecognition 
      */
     public void setFaceRecognition(LLMComprehendFaceRecognitionForUpdate FaceRecognition) {
         this.FaceRecognition = FaceRecognition;

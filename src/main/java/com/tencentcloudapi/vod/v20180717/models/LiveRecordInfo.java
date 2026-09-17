@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class LiveRecordInfo extends AbstractModel {
 
     /**
-    * <p>Live streaming Recording domain name</p>
+    * 
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * <p>Live streaming Recording Path</p>
+    * 
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * <p>Live recording stream ID.</p>
+    * 
     */
     @SerializedName("StreamId")
     @Expose
     private String StreamId;
 
     /**
-    * <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+    * 
     */
     @SerializedName("RecordStartTime")
     @Expose
     private String RecordStartTime;
 
     /**
-    * <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * 
     */
     @SerializedName("RecordEndTime")
     @Expose
     private String RecordEndTime;
 
     /**
-     * Get <p>Live streaming Recording domain name</p> 
-     * @return Domain <p>Live streaming Recording domain name</p>
+     * Get  
+     * @return Domain 
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set <p>Live streaming Recording domain name</p>
-     * @param Domain <p>Live streaming Recording domain name</p>
+     * Set 
+     * @param Domain 
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get <p>Live streaming Recording Path</p> 
-     * @return Path <p>Live streaming Recording Path</p>
+     * Get  
+     * @return Path 
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set <p>Live streaming Recording Path</p>
-     * @param Path <p>Live streaming Recording Path</p>
+     * Set 
+     * @param Path 
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get <p>Live recording stream ID.</p> 
-     * @return StreamId <p>Live recording stream ID.</p>
+     * Get  
+     * @return StreamId 
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set <p>Live recording stream ID.</p>
-     * @param StreamId <p>Live recording stream ID.</p>
+     * Set 
+     * @param StreamId 
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * Get <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p> 
-     * @return RecordStartTime <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+     * Get  
+     * @return RecordStartTime 
      */
     public String getRecordStartTime() {
         return this.RecordStartTime;
     }
 
     /**
-     * Set <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
-     * @param RecordStartTime <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+     * Set 
+     * @param RecordStartTime 
      */
     public void setRecordStartTime(String RecordStartTime) {
         this.RecordStartTime = RecordStartTime;
     }
 
     /**
-     * Get <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return RecordEndTime <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get  
+     * @return RecordEndTime 
      */
     public String getRecordEndTime() {
         return this.RecordEndTime;
     }
 
     /**
-     * Set <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param RecordEndTime <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set 
+     * @param RecordEndTime 
      */
     public void setRecordEndTime(String RecordEndTime) {
         this.RecordEndTime = RecordEndTime;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class BlindWatermarkInput extends AbstractModel {
 
     /**
-    * Digital watermark template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Digital watermark template ID. 
-     * @return Definition Digital watermark template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Digital watermark template ID.
-     * @param Definition Digital watermark template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

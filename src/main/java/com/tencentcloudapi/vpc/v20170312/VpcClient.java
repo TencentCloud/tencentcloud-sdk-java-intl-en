@@ -342,6 +342,17 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to query whether the gateway traffic monitoring is enabled.
+     * @param req CheckGatewayFlowMonitorRequest
+     * @return CheckGatewayFlowMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckGatewayFlowMonitorResponse CheckGatewayFlowMonitor(CheckGatewayFlowMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckGatewayFlowMonitor", CheckGatewayFlowMonitorResponse.class);
+    }
+
+    /**
      *This API is used to verify the network detection status.
      * @param req CheckNetDetectStateRequest
      * @return CheckNetDetectStateResponse
@@ -1043,7 +1054,7 @@ This API is completed asynchronously. If you need to query the execution result 
 
     /**
      *This API is used to delete a NAT gateway.
-When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
+When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and associated EIPs are unbound.When deleting a NAT gateway, you need to unbind the associated EIPs. Therefore, the caller must have CAM permissions for vpc:DisassociateAddress and vpc:ModifyAddressesBandwidth.
      * @param req DeleteNatGatewayRequest
      * @return DeleteNatGatewayResponse
      * @throws TencentCloudSDKException
@@ -1750,6 +1761,19 @@ This API is used to check the jumbo frame status before and after instance migra
     }
 
     /**
+     *This API is used to query the traffic monitoring details of a NAT gateway.
+
+- You can only use this API to query a single gateway instance. The input parameter `NatGatewayId` supports at most one value, and it must be passed.- If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring is enabled in the corresponding gateway details page in the console.
+     * @param req DescribeNatGatewayFlowMonitorDetailRequest
+     * @return DescribeNatGatewayFlowMonitorDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewayFlowMonitorDetailResponse DescribeNatGatewayFlowMonitorDetail(DescribeNatGatewayFlowMonitorDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNatGatewayFlowMonitorDetail", DescribeNatGatewayFlowMonitorDetailResponse.class);
+    }
+
+    /**
      *This API is used to query the NAT gateway's SNAT forwarding rules.
      * @param req DescribeNatGatewaySourceIpTranslationNatRulesRequest
      * @return DescribeNatGatewaySourceIpTranslationNatRulesResponse
@@ -1758,6 +1782,17 @@ This API is used to check the jumbo frame status before and after instance migra
     public DescribeNatGatewaySourceIpTranslationNatRulesResponse DescribeNatGatewaySourceIpTranslationNatRules(DescribeNatGatewaySourceIpTranslationNatRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNatGatewaySourceIpTranslationNatRules", DescribeNatGatewaySourceIpTranslationNatRulesResponse.class);
+    }
+
+    /**
+     *This API is used to query the information of saleable availability zones (AZs) for NAT gateways.
+     * @param req DescribeNatGatewayZonesRequest
+     * @return DescribeNatGatewayZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewayZonesResponse DescribeNatGatewayZones(DescribeNatGatewayZonesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNatGatewayZones", DescribeNatGatewayZonesResponse.class);
     }
 
     /**
@@ -3187,7 +3222,7 @@ Note: Only the name and description can be modified.
     }
 
     /**
-     *This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
+     *This API is used to refresh the route between a NAT gateway and Direct Connect and update the associated route table.
      * @param req RefreshDirectConnectGatewayRouteToNatGatewayRequest
      * @return RefreshDirectConnectGatewayRouteToNatGatewayResponse
      * @throws TencentCloudSDKException

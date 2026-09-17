@@ -24,90 +24,107 @@ import java.util.HashMap;
 public class ImportMediaKnowledgeRequest extends AbstractModel {
 
     /**
-    * <b>Specifies the VOD application ID.</b>
+    * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+    * <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Unique identifier of the Large Model Comprehend Template
+    * <p>Unique identifier of the Large Model Understanding Template</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+    * <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+    */
+    @SerializedName("KnowledgeBaseIds")
+    @Expose
+    private String [] KnowledgeBaseIds;
+
+    /**
+    * <p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
     */
     @SerializedName("ImportTasks")
     @Expose
     private String [] ImportTasks;
 
     /**
-     * Get <b>Specifies the VOD application ID.</b> 
-     * @return SubAppId <b>Specifies the VOD application ID.</b>
+     * Get <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p> 
+     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>Specifies the VOD application ID.</b>
-     * @param SubAppId <b>Specifies the VOD application ID.</b>
+     * Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media). 
-     * @return FileId media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+     * Get <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p> 
+     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
-     * @param FileId media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+     * Set <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * @param FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Unique identifier of the Large Model Comprehend Template 
-     * @return Definition Unique identifier of the Large Model Comprehend Template
+     * Get <p>Unique identifier of the Large Model Understanding Template</p> 
+     * @return Definition <p>Unique identifier of the Large Model Understanding Template</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the Large Model Comprehend Template
-     * @param Definition Unique identifier of the Large Model Comprehend Template
+     * Set <p>Unique identifier of the Large Model Understanding Template</p>
+     * @param Definition <p>Unique identifier of the Large Model Understanding Template</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask 
-     * @return ImportTasks Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+     * Get <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p> 
+     * @return KnowledgeBaseIds <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+     */
+    public String [] getKnowledgeBaseIds() {
+        return this.KnowledgeBaseIds;
+    }
+
+    /**
+     * Set <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+     * @param KnowledgeBaseIds <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+     */
+    public void setKnowledgeBaseIds(String [] KnowledgeBaseIds) {
+        this.KnowledgeBaseIds = KnowledgeBaseIds;
+    }
+
+    /**
+     * Get <p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul> 
+     * @return ImportTasks <p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -116,12 +133,8 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
     }
 
     /**
-     * Set Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
-     * @param ImportTasks Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+     * Set <p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @param ImportTasks <p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -146,6 +159,12 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.KnowledgeBaseIds != null) {
+            this.KnowledgeBaseIds = new String[source.KnowledgeBaseIds.length];
+            for (int i = 0; i < source.KnowledgeBaseIds.length; i++) {
+                this.KnowledgeBaseIds[i] = new String(source.KnowledgeBaseIds[i]);
+            }
+        }
         if (source.ImportTasks != null) {
             this.ImportTasks = new String[source.ImportTasks.length];
             for (int i = 0; i < source.ImportTasks.length; i++) {
@@ -162,6 +181,7 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamArraySimple(map, prefix + "KnowledgeBaseIds.", this.KnowledgeBaseIds);
         this.setParamArraySimple(map, prefix + "ImportTasks.", this.ImportTasks);
 
     }

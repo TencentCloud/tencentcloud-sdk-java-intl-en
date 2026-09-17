@@ -31,11 +31,7 @@ public class MediaCastEvent extends AbstractModel {
     private String CastId;
 
     /**
-    * Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+    * 
     */
     @SerializedName("Status")
     @Expose
@@ -58,32 +54,16 @@ public class MediaCastEvent extends AbstractModel {
     }
 
     /**
-     * Get Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li> 
-     * @return Status Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
-     * @param Status Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;

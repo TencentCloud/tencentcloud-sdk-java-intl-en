@@ -24,221 +24,161 @@ import java.util.HashMap;
 public class ContentReviewResult extends AbstractModel {
 
     /**
-    * The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * 
     */
     @SerializedName("PornImageResult")
     @Expose
     private PornImageResult PornImageResult;
 
     /**
-    * The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * 
     */
     @SerializedName("TerrorismImageResult")
     @Expose
     private TerrorismImageResult TerrorismImageResult;
 
     /**
-    * The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * 
     */
     @SerializedName("PoliticalImageResult")
     @Expose
     private PoliticalImageResult PoliticalImageResult;
 
     /**
-    * The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * 
     */
     @SerializedName("PornOcrResult")
     @Expose
     private ContentReviewOcrResult PornOcrResult;
 
     /**
-    * The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * 
     */
     @SerializedName("TerrorismOcrResult")
     @Expose
     private ContentReviewOcrResult TerrorismOcrResult;
 
     /**
-    * The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * 
     */
     @SerializedName("PoliticalOcrResult")
     @Expose
     private ContentReviewOcrResult PoliticalOcrResult;
 
     /**
-     * Get The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li> 
-     * @return Type The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
-     * @param Type The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return PornImageResult The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get  
+     * @return PornImageResult 
      */
     public PornImageResult getPornImageResult() {
         return this.PornImageResult;
     }
 
     /**
-     * Set The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param PornImageResult The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set 
+     * @param PornImageResult 
      */
     public void setPornImageResult(PornImageResult PornImageResult) {
         this.PornImageResult = PornImageResult;
     }
 
     /**
-     * Get The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return TerrorismImageResult The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get  
+     * @return TerrorismImageResult 
      */
     public TerrorismImageResult getTerrorismImageResult() {
         return this.TerrorismImageResult;
     }
 
     /**
-     * Set The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param TerrorismImageResult The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set 
+     * @param TerrorismImageResult 
      */
     public void setTerrorismImageResult(TerrorismImageResult TerrorismImageResult) {
         this.TerrorismImageResult = TerrorismImageResult;
     }
 
     /**
-     * Get The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return PoliticalImageResult The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get  
+     * @return PoliticalImageResult 
      */
     public PoliticalImageResult getPoliticalImageResult() {
         return this.PoliticalImageResult;
     }
 
     /**
-     * Set The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param PoliticalImageResult The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set 
+     * @param PoliticalImageResult 
      */
     public void setPoliticalImageResult(PoliticalImageResult PoliticalImageResult) {
         this.PoliticalImageResult = PoliticalImageResult;
     }
 
     /**
-     * Get The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return PornOcrResult The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get  
+     * @return PornOcrResult 
      */
     public ContentReviewOcrResult getPornOcrResult() {
         return this.PornOcrResult;
     }
 
     /**
-     * Set The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param PornOcrResult The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set 
+     * @param PornOcrResult 
      */
     public void setPornOcrResult(ContentReviewOcrResult PornOcrResult) {
         this.PornOcrResult = PornOcrResult;
     }
 
     /**
-     * Get The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return TerrorismOcrResult The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get  
+     * @return TerrorismOcrResult 
      */
     public ContentReviewOcrResult getTerrorismOcrResult() {
         return this.TerrorismOcrResult;
     }
 
     /**
-     * Set The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param TerrorismOcrResult The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set 
+     * @param TerrorismOcrResult 
      */
     public void setTerrorismOcrResult(ContentReviewOcrResult TerrorismOcrResult) {
         this.TerrorismOcrResult = TerrorismOcrResult;
     }
 
     /**
-     * Get The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return PoliticalOcrResult The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get  
+     * @return PoliticalOcrResult 
      */
     public ContentReviewOcrResult getPoliticalOcrResult() {
         return this.PoliticalOcrResult;
     }
 
     /**
-     * Set The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param PoliticalOcrResult The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set 
+     * @param PoliticalOcrResult 
      */
     public void setPoliticalOcrResult(ContentReviewOcrResult PoliticalOcrResult) {
         this.PoliticalOcrResult = PoliticalOcrResult;

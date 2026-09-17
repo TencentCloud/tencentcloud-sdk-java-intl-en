@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class EnhanceConfigForUpdate extends AbstractModel {
 
     /**
-    * Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VideoEnhance")
     @Expose
     private VideoEnhanceConfig VideoEnhance;
 
     /**
-    * Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AudioEnhance")
     @Expose
     private AudioEnhanceConfig AudioEnhance;
 
     /**
-     * Get Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VideoEnhance Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VideoEnhance 
      */
     public VideoEnhanceConfig getVideoEnhance() {
         return this.VideoEnhance;
     }
 
     /**
-     * Set Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoEnhance Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VideoEnhance 
      */
     public void setVideoEnhance(VideoEnhanceConfig VideoEnhance) {
         this.VideoEnhance = VideoEnhance;
     }
 
     /**
-     * Get Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioEnhance Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AudioEnhance 
      */
     public AudioEnhanceConfig getAudioEnhance() {
         return this.AudioEnhance;
     }
 
     /**
-     * Set Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioEnhance Audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AudioEnhance 
      */
     public void setAudioEnhance(AudioEnhanceConfig AudioEnhance) {
         this.AudioEnhance = AudioEnhance;

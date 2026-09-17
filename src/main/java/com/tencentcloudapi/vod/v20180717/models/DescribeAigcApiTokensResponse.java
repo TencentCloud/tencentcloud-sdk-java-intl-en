@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAigcApiTokensResponse extends AbstractModel {
 
     /**
-    * <p>API Token list</p>
+    * 
     */
     @SerializedName("ApiTokens")
     @Expose
     private String [] ApiTokens;
 
     /**
-    * <p>ExtInfo info, which corresponds one-to-one to the API Token list</p>
+    * 
     */
     @SerializedName("ExtInfos")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAigcApiTokensResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>API Token list</p> 
-     * @return ApiTokens <p>API Token list</p>
+     * Get  
+     * @return ApiTokens 
      */
     public String [] getApiTokens() {
         return this.ApiTokens;
     }
 
     /**
-     * Set <p>API Token list</p>
-     * @param ApiTokens <p>API Token list</p>
+     * Set 
+     * @param ApiTokens 
      */
     public void setApiTokens(String [] ApiTokens) {
         this.ApiTokens = ApiTokens;
     }
 
     /**
-     * Get <p>ExtInfo info, which corresponds one-to-one to the API Token list</p> 
-     * @return ExtInfos <p>ExtInfo info, which corresponds one-to-one to the API Token list</p>
+     * Get  
+     * @return ExtInfos 
      */
     public String [] getExtInfos() {
         return this.ExtInfos;
     }
 
     /**
-     * Set <p>ExtInfo info, which corresponds one-to-one to the API Token list</p>
-     * @param ExtInfos <p>ExtInfo info, which corresponds one-to-one to the API Token list</p>
+     * Set 
+     * @param ExtInfos 
      */
     public void setExtInfos(String [] ExtInfos) {
         this.ExtInfos = ExtInfos;

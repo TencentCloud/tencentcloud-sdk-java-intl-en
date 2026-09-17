@@ -24,207 +24,230 @@ import java.util.HashMap;
 public class LLMComprehendTemplateItem extends AbstractModel {
 
     /**
-    * <p>Unique identifier of the image asynchronous processing template.</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Image asynchronous processing template name.</p>
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Description information of the image asynchronous processing template.</p>
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
+    * 
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * <p>Segment summary parse configuration</p>
+    * 
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummary Summary;
 
     /**
-    * <p>Text transcription parse configuration</p>
+    * 
     */
     @SerializedName("Asr")
     @Expose
     private LLMComprehendAsr Asr;
 
     /**
-    * <p>Face recognition parse configuration</p>
+    * 
     */
     @SerializedName("FaceRecognition")
     @Expose
     private LLMComprehendFaceRecognition FaceRecognition;
 
     /**
-    * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get <p>Unique identifier of the image asynchronous processing template.</p> 
-     * @return Definition <p>Unique identifier of the image asynchronous processing template.</p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Unique identifier of the image asynchronous processing template.</p>
-     * @param Definition <p>Unique identifier of the image asynchronous processing template.</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Image asynchronous processing template name.</p> 
-     * @return Name <p>Image asynchronous processing template name.</p>
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Image asynchronous processing template name.</p>
-     * @param Name <p>Image asynchronous processing template name.</p>
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Description information of the image asynchronous processing template.</p> 
-     * @return Comment <p>Description information of the image asynchronous processing template.</p>
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set <p>Description information of the image asynchronous processing template.</p>
-     * @param Comment <p>Description information of the image asynchronous processing template.</p>
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul> 
-     * @return Level <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
+     * Get  
+     * @return Type 
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 
+     * @param Type 
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get  
+     * @return Level 
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
-     * @param Level <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
+     * Set 
+     * @param Level 
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get <p>Segment summary parse configuration</p> 
-     * @return Summary <p>Segment summary parse configuration</p>
+     * Get  
+     * @return Summary 
      */
     public LLMComprehendSummary getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set <p>Segment summary parse configuration</p>
-     * @param Summary <p>Segment summary parse configuration</p>
+     * Set 
+     * @param Summary 
      */
     public void setSummary(LLMComprehendSummary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get <p>Text transcription parse configuration</p> 
-     * @return Asr <p>Text transcription parse configuration</p>
+     * Get  
+     * @return Asr 
      */
     public LLMComprehendAsr getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set <p>Text transcription parse configuration</p>
-     * @param Asr <p>Text transcription parse configuration</p>
+     * Set 
+     * @param Asr 
      */
     public void setAsr(LLMComprehendAsr Asr) {
         this.Asr = Asr;
     }
 
     /**
-     * Get <p>Face recognition parse configuration</p> 
-     * @return FaceRecognition <p>Face recognition parse configuration</p>
+     * Get  
+     * @return FaceRecognition 
      */
     public LLMComprehendFaceRecognition getFaceRecognition() {
         return this.FaceRecognition;
     }
 
     /**
-     * Set <p>Face recognition parse configuration</p>
-     * @param FaceRecognition <p>Face recognition parse configuration</p>
+     * Set 
+     * @param FaceRecognition 
      */
     public void setFaceRecognition(LLMComprehendFaceRecognition FaceRecognition) {
         this.FaceRecognition = FaceRecognition;
     }
 
     /**
-     * Get <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -246,6 +269,9 @@ public class LLMComprehendTemplateItem extends AbstractModel {
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
         if (source.Level != null) {
             this.Level = new String(source.Level);
@@ -275,6 +301,7 @@ public class LLMComprehendTemplateItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamObj(map, prefix + "Summary.", this.Summary);
         this.setParamObj(map, prefix + "Asr.", this.Asr);

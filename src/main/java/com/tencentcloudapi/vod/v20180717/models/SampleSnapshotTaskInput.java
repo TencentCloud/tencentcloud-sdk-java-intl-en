@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class SampleSnapshotTaskInput extends AbstractModel {
 
     /**
-    * Sampled screencapturing template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-     * Get Sampled screencapturing template ID. 
-     * @return Definition Sampled screencapturing template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Sampled screencapturing template ID.
-     * @param Definition Sampled screencapturing template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WatermarkSet 
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WatermarkSet 
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;

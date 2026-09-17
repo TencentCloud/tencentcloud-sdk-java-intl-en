@@ -169,6 +169,17 @@ Note: When calling this API via SSE streaming, ensure the request domain name is
     }
 
     /**
+     *Create a CLS shipping task
+     * @param req CreateCLSDeliverTaskRequest
+     * @return CreateCLSDeliverTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSDeliverTaskResponse CreateCLSDeliverTask(CreateCLSDeliverTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSDeliverTask", CreateCLSDeliverTaskResponse.class);
+    }
+
+    /**
      *Cloud product integration uses internal APIs
      * @param req CreateCloudProductLogCollectionRequest
      * @return CreateCloudProductLogCollectionResponse
@@ -557,6 +568,17 @@ Note:
     public DeleteAlarmShieldResponse DeleteAlarmShield(DeleteAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAlarmShield", DeleteAlarmShieldResponse.class);
+    }
+
+    /**
+     *Delete a CLS shipping task
+     * @param req DeleteCLSDeliverTaskRequest
+     * @return DeleteCLSDeliverTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCLSDeliverTaskResponse DeleteCLSDeliverTask(DeleteCLSDeliverTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCLSDeliverTask", DeleteCLSDeliverTaskResponse.class);
     }
 
     /**
@@ -953,6 +975,17 @@ Note:
     public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(DescribeAlertRecordHistoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlertRecordHistory", DescribeAlertRecordHistoryResponse.class);
+    }
+
+    /**
+     *This API is used to get the CLS delivery task list.
+     * @param req DescribeCLSDeliverTasksRequest
+     * @return DescribeCLSDeliverTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSDeliverTasksResponse DescribeCLSDeliverTasks(DescribeCLSDeliverTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSDeliverTasks", DescribeCLSDeliverTasksResponse.class);
     }
 
     /**
@@ -1636,6 +1669,17 @@ This API is used to fill in any region for Region, recommend using Guangzhou (ap
     public ModifyAlarmShieldResponse ModifyAlarmShield(ModifyAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAlarmShield", ModifyAlarmShieldResponse.class);
+    }
+
+    /**
+     *Modify a CLS shipping task
+     * @param req ModifyCLSDeliverTaskRequest
+     * @return ModifyCLSDeliverTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCLSDeliverTaskResponse ModifyCLSDeliverTask(ModifyCLSDeliverTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCLSDeliverTask", ModifyCLSDeliverTaskResponse.class);
     }
 
     /**

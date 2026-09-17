@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class SceneAigcVideoTaskOutput extends AbstractModel {
 
     /**
-    * Output file information of the AIGC video task.
+    * 
     */
     @SerializedName("FileInfos")
     @Expose
     private SceneAigcImageTaskOutputFileInfo [] FileInfos;
 
     /**
-     * Get Output file information of the AIGC video task. 
-     * @return FileInfos Output file information of the AIGC video task.
+     * Get  
+     * @return FileInfos 
      */
     public SceneAigcImageTaskOutputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set Output file information of the AIGC video task.
-     * @param FileInfos Output file information of the AIGC video task.
+     * Set 
+     * @param FileInfos 
      */
     public void setFileInfos(SceneAigcImageTaskOutputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;

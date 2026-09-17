@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiSampleTagOperation extends AbstractModel {
 
     /**
-    * Operation type. Valid values: add, delete, reset.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Tag. Length limit: 128 characters.
+    * 
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get Operation type. Valid values: add, delete, reset. 
-     * @return Type Operation type. Valid values: add, delete, reset.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Operation type. Valid values: add, delete, reset.
-     * @param Type Operation type. Valid values: add, delete, reset.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Tag. Length limit: 128 characters. 
-     * @return Tags Tag. Length limit: 128 characters.
+     * Get  
+     * @return Tags 
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag. Length limit: 128 characters.
-     * @param Tags Tag. Length limit: 128 characters.
+     * Set 
+     * @param Tags 
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

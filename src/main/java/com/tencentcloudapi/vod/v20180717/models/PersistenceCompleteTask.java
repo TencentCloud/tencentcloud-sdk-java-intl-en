@@ -24,61 +24,46 @@ import java.util.HashMap;
 public class PersistenceCompleteTask extends AbstractModel {
 
     /**
-    * Consolidate the generated Media ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li>
+    * 
     */
     @SerializedName("PersistenceSource")
     @Expose
     private String PersistenceSource;
 
     /**
-     * Get Consolidate the generated Media ID. 
-     * @return FileId Consolidate the generated Media ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Consolidate the generated Media ID.
-     * @param FileId Consolidate the generated Media ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li> 
-     * @return PersistenceSource The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li>
+     * Get  
+     * @return PersistenceSource 
      */
     public String getPersistenceSource() {
         return this.PersistenceSource;
     }
 
     /**
-     * Set The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li>
-     * @param PersistenceSource The source of clipping solidification has the following three types.
-<li>SimpleHlsClip: Comes from simple HLS edit;</li>
-<li>FastEditMedia: Comes from quick media editing;</li>
-<li>LiveRealTimeClip: comes from live stream clipping.</li>
+     * Set 
+     * @param PersistenceSource 
      */
     public void setPersistenceSource(String PersistenceSource) {
         this.PersistenceSource = PersistenceSource;

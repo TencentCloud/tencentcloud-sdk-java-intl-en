@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiContentReviewTaskInput extends AbstractModel {
 
     /**
-    * Intelligent recognition template ID
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Intelligent recognition template ID 
-     * @return Definition Intelligent recognition template ID
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Intelligent recognition template ID
-     * @param Definition Intelligent recognition template ID
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SDMCDrmKeyProviderInfo extends AbstractModel {
 
     /**
-    * The user ID assigned by SDMC, which can contain up to 128 characters.
+    * 
     */
     @SerializedName("Uid")
     @Expose
     private String Uid;
 
     /**
-    * The secret ID assigned by SDMC, which can contain up to 128 characters.
+    * 
     */
     @SerializedName("SecretId")
     @Expose
     private String SecretId;
 
     /**
-    * The secret key assigned by SDMC, which can contain up to 128 characters.
+    * 
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+    * 
     */
     @SerializedName("FairPlayCertificateUrl")
     @Expose
     private String FairPlayCertificateUrl;
 
     /**
-     * Get The user ID assigned by SDMC, which can contain up to 128 characters. 
-     * @return Uid The user ID assigned by SDMC, which can contain up to 128 characters.
+     * Get  
+     * @return Uid 
      */
     public String getUid() {
         return this.Uid;
     }
 
     /**
-     * Set The user ID assigned by SDMC, which can contain up to 128 characters.
-     * @param Uid The user ID assigned by SDMC, which can contain up to 128 characters.
+     * Set 
+     * @param Uid 
      */
     public void setUid(String Uid) {
         this.Uid = Uid;
     }
 
     /**
-     * Get The secret ID assigned by SDMC, which can contain up to 128 characters. 
-     * @return SecretId The secret ID assigned by SDMC, which can contain up to 128 characters.
+     * Get  
+     * @return SecretId 
      */
     public String getSecretId() {
         return this.SecretId;
     }
 
     /**
-     * Set The secret ID assigned by SDMC, which can contain up to 128 characters.
-     * @param SecretId The secret ID assigned by SDMC, which can contain up to 128 characters.
+     * Set 
+     * @param SecretId 
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get The secret key assigned by SDMC, which can contain up to 128 characters. 
-     * @return SecretKey The secret key assigned by SDMC, which can contain up to 128 characters.
+     * Get  
+     * @return SecretKey 
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set The secret key assigned by SDMC, which can contain up to 128 characters.
-     * @param SecretKey The secret key assigned by SDMC, which can contain up to 128 characters.
+     * Set 
+     * @param SecretKey 
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters. 
-     * @return FairPlayCertificateUrl The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+     * Get  
+     * @return FairPlayCertificateUrl 
      */
     public String getFairPlayCertificateUrl() {
         return this.FairPlayCertificateUrl;
     }
 
     /**
-     * Set The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
-     * @param FairPlayCertificateUrl The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+     * Set 
+     * @param FairPlayCertificateUrl 
      */
     public void setFairPlayCertificateUrl(String FairPlayCertificateUrl) {
         this.FairPlayCertificateUrl = FairPlayCertificateUrl;

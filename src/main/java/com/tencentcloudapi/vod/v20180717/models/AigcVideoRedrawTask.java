@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class AigcVideoRedrawTask extends AbstractModel {
 
     /**
-    * <p>Task ID.</p>
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * <p>Error code. Returns a non-zero error code in case of source error. Please use the ErrCode of each specific task when 0 is returned.</p>
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * <p>Error code expansion.</p>
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * <p>Error message.</p>
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * <p>Task progress, value ranges from 0 to 100.</p>
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * <p>Input information for AIGC video conversion task.</p>
+    * 
     */
     @SerializedName("Input")
     @Expose
     private AigcVideoRedrawTaskInput Input;
 
     /**
-    * <p>Output information for AIGC video conversion task.</p>
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AigcVideoRedrawTaskOutput Output;
 
     /**
-    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get <p>Task ID.</p> 
-     * @return TaskId <p>Task ID.</p>
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task ID.</p>
-     * @param TaskId <p>Task ID.</p>
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p> 
-     * @return Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
-     * @param Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Error code. Returns a non-zero error code in case of source error. Please use the ErrCode of each specific task when 0 is returned.</p> 
-     * @return ErrCode <p>Error code. Returns a non-zero error code in case of source error. Please use the ErrCode of each specific task when 0 is returned.</p>
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set <p>Error code. Returns a non-zero error code in case of source error. Please use the ErrCode of each specific task when 0 is returned.</p>
-     * @param ErrCode <p>Error code. Returns a non-zero error code in case of source error. Please use the ErrCode of each specific task when 0 is returned.</p>
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get <p>Error code expansion.</p> 
-     * @return ErrCodeExt <p>Error code expansion.</p>
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Error code expansion.</p>
-     * @param ErrCodeExt <p>Error code expansion.</p>
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get <p>Error message.</p> 
-     * @return Message <p>Error message.</p>
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set <p>Error message.</p>
-     * @param Message <p>Error message.</p>
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get <p>Task progress, value ranges from 0 to 100.</p> 
-     * @return Progress <p>Task progress, value ranges from 0 to 100.</p>
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set <p>Task progress, value ranges from 0 to 100.</p>
-     * @param Progress <p>Task progress, value ranges from 0 to 100.</p>
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get <p>Input information for AIGC video conversion task.</p> 
-     * @return Input <p>Input information for AIGC video conversion task.</p>
+     * Get  
+     * @return Input 
      */
     public AigcVideoRedrawTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set <p>Input information for AIGC video conversion task.</p>
-     * @param Input <p>Input information for AIGC video conversion task.</p>
+     * Set 
+     * @param Input 
      */
     public void setInput(AigcVideoRedrawTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get <p>Output information for AIGC video conversion task.</p> 
-     * @return Output <p>Output information for AIGC video conversion task.</p>
+     * Get  
+     * @return Output 
      */
     public AigcVideoRedrawTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set <p>Output information for AIGC video conversion task.</p>
-     * @param Output <p>Output information for AIGC video conversion task.</p>
+     * Set 
+     * @param Output 
      */
     public void setOutput(AigcVideoRedrawTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
-     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p> 
-     * @return SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

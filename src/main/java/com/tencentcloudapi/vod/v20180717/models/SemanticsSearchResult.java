@@ -24,92 +24,115 @@ import java.util.HashMap;
 public class SemanticsSearchResult extends AbstractModel {
 
     /**
-    * Specifies the unique identifier of the media file.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
+    * 
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * 
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * Specifies the start time of the video clip, in seconds.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * Segment end time of the video, in seconds.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get Specifies the unique identifier of the media file. 
-     * @return FileId Specifies the unique identifier of the media file.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Specifies the unique identifier of the media file.
-     * @param FileId Specifies the unique identifier of the media file.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1. 
-     * @return Score Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
+     * Get  
+     * @return Title 
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set 
+     * @param Title 
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get  
+     * @return Score 
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
-     * @param Score Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
+     * Set 
+     * @param Score 
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get Specifies the start time of the video clip, in seconds. 
-     * @return StartTimeOffset Specifies the start time of the video clip, in seconds.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Specifies the start time of the video clip, in seconds.
-     * @param StartTimeOffset Specifies the start time of the video clip, in seconds.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Segment end time of the video, in seconds. 
-     * @return EndTimeOffset Segment end time of the video, in seconds.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Segment end time of the video, in seconds.
-     * @param EndTimeOffset Segment end time of the video, in seconds.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
@@ -125,6 +148,9 @@ public class SemanticsSearchResult extends AbstractModel {
     public SemanticsSearchResult(SemanticsSearchResult source) {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
         }
         if (source.Score != null) {
             this.Score = new Float(source.Score);
@@ -143,6 +169,7 @@ public class SemanticsSearchResult extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);

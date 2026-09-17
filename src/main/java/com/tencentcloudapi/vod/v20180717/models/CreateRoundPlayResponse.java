@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateRoundPlayResponse extends AbstractModel {
 
     /**
-    * The unique identifier of the playlist.
+    * 
     */
     @SerializedName("RoundPlayId")
     @Expose
     private String RoundPlayId;
 
     /**
-    * The playlist playback url.
+    * 
     */
     @SerializedName("Url")
     @Expose
@@ -45,32 +45,32 @@ public class CreateRoundPlayResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The unique identifier of the playlist. 
-     * @return RoundPlayId The unique identifier of the playlist.
+     * Get  
+     * @return RoundPlayId 
      */
     public String getRoundPlayId() {
         return this.RoundPlayId;
     }
 
     /**
-     * Set The unique identifier of the playlist.
-     * @param RoundPlayId The unique identifier of the playlist.
+     * Set 
+     * @param RoundPlayId 
      */
     public void setRoundPlayId(String RoundPlayId) {
         this.RoundPlayId = RoundPlayId;
     }
 
     /**
-     * Get The playlist playback url. 
-     * @return Url The playlist playback url.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The playlist playback url.
-     * @param Url The playlist playback url.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;

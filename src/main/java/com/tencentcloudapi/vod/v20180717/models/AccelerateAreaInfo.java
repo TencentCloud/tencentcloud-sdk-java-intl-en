@@ -24,89 +24,69 @@ import java.util.HashMap;
 public class AccelerateAreaInfo extends AbstractModel {
 
     /**
-    * Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+    * 
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
+    * 
     */
     @SerializedName("TencentDisableReason")
     @Expose
     private String TencentDisableReason;
 
     /**
-    * CNAME of the acceleration domain name
+    * 
     */
     @SerializedName("TencentEdgeDomain")
     @Expose
     private String TencentEdgeDomain;
 
     /**
-     * Get Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li> 
-     * @return Area Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+     * Get  
+     * @return Area 
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-     * @param Area Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+     * Set 
+     * @param Area 
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li> 
-     * @return TencentDisableReason Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
+     * Get  
+     * @return TencentDisableReason 
      */
     public String getTencentDisableReason() {
         return this.TencentDisableReason;
     }
 
     /**
-     * Set Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
-     * @param TencentDisableReason Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
+     * Set 
+     * @param TencentDisableReason 
      */
     public void setTencentDisableReason(String TencentDisableReason) {
         this.TencentDisableReason = TencentDisableReason;
     }
 
     /**
-     * Get CNAME of the acceleration domain name 
-     * @return TencentEdgeDomain CNAME of the acceleration domain name
+     * Get  
+     * @return TencentEdgeDomain 
      */
     public String getTencentEdgeDomain() {
         return this.TencentEdgeDomain;
     }
 
     /**
-     * Set CNAME of the acceleration domain name
-     * @param TencentEdgeDomain CNAME of the acceleration domain name
+     * Set 
+     * @param TencentEdgeDomain 
      */
     public void setTencentEdgeDomain(String TencentEdgeDomain) {
         this.TencentEdgeDomain = TencentEdgeDomain;

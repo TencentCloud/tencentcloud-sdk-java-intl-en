@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchMediaBySemanticsResponse extends AbstractModel {
 
     /**
-    * <p>Media list.</p>
+    * 
     */
     @SerializedName("SearchResults")
     @Expose
@@ -38,16 +38,16 @@ public class SearchMediaBySemanticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Media list.</p> 
-     * @return SearchResults <p>Media list.</p>
+     * Get  
+     * @return SearchResults 
      */
     public SemanticsSearchResult [] getSearchResults() {
         return this.SearchResults;
     }
 
     /**
-     * Set <p>Media list.</p>
-     * @param SearchResults <p>Media list.</p>
+     * Set 
+     * @param SearchResults 
      */
     public void setSearchResults(SemanticsSearchResult [] SearchResults) {
         this.SearchResults = SearchResults;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class EmptyTrackItem extends AbstractModel {
 
     /**
-    * Duration in seconds.
+    * 
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-     * Get Duration in seconds. 
-     * @return Duration Duration in seconds.
+     * Get  
+     * @return Duration 
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Duration in seconds.
-     * @param Duration Duration in seconds.
+     * Set 
+     * @param Duration 
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;

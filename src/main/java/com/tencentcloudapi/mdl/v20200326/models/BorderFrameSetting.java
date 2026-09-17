@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BorderFrameSetting extends AbstractModel {
 
     /**
-    * 
+    * Live streaming source layout configuration
     */
     @SerializedName("LiveSourceLayout")
     @Expose
     private SourceLayout LiveSourceLayout;
 
     /**
-    * 
+    * Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
     */
     @SerializedName("BackgroundImgUrl")
     @Expose
     private String BackgroundImgUrl;
 
     /**
-     * Get  
-     * @return LiveSourceLayout 
+     * Get Live streaming source layout configuration 
+     * @return LiveSourceLayout Live streaming source layout configuration
      */
     public SourceLayout getLiveSourceLayout() {
         return this.LiveSourceLayout;
     }
 
     /**
-     * Set 
-     * @param LiveSourceLayout 
+     * Set Live streaming source layout configuration
+     * @param LiveSourceLayout Live streaming source layout configuration
      */
     public void setLiveSourceLayout(SourceLayout LiveSourceLayout) {
         this.LiveSourceLayout = LiveSourceLayout;
     }
 
     /**
-     * Get  
-     * @return BackgroundImgUrl 
+     * Get Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES) 
+     * @return BackgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
      */
     public String getBackgroundImgUrl() {
         return this.BackgroundImgUrl;
     }
 
     /**
-     * Set 
-     * @param BackgroundImgUrl 
+     * Set Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
+     * @param BackgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
      */
     public void setBackgroundImgUrl(String BackgroundImgUrl) {
         this.BackgroundImgUrl = BackgroundImgUrl;

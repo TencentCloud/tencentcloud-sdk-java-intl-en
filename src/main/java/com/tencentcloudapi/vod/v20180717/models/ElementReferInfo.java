@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class ElementReferInfo extends AbstractModel {
 
     /**
-    * Image URLs of subjects from different perspectives.
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
+    * 
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-     * Get Image URLs of subjects from different perspectives.
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1. 
-     * @return ImageUrl Image URLs of subjects from different perspectives.
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
+     * Get  
+     * @return ImageUrl 
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set Image URLs of subjects from different perspectives.
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
-     * @param ImageUrl Image URLs of subjects from different perspectives.
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
+     * Set 
+     * @param ImageUrl 
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class NoiseConfigureInfo extends AbstractModel {
 
     /**
-    * Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li> 
-     * @return Switch Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-     * @param Switch Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

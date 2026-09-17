@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class RoundPlayListItemInfo extends AbstractModel {
 
     /**
-    * The file ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
+    * 
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * ID of the program to be played, assigned by the system.
+    * 
     */
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
 
     /**
-    * The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get The file ID. 
-     * @return FileId The file ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The file ID.
-     * @param FileId The file ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format. 
-     * @return AudioVideoType The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
+     * Get  
+     * @return AudioVideoType 
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
-     * @param AudioVideoType The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
+     * Set 
+     * @param AudioVideoType 
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get ID of the program to be played, assigned by the system. 
-     * @return ItemId ID of the program to be played, assigned by the system.
+     * Get  
+     * @return ItemId 
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set ID of the program to be played, assigned by the system.
-     * @param ItemId ID of the program to be played, assigned by the system.
+     * Set 
+     * @param ItemId 
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`. 
-     * @return Definition The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
-     * @param Definition The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

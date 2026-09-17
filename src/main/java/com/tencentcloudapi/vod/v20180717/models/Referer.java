@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class Referer extends AbstractModel {
 
     /**
-    * referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+    * Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Referer blacklist/whitelist configuration rule
+    * 
     */
     @SerializedName("RefererRules")
     @Expose
     private RefererRule [] RefererRules;
 
     /**
-     * Get referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Get Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Set Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Referrer blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Referer blacklist/whitelist configuration rule 
-     * @return RefererRules Referer blacklist/whitelist configuration rule
+     * Get  
+     * @return RefererRules 
      */
     public RefererRule [] getRefererRules() {
         return this.RefererRules;
     }
 
     /**
-     * Set Referer blacklist/whitelist configuration rule
-     * @param RefererRules Referer blacklist/whitelist configuration rule
+     * Set 
+     * @param RefererRules 
      */
     public void setRefererRules(RefererRule [] RefererRules) {
         this.RefererRules = RefererRules;

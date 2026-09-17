@@ -24,66 +24,46 @@ import java.util.HashMap;
 public class ModifySubAppIdStatusRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it. 
-     * @return Status Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
-     * @param Status Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;

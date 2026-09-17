@@ -24,115 +24,187 @@ import java.util.HashMap;
 public class QualityInspectTaskOutput extends AbstractModel {
 
     /**
-    * Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
+    * 
     */
     @SerializedName("NoAudio")
     @Expose
     private Long NoAudio;
 
     /**
-    * Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
+    * 
     */
     @SerializedName("NoVideo")
     @Expose
     private Long NoVideo;
 
     /**
-    * Video picture quality score, value ranges from 0 to 100.
+    * 
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
     private Long QualityEvaluationScore;
 
     /**
-    * List of abnormalities detected in audio and video quality.
+    * 
     */
     @SerializedName("QualityInspectResultSet")
     @Expose
     private QualityInspectResultItem [] QualityInspectResultSet;
 
     /**
-     * Get Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li> 
-     * @return NoAudio Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
+    * 
+    */
+    @SerializedName("QualityEvaluationMeanOpinionScore")
+    @Expose
+    private Float QualityEvaluationMeanOpinionScore;
+
+    /**
+    * 
+    */
+    @SerializedName("AestheticEvaluationScore")
+    @Expose
+    private Long AestheticEvaluationScore;
+
+    /**
+    * 
+    */
+    @SerializedName("ContainerDiagnoseResultSet")
+    @Expose
+    private QualityInspectContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
+
+    /**
+    * 
+    */
+    @SerializedName("LLMDetectionReport")
+    @Expose
+    private QualityInspectLLMDetectionReport LLMDetectionReport;
+
+    /**
+     * Get  
+     * @return NoAudio 
      */
     public Long getNoAudio() {
         return this.NoAudio;
     }
 
     /**
-     * Set Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
-     * @param NoAudio Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
+     * Set 
+     * @param NoAudio 
      */
     public void setNoAudio(Long NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li> 
-     * @return NoVideo Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
+     * Get  
+     * @return NoVideo 
      */
     public Long getNoVideo() {
         return this.NoVideo;
     }
 
     /**
-     * Set Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
-     * @param NoVideo Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
+     * Set 
+     * @param NoVideo 
      */
     public void setNoVideo(Long NoVideo) {
         this.NoVideo = NoVideo;
     }
 
     /**
-     * Get Video picture quality score, value ranges from 0 to 100. 
-     * @return QualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
+     * Get  
+     * @return QualityEvaluationScore 
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
     }
 
     /**
-     * Set Video picture quality score, value ranges from 0 to 100.
-     * @param QualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
+     * Set 
+     * @param QualityEvaluationScore 
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
     }
 
     /**
-     * Get List of abnormalities detected in audio and video quality. 
-     * @return QualityInspectResultSet List of abnormalities detected in audio and video quality.
+     * Get  
+     * @return QualityInspectResultSet 
      */
     public QualityInspectResultItem [] getQualityInspectResultSet() {
         return this.QualityInspectResultSet;
     }
 
     /**
-     * Set List of abnormalities detected in audio and video quality.
-     * @param QualityInspectResultSet List of abnormalities detected in audio and video quality.
+     * Set 
+     * @param QualityInspectResultSet 
      */
     public void setQualityInspectResultSet(QualityInspectResultItem [] QualityInspectResultSet) {
         this.QualityInspectResultSet = QualityInspectResultSet;
+    }
+
+    /**
+     * Get  
+     * @return QualityEvaluationMeanOpinionScore 
+     */
+    public Float getQualityEvaluationMeanOpinionScore() {
+        return this.QualityEvaluationMeanOpinionScore;
+    }
+
+    /**
+     * Set 
+     * @param QualityEvaluationMeanOpinionScore 
+     */
+    public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
+        this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
+    }
+
+    /**
+     * Get  
+     * @return AestheticEvaluationScore 
+     */
+    public Long getAestheticEvaluationScore() {
+        return this.AestheticEvaluationScore;
+    }
+
+    /**
+     * Set 
+     * @param AestheticEvaluationScore 
+     */
+    public void setAestheticEvaluationScore(Long AestheticEvaluationScore) {
+        this.AestheticEvaluationScore = AestheticEvaluationScore;
+    }
+
+    /**
+     * Get  
+     * @return ContainerDiagnoseResultSet 
+     */
+    public QualityInspectContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
+        return this.ContainerDiagnoseResultSet;
+    }
+
+    /**
+     * Set 
+     * @param ContainerDiagnoseResultSet 
+     */
+    public void setContainerDiagnoseResultSet(QualityInspectContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
+        this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
+    }
+
+    /**
+     * Get  
+     * @return LLMDetectionReport 
+     */
+    public QualityInspectLLMDetectionReport getLLMDetectionReport() {
+        return this.LLMDetectionReport;
+    }
+
+    /**
+     * Set 
+     * @param LLMDetectionReport 
+     */
+    public void setLLMDetectionReport(QualityInspectLLMDetectionReport LLMDetectionReport) {
+        this.LLMDetectionReport = LLMDetectionReport;
     }
 
     public QualityInspectTaskOutput() {
@@ -158,6 +230,21 @@ public class QualityInspectTaskOutput extends AbstractModel {
                 this.QualityInspectResultSet[i] = new QualityInspectResultItem(source.QualityInspectResultSet[i]);
             }
         }
+        if (source.QualityEvaluationMeanOpinionScore != null) {
+            this.QualityEvaluationMeanOpinionScore = new Float(source.QualityEvaluationMeanOpinionScore);
+        }
+        if (source.AestheticEvaluationScore != null) {
+            this.AestheticEvaluationScore = new Long(source.AestheticEvaluationScore);
+        }
+        if (source.ContainerDiagnoseResultSet != null) {
+            this.ContainerDiagnoseResultSet = new QualityInspectContainerDiagnoseResultItem[source.ContainerDiagnoseResultSet.length];
+            for (int i = 0; i < source.ContainerDiagnoseResultSet.length; i++) {
+                this.ContainerDiagnoseResultSet[i] = new QualityInspectContainerDiagnoseResultItem(source.ContainerDiagnoseResultSet[i]);
+            }
+        }
+        if (source.LLMDetectionReport != null) {
+            this.LLMDetectionReport = new QualityInspectLLMDetectionReport(source.LLMDetectionReport);
+        }
     }
 
 
@@ -169,6 +256,10 @@ public class QualityInspectTaskOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "NoVideo", this.NoVideo);
         this.setParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
         this.setParamArrayObj(map, prefix + "QualityInspectResultSet.", this.QualityInspectResultSet);
+        this.setParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
+        this.setParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
+        this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
+        this.setParamObj(map, prefix + "LLMDetectionReport.", this.LLMDetectionReport);
 
     }
 }

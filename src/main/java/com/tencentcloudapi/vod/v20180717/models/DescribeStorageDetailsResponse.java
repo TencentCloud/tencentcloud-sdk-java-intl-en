@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStorageDetailsResponse extends AbstractModel {
 
     /**
-    * Storage statistics data, one record every 5 minutes or daily.
+    * 
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStorageDetailsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Storage statistics data, one record every 5 minutes or daily. 
-     * @return Data Storage statistics data, one record every 5 minutes or daily.
+     * Get  
+     * @return Data 
      */
     public StatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Storage statistics data, one record every 5 minutes or daily.
-     * @param Data Storage statistics data, one record every 5 minutes or daily.
+     * Set 
+     * @param Data 
      */
     public void setData(StatDataItem [] Data) {
         this.Data = Data;

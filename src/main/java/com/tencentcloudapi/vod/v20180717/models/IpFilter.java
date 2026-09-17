@@ -24,92 +24,117 @@ import java.util.HashMap;
 public class IpFilter extends AbstractModel {
 
     /**
-    * IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+    * IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+    * IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li>
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+    * IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
 
     /**
-    * IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+    * 
     */
     @SerializedName("FilterRules")
     @Expose
     private IpFilterPathRule [] FilterRules;
 
     /**
-     * Get IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Get IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Set IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch IP allowlist/blocklist configuration switch. Parameter value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li> 
-     * @return FilterType IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+     * Get IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li> 
+     * @return FilterType IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li>
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
-     * @param FilterType IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+     * Set IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li>
+     * @param FilterType IP allowlist/blocklist type:
+<li>whitelist: allowlist;</li>
+<li>blocklist: blocklist.</li>
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists. 
-     * @return Filters IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+     * Get IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries. 
+     * @return Filters IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
-     * @param Filters IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+     * Set IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
+     * @param Filters IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+Fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers. 
-     * @return FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+     * Get  
+     * @return FilterRules 
      */
     public IpFilterPathRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-     * @param FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+     * Set 
+     * @param FilterRules 
      */
     public void setFilterRules(IpFilterPathRule [] FilterRules) {
         this.FilterRules = FilterRules;

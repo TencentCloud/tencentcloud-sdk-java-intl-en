@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TEHDConfigForUpdate extends AbstractModel {
 
     /**
-    * TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Maximum bitrate. If this parameter is left blank, no modification will be made.
+    * 
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li> 
-     * @return Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
-     * @param Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Maximum bitrate. If this parameter is left blank, no modification will be made. 
-     * @return MaxVideoBitrate Maximum bitrate. If this parameter is left blank, no modification will be made.
+     * Get  
+     * @return MaxVideoBitrate 
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set Maximum bitrate. If this parameter is left blank, no modification will be made.
-     * @param MaxVideoBitrate Maximum bitrate. If this parameter is left blank, no modification will be made.
+     * Set 
+     * @param MaxVideoBitrate 
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

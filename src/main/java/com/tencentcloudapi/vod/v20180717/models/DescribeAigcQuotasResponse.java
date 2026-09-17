@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAigcQuotasResponse extends AbstractModel {
 
     /**
-    * <p>Quota list</p>
+    * 
     */
     @SerializedName("QuotaSet")
     @Expose
     private AigcQuotaItem [] QuotaSet;
 
     /**
-    * <p>Total quantity.</p>
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAigcQuotasResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Quota list</p> 
-     * @return QuotaSet <p>Quota list</p>
+     * Get  
+     * @return QuotaSet 
      */
     public AigcQuotaItem [] getQuotaSet() {
         return this.QuotaSet;
     }
 
     /**
-     * Set <p>Quota list</p>
-     * @param QuotaSet <p>Quota list</p>
+     * Set 
+     * @param QuotaSet 
      */
     public void setQuotaSet(AigcQuotaItem [] QuotaSet) {
         this.QuotaSet = QuotaSet;
     }
 
     /**
-     * Get <p>Total quantity.</p> 
-     * @return TotalCount <p>Total quantity.</p>
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total quantity.</p>
-     * @param TotalCount <p>Total quantity.</p>
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -24,193 +24,138 @@ import java.util.HashMap;
 public class MediaTrackItem extends AbstractModel {
 
     /**
-    * Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VideoItem")
     @Expose
     private VideoTrackItem VideoItem;
 
     /**
-    * Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AudioItem")
     @Expose
     private AudioTrackItem AudioItem;
 
     /**
-    * Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StickerItem")
     @Expose
     private StickerTrackItem StickerItem;
 
     /**
-    * Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TransitionItem")
     @Expose
     private MediaTransitionItem TransitionItem;
 
     /**
-    * Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EmptyItem")
     @Expose
     private EmptyTrackItem EmptyItem;
 
     /**
-     * Get Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li> 
-     * @return Type Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li>
-     * @param Type Segment type. Valid values:
-<li>Video: video segment.</li>
-<li>Audio: audio segment.</li>
-<li>Sticker: sticker segment.</li>
-<li>Transition: transition.</li>
-<li>Empty: empty segment.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VideoItem Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VideoItem 
      */
     public VideoTrackItem getVideoItem() {
         return this.VideoItem;
     }
 
     /**
-     * Set Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VideoItem Video segment, which is valid if `Type` is `Video`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VideoItem 
      */
     public void setVideoItem(VideoTrackItem VideoItem) {
         this.VideoItem = VideoItem;
     }
 
     /**
-     * Get Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioItem Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AudioItem 
      */
     public AudioTrackItem getAudioItem() {
         return this.AudioItem;
     }
 
     /**
-     * Set Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioItem Audio segment, which is valid if `Type` is `Audio`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AudioItem 
      */
     public void setAudioItem(AudioTrackItem AudioItem) {
         this.AudioItem = AudioItem;
     }
 
     /**
-     * Get Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StickerItem Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StickerItem 
      */
     public StickerTrackItem getStickerItem() {
         return this.StickerItem;
     }
 
     /**
-     * Set Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StickerItem Sticker segment, which is valid if `Type` is `Sticker`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StickerItem 
      */
     public void setStickerItem(StickerTrackItem StickerItem) {
         this.StickerItem = StickerItem;
     }
 
     /**
-     * Get Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TransitionItem Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TransitionItem 
      */
     public MediaTransitionItem getTransitionItem() {
         return this.TransitionItem;
     }
 
     /**
-     * Set Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TransitionItem Transition, which is valid if `Type` is `Transition`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TransitionItem 
      */
     public void setTransitionItem(MediaTransitionItem TransitionItem) {
         this.TransitionItem = TransitionItem;
     }
 
     /**
-     * Get Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EmptyItem Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EmptyItem 
      */
     public EmptyTrackItem getEmptyItem() {
         return this.EmptyItem;
     }
 
     /**
-     * Set Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EmptyItem Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-<li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EmptyItem 
      */
     public void setEmptyItem(EmptyTrackItem EmptyItem) {
         this.EmptyItem = EmptyItem;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DirectConnectSubnet extends AbstractModel {
 
     /**
-    * The direct connect gateway ID.
+    * Direct Connect gateway ID.
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-    * IDC subnet IP range
+    * IDC subnet CIDR block.
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-     * Get The direct connect gateway ID. 
-     * @return DirectConnectGatewayId The direct connect gateway ID.
+     * Get Direct Connect gateway ID. 
+     * @return DirectConnectGatewayId Direct Connect gateway ID.
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set The direct connect gateway ID.
-     * @param DirectConnectGatewayId The direct connect gateway ID.
+     * Set Direct Connect gateway ID.
+     * @param DirectConnectGatewayId Direct Connect gateway ID.
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
     /**
-     * Get IDC subnet IP range 
-     * @return CidrBlock IDC subnet IP range
+     * Get IDC subnet CIDR block. 
+     * @return CidrBlock IDC subnet CIDR block.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set IDC subnet IP range
-     * @param CidrBlock IDC subnet IP range
+     * Set IDC subnet CIDR block.
+     * @param CidrBlock IDC subnet CIDR block.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;

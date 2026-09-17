@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class RemoveWaterMarkTaskOutput extends AbstractModel {
 
     /**
-    * The file ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The file type, such as MP4 or MP3.
+    * 
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * The playback URL of the output file.
+    * 
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * The filename, which can be up to 64 characters long.
+    * 
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * The metadata of the video, including size, duration, video stream information, and audio stream information.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-     * Get The file ID. 
-     * @return FileId The file ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The file ID.
-     * @param FileId The file ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The file type, such as MP4 or MP3. 
-     * @return FileType The file type, such as MP4 or MP3.
+     * Get  
+     * @return FileType 
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set The file type, such as MP4 or MP3.
-     * @param FileType The file type, such as MP4 or MP3.
+     * Set 
+     * @param FileType 
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get The playback URL of the output file. 
-     * @return FileUrl The playback URL of the output file.
+     * Get  
+     * @return FileUrl 
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set The playback URL of the output file.
-     * @param FileUrl The playback URL of the output file.
+     * Set 
+     * @param FileUrl 
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get The filename, which can be up to 64 characters long. 
-     * @return MediaName The filename, which can be up to 64 characters long.
+     * Get  
+     * @return MediaName 
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set The filename, which can be up to 64 characters long.
-     * @param MediaName The filename, which can be up to 64 characters long.
+     * Set 
+     * @param MediaName 
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get The metadata of the video, including size, duration, video stream information, and audio stream information. 
-     * @return MetaData The metadata of the video, including size, duration, video stream information, and audio stream information.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set The metadata of the video, including size, duration, video stream information, and audio stream information.
-     * @param MetaData The metadata of the video, including size, duration, video stream information, and audio stream information.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

@@ -24,200 +24,166 @@ import java.util.HashMap;
 public class ProcedureTask extends AbstractModel {
 
     /**
-    * Video processing task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
+    * 
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * Source video metadata.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * Status and result of an intelligent recognition task
+    * 
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
     private AiContentReviewResult [] AiContentReviewResultSet;
 
     /**
-    * Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AiAnalysisResultSet")
     @Expose
     private AiAnalysisResult [] AiAnalysisResultSet;
 
     /**
-    * Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AiRecognitionResultSet")
     @Expose
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-    * Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TasksNotifyMode")
     @Expose
     private String TasksNotifyMode;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li>
+    * 
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li>
+    * 
     */
     @SerializedName("OperationType")
     @Expose
     private String OperationType;
 
     /**
-     * Get Video processing task ID. 
-     * @return TaskId Video processing task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Video processing task ID.
-     * @param TaskId Video processing task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li> 
-     * @return Status Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-     * @param Status Task flow status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErrCode 
      * @deprecated
      */
     @Deprecated
@@ -226,10 +192,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode Disused. Please use `ErrCode` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErrCode 
      * @deprecated
      */
     @Deprecated
@@ -238,10 +202,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Message Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      * @deprecated
      */
     @Deprecated
@@ -250,10 +212,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Message Disused. Please use `Message` of each specific task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      * @deprecated
      */
     @Deprecated
@@ -262,304 +222,224 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileId Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileId Media file ID.
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `FileId` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Id` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileName Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileName 
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileName Media filename
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.Name` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Name` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileName 
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li> 
-     * @return FileUrl Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
+     * Get  
+     * @return FileUrl 
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
-     * @param FileUrl Media file address
-<li>If the task flow is initiated by [ProcessMedia](https://cloud.tencent.com/document/product/266/33427), this field means the `BasicInfo.MediaUrl` in [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo);</li>
-<li>If the task flow is initiated by [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426), this field means the `Url` in [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo).</li>
+     * Set 
+     * @param FileUrl 
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get Source video metadata. 
-     * @return MetaData Source video metadata.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Source video metadata.
-     * @param MetaData Source video metadata.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MediaProcessResultSet Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MediaProcessResultSet 
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessResultSet Execution status and result of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MediaProcessResultSet 
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get Status and result of an intelligent recognition task 
-     * @return AiContentReviewResultSet Status and result of an intelligent recognition task
+     * Get  
+     * @return AiContentReviewResultSet 
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set Status and result of an intelligent recognition task
-     * @param AiContentReviewResultSet Status and result of an intelligent recognition task
+     * Set 
+     * @param AiContentReviewResultSet 
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;
     }
 
     /**
-     * Get Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AiAnalysisResultSet Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AiAnalysisResultSet 
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
         return this.AiAnalysisResultSet;
     }
 
     /**
-     * Set Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiAnalysisResultSet Execution status and result of video content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AiAnalysisResultSet 
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
         this.AiAnalysisResultSet = AiAnalysisResultSet;
     }
 
     /**
-     * Get Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AiRecognitionResultSet Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AiRecognitionResultSet 
      */
     public AiRecognitionResult [] getAiRecognitionResultSet() {
         return this.AiRecognitionResultSet;
     }
 
     /**
-     * Set Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionResultSet Execution status and result of video content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AiRecognitionResultSet 
      */
     public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
         this.AiRecognitionResultSet = AiRecognitionResultSet;
     }
 
     /**
-     * Get Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TasksPriority Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TasksPriority 
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TasksPriority Task flow priority. Value range: [-10, 10].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TasksPriority 
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TasksNotifyMode Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TasksNotifyMode 
      */
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
     }
 
     /**
-     * Set Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TasksNotifyMode Notification mode for change in task flow status.
-<li>Finish: an event notification will be initiated only after the task flow is completely executed;</li>
-<li>Change: an event notification will be initiated as soon as the status of a subtask in the task flow changes; </li>
-<li>None: no callback for the task flow will be accepted.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TasksNotifyMode 
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li> 
-     * @return Operator The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li>
+     * Get  
+     * @return Operator 
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li>
-     * @param Operator The operator. Valid values:
-<li>`SYSTEM`: The task is triggered by the system.</li>
+     * Set 
+     * @param Operator 
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li> 
-     * @return OperationType The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li>
+     * Get  
+     * @return OperationType 
      */
     public String getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li>
-     * @param OperationType The operation type. Valid values:
-<li>`TSC`: TSC-based smart bitrate reduction</li>
+     * Set 
+     * @param OperationType 
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;

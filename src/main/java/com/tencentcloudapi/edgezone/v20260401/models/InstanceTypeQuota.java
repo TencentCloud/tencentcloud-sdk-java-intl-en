@@ -45,6 +45,13 @@ public class InstanceTypeQuota extends AbstractModel {
     private String InstanceFamily;
 
     /**
+    * Model family name
+    */
+    @SerializedName("InstanceFamilyName")
+    @Expose
+    private String InstanceFamilyName;
+
+    /**
     * Number of CPU cores.
     */
     @SerializedName("CpuCores")
@@ -108,6 +115,27 @@ public class InstanceTypeQuota extends AbstractModel {
     private Long DataDiskCount;
 
     /**
+    * Second set of data disk types
+    */
+    @SerializedName("SecondaryDataDiskType")
+    @Expose
+    private String SecondaryDataDiskType;
+
+    /**
+    * Data disk size of the second group (GB)
+    */
+    @SerializedName("SecondaryDataDiskSize")
+    @Expose
+    private Long SecondaryDataDiskSize;
+
+    /**
+    * Number of data disks in the second set
+    */
+    @SerializedName("SecondaryDataDiskCount")
+    @Expose
+    private Long SecondaryDataDiskCount;
+
+    /**
     * Disk description string (backward compatibility).
     */
     @SerializedName("DiskType")
@@ -129,7 +157,7 @@ public class InstanceTypeQuota extends AbstractModel {
     private String GpuType;
 
     /**
-    * Quota quantity. 0 indicates no restriction.
+    * Quota quantity
     */
     @SerializedName("Quota")
     @Expose
@@ -181,6 +209,22 @@ public class InstanceTypeQuota extends AbstractModel {
      */
     public void setInstanceFamily(String InstanceFamily) {
         this.InstanceFamily = InstanceFamily;
+    }
+
+    /**
+     * Get Model family name 
+     * @return InstanceFamilyName Model family name
+     */
+    public String getInstanceFamilyName() {
+        return this.InstanceFamilyName;
+    }
+
+    /**
+     * Set Model family name
+     * @param InstanceFamilyName Model family name
+     */
+    public void setInstanceFamilyName(String InstanceFamilyName) {
+        this.InstanceFamilyName = InstanceFamilyName;
     }
 
     /**
@@ -328,6 +372,54 @@ public class InstanceTypeQuota extends AbstractModel {
     }
 
     /**
+     * Get Second set of data disk types 
+     * @return SecondaryDataDiskType Second set of data disk types
+     */
+    public String getSecondaryDataDiskType() {
+        return this.SecondaryDataDiskType;
+    }
+
+    /**
+     * Set Second set of data disk types
+     * @param SecondaryDataDiskType Second set of data disk types
+     */
+    public void setSecondaryDataDiskType(String SecondaryDataDiskType) {
+        this.SecondaryDataDiskType = SecondaryDataDiskType;
+    }
+
+    /**
+     * Get Data disk size of the second group (GB) 
+     * @return SecondaryDataDiskSize Data disk size of the second group (GB)
+     */
+    public Long getSecondaryDataDiskSize() {
+        return this.SecondaryDataDiskSize;
+    }
+
+    /**
+     * Set Data disk size of the second group (GB)
+     * @param SecondaryDataDiskSize Data disk size of the second group (GB)
+     */
+    public void setSecondaryDataDiskSize(Long SecondaryDataDiskSize) {
+        this.SecondaryDataDiskSize = SecondaryDataDiskSize;
+    }
+
+    /**
+     * Get Number of data disks in the second set 
+     * @return SecondaryDataDiskCount Number of data disks in the second set
+     */
+    public Long getSecondaryDataDiskCount() {
+        return this.SecondaryDataDiskCount;
+    }
+
+    /**
+     * Set Number of data disks in the second set
+     * @param SecondaryDataDiskCount Number of data disks in the second set
+     */
+    public void setSecondaryDataDiskCount(Long SecondaryDataDiskCount) {
+        this.SecondaryDataDiskCount = SecondaryDataDiskCount;
+    }
+
+    /**
      * Get Disk description string (backward compatibility). 
      * @return DiskType Disk description string (backward compatibility).
      */
@@ -376,16 +468,16 @@ public class InstanceTypeQuota extends AbstractModel {
     }
 
     /**
-     * Get Quota quantity. 0 indicates no restriction. 
-     * @return Quota Quota quantity. 0 indicates no restriction.
+     * Get Quota quantity 
+     * @return Quota Quota quantity
      */
     public Long getQuota() {
         return this.Quota;
     }
 
     /**
-     * Set Quota quantity. 0 indicates no restriction.
-     * @param Quota Quota quantity. 0 indicates no restriction.
+     * Set Quota quantity
+     * @param Quota Quota quantity
      */
     public void setQuota(Long Quota) {
         this.Quota = Quota;
@@ -407,6 +499,9 @@ public class InstanceTypeQuota extends AbstractModel {
         }
         if (source.InstanceFamily != null) {
             this.InstanceFamily = new String(source.InstanceFamily);
+        }
+        if (source.InstanceFamilyName != null) {
+            this.InstanceFamilyName = new String(source.InstanceFamilyName);
         }
         if (source.CpuCores != null) {
             this.CpuCores = new Long(source.CpuCores);
@@ -435,6 +530,15 @@ public class InstanceTypeQuota extends AbstractModel {
         if (source.DataDiskCount != null) {
             this.DataDiskCount = new Long(source.DataDiskCount);
         }
+        if (source.SecondaryDataDiskType != null) {
+            this.SecondaryDataDiskType = new String(source.SecondaryDataDiskType);
+        }
+        if (source.SecondaryDataDiskSize != null) {
+            this.SecondaryDataDiskSize = new Long(source.SecondaryDataDiskSize);
+        }
+        if (source.SecondaryDataDiskCount != null) {
+            this.SecondaryDataDiskCount = new Long(source.SecondaryDataDiskCount);
+        }
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
@@ -457,6 +561,7 @@ public class InstanceTypeQuota extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
+        this.setParamSimple(map, prefix + "InstanceFamilyName", this.InstanceFamilyName);
         this.setParamSimple(map, prefix + "CpuCores", this.CpuCores);
         this.setParamSimple(map, prefix + "CpuType", this.CpuType);
         this.setParamSimple(map, prefix + "MemoryGb", this.MemoryGb);
@@ -466,6 +571,9 @@ public class InstanceTypeQuota extends AbstractModel {
         this.setParamSimple(map, prefix + "DataDiskType", this.DataDiskType);
         this.setParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);
         this.setParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
+        this.setParamSimple(map, prefix + "SecondaryDataDiskType", this.SecondaryDataDiskType);
+        this.setParamSimple(map, prefix + "SecondaryDataDiskSize", this.SecondaryDataDiskSize);
+        this.setParamSimple(map, prefix + "SecondaryDataDiskCount", this.SecondaryDataDiskCount);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "NetworkInterfaceType", this.NetworkInterfaceType);
         this.setParamSimple(map, prefix + "GpuType", this.GpuType);

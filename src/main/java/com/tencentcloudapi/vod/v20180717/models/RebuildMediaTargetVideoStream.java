@@ -24,314 +24,184 @@ import java.util.HashMap;
 public class RebuildMediaTargetVideoStream extends AbstractModel {
 
     /**
-    * The video codec. Valid values:
-<li>`libx264`: H.264</li>
-<li>`libx265`: H.265</li>
-<li>`av1`: AOMedia Video 1</li>
-The default codec is H.264.
+    * 
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+    * 
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
+    * 
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Resolution adaption. Valid values:
-<li>`open`: Enable. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
-<li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
-
-Default value: `open`.
+    * 
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
     private String ResolutionAdaptive;
 
     /**
-    * The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`.
+    * 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`.
+    * 
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
-<li>`stretch`: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
-<li>`black`: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
-
-Default value: `stretch`.
+    * 
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-    * The number of frames between two I-frames. Valid values: 0 and 1-100000.
-If this parameter is `0` or left empty, the interval will be determined by the system.
+    * 
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-     * Get The video codec. Valid values:
-<li>`libx264`: H.264</li>
-<li>`libx265`: H.265</li>
-<li>`av1`: AOMedia Video 1</li>
-The default codec is H.264. 
-     * @return Codec The video codec. Valid values:
-<li>`libx264`: H.264</li>
-<li>`libx265`: H.265</li>
-<li>`av1`: AOMedia Video 1</li>
-The default codec is H.264.
+     * Get  
+     * @return Codec 
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set The video codec. Valid values:
-<li>`libx264`: H.264</li>
-<li>`libx265`: H.265</li>
-<li>`av1`: AOMedia Video 1</li>
-The default codec is H.264.
-     * @param Codec The video codec. Valid values:
-<li>`libx264`: H.264</li>
-<li>`libx265`: H.265</li>
-<li>`av1`: AOMedia Video 1</li>
-The default codec is H.264.
+     * Set 
+     * @param Codec 
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
-When the value is 0, VOD automatically sets the bitrate. 
-     * @return Bitrate Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+     * Get  
+     * @return Bitrate 
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
-     * @param Bitrate Bitrate of video stream, value ranges from 0 to [128, 35000], measurement unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+     * Set 
+     * @param Bitrate 
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used. 
-     * @return Fps The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
+     * Get  
+     * @return Fps 
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
-     * @param Fps The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
+     * Set 
+     * @param Fps 
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Resolution adaption. Valid values:
-<li>`open`: Enable. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
-<li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
-
-Default value: `open`. 
-     * @return ResolutionAdaptive Resolution adaption. Valid values:
-<li>`open`: Enable. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
-<li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
-
-Default value: `open`.
+     * Get  
+     * @return ResolutionAdaptive 
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
     }
 
     /**
-     * Set Resolution adaption. Valid values:
-<li>`open`: Enable. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
-<li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
-
-Default value: `open`.
-     * @param ResolutionAdaptive Resolution adaption. Valid values:
-<li>`open`: Enable. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
-<li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
-
-Default value: `open`.
+     * Set 
+     * @param ResolutionAdaptive 
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
-     * Get The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`. 
-     * @return Width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`.
+     * Get  
+     * @return Width 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`.
-     * @param Width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`.
+     * Set 
+     * @param Width 
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`. 
-     * @return Height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`.
+     * Get  
+     * @return Height 
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`.
-     * @param Height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
-<li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
-<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
-<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
-<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
-
-Default value: `0`.
+     * Set 
+     * @param Height 
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
-<li>`stretch`: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
-<li>`black`: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
-
-Default value: `stretch`. 
-     * @return FillType The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
-<li>`stretch`: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
-<li>`black`: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
-
-Default value: `stretch`.
+     * Get  
+     * @return FillType 
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
-<li>`stretch`: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
-<li>`black`: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
-
-Default value: `stretch`.
-     * @param FillType The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
-<li>`stretch`: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
-<li>`black`: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
-
-Default value: `stretch`.
+     * Set 
+     * @param FillType 
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
     }
 
     /**
-     * Get The number of frames between two I-frames. Valid values: 0 and 1-100000.
-If this parameter is `0` or left empty, the interval will be determined by the system. 
-     * @return Gop The number of frames between two I-frames. Valid values: 0 and 1-100000.
-If this parameter is `0` or left empty, the interval will be determined by the system.
+     * Get  
+     * @return Gop 
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set The number of frames between two I-frames. Valid values: 0 and 1-100000.
-If this parameter is `0` or left empty, the interval will be determined by the system.
-     * @param Gop The number of frames between two I-frames. Valid values: 0 and 1-100000.
-If this parameter is `0` or left empty, the interval will be determined by the system.
+     * Set 
+     * @param Gop 
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;

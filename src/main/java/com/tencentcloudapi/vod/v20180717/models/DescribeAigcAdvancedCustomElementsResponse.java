@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAigcAdvancedCustomElementsResponse extends AbstractModel {
 
     /**
-    * <p>Entity information of the AIGC advanced custom subject.</p>
+    * 
     */
     @SerializedName("ElementSet")
     @Expose
     private AigcAdvancedCustomElementInfo [] ElementSet;
 
     /**
-    * <p>Total number of records.</p>
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAigcAdvancedCustomElementsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Entity information of the AIGC advanced custom subject.</p> 
-     * @return ElementSet <p>Entity information of the AIGC advanced custom subject.</p>
+     * Get  
+     * @return ElementSet 
      */
     public AigcAdvancedCustomElementInfo [] getElementSet() {
         return this.ElementSet;
     }
 
     /**
-     * Set <p>Entity information of the AIGC advanced custom subject.</p>
-     * @param ElementSet <p>Entity information of the AIGC advanced custom subject.</p>
+     * Set 
+     * @param ElementSet 
      */
     public void setElementSet(AigcAdvancedCustomElementInfo [] ElementSet) {
         this.ElementSet = ElementSet;
     }
 
     /**
-     * Get <p>Total number of records.</p> 
-     * @return TotalCount <p>Total number of records.</p>
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of records.</p>
-     * @param TotalCount <p>Total number of records.</p>
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

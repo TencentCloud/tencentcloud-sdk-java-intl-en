@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class PipSetting extends AbstractModel {
 
     /**
-    * 
+    * Audio selection: LIVE_SOURCE or AD_SOURCE
     */
     @SerializedName("AudioSelection")
     @Expose
     private String AudioSelection;
 
     /**
-    * 
+    * Live streaming source layout configuration
     */
     @SerializedName("LiveSourceLayout")
     @Expose
     private SourceLayout LiveSourceLayout;
 
     /**
-    * 
+    * Advertisement source layout configuration
     */
     @SerializedName("AdSourceLayout")
     @Expose
     private SourceLayout AdSourceLayout;
 
     /**
-    * 
+    * Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
     */
     @SerializedName("BackgroundImgUrl")
     @Expose
     private String BackgroundImgUrl;
 
     /**
-    * 
+    * Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
     */
     @SerializedName("AdSourceUrl")
     @Expose
     private String AdSourceUrl;
 
     /**
-     * Get  
-     * @return AudioSelection 
+     * Get Audio selection: LIVE_SOURCE or AD_SOURCE 
+     * @return AudioSelection Audio selection: LIVE_SOURCE or AD_SOURCE
      */
     public String getAudioSelection() {
         return this.AudioSelection;
     }
 
     /**
-     * Set 
-     * @param AudioSelection 
+     * Set Audio selection: LIVE_SOURCE or AD_SOURCE
+     * @param AudioSelection Audio selection: LIVE_SOURCE or AD_SOURCE
      */
     public void setAudioSelection(String AudioSelection) {
         this.AudioSelection = AudioSelection;
     }
 
     /**
-     * Get  
-     * @return LiveSourceLayout 
+     * Get Live streaming source layout configuration 
+     * @return LiveSourceLayout Live streaming source layout configuration
      */
     public SourceLayout getLiveSourceLayout() {
         return this.LiveSourceLayout;
     }
 
     /**
-     * Set 
-     * @param LiveSourceLayout 
+     * Set Live streaming source layout configuration
+     * @param LiveSourceLayout Live streaming source layout configuration
      */
     public void setLiveSourceLayout(SourceLayout LiveSourceLayout) {
         this.LiveSourceLayout = LiveSourceLayout;
     }
 
     /**
-     * Get  
-     * @return AdSourceLayout 
+     * Get Advertisement source layout configuration 
+     * @return AdSourceLayout Advertisement source layout configuration
      */
     public SourceLayout getAdSourceLayout() {
         return this.AdSourceLayout;
     }
 
     /**
-     * Set 
-     * @param AdSourceLayout 
+     * Set Advertisement source layout configuration
+     * @param AdSourceLayout Advertisement source layout configuration
      */
     public void setAdSourceLayout(SourceLayout AdSourceLayout) {
         this.AdSourceLayout = AdSourceLayout;
     }
 
     /**
-     * Get  
-     * @return BackgroundImgUrl 
+     * Get Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES) 
+     * @return BackgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
      */
     public String getBackgroundImgUrl() {
         return this.BackgroundImgUrl;
     }
 
     /**
-     * Set 
-     * @param BackgroundImgUrl 
+     * Set Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
+     * @param BackgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
      */
     public void setBackgroundImgUrl(String BackgroundImgUrl) {
         this.BackgroundImgUrl = BackgroundImgUrl;
     }
 
     /**
-     * Get  
-     * @return AdSourceUrl 
+     * Get Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES) 
+     * @return AdSourceUrl Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
      */
     public String getAdSourceUrl() {
         return this.AdSourceUrl;
     }
 
     /**
-     * Set 
-     * @param AdSourceUrl 
+     * Set Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
+     * @param AdSourceUrl Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
      */
     public void setAdSourceUrl(String AdSourceUrl) {
         this.AdSourceUrl = AdSourceUrl;

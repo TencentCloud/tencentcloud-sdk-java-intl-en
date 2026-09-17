@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DrmStreamingsInfoForUpdate extends AbstractModel {
 
     /**
-    * ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+    * 
     */
     @SerializedName("SimpleAesDefinition")
     @Expose
     private Long SimpleAesDefinition;
 
     /**
-    * The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+    * 
     */
     @SerializedName("WidevineDefinition")
     @Expose
     private Long WidevineDefinition;
 
     /**
-    * The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+    * 
     */
     @SerializedName("FairPlayDefinition")
     @Expose
     private Long FairPlayDefinition;
 
     /**
-     * Get ID of the adaptive bitrate streaming template whose protection type is SimpleAES. 
-     * @return SimpleAesDefinition ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+     * Get  
+     * @return SimpleAesDefinition 
      */
     public Long getSimpleAesDefinition() {
         return this.SimpleAesDefinition;
     }
 
     /**
-     * Set ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
-     * @param SimpleAesDefinition ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+     * Set 
+     * @param SimpleAesDefinition 
      */
     public void setSimpleAesDefinition(Long SimpleAesDefinition) {
         this.SimpleAesDefinition = SimpleAesDefinition;
     }
 
     /**
-     * Get The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine. 
-     * @return WidevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+     * Get  
+     * @return WidevineDefinition 
      */
     public Long getWidevineDefinition() {
         return this.WidevineDefinition;
     }
 
     /**
-     * Set The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
-     * @param WidevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+     * Set 
+     * @param WidevineDefinition 
      */
     public void setWidevineDefinition(Long WidevineDefinition) {
         this.WidevineDefinition = WidevineDefinition;
     }
 
     /**
-     * Get The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay. 
-     * @return FairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+     * Get  
+     * @return FairPlayDefinition 
      */
     public Long getFairPlayDefinition() {
         return this.FairPlayDefinition;
     }
 
     /**
-     * Set The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
-     * @param FairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+     * Set 
+     * @param FairPlayDefinition 
      */
     public void setFairPlayDefinition(Long FairPlayDefinition) {
         this.FairPlayDefinition = FairPlayDefinition;

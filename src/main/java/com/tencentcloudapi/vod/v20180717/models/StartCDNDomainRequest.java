@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class StartCDNDomainRequest extends AbstractModel {
 
     /**
-    * Domain.
+    * <p>Domain name.</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+    * <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Domain. 
-     * @return Domain Domain.
+     * Get <p>Domain name.</p> 
+     * @return Domain <p>Domain name.</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain.
-     * @param Domain Domain.
+     * Set <p>Domain name.</p>
+     * @param Domain <p>Domain name.</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li> 
-     * @return Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * Get <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li> 
+     * @return Operation <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
-     * @param Operation Domain name operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+     * Set <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li>
+     * @param Operation <p>Domain operation. Value:</p><li>start: enable;</li><li>stop: disable.</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

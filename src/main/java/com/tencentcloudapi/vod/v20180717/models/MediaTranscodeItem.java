@@ -24,345 +24,345 @@ import java.util.HashMap;
 public class MediaTranscodeItem extends AbstractModel {
 
     /**
-    * <p>File URL of the transcoded video.</p>
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+    * 
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * <p>Maximum value of video stream height. Unit: px.</p>
+    * 
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * <p>Maximum value of video stream width. Unit: px.</p>
+    * 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+    * 
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * <p>Video duration, in seconds.</p>
+    * 
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * <p>md5 value of the video.</p>
+    * 
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * <p>Container type, such as m4a, mp4.</p>
+    * 
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * <p>Video stream information.</p>
+    * 
     */
     @SerializedName("VideoStreamSet")
     @Expose
     private MediaVideoStreamItem [] VideoStreamSet;
 
     /**
-    * <p>Audio stream information.</p>
+    * 
     */
     @SerializedName("AudioStreamSet")
     @Expose
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
-    * <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+    * 
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
     private String DigitalWatermarkType;
 
     /**
-    * <p>Copyright information.</p>
+    * 
     */
     @SerializedName("CopyRightWatermarkText")
     @Expose
     private String CopyRightWatermarkText;
 
     /**
-    * <p>Digital watermark template id.</p>
+    * 
     */
     @SerializedName("BlindWatermarkDefinition")
     @Expose
     private Long BlindWatermarkDefinition;
 
     /**
-    * <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get <p>File URL of the transcoded video.</p> 
-     * @return Url <p>File URL of the transcoded video.</p>
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>File URL of the transcoded video.</p>
-     * @param Url <p>File URL of the transcoded video.</p>
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p> 
-     * @return Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
-     * @param Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p> 
-     * @return Bitrate <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+     * Get  
+     * @return Bitrate 
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
-     * @param Bitrate <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+     * Set 
+     * @param Bitrate 
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get <p>Maximum value of video stream height. Unit: px.</p> 
-     * @return Height <p>Maximum value of video stream height. Unit: px.</p>
+     * Get  
+     * @return Height 
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set <p>Maximum value of video stream height. Unit: px.</p>
-     * @param Height <p>Maximum value of video stream height. Unit: px.</p>
+     * Set 
+     * @param Height 
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get <p>Maximum value of video stream width. Unit: px.</p> 
-     * @return Width <p>Maximum value of video stream width. Unit: px.</p>
+     * Get  
+     * @return Width 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set <p>Maximum value of video stream width. Unit: px.</p>
-     * @param Width <p>Maximum value of video stream width. Unit: px.</p>
+     * Set 
+     * @param Width 
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li> 
-     * @return Size <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+     * Get  
+     * @return Size 
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
-     * @param Size <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+     * Set 
+     * @param Size 
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get <p>Video duration, in seconds.</p> 
-     * @return Duration <p>Video duration, in seconds.</p>
+     * Get  
+     * @return Duration 
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set <p>Video duration, in seconds.</p>
-     * @param Duration <p>Video duration, in seconds.</p>
+     * Set 
+     * @param Duration 
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get <p>md5 value of the video.</p> 
-     * @return Md5 <p>md5 value of the video.</p>
+     * Get  
+     * @return Md5 
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set <p>md5 value of the video.</p>
-     * @param Md5 <p>md5 value of the video.</p>
+     * Set 
+     * @param Md5 
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get <p>Container type, such as m4a, mp4.</p> 
-     * @return Container <p>Container type, such as m4a, mp4.</p>
+     * Get  
+     * @return Container 
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set <p>Container type, such as m4a, mp4.</p>
-     * @param Container <p>Container type, such as m4a, mp4.</p>
+     * Set 
+     * @param Container 
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get <p>Video stream information.</p> 
-     * @return VideoStreamSet <p>Video stream information.</p>
+     * Get  
+     * @return VideoStreamSet 
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
         return this.VideoStreamSet;
     }
 
     /**
-     * Set <p>Video stream information.</p>
-     * @param VideoStreamSet <p>Video stream information.</p>
+     * Set 
+     * @param VideoStreamSet 
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
     }
 
     /**
-     * Get <p>Audio stream information.</p> 
-     * @return AudioStreamSet <p>Audio stream information.</p>
+     * Get  
+     * @return AudioStreamSet 
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
         return this.AudioStreamSet;
     }
 
     /**
-     * Set <p>Audio stream information.</p>
-     * @param AudioStreamSet <p>Audio stream information.</p>
+     * Set 
+     * @param AudioStreamSet 
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
         this.AudioStreamSet = AudioStreamSet;
     }
 
     /**
-     * Get <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li> 
-     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+     * Get  
+     * @return DigitalWatermarkType 
      */
     public String getDigitalWatermarkType() {
         return this.DigitalWatermarkType;
     }
 
     /**
-     * Set <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
-     * @param DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+     * Set 
+     * @param DigitalWatermarkType 
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
     /**
-     * Get <p>Copyright information.</p> 
-     * @return CopyRightWatermarkText <p>Copyright information.</p>
+     * Get  
+     * @return CopyRightWatermarkText 
      */
     public String getCopyRightWatermarkText() {
         return this.CopyRightWatermarkText;
     }
 
     /**
-     * Set <p>Copyright information.</p>
-     * @param CopyRightWatermarkText <p>Copyright information.</p>
+     * Set 
+     * @param CopyRightWatermarkText 
      */
     public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
         this.CopyRightWatermarkText = CopyRightWatermarkText;
     }
 
     /**
-     * Get <p>Digital watermark template id.</p> 
-     * @return BlindWatermarkDefinition <p>Digital watermark template id.</p>
+     * Get  
+     * @return BlindWatermarkDefinition 
      */
     public Long getBlindWatermarkDefinition() {
         return this.BlindWatermarkDefinition;
     }
 
     /**
-     * Set <p>Digital watermark template id.</p>
-     * @param BlindWatermarkDefinition <p>Digital watermark template id.</p>
+     * Set 
+     * @param BlindWatermarkDefinition 
      */
     public void setBlindWatermarkDefinition(Long BlindWatermarkDefinition) {
         this.BlindWatermarkDefinition = BlindWatermarkDefinition;
     }
 
     /**
-     * Get <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p> 
-     * @return FileId <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
-     * @param FileId <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

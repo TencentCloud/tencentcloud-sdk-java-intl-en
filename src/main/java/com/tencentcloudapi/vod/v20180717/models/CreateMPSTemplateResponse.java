@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMPSTemplateResponse extends AbstractModel {
 
     /**
-    * <p>Unique identifier of the MPS task Template. This template is independent of those created directly in Media Processing Service (MPS).</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMPSTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Unique identifier of the MPS task Template. This template is independent of those created directly in Media Processing Service (MPS).</p> 
-     * @return Definition <p>Unique identifier of the MPS task Template. This template is independent of those created directly in Media Processing Service (MPS).</p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Unique identifier of the MPS task Template. This template is independent of those created directly in Media Processing Service (MPS).</p>
-     * @param Definition <p>Unique identifier of the MPS task Template. This template is independent of those created directly in Media Processing Service (MPS).</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

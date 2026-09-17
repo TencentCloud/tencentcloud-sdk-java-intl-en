@@ -24,66 +24,46 @@ import java.util.HashMap;
 public class LowLightEnhanceInfo extends AbstractModel {
 
     /**
-    * Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li> 
-     * @return Switch Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param Switch Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`. 
-     * @return Type The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
-     * @param Type The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

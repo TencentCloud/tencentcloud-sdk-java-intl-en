@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ProcessImageAsyncTaskInput extends AbstractModel {
 
     /**
-    * Image asynchronous processing template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Extended parameters for asynchronous image processing.
+    * 
     */
     @SerializedName("ExtendedParameter")
     @Expose
     private ProcessImageAsyncInputExtendedParameter ExtendedParameter;
 
     /**
-     * Get Image asynchronous processing template ID. 
-     * @return Definition Image asynchronous processing template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Image asynchronous processing template ID.
-     * @param Definition Image asynchronous processing template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Extended parameters for asynchronous image processing. 
-     * @return ExtendedParameter Extended parameters for asynchronous image processing.
+     * Get  
+     * @return ExtendedParameter 
      */
     public ProcessImageAsyncInputExtendedParameter getExtendedParameter() {
         return this.ExtendedParameter;
     }
 
     /**
-     * Set Extended parameters for asynchronous image processing.
-     * @param ExtendedParameter Extended parameters for asynchronous image processing.
+     * Set 
+     * @param ExtendedParameter 
      */
     public void setExtendedParameter(ProcessImageAsyncInputExtendedParameter ExtendedParameter) {
         this.ExtendedParameter = ExtendedParameter;

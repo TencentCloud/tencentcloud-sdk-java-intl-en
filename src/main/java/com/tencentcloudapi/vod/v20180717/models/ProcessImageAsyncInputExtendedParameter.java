@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ProcessImageAsyncInputExtendedParameter extends AbstractModel {
 
     /**
-    * Prompt for model input.
+    * 
     */
     @SerializedName("Prompts")
     @Expose
     private String [] Prompts;
 
     /**
-     * Get Prompt for model input. 
-     * @return Prompts Prompt for model input.
+     * Get  
+     * @return Prompts 
      */
     public String [] getPrompts() {
         return this.Prompts;
     }
 
     /**
-     * Set Prompt for model input.
-     * @param Prompts Prompt for model input.
+     * Set 
+     * @param Prompts 
      */
     public void setPrompts(String [] Prompts) {
         this.Prompts = Prompts;

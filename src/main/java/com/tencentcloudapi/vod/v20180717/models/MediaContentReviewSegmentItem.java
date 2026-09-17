@@ -24,180 +24,160 @@ import java.util.HashMap;
 public class MediaContentReviewSegmentItem extends AbstractModel {
 
     /**
-    * Start time offset of a suspected segment in seconds.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a suspected segment in seconds.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Confidence score for the detected pornographic content
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Label for the detected pornographic content
+    * 
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+    * 
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * This field has been disused. Please use `PicUrlExpireTime`.
+    * 
     */
     @SerializedName("PicUrlExpireTimeStamp")
     @Expose
     private Long PicUrlExpireTimeStamp;
 
     /**
-    * Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get Start time offset of a suspected segment in seconds. 
-     * @return StartTimeOffset Start time offset of a suspected segment in seconds.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a suspected segment in seconds.
-     * @param StartTimeOffset Start time offset of a suspected segment in seconds.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a suspected segment in seconds. 
-     * @return EndTimeOffset End time offset of a suspected segment in seconds.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a suspected segment in seconds.
-     * @param EndTimeOffset End time offset of a suspected segment in seconds.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Confidence score for the detected pornographic content 
-     * @return Confidence Confidence score for the detected pornographic content
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence score for the detected pornographic content
-     * @param Confidence Confidence score for the detected pornographic content
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Label for the detected pornographic content 
-     * @return Label Label for the detected pornographic content
+     * Get  
+     * @return Label 
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Label for the detected pornographic content
-     * @param Label Label for the detected pornographic content
+     * Set 
+     * @param Label 
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li> 
-     * @return Suggestion Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Get  
+     * @return Suggestion 
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param Suggestion Processing suggestion for the detected pornographic content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Set 
+     * @param Suggestion 
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`). 
-     * @return Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-     * @param Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get This field has been disused. Please use `PicUrlExpireTime`. 
-     * @return PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+     * Get  
+     * @return PicUrlExpireTimeStamp 
      * @deprecated
      */
     @Deprecated
@@ -206,8 +186,8 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     }
 
     /**
-     * Set This field has been disused. Please use `PicUrlExpireTime`.
-     * @param PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+     * Set 
+     * @param PicUrlExpireTimeStamp 
      * @deprecated
      */
     @Deprecated
@@ -216,16 +196,16 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return PicUrlExpireTime 
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param PicUrlExpireTime 
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

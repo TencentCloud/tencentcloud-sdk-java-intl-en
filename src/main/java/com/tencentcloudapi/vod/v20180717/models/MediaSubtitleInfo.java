@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MediaSubtitleInfo extends AbstractModel {
 
     /**
-    * Subtitle information list
+    * 
     */
     @SerializedName("SubtitleSet")
     @Expose
     private MediaSubtitleItem [] SubtitleSet;
 
     /**
-     * Get Subtitle information list 
-     * @return SubtitleSet Subtitle information list
+     * Get  
+     * @return SubtitleSet 
      */
     public MediaSubtitleItem [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set Subtitle information list
-     * @param SubtitleSet Subtitle information list
+     * Set 
+     * @param SubtitleSet 
      */
     public void setSubtitleSet(MediaSubtitleItem [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;

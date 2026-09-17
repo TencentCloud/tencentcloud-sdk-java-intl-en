@@ -24,71 +24,46 @@ import java.util.HashMap;
 public class SubtitleFormatsOperation extends AbstractModel {
 
     /**
-    * The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li>
+    * 
     */
     @SerializedName("Formats")
     @Expose
     private String [] Formats;
 
     /**
-     * Get The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li> 
-     * @return Type The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li>
-     * @param Type The modification type. Valid values:
-<li>add: Add the formats specified by `Formats`.</li>
-<li>delete: Delete the formats specified by `Formats`.<l/i>
-<li>reset: Reset the format list to formats specified by `Formats`.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li> 
-     * @return Formats The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li>
+     * Get  
+     * @return Formats 
      */
     public String [] getFormats() {
         return this.Formats;
     }
 
     /**
-     * Set The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li>
-     * @param Formats The subtitle format list. Valid values:
-<li>vtt</li>
-<li>srt</li>
+     * Set 
+     * @param Formats 
      */
     public void setFormats(String [] Formats) {
         this.Formats = Formats;

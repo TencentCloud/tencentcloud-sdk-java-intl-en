@@ -24,325 +24,348 @@ import java.util.HashMap;
 public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
 
     /**
-    * <p>Unique ID of the adaptive bitrate streaming template.</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * <p>Adaptive bitrate streaming template name.</p>
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Adaptive bitrate streaming template description.</p>
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
+    * 
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
+    * 
     */
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
 
     /**
-    * <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+    * 
     */
     @SerializedName("DrmKeyProvider")
     @Expose
     private String DrmKeyProvider;
 
     /**
-    * <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
+    * 
     */
     @SerializedName("DrmEncryptType")
     @Expose
     private String DrmEncryptType;
 
     /**
-    * <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
+    * 
     */
     @SerializedName("StreamInfos")
     @Expose
     private AdaptiveStreamTemplate [] StreamInfos;
 
     /**
-    * <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+    * 
     */
     @SerializedName("DisableHigherVideoBitrate")
     @Expose
     private Long DisableHigherVideoBitrate;
 
     /**
-    * <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+    * 
     */
     @SerializedName("DisableHigherVideoResolution")
     @Expose
     private Long DisableHigherVideoResolution;
 
     /**
-    * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * <p>Segment type. Valid only when Format is HLS.</p>
+    * 
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-     * Get <p>Unique ID of the adaptive bitrate streaming template.</p> 
-     * @return Definition <p>Unique ID of the adaptive bitrate streaming template.</p>
+    * 
+    */
+    @SerializedName("SegmentDuration")
+    @Expose
+    private Long SegmentDuration;
+
+    /**
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Unique ID of the adaptive bitrate streaming template.</p>
-     * @param Definition <p>Unique ID of the adaptive bitrate streaming template.</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li> 
-     * @return Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
-     * @param Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get <p>Adaptive bitrate streaming template name.</p> 
-     * @return Name <p>Adaptive bitrate streaming template name.</p>
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Adaptive bitrate streaming template name.</p>
-     * @param Name <p>Adaptive bitrate streaming template name.</p>
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Adaptive bitrate streaming template description.</p> 
-     * @return Comment <p>Adaptive bitrate streaming template description.</p>
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set <p>Adaptive bitrate streaming template description.</p>
-     * @param Comment <p>Adaptive bitrate streaming template description.</p>
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li> 
-     * @return Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
+     * Get  
+     * @return Format 
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
-     * @param Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
+     * Set 
+     * @param Format 
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video. 
-     * @return DrmType <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
+     * Get  
+     * @return DrmType 
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
-     * @param DrmType <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
+     * Set 
+     * @param DrmType 
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;
     }
 
     /**
-     * Get <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p> 
-     * @return DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+     * Get  
+     * @return DrmKeyProvider 
      */
     public String getDrmKeyProvider() {
         return this.DrmKeyProvider;
     }
 
     /**
-     * Set <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
-     * @param DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+     * Set 
+     * @param DrmKeyProvider 
      */
     public void setDrmKeyProvider(String DrmKeyProvider) {
         this.DrmKeyProvider = DrmKeyProvider;
     }
 
     /**
-     * Get <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p> 
-     * @return DrmEncryptType <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
+     * Get  
+     * @return DrmEncryptType 
      */
     public String getDrmEncryptType() {
         return this.DrmEncryptType;
     }
 
     /**
-     * Set <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
-     * @param DrmEncryptType <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
+     * Set 
+     * @param DrmEncryptType 
      */
     public void setDrmEncryptType(String DrmEncryptType) {
         this.DrmEncryptType = DrmEncryptType;
     }
 
     /**
-     * Get <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p> 
-     * @return StreamInfos <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
+     * Get  
+     * @return StreamInfos 
      */
     public AdaptiveStreamTemplate [] getStreamInfos() {
         return this.StreamInfos;
     }
 
     /**
-     * Set <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
-     * @param StreamInfos <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
+     * Set 
+     * @param StreamInfos 
      */
     public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
         this.StreamInfos = StreamInfos;
     }
 
     /**
-     * Get <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li> 
-     * @return DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+     * Get  
+     * @return DisableHigherVideoBitrate 
      */
     public Long getDisableHigherVideoBitrate() {
         return this.DisableHigherVideoBitrate;
     }
 
     /**
-     * Set <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
-     * @param DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+     * Set 
+     * @param DisableHigherVideoBitrate 
      */
     public void setDisableHigherVideoBitrate(Long DisableHigherVideoBitrate) {
         this.DisableHigherVideoBitrate = DisableHigherVideoBitrate;
     }
 
     /**
-     * Get <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li> 
-     * @return DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+     * Get  
+     * @return DisableHigherVideoResolution 
      */
     public Long getDisableHigherVideoResolution() {
         return this.DisableHigherVideoResolution;
     }
 
     /**
-     * Set <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
-     * @param DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+     * Set 
+     * @param DisableHigherVideoResolution 
      */
     public void setDisableHigherVideoResolution(Long DisableHigherVideoResolution) {
         this.DisableHigherVideoResolution = DisableHigherVideoResolution;
     }
 
     /**
-     * Get <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get <p>Segment type. Valid only when Format is HLS.</p> 
-     * @return SegmentType <p>Segment type. Valid only when Format is HLS.</p>
+     * Get  
+     * @return SegmentType 
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set <p>Segment type. Valid only when Format is HLS.</p>
-     * @param SegmentType <p>Segment type. Valid only when Format is HLS.</p>
+     * Set 
+     * @param SegmentType 
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
+    }
+
+    /**
+     * Get  
+     * @return SegmentDuration 
+     */
+    public Long getSegmentDuration() {
+        return this.SegmentDuration;
+    }
+
+    /**
+     * Set 
+     * @param SegmentDuration 
+     */
+    public void setSegmentDuration(Long SegmentDuration) {
+        this.SegmentDuration = SegmentDuration;
     }
 
     public AdaptiveDynamicStreamingTemplate() {
@@ -398,6 +421,9 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         if (source.SegmentType != null) {
             this.SegmentType = new String(source.SegmentType);
         }
+        if (source.SegmentDuration != null) {
+            this.SegmentDuration = new Long(source.SegmentDuration);
+        }
     }
 
 
@@ -419,6 +445,7 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "SegmentDuration", this.SegmentDuration);
 
     }
 }

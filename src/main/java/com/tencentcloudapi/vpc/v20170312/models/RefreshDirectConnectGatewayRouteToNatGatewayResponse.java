@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RefreshDirectConnectGatewayRouteToNatGatewayResponse extends AbstractModel {
 
     /**
-    * IDC subnet information
+    * IDC subnet information.
     */
     @SerializedName("DirectConnectSubnetSet")
     @Expose
@@ -38,16 +38,16 @@ public class RefreshDirectConnectGatewayRouteToNatGatewayResponse extends Abstra
     private String RequestId;
 
     /**
-     * Get IDC subnet information 
-     * @return DirectConnectSubnetSet IDC subnet information
+     * Get IDC subnet information. 
+     * @return DirectConnectSubnetSet IDC subnet information.
      */
     public DirectConnectSubnet [] getDirectConnectSubnetSet() {
         return this.DirectConnectSubnetSet;
     }
 
     /**
-     * Set IDC subnet information
-     * @param DirectConnectSubnetSet IDC subnet information
+     * Set IDC subnet information.
+     * @param DirectConnectSubnetSet IDC subnet information.
      */
     public void setDirectConnectSubnetSet(DirectConnectSubnet [] DirectConnectSubnetSet) {
         this.DirectConnectSubnetSet = DirectConnectSubnetSet;

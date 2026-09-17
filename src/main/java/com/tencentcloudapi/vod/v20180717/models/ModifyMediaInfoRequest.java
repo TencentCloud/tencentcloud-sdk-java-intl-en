@@ -24,386 +24,417 @@ import java.util.HashMap;
 public class ModifyMediaInfoRequest extends AbstractModel {
 
     /**
-    * Unique identifier of a media file.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Media filename, with a maximum length of 64 characters.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Media file description, longest 128 characters.
+    * 
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Media File Category ID.
+    * 
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * Media file expiry time uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). Enter "9999-12-31T23:59:59Z" to indicate no expiry. After expiry, the media file and its related resources (transcoding result, sprites) will be permanently deleted.
+    * 
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * The video cover image file (such as jpeg, png) is an encoded string in [Base64](https://tools.ietf.org/html/rfc4648). Only three image formats (gif, jpeg, png) are supported.
+    * 
     */
     @SerializedName("CoverData")
     @Expose
     private String CoverData;
 
     /**
-    * Newly added set of video timestamp information. If timestamp already exists at a certain offset, perform overlay operation. Maximum for a single media file is 100 Dotting Information. In the same request, time offset parameter of AddKeyFrameDescs must be all different from DeleteKeyFrameDescs.
+    * 
     */
     @SerializedName("AddKeyFrameDescs")
     @Expose
     private MediaKeyFrameDescItem [] AddKeyFrameDescs;
 
     /**
-    * Time offset of the video timestamp information set to be deleted, unit: second. In the same request, the time offset parameter of AddKeyFrameDescs must be consistent with all different DeleteKeyFrameDescs.
+    * 
     */
     @SerializedName("DeleteKeyFrameDescs")
     @Expose
     private Float [] DeleteKeyFrameDescs;
 
     /**
-    * Value 1 indicates clearing video dotting information. Other values meaningless.
-In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.
+    * 
     */
     @SerializedName("ClearKeyFrameDescs")
     @Expose
     private Long ClearKeyFrameDescs;
 
     /**
-    * A group of newly-added tags. Maximum for a single media file is 16 tags. Maximum for a single tag is 32 characters. In the same request, the AddTags parameter must be consistent with DeleteTags.
+    * 
     */
     @SerializedName("AddTags")
     @Expose
     private String [] AddTags;
 
     /**
-    * A group of tags to delete. In the same request, the AddTags parameter must be different from DeleteTags.
+    * 
     */
     @SerializedName("DeleteTags")
     @Expose
     private String [] DeleteTags;
 
     /**
-    * Value 1 means clear all media files, other values meaningless.
-In the same request, ClearTags and AddTags cannot appear simultaneously.
+    * 
     */
     @SerializedName("ClearTags")
     @Expose
     private Long ClearTags;
 
     /**
-    * Add a set of subtitles. Maximum for a single media file is 16 subtitles. In the same request, the specified subtitle ID in AddSubtitles must be all different from those in DeleteSubtitleIds.
+    * 
     */
     @SerializedName("AddSubtitles")
     @Expose
     private MediaSubtitleInput [] AddSubtitles;
 
     /**
-    * Unique identifier of subtitle to be deleted. In the same request, the specified subtitle id in AddSubtitles must be consistent with all different in DeleteSubtitleIds.
+    * 
     */
     @SerializedName("DeleteSubtitleIds")
     @Expose
     private String [] DeleteSubtitleIds;
 
     /**
-    * Value 1 means clear all subtitle information of the media file. Other values meaningless.
-In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.
+    * 
     */
     @SerializedName("ClearSubtitles")
     @Expose
     private Long ClearSubtitles;
 
     /**
-     * Get Unique identifier of a media file. 
-     * @return FileId Unique identifier of a media file.
+    * 
+    */
+    @SerializedName("DeleteKnowledgeBases")
+    @Expose
+    private String [] DeleteKnowledgeBases;
+
+    /**
+    * 
+    */
+    @SerializedName("ClearKnowledgeBases")
+    @Expose
+    private Long ClearKnowledgeBases;
+
+    /**
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Unique identifier of a media file.
-     * @param FileId Unique identifier of a media file.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Media filename, with a maximum length of 64 characters. 
-     * @return Name Media filename, with a maximum length of 64 characters.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Media filename, with a maximum length of 64 characters.
-     * @param Name Media filename, with a maximum length of 64 characters.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Media file description, longest 128 characters. 
-     * @return Description Media file description, longest 128 characters.
+     * Get  
+     * @return Description 
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Media file description, longest 128 characters.
-     * @param Description Media file description, longest 128 characters.
+     * Set 
+     * @param Description 
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Media File Category ID. 
-     * @return ClassId Media File Category ID.
+     * Get  
+     * @return ClassId 
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Media File Category ID.
-     * @param ClassId Media File Category ID.
+     * Set 
+     * @param ClassId 
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get Media file expiry time uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). Enter "9999-12-31T23:59:59Z" to indicate no expiry. After expiry, the media file and its related resources (transcoding result, sprites) will be permanently deleted. 
-     * @return ExpireTime Media file expiry time uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). Enter "9999-12-31T23:59:59Z" to indicate no expiry. After expiry, the media file and its related resources (transcoding result, sprites) will be permanently deleted.
+     * Get  
+     * @return ExpireTime 
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Media file expiry time uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). Enter "9999-12-31T23:59:59Z" to indicate no expiry. After expiry, the media file and its related resources (transcoding result, sprites) will be permanently deleted.
-     * @param ExpireTime Media file expiry time uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). Enter "9999-12-31T23:59:59Z" to indicate no expiry. After expiry, the media file and its related resources (transcoding result, sprites) will be permanently deleted.
+     * Set 
+     * @param ExpireTime 
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get The video cover image file (such as jpeg, png) is an encoded string in [Base64](https://tools.ietf.org/html/rfc4648). Only three image formats (gif, jpeg, png) are supported. 
-     * @return CoverData The video cover image file (such as jpeg, png) is an encoded string in [Base64](https://tools.ietf.org/html/rfc4648). Only three image formats (gif, jpeg, png) are supported.
+     * Get  
+     * @return CoverData 
      */
     public String getCoverData() {
         return this.CoverData;
     }
 
     /**
-     * Set The video cover image file (such as jpeg, png) is an encoded string in [Base64](https://tools.ietf.org/html/rfc4648). Only three image formats (gif, jpeg, png) are supported.
-     * @param CoverData The video cover image file (such as jpeg, png) is an encoded string in [Base64](https://tools.ietf.org/html/rfc4648). Only three image formats (gif, jpeg, png) are supported.
+     * Set 
+     * @param CoverData 
      */
     public void setCoverData(String CoverData) {
         this.CoverData = CoverData;
     }
 
     /**
-     * Get Newly added set of video timestamp information. If timestamp already exists at a certain offset, perform overlay operation. Maximum for a single media file is 100 Dotting Information. In the same request, time offset parameter of AddKeyFrameDescs must be all different from DeleteKeyFrameDescs. 
-     * @return AddKeyFrameDescs Newly added set of video timestamp information. If timestamp already exists at a certain offset, perform overlay operation. Maximum for a single media file is 100 Dotting Information. In the same request, time offset parameter of AddKeyFrameDescs must be all different from DeleteKeyFrameDescs.
+     * Get  
+     * @return AddKeyFrameDescs 
      */
     public MediaKeyFrameDescItem [] getAddKeyFrameDescs() {
         return this.AddKeyFrameDescs;
     }
 
     /**
-     * Set Newly added set of video timestamp information. If timestamp already exists at a certain offset, perform overlay operation. Maximum for a single media file is 100 Dotting Information. In the same request, time offset parameter of AddKeyFrameDescs must be all different from DeleteKeyFrameDescs.
-     * @param AddKeyFrameDescs Newly added set of video timestamp information. If timestamp already exists at a certain offset, perform overlay operation. Maximum for a single media file is 100 Dotting Information. In the same request, time offset parameter of AddKeyFrameDescs must be all different from DeleteKeyFrameDescs.
+     * Set 
+     * @param AddKeyFrameDescs 
      */
     public void setAddKeyFrameDescs(MediaKeyFrameDescItem [] AddKeyFrameDescs) {
         this.AddKeyFrameDescs = AddKeyFrameDescs;
     }
 
     /**
-     * Get Time offset of the video timestamp information set to be deleted, unit: second. In the same request, the time offset parameter of AddKeyFrameDescs must be consistent with all different DeleteKeyFrameDescs. 
-     * @return DeleteKeyFrameDescs Time offset of the video timestamp information set to be deleted, unit: second. In the same request, the time offset parameter of AddKeyFrameDescs must be consistent with all different DeleteKeyFrameDescs.
+     * Get  
+     * @return DeleteKeyFrameDescs 
      */
     public Float [] getDeleteKeyFrameDescs() {
         return this.DeleteKeyFrameDescs;
     }
 
     /**
-     * Set Time offset of the video timestamp information set to be deleted, unit: second. In the same request, the time offset parameter of AddKeyFrameDescs must be consistent with all different DeleteKeyFrameDescs.
-     * @param DeleteKeyFrameDescs Time offset of the video timestamp information set to be deleted, unit: second. In the same request, the time offset parameter of AddKeyFrameDescs must be consistent with all different DeleteKeyFrameDescs.
+     * Set 
+     * @param DeleteKeyFrameDescs 
      */
     public void setDeleteKeyFrameDescs(Float [] DeleteKeyFrameDescs) {
         this.DeleteKeyFrameDescs = DeleteKeyFrameDescs;
     }
 
     /**
-     * Get Value 1 indicates clearing video dotting information. Other values meaningless.
-In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously. 
-     * @return ClearKeyFrameDescs Value 1 indicates clearing video dotting information. Other values meaningless.
-In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.
+     * Get  
+     * @return ClearKeyFrameDescs 
      */
     public Long getClearKeyFrameDescs() {
         return this.ClearKeyFrameDescs;
     }
 
     /**
-     * Set Value 1 indicates clearing video dotting information. Other values meaningless.
-In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.
-     * @param ClearKeyFrameDescs Value 1 indicates clearing video dotting information. Other values meaningless.
-In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.
+     * Set 
+     * @param ClearKeyFrameDescs 
      */
     public void setClearKeyFrameDescs(Long ClearKeyFrameDescs) {
         this.ClearKeyFrameDescs = ClearKeyFrameDescs;
     }
 
     /**
-     * Get A group of newly-added tags. Maximum for a single media file is 16 tags. Maximum for a single tag is 32 characters. In the same request, the AddTags parameter must be consistent with DeleteTags. 
-     * @return AddTags A group of newly-added tags. Maximum for a single media file is 16 tags. Maximum for a single tag is 32 characters. In the same request, the AddTags parameter must be consistent with DeleteTags.
+     * Get  
+     * @return AddTags 
      */
     public String [] getAddTags() {
         return this.AddTags;
     }
 
     /**
-     * Set A group of newly-added tags. Maximum for a single media file is 16 tags. Maximum for a single tag is 32 characters. In the same request, the AddTags parameter must be consistent with DeleteTags.
-     * @param AddTags A group of newly-added tags. Maximum for a single media file is 16 tags. Maximum for a single tag is 32 characters. In the same request, the AddTags parameter must be consistent with DeleteTags.
+     * Set 
+     * @param AddTags 
      */
     public void setAddTags(String [] AddTags) {
         this.AddTags = AddTags;
     }
 
     /**
-     * Get A group of tags to delete. In the same request, the AddTags parameter must be different from DeleteTags. 
-     * @return DeleteTags A group of tags to delete. In the same request, the AddTags parameter must be different from DeleteTags.
+     * Get  
+     * @return DeleteTags 
      */
     public String [] getDeleteTags() {
         return this.DeleteTags;
     }
 
     /**
-     * Set A group of tags to delete. In the same request, the AddTags parameter must be different from DeleteTags.
-     * @param DeleteTags A group of tags to delete. In the same request, the AddTags parameter must be different from DeleteTags.
+     * Set 
+     * @param DeleteTags 
      */
     public void setDeleteTags(String [] DeleteTags) {
         this.DeleteTags = DeleteTags;
     }
 
     /**
-     * Get Value 1 means clear all media files, other values meaningless.
-In the same request, ClearTags and AddTags cannot appear simultaneously. 
-     * @return ClearTags Value 1 means clear all media files, other values meaningless.
-In the same request, ClearTags and AddTags cannot appear simultaneously.
+     * Get  
+     * @return ClearTags 
      */
     public Long getClearTags() {
         return this.ClearTags;
     }
 
     /**
-     * Set Value 1 means clear all media files, other values meaningless.
-In the same request, ClearTags and AddTags cannot appear simultaneously.
-     * @param ClearTags Value 1 means clear all media files, other values meaningless.
-In the same request, ClearTags and AddTags cannot appear simultaneously.
+     * Set 
+     * @param ClearTags 
      */
     public void setClearTags(Long ClearTags) {
         this.ClearTags = ClearTags;
     }
 
     /**
-     * Get Add a set of subtitles. Maximum for a single media file is 16 subtitles. In the same request, the specified subtitle ID in AddSubtitles must be all different from those in DeleteSubtitleIds. 
-     * @return AddSubtitles Add a set of subtitles. Maximum for a single media file is 16 subtitles. In the same request, the specified subtitle ID in AddSubtitles must be all different from those in DeleteSubtitleIds.
+     * Get  
+     * @return AddSubtitles 
      */
     public MediaSubtitleInput [] getAddSubtitles() {
         return this.AddSubtitles;
     }
 
     /**
-     * Set Add a set of subtitles. Maximum for a single media file is 16 subtitles. In the same request, the specified subtitle ID in AddSubtitles must be all different from those in DeleteSubtitleIds.
-     * @param AddSubtitles Add a set of subtitles. Maximum for a single media file is 16 subtitles. In the same request, the specified subtitle ID in AddSubtitles must be all different from those in DeleteSubtitleIds.
+     * Set 
+     * @param AddSubtitles 
      */
     public void setAddSubtitles(MediaSubtitleInput [] AddSubtitles) {
         this.AddSubtitles = AddSubtitles;
     }
 
     /**
-     * Get Unique identifier of subtitle to be deleted. In the same request, the specified subtitle id in AddSubtitles must be consistent with all different in DeleteSubtitleIds. 
-     * @return DeleteSubtitleIds Unique identifier of subtitle to be deleted. In the same request, the specified subtitle id in AddSubtitles must be consistent with all different in DeleteSubtitleIds.
+     * Get  
+     * @return DeleteSubtitleIds 
      */
     public String [] getDeleteSubtitleIds() {
         return this.DeleteSubtitleIds;
     }
 
     /**
-     * Set Unique identifier of subtitle to be deleted. In the same request, the specified subtitle id in AddSubtitles must be consistent with all different in DeleteSubtitleIds.
-     * @param DeleteSubtitleIds Unique identifier of subtitle to be deleted. In the same request, the specified subtitle id in AddSubtitles must be consistent with all different in DeleteSubtitleIds.
+     * Set 
+     * @param DeleteSubtitleIds 
      */
     public void setDeleteSubtitleIds(String [] DeleteSubtitleIds) {
         this.DeleteSubtitleIds = DeleteSubtitleIds;
     }
 
     /**
-     * Get Value 1 means clear all subtitle information of the media file. Other values meaningless.
-In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously. 
-     * @return ClearSubtitles Value 1 means clear all subtitle information of the media file. Other values meaningless.
-In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.
+     * Get  
+     * @return ClearSubtitles 
      */
     public Long getClearSubtitles() {
         return this.ClearSubtitles;
     }
 
     /**
-     * Set Value 1 means clear all subtitle information of the media file. Other values meaningless.
-In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.
-     * @param ClearSubtitles Value 1 means clear all subtitle information of the media file. Other values meaningless.
-In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.
+     * Set 
+     * @param ClearSubtitles 
      */
     public void setClearSubtitles(Long ClearSubtitles) {
         this.ClearSubtitles = ClearSubtitles;
+    }
+
+    /**
+     * Get  
+     * @return DeleteKnowledgeBases 
+     */
+    public String [] getDeleteKnowledgeBases() {
+        return this.DeleteKnowledgeBases;
+    }
+
+    /**
+     * Set 
+     * @param DeleteKnowledgeBases 
+     */
+    public void setDeleteKnowledgeBases(String [] DeleteKnowledgeBases) {
+        this.DeleteKnowledgeBases = DeleteKnowledgeBases;
+    }
+
+    /**
+     * Get  
+     * @return ClearKnowledgeBases 
+     */
+    public Long getClearKnowledgeBases() {
+        return this.ClearKnowledgeBases;
+    }
+
+    /**
+     * Set 
+     * @param ClearKnowledgeBases 
+     */
+    public void setClearKnowledgeBases(Long ClearKnowledgeBases) {
+        this.ClearKnowledgeBases = ClearKnowledgeBases;
     }
 
     public ModifyMediaInfoRequest() {
@@ -480,6 +511,15 @@ In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneousl
         if (source.ClearSubtitles != null) {
             this.ClearSubtitles = new Long(source.ClearSubtitles);
         }
+        if (source.DeleteKnowledgeBases != null) {
+            this.DeleteKnowledgeBases = new String[source.DeleteKnowledgeBases.length];
+            for (int i = 0; i < source.DeleteKnowledgeBases.length; i++) {
+                this.DeleteKnowledgeBases[i] = new String(source.DeleteKnowledgeBases[i]);
+            }
+        }
+        if (source.ClearKnowledgeBases != null) {
+            this.ClearKnowledgeBases = new Long(source.ClearKnowledgeBases);
+        }
     }
 
 
@@ -503,6 +543,8 @@ In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneousl
         this.setParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
         this.setParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
         this.setParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
+        this.setParamArraySimple(map, prefix + "DeleteKnowledgeBases.", this.DeleteKnowledgeBases);
+        this.setParamSimple(map, prefix + "ClearKnowledgeBases", this.ClearKnowledgeBases);
 
     }
 }

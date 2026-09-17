@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TimeRange extends AbstractModel {
 
     /**
-    * <li>After or at this time (start time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+    * 
     */
     @SerializedName("After")
     @Expose
     private String After;
 
     /**
-    * <li>Earlier than this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+    * 
     */
     @SerializedName("Before")
     @Expose
     private String Before;
 
     /**
-     * Get <li>After or at this time (start time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
-     * @return After <li>After or at this time (start time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Get  
+     * @return After 
      */
     public String getAfter() {
         return this.After;
     }
 
     /**
-     * Set <li>After or at this time (start time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-     * @param After <li>After or at this time (start time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Set 
+     * @param After 
      */
     public void setAfter(String After) {
         this.After = After;
     }
 
     /**
-     * Get <li>Earlier than this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
-     * @return Before <li>Earlier than this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Get  
+     * @return Before 
      */
     public String getBefore() {
         return this.Before;
     }
 
     /**
-     * Set <li>Earlier than this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-     * @param Before <li>Earlier than this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Set 
+     * @param Before 
      */
     public void setBefore(String Before) {
         this.Before = Before;

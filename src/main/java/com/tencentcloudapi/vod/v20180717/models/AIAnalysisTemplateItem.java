@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class AIAnalysisTemplateItem extends AbstractModel {
 
     /**
-    * Unique ID of intelligent analysis template.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Intelligent analysis template name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Intelligent analysis template description.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Intelligent Classification Task Control Parameters.
+    * 
     */
     @SerializedName("ClassificationConfigure")
     @Expose
     private ClassificationConfigureInfo ClassificationConfigure;
 
     /**
-    * Intelligent tag task control parameter.
+    * 
     */
     @SerializedName("TagConfigure")
     @Expose
     private TagConfigureInfo TagConfigure;
 
     /**
-    * Intelligent Cover Task Control Parameters.
+    * 
     */
     @SerializedName("CoverConfigure")
     @Expose
     private CoverConfigureInfo CoverConfigure;
 
     /**
-    * Intelligent frame tagging task control parameter.
+    * 
     */
     @SerializedName("FrameTagConfigure")
     @Expose
     private FrameTagConfigureInfo FrameTagConfigure;
 
     /**
-    * Control parameter of an intelligent highlight generating task.
+    * 
     */
     @SerializedName("HighlightConfigure")
     @Expose
     private HighlightsConfigureInfo HighlightConfigure;
 
     /**
-    * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Unique ID of intelligent analysis template. 
-     * @return Definition Unique ID of intelligent analysis template.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of intelligent analysis template.
-     * @param Definition Unique ID of intelligent analysis template.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Intelligent analysis template name. 
-     * @return Name Intelligent analysis template name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Intelligent analysis template name.
-     * @param Name Intelligent analysis template name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Intelligent analysis template description. 
-     * @return Comment Intelligent analysis template description.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Intelligent analysis template description.
-     * @param Comment Intelligent analysis template description.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Intelligent Classification Task Control Parameters. 
-     * @return ClassificationConfigure Intelligent Classification Task Control Parameters.
+     * Get  
+     * @return ClassificationConfigure 
      */
     public ClassificationConfigureInfo getClassificationConfigure() {
         return this.ClassificationConfigure;
     }
 
     /**
-     * Set Intelligent Classification Task Control Parameters.
-     * @param ClassificationConfigure Intelligent Classification Task Control Parameters.
+     * Set 
+     * @param ClassificationConfigure 
      */
     public void setClassificationConfigure(ClassificationConfigureInfo ClassificationConfigure) {
         this.ClassificationConfigure = ClassificationConfigure;
     }
 
     /**
-     * Get Intelligent tag task control parameter. 
-     * @return TagConfigure Intelligent tag task control parameter.
+     * Get  
+     * @return TagConfigure 
      */
     public TagConfigureInfo getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set Intelligent tag task control parameter.
-     * @param TagConfigure Intelligent tag task control parameter.
+     * Set 
+     * @param TagConfigure 
      */
     public void setTagConfigure(TagConfigureInfo TagConfigure) {
         this.TagConfigure = TagConfigure;
     }
 
     /**
-     * Get Intelligent Cover Task Control Parameters. 
-     * @return CoverConfigure Intelligent Cover Task Control Parameters.
+     * Get  
+     * @return CoverConfigure 
      */
     public CoverConfigureInfo getCoverConfigure() {
         return this.CoverConfigure;
     }
 
     /**
-     * Set Intelligent Cover Task Control Parameters.
-     * @param CoverConfigure Intelligent Cover Task Control Parameters.
+     * Set 
+     * @param CoverConfigure 
      */
     public void setCoverConfigure(CoverConfigureInfo CoverConfigure) {
         this.CoverConfigure = CoverConfigure;
     }
 
     /**
-     * Get Intelligent frame tagging task control parameter. 
-     * @return FrameTagConfigure Intelligent frame tagging task control parameter.
+     * Get  
+     * @return FrameTagConfigure 
      */
     public FrameTagConfigureInfo getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set Intelligent frame tagging task control parameter.
-     * @param FrameTagConfigure Intelligent frame tagging task control parameter.
+     * Set 
+     * @param FrameTagConfigure 
      */
     public void setFrameTagConfigure(FrameTagConfigureInfo FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;
     }
 
     /**
-     * Get Control parameter of an intelligent highlight generating task. 
-     * @return HighlightConfigure Control parameter of an intelligent highlight generating task.
+     * Get  
+     * @return HighlightConfigure 
      */
     public HighlightsConfigureInfo getHighlightConfigure() {
         return this.HighlightConfigure;
     }
 
     /**
-     * Set Control parameter of an intelligent highlight generating task.
-     * @param HighlightConfigure Control parameter of an intelligent highlight generating task.
+     * Set 
+     * @param HighlightConfigure 
      */
     public void setHighlightConfigure(HighlightsConfigureInfo HighlightConfigure) {
         this.HighlightConfigure = HighlightConfigure;
     }
 
     /**
-     * Get Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

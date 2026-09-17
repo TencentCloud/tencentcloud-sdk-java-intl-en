@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class Ipv6Access extends AbstractModel {
 
     /**
-    * Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+    * Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+     * Get Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+     * Set Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

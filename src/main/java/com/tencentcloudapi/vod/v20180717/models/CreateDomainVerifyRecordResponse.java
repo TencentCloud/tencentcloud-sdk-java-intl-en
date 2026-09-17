@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateDomainVerifyRecordResponse extends AbstractModel {
 
     /**
-    * DNS Verify Information
+    * 
     */
     @SerializedName("DNSVerifyInfo")
     @Expose
     private DNSVerifyInfo DNSVerifyInfo;
 
     /**
-    * File Verify Information
+    * 
     */
     @SerializedName("FileVerifyInfo")
     @Expose
@@ -45,32 +45,32 @@ public class CreateDomainVerifyRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get DNS Verify Information 
-     * @return DNSVerifyInfo DNS Verify Information
+     * Get  
+     * @return DNSVerifyInfo 
      */
     public DNSVerifyInfo getDNSVerifyInfo() {
         return this.DNSVerifyInfo;
     }
 
     /**
-     * Set DNS Verify Information
-     * @param DNSVerifyInfo DNS Verify Information
+     * Set 
+     * @param DNSVerifyInfo 
      */
     public void setDNSVerifyInfo(DNSVerifyInfo DNSVerifyInfo) {
         this.DNSVerifyInfo = DNSVerifyInfo;
     }
 
     /**
-     * Get File Verify Information 
-     * @return FileVerifyInfo File Verify Information
+     * Get  
+     * @return FileVerifyInfo 
      */
     public FileVerifyInfo getFileVerifyInfo() {
         return this.FileVerifyInfo;
     }
 
     /**
-     * Set File Verify Information
-     * @param FileVerifyInfo File Verify Information
+     * Set 
+     * @param FileVerifyInfo 
      */
     public void setFileVerifyInfo(FileVerifyInfo FileVerifyInfo) {
         this.FileVerifyInfo = FileVerifyInfo;

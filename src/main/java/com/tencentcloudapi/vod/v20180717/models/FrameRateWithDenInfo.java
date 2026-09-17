@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class FrameRateWithDenInfo extends AbstractModel {
 
     /**
-    * Frame interpolation frame rate control switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate.
+    * 
     */
     @SerializedName("FpsNum")
     @Expose
     private Long FpsNum;
 
     /**
-    * Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1.
+    * 
     */
     @SerializedName("FpsDen")
     @Expose
     private Long FpsDen;
 
     /**
-     * Get Frame interpolation frame rate control switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li> 
-     * @return Switch Frame interpolation frame rate control switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Frame interpolation frame rate control switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
-     * @param Switch Frame interpolation frame rate control switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate. 
-     * @return FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate.
+     * Get  
+     * @return FpsNum 
      */
     public Long getFpsNum() {
         return this.FpsNum;
     }
 
     /**
-     * Set Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate.
-     * @param FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate.
+     * Set 
+     * @param FpsNum 
      */
     public void setFpsNum(Long FpsNum) {
         this.FpsNum = FpsNum;
     }
 
     /**
-     * Get Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. 
-     * @return FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1.
+     * Get  
+     * @return FpsDen 
      */
     public Long getFpsDen() {
         return this.FpsDen;
     }
 
     /**
-     * Set Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1.
-     * @param FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1.
+     * Set 
+     * @param FpsDen 
      */
     public void setFpsDen(Long FpsDen) {
         this.FpsDen = FpsDen;

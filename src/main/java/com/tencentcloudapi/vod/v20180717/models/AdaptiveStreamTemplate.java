@@ -24,171 +24,161 @@ import java.util.HashMap;
 public class AdaptiveStreamTemplate extends AbstractModel {
 
     /**
-    * <p>Video parameter information.</p>
+    * 
     */
     @SerializedName("Video")
     @Expose
     private VideoTemplateInfo Video;
 
     /**
-    * <p>Audio parameter info.</p>
+    * 
     */
     @SerializedName("Audio")
     @Expose
     private AudioTemplateInfo Audio;
 
     /**
-    * <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+    * 
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+    * 
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfig TEHDConfig;
 
     /**
-    * <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * <p>Extended parameter.</p>
+    * 
     */
     @SerializedName("StdExtInfo")
     @Expose
     private String StdExtInfo;
 
     /**
-     * Get <p>Video parameter information.</p> 
-     * @return Video <p>Video parameter information.</p>
+     * Get  
+     * @return Video 
      */
     public VideoTemplateInfo getVideo() {
         return this.Video;
     }
 
     /**
-     * Set <p>Video parameter information.</p>
-     * @param Video <p>Video parameter information.</p>
+     * Set 
+     * @param Video 
      */
     public void setVideo(VideoTemplateInfo Video) {
         this.Video = Video;
     }
 
     /**
-     * Get <p>Audio parameter info.</p> 
-     * @return Audio <p>Audio parameter info.</p>
+     * Get  
+     * @return Audio 
      */
     public AudioTemplateInfo getAudio() {
         return this.Audio;
     }
 
     /**
-     * Set <p>Audio parameter info.</p>
-     * @param Audio <p>Audio parameter info.</p>
+     * Set 
+     * @param Audio 
      */
     public void setAudio(AudioTemplateInfo Audio) {
         this.Audio = Audio;
     }
 
     /**
-     * Get <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li> 
-     * @return RemoveAudio <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+     * Get  
+     * @return RemoveAudio 
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
-     * @param RemoveAudio <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+     * Set 
+     * @param RemoveAudio 
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li> 
-     * @return RemoveVideo <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+     * Get  
+     * @return RemoveVideo 
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
-     * @param RemoveVideo <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+     * Set 
+     * @param RemoveVideo 
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TEHDConfig <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TEHDConfig 
      */
     public TEHDConfig getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TEHDConfig <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TEHDConfig 
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnhanceConfig <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EnhanceConfig 
      */
     public EnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnhanceConfig <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EnhanceConfig 
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get <p>Extended parameter.</p> 
-     * @return StdExtInfo <p>Extended parameter.</p>
+     * Get  
+     * @return StdExtInfo 
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
     }
 
     /**
-     * Set <p>Extended parameter.</p>
-     * @param StdExtInfo <p>Extended parameter.</p>
+     * Set 
+     * @param StdExtInfo 
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

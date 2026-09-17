@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateAigcSubjectInput extends AbstractModel {
 
     /**
-    * <p>Subject name.</p>
+    * 
     */
     @SerializedName("SubjectName")
     @Expose
     private String SubjectName;
 
     /**
-    * <p>Subject image.</p>
+    * 
     */
     @SerializedName("SubjectImages")
     @Expose
     private String [] SubjectImages;
 
     /**
-    * <p>Main video.</p>
+    * 
     */
     @SerializedName("SubjectVideos")
     @Expose
     private String [] SubjectVideos;
 
     /**
-    * <p>Primary voice ID.</p>
+    * 
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-     * Get <p>Subject name.</p> 
-     * @return SubjectName <p>Subject name.</p>
+     * Get  
+     * @return SubjectName 
      */
     public String getSubjectName() {
         return this.SubjectName;
     }
 
     /**
-     * Set <p>Subject name.</p>
-     * @param SubjectName <p>Subject name.</p>
+     * Set 
+     * @param SubjectName 
      */
     public void setSubjectName(String SubjectName) {
         this.SubjectName = SubjectName;
     }
 
     /**
-     * Get <p>Subject image.</p> 
-     * @return SubjectImages <p>Subject image.</p>
+     * Get  
+     * @return SubjectImages 
      */
     public String [] getSubjectImages() {
         return this.SubjectImages;
     }
 
     /**
-     * Set <p>Subject image.</p>
-     * @param SubjectImages <p>Subject image.</p>
+     * Set 
+     * @param SubjectImages 
      */
     public void setSubjectImages(String [] SubjectImages) {
         this.SubjectImages = SubjectImages;
     }
 
     /**
-     * Get <p>Main video.</p> 
-     * @return SubjectVideos <p>Main video.</p>
+     * Get  
+     * @return SubjectVideos 
      */
     public String [] getSubjectVideos() {
         return this.SubjectVideos;
     }
 
     /**
-     * Set <p>Main video.</p>
-     * @param SubjectVideos <p>Main video.</p>
+     * Set 
+     * @param SubjectVideos 
      */
     public void setSubjectVideos(String [] SubjectVideos) {
         this.SubjectVideos = SubjectVideos;
     }
 
     /**
-     * Get <p>Primary voice ID.</p> 
-     * @return VoiceId <p>Primary voice ID.</p>
+     * Get  
+     * @return VoiceId 
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Primary voice ID.</p>
-     * @param VoiceId <p>Primary voice ID.</p>
+     * Set 
+     * @param VoiceId 
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;

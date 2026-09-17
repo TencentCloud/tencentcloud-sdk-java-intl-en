@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EnhanceMediaQualityResponse extends AbstractModel {
 
     /**
-    * Remaster task ID
+    * 
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class EnhanceMediaQualityResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Remaster task ID 
-     * @return TaskId Remaster task ID
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Remaster task ID
-     * @param TaskId Remaster task ID
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

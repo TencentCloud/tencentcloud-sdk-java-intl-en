@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeImageReviewUsageDataResponse extends AbstractModel {
 
     /**
-    * Image moderation stats show overview data of the number of moderations within a specified time range.
+    * 
     */
     @SerializedName("ImageReviewUsageDataSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeImageReviewUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Image moderation stats show overview data of the number of moderations within a specified time range. 
-     * @return ImageReviewUsageDataSet Image moderation stats show overview data of the number of moderations within a specified time range.
+     * Get  
+     * @return ImageReviewUsageDataSet 
      */
     public ImageReviewUsageDataItem [] getImageReviewUsageDataSet() {
         return this.ImageReviewUsageDataSet;
     }
 
     /**
-     * Set Image moderation stats show overview data of the number of moderations within a specified time range.
-     * @param ImageReviewUsageDataSet Image moderation stats show overview data of the number of moderations within a specified time range.
+     * Set 
+     * @param ImageReviewUsageDataSet 
      */
     public void setImageReviewUsageDataSet(ImageReviewUsageDataItem [] ImageReviewUsageDataSet) {
         this.ImageReviewUsageDataSet = ImageReviewUsageDataSet;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AiTryOnConfig extends AbstractModel {
 
     /**
-    * <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
+    * 
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
+    * 
     */
     @SerializedName("ClothesFileInfos")
     @Expose
     private SceneAigcImageTaskInputFileInfo [] ClothesFileInfos;
 
     /**
-    * <p>Dress up command Prompt.</p>
+    * 
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-     * Get <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul> 
-     * @return Model <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
+     * Get  
+     * @return Model 
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
-     * @param Model <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
+     * Set 
+     * @param Model 
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p> 
-     * @return ClothesFileInfos <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
+     * Get  
+     * @return ClothesFileInfos 
      */
     public SceneAigcImageTaskInputFileInfo [] getClothesFileInfos() {
         return this.ClothesFileInfos;
     }
 
     /**
-     * Set <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
-     * @param ClothesFileInfos <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
+     * Set 
+     * @param ClothesFileInfos 
      */
     public void setClothesFileInfos(SceneAigcImageTaskInputFileInfo [] ClothesFileInfos) {
         this.ClothesFileInfos = ClothesFileInfos;
     }
 
     /**
-     * Get <p>Dress up command Prompt.</p> 
-     * @return Prompt <p>Dress up command Prompt.</p>
+     * Get  
+     * @return Prompt 
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Dress up command Prompt.</p>
-     * @param Prompt <p>Dress up command Prompt.</p>
+     * Set 
+     * @param Prompt 
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;

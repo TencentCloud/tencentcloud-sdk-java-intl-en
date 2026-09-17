@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class ExtractBlindWatermarkTaskConfig extends AbstractModel {
 
     /**
-    * Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default.
+    * 
     */
     @SerializedName("SegmentDuration")
     @Expose
     private Long SegmentDuration;
 
     /**
-     * Get Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default. 
-     * @return SegmentDuration Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default.
+     * Get  
+     * @return SegmentDuration 
      */
     public Long getSegmentDuration() {
         return this.SegmentDuration;
     }
 
     /**
-     * Set Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default.
-     * @param SegmentDuration Valid when the watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
-If left blank, the segment duration is 5 seconds by default.
+     * Set 
+     * @param SegmentDuration 
      */
     public void setSegmentDuration(Long SegmentDuration) {
         this.SegmentDuration = SegmentDuration;

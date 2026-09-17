@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SnapshotByTimeOffsetTask2017 extends AbstractModel {
 
     /**
-    * Screencapturing task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Screenshot file ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Result information of screencapturing.
+    * 
     */
     @SerializedName("SnapshotInfoSet")
     @Expose
     private SnapshotByTimeOffset2017 [] SnapshotInfoSet;
 
     /**
-     * Get Screencapturing task ID. 
-     * @return TaskId Screencapturing task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Screencapturing task ID.
-     * @param TaskId Screencapturing task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Screenshot file ID. 
-     * @return FileId Screenshot file ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Screenshot file ID.
-     * @param FileId Screenshot file ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
-     * @return Definition screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param Definition screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Result information of screencapturing. 
-     * @return SnapshotInfoSet Result information of screencapturing.
+     * Get  
+     * @return SnapshotInfoSet 
      */
     public SnapshotByTimeOffset2017 [] getSnapshotInfoSet() {
         return this.SnapshotInfoSet;
     }
 
     /**
-     * Set Result information of screencapturing.
-     * @param SnapshotInfoSet Result information of screencapturing.
+     * Set 
+     * @param SnapshotInfoSet 
      */
     public void setSnapshotInfoSet(SnapshotByTimeOffset2017 [] SnapshotInfoSet) {
         this.SnapshotInfoSet = SnapshotInfoSet;

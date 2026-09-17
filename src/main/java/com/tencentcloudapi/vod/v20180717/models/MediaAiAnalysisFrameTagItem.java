@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagItem extends AbstractModel {
 
     /**
-    * Frame-specific tag name.
+    * 
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
-For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+    * 
     */
     @SerializedName("CategorySet")
     @Expose
     private String [] CategorySet;
 
     /**
-    * Confidence of intelligently generated frame-specific tag between 0 and 100.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Frame-specific tag name. 
-     * @return Tag Frame-specific tag name.
+     * Get  
+     * @return Tag 
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Frame-specific tag name.
-     * @param Tag Frame-specific tag name.
+     * Set 
+     * @param Tag 
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
-For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture". 
-     * @return CategorySet Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
-For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+     * Get  
+     * @return CategorySet 
      */
     public String [] getCategorySet() {
         return this.CategorySet;
     }
 
     /**
-     * Set Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
-For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
-     * @param CategorySet Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
-For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+     * Set 
+     * @param CategorySet 
      */
     public void setCategorySet(String [] CategorySet) {
         this.CategorySet = CategorySet;
     }
 
     /**
-     * Get Confidence of intelligently generated frame-specific tag between 0 and 100. 
-     * @return Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of intelligently generated frame-specific tag between 0 and 100.
-     * @param Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

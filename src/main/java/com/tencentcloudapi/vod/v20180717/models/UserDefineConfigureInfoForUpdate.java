@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UserDefineConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Parameters for custom facial recognition
+    * 
     */
     @SerializedName("FaceReviewInfo")
     @Expose
     private UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo;
 
     /**
-    * Parameters for custom ASR-based recognition
+    * 
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * Parameters for custom OCR-based recognition
+    * 
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Parameters for custom facial recognition 
-     * @return FaceReviewInfo Parameters for custom facial recognition
+     * Get  
+     * @return FaceReviewInfo 
      */
     public UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() {
         return this.FaceReviewInfo;
     }
 
     /**
-     * Set Parameters for custom facial recognition
-     * @param FaceReviewInfo Parameters for custom facial recognition
+     * Set 
+     * @param FaceReviewInfo 
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo) {
         this.FaceReviewInfo = FaceReviewInfo;
     }
 
     /**
-     * Get Parameters for custom ASR-based recognition 
-     * @return AsrReviewInfo Parameters for custom ASR-based recognition
+     * Get  
+     * @return AsrReviewInfo 
      */
     public UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Parameters for custom ASR-based recognition
-     * @param AsrReviewInfo Parameters for custom ASR-based recognition
+     * Set 
+     * @param AsrReviewInfo 
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Parameters for custom OCR-based recognition 
-     * @return OcrReviewInfo Parameters for custom OCR-based recognition
+     * Get  
+     * @return OcrReviewInfo 
      */
     public UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Parameters for custom OCR-based recognition
-     * @param OcrReviewInfo Parameters for custom OCR-based recognition
+     * Set 
+     * @param OcrReviewInfo 
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

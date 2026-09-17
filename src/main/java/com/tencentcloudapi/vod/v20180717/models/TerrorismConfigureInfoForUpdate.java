@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TerrorismConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Parameters for recognition of terrorism content in images
+    * 
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * Parameters for OCR-based recognition of terrorism content
+    * 
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Parameters for recognition of terrorism content in images 
-     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
+     * Get  
+     * @return ImgReviewInfo 
      */
     public TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Parameters for recognition of terrorism content in images
-     * @param ImgReviewInfo Parameters for recognition of terrorism content in images
+     * Set 
+     * @param ImgReviewInfo 
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Parameters for OCR-based recognition of terrorism content 
-     * @return OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+     * Get  
+     * @return OcrReviewInfo 
      */
     public TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Parameters for OCR-based recognition of terrorism content
-     * @param OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+     * Set 
+     * @param OcrReviewInfo 
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

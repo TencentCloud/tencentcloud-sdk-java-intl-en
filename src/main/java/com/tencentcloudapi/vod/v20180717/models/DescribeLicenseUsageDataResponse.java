@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLicenseUsageDataResponse extends AbstractModel {
 
     /**
-    * License query count stats show detailed data of the queried license.
+    * 
     */
     @SerializedName("LicenseUsageDataSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeLicenseUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get License query count stats show detailed data of the queried license. 
-     * @return LicenseUsageDataSet License query count stats show detailed data of the queried license.
+     * Get  
+     * @return LicenseUsageDataSet 
      */
     public LicenseUsageDataItem [] getLicenseUsageDataSet() {
         return this.LicenseUsageDataSet;
     }
 
     /**
-     * Set License query count stats show detailed data of the queried license.
-     * @param LicenseUsageDataSet License query count stats show detailed data of the queried license.
+     * Set 
+     * @param LicenseUsageDataSet 
      */
     public void setLicenseUsageDataSet(LicenseUsageDataItem [] LicenseUsageDataSet) {
         this.LicenseUsageDataSet = LicenseUsageDataSet;

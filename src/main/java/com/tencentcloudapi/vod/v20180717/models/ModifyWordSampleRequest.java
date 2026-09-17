@@ -24,132 +24,92 @@ import java.util.HashMap;
 public class ModifyWordSampleRequest extends AbstractModel {
 
     /**
-    * Keyword, length limit: 128 characters.
+    * 
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4.
+    * 
     */
     @SerializedName("Usages")
     @Expose
     private String [] Usages;
 
     /**
-    * Tag operation information.
+    * 
     */
     @SerializedName("TagOperationInfo")
     @Expose
     private AiSampleTagOperation TagOperationInfo;
 
     /**
-     * Get Keyword, length limit: 128 characters. 
-     * @return Keyword Keyword, length limit: 128 characters.
+     * Get  
+     * @return Keyword 
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keyword, length limit: 128 characters.
-     * @param Keyword Keyword, length limit: 128 characters.
+     * Set 
+     * @param Keyword 
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4. 
-     * @return Usages <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4.
+     * Get  
+     * @return Usages 
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4.
-     * @param Usages <b>Keyword application scenario, available values: </b>
-1. Recognition.Ocr: Perform content recognition using OCR.
-2. Recognition.Asr: Perform content recognition using audio recognition technology.
-3. Review.Ocr: Perform inappropriate content recognition using OCR.
-4. Review.Asr: Perform inappropriate content recognition using audio recognition technology.
-<b>Can be abbreviated as:</b>
-5. Recognition: Perform content recognition using OCR and audio recognition technology, equivalent to 1+2.
-6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
-7. All: Include all of the above, equivalent to 1+2+3+4.
+     * Set 
+     * @param Usages 
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
     }
 
     /**
-     * Get Tag operation information. 
-     * @return TagOperationInfo Tag operation information.
+     * Get  
+     * @return TagOperationInfo 
      */
     public AiSampleTagOperation getTagOperationInfo() {
         return this.TagOperationInfo;
     }
 
     /**
-     * Set Tag operation information.
-     * @param TagOperationInfo Tag operation information.
+     * Set 
+     * @param TagOperationInfo 
      */
     public void setTagOperationInfo(AiSampleTagOperation TagOperationInfo) {
         this.TagOperationInfo = TagOperationInfo;

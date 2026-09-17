@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel {
 
     /**
-    * <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+    * 
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+    * 
     */
     @SerializedName("Default")
     @Expose
     private String Default;
 
     /**
-    * <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+    * 
     */
     @SerializedName("AudioTrackIdx")
     @Expose
     private Long AudioTrackIdx;
 
     /**
-     * Get <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p> 
-     * @return FileId <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
-     * @param FileId <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p> 
-     * @return Name <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
-     * @param Name <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p> 
-     * @return Language <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+     * Get  
+     * @return Language 
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
-     * @param Language <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+     * Set 
+     * @param Language 
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li> 
-     * @return Default <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+     * Get  
+     * @return Default 
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
-     * @param Default <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+     * Set 
+     * @param Default 
      */
     public void setDefault(String Default) {
         this.Default = Default;
     }
 
     /**
-     * Get <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p> 
-     * @return AudioTrackIdx <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+     * Get  
+     * @return AudioTrackIdx 
      */
     public Long getAudioTrackIdx() {
         return this.AudioTrackIdx;
     }
 
     /**
-     * Set <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
-     * @param AudioTrackIdx <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+     * Set 
+     * @param AudioTrackIdx 
      */
     public void setAudioTrackIdx(Long AudioTrackIdx) {
         this.AudioTrackIdx = AudioTrackIdx;

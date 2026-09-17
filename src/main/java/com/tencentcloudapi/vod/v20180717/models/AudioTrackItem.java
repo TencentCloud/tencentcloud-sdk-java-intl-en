@@ -24,145 +24,115 @@ import java.util.HashMap;
 public class AudioTrackItem extends AbstractModel {
 
     /**
-    * Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+    * 
     */
     @SerializedName("SourceMedia")
     @Expose
     private String SourceMedia;
 
     /**
-    * Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+    * 
     */
     @SerializedName("SourceMediaStartTime")
     @Expose
     private Float SourceMediaStartTime;
 
     /**
-    * Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+    * 
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+    * 
     */
     @SerializedName("TargetDuration")
     @Expose
     private Float TargetDuration;
 
     /**
-    * Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AudioOperations")
     @Expose
     private AudioTransform [] AudioOperations;
 
     /**
-     * Get Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature). 
-     * @return SourceMedia Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+     * Get  
+     * @return SourceMedia 
      */
     public String getSourceMedia() {
         return this.SourceMedia;
     }
 
     /**
-     * Set Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
-     * @param SourceMedia Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+     * Set 
+     * @param SourceMedia 
      */
     public void setSourceMedia(String SourceMedia) {
         this.SourceMedia = SourceMedia;
     }
 
     /**
-     * Get Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material. 
-     * @return SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+     * Get  
+     * @return SourceMediaStartTime 
      */
     public Float getSourceMediaStartTime() {
         return this.SourceMediaStartTime;
     }
 
     /**
-     * Set Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
-     * @param SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+     * Set 
+     * @param SourceMediaStartTime 
      */
     public void setSourceMediaStartTime(Float SourceMediaStartTime) {
         this.SourceMediaStartTime = SourceMediaStartTime;
     }
 
     /**
-     * Get Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured. 
-     * @return Duration Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+     * Get  
+     * @return Duration 
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
-     * @param Duration Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+     * Set 
+     * @param Duration 
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li> 
-     * @return TargetDuration The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+     * Get  
+     * @return TargetDuration 
      */
     public Float getTargetDuration() {
         return this.TargetDuration;
     }
 
     /**
-     * Set The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
-     * @param TargetDuration The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+     * Set 
+     * @param TargetDuration 
      */
     public void setTargetDuration(Float TargetDuration) {
         this.TargetDuration = TargetDuration;
     }
 
     /**
-     * Get Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioOperations Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AudioOperations 
      */
     public AudioTransform [] getAudioOperations() {
         return this.AudioOperations;
     }
 
     /**
-     * Set Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioOperations Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AudioOperations 
      */
     public void setAudioOperations(AudioTransform [] AudioOperations) {
         this.AudioOperations = AudioOperations;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KnowledgeAnalysisResult extends AbstractModel {
 
     /**
-    * <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul>
+    * 
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * <p>Task output file collection</p>
+    * 
     */
     @SerializedName("File")
     @Expose
     private MPSOutputFileInfo File;
 
     /**
-     * Get <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul> 
-     * @return TaskType <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul>
+     * Get  
+     * @return TaskType 
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul>
-     * @param TaskType <p>Process task type</p><p>Enumeration value:</p><ul><li>AiAnalysis.DescriptionTask: Intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: Video understanding task</li><li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task</li></ul>
+     * Set 
+     * @param TaskType 
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get <p>Task output file collection</p> 
-     * @return File <p>Task output file collection</p>
+     * Get  
+     * @return File 
      */
     public MPSOutputFileInfo getFile() {
         return this.File;
     }
 
     /**
-     * Set <p>Task output file collection</p>
-     * @param File <p>Task output file collection</p>
+     * Set 
+     * @param File 
      */
     public void setFile(MPSOutputFileInfo File) {
         this.File = File;

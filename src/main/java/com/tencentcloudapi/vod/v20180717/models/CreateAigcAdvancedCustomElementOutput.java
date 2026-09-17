@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateAigcAdvancedCustomElementOutput extends AbstractModel {
 
     /**
-    * <p>Custom subject list.</p>
+    * 
     */
     @SerializedName("InfoList")
     @Expose
     private AdvancedElementInfo [] InfoList;
 
     /**
-     * Get <p>Custom subject list.</p> 
-     * @return InfoList <p>Custom subject list.</p>
+     * Get  
+     * @return InfoList 
      */
     public AdvancedElementInfo [] getInfoList() {
         return this.InfoList;
     }
 
     /**
-     * Set <p>Custom subject list.</p>
-     * @param InfoList <p>Custom subject list.</p>
+     * Set 
+     * @param InfoList 
      */
     public void setInfoList(AdvancedElementInfo [] InfoList) {
         this.InfoList = InfoList;

@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class VoiceConfigureInfo extends AbstractModel {
 
     /**
-    * Audio (mute, bass, pop) detection switch, optional values: 
-<li>ON: on; </li>
-<li>OFF: off. </li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Audio (mute, bass, pop) detection switch, optional values: 
-<li>ON: on; </li>
-<li>OFF: off. </li> 
-     * @return Switch Audio (mute, bass, pop) detection switch, optional values: 
-<li>ON: on; </li>
-<li>OFF: off. </li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Audio (mute, bass, pop) detection switch, optional values: 
-<li>ON: on; </li>
-<li>OFF: off. </li>
-     * @param Switch Audio (mute, bass, pop) detection switch, optional values: 
-<li>ON: on; </li>
-<li>OFF: off. </li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,76 +24,46 @@ import java.util.HashMap;
 public class ColorEnhanceInfo extends AbstractModel {
 
     /**
-    * Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li> 
-     * @return Switch Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-     * @param Switch Whether to enable color enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`. 
-     * @return Type The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
-     * @param Type The color enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`weak`</li>
-<li>`normal`</li>
-<li>`strong`</li>
-Default value: `weak`.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

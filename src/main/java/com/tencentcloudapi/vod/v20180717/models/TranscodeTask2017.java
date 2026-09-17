@@ -24,229 +24,184 @@ import java.util.HashMap;
 public class TranscodeTask2017 extends AbstractModel {
 
     /**
-    * Transcoding task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-    * Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("PlayInfoSet")
     @Expose
     private TranscodePlayInfo2017 [] PlayInfoSet;
 
     /**
-     * Get Transcoding task ID. 
-     * @return TaskId Transcoding task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Transcoding task ID.
-     * @param TaskId Transcoding task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileId ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileId ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileName Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileName 
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileName Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileName 
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Duration 
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Duration 
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Cover address.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoverUrl Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CoverUrl 
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverUrl Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CoverUrl 
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
     }
 
     /**
-     * Get Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PlayInfoSet Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return PlayInfoSet 
      */
     public TranscodePlayInfo2017 [] getPlayInfoSet() {
         return this.PlayInfoSet;
     }
 
     /**
-     * Set Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PlayInfoSet Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param PlayInfoSet 
      */
     public void setPlayInfoSet(TranscodePlayInfo2017 [] PlayInfoSet) {
         this.PlayInfoSet = PlayInfoSet;

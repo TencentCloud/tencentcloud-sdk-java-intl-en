@@ -24,391 +24,276 @@ import java.util.HashMap;
 public class ReviewAudioVideoSegmentItem extends AbstractModel {
 
     /**
-    * The start time offset (seconds) of the segment.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * The end time offset (seconds) of the segment.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * The confidence score of the segment.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
+    * 
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
+    * 
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
+    * 
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+    * 
     */
     @SerializedName("Form")
     @Expose
     private String Form;
 
     /**
-    * The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
+    * 
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
+    * 
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+    * 
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-    * The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * 
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get The start time offset (seconds) of the segment. 
-     * @return StartTimeOffset The start time offset (seconds) of the segment.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set The start time offset (seconds) of the segment.
-     * @param StartTimeOffset The start time offset (seconds) of the segment.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get The end time offset (seconds) of the segment. 
-     * @return EndTimeOffset The end time offset (seconds) of the segment.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set The end time offset (seconds) of the segment.
-     * @param EndTimeOffset The end time offset (seconds) of the segment.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get The confidence score of the segment. 
-     * @return Confidence The confidence score of the segment.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score of the segment.
-     * @param Confidence The confidence score of the segment.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li> 
-     * @return Suggestion The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
+     * Get  
+     * @return Suggestion 
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
-     * @param Suggestion The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
+     * Set 
+     * @param Suggestion 
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li> 
-     * @return Label The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
+     * Get  
+     * @return Label 
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
-     * @param Label The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
+     * Set 
+     * @param Label 
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li> 
-     * @return SubLabel The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
+     * Get  
+     * @return SubLabel 
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
-     * @param SubLabel The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
+     * Set 
+     * @param SubLabel 
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li> 
-     * @return Form The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+     * Get  
+     * @return Form 
      */
     public String getForm() {
         return this.Form;
     }
 
     /**
-     * Set The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
-     * @param Form The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+     * Set 
+     * @param Form 
      */
     public void setForm(String Form) {
         this.Form = Form;
     }
 
     /**
-     * Get The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently. 
-     * @return AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
+     * Get  
+     * @return AreaCoordSet 
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
-     * @param AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
+     * Set 
+     * @param AreaCoordSet 
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`. 
-     * @return Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
+     * Get  
+     * @return Text 
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
-     * @param Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
+     * Set 
+     * @param Text 
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`. 
-     * @return KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+     * Get  
+     * @return KeywordSet 
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
-     * @param KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+     * Set 
+     * @param KeywordSet 
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;
     }
 
     /**
-     * Get The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`). 
-     * @return Url The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
-     * @param Url The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get  
+     * @return PicUrlExpireTime 
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set 
+     * @param PicUrlExpireTime 
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

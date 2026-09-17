@@ -24,378 +24,253 @@ import java.util.HashMap;
 public class VideoTrackItem extends AbstractModel {
 
     /**
-    * Source of media material for video segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files.</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+    * 
     */
     @SerializedName("SourceMedia")
     @Expose
     private String SourceMedia;
 
     /**
-    * Start time of video segment in material file in seconds. Default value: 0.
+    * 
     */
     @SerializedName("SourceMediaStartTime")
     @Expose
     private Float SourceMediaStartTime;
 
     /**
-    * Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
+    * 
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * The target video duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+    * 
     */
     @SerializedName("TargetDuration")
     @Expose
     private Float TargetDuration;
 
     /**
-    * Video origin position. Valid values:
-<li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
-Default value: Center.
+    * 
     */
     @SerializedName("CoordinateOrigin")
     @Expose
     private String CoordinateOrigin;
 
     /**
-    * The horizontal position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the video segment will be at the position of the specified percentage of the canvas width; for example, `10%` means that `XPos` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `XPos` of the video segment will be in px; for example, `100px` means that `XPos` is 100 px.</li>
-Default value: 0 px.
+    * 
     */
     @SerializedName("XPos")
     @Expose
     private String XPos;
 
     /**
-    * The vertical position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the video segment will be at the position of the specified percentage of the canvas height; for example, `10%` means that `YPos` is 10% of the canvas height.</li>
-<li>If the string ends in px, the `YPos` of the video segment will be in px; for example, `100px` means that `YPos` is 100 px.</li>
-Default value: 0 px.
+    * 
     */
     @SerializedName("YPos")
     @Expose
     private String YPos;
 
     /**
-    * Video segment width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the video segment will be the specified percentage of the canvas width; for example, `10%` means that `Width` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `Width` of the video segment will be in px; for example, `100px` means that `Width` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+    * 
     */
     @SerializedName("Width")
     @Expose
     private String Width;
 
     /**
-    * Video segment height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the video segment will be the specified percentage of the canvas height; for example, `10%` means that `Height` is 10% of the canvas height;
-</li><li>If the string ends in px, the `Height` of the video segment will be in px; for example, `100px` means that `Height` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+    * 
     */
     @SerializedName("Height")
     @Expose
     private String Height;
 
     /**
-    * Operation on audio such as muting.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AudioOperations")
     @Expose
     private AudioTransform [] AudioOperations;
 
     /**
-    * Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ImageOperations")
     @Expose
     private ImageTransform [] ImageOperations;
 
     /**
-     * Get Source of media material for video segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files.</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature). 
-     * @return SourceMedia Source of media material for video segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files.</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+     * Get  
+     * @return SourceMedia 
      */
     public String getSourceMedia() {
         return this.SourceMedia;
     }
 
     /**
-     * Set Source of media material for video segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files.</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
-     * @param SourceMedia Source of media material for video segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files.</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+     * Set 
+     * @param SourceMedia 
      */
     public void setSourceMedia(String SourceMedia) {
         this.SourceMedia = SourceMedia;
     }
 
     /**
-     * Get Start time of video segment in material file in seconds. Default value: 0. 
-     * @return SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
+     * Get  
+     * @return SourceMediaStartTime 
      */
     public Float getSourceMediaStartTime() {
         return this.SourceMediaStartTime;
     }
 
     /**
-     * Set Start time of video segment in material file in seconds. Default value: 0.
-     * @param SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
+     * Set 
+     * @param SourceMediaStartTime 
      */
     public void setSourceMediaStartTime(Float SourceMediaStartTime) {
         this.SourceMediaStartTime = SourceMediaStartTime;
     }
 
     /**
-     * Get Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0. 
-     * @return Duration Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
+     * Get  
+     * @return Duration 
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
-     * @param Duration Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
+     * Set 
+     * @param Duration 
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get The target video duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li> 
-     * @return TargetDuration The target video duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+     * Get  
+     * @return TargetDuration 
      */
     public Float getTargetDuration() {
         return this.TargetDuration;
     }
 
     /**
-     * Set The target video duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
-     * @param TargetDuration The target video duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+     * Set 
+     * @param TargetDuration 
      */
     public void setTargetDuration(Float TargetDuration) {
         this.TargetDuration = TargetDuration;
     }
 
     /**
-     * Get Video origin position. Valid values:
-<li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
-Default value: Center. 
-     * @return CoordinateOrigin Video origin position. Valid values:
-<li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
-Default value: Center.
+     * Get  
+     * @return CoordinateOrigin 
      */
     public String getCoordinateOrigin() {
         return this.CoordinateOrigin;
     }
 
     /**
-     * Set Video origin position. Valid values:
-<li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
-Default value: Center.
-     * @param CoordinateOrigin Video origin position. Valid values:
-<li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
-Default value: Center.
+     * Set 
+     * @param CoordinateOrigin 
      */
     public void setCoordinateOrigin(String CoordinateOrigin) {
         this.CoordinateOrigin = CoordinateOrigin;
     }
 
     /**
-     * Get The horizontal position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the video segment will be at the position of the specified percentage of the canvas width; for example, `10%` means that `XPos` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `XPos` of the video segment will be in px; for example, `100px` means that `XPos` is 100 px.</li>
-Default value: 0 px. 
-     * @return XPos The horizontal position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the video segment will be at the position of the specified percentage of the canvas width; for example, `10%` means that `XPos` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `XPos` of the video segment will be in px; for example, `100px` means that `XPos` is 100 px.</li>
-Default value: 0 px.
+     * Get  
+     * @return XPos 
      */
     public String getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set The horizontal position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the video segment will be at the position of the specified percentage of the canvas width; for example, `10%` means that `XPos` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `XPos` of the video segment will be in px; for example, `100px` means that `XPos` is 100 px.</li>
-Default value: 0 px.
-     * @param XPos The horizontal position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the video segment will be at the position of the specified percentage of the canvas width; for example, `10%` means that `XPos` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `XPos` of the video segment will be in px; for example, `100px` means that `XPos` is 100 px.</li>
-Default value: 0 px.
+     * Set 
+     * @param XPos 
      */
     public void setXPos(String XPos) {
         this.XPos = XPos;
     }
 
     /**
-     * Get The vertical position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the video segment will be at the position of the specified percentage of the canvas height; for example, `10%` means that `YPos` is 10% of the canvas height.</li>
-<li>If the string ends in px, the `YPos` of the video segment will be in px; for example, `100px` means that `YPos` is 100 px.</li>
-Default value: 0 px. 
-     * @return YPos The vertical position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the video segment will be at the position of the specified percentage of the canvas height; for example, `10%` means that `YPos` is 10% of the canvas height.</li>
-<li>If the string ends in px, the `YPos` of the video segment will be in px; for example, `100px` means that `YPos` is 100 px.</li>
-Default value: 0 px.
+     * Get  
+     * @return YPos 
      */
     public String getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set The vertical position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the video segment will be at the position of the specified percentage of the canvas height; for example, `10%` means that `YPos` is 10% of the canvas height.</li>
-<li>If the string ends in px, the `YPos` of the video segment will be in px; for example, `100px` means that `YPos` is 100 px.</li>
-Default value: 0 px.
-     * @param YPos The vertical position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the video segment will be at the position of the specified percentage of the canvas height; for example, `10%` means that `YPos` is 10% of the canvas height.</li>
-<li>If the string ends in px, the `YPos` of the video segment will be in px; for example, `100px` means that `YPos` is 100 px.</li>
-Default value: 0 px.
+     * Set 
+     * @param YPos 
      */
     public void setYPos(String YPos) {
         this.YPos = YPos;
     }
 
     /**
-     * Get Video segment width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the video segment will be the specified percentage of the canvas width; for example, `10%` means that `Width` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `Width` of the video segment will be in px; for example, `100px` means that `Width` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li> 
-     * @return Width Video segment width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the video segment will be the specified percentage of the canvas width; for example, `10%` means that `Width` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `Width` of the video segment will be in px; for example, `100px` means that `Width` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+     * Get  
+     * @return Width 
      */
     public String getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Video segment width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the video segment will be the specified percentage of the canvas width; for example, `10%` means that `Width` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `Width` of the video segment will be in px; for example, `100px` means that `Width` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
-     * @param Width Video segment width. % and px formats are supported:
-<li>If the string ends in %, the `Width` of the video segment will be the specified percentage of the canvas width; for example, `10%` means that `Width` is 10% of the canvas width.</li>
-<li>If the string ends in px, the `Width` of the video segment will be in px; for example, `100px` means that `Width` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+     * Set 
+     * @param Width 
      */
     public void setWidth(String Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Video segment height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the video segment will be the specified percentage of the canvas height; for example, `10%` means that `Height` is 10% of the canvas height;
-</li><li>If the string ends in px, the `Height` of the video segment will be in px; for example, `100px` means that `Height` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li> 
-     * @return Height Video segment height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the video segment will be the specified percentage of the canvas height; for example, `10%` means that `Height` is 10% of the canvas height;
-</li><li>If the string ends in px, the `Height` of the video segment will be in px; for example, `100px` means that `Height` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+     * Get  
+     * @return Height 
      */
     public String getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Video segment height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the video segment will be the specified percentage of the canvas height; for example, `10%` means that `Height` is 10% of the canvas height;
-</li><li>If the string ends in px, the `Height` of the video segment will be in px; for example, `100px` means that `Height` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
-     * @param Height Video segment height. % and px formats are supported:
-<li>If the string ends in %, the `Height` of the video segment will be the specified percentage of the canvas height; for example, `10%` means that `Height` is 10% of the canvas height;
-</li><li>If the string ends in px, the `Height` of the video segment will be in px; for example, `100px` means that `Height` is 100 px.</li>
-<li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
-<li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
-<li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+     * Set 
+     * @param Height 
      */
     public void setHeight(String Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Operation on audio such as muting.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioOperations Operation on audio such as muting.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AudioOperations 
      */
     public AudioTransform [] getAudioOperations() {
         return this.AudioOperations;
     }
 
     /**
-     * Set Operation on audio such as muting.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioOperations Operation on audio such as muting.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AudioOperations 
      */
     public void setAudioOperations(AudioTransform [] AudioOperations) {
         this.AudioOperations = AudioOperations;
     }
 
     /**
-     * Get Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ImageOperations Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ImageOperations 
      */
     public ImageTransform [] getImageOperations() {
         return this.ImageOperations;
     }
 
     /**
-     * Set Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImageOperations Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ImageOperations 
      */
     public void setImageOperations(ImageTransform [] ImageOperations) {
         this.ImageOperations = ImageOperations;

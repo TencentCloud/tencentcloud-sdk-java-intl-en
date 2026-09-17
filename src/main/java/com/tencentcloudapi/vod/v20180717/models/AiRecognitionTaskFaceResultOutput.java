@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class AiRecognitionTaskFaceResultOutput extends AbstractModel {
 
     /**
-    * Intelligent face recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+    * 
     */
     @SerializedName("ResultSet")
     @Expose
     private AiRecognitionTaskFaceResultItem [] ResultSet;
 
     /**
-    * URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+    * 
     */
     @SerializedName("ResultSetFileUrl")
     @Expose
     private String ResultSetFileUrl;
 
     /**
-    * Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+    * 
     */
     @SerializedName("ResultSetFileUrlExpireTime")
     @Expose
     private String ResultSetFileUrlExpireTime;
 
     /**
-     * Get Intelligent face recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`. 
-     * @return ResultSet Intelligent face recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+     * Get  
+     * @return ResultSet 
      */
     public AiRecognitionTaskFaceResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set Intelligent face recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
-     * @param ResultSet Intelligent face recognition result set
-<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+     * Set 
+     * @param ResultSet 
      */
     public void setResultSet(AiRecognitionTaskFaceResultItem [] ResultSet) {
         this.ResultSet = ResultSet;
     }
 
     /**
-     * Get URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently. 
-     * @return ResultSetFileUrl URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     * Get  
+     * @return ResultSetFileUrl 
      */
     public String getResultSetFileUrl() {
         return this.ResultSetFileUrl;
     }
 
     /**
-     * Set URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
-     * @param ResultSetFileUrl URL to the file of the intelligent face recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     * Set 
+     * @param ResultSetFileUrl 
      */
     public void setResultSetFileUrl(String ResultSetFileUrl) {
         this.ResultSetFileUrl = ResultSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732) 
-     * @return ResultSetFileUrlExpireTime Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * Get  
+     * @return ResultSetFileUrlExpireTime 
      */
     public String getResultSetFileUrlExpireTime() {
         return this.ResultSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-     * @param ResultSetFileUrlExpireTime Expiration time of the URL to the file of the intelligent face recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * Set 
+     * @param ResultSetFileUrlExpireTime 
      */
     public void setResultSetFileUrlExpireTime(String ResultSetFileUrlExpireTime) {
         this.ResultSetFileUrlExpireTime = ResultSetFileUrlExpireTime;

@@ -24,92 +24,112 @@ import java.util.HashMap;
 public class ForceRedirect extends AbstractModel {
 
     /**
-    * Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+    * Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+    * Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
     */
     @SerializedName("RedirectType")
     @Expose
     private String RedirectType;
 
     /**
-    * Status code returned for forced redirect Supports 301, 302.
+    * 
     */
     @SerializedName("RedirectStatusCode")
     @Expose
     private Long RedirectStatusCode;
 
     /**
-    * Whether to return the newly added header during force redirection.
+    * 
     */
     @SerializedName("CarryHeaders")
     @Expose
     private String CarryHeaders;
 
     /**
-     * Get Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Get Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Set Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li> 
-     * @return RedirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+     * Get Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li> 
+     * @return RedirectType Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
      */
     public String getRedirectType() {
         return this.RedirectType;
     }
 
     /**
-     * Set Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
-     * @param RedirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+     * Set Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
+     * @param RedirectType Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
      */
     public void setRedirectType(String RedirectType) {
         this.RedirectType = RedirectType;
     }
 
     /**
-     * Get Status code returned for forced redirect Supports 301, 302. 
-     * @return RedirectStatusCode Status code returned for forced redirect Supports 301, 302.
+     * Get  
+     * @return RedirectStatusCode 
      */
     public Long getRedirectStatusCode() {
         return this.RedirectStatusCode;
     }
 
     /**
-     * Set Status code returned for forced redirect Supports 301, 302.
-     * @param RedirectStatusCode Status code returned for forced redirect Supports 301, 302.
+     * Set 
+     * @param RedirectStatusCode 
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {
         this.RedirectStatusCode = RedirectStatusCode;
     }
 
     /**
-     * Get Whether to return the newly added header during force redirection. 
-     * @return CarryHeaders Whether to return the newly added header during force redirection.
+     * Get  
+     * @return CarryHeaders 
      */
     public String getCarryHeaders() {
         return this.CarryHeaders;
     }
 
     /**
-     * Set Whether to return the newly added header during force redirection.
-     * @param CarryHeaders Whether to return the newly added header during force redirection.
+     * Set 
+     * @param CarryHeaders 
      */
     public void setCarryHeaders(String CarryHeaders) {
         this.CarryHeaders = CarryHeaders;

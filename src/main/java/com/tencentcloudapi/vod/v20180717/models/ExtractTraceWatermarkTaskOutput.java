@@ -24,38 +24,38 @@ import java.util.HashMap;
 public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
 
     /**
-    * Player's ID, represented in hexadecimal, 6 digits in total.
+    * 
     */
     @SerializedName("Uv")
     @Expose
     private String Uv;
 
     /**
-    * This parameter has been deprecated.
+    * 
     */
     @SerializedName("Uid")
     @Expose
     private String Uid;
 
     /**
-     * Get Player's ID, represented in hexadecimal, 6 digits in total. 
-     * @return Uv Player's ID, represented in hexadecimal, 6 digits in total.
+     * Get  
+     * @return Uv 
      */
     public String getUv() {
         return this.Uv;
     }
 
     /**
-     * Set Player's ID, represented in hexadecimal, 6 digits in total.
-     * @param Uv Player's ID, represented in hexadecimal, 6 digits in total.
+     * Set 
+     * @param Uv 
      */
     public void setUv(String Uv) {
         this.Uv = Uv;
     }
 
     /**
-     * Get This parameter has been deprecated. 
-     * @return Uid This parameter has been deprecated.
+     * Get  
+     * @return Uid 
      * @deprecated
      */
     @Deprecated
@@ -64,8 +64,8 @@ public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set This parameter has been deprecated.
-     * @param Uid This parameter has been deprecated.
+     * Set 
+     * @param Uid 
      * @deprecated
      */
     @Deprecated

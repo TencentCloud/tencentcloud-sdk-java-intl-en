@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel {
 
     /**
-    * Video URL.
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Video name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Custom video ID.
+    * 
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get Video URL. 
-     * @return Url Video URL.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Video URL.
-     * @param Url Video URL.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Video name. 
-     * @return Name Video name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Video name.
-     * @param Name Video name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Custom video ID. 
-     * @return Id Custom video ID.
+     * Get  
+     * @return Id 
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Custom video ID.
-     * @param Id Custom video ID.
+     * Set 
+     * @param Id 
      */
     public void setId(String Id) {
         this.Id = Id;

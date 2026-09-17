@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ReduceMediaBitrateAdaptiveDynamicStreamingResult extends AbstractModel {
 
     /**
-    * The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * The error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * The input of an adaptive bitrate task.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private AdaptiveDynamicStreamingTaskInput Input;
 
     /**
-    * The output of an adaptive bitrate task.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AdaptiveDynamicStreamingInfoItem Output;
 
     /**
-     * Get The task status. Valid values: PROCESSING, SUCCESS, FAIL. 
-     * @return Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing). 
-     * @return ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
-     * @param ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get The error message. 
-     * @return Message The error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set The error message.
-     * @param Message The error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get The input of an adaptive bitrate task. 
-     * @return Input The input of an adaptive bitrate task.
+     * Get  
+     * @return Input 
      */
     public AdaptiveDynamicStreamingTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set The input of an adaptive bitrate task.
-     * @param Input The input of an adaptive bitrate task.
+     * Set 
+     * @param Input 
      */
     public void setInput(AdaptiveDynamicStreamingTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get The output of an adaptive bitrate task. 
-     * @return Output The output of an adaptive bitrate task.
+     * Get  
+     * @return Output 
      */
     public AdaptiveDynamicStreamingInfoItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output of an adaptive bitrate task.
-     * @param Output The output of an adaptive bitrate task.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AdaptiveDynamicStreamingInfoItem Output) {
         this.Output = Output;

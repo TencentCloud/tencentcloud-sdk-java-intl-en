@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FileDeleteTask extends AbstractModel {
 
     /**
-    * List of IDs of deleted files.
+    * 
     */
     @SerializedName("FileIdSet")
     @Expose
     private String [] FileIdSet;
 
     /**
-    * The information of the files deleted.
+    * 
     */
     @SerializedName("FileDeleteResultInfo")
     @Expose
     private FileDeleteResultItem [] FileDeleteResultInfo;
 
     /**
-     * Get List of IDs of deleted files. 
-     * @return FileIdSet List of IDs of deleted files.
+     * Get  
+     * @return FileIdSet 
      */
     public String [] getFileIdSet() {
         return this.FileIdSet;
     }
 
     /**
-     * Set List of IDs of deleted files.
-     * @param FileIdSet List of IDs of deleted files.
+     * Set 
+     * @param FileIdSet 
      */
     public void setFileIdSet(String [] FileIdSet) {
         this.FileIdSet = FileIdSet;
     }
 
     /**
-     * Get The information of the files deleted. 
-     * @return FileDeleteResultInfo The information of the files deleted.
+     * Get  
+     * @return FileDeleteResultInfo 
      */
     public FileDeleteResultItem [] getFileDeleteResultInfo() {
         return this.FileDeleteResultInfo;
     }
 
     /**
-     * Set The information of the files deleted.
-     * @param FileDeleteResultInfo The information of the files deleted.
+     * Set 
+     * @param FileDeleteResultInfo 
      */
     public void setFileDeleteResultInfo(FileDeleteResultItem [] FileDeleteResultInfo) {
         this.FileDeleteResultInfo = FileDeleteResultInfo;

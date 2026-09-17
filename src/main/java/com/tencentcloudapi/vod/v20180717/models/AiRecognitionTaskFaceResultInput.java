@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskFaceResultInput extends AbstractModel {
 
     /**
-    * Face recognition template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Face recognition template ID. 
-     * @return Definition Face recognition template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Face recognition template ID.
-     * @param Definition Face recognition template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -24,161 +24,207 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * Instance ID list for filtering by instance ID
+    * <p>Instance ID list for filtering by instance ID</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Instance name, supports fuzzy matching
+    * <p>Instance name, supports fuzzy matching.</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Availability zone code for filtering instances in the specified availability zone
+    * <p>Availability zone code for filtering instances in the specified availability zone</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
+    * <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String [] InstanceStatus;
 
     /**
-    * Public IPv4 address list, used for filtering instances by public IP address
+    * <p>Public network ID.</p>
+    */
+    @SerializedName("PublicNetworkId")
+    @Expose
+    private String PublicNetworkId;
+
+    /**
+    * <p>VPC ID.</p>
+    */
+    @SerializedName("PrivateNetworkId")
+    @Expose
+    private String PrivateNetworkId;
+
+    /**
+    * <p>Public IPv4 address list, used for filtering instances by public IP address</p>
     */
     @SerializedName("PublicIps")
     @Expose
     private String [] PublicIps;
 
     /**
-    * Offset. Default value: 0
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. Default 20. Maximum 100.
+    * <p>Number of returned results. Default 20. Maximum 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Instance ID list for filtering by instance ID 
-     * @return InstanceIds Instance ID list for filtering by instance ID
+     * Get <p>Instance ID list for filtering by instance ID</p> 
+     * @return InstanceIds <p>Instance ID list for filtering by instance ID</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID list for filtering by instance ID
-     * @param InstanceIds Instance ID list for filtering by instance ID
+     * Set <p>Instance ID list for filtering by instance ID</p>
+     * @param InstanceIds <p>Instance ID list for filtering by instance ID</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Instance name, supports fuzzy matching 
-     * @return InstanceName Instance name, supports fuzzy matching
+     * Get <p>Instance name, supports fuzzy matching.</p> 
+     * @return InstanceName <p>Instance name, supports fuzzy matching.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name, supports fuzzy matching
-     * @param InstanceName Instance name, supports fuzzy matching
+     * Set <p>Instance name, supports fuzzy matching.</p>
+     * @param InstanceName <p>Instance name, supports fuzzy matching.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Availability zone code for filtering instances in the specified availability zone 
-     * @return Zone Availability zone code for filtering instances in the specified availability zone
+     * Get <p>Availability zone code for filtering instances in the specified availability zone</p> 
+     * @return Zone <p>Availability zone code for filtering instances in the specified availability zone</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone code for filtering instances in the specified availability zone
-     * @param Zone Availability zone code for filtering instances in the specified availability zone
+     * Set <p>Availability zone code for filtering instances in the specified availability zone</p>
+     * @param Zone <p>Availability zone code for filtering instances in the specified availability zone</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error. 
-     * @return InstanceStatus Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
+     * Get <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p> 
+     * @return InstanceStatus <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
      */
     public String [] getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
-     * @param InstanceStatus Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
+     * Set <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
+     * @param InstanceStatus <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
      */
     public void setInstanceStatus(String [] InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get Public IPv4 address list, used for filtering instances by public IP address 
-     * @return PublicIps Public IPv4 address list, used for filtering instances by public IP address
+     * Get <p>Public network ID.</p> 
+     * @return PublicNetworkId <p>Public network ID.</p>
+     */
+    public String getPublicNetworkId() {
+        return this.PublicNetworkId;
+    }
+
+    /**
+     * Set <p>Public network ID.</p>
+     * @param PublicNetworkId <p>Public network ID.</p>
+     */
+    public void setPublicNetworkId(String PublicNetworkId) {
+        this.PublicNetworkId = PublicNetworkId;
+    }
+
+    /**
+     * Get <p>VPC ID.</p> 
+     * @return PrivateNetworkId <p>VPC ID.</p>
+     */
+    public String getPrivateNetworkId() {
+        return this.PrivateNetworkId;
+    }
+
+    /**
+     * Set <p>VPC ID.</p>
+     * @param PrivateNetworkId <p>VPC ID.</p>
+     */
+    public void setPrivateNetworkId(String PrivateNetworkId) {
+        this.PrivateNetworkId = PrivateNetworkId;
+    }
+
+    /**
+     * Get <p>Public IPv4 address list, used for filtering instances by public IP address</p> 
+     * @return PublicIps <p>Public IPv4 address list, used for filtering instances by public IP address</p>
      */
     public String [] getPublicIps() {
         return this.PublicIps;
     }
 
     /**
-     * Set Public IPv4 address list, used for filtering instances by public IP address
-     * @param PublicIps Public IPv4 address list, used for filtering instances by public IP address
+     * Set <p>Public IPv4 address list, used for filtering instances by public IP address</p>
+     * @param PublicIps <p>Public IPv4 address list, used for filtering instances by public IP address</p>
      */
     public void setPublicIps(String [] PublicIps) {
         this.PublicIps = PublicIps;
     }
 
     /**
-     * Get Offset. Default value: 0 
-     * @return Offset Offset. Default value: 0
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0
-     * @param Offset Offset. Default value: 0
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. Default 20. Maximum 100. 
-     * @return Limit Number of returned results. Default 20. Maximum 100.
+     * Get <p>Number of returned results. Default 20. Maximum 100.</p> 
+     * @return Limit <p>Number of returned results. Default 20. Maximum 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default 20. Maximum 100.
-     * @param Limit Number of returned results. Default 20. Maximum 100.
+     * Set <p>Number of returned results. Default 20. Maximum 100.</p>
+     * @param Limit <p>Number of returned results. Default 20. Maximum 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -210,6 +256,12 @@ public class DescribeInstancesRequest extends AbstractModel {
                 this.InstanceStatus[i] = new String(source.InstanceStatus[i]);
             }
         }
+        if (source.PublicNetworkId != null) {
+            this.PublicNetworkId = new String(source.PublicNetworkId);
+        }
+        if (source.PrivateNetworkId != null) {
+            this.PrivateNetworkId = new String(source.PrivateNetworkId);
+        }
         if (source.PublicIps != null) {
             this.PublicIps = new String[source.PublicIps.length];
             for (int i = 0; i < source.PublicIps.length; i++) {
@@ -233,6 +285,8 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArraySimple(map, prefix + "InstanceStatus.", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "PublicNetworkId", this.PublicNetworkId);
+        this.setParamSimple(map, prefix + "PrivateNetworkId", this.PrivateNetworkId);
         this.setParamArraySimple(map, prefix + "PublicIps.", this.PublicIps);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class MediaKeyFrameDescInfo extends AbstractModel {
 
     /**
-    * Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("KeyFrameDescSet")
     @Expose
     private MediaKeyFrameDescItem [] KeyFrameDescSet;
 
     /**
-     * Get Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeyFrameDescSet Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return KeyFrameDescSet 
      */
     public MediaKeyFrameDescItem [] getKeyFrameDescSet() {
         return this.KeyFrameDescSet;
     }
 
     /**
-     * Set Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeyFrameDescSet Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param KeyFrameDescSet 
      */
     public void setKeyFrameDescSet(MediaKeyFrameDescItem [] KeyFrameDescSet) {
         this.KeyFrameDescSet = KeyFrameDescSet;

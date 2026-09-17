@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class MediaSnapshotByTimeOffsetItem extends AbstractModel {
 
     /**
-    * Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("PicInfoSet")
     @Expose
     private MediaSnapshotByTimePicInfoItem [] PicInfoSet;
 
     /**
-     * Get Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return PicInfoSet 
      */
     public MediaSnapshotByTimePicInfoItem [] getPicInfoSet() {
         return this.PicInfoSet;
     }
 
     /**
-     * Set Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param PicInfoSet 
      */
     public void setPicInfoSet(MediaSnapshotByTimePicInfoItem [] PicInfoSet) {
         this.PicInfoSet = PicInfoSet;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateLLMComprehendTemplateRequest extends AbstractModel {
 
     /**
-    * <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
+    * 
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * <p>Segment summary parsing configuration</p>
+    * 
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummary Summary;
 
     /**
-    * <p>Text transcription parsing configuration</p>
+    * 
     */
     @SerializedName("Asr")
     @Expose
     private LLMComprehendAsr Asr;
 
     /**
-    * <p>Face identification configuration</p>
+    * 
     */
     @SerializedName("FaceRecognition")
     @Expose
     private LLMComprehendFaceRecognition FaceRecognition;
 
     /**
-     * Get <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul> 
-     * @return Level <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
+     * Get  
+     * @return Level 
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
-     * @param Level <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
+     * Set 
+     * @param Level 
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Large model comprehend template name. The length cannot exceed 64 characters.</p> 
-     * @return Name <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
-     * @param Name <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p> 
-     * @return Comment <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
-     * @param Comment <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get <p>Segment summary parsing configuration</p> 
-     * @return Summary <p>Segment summary parsing configuration</p>
+     * Get  
+     * @return Summary 
      */
     public LLMComprehendSummary getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set <p>Segment summary parsing configuration</p>
-     * @param Summary <p>Segment summary parsing configuration</p>
+     * Set 
+     * @param Summary 
      */
     public void setSummary(LLMComprehendSummary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get <p>Text transcription parsing configuration</p> 
-     * @return Asr <p>Text transcription parsing configuration</p>
+     * Get  
+     * @return Asr 
      */
     public LLMComprehendAsr getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set <p>Text transcription parsing configuration</p>
-     * @param Asr <p>Text transcription parsing configuration</p>
+     * Set 
+     * @param Asr 
      */
     public void setAsr(LLMComprehendAsr Asr) {
         this.Asr = Asr;
     }
 
     /**
-     * Get <p>Face identification configuration</p> 
-     * @return FaceRecognition <p>Face identification configuration</p>
+     * Get  
+     * @return FaceRecognition 
      */
     public LLMComprehendFaceRecognition getFaceRecognition() {
         return this.FaceRecognition;
     }
 
     /**
-     * Set <p>Face identification configuration</p>
-     * @param FaceRecognition <p>Face identification configuration</p>
+     * Set 
+     * @param FaceRecognition 
      */
     public void setFaceRecognition(LLMComprehendFaceRecognition FaceRecognition) {
         this.FaceRecognition = FaceRecognition;

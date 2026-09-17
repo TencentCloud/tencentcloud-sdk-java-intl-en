@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class ReviewImageResponse extends AbstractModel {
 
     /**
-    * The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+    * 
     */
     @SerializedName("ReviewResultSet")
     @Expose
     private ContentReviewResult [] ReviewResultSet;
 
     /**
-    * The image moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MediaReviewResult")
     @Expose
@@ -46,8 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font> 
-     * @return ReviewResultSet The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+     * Get  
+     * @return ReviewResultSet 
      * @deprecated
      */
     @Deprecated
@@ -56,8 +55,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
-     * @param ReviewResultSet The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+     * Set 
+     * @param ReviewResultSet 
      * @deprecated
      */
     @Deprecated
@@ -66,20 +65,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The image moderation result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MediaReviewResult The image moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MediaReviewResult 
      */
     public ReviewImageResult getMediaReviewResult() {
         return this.MediaReviewResult;
     }
 
     /**
-     * Set The image moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaReviewResult The image moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MediaReviewResult 
      */
     public void setMediaReviewResult(ReviewImageResult MediaReviewResult) {
         this.MediaReviewResult = MediaReviewResult;

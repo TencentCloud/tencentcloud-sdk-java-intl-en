@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
-    * <p>Adaptive bitrate streaming template ID.</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+    * 
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * <p>Traceable watermark.</p>
+    * 
     */
     @SerializedName("TraceWatermark")
     @Expose
     private TraceWatermarkInput TraceWatermark;
 
     /**
-    * <p>Copyright watermark.</p>
+    * 
     */
     @SerializedName("CopyRightWatermark")
     @Expose
     private CopyRightWatermarkInput CopyRightWatermark;
 
     /**
-    * <p>Digital watermark.</p>
+    * 
     */
     @SerializedName("BlindWatermark")
     @Expose
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
+    * 
     */
     @SerializedName("SubtitleSet")
     @Expose
     private String [] SubtitleSet;
 
     /**
-    * <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+    * 
     */
     @SerializedName("SubtitleInfoSet")
     @Expose
     private SubtitleInfoInput [] SubtitleInfoSet;
 
     /**
-    * <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+    * 
     */
     @SerializedName("DrmInfo")
     @Expose
     private ThirdPartyDrmInfo DrmInfo;
 
     /**
-     * Get <p>Adaptive bitrate streaming template ID.</p> 
-     * @return Definition <p>Adaptive bitrate streaming template ID.</p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Adaptive bitrate streaming template ID.</p>
-     * @param Definition <p>Adaptive bitrate streaming template ID.</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Watermark list. Up to 10 image or text watermarks are supported.</p> 
-     * @return WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * Get  
+     * @return WatermarkSet 
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
-     * @param WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * Set 
+     * @param WatermarkSet 
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
     }
 
     /**
-     * Get <p>Traceable watermark.</p> 
-     * @return TraceWatermark <p>Traceable watermark.</p>
+     * Get  
+     * @return TraceWatermark 
      */
     public TraceWatermarkInput getTraceWatermark() {
         return this.TraceWatermark;
     }
 
     /**
-     * Set <p>Traceable watermark.</p>
-     * @param TraceWatermark <p>Traceable watermark.</p>
+     * Set 
+     * @param TraceWatermark 
      */
     public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
         this.TraceWatermark = TraceWatermark;
     }
 
     /**
-     * Get <p>Copyright watermark.</p> 
-     * @return CopyRightWatermark <p>Copyright watermark.</p>
+     * Get  
+     * @return CopyRightWatermark 
      */
     public CopyRightWatermarkInput getCopyRightWatermark() {
         return this.CopyRightWatermark;
     }
 
     /**
-     * Set <p>Copyright watermark.</p>
-     * @param CopyRightWatermark <p>Copyright watermark.</p>
+     * Set 
+     * @param CopyRightWatermark 
      */
     public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
         this.CopyRightWatermark = CopyRightWatermark;
     }
 
     /**
-     * Get <p>Digital watermark.</p> 
-     * @return BlindWatermark <p>Digital watermark.</p>
+     * Get  
+     * @return BlindWatermark 
      */
     public BlindWatermarkInput getBlindWatermark() {
         return this.BlindWatermark;
     }
 
     /**
-     * Set <p>Digital watermark.</p>
-     * @param BlindWatermark <p>Digital watermark.</p>
+     * Set 
+     * @param BlindWatermark 
      */
     public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
         this.BlindWatermark = BlindWatermark;
     }
 
     /**
-     * Get <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p> 
-     * @return SubtitleSet <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
+     * Get  
+     * @return SubtitleSet 
      */
     public String [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
-     * @param SubtitleSet <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
+     * Set 
+     * @param SubtitleSet 
      */
     public void setSubtitleSet(String [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;
     }
 
     /**
-     * Get <p>List of subtitle suppression information. A maximum of 2 are supported.</p> 
-     * @return SubtitleInfoSet <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+     * Get  
+     * @return SubtitleInfoSet 
      */
     public SubtitleInfoInput [] getSubtitleInfoSet() {
         return this.SubtitleInfoSet;
     }
 
     /**
-     * Set <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
-     * @param SubtitleInfoSet <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+     * Set 
+     * @param SubtitleInfoSet 
      */
     public void setSubtitleInfoSet(SubtitleInfoInput [] SubtitleInfoSet) {
         this.SubtitleInfoSet = SubtitleInfoSet;
     }
 
     /**
-     * Get <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p> 
-     * @return DrmInfo <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+     * Get  
+     * @return DrmInfo 
      */
     public ThirdPartyDrmInfo getDrmInfo() {
         return this.DrmInfo;
     }
 
     /**
-     * Set <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
-     * @param DrmInfo <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+     * Set 
+     * @param DrmInfo 
      */
     public void setDrmInfo(ThirdPartyDrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;

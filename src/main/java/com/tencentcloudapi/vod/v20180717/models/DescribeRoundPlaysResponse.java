@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeRoundPlaysResponse extends AbstractModel {
 
     /**
-    * The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The details of the playlist.
+    * 
     */
     @SerializedName("RoundPlaySet")
     @Expose
     private RoundPlayInfo [] RoundPlaySet;
 
     /**
-    * Scrolling identifier. if a request does not return all the data entries, this field indicates the id of the next entry. if this field is empty, there is no more data.
+    * 
     */
     @SerializedName("ScrollToken")
     @Expose
@@ -52,8 +52,8 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter. 
-     * @return TotalCount The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
+     * Get  
+     * @return TotalCount 
      * @deprecated
      */
     @Deprecated
@@ -62,8 +62,8 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     }
 
     /**
-     * Set The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
-     * @param TotalCount The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
+     * Set 
+     * @param TotalCount 
      * @deprecated
      */
     @Deprecated
@@ -72,32 +72,32 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     }
 
     /**
-     * Get The details of the playlist. 
-     * @return RoundPlaySet The details of the playlist.
+     * Get  
+     * @return RoundPlaySet 
      */
     public RoundPlayInfo [] getRoundPlaySet() {
         return this.RoundPlaySet;
     }
 
     /**
-     * Set The details of the playlist.
-     * @param RoundPlaySet The details of the playlist.
+     * Set 
+     * @param RoundPlaySet 
      */
     public void setRoundPlaySet(RoundPlayInfo [] RoundPlaySet) {
         this.RoundPlaySet = RoundPlaySet;
     }
 
     /**
-     * Get Scrolling identifier. if a request does not return all the data entries, this field indicates the id of the next entry. if this field is empty, there is no more data. 
-     * @return ScrollToken Scrolling identifier. if a request does not return all the data entries, this field indicates the id of the next entry. if this field is empty, there is no more data.
+     * Get  
+     * @return ScrollToken 
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set Scrolling identifier. if a request does not return all the data entries, this field indicates the id of the next entry. if this field is empty, there is no more data.
-     * @param ScrollToken Scrolling identifier. if a request does not return all the data entries, this field indicates the id of the next entry. if this field is empty, there is no more data.
+     * Set 
+     * @param ScrollToken 
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

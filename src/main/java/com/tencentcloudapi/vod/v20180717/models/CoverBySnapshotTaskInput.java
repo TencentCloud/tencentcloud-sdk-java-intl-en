@@ -24,117 +24,92 @@ import java.util.HashMap;
 public class CoverBySnapshotTaskInput extends AbstractModel {
 
     /**
-    * Time point screencapturing template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li>
+    * 
     */
     @SerializedName("PositionType")
     @Expose
     private String PositionType;
 
     /**
-    * Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
+    * 
     */
     @SerializedName("PositionValue")
     @Expose
     private Float PositionValue;
 
     /**
-    * List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-     * Get Time point screencapturing template ID. 
-     * @return Definition Time point screencapturing template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Time point screencapturing template ID.
-     * @param Definition Time point screencapturing template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li> 
-     * @return PositionType Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li>
+     * Get  
+     * @return PositionType 
      */
     public String getPositionType() {
         return this.PositionType;
     }
 
     /**
-     * Set Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li>
-     * @param PositionType Screencapturing mode. Valid values:
-<li>Time: screencaptures by time point</li>
-<li>Percent: screencaptures by percentage</li>
+     * Set 
+     * @param PositionType 
      */
     public void setPositionType(String PositionType) {
         this.PositionType = PositionType;
     }
 
     /**
-     * Get Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li> 
-     * @return PositionValue Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
+     * Get  
+     * @return PositionValue 
      */
     public Float getPositionValue() {
         return this.PositionValue;
     }
 
     /**
-     * Set Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
-     * @param PositionValue Screenshot position:
-<li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-<li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
+     * Set 
+     * @param PositionValue 
      */
     public void setPositionValue(Float PositionValue) {
         this.PositionValue = PositionValue;
     }
 
     /**
-     * Get List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WatermarkSet 
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WatermarkSet 
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;

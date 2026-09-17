@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SourceLayout extends AbstractModel {
 
     /**
-    * 
+    * Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
     */
     @SerializedName("LeftOffset")
     @Expose
     private Long LeftOffset;
 
     /**
-    * 
+    * The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
     */
     @SerializedName("RightOffset")
     @Expose
     private Long RightOffset;
 
     /**
-    * 
+    * Offset percentage of bottom margin, range 0-50
     */
     @SerializedName("BottomOffset")
     @Expose
     private Long BottomOffset;
 
     /**
-     * Get  
-     * @return LeftOffset 
+     * Get Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100 
+     * @return LeftOffset Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
      */
     public Long getLeftOffset() {
         return this.LeftOffset;
     }
 
     /**
-     * Set 
-     * @param LeftOffset 
+     * Set Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+     * @param LeftOffset Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
      */
     public void setLeftOffset(Long LeftOffset) {
         this.LeftOffset = LeftOffset;
     }
 
     /**
-     * Get  
-     * @return RightOffset 
+     * Get The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100 
+     * @return RightOffset The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
      */
     public Long getRightOffset() {
         return this.RightOffset;
     }
 
     /**
-     * Set 
-     * @param RightOffset 
+     * Set The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+     * @param RightOffset The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
      */
     public void setRightOffset(Long RightOffset) {
         this.RightOffset = RightOffset;
     }
 
     /**
-     * Get  
-     * @return BottomOffset 
+     * Get Offset percentage of bottom margin, range 0-50 
+     * @return BottomOffset Offset percentage of bottom margin, range 0-50
      */
     public Long getBottomOffset() {
         return this.BottomOffset;
     }
 
     /**
-     * Set 
-     * @param BottomOffset 
+     * Set Offset percentage of bottom margin, range 0-50
+     * @param BottomOffset Offset percentage of bottom margin, range 0-50
      */
     public void setBottomOffset(Long BottomOffset) {
         this.BottomOffset = BottomOffset;

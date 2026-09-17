@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCLSLogsetResponse extends AbstractModel {
 
     /**
-    * Log Set ID.
+    * 
     */
     @SerializedName("LogsetId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCLSLogsetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Log Set ID. 
-     * @return LogsetId Log Set ID.
+     * Get  
+     * @return LogsetId 
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Log Set ID.
-     * @param LogsetId Log Set ID.
+     * Set 
+     * @param LogsetId 
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

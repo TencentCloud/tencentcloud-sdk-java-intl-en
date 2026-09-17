@@ -52,14 +52,14 @@ public class AdBreakSetting extends AbstractModel {
     private LSqueezeSetting LSqueezeSetting;
 
     /**
-    * 
+    * Picture in picture configuration
     */
     @SerializedName("PipSetting")
     @Expose
     private PipSetting PipSetting;
 
     /**
-    * 
+    * Circular setting
     */
     @SerializedName("BorderFrameSetting")
     @Expose
@@ -130,32 +130,32 @@ public class AdBreakSetting extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return PipSetting 
+     * Get Picture in picture configuration 
+     * @return PipSetting Picture in picture configuration
      */
     public PipSetting getPipSetting() {
         return this.PipSetting;
     }
 
     /**
-     * Set 
-     * @param PipSetting 
+     * Set Picture in picture configuration
+     * @param PipSetting Picture in picture configuration
      */
     public void setPipSetting(PipSetting PipSetting) {
         this.PipSetting = PipSetting;
     }
 
     /**
-     * Get  
-     * @return BorderFrameSetting 
+     * Get Circular setting 
+     * @return BorderFrameSetting Circular setting
      */
     public BorderFrameSetting getBorderFrameSetting() {
         return this.BorderFrameSetting;
     }
 
     /**
-     * Set 
-     * @param BorderFrameSetting 
+     * Set Circular setting
+     * @param BorderFrameSetting Circular setting
      */
     public void setBorderFrameSetting(BorderFrameSetting BorderFrameSetting) {
         this.BorderFrameSetting = BorderFrameSetting;

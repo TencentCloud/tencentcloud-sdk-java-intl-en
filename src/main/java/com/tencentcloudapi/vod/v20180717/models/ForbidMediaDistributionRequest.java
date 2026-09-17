@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ForbidMediaDistributionRequest extends AbstractModel {
 
     /**
-    * Media file list, up to 20 entries are submittable each time.
+    * 
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * forbid: block, recover: unblock.
+    * 
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Media file list, up to 20 entries are submittable each time. 
-     * @return FileIds Media file list, up to 20 entries are submittable each time.
+     * Get  
+     * @return FileIds 
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set Media file list, up to 20 entries are submittable each time.
-     * @param FileIds Media file list, up to 20 entries are submittable each time.
+     * Set 
+     * @param FileIds 
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get forbid: block, recover: unblock. 
-     * @return Operation forbid: block, recover: unblock.
+     * Get  
+     * @return Operation 
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set forbid: block, recover: unblock.
-     * @param Operation forbid: block, recover: unblock.
+     * Set 
+     * @param Operation 
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

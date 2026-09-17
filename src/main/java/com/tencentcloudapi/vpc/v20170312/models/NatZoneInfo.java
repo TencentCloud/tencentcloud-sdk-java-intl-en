@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetWxNFCResultRequest extends AbstractModel {
+public class NatZoneInfo extends AbstractModel {
 
     /**
-    * <p>Unique identifier ID returned by the frontend NFC SDK</p>
+    * AZ name.
     */
-    @SerializedName("NFCToken")
+    @SerializedName("Zone")
     @Expose
-    private String NFCToken;
+    private String Zone;
 
     /**
-     * Get <p>Unique identifier ID returned by the frontend NFC SDK</p> 
-     * @return NFCToken <p>Unique identifier ID returned by the frontend NFC SDK</p>
+    * AZ ID.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
+     * Get AZ name. 
+     * @return Zone AZ name.
      */
-    public String getNFCToken() {
-        return this.NFCToken;
+    public String getZone() {
+        return this.Zone;
     }
 
     /**
-     * Set <p>Unique identifier ID returned by the frontend NFC SDK</p>
-     * @param NFCToken <p>Unique identifier ID returned by the frontend NFC SDK</p>
+     * Set AZ name.
+     * @param Zone AZ name.
      */
-    public void setNFCToken(String NFCToken) {
-        this.NFCToken = NFCToken;
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
-    public GetWxNFCResultRequest() {
+    /**
+     * Get AZ ID. 
+     * @return ZoneId AZ ID.
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set AZ ID.
+     * @param ZoneId AZ ID.
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    public NatZoneInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetWxNFCResultRequest(GetWxNFCResultRequest source) {
-        if (source.NFCToken != null) {
-            this.NFCToken = new String(source.NFCToken);
+    public NatZoneInfo(NatZoneInfo source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
         }
     }
 
@@ -64,7 +90,8 @@ public class GetWxNFCResultRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NFCToken", this.NFCToken);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

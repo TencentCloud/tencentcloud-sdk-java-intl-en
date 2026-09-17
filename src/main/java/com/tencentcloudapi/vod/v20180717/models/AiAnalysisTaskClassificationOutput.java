@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class AiAnalysisTaskClassificationOutput extends AbstractModel {
 
     /**
-    * List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
+    * 
     */
     @SerializedName("ClassificationSet")
     @Expose
     private MediaAiAnalysisClassificationItem [] ClassificationSet;
 
     /**
-    * URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
+    * 
     */
     @SerializedName("ClassificationSetFileUrl")
     @Expose
     private String ClassificationSetFileUrl;
 
     /**
-    * Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    * 
     */
     @SerializedName("ClassificationSetFileUrlExpireTime")
     @Expose
     private String ClassificationSetFileUrlExpireTime;
 
     /**
-     * Get List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`. 
-     * @return ClassificationSet List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
+     * Get  
+     * @return ClassificationSet 
      */
     public MediaAiAnalysisClassificationItem [] getClassificationSet() {
         return this.ClassificationSet;
     }
 
     /**
-     * Set List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
-     * @param ClassificationSet List of intelligently generated video categories
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
+     * Set 
+     * @param ClassificationSet 
      */
     public void setClassificationSet(MediaAiAnalysisClassificationItem [] ClassificationSet) {
         this.ClassificationSet = ClassificationSet;
     }
 
     /**
-     * Get URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`. 
-     * @return ClassificationSetFileUrl URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
+     * Get  
+     * @return ClassificationSetFileUrl 
      */
     public String getClassificationSetFileUrl() {
         return this.ClassificationSetFileUrl;
     }
 
     /**
-     * Set URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
-     * @param ClassificationSetFileUrl URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
+     * Set 
+     * @param ClassificationSetFileUrl 
      */
     public void setClassificationSetFileUrl(String ClassificationSetFileUrl) {
         this.ClassificationSetFileUrl = ClassificationSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
-     * @return ClassificationSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Get  
+     * @return ClassificationSetFileUrlExpireTime 
      */
     public String getClassificationSetFileUrlExpireTime() {
         return this.ClassificationSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-     * @param ClassificationSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Set 
+     * @param ClassificationSetFileUrlExpireTime 
      */
     public void setClassificationSetFileUrlExpireTime(String ClassificationSetFileUrlExpireTime) {
         this.ClassificationSetFileUrlExpireTime = ClassificationSetFileUrlExpireTime;

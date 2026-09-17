@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStorageRegionsResponse extends AbstractModel {
 
     /**
-    * Storage region information list.
+    * 
     */
     @SerializedName("StorageRegionInfos")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStorageRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Storage region information list. 
-     * @return StorageRegionInfos Storage region information list.
+     * Get  
+     * @return StorageRegionInfos 
      */
     public StorageRegionInfo [] getStorageRegionInfos() {
         return this.StorageRegionInfos;
     }
 
     /**
-     * Set Storage region information list.
-     * @param StorageRegionInfos Storage region information list.
+     * Set 
+     * @param StorageRegionInfos 
      */
     public void setStorageRegionInfos(StorageRegionInfo [] StorageRegionInfos) {
         this.StorageRegionInfos = StorageRegionInfos;

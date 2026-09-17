@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcCustomElementResponse extends AbstractModel {
 
     /**
-    * Subject ID. Need to record the returned subject ID yourself.
+    * 
     */
     @SerializedName("ElementId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAigcCustomElementResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Subject ID. Need to record the returned subject ID yourself. 
-     * @return ElementId Subject ID. Need to record the returned subject ID yourself.
+     * Get  
+     * @return ElementId 
      */
     public String getElementId() {
         return this.ElementId;
     }
 
     /**
-     * Set Subject ID. Need to record the returned subject ID yourself.
-     * @param ElementId Subject ID. Need to record the returned subject ID yourself.
+     * Set 
+     * @param ElementId 
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;

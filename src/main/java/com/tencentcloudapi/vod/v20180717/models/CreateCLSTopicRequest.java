@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateCLSTopicRequest extends AbstractModel {
 
     /**
-    * Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+    * 
     */
     @SerializedName("CLSRegion")
     @Expose
     private String CLSRegion;
 
     /**
-    * Log topic name.
+    * 
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Log Set ID.
+    * 
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-     * Get Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li> 
-     * @return CLSRegion Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * Get  
+     * @return CLSRegion 
      */
     public String getCLSRegion() {
         return this.CLSRegion;
     }
 
     /**
-     * Set Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
-     * @param CLSRegion Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * Set 
+     * @param CLSRegion 
      */
     public void setCLSRegion(String CLSRegion) {
         this.CLSRegion = CLSRegion;
     }
 
     /**
-     * Get Log topic name. 
-     * @return TopicName Log topic name.
+     * Get  
+     * @return TopicName 
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Log topic name.
-     * @param TopicName Log topic name.
+     * Set 
+     * @param TopicName 
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Log Set ID. 
-     * @return LogsetId Log Set ID.
+     * Get  
+     * @return LogsetId 
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Log Set ID.
-     * @param LogsetId Log Set ID.
+     * Set 
+     * @param LogsetId 
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

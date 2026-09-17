@@ -24,148 +24,138 @@ import java.util.HashMap;
 public class StorageStatData extends AbstractModel {
 
     /**
-    * VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+    * 
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Current total storage capacity in bytes.
+    * 
     */
     @SerializedName("TotalStorage")
     @Expose
     private Long TotalStorage;
 
     /**
-    * Current STANDARD_IA storage capacity in bytes.
+    * 
     */
     @SerializedName("InfrequentStorage")
     @Expose
     private Long InfrequentStorage;
 
     /**
-    * Current STANDARD storage capacity in bytes.
+    * 
     */
     @SerializedName("StandardStorage")
     @Expose
     private Long StandardStorage;
 
     /**
-    * Current ARCHIVE storage usage in bytes
+    * 
     */
     @SerializedName("ArchiveStorage")
     @Expose
     private Long ArchiveStorage;
 
     /**
-    * Current DEEP ARCHIVE storage usage in bytes
+    * 
     */
     @SerializedName("DeepArchiveStorage")
     @Expose
     private Long DeepArchiveStorage;
 
     /**
-     * Get VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li> 
-     * @return Area VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+     * Get  
+     * @return Area 
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-     * @param Area VOD storage billing region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+     * Set 
+     * @param Area 
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Current total storage capacity in bytes. 
-     * @return TotalStorage Current total storage capacity in bytes.
+     * Get  
+     * @return TotalStorage 
      */
     public Long getTotalStorage() {
         return this.TotalStorage;
     }
 
     /**
-     * Set Current total storage capacity in bytes.
-     * @param TotalStorage Current total storage capacity in bytes.
+     * Set 
+     * @param TotalStorage 
      */
     public void setTotalStorage(Long TotalStorage) {
         this.TotalStorage = TotalStorage;
     }
 
     /**
-     * Get Current STANDARD_IA storage capacity in bytes. 
-     * @return InfrequentStorage Current STANDARD_IA storage capacity in bytes.
+     * Get  
+     * @return InfrequentStorage 
      */
     public Long getInfrequentStorage() {
         return this.InfrequentStorage;
     }
 
     /**
-     * Set Current STANDARD_IA storage capacity in bytes.
-     * @param InfrequentStorage Current STANDARD_IA storage capacity in bytes.
+     * Set 
+     * @param InfrequentStorage 
      */
     public void setInfrequentStorage(Long InfrequentStorage) {
         this.InfrequentStorage = InfrequentStorage;
     }
 
     /**
-     * Get Current STANDARD storage capacity in bytes. 
-     * @return StandardStorage Current STANDARD storage capacity in bytes.
+     * Get  
+     * @return StandardStorage 
      */
     public Long getStandardStorage() {
         return this.StandardStorage;
     }
 
     /**
-     * Set Current STANDARD storage capacity in bytes.
-     * @param StandardStorage Current STANDARD storage capacity in bytes.
+     * Set 
+     * @param StandardStorage 
      */
     public void setStandardStorage(Long StandardStorage) {
         this.StandardStorage = StandardStorage;
     }
 
     /**
-     * Get Current ARCHIVE storage usage in bytes 
-     * @return ArchiveStorage Current ARCHIVE storage usage in bytes
+     * Get  
+     * @return ArchiveStorage 
      */
     public Long getArchiveStorage() {
         return this.ArchiveStorage;
     }
 
     /**
-     * Set Current ARCHIVE storage usage in bytes
-     * @param ArchiveStorage Current ARCHIVE storage usage in bytes
+     * Set 
+     * @param ArchiveStorage 
      */
     public void setArchiveStorage(Long ArchiveStorage) {
         this.ArchiveStorage = ArchiveStorage;
     }
 
     /**
-     * Get Current DEEP ARCHIVE storage usage in bytes 
-     * @return DeepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
+     * Get  
+     * @return DeepArchiveStorage 
      */
     public Long getDeepArchiveStorage() {
         return this.DeepArchiveStorage;
     }
 
     /**
-     * Set Current DEEP ARCHIVE storage usage in bytes
-     * @param DeepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
+     * Set 
+     * @param DeepArchiveStorage 
      */
     public void setDeepArchiveStorage(Long DeepArchiveStorage) {
         this.DeepArchiveStorage = DeepArchiveStorage;

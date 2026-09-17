@@ -24,92 +24,138 @@ import java.util.HashMap;
 public class ImportMediaKnowledgeTask extends AbstractModel {
 
     /**
-    * Task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+    * 
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+    * 
+    */
+    @SerializedName("Input")
+    @Expose
+    private ImportMediaKnowledgeTaskInput Input;
+
+    /**
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. 0 indicates success, other values indicate failure.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li> 
-     * @return Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * Get  
+     * @return FileId 
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 
+     * @param FileId 
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get  
+     * @return Input 
+     */
+    public ImportMediaKnowledgeTaskInput getInput() {
+        return this.Input;
+    }
+
+    /**
+     * Set 
+     * @param Input 
+     */
+    public void setInput(ImportMediaKnowledgeTaskInput Input) {
+        this.Input = Input;
+    }
+
+    /**
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-     * @param Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. 0 indicates success, other values indicate failure. 
-     * @return ErrCode Error code. 0 indicates success, other values indicate failure.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0 indicates success, other values indicate failure.
-     * @param ErrCode Error code. 0 indicates success, other values indicate failure.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -125,6 +171,12 @@ public class ImportMediaKnowledgeTask extends AbstractModel {
     public ImportMediaKnowledgeTask(ImportMediaKnowledgeTask source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Input != null) {
+            this.Input = new ImportMediaKnowledgeTaskInput(source.Input);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -143,6 +195,8 @@ public class ImportMediaKnowledgeTask extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);

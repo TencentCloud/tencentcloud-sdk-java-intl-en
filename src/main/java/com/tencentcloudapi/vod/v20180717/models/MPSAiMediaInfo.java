@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MPSAiMediaInfo extends AbstractModel {
 
     /**
-    * List of intelligent media information processed by MPS
+    * 
     */
     @SerializedName("AiMediaList")
     @Expose
     private MPSAiMediaItem [] AiMediaList;
 
     /**
-     * Get List of intelligent media information processed by MPS 
-     * @return AiMediaList List of intelligent media information processed by MPS
+     * Get  
+     * @return AiMediaList 
      */
     public MPSAiMediaItem [] getAiMediaList() {
         return this.AiMediaList;
     }
 
     /**
-     * Set List of intelligent media information processed by MPS
-     * @param AiMediaList List of intelligent media information processed by MPS
+     * Set 
+     * @param AiMediaList 
      */
     public void setAiMediaList(MPSAiMediaItem [] AiMediaList) {
         this.AiMediaList = AiMediaList;

@@ -24,143 +24,138 @@ import java.util.HashMap;
 public class MediaImageSpriteItem extends AbstractModel {
 
     /**
-    * <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Height of the sprite sheet.</p>
+    * 
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * <p>Width of the sprite sheet.</p>
+    * 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * <p>The number of small images in each sprite sheet.</p>
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * <p>The domain names or IP addresses of each sprite sheet.</p>
+    * 
     */
     @SerializedName("ImageUrlSet")
     @Expose
     private String [] ImageUrlSet;
 
     /**
-    * Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WebVttUrl")
     @Expose
     private String WebVttUrl;
 
     /**
-     * Get <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p> 
-     * @return Definition <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
-     * @param Definition <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Height of the sprite sheet.</p> 
-     * @return Height <p>Height of the sprite sheet.</p>
+     * Get  
+     * @return Height 
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set <p>Height of the sprite sheet.</p>
-     * @param Height <p>Height of the sprite sheet.</p>
+     * Set 
+     * @param Height 
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get <p>Width of the sprite sheet.</p> 
-     * @return Width <p>Width of the sprite sheet.</p>
+     * Get  
+     * @return Width 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set <p>Width of the sprite sheet.</p>
-     * @param Width <p>Width of the sprite sheet.</p>
+     * Set 
+     * @param Width 
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get <p>The number of small images in each sprite sheet.</p> 
-     * @return TotalCount <p>The number of small images in each sprite sheet.</p>
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>The number of small images in each sprite sheet.</p>
-     * @param TotalCount <p>The number of small images in each sprite sheet.</p>
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>The domain names or IP addresses of each sprite sheet.</p> 
-     * @return ImageUrlSet <p>The domain names or IP addresses of each sprite sheet.</p>
+     * Get  
+     * @return ImageUrlSet 
      */
     public String [] getImageUrlSet() {
         return this.ImageUrlSet;
     }
 
     /**
-     * Set <p>The domain names or IP addresses of each sprite sheet.</p>
-     * @param ImageUrlSet <p>The domain names or IP addresses of each sprite sheet.</p>
+     * Set 
+     * @param ImageUrlSet 
      */
     public void setImageUrlSet(String [] ImageUrlSet) {
         this.ImageUrlSet = ImageUrlSet;
     }
 
     /**
-     * Get Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WebVttUrl 
      */
     public String getWebVttUrl() {
         return this.WebVttUrl;
     }
 
     /**
-     * Set Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WebVttUrl 
      */
     public void setWebVttUrl(String WebVttUrl) {
         this.WebVttUrl = WebVttUrl;

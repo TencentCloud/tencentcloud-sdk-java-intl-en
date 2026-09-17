@@ -185,7 +185,7 @@ Public network instances with routing mode set to **OSPF, BGP** automatically al
     }
 
     /**
-     *Cross-regional aggregate query returns the AZ list for the specified AppId in ALL configured regions. The local region directly performs a database query, while remote regions send HTTP requests to each region's DescribeAppZones API and merge the results.
+     *This API is used to perform a cross-regional aggregate query of the AZ list under all configured regions. It supports filtering by account through the FilterByAppId parameter: by default, only AZs associated with the account are returned. When set to False, all AZs are returned. The local region queries the database directly, while remote regions send concurrent HTTP requests and merge the results before returning.
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException

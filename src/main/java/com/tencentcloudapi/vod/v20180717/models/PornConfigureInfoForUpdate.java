@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class PornConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Parameters for recognition of pornographic content in images
+    * 
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PornImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * Parameters for ASR-based recognition of pornographic content
+    * 
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PornAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * Parameters for OCR-based recognition of pornographic content
+    * 
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PornOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Parameters for recognition of pornographic content in images 
-     * @return ImgReviewInfo Parameters for recognition of pornographic content in images
+     * Get  
+     * @return ImgReviewInfo 
      */
     public PornImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Parameters for recognition of pornographic content in images
-     * @param ImgReviewInfo Parameters for recognition of pornographic content in images
+     * Set 
+     * @param ImgReviewInfo 
      */
     public void setImgReviewInfo(PornImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Parameters for ASR-based recognition of pornographic content 
-     * @return AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+     * Get  
+     * @return AsrReviewInfo 
      */
     public PornAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Parameters for ASR-based recognition of pornographic content
-     * @param AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+     * Set 
+     * @param AsrReviewInfo 
      */
     public void setAsrReviewInfo(PornAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Parameters for OCR-based recognition of pornographic content 
-     * @return OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+     * Get  
+     * @return OcrReviewInfo 
      */
     public PornOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Parameters for OCR-based recognition of pornographic content
-     * @param OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+     * Set 
+     * @param OcrReviewInfo 
      */
     public void setOcrReviewInfo(PornOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

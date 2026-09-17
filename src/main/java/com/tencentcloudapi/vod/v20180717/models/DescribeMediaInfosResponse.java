@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMediaInfosResponse extends AbstractModel {
 
     /**
-    * <p>Media file information list.</p>
+    * 
     */
     @SerializedName("MediaInfoSet")
     @Expose
     private MediaInfo [] MediaInfoSet;
 
     /**
-    * <p>Non-existent file ID list.</p>
+    * 
     */
     @SerializedName("NotExistFileIdSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMediaInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Media file information list.</p> 
-     * @return MediaInfoSet <p>Media file information list.</p>
+     * Get  
+     * @return MediaInfoSet 
      */
     public MediaInfo [] getMediaInfoSet() {
         return this.MediaInfoSet;
     }
 
     /**
-     * Set <p>Media file information list.</p>
-     * @param MediaInfoSet <p>Media file information list.</p>
+     * Set 
+     * @param MediaInfoSet 
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
         this.MediaInfoSet = MediaInfoSet;
     }
 
     /**
-     * Get <p>Non-existent file ID list.</p> 
-     * @return NotExistFileIdSet <p>Non-existent file ID list.</p>
+     * Get  
+     * @return NotExistFileIdSet 
      */
     public String [] getNotExistFileIdSet() {
         return this.NotExistFileIdSet;
     }
 
     /**
-     * Set <p>Non-existent file ID list.</p>
-     * @param NotExistFileIdSet <p>Non-existent file ID list.</p>
+     * Set 
+     * @param NotExistFileIdSet 
      */
     public void setNotExistFileIdSet(String [] NotExistFileIdSet) {
         this.NotExistFileIdSet = NotExistFileIdSet;

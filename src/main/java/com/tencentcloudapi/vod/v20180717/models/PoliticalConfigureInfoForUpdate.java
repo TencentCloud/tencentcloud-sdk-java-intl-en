@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class PoliticalConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Parameters for recognition of politically sensitive content in images
+    * 
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * Parameters for ASR-based recognition of politically sensitive content
+    * 
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * Parameters for OCR-based recognition of politically sensitive content
+    * 
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Parameters for recognition of politically sensitive content in images 
-     * @return ImgReviewInfo Parameters for recognition of politically sensitive content in images
+     * Get  
+     * @return ImgReviewInfo 
      */
     public PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Parameters for recognition of politically sensitive content in images
-     * @param ImgReviewInfo Parameters for recognition of politically sensitive content in images
+     * Set 
+     * @param ImgReviewInfo 
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Parameters for ASR-based recognition of politically sensitive content 
-     * @return AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
+     * Get  
+     * @return AsrReviewInfo 
      */
     public PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Parameters for ASR-based recognition of politically sensitive content
-     * @param AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
+     * Set 
+     * @param AsrReviewInfo 
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Parameters for OCR-based recognition of politically sensitive content 
-     * @return OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+     * Get  
+     * @return OcrReviewInfo 
      */
     public PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Parameters for OCR-based recognition of politically sensitive content
-     * @param OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+     * Set 
+     * @param OcrReviewInfo 
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

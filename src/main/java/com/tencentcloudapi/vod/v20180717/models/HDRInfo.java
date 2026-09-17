@@ -24,91 +24,46 @@ import java.util.HashMap;
 public class HDRInfo extends AbstractModel {
 
     /**
-    * Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`. 
-     * @return Switch Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-     * @param Switch Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li> 
-     * @return Type High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
-     * @param Type High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

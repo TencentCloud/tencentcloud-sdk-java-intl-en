@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class EditMediaTaskInput extends AbstractModel {
 
     /**
-    * Input video source type. Valid values: File, Stream.
+    * 
     */
     @SerializedName("InputType")
     @Expose
     private String InputType;
 
     /**
-    * Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileInfoSet")
     @Expose
     private EditMediaFileInfo [] FileInfoSet;
 
     /**
-    * Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StreamInfoSet")
     @Expose
     private EditMediaStreamInfo [] StreamInfoSet;
 
     /**
-     * Get Input video source type. Valid values: File, Stream. 
-     * @return InputType Input video source type. Valid values: File, Stream.
+     * Get  
+     * @return InputType 
      */
     public String getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set Input video source type. Valid values: File, Stream.
-     * @param InputType Input video source type. Valid values: File, Stream.
+     * Set 
+     * @param InputType 
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileInfoSet Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileInfoSet 
      */
     public EditMediaFileInfo [] getFileInfoSet() {
         return this.FileInfoSet;
     }
 
     /**
-     * Set Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileInfoSet Information of input video file. This field has a value only when `InputType` is `File`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileInfoSet 
      */
     public void setFileInfoSet(EditMediaFileInfo [] FileInfoSet) {
         this.FileInfoSet = FileInfoSet;
     }
 
     /**
-     * Get Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StreamInfoSet Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StreamInfoSet 
      */
     public EditMediaStreamInfo [] getStreamInfoSet() {
         return this.StreamInfoSet;
     }
 
     /**
-     * Set Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StreamInfoSet Input stream information. This field has a value only when `InputType` is `Stream`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StreamInfoSet 
      */
     public void setStreamInfoSet(EditMediaStreamInfo [] StreamInfoSet) {
         this.StreamInfoSet = StreamInfoSet;

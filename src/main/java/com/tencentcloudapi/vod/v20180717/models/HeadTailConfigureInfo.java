@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class HeadTailConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of video opening and ending credits recognition task. Valid values:
-<li>ON: enables video opening and ending credits recognition task;</li>
-<li>OFF: disables video opening and ending credits recognition task.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Switch of video opening and ending credits recognition task. Valid values:
-<li>ON: enables video opening and ending credits recognition task;</li>
-<li>OFF: disables video opening and ending credits recognition task.</li> 
-     * @return Switch Switch of video opening and ending credits recognition task. Valid values:
-<li>ON: enables video opening and ending credits recognition task;</li>
-<li>OFF: disables video opening and ending credits recognition task.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of video opening and ending credits recognition task. Valid values:
-<li>ON: enables video opening and ending credits recognition task;</li>
-<li>OFF: disables video opening and ending credits recognition task.</li>
-     * @param Switch Switch of video opening and ending credits recognition task. Valid values:
-<li>ON: enables video opening and ending credits recognition task;</li>
-<li>OFF: disables video opening and ending credits recognition task.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

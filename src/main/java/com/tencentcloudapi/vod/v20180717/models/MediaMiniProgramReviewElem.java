@@ -24,119 +24,69 @@ import java.util.HashMap;
 public class MediaMiniProgramReviewElem extends AbstractModel {
 
     /**
-    * Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
+    * 
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * Confidence of audit result between 0 and 100.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li> 
-     * @return Type Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
-     * @param Type Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li> 
-     * @return Suggestion Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
+     * Get  
+     * @return Suggestion 
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
-     * @param Suggestion Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
+     * Set 
+     * @param Suggestion 
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Confidence of audit result between 0 and 100. 
-     * @return Confidence Confidence of audit result between 0 and 100.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of audit result between 0 and 100.
-     * @param Confidence Confidence of audit result between 0 and 100.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

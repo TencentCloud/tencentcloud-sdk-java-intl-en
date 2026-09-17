@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MPSSmartSubtitlesTaskInput extends AbstractModel {
 
     /**
-    * <p>Smart subtitle template ID.</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
+    * 
     */
     @SerializedName("RawParameter")
     @Expose
     private MPSRawSmartSubtitleParameter RawParameter;
 
     /**
-     * Get <p>Smart subtitle template ID.</p> 
-     * @return Definition <p>Smart subtitle template ID.</p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Smart subtitle template ID.</p>
-     * @param Definition <p>Smart subtitle template ID.</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p> 
-     * @return RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
+     * Get  
+     * @return RawParameter 
      */
     public MPSRawSmartSubtitleParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
-     * @param RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
+     * Set 
+     * @param RawParameter 
      */
     public void setRawParameter(MPSRawSmartSubtitleParameter RawParameter) {
         this.RawParameter = RawParameter;

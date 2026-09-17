@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ImageSceneAigcEncodeConfig extends AbstractModel {
 
     /**
-    * Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
+    * 
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
+    * 
     */
     @SerializedName("Quality")
     @Expose
     private Long Quality;
 
     /**
-     * Get Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported. 
-     * @return Format Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
+     * Get  
+     * @return Format 
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
-     * @param Format Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
+     * Set 
+     * @param Format 
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality. 
-     * @return Quality Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
+     * Get  
+     * @return Quality 
      */
     public Long getQuality() {
         return this.Quality;
     }
 
     /**
-     * Set Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
-     * @param Quality Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
+     * Set 
+     * @param Quality 
      */
     public void setQuality(Long Quality) {
         this.Quality = Quality;

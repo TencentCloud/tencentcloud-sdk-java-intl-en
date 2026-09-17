@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCDNUsageDataResponse extends AbstractModel {
 
     /**
-    * Time granularity, unit: minute.
+    * 
     */
     @SerializedName("DataInterval")
     @Expose
     private Long DataInterval;
 
     /**
-    * CDN statistics.
+    * 
     */
     @SerializedName("Data")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCDNUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Time granularity, unit: minute. 
-     * @return DataInterval Time granularity, unit: minute.
+     * Get  
+     * @return DataInterval 
      */
     public Long getDataInterval() {
         return this.DataInterval;
     }
 
     /**
-     * Set Time granularity, unit: minute.
-     * @param DataInterval Time granularity, unit: minute.
+     * Set 
+     * @param DataInterval 
      */
     public void setDataInterval(Long DataInterval) {
         this.DataInterval = DataInterval;
     }
 
     /**
-     * Get CDN statistics. 
-     * @return Data CDN statistics.
+     * Get  
+     * @return Data 
      */
     public StatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set CDN statistics.
-     * @param Data CDN statistics.
+     * Set 
+     * @param Data 
      */
     public void setData(StatDataItem [] Data) {
         this.Data = Data;

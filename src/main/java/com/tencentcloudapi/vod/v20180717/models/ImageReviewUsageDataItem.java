@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ImageReviewUsageDataItem extends AbstractModel {
 
     /**
-    * The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
+    * 
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * The number of times the image recognition feature is used.
+    * 
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018. 
-     * @return Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
+     * Get  
+     * @return Time 
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
-     * @param Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
+     * Set 
+     * @param Time 
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get The number of times the image recognition feature is used. 
-     * @return Count The number of times the image recognition feature is used.
+     * Get  
+     * @return Count 
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set The number of times the image recognition feature is used.
-     * @param Count The number of times the image recognition feature is used.
+     * Set 
+     * @param Count 
      */
     public void setCount(Long Count) {
         this.Count = Count;

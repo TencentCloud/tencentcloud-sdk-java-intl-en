@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
 
     /**
-    * Distribute the configured domain name (abandoned).
+    * 
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Distribute the configured domain name.
+    * 
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * The protocol of the distribution configuration is HTTP or HTTPS.
+    * 
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * The playback key consists of uppercase and lowercase letters (a - Z) or numbers (0 - 9) with a length between 8 and 20 characters.
+    * 
     */
     @SerializedName("PlayKey")
     @Expose
@@ -59,8 +59,8 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Distribute the configured domain name (abandoned). 
-     * @return DomainName Distribute the configured domain name (abandoned).
+     * Get  
+     * @return DomainName 
      * @deprecated
      */
     @Deprecated
@@ -69,8 +69,8 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set Distribute the configured domain name (abandoned).
-     * @param DomainName Distribute the configured domain name (abandoned).
+     * Set 
+     * @param DomainName 
      * @deprecated
      */
     @Deprecated
@@ -79,48 +79,48 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get Distribute the configured domain name. 
-     * @return Domain Distribute the configured domain name.
+     * Get  
+     * @return Domain 
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Distribute the configured domain name.
-     * @param Domain Distribute the configured domain name.
+     * Set 
+     * @param Domain 
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get The protocol of the distribution configuration is HTTP or HTTPS. 
-     * @return Scheme The protocol of the distribution configuration is HTTP or HTTPS.
+     * Get  
+     * @return Scheme 
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set The protocol of the distribution configuration is HTTP or HTTPS.
-     * @param Scheme The protocol of the distribution configuration is HTTP or HTTPS.
+     * Set 
+     * @param Scheme 
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get The playback key consists of uppercase and lowercase letters (a - Z) or numbers (0 - 9) with a length between 8 and 20 characters. 
-     * @return PlayKey The playback key consists of uppercase and lowercase letters (a - Z) or numbers (0 - 9) with a length between 8 and 20 characters.
+     * Get  
+     * @return PlayKey 
      */
     public String getPlayKey() {
         return this.PlayKey;
     }
 
     /**
-     * Set The playback key consists of uppercase and lowercase letters (a - Z) or numbers (0 - 9) with a length between 8 and 20 characters.
-     * @param PlayKey The playback key consists of uppercase and lowercase letters (a - Z) or numbers (0 - 9) with a length between 8 and 20 characters.
+     * Set 
+     * @param PlayKey 
      */
     public void setPlayKey(String PlayKey) {
         this.PlayKey = PlayKey;

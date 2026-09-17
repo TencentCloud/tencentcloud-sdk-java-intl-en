@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAIRecognitionTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Audio/video content recognition template detail list.
+    * 
     */
     @SerializedName("AIRecognitionTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAIRecognitionTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Audio/video content recognition template detail list. 
-     * @return AIRecognitionTemplateSet Audio/video content recognition template detail list.
+     * Get  
+     * @return AIRecognitionTemplateSet 
      */
     public AIRecognitionTemplateItem [] getAIRecognitionTemplateSet() {
         return this.AIRecognitionTemplateSet;
     }
 
     /**
-     * Set Audio/video content recognition template detail list.
-     * @param AIRecognitionTemplateSet Audio/video content recognition template detail list.
+     * Set 
+     * @param AIRecognitionTemplateSet 
      */
     public void setAIRecognitionTemplateSet(AIRecognitionTemplateItem [] AIRecognitionTemplateSet) {
         this.AIRecognitionTemplateSet = AIRecognitionTemplateSet;

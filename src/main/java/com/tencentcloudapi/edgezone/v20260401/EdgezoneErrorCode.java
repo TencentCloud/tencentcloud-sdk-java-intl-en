@@ -91,7 +91,10 @@ public enum EdgezoneErrorCode {
      UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),
      
      /* UnsupportedOperation.InvalidInstanceState */
-     UNSUPPORTEDOPERATION_INVALIDINSTANCESTATE("UnsupportedOperation.InvalidInstanceState");
+     UNSUPPORTEDOPERATION_INVALIDINSTANCESTATE("UnsupportedOperation.InvalidInstanceState"),
+     
+     /* UnsupportedOperation.LegacyCompatBatchMixed */
+     UNSUPPORTEDOPERATION_LEGACYCOMPATBATCHMIXED("UnsupportedOperation.LegacyCompatBatchMixed");
      
     private String value;
     private EdgezoneErrorCode (String value){

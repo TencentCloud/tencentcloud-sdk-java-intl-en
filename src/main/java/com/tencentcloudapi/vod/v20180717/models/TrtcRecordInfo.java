@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class TrtcRecordInfo extends AbstractModel {
 
     /**
-    * The TRTC application ID.
+    * 
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * The TRTC room ID.
+    * 
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * The recording task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The IDs of users whose streams are mixed.
+    * 
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-     * Get The TRTC application ID. 
-     * @return SdkAppId The TRTC application ID.
+     * Get  
+     * @return SdkAppId 
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set The TRTC application ID.
-     * @param SdkAppId The TRTC application ID.
+     * Set 
+     * @param SdkAppId 
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get The TRTC room ID. 
-     * @return RoomId The TRTC room ID.
+     * Get  
+     * @return RoomId 
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set The TRTC room ID.
-     * @param RoomId The TRTC room ID.
+     * Set 
+     * @param RoomId 
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get The recording task ID. 
-     * @return TaskId The recording task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The recording task ID.
-     * @param TaskId The recording task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The IDs of users whose streams are mixed. 
-     * @return UserIds The IDs of users whose streams are mixed.
+     * Get  
+     * @return UserIds 
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set The IDs of users whose streams are mixed.
-     * @param UserIds The IDs of users whose streams are mixed.
+     * Set 
+     * @param UserIds 
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;

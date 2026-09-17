@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class HeuristicCacheConfig extends AbstractModel {
 
     /**
-    * Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+    * Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("HeuristicCacheTimeSwitch")
     @Expose
     private String HeuristicCacheTimeSwitch;
 
     /**
-    * Unit: seconds.
+    * 
     */
     @SerializedName("HeuristicCacheTime")
     @Expose
     private Long HeuristicCacheTime;
 
     /**
-     * Get Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
-     * @return HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Get Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getHeuristicCacheTimeSwitch() {
         return this.HeuristicCacheTimeSwitch;
     }
 
     /**
-     * Set Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Set Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param HeuristicCacheTimeSwitch Heuristic custom time cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setHeuristicCacheTimeSwitch(String HeuristicCacheTimeSwitch) {
         this.HeuristicCacheTimeSwitch = HeuristicCacheTimeSwitch;
     }
 
     /**
-     * Get Unit: seconds. 
-     * @return HeuristicCacheTime Unit: seconds.
+     * Get  
+     * @return HeuristicCacheTime 
      */
     public Long getHeuristicCacheTime() {
         return this.HeuristicCacheTime;
     }
 
     /**
-     * Set Unit: seconds.
-     * @param HeuristicCacheTime Unit: seconds.
+     * Set 
+     * @param HeuristicCacheTime 
      */
     public void setHeuristicCacheTime(Long HeuristicCacheTime) {
         this.HeuristicCacheTime = HeuristicCacheTime;

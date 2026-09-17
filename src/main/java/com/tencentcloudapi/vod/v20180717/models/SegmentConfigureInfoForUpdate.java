@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class SegmentConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li> 
-     * @return Switch Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
-     * @param Switch Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class MediaAnimatedGraphicsInfo extends AbstractModel {
 
     /**
-    * Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AnimatedGraphicsSet")
     @Expose
     private MediaAnimatedGraphicsItem [] AnimatedGraphicsSet;
 
     /**
-     * Get Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AnimatedGraphicsSet Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AnimatedGraphicsSet 
      */
     public MediaAnimatedGraphicsItem [] getAnimatedGraphicsSet() {
         return this.AnimatedGraphicsSet;
     }
 
     /**
-     * Set Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AnimatedGraphicsSet Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AnimatedGraphicsSet 
      */
     public void setAnimatedGraphicsSet(MediaAnimatedGraphicsItem [] AnimatedGraphicsSet) {
         this.AnimatedGraphicsSet = AnimatedGraphicsSet;

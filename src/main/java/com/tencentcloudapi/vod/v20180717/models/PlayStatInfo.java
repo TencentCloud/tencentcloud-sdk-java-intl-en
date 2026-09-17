@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class PlayStatInfo extends AbstractModel {
 
     /**
-    * The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+    * 
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * The ID of the media file.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The playback times.
+    * 
     */
     @SerializedName("PlayTimes")
     @Expose
     private Long PlayTimes;
 
     /**
-    * The traffic (in bytes) consumed for playback.
+    * 
     */
     @SerializedName("Traffic")
     @Expose
     private Long Traffic;
 
     /**
-     * Get The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li> 
-     * @return Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+     * Get  
+     * @return Time 
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
-     * @param Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+     * Set 
+     * @param Time 
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get The ID of the media file. 
-     * @return FileId The ID of the media file.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The ID of the media file.
-     * @param FileId The ID of the media file.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The playback times. 
-     * @return PlayTimes The playback times.
+     * Get  
+     * @return PlayTimes 
      */
     public Long getPlayTimes() {
         return this.PlayTimes;
     }
 
     /**
-     * Set The playback times.
-     * @param PlayTimes The playback times.
+     * Set 
+     * @param PlayTimes 
      */
     public void setPlayTimes(Long PlayTimes) {
         this.PlayTimes = PlayTimes;
     }
 
     /**
-     * Get The traffic (in bytes) consumed for playback. 
-     * @return Traffic The traffic (in bytes) consumed for playback.
+     * Get  
+     * @return Traffic 
      */
     public Long getTraffic() {
         return this.Traffic;
     }
 
     /**
-     * Set The traffic (in bytes) consumed for playback.
-     * @param Traffic The traffic (in bytes) consumed for playback.
+     * Set 
+     * @param Traffic 
      */
     public void setTraffic(Long Traffic) {
         this.Traffic = Traffic;

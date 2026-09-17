@@ -315,7 +315,7 @@ public enum ClsErrorCode {
      /* The index does not exist. */
      RESOURCENOTFOUND_INDEXNOTEXIST("ResourceNotFound.IndexNotExist"),
      
-     /* The specified logset does not exist. */
+     /* The specified log set does not exist. */
      RESOURCENOTFOUND_LOGSETNOTEXIST("ResourceNotFound.LogsetNotExist"),
      
      /* The machine group does not exist. */

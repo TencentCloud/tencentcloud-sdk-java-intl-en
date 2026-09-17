@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class AiAnalysisTaskHighlightOutput extends AbstractModel {
 
     /**
-    * List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
+    * 
     */
     @SerializedName("HighlightSet")
     @Expose
     private MediaAiAnalysisHighlightItem [] HighlightSet;
 
     /**
-    * URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
+    * 
     */
     @SerializedName("HighlightSetFileUrl")
     @Expose
     private String HighlightSetFileUrl;
 
     /**
-    * Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    * 
     */
     @SerializedName("HighlightSetFileUrlExpireTime")
     @Expose
     private String HighlightSetFileUrlExpireTime;
 
     /**
-     * Get List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`. 
-     * @return HighlightSet List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
+     * Get  
+     * @return HighlightSet 
      */
     public MediaAiAnalysisHighlightItem [] getHighlightSet() {
         return this.HighlightSet;
     }
 
     /**
-     * Set List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
-     * @param HighlightSet List of intelligently generated highlights
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
+     * Set 
+     * @param HighlightSet 
      */
     public void setHighlightSet(MediaAiAnalysisHighlightItem [] HighlightSet) {
         this.HighlightSet = HighlightSet;
     }
 
     /**
-     * Get URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`. 
-     * @return HighlightSetFileUrl URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
+     * Get  
+     * @return HighlightSetFileUrl 
      */
     public String getHighlightSetFileUrl() {
         return this.HighlightSetFileUrl;
     }
 
     /**
-     * Set URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
-     * @param HighlightSetFileUrl URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
+     * Set 
+     * @param HighlightSetFileUrl 
      */
     public void setHighlightSetFileUrl(String HighlightSetFileUrl) {
         this.HighlightSetFileUrl = HighlightSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
-     * @return HighlightSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Get  
+     * @return HighlightSetFileUrlExpireTime 
      */
     public String getHighlightSetFileUrlExpireTime() {
         return this.HighlightSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-     * @param HighlightSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Set 
+     * @param HighlightSetFileUrlExpireTime 
      */
     public void setHighlightSetFileUrlExpireTime(String HighlightSetFileUrlExpireTime) {
         this.HighlightSetFileUrlExpireTime = HighlightSetFileUrlExpireTime;

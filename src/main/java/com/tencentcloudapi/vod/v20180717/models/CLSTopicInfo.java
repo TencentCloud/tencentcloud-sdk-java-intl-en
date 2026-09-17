@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CLSTopicInfo extends AbstractModel {
 
     /**
-    * Log topic ID.
+    * 
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Log topic name.
+    * 
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Log Set ID.
+    * 
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-     * Get Log topic ID. 
-     * @return TopicId Log topic ID.
+     * Get  
+     * @return TopicId 
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID.
-     * @param TopicId Log topic ID.
+     * Set 
+     * @param TopicId 
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Log topic name. 
-     * @return TopicName Log topic name.
+     * Get  
+     * @return TopicName 
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Log topic name.
-     * @param TopicName Log topic name.
+     * Set 
+     * @param TopicName 
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Log Set ID. 
-     * @return LogsetId Log Set ID.
+     * Get  
+     * @return LogsetId 
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Log Set ID.
-     * @param LogsetId Log Set ID.
+     * Set 
+     * @param LogsetId 
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

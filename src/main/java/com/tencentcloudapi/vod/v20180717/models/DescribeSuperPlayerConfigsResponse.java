@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSuperPlayerConfigsResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Player configuration array.
+    * 
     */
     @SerializedName("PlayerConfigSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSuperPlayerConfigsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Player configuration array. 
-     * @return PlayerConfigSet Player configuration array.
+     * Get  
+     * @return PlayerConfigSet 
      */
     public PlayerConfig [] getPlayerConfigSet() {
         return this.PlayerConfigSet;
     }
 
     /**
-     * Set Player configuration array.
-     * @param PlayerConfigSet Player configuration array.
+     * Set 
+     * @param PlayerConfigSet 
      */
     public void setPlayerConfigSet(PlayerConfig [] PlayerConfigSet) {
         this.PlayerConfigSet = PlayerConfigSet;

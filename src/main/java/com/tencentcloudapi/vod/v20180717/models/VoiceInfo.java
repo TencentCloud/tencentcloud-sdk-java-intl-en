@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class VoiceInfo extends AbstractModel {
 
     /**
-    * <p>Voice ID.</p>
+    * 
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * <p>Voice name.</p>
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Voice description.</p>
+    * 
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
+    * 
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
+    * 
     */
     @SerializedName("Gender")
     @Expose
     private String Gender;
 
     /**
-    * <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+    * 
     */
     @SerializedName("Age")
     @Expose
     private String Age;
 
     /**
-    * <p>List of supported languages. </p><p>For example: en.</p>
+    * 
     */
     @SerializedName("Languages")
     @Expose
     private String [] Languages;
 
     /**
-    * <p>Audition audio URL.</p>
+    * 
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-    * <p>List of tags. </p><p>For example: gentle.</p>
+    * 
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-    * <p>Recommended scenarios. </p><p>For example: education.</p>
+    * 
     */
     @SerializedName("Scenes")
     @Expose
     private String [] Scenes;
 
     /**
-     * Get <p>Voice ID.</p> 
-     * @return VoiceId <p>Voice ID.</p>
+     * Get  
+     * @return VoiceId 
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Voice ID.</p>
-     * @param VoiceId <p>Voice ID.</p>
+     * Set 
+     * @param VoiceId 
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get <p>Voice name.</p> 
-     * @return Name <p>Voice name.</p>
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Voice name.</p>
-     * @param Name <p>Voice name.</p>
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Voice description.</p> 
-     * @return Description <p>Voice description.</p>
+     * Get  
+     * @return Description 
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Voice description.</p>
-     * @param Description <p>Voice description.</p>
+     * Set 
+     * @param Description 
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul> 
-     * @return Category <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
+     * Get  
+     * @return Category 
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
-     * @param Category <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
+     * Set 
+     * @param Category 
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul> 
-     * @return Gender <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
+     * Get  
+     * @return Gender 
      */
     public String getGender() {
         return this.Gender;
     }
 
     /**
-     * Set <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
-     * @param Gender <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
+     * Set 
+     * @param Gender 
      */
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * Get <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul> 
-     * @return Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     * Get  
+     * @return Age 
      */
     public String getAge() {
         return this.Age;
     }
 
     /**
-     * Set <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
-     * @param Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     * Set 
+     * @param Age 
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get <p>List of supported languages. </p><p>For example: en.</p> 
-     * @return Languages <p>List of supported languages. </p><p>For example: en.</p>
+     * Get  
+     * @return Languages 
      */
     public String [] getLanguages() {
         return this.Languages;
     }
 
     /**
-     * Set <p>List of supported languages. </p><p>For example: en.</p>
-     * @param Languages <p>List of supported languages. </p><p>For example: en.</p>
+     * Set 
+     * @param Languages 
      */
     public void setLanguages(String [] Languages) {
         this.Languages = Languages;
     }
 
     /**
-     * Get <p>Audition audio URL.</p> 
-     * @return AudioUrl <p>Audition audio URL.</p>
+     * Get  
+     * @return AudioUrl 
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set <p>Audition audio URL.</p>
-     * @param AudioUrl <p>Audition audio URL.</p>
+     * Set 
+     * @param AudioUrl 
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
     }
 
     /**
-     * Get <p>List of tags. </p><p>For example: gentle.</p> 
-     * @return Labels <p>List of tags. </p><p>For example: gentle.</p>
+     * Get  
+     * @return Labels 
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set <p>List of tags. </p><p>For example: gentle.</p>
-     * @param Labels <p>List of tags. </p><p>For example: gentle.</p>
+     * Set 
+     * @param Labels 
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get <p>Recommended scenarios. </p><p>For example: education.</p> 
-     * @return Scenes <p>Recommended scenarios. </p><p>For example: education.</p>
+     * Get  
+     * @return Scenes 
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set <p>Recommended scenarios. </p><p>For example: education.</p>
-     * @param Scenes <p>Recommended scenarios. </p><p>For example: education.</p>
+     * Set 
+     * @param Scenes 
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;

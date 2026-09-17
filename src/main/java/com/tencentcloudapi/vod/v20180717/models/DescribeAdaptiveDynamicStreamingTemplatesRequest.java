@@ -24,125 +24,115 @@ import java.util.HashMap;
 public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel {
 
     /**
-    * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+    * 
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * Pagination offset. default value: 0.
+    * 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned entries. default value: 10. maximum value: 100.
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>. 
-     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
-     * @param SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100. 
-     * @return Definitions Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+     * Get  
+     * @return Definitions 
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
-     * @param Definitions Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+     * Set 
+     * @param Definitions 
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get Pagination offset. default value: 0. 
-     * @return Offset Pagination offset. default value: 0.
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. default value: 0.
-     * @param Offset Pagination offset. default value: 0.
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned entries. default value: 10. maximum value: 100. 
-     * @return Limit Number of returned entries. default value: 10. maximum value: 100.
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. default value: 10. maximum value: 100.
-     * @param Limit Number of returned entries. default value: 10. maximum value: 100.
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>. 
-     * @return Type Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
-     * @param Type Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

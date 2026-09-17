@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class TaskStatDataItem extends AbstractModel {
 
     /**
-    * Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
+    * 
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * Number of tasks.
+    * 
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Task usage.
+    * 
     */
     @SerializedName("Usage")
     @Expose
     private Long Usage;
 
     /**
-     * Get Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive). 
-     * @return Time Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
+     * Get  
+     * @return Time 
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-     * @param Time Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
+     * Set 
+     * @param Time 
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get Number of tasks. 
-     * @return Count Number of tasks.
+     * Get  
+     * @return Count 
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of tasks.
-     * @param Count Number of tasks.
+     * Set 
+     * @param Count 
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Task usage. 
-     * @return Usage Task usage.
+     * Get  
+     * @return Usage 
      */
     public Long getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set Task usage.
-     * @param Usage Task usage.
+     * Set 
+     * @param Usage 
      */
     public void setUsage(Long Usage) {
         this.Usage = Usage;

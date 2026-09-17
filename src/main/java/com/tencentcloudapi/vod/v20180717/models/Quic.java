@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class Quic extends AbstractModel {
 
     /**
-    * Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+    * Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Get Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Set Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

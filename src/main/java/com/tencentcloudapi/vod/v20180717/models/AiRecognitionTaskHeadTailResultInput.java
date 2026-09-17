@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskHeadTailResultInput extends AbstractModel {
 
     /**
-    * Video opening and ending credits recognition template ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Video opening and ending credits recognition template ID. 
-     * @return Definition Video opening and ending credits recognition template ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Video opening and ending credits recognition template ID.
-     * @param Definition Video opening and ending credits recognition template ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

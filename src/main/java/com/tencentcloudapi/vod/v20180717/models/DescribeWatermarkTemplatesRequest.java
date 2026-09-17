@@ -24,140 +24,115 @@ import java.util.HashMap;
 public class DescribeWatermarkTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Pagination offset. Default value: 0.
+    * 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
+    * 
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li> 
-     * @return Type Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
-     * @param Type Watermark type filter. Valid values:
-<li>image: image watermark.</li>
-<li>Text: text watermark.</li>
-<li>svg: SVG watermark.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Pagination offset. Default value: 0. 
-     * @return Offset Pagination offset. Default value: 0.
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Default value: 0.
-     * @param Offset Pagination offset. Default value: 0.
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Filter condition for the watermark template unique identifier. The array length cannot exceed 100. 
-     * @return Definitions Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
+     * Get  
+     * @return Definitions 
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
-     * @param Definitions Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
+     * Set 
+     * @param Definitions 
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li> 
-     * @return Limit Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
-     * @param Limit Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

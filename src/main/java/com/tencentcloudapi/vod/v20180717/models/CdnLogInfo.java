@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CdnLogInfo extends AbstractModel {
 
     /**
-    * <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
+    * 
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * <p>Log name, format: date hr-domain name<br>For example, example.com.</p>
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Log download link, valid for 24 hours.</p>
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * 
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * 
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p> 
-     * @return Date <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
+     * Get  
+     * @return Date 
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
-     * @param Date <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
+     * Set 
+     * @param Date 
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get <p>Log name, format: date hr-domain name<br>For example, example.com.</p> 
-     * @return Name <p>Log name, format: date hr-domain name<br>For example, example.com.</p>
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Log name, format: date hr-domain name<br>For example, example.com.</p>
-     * @param Name <p>Log name, format: date hr-domain name<br>For example, example.com.</p>
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Log download link, valid for 24 hours.</p> 
-     * @return Url <p>Log download link, valid for 24 hours.</p>
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>Log download link, valid for 24 hours.</p>
-     * @param Url <p>Log download link, valid for 24 hours.</p>
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return StartTime <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get  
+     * @return StartTime 
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param StartTime <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set 
+     * @param StartTime 
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return EndTime <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get  
+     * @return EndTime 
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param EndTime <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set 
+     * @param EndTime 
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

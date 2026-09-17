@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ProhibitedConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Control parameter of prohibited information detection in speech.
+    * 
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private ProhibitedAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * Control parameter of prohibited information detection in text.
+    * 
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private ProhibitedOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Control parameter of prohibited information detection in speech. 
-     * @return AsrReviewInfo Control parameter of prohibited information detection in speech.
+     * Get  
+     * @return AsrReviewInfo 
      */
     public ProhibitedAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of prohibited information detection in speech.
-     * @param AsrReviewInfo Control parameter of prohibited information detection in speech.
+     * Set 
+     * @param AsrReviewInfo 
      */
     public void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of prohibited information detection in text. 
-     * @return OcrReviewInfo Control parameter of prohibited information detection in text.
+     * Get  
+     * @return OcrReviewInfo 
      */
     public ProhibitedOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of prohibited information detection in text.
-     * @param OcrReviewInfo Control parameter of prohibited information detection in text.
+     * Set 
+     * @param OcrReviewInfo 
      */
     public void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

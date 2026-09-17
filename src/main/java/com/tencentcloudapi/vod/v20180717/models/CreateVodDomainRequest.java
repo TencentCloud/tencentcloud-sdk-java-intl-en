@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class CreateVodDomainRequest extends AbstractModel {
 
     /**
-    * Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
+    * 
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+    * 
     */
     @SerializedName("AccelerateArea")
     @Expose
     private String AccelerateArea;
 
     /**
-    * Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported. 
-     * @return Domain Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
+     * Get  
+     * @return Domain 
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
-     * @param Domain Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
+     * Set 
+     * @param Domain 
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud. 
-     * @return AccelerateArea Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+     * Get  
+     * @return AccelerateArea 
      */
     public String getAccelerateArea() {
         return this.AccelerateArea;
     }
 
     /**
-     * Set Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
-     * @param AccelerateArea Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+     * Set 
+     * @param AccelerateArea 
      */
     public void setAccelerateArea(String AccelerateArea) {
         this.AccelerateArea = AccelerateArea;
     }
 
     /**
-     * Get Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD. 
-     * @return Type Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
-     * @param Type Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;

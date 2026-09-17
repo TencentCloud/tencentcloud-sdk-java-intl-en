@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Rotation diagram template details list.
+    * 
     */
     @SerializedName("AnimatedGraphicsTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Rotation diagram template details list. 
-     * @return AnimatedGraphicsTemplateSet Rotation diagram template details list.
+     * Get  
+     * @return AnimatedGraphicsTemplateSet 
      */
     public AnimatedGraphicsTemplate [] getAnimatedGraphicsTemplateSet() {
         return this.AnimatedGraphicsTemplateSet;
     }
 
     /**
-     * Set Rotation diagram template details list.
-     * @param AnimatedGraphicsTemplateSet Rotation diagram template details list.
+     * Set 
+     * @param AnimatedGraphicsTemplateSet 
      */
     public void setAnimatedGraphicsTemplateSet(AnimatedGraphicsTemplate [] AnimatedGraphicsTemplateSet) {
         this.AnimatedGraphicsTemplateSet = AnimatedGraphicsTemplateSet;

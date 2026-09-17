@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class AigcVideoSceneInfo extends AbstractModel {
 
     /**
-    * AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Product display parameter
+    * 
     */
     @SerializedName("ProductShowcaseConfig")
     @Expose
     private ProductShowcaseConfig ProductShowcaseConfig;
 
     /**
-     * Get AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees. 
-     * @return Type AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
-     * @param Type AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Product display parameter 
-     * @return ProductShowcaseConfig Product display parameter
+     * Get  
+     * @return ProductShowcaseConfig 
      */
     public ProductShowcaseConfig getProductShowcaseConfig() {
         return this.ProductShowcaseConfig;
     }
 
     /**
-     * Set Product display parameter
-     * @param ProductShowcaseConfig Product display parameter
+     * Set 
+     * @param ProductShowcaseConfig 
      */
     public void setProductShowcaseConfig(ProductShowcaseConfig ProductShowcaseConfig) {
         this.ProductShowcaseConfig = ProductShowcaseConfig;

@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeAigcUsageDataResponse extends AbstractModel {
 
     /**
-    * <p>AIGC stats.</p>
+    * 
     */
     @SerializedName("AigcUsageDataSet")
     @Expose
     private AigcUsageDataItem [] AigcUsageDataSet;
 
     /**
-    * <p>Detailed log</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AigcTextDetails")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get <p>AIGC stats.</p> 
-     * @return AigcUsageDataSet <p>AIGC stats.</p>
+     * Get  
+     * @return AigcUsageDataSet 
      */
     public AigcUsageDataItem [] getAigcUsageDataSet() {
         return this.AigcUsageDataSet;
     }
 
     /**
-     * Set <p>AIGC stats.</p>
-     * @param AigcUsageDataSet <p>AIGC stats.</p>
+     * Set 
+     * @param AigcUsageDataSet 
      */
     public void setAigcUsageDataSet(AigcUsageDataItem [] AigcUsageDataSet) {
         this.AigcUsageDataSet = AigcUsageDataSet;
     }
 
     /**
-     * Get <p>Detailed log</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AigcTextDetails <p>Detailed log</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AigcTextDetails 
      */
     public AigcTextDetail getAigcTextDetails() {
         return this.AigcTextDetails;
     }
 
     /**
-     * Set <p>Detailed log</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AigcTextDetails <p>Detailed log</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AigcTextDetails 
      */
     public void setAigcTextDetails(AigcTextDetail AigcTextDetails) {
         this.AigcTextDetails = AigcTextDetails;

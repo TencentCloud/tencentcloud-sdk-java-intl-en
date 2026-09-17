@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class MediaSubStreamInfoItem extends AbstractModel {
 
     /**
-    * The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The video width (px) if `Type` is `video`.
+    * 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * The video height (px) if `Type` is `video`.
+    * 
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+    * 
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-     * Get The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li> 
-     * @return Type The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
-     * @param Type The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The video width (px) if `Type` is `video`. 
-     * @return Width The video width (px) if `Type` is `video`.
+     * Get  
+     * @return Width 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set The video width (px) if `Type` is `video`.
-     * @param Width The video width (px) if `Type` is `video`.
+     * Set 
+     * @param Width 
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get The video height (px) if `Type` is `video`. 
-     * @return Height The video height (px) if `Type` is `video`.
+     * Get  
+     * @return Height 
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set The video height (px) if `Type` is `video`.
-     * @param Height The video height (px) if `Type` is `video`.
+     * Set 
+     * @param Height 
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`. 
-     * @return Size The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+     * Get  
+     * @return Size 
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
-     * @param Size The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+     * Set 
+     * @param Size 
      */
     public void setSize(Long Size) {
         this.Size = Size;

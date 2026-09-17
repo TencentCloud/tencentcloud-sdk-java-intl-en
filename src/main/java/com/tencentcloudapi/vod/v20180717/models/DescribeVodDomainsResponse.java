@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeVodDomainsResponse extends AbstractModel {
 
     /**
-    * Total number of domains.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of domain names.
+    * 
     */
     @SerializedName("DomainSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeVodDomainsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of domains. 
-     * @return TotalCount Total number of domains.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of domains.
-     * @param TotalCount Total number of domains.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of domain names. 
-     * @return DomainSet List of domain names.
+     * Get  
+     * @return DomainSet 
      */
     public DomainDetailInfo [] getDomainSet() {
         return this.DomainSet;
     }
 
     /**
-     * Set List of domain names.
-     * @param DomainSet List of domain names.
+     * Set 
+     * @param DomainSet 
      */
     public void setDomainSet(DomainDetailInfo [] DomainSet) {
         this.DomainSet = DomainSet;

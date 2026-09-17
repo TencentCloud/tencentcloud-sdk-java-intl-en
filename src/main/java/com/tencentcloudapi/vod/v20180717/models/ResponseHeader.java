@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class ResponseHeader extends AbstractModel {
 
     /**
-    * Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+    * Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Custom response header rules
+    * 
     */
     @SerializedName("HeaderRules")
     @Expose
     private HttpHeaderPathRule [] HeaderRules;
 
     /**
-     * Get Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Get Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Set Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Custom response header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Custom response header rules 
-     * @return HeaderRules Custom response header rules
+     * Get  
+     * @return HeaderRules 
      */
     public HttpHeaderPathRule [] getHeaderRules() {
         return this.HeaderRules;
     }
 
     /**
-     * Set Custom response header rules
-     * @param HeaderRules Custom response header rules
+     * Set 
+     * @param HeaderRules 
      */
     public void setHeaderRules(HttpHeaderPathRule [] HeaderRules) {
         this.HeaderRules = HeaderRules;

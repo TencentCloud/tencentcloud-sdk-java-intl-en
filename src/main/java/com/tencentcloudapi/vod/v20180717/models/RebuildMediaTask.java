@@ -24,278 +24,253 @@ import java.util.HashMap;
 public class RebuildMediaTask extends AbstractModel {
 
     /**
-    * The task ID.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The task flow status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH`</li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The error code. `0` indicates the task is successful. Other values indicate that the task failed.
-<li>`40000`: Invalid input parameter.</li>
-<li>`60000`: Source file error (e.g., video data is corrupted).</li>
-<li>`70000`: Internal server error. Please try again.</li>
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * The error message.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * The task progress. Value range: 0-100.
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input of the audio and video quality regeneration task.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private RebuildMediaTaskInput Input;
 
     /**
-    * Output of the audio and video quality regeneration task.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private RebuildMediaTaskOutput Output;
 
     /**
-    * Metadata of the output video after audio and video quality revival.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+    * 
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+    * 
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get The task ID. 
-     * @return TaskId The task ID.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID.
-     * @param TaskId The task ID.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The task flow status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH`</li> 
-     * @return Status The task flow status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH`</li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The task flow status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH`</li>
-     * @param Status The task flow status. Valid values:
-<li>`PROCESSING`</li>
-<li>`FINISH`</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The error code. `0` indicates the task is successful. Other values indicate that the task failed.
-<li>`40000`: Invalid input parameter.</li>
-<li>`60000`: Source file error (e.g., video data is corrupted).</li>
-<li>`70000`: Internal server error. Please try again.</li> 
-     * @return ErrCode The error code. `0` indicates the task is successful. Other values indicate that the task failed.
-<li>`40000`: Invalid input parameter.</li>
-<li>`60000`: Source file error (e.g., video data is corrupted).</li>
-<li>`70000`: Internal server error. Please try again.</li>
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set The error code. `0` indicates the task is successful. Other values indicate that the task failed.
-<li>`40000`: Invalid input parameter.</li>
-<li>`60000`: Source file error (e.g., video data is corrupted).</li>
-<li>`70000`: Internal server error. Please try again.</li>
-     * @param ErrCode The error code. `0` indicates the task is successful. Other values indicate that the task failed.
-<li>`40000`: Invalid input parameter.</li>
-<li>`60000`: Source file error (e.g., video data is corrupted).</li>
-<li>`70000`: Internal server error. Please try again.</li>
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get The error message. 
-     * @return Message The error message.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set The error message.
-     * @param Message The error message.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing). 
-     * @return ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
-     * @param ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get The task progress. Value range: 0-100. 
-     * @return Progress The task progress. Value range: 0-100.
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set The task progress. Value range: 0-100.
-     * @param Progress The task progress. Value range: 0-100.
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input of the audio and video quality regeneration task. 
-     * @return Input Input of the audio and video quality regeneration task.
+     * Get  
+     * @return Input 
      */
     public RebuildMediaTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the audio and video quality regeneration task.
-     * @param Input Input of the audio and video quality regeneration task.
+     * Set 
+     * @param Input 
      */
     public void setInput(RebuildMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of the audio and video quality regeneration task. 
-     * @return Output Output of the audio and video quality regeneration task.
+     * Get  
+     * @return Output 
      */
     public RebuildMediaTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the audio and video quality regeneration task.
-     * @param Output Output of the audio and video quality regeneration task.
+     * Set 
+     * @param Output 
      */
     public void setOutput(RebuildMediaTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Metadata of the output video after audio and video quality revival. 
-     * @return MetaData Metadata of the output video after audio and video quality revival.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Metadata of the output video after audio and video quality revival.
-     * @param MetaData Metadata of the output video after audio and video quality revival.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified. 
-     * @return SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+     * Get  
+     * @return SessionId 
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
-     * @param SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+     * Set 
+     * @param SessionId 
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters. 
-     * @return SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * Get  
+     * @return SessionContext 
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-     * @param SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * Set 
+     * @param SessionContext 
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

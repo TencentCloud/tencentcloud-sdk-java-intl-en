@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBlindWatermarkTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of digital watermark template details.
+    * 
     */
     @SerializedName("BlindWatermarkTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBlindWatermarkTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of digital watermark template details. 
-     * @return BlindWatermarkTemplateSet List of digital watermark template details.
+     * Get  
+     * @return BlindWatermarkTemplateSet 
      */
     public BlindWatermarkTemplate [] getBlindWatermarkTemplateSet() {
         return this.BlindWatermarkTemplateSet;
     }
 
     /**
-     * Set List of digital watermark template details.
-     * @param BlindWatermarkTemplateSet List of digital watermark template details.
+     * Set 
+     * @param BlindWatermarkTemplateSet 
      */
     public void setBlindWatermarkTemplateSet(BlindWatermarkTemplate [] BlindWatermarkTemplateSet) {
         this.BlindWatermarkTemplateSet = BlindWatermarkTemplateSet;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class TempCertificate extends AbstractModel {
 
     /**
-    * Temporary security certificate ID.
+    * 
     */
     @SerializedName("SecretId")
     @Expose
     private String SecretId;
 
     /**
-    * Temporary security certificate `Key`.
+    * 
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * Token value.
+    * 
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+    * 
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-     * Get Temporary security certificate ID. 
-     * @return SecretId Temporary security certificate ID.
+     * Get  
+     * @return SecretId 
      */
     public String getSecretId() {
         return this.SecretId;
     }
 
     /**
-     * Set Temporary security certificate ID.
-     * @param SecretId Temporary security certificate ID.
+     * Set 
+     * @param SecretId 
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get Temporary security certificate `Key`. 
-     * @return SecretKey Temporary security certificate `Key`.
+     * Get  
+     * @return SecretKey 
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set Temporary security certificate `Key`.
-     * @param SecretKey Temporary security certificate `Key`.
+     * Set 
+     * @param SecretKey 
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get Token value. 
-     * @return Token Token value.
+     * Get  
+     * @return Token 
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set Token value.
-     * @param Token Token value.
+     * Set 
+     * @param Token 
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second. 
-     * @return ExpiredTime Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+     * Get  
+     * @return ExpiredTime 
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
-     * @param ExpiredTime Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+     * Set 
+     * @param ExpiredTime 
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

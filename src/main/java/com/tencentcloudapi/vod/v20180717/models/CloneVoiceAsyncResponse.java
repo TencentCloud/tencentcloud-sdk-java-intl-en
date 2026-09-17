@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CloneVoiceAsyncResponse extends AbstractModel {
 
     /**
-    * <p>Task ID. Use this ID to query the result.</p>
+    * 
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CloneVoiceAsyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Task ID. Use this ID to query the result.</p> 
-     * @return TaskId <p>Task ID. Use this ID to query the result.</p>
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task ID. Use this ID to query the result.</p>
-     * @param TaskId <p>Task ID. Use this ID to query the result.</p>
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

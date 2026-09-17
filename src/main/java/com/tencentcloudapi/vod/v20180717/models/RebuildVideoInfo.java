@@ -24,308 +24,253 @@ import java.util.HashMap;
 public class RebuildVideoInfo extends AbstractModel {
 
     /**
-    * The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RepairInfo")
     @Expose
     private RepairInfo RepairInfo;
 
     /**
-    * The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VideoFrameInterpolationInfo")
     @Expose
     private VideoFrameInterpolationInfo VideoFrameInterpolationInfo;
 
     /**
-    * The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SuperResolutionInfo")
     @Expose
     private SuperResolutionInfo SuperResolutionInfo;
 
     /**
-    * The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("HDRInfo")
     @Expose
     private HDRInfo HDRInfo;
 
     /**
-    * The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VideoDenoiseInfo")
     @Expose
     private VideoDenoiseInfo VideoDenoiseInfo;
 
     /**
-    * The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ColorInfo")
     @Expose
     private ColorEnhanceInfo ColorInfo;
 
     /**
-    * The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SharpInfo")
     @Expose
     private SharpEnhanceInfo SharpInfo;
 
     /**
-    * The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FaceInfo")
     @Expose
     private FaceEnhanceInfo FaceInfo;
 
     /**
-    * The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("LowLightInfo")
     @Expose
     private LowLightEnhanceInfo LowLightInfo;
 
     /**
-    * The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ScratchRepairInfo")
     @Expose
     private ScratchRepairInfo ScratchRepairInfo;
 
     /**
-    * The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ArtifactRepairInfo")
     @Expose
     private ArtifactRepairInfo ArtifactRepairInfo;
 
     /**
-     * Get The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RepairInfo The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RepairInfo 
      */
     public RepairInfo getRepairInfo() {
         return this.RepairInfo;
     }
 
     /**
-     * Set The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RepairInfo The image restoration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RepairInfo 
      */
     public void setRepairInfo(RepairInfo RepairInfo) {
         this.RepairInfo = RepairInfo;
     }
 
     /**
-     * Get The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VideoFrameInterpolationInfo The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VideoFrameInterpolationInfo 
      */
     public VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() {
         return this.VideoFrameInterpolationInfo;
     }
 
     /**
-     * Set The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoFrameInterpolationInfo The smart frame interpolation parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VideoFrameInterpolationInfo 
      */
     public void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo VideoFrameInterpolationInfo) {
         this.VideoFrameInterpolationInfo = VideoFrameInterpolationInfo;
     }
 
     /**
-     * Get The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuperResolutionInfo The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SuperResolutionInfo 
      */
     public SuperResolutionInfo getSuperResolutionInfo() {
         return this.SuperResolutionInfo;
     }
 
     /**
-     * Set The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuperResolutionInfo The super resolution parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SuperResolutionInfo 
      */
     public void setSuperResolutionInfo(SuperResolutionInfo SuperResolutionInfo) {
         this.SuperResolutionInfo = SuperResolutionInfo;
     }
 
     /**
-     * Get The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HDRInfo The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return HDRInfo 
      */
     public HDRInfo getHDRInfo() {
         return this.HDRInfo;
     }
 
     /**
-     * Set The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HDRInfo The high dynamic range (HDR) configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param HDRInfo 
      */
     public void setHDRInfo(HDRInfo HDRInfo) {
         this.HDRInfo = HDRInfo;
     }
 
     /**
-     * Get The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VideoDenoiseInfo The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VideoDenoiseInfo 
      */
     public VideoDenoiseInfo getVideoDenoiseInfo() {
         return this.VideoDenoiseInfo;
     }
 
     /**
-     * Set The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoDenoiseInfo The image noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VideoDenoiseInfo 
      */
     public void setVideoDenoiseInfo(VideoDenoiseInfo VideoDenoiseInfo) {
         this.VideoDenoiseInfo = VideoDenoiseInfo;
     }
 
     /**
-     * Get The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ColorInfo The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ColorInfo 
      */
     public ColorEnhanceInfo getColorInfo() {
         return this.ColorInfo;
     }
 
     /**
-     * Set The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ColorInfo The color enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ColorInfo 
      */
     public void setColorInfo(ColorEnhanceInfo ColorInfo) {
         this.ColorInfo = ColorInfo;
     }
 
     /**
-     * Get The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SharpInfo The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SharpInfo 
      */
     public SharpEnhanceInfo getSharpInfo() {
         return this.SharpInfo;
     }
 
     /**
-     * Set The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SharpInfo The detail enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SharpInfo 
      */
     public void setSharpInfo(SharpEnhanceInfo SharpInfo) {
         this.SharpInfo = SharpInfo;
     }
 
     /**
-     * Get The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FaceInfo The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FaceInfo 
      */
     public FaceEnhanceInfo getFaceInfo() {
         return this.FaceInfo;
     }
 
     /**
-     * Set The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FaceInfo The face enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FaceInfo 
      */
     public void setFaceInfo(FaceEnhanceInfo FaceInfo) {
         this.FaceInfo = FaceInfo;
     }
 
     /**
-     * Get The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LowLightInfo The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return LowLightInfo 
      */
     public LowLightEnhanceInfo getLowLightInfo() {
         return this.LowLightInfo;
     }
 
     /**
-     * Set The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LowLightInfo The low-light enhancement parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param LowLightInfo 
      */
     public void setLowLightInfo(LowLightEnhanceInfo LowLightInfo) {
         this.LowLightInfo = LowLightInfo;
     }
 
     /**
-     * Get The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScratchRepairInfo The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ScratchRepairInfo 
      */
     public ScratchRepairInfo getScratchRepairInfo() {
         return this.ScratchRepairInfo;
     }
 
     /**
-     * Set The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScratchRepairInfo The banding removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ScratchRepairInfo 
      */
     public void setScratchRepairInfo(ScratchRepairInfo ScratchRepairInfo) {
         this.ScratchRepairInfo = ScratchRepairInfo;
     }
 
     /**
-     * Get The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ArtifactRepairInfo The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ArtifactRepairInfo 
      */
     public ArtifactRepairInfo getArtifactRepairInfo() {
         return this.ArtifactRepairInfo;
     }
 
     /**
-     * Set The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ArtifactRepairInfo The artifact removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ArtifactRepairInfo 
      */
     public void setArtifactRepairInfo(ArtifactRepairInfo ArtifactRepairInfo) {
         this.ArtifactRepairInfo = ArtifactRepairInfo;

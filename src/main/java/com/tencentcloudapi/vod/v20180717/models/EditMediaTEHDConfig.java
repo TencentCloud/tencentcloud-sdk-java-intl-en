@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class EditMediaTEHDConfig extends AbstractModel {
 
     /**
-    * TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+    * 
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF. 
-     * @return Type TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
-     * @param Type TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap. 
-     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+     * Get  
+     * @return MaxVideoBitrate 
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
-     * @param MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+     * Set 
+     * @param MaxVideoBitrate 
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

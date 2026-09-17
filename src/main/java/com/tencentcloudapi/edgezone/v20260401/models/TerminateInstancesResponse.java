@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class TerminateInstancesResponse extends AbstractModel {
 
     /**
-    * List of instance IDs successfully terminated.
+    * <p>List of instance IDs successfully terminated.</p>
     */
     @SerializedName("InstanceIdSet")
     @Expose
     private String [] InstanceIdSet;
 
     /**
-    * List of instances with termination failed (returned when partially successful).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>List of instances with termination failed (returned when partially successful).</p>
     */
     @SerializedName("FailedInstanceSet")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of instance IDs successfully terminated. 
-     * @return InstanceIdSet List of instance IDs successfully terminated.
+     * Get <p>List of instance IDs successfully terminated.</p> 
+     * @return InstanceIdSet <p>List of instance IDs successfully terminated.</p>
      */
     public String [] getInstanceIdSet() {
         return this.InstanceIdSet;
     }
 
     /**
-     * Set List of instance IDs successfully terminated.
-     * @param InstanceIdSet List of instance IDs successfully terminated.
+     * Set <p>List of instance IDs successfully terminated.</p>
+     * @param InstanceIdSet <p>List of instance IDs successfully terminated.</p>
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
         this.InstanceIdSet = InstanceIdSet;
     }
 
     /**
-     * Get List of instances with termination failed (returned when partially successful).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailedInstanceSet List of instances with termination failed (returned when partially successful).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>List of instances with termination failed (returned when partially successful).</p> 
+     * @return FailedInstanceSet <p>List of instances with termination failed (returned when partially successful).</p>
      */
     public FailedInstance [] getFailedInstanceSet() {
         return this.FailedInstanceSet;
     }
 
     /**
-     * Set List of instances with termination failed (returned when partially successful).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailedInstanceSet List of instances with termination failed (returned when partially successful).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>List of instances with termination failed (returned when partially successful).</p>
+     * @param FailedInstanceSet <p>List of instances with termination failed (returned when partially successful).</p>
      */
     public void setFailedInstanceSet(FailedInstance [] FailedInstanceSet) {
         this.FailedInstanceSet = FailedInstanceSet;

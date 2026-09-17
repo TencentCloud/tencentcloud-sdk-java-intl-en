@@ -24,104 +24,69 @@ import java.util.HashMap;
 public class PornImageResult extends AbstractModel {
 
     /**
-    * The confidence score for the moderation result. Value range: 0-100.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+    * 
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
+    * 
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-     * Get The confidence score for the moderation result. Value range: 0-100. 
-     * @return Confidence The confidence score for the moderation result. Value range: 0-100.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score for the moderation result. Value range: 0-100.
-     * @param Confidence The confidence score for the moderation result. Value range: 0-100.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li> 
-     * @return Suggestion The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+     * Get  
+     * @return Suggestion 
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
-     * @param Suggestion The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+     * Set 
+     * @param Suggestion 
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li> 
-     * @return Label The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
+     * Get  
+     * @return Label 
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
-     * @param Label The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
+     * Set 
+     * @param Label 
      */
     public void setLabel(String Label) {
         this.Label = Label;

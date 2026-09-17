@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AigcTextDetail extends AbstractModel {
 
     /**
-    * <p>Entries per page</p>
+    * 
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * <p>The scroll_token returned in response on the previous page is used to turn to the next page</p>
+    * 
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-    * <p>Raw data details</p>
+    * 
     */
     @SerializedName("Data")
     @Expose
     private AigcTextDetailData [] Data;
 
     /**
-     * Get <p>Entries per page</p> 
-     * @return PageSize <p>Entries per page</p>
+     * Get  
+     * @return PageSize 
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set <p>Entries per page</p>
-     * @param PageSize <p>Entries per page</p>
+     * Set 
+     * @param PageSize 
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get <p>The scroll_token returned in response on the previous page is used to turn to the next page</p> 
-     * @return ScrollToken <p>The scroll_token returned in response on the previous page is used to turn to the next page</p>
+     * Get  
+     * @return ScrollToken 
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set <p>The scroll_token returned in response on the previous page is used to turn to the next page</p>
-     * @param ScrollToken <p>The scroll_token returned in response on the previous page is used to turn to the next page</p>
+     * Set 
+     * @param ScrollToken 
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;
     }
 
     /**
-     * Get <p>Raw data details</p> 
-     * @return Data <p>Raw data details</p>
+     * Get  
+     * @return Data 
      */
     public AigcTextDetailData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>Raw data details</p>
-     * @param Data <p>Raw data details</p>
+     * Set 
+     * @param Data 
      */
     public void setData(AigcTextDetailData [] Data) {
         this.Data = Data;

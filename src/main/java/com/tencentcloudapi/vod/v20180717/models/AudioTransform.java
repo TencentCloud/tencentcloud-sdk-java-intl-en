@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class AudioTransform extends AbstractModel {
 
     /**
-    * Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Audio volume adjustment parameter. Valid when Type = Volume.
+    * 
     */
     @SerializedName("VolumeParam")
     @Expose
     private AudioVolumeParam VolumeParam;
 
     /**
-     * Get Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li> 
-     * @return Type Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
-     * @param Type Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Audio volume adjustment parameter. Valid when Type = Volume. 
-     * @return VolumeParam Audio volume adjustment parameter. Valid when Type = Volume.
+     * Get  
+     * @return VolumeParam 
      */
     public AudioVolumeParam getVolumeParam() {
         return this.VolumeParam;
     }
 
     /**
-     * Set Audio volume adjustment parameter. Valid when Type = Volume.
-     * @param VolumeParam Audio volume adjustment parameter. Valid when Type = Volume.
+     * Set 
+     * @param VolumeParam 
      */
     public void setVolumeParam(AudioVolumeParam VolumeParam) {
         this.VolumeParam = VolumeParam;

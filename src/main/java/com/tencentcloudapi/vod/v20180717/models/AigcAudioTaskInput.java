@@ -24,184 +24,230 @@ import java.util.HashMap;
 public class AigcAudioTaskInput extends AbstractModel {
 
     /**
-    * <p>Model name.</p>
+    * 
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * <p>Model version.</p>
+    * 
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
+    * 
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-    * <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+    * 
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
+    * 
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
+    * 
+    */
+    @SerializedName("AudioInfos")
+    @Expose
+    private AigcAudioReferenceAudioInfo [] AudioInfos;
+
+    /**
+    * 
+    */
+    @SerializedName("VideoInfos")
+    @Expose
+    private AigcAudioReferenceVideoInfo [] VideoInfos;
+
+    /**
+    * 
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private Boolean EnhancePrompt;
 
     /**
-    * <p>Output file of the AIGC image generation result.</p>
+    * 
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcAudioOutputConfig OutputConfig;
 
     /**
-    * <p>Additional parameter</p>
+    * 
     */
     @SerializedName("AdditionalParameters")
     @Expose
     private String AdditionalParameters;
 
     /**
-     * Get <p>Model name.</p> 
-     * @return ModelName <p>Model name.</p>
+     * Get  
+     * @return ModelName 
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>Model name.</p>
-     * @param ModelName <p>Model name.</p>
+     * Set 
+     * @param ModelName 
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get <p>Model version.</p> 
-     * @return ModelVersion <p>Model version.</p>
+     * Get  
+     * @return ModelVersion 
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>Model version.</p>
-     * @param ModelVersion <p>Model version.</p>
+     * Set 
+     * @param ModelVersion 
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p> 
-     * @return SceneType <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
+     * Get  
+     * @return SceneType 
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
-     * @param SceneType <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
+     * Set 
+     * @param SceneType 
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p> 
-     * @return Prompt <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * Get  
+     * @return Prompt 
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
-     * @param Prompt <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * Set 
+     * @param Prompt 
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p> 
-     * @return NegativePrompt <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
+     * Get  
+     * @return NegativePrompt 
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
-     * @param NegativePrompt <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
+     * Set 
+     * @param NegativePrompt 
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p> 
-     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
+     * Get  
+     * @return AudioInfos 
+     */
+    public AigcAudioReferenceAudioInfo [] getAudioInfos() {
+        return this.AudioInfos;
+    }
+
+    /**
+     * Set 
+     * @param AudioInfos 
+     */
+    public void setAudioInfos(AigcAudioReferenceAudioInfo [] AudioInfos) {
+        this.AudioInfos = AudioInfos;
+    }
+
+    /**
+     * Get  
+     * @return VideoInfos 
+     */
+    public AigcAudioReferenceVideoInfo [] getVideoInfos() {
+        return this.VideoInfos;
+    }
+
+    /**
+     * Set 
+     * @param VideoInfos 
+     */
+    public void setVideoInfos(AigcAudioReferenceVideoInfo [] VideoInfos) {
+        this.VideoInfos = VideoInfos;
+    }
+
+    /**
+     * Get  
+     * @return EnhancePrompt 
      */
     public Boolean getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
-     * @param EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
+     * Set 
+     * @param EnhancePrompt 
      */
     public void setEnhancePrompt(Boolean EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get <p>Output file of the AIGC image generation result.</p> 
-     * @return OutputConfig <p>Output file of the AIGC image generation result.</p>
+     * Get  
+     * @return OutputConfig 
      */
     public AigcAudioOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output file of the AIGC image generation result.</p>
-     * @param OutputConfig <p>Output file of the AIGC image generation result.</p>
+     * Set 
+     * @param OutputConfig 
      */
     public void setOutputConfig(AigcAudioOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get <p>Additional parameter</p> 
-     * @return AdditionalParameters <p>Additional parameter</p>
+     * Get  
+     * @return AdditionalParameters 
      */
     public String getAdditionalParameters() {
         return this.AdditionalParameters;
     }
 
     /**
-     * Set <p>Additional parameter</p>
-     * @param AdditionalParameters <p>Additional parameter</p>
+     * Set 
+     * @param AdditionalParameters 
      */
     public void setAdditionalParameters(String AdditionalParameters) {
         this.AdditionalParameters = AdditionalParameters;
@@ -230,6 +276,18 @@ public class AigcAudioTaskInput extends AbstractModel {
         if (source.NegativePrompt != null) {
             this.NegativePrompt = new String(source.NegativePrompt);
         }
+        if (source.AudioInfos != null) {
+            this.AudioInfos = new AigcAudioReferenceAudioInfo[source.AudioInfos.length];
+            for (int i = 0; i < source.AudioInfos.length; i++) {
+                this.AudioInfos[i] = new AigcAudioReferenceAudioInfo(source.AudioInfos[i]);
+            }
+        }
+        if (source.VideoInfos != null) {
+            this.VideoInfos = new AigcAudioReferenceVideoInfo[source.VideoInfos.length];
+            for (int i = 0; i < source.VideoInfos.length; i++) {
+                this.VideoInfos[i] = new AigcAudioReferenceVideoInfo(source.VideoInfos[i]);
+            }
+        }
         if (source.EnhancePrompt != null) {
             this.EnhancePrompt = new Boolean(source.EnhancePrompt);
         }
@@ -251,6 +309,8 @@ public class AigcAudioTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
+        this.setParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
+        this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);

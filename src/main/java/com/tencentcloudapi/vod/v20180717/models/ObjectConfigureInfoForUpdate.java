@@ -24,71 +24,46 @@ import java.util.HashMap;
 public class ObjectConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
+    * 
     */
     @SerializedName("ObjectLibrary")
     @Expose
     private String ObjectLibrary;
 
     /**
-     * Get Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li> 
-     * @return Switch Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
-     * @param Switch Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li> 
-     * @return ObjectLibrary Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
+     * Get  
+     * @return ObjectLibrary 
      */
     public String getObjectLibrary() {
         return this.ObjectLibrary;
     }
 
     /**
-     * Set Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
-     * @param ObjectLibrary Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
+     * Set 
+     * @param ObjectLibrary 
      */
     public void setObjectLibrary(String ObjectLibrary) {
         this.ObjectLibrary = ObjectLibrary;

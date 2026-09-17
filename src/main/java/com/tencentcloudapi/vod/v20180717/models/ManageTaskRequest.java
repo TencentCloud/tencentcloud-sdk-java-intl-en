@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class ManageTaskRequest extends AbstractModel {
 
     /**
-    * Task ID of the video processing task.
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
+    * 
     */
     @SerializedName("OperationType")
     @Expose
     private String OperationType;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Task ID of the video processing task. 
-     * @return TaskId Task ID of the video processing task.
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID of the video processing task.
-     * @param TaskId Task ID of the video processing task.
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li> 
-     * @return OperationType Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
+     * Get  
+     * @return OperationType 
      */
     public String getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
-     * @param OperationType Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
+     * Set 
+     * @param OperationType 
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

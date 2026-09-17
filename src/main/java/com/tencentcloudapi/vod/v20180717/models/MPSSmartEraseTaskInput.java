@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MPSSmartEraseTaskInput extends AbstractModel {
 
     /**
-    * <p>id of the intelligent erasing template.</p>
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
+    * 
     */
     @SerializedName("RawParameter")
     @Expose
     private MPSRawSmartEraseParameter RawParameter;
 
     /**
-    * <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+    * 
     */
     @SerializedName("OverrideParameter")
     @Expose
     private MPSOverrideEraseParameter OverrideParameter;
 
     /**
-     * Get <p>id of the intelligent erasing template.</p> 
-     * @return Definition <p>id of the intelligent erasing template.</p>
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>id of the intelligent erasing template.</p>
-     * @param Definition <p>id of the intelligent erasing template.</p>
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p> 
-     * @return RawParameter <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
+     * Get  
+     * @return RawParameter 
      */
     public MPSRawSmartEraseParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
-     * @param RawParameter <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
+     * Set 
+     * @param RawParameter 
      */
     public void setRawParameter(MPSRawSmartEraseParameter RawParameter) {
         this.RawParameter = RawParameter;
     }
 
     /**
-     * Get <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p> 
-     * @return OverrideParameter <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+     * Get  
+     * @return OverrideParameter 
      */
     public MPSOverrideEraseParameter getOverrideParameter() {
         return this.OverrideParameter;
     }
 
     /**
-     * Set <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
-     * @param OverrideParameter <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+     * Set 
+     * @param OverrideParameter 
      */
     public void setOverrideParameter(MPSOverrideEraseParameter OverrideParameter) {
         this.OverrideParameter = OverrideParameter;

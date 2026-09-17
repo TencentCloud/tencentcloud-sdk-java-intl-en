@@ -24,122 +24,92 @@ import java.util.HashMap;
 public class SplitMediaTaskConfig extends AbstractModel {
 
     /**
-    * The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
+    * 
     */
     @SerializedName("ProcedureName")
     @Expose
     private String ProcedureName;
 
     /**
-    * The video is split into strips to output information.
+    * 
     */
     @SerializedName("OutputConfig")
     @Expose
     private SplitMediaOutputConfig OutputConfig;
 
     /**
-     * Get The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li> 
-     * @return StartTimeOffset The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
-     * @param StartTimeOffset The offset time of the start of video stripping, unit: seconds. 
-<li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li> 
-     * @return EndTimeOffset Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
-     * @param EndTimeOffset Offset time at the end of video stripping, unit: seconds. 
-<li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-<li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-<li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video. 
-     * @return ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
+     * Get  
+     * @return ProcedureName 
      */
     public String getProcedureName() {
         return this.ProcedureName;
     }
 
     /**
-     * Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
-     * @param ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
+     * Set 
+     * @param ProcedureName 
      */
     public void setProcedureName(String ProcedureName) {
         this.ProcedureName = ProcedureName;
     }
 
     /**
-     * Get The video is split into strips to output information. 
-     * @return OutputConfig The video is split into strips to output information.
+     * Get  
+     * @return OutputConfig 
      */
     public SplitMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set The video is split into strips to output information.
-     * @param OutputConfig The video is split into strips to output information.
+     * Set 
+     * @param OutputConfig 
      */
     public void setOutputConfig(SplitMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

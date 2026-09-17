@@ -24,76 +24,46 @@ import java.util.HashMap;
 public class FileReviewInfo extends AbstractModel {
 
     /**
-    * Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MediaReviewInfo")
     @Expose
     private ReviewInfo MediaReviewInfo;
 
     /**
-    * Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CoverReviewInfo")
     @Expose
     private ReviewInfo CoverReviewInfo;
 
     /**
-     * Get Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MediaReviewInfo Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MediaReviewInfo 
      */
     public ReviewInfo getMediaReviewInfo() {
         return this.MediaReviewInfo;
     }
 
     /**
-     * Set Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaReviewInfo Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MediaReviewInfo 
      */
     public void setMediaReviewInfo(ReviewInfo MediaReviewInfo) {
         this.MediaReviewInfo = MediaReviewInfo;
     }
 
     /**
-     * Get Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CoverReviewInfo Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CoverReviewInfo 
      */
     public ReviewInfo getCoverReviewInfo() {
         return this.CoverReviewInfo;
     }
 
     /**
-     * Set Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CoverReviewInfo Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CoverReviewInfo 
      */
     public void setCoverReviewInfo(ReviewInfo CoverReviewInfo) {
         this.CoverReviewInfo = CoverReviewInfo;

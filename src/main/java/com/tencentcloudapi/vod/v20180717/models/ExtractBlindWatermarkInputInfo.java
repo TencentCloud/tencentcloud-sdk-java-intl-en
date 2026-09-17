@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ExtractBlindWatermarkInputInfo extends AbstractModel {
 
     /**
-    * Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Media file ID to extract
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Video file url to extract
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li> 
-     * @return Type Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
-     * @param Type Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Media file ID to extract 
-     * @return FileId Media file ID to extract
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID to extract
-     * @param FileId Media file ID to extract
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Video file url to extract 
-     * @return Url Video file url to extract
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Video file url to extract
-     * @param Url Video file url to extract
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;

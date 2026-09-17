@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DesignVoiceAsyncResponse extends AbstractModel {
 
     /**
-    * <p>Task ID, used when querying a task.</p>
+    * 
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class DesignVoiceAsyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Task ID, used when querying a task.</p> 
-     * @return TaskId <p>Task ID, used when querying a task.</p>
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task ID, used when querying a task.</p>
-     * @param TaskId <p>Task ID, used when querying a task.</p>
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

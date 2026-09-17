@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class CacheConfigNoCache extends AbstractModel {
 
     /**
-    * Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+    * Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+    * Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Revalidate")
     @Expose
     private String Revalidate;
 
     /**
-     * Get Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Get Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+     * Set Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li> 
-     * @return Revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+     * Get Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Revalidate Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getRevalidate() {
         return this.Revalidate;
     }
 
     /**
-     * Set Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
-     * @param Revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+     * Set Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Revalidate Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setRevalidate(String Revalidate) {
         this.Revalidate = Revalidate;

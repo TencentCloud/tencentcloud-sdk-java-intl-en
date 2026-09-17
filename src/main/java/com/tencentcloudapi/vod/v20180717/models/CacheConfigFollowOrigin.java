@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class CacheConfigFollowOrigin extends AbstractModel {
 
     /**
-    * The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+    * Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Heuristic cache configuration.
+    * 
     */
     @SerializedName("HeuristicCache")
     @Expose
     private HeuristicCache HeuristicCache;
 
     /**
-     * Get The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li> 
-     * @return Switch The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Get Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li> 
+     * @return Switch Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-     * @param Switch The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+     * Set Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+     * @param Switch Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Heuristic cache configuration. 
-     * @return HeuristicCache Heuristic cache configuration.
+     * Get  
+     * @return HeuristicCache 
      */
     public HeuristicCache getHeuristicCache() {
         return this.HeuristicCache;
     }
 
     /**
-     * Set Heuristic cache configuration.
-     * @param HeuristicCache Heuristic cache configuration.
+     * Set 
+     * @param HeuristicCache 
      */
     public void setHeuristicCache(HeuristicCache HeuristicCache) {
         this.HeuristicCache = HeuristicCache;

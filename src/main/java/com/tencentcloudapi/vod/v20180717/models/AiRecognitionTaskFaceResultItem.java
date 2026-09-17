@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
-    * Unique ID of figure.
+    * 
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Figure name.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Result set of segments that contain a figure.
+    * 
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskFaceSegmentItem [] SegmentSet;
 
     /**
-     * Get Unique ID of figure. 
-     * @return Id Unique ID of figure.
+     * Get  
+     * @return Id 
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of figure.
-     * @param Id Unique ID of figure.
+     * Set 
+     * @param Id 
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li> 
-     * @return Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-     * @param Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Figure name. 
-     * @return Name Figure name.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Figure name.
-     * @param Name Figure name.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Result set of segments that contain a figure. 
-     * @return SegmentSet Result set of segments that contain a figure.
+     * Get  
+     * @return SegmentSet 
      */
     public AiRecognitionTaskFaceSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Result set of segments that contain a figure.
-     * @param SegmentSet Result set of segments that contain a figure.
+     * Set 
+     * @param SegmentSet 
      */
     public void setSegmentSet(AiRecognitionTaskFaceSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

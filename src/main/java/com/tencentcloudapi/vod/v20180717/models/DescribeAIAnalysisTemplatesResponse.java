@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAIAnalysisTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * 
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Audio and video content analysis template detail list.
+    * 
     */
     @SerializedName("AIAnalysisTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAIAnalysisTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get  
+     * @return TotalCount 
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set 
+     * @param TotalCount 
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Audio and video content analysis template detail list. 
-     * @return AIAnalysisTemplateSet Audio and video content analysis template detail list.
+     * Get  
+     * @return AIAnalysisTemplateSet 
      */
     public AIAnalysisTemplateItem [] getAIAnalysisTemplateSet() {
         return this.AIAnalysisTemplateSet;
     }
 
     /**
-     * Set Audio and video content analysis template detail list.
-     * @param AIAnalysisTemplateSet Audio and video content analysis template detail list.
+     * Set 
+     * @param AIAnalysisTemplateSet 
      */
     public void setAIAnalysisTemplateSet(AIAnalysisTemplateItem [] AIAnalysisTemplateSet) {
         this.AIAnalysisTemplateSet = AIAnalysisTemplateSet;

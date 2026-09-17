@@ -24,194 +24,184 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+    * 
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Filter criteria: file ID.
+    * 
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Filter condition: Task creation time.
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private TimeRange CreateTime;
 
     /**
-    * Filter condition: Task end time.
+    * 
     */
     @SerializedName("FinishTime")
     @Expose
     private TimeRange FinishTime;
 
     /**
-    * Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li>
+    * 
     */
     @SerializedName("Sort")
     @Expose
     private SortBy Sort;
 
     /**
-    * Number of returned entries. Default value: 10. Maximum value: 100.
+    * 
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
+    * 
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Get  
+     * @return SubAppId 
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * Set 
+     * @param SubAppId 
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed). 
-     * @return Status Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
-     * @param Status Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Filter criteria: file ID. 
-     * @return FileId Filter criteria: file ID.
+     * Get  
+     * @return FileId 
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Filter criteria: file ID.
-     * @param FileId Filter criteria: file ID.
+     * Set 
+     * @param FileId 
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Filter condition: Task creation time. 
-     * @return CreateTime Filter condition: Task creation time.
+     * Get  
+     * @return CreateTime 
      */
     public TimeRange getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Filter condition: Task creation time.
-     * @param CreateTime Filter condition: Task creation time.
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(TimeRange CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Filter condition: Task end time. 
-     * @return FinishTime Filter condition: Task end time.
+     * Get  
+     * @return FinishTime 
      */
     public TimeRange getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Filter condition: Task end time.
-     * @param FinishTime Filter condition: Task end time.
+     * Set 
+     * @param FinishTime 
      */
     public void setFinishTime(TimeRange FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li> 
-     * @return Sort Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li>
+     * Get  
+     * @return Sort 
      */
     public SortBy getSort() {
         return this.Sort;
     }
 
     /**
-     * Set Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li>
-     * @param Sort Sorting method. Selectable fields for Sort.Field:
-<li> CreateTime Task creation time.</li>
-<li>FinishTime Task end time.</li>
+     * Set 
+     * @param Sort 
      */
     public void setSort(SortBy Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
-     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Get  
+     * @return Limit 
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Set 
+     * @param Limit 
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record. 
-     * @return ScrollToken Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
+     * Get  
+     * @return ScrollToken 
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
-     * @param ScrollToken Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
+     * Set 
+     * @param ScrollToken 
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class KnowledgeBasesInfo extends AbstractModel {
 
     /**
-    * <p>Current library list of media assets to import</p>
+    * 
     */
     @SerializedName("Bases")
     @Expose
     private String [] Bases;
 
     /**
-    * <p>Media analysis information in the knowledge base</p>
+    * 
     */
     @SerializedName("KnowledgeAnalysisInfos")
     @Expose
     private KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos;
 
     /**
-     * Get <p>Current library list of media assets to import</p> 
-     * @return Bases <p>Current library list of media assets to import</p>
+    * 
+    */
+    @SerializedName("KnowledgeBaseDetails")
+    @Expose
+    private KnowledgeBaseDetail [] KnowledgeBaseDetails;
+
+    /**
+     * Get  
+     * @return Bases 
      */
     public String [] getBases() {
         return this.Bases;
     }
 
     /**
-     * Set <p>Current library list of media assets to import</p>
-     * @param Bases <p>Current library list of media assets to import</p>
+     * Set 
+     * @param Bases 
      */
     public void setBases(String [] Bases) {
         this.Bases = Bases;
     }
 
     /**
-     * Get <p>Media analysis information in the knowledge base</p> 
-     * @return KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+     * Get  
+     * @return KnowledgeAnalysisInfos 
      */
     public KnowledgeAnalysisInfo [] getKnowledgeAnalysisInfos() {
         return this.KnowledgeAnalysisInfos;
     }
 
     /**
-     * Set <p>Media analysis information in the knowledge base</p>
-     * @param KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+     * Set 
+     * @param KnowledgeAnalysisInfos 
      */
     public void setKnowledgeAnalysisInfos(KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos) {
         this.KnowledgeAnalysisInfos = KnowledgeAnalysisInfos;
+    }
+
+    /**
+     * Get  
+     * @return KnowledgeBaseDetails 
+     */
+    public KnowledgeBaseDetail [] getKnowledgeBaseDetails() {
+        return this.KnowledgeBaseDetails;
+    }
+
+    /**
+     * Set 
+     * @param KnowledgeBaseDetails 
+     */
+    public void setKnowledgeBaseDetails(KnowledgeBaseDetail [] KnowledgeBaseDetails) {
+        this.KnowledgeBaseDetails = KnowledgeBaseDetails;
     }
 
     public KnowledgeBasesInfo() {
@@ -89,6 +112,12 @@ public class KnowledgeBasesInfo extends AbstractModel {
                 this.KnowledgeAnalysisInfos[i] = new KnowledgeAnalysisInfo(source.KnowledgeAnalysisInfos[i]);
             }
         }
+        if (source.KnowledgeBaseDetails != null) {
+            this.KnowledgeBaseDetails = new KnowledgeBaseDetail[source.KnowledgeBaseDetails.length];
+            for (int i = 0; i < source.KnowledgeBaseDetails.length; i++) {
+                this.KnowledgeBaseDetails[i] = new KnowledgeBaseDetail(source.KnowledgeBaseDetails[i]);
+            }
+        }
     }
 
 
@@ -98,6 +127,7 @@ public class KnowledgeBasesInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Bases.", this.Bases);
         this.setParamArrayObj(map, prefix + "KnowledgeAnalysisInfos.", this.KnowledgeAnalysisInfos);
+        this.setParamArrayObj(map, prefix + "KnowledgeBaseDetails.", this.KnowledgeBaseDetails);
 
     }
 }
