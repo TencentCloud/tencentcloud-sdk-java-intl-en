@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class QualityEvaluationConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Video quality evaluation switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Video quality rating filter threshold. Only time periods with values below this threshold are returned.
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Video quality evaluation switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li> 
+     * @return Switch Video quality evaluation switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Video quality evaluation switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
+     * @param Switch Video quality evaluation switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Score 
+     * Get Video quality rating filter threshold. Only time periods with values below this threshold are returned. 
+     * @return Score Video quality rating filter threshold. Only time periods with values below this threshold are returned.
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 
-     * @param Score 
+     * Set Video quality rating filter threshold. Only time periods with values below this threshold are returned.
+     * @param Score Video quality rating filter threshold. Only time periods with values below this threshold are returned.
      */
     public void setScore(Long Score) {
         this.Score = Score;

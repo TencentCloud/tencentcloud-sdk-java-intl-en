@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeKnowledgeBasesResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * <p>Knowledge base information list.</p>
     */
     @SerializedName("KnowledgeBaseSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeKnowledgeBasesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get <p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p> 
+     * @return TotalCount <p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set <p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p>
+     * @param TotalCount <p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return KnowledgeBaseSet 
+     * Get <p>Knowledge base information list.</p> 
+     * @return KnowledgeBaseSet <p>Knowledge base information list.</p>
      */
     public KnowledgeBaseInfo [] getKnowledgeBaseSet() {
         return this.KnowledgeBaseSet;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBaseSet 
+     * Set <p>Knowledge base information list.</p>
+     * @param KnowledgeBaseSet <p>Knowledge base information list.</p>
      */
     public void setKnowledgeBaseSet(KnowledgeBaseInfo [] KnowledgeBaseSet) {
         this.KnowledgeBaseSet = KnowledgeBaseSet;

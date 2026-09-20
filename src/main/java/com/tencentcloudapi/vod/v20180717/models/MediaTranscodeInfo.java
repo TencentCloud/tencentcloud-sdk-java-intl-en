@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MediaTranscodeInfo extends AbstractModel {
 
     /**
-    * 
+    * Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
     */
     @SerializedName("TranscodeSet")
     @Expose
     private MediaTranscodeItem [] TranscodeSet;
 
     /**
-     * Get  
-     * @return TranscodeSet 
+     * Get Transcoding information collection for each specification. Each element represents the transcoding result of a specification. 
+     * @return TranscodeSet Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
      */
     public MediaTranscodeItem [] getTranscodeSet() {
         return this.TranscodeSet;
     }
 
     /**
-     * Set 
-     * @param TranscodeSet 
+     * Set Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
+     * @param TranscodeSet Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
      */
     public void setTranscodeSet(MediaTranscodeItem [] TranscodeSet) {
         this.TranscodeSet = TranscodeSet;

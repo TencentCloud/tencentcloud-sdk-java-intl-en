@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
 
     /**
-    * 
+    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * 
+    * Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * Number of returned entries. Default value: 10. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Definitions 
+     * Get Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers. 
+     * @return Definitions Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set 
-     * @param Definitions 
+     * Set Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
+     * @param Definitions Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type. 
+     * @return Type Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+     * @param Type Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
+     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ApplyUploadResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Bucket, used as the bucket_name for uploading API URL.</p>
     */
     @SerializedName("StorageBucket")
     @Expose
     private String StorageBucket;
 
     /**
-    * 
+    * <p>Storage campus, used for the Region of the upload API Host.</p>
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * 
+    * <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
     */
     @SerializedName("VodSessionKey")
     @Expose
     private String VodSessionKey;
 
     /**
-    * 
+    * <p>Media storage path, the object Key for storing media uploaded through the API.</p>
     */
     @SerializedName("MediaStoragePath")
     @Expose
     private String MediaStoragePath;
 
     /**
-    * 
+    * <p>Cover storage path, the object Key for uploading and storing the cover via the API.</p>
     */
     @SerializedName("CoverStoragePath")
     @Expose
     private String CoverStoragePath;
 
     /**
-    * 
+    * <p>Temporary credentials for access verification of the upload API.</p>
     */
     @SerializedName("TempCertificate")
     @Expose
@@ -73,96 +73,96 @@ public class ApplyUploadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return StorageBucket 
+     * Get <p>Bucket, used as the bucket_name for uploading API URL.</p> 
+     * @return StorageBucket <p>Bucket, used as the bucket_name for uploading API URL.</p>
      */
     public String getStorageBucket() {
         return this.StorageBucket;
     }
 
     /**
-     * Set 
-     * @param StorageBucket 
+     * Set <p>Bucket, used as the bucket_name for uploading API URL.</p>
+     * @param StorageBucket <p>Bucket, used as the bucket_name for uploading API URL.</p>
      */
     public void setStorageBucket(String StorageBucket) {
         this.StorageBucket = StorageBucket;
     }
 
     /**
-     * Get  
-     * @return StorageRegion 
+     * Get <p>Storage campus, used for the Region of the upload API Host.</p> 
+     * @return StorageRegion <p>Storage campus, used for the Region of the upload API Host.</p>
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set 
-     * @param StorageRegion 
+     * Set <p>Storage campus, used for the Region of the upload API Host.</p>
+     * @param StorageRegion <p>Storage campus, used for the Region of the upload API Host.</p>
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get  
-     * @return VodSessionKey 
+     * Get <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p> 
+     * @return VodSessionKey <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
      */
     public String getVodSessionKey() {
         return this.VodSessionKey;
     }
 
     /**
-     * Set 
-     * @param VodSessionKey 
+     * Set <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+     * @param VodSessionKey <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
      */
     public void setVodSessionKey(String VodSessionKey) {
         this.VodSessionKey = VodSessionKey;
     }
 
     /**
-     * Get  
-     * @return MediaStoragePath 
+     * Get <p>Media storage path, the object Key for storing media uploaded through the API.</p> 
+     * @return MediaStoragePath <p>Media storage path, the object Key for storing media uploaded through the API.</p>
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set 
-     * @param MediaStoragePath 
+     * Set <p>Media storage path, the object Key for storing media uploaded through the API.</p>
+     * @param MediaStoragePath <p>Media storage path, the object Key for storing media uploaded through the API.</p>
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
-     * Get  
-     * @return CoverStoragePath 
+     * Get <p>Cover storage path, the object Key for uploading and storing the cover via the API.</p> 
+     * @return CoverStoragePath <p>Cover storage path, the object Key for uploading and storing the cover via the API.</p>
      */
     public String getCoverStoragePath() {
         return this.CoverStoragePath;
     }
 
     /**
-     * Set 
-     * @param CoverStoragePath 
+     * Set <p>Cover storage path, the object Key for uploading and storing the cover via the API.</p>
+     * @param CoverStoragePath <p>Cover storage path, the object Key for uploading and storing the cover via the API.</p>
      */
     public void setCoverStoragePath(String CoverStoragePath) {
         this.CoverStoragePath = CoverStoragePath;
     }
 
     /**
-     * Get  
-     * @return TempCertificate 
+     * Get <p>Temporary credentials for access verification of the upload API.</p> 
+     * @return TempCertificate <p>Temporary credentials for access verification of the upload API.</p>
      */
     public TempCertificate getTempCertificate() {
         return this.TempCertificate;
     }
 
     /**
-     * Set 
-     * @param TempCertificate 
+     * Set <p>Temporary credentials for access verification of the upload API.</p>
+     * @param TempCertificate <p>Temporary credentials for access verification of the upload API.</p>
      */
     public void setTempCertificate(TempCertificate TempCertificate) {
         this.TempCertificate = TempCertificate;

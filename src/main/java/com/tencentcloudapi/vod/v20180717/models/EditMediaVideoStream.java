@@ -24,138 +24,238 @@ import java.util.HashMap;
 public class EditMediaVideoStream extends AbstractModel {
 
     /**
-    * 
+    * Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding.</li>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 
+    * Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.
+When the value is 0 or not specified, it means VOD automatically sets the bitrate.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 
+    * Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
     private String ResolutionAdaptive;
 
     /**
-    * 
+    * Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 
+    * Video frame rate. Value range: [0, 100]. Unit: Hz.
+When the value is 0, the frame rate is automatically set for the video.
+The default value is 0.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-     * Get  
-     * @return Codec 
+     * Get Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding.</li> 
+     * @return Codec Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding.</li>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 
-     * @param Codec 
+     * Set Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding.</li>
+     * @param Codec Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding;</li>
+<li>H.266: H.266 encoding.</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get  
-     * @return Bitrate 
+     * Get Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.
+When the value is 0 or not specified, it means VOD automatically sets the bitrate. 
+     * @return Bitrate Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.
+When the value is 0 or not specified, it means VOD automatically sets the bitrate.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 
-     * @param Bitrate 
+     * Set Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.
+When the value is 0 or not specified, it means VOD automatically sets the bitrate.
+     * @param Bitrate Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.
+When the value is 0 or not specified, it means VOD automatically sets the bitrate.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get  
-     * @return ResolutionAdaptive 
+     * Get Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open. 
+     * @return ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
     }
 
     /**
-     * Set 
-     * @param ResolutionAdaptive 
+     * Set Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
+     * @param ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0. 
+     * @return Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+     * @param Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0. 
+     * @return Height Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
+     * @param Height Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the base resolution is used.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+<li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+Default value: 0.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return Fps 
+     * Get Video frame rate. Value range: [0, 100]. Unit: Hz.
+When the value is 0, the frame rate is automatically set for the video.
+The default value is 0. 
+     * @return Fps Video frame rate. Value range: [0, 100]. Unit: Hz.
+When the value is 0, the frame rate is automatically set for the video.
+The default value is 0.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 
-     * @param Fps 
+     * Set Video frame rate. Value range: [0, 100]. Unit: Hz.
+When the value is 0, the frame rate is automatically set for the video.
+The default value is 0.
+     * @param Fps Video frame rate. Value range: [0, 100]. Unit: Hz.
+When the value is 0, the frame rate is automatically set for the video.
+The default value is 0.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

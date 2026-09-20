@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class AiAnalysisTaskHighlightOutput extends AbstractModel {
 
     /**
-    * 
+    * Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
     */
     @SerializedName("HighlightSet")
     @Expose
     private MediaAiAnalysisHighlightItem [] HighlightSet;
 
     /**
-    * 
+    * URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
     */
     @SerializedName("HighlightSetFileUrl")
     @Expose
     private String HighlightSetFileUrl;
 
     /**
-    * 
+    * Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("HighlightSetFileUrlExpireTime")
     @Expose
     private String HighlightSetFileUrlExpireTime;
 
     /**
-     * Get  
-     * @return HighlightSet 
+     * Get Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl. 
+     * @return HighlightSet Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
      */
     public MediaAiAnalysisHighlightItem [] getHighlightSet() {
         return this.HighlightSet;
     }
 
     /**
-     * Set 
-     * @param HighlightSet 
+     * Set Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
+     * @param HighlightSet Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
      */
     public void setHighlightSet(MediaAiAnalysisHighlightItem [] HighlightSet) {
         this.HighlightSet = HighlightSet;
     }
 
     /**
-     * Get  
-     * @return HighlightSetFileUrl 
+     * Get URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached. 
+     * @return HighlightSetFileUrl URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
      */
     public String getHighlightSetFileUrl() {
         return this.HighlightSetFileUrl;
     }
 
     /**
-     * Set 
-     * @param HighlightSetFileUrl 
+     * Set URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+     * @param HighlightSetFileUrl URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
      */
     public void setHighlightSetFileUrl(String HighlightSetFileUrl) {
         this.HighlightSetFileUrl = HighlightSetFileUrl;
     }
 
     /**
-     * Get  
-     * @return HighlightSetFileUrlExpireTime 
+     * Get Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return HighlightSetFileUrlExpireTime Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getHighlightSetFileUrlExpireTime() {
         return this.HighlightSetFileUrlExpireTime;
     }
 
     /**
-     * Set 
-     * @param HighlightSetFileUrlExpireTime 
+     * Set Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param HighlightSetFileUrlExpireTime Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setHighlightSetFileUrlExpireTime(String HighlightSetFileUrlExpireTime) {
         this.HighlightSetFileUrlExpireTime = HighlightSetFileUrlExpireTime;

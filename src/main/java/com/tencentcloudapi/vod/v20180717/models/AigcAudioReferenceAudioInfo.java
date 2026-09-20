@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AigcAudioReferenceAudioInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p> 
+     * @return Type <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
+     * @param Type <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p> 
+     * @return FileId <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
+     * @param FileId <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p> 
+     * @return Url <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
+     * @param Url <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

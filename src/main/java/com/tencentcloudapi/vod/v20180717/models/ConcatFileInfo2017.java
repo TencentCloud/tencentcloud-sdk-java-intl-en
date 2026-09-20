@@ -24,115 +24,125 @@ import java.util.HashMap;
 public class ConcatFileInfo2017 extends AbstractModel {
 
     /**
-    * 
+    * Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * ID of the source file for video splicing.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Domain names or IP addresses of source files for video splicing.
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 
+    * Format of the source file for video splicing.
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li> 
+     * @return ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+     * @param ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get ID of the source file for video splicing. 
+     * @return FileId ID of the source file for video splicing.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set ID of the source file for video splicing.
+     * @param FileId ID of the source file for video splicing.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return FileUrl 
+     * Get Domain names or IP addresses of source files for video splicing. 
+     * @return FileUrl Domain names or IP addresses of source files for video splicing.
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 
-     * @param FileUrl 
+     * Set Domain names or IP addresses of source files for video splicing.
+     * @param FileUrl Domain names or IP addresses of source files for video splicing.
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get  
-     * @return FileType 
+     * Get Format of the source file for video splicing. 
+     * @return FileType Format of the source file for video splicing.
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 
-     * @param FileType 
+     * Set Format of the source file for video splicing.
+     * @param FileType Format of the source file for video splicing.
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

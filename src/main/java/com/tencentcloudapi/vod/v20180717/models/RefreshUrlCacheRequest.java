@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RefreshUrlCacheRequest extends AbstractModel {
 
     /**
-    * 
+    * Refreshed URL list. You can specify up to 20 URLs at a time.
     */
     @SerializedName("Urls")
     @Expose
     private String [] Urls;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Urls 
+     * Get Refreshed URL list. You can specify up to 20 URLs at a time. 
+     * @return Urls Refreshed URL list. You can specify up to 20 URLs at a time.
      */
     public String [] getUrls() {
         return this.Urls;
     }
 
     /**
-     * Set 
-     * @param Urls 
+     * Set Refreshed URL list. You can specify up to 20 URLs at a time.
+     * @param Urls Refreshed URL list. You can specify up to 20 URLs at a time.
      */
     public void setUrls(String [] Urls) {
         this.Urls = Urls;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

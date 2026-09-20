@@ -24,75 +24,98 @@ import java.util.HashMap;
 public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task;</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Subtitle format list operation information.
     */
     @SerializedName("SubtitleFormatsOperation")
     @Expose
     private SubtitleFormatsOperation SubtitleFormatsOperation;
 
     /**
-    * 
+    * Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
     */
     @SerializedName("SubtitleFormat")
     @Expose
     private String SubtitleFormat;
 
     /**
-    * 
+    * Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
     */
     @SerializedName("SrcLanguage")
     @Expose
     private String SrcLanguage;
 
     /**
-    * 
+    * Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
     */
     @SerializedName("SubtitleName")
     @Expose
     private String SubtitleName;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task;</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li> 
+     * @return Switch Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task;</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task;</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li>
+     * @param Switch Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task;</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return SubtitleFormatsOperation 
+     * Get Subtitle format list operation information. 
+     * @return SubtitleFormatsOperation Subtitle format list operation information.
      */
     public SubtitleFormatsOperation getSubtitleFormatsOperation() {
         return this.SubtitleFormatsOperation;
     }
 
     /**
-     * Set 
-     * @param SubtitleFormatsOperation 
+     * Set Subtitle format list operation information.
+     * @param SubtitleFormatsOperation Subtitle format list operation information.
      */
     public void setSubtitleFormatsOperation(SubtitleFormatsOperation SubtitleFormatsOperation) {
         this.SubtitleFormatsOperation = SubtitleFormatsOperation;
     }
 
     /**
-     * Get  
-     * @return SubtitleFormat 
+     * Get Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font> 
+     * @return SubtitleFormat Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
      * @deprecated
      */
     @Deprecated
@@ -101,8 +124,14 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param SubtitleFormat 
+     * Set Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
+     * @param SubtitleFormat Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
      * @deprecated
      */
     @Deprecated
@@ -111,32 +140,48 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SrcLanguage 
+     * Get Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li> 
+     * @return SrcLanguage Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
      */
     public String getSrcLanguage() {
         return this.SrcLanguage;
     }
 
     /**
-     * Set 
-     * @param SrcLanguage 
+     * Set Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+     * @param SrcLanguage Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
      */
     public void setSrcLanguage(String SrcLanguage) {
         this.SrcLanguage = SrcLanguage;
     }
 
     /**
-     * Get  
-     * @return SubtitleName 
+     * Get Specify subtitle name. Length limited to 64 characters. This value will be used for player display. 
+     * @return SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
      */
     public String getSubtitleName() {
         return this.SubtitleName;
     }
 
     /**
-     * Set 
-     * @param SubtitleName 
+     * Set Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+     * @param SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
      */
     public void setSubtitleName(String SubtitleName) {
         this.SubtitleName = SubtitleName;

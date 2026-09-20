@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AigcHunyuan3DTaskOutputFileInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * 
+    * <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 
+    * <p>File type, for example, OBJ, GLB, or FBX.</p>
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 
+    * <p>Output file address.</p>
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 
+    * <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
     */
     @SerializedName("PreviewFileUrl")
     @Expose
     private String PreviewFileUrl;
 
     /**
-     * Get  
-     * @return StorageMode 
+     * Get <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p> 
+     * @return StorageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set 
-     * @param StorageMode 
+     * Set <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+     * @param StorageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
+     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get  
-     * @return FileType 
+     * Get <p>File type, for example, OBJ, GLB, or FBX.</p> 
+     * @return FileType <p>File type, for example, OBJ, GLB, or FBX.</p>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 
-     * @param FileType 
+     * Set <p>File type, for example, OBJ, GLB, or FBX.</p>
+     * @param FileType <p>File type, for example, OBJ, GLB, or FBX.</p>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get  
-     * @return FileUrl 
+     * Get <p>Output file address.</p> 
+     * @return FileUrl <p>Output file address.</p>
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 
-     * @param FileUrl 
+     * Set <p>Output file address.</p>
+     * @param FileUrl <p>Output file address.</p>
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get  
-     * @return PreviewFileUrl 
+     * Get <p>Output file preview address.</p><p>Empty if no file preview address is available.</p> 
+     * @return PreviewFileUrl <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
      */
     public String getPreviewFileUrl() {
         return this.PreviewFileUrl;
     }
 
     /**
-     * Set 
-     * @param PreviewFileUrl 
+     * Set <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
+     * @param PreviewFileUrl <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
      */
     public void setPreviewFileUrl(String PreviewFileUrl) {
         this.PreviewFileUrl = PreviewFileUrl;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel {
 
     /**
-    * 
+    * Recognition confidence of the opening scene. Value range: 0-100.
     */
     @SerializedName("HeadConfidence")
     @Expose
     private Float HeadConfidence;
 
     /**
-    * 
+    * End time point of the video intro, in seconds.
     */
     @SerializedName("HeadTimeOffset")
     @Expose
     private Float HeadTimeOffset;
 
     /**
-    * 
+    * Recognition confidence of the ending scene. Value range: 0-100.
     */
     @SerializedName("TailConfidence")
     @Expose
     private Float TailConfidence;
 
     /**
-    * 
+    * Start time point of the video ending, in seconds.
     */
     @SerializedName("TailTimeOffset")
     @Expose
     private Float TailTimeOffset;
 
     /**
-     * Get  
-     * @return HeadConfidence 
+     * Get Recognition confidence of the opening scene. Value range: 0-100. 
+     * @return HeadConfidence Recognition confidence of the opening scene. Value range: 0-100.
      */
     public Float getHeadConfidence() {
         return this.HeadConfidence;
     }
 
     /**
-     * Set 
-     * @param HeadConfidence 
+     * Set Recognition confidence of the opening scene. Value range: 0-100.
+     * @param HeadConfidence Recognition confidence of the opening scene. Value range: 0-100.
      */
     public void setHeadConfidence(Float HeadConfidence) {
         this.HeadConfidence = HeadConfidence;
     }
 
     /**
-     * Get  
-     * @return HeadTimeOffset 
+     * Get End time point of the video intro, in seconds. 
+     * @return HeadTimeOffset End time point of the video intro, in seconds.
      */
     public Float getHeadTimeOffset() {
         return this.HeadTimeOffset;
     }
 
     /**
-     * Set 
-     * @param HeadTimeOffset 
+     * Set End time point of the video intro, in seconds.
+     * @param HeadTimeOffset End time point of the video intro, in seconds.
      */
     public void setHeadTimeOffset(Float HeadTimeOffset) {
         this.HeadTimeOffset = HeadTimeOffset;
     }
 
     /**
-     * Get  
-     * @return TailConfidence 
+     * Get Recognition confidence of the ending scene. Value range: 0-100. 
+     * @return TailConfidence Recognition confidence of the ending scene. Value range: 0-100.
      */
     public Float getTailConfidence() {
         return this.TailConfidence;
     }
 
     /**
-     * Set 
-     * @param TailConfidence 
+     * Set Recognition confidence of the ending scene. Value range: 0-100.
+     * @param TailConfidence Recognition confidence of the ending scene. Value range: 0-100.
      */
     public void setTailConfidence(Float TailConfidence) {
         this.TailConfidence = TailConfidence;
     }
 
     /**
-     * Get  
-     * @return TailTimeOffset 
+     * Get Start time point of the video ending, in seconds. 
+     * @return TailTimeOffset Start time point of the video ending, in seconds.
      */
     public Float getTailTimeOffset() {
         return this.TailTimeOffset;
     }
 
     /**
-     * Set 
-     * @param TailTimeOffset 
+     * Set Start time point of the video ending, in seconds.
+     * @param TailTimeOffset Start time point of the video ending, in seconds.
      */
     public void setTailTimeOffset(Float TailTimeOffset) {
         this.TailTimeOffset = TailTimeOffset;

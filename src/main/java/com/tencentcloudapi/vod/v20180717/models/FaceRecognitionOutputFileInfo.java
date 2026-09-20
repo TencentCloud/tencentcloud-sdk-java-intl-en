@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FaceRecognitionOutputFileInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 
+    * <p>URL of the face recognition output file</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return FileType 
+     * Get <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul> 
+     * @return FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 
-     * @param FileType 
+     * Set <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+     * @param FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>URL of the face recognition output file</p> 
+     * @return Url <p>URL of the face recognition output file</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>URL of the face recognition output file</p>
+     * @param Url <p>URL of the face recognition output file</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

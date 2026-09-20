@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CacheConfigNoCache extends AbstractModel {
 
     /**
-    * Path cache no cache configuration switch. Value:
+    * Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -42,10 +42,10 @@ public class CacheConfigNoCache extends AbstractModel {
     private String Revalidate;
 
     /**
-     * Get Path cache no cache configuration switch. Value:
+     * Get Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Path cache no cache configuration switch. Value:
+     * @return Switch Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -54,10 +54,10 @@ public class CacheConfigNoCache extends AbstractModel {
     }
 
     /**
-     * Set Path cache no cache configuration switch. Value:
+     * Set Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Path cache no cache configuration switch. Value:
+     * @param Switch Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

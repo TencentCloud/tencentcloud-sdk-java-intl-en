@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskClassificationInput extends AbstractModel {
 
     /**
-    * 
+    * Video intelligent classification template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Video intelligent classification template ID. 
+     * @return Definition Video intelligent classification template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Video intelligent classification template ID.
+     * @param Definition Video intelligent classification template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

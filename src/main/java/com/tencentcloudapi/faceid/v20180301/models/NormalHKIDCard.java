@@ -25,8 +25,6 @@ public class NormalHKIDCard extends AbstractModel {
 
     /**
     * Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
     */
     @SerializedName("ChineseName")
     @Expose
@@ -34,94 +32,77 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Chinese telegraph code corresponding to the Chinese name
     */
     @SerializedName("RegistrationNumber")
     @Expose
     private String RegistrationNumber;
 
     /**
-    * Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Gender: "M" (male) or "F" (female).
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
+    * Date of birth
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
     */
     @SerializedName("Permanent")
     @Expose
     private String Permanent;
 
     /**
-    * ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
+    * Identity number
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Document symbol, the symbol under the date of birth, for example, "***AZ"
     */
     @SerializedName("Symbol")
     @Expose
     private String Symbol;
 
     /**
-    * The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Date of first issue
     */
     @SerializedName("IssuedDate")
     @Expose
     private String IssuedDate;
 
     /**
-    * The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Most recent date of issue
     */
     @SerializedName("CurrentIssueDate")
     @Expose
     private String CurrentIssueDate;
 
     /**
-    * Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
     */
     @SerializedName("HKIDVersion")
     @Expose
     private String HKIDVersion;
 
     /**
-     * Get Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
- 
+     * Get Chinese name 
      * @return ChineseName Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
      */
     public String getChineseName() {
         return this.ChineseName;
@@ -129,23 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
      * @param ChineseName Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
      */
     public void setChineseName(String ChineseName) {
         this.ChineseName = ChineseName;
     }
 
     /**
-     * Get English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan 
+     * Get English name 
      * @return FullName English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
      */
     public String getFullName() {
         return this.FullName;
@@ -153,199 +126,151 @@ Example: SAN, Nan
 
     /**
      * Set English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
      * @param FullName English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegistrationNumber Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Chinese telegraph code corresponding to the Chinese name 
+     * @return RegistrationNumber Chinese telegraph code corresponding to the Chinese name
      */
     public String getRegistrationNumber() {
         return this.RegistrationNumber;
     }
 
     /**
-     * Set Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegistrationNumber Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Chinese telegraph code corresponding to the Chinese name
+     * @param RegistrationNumber Chinese telegraph code corresponding to the Chinese name
      */
     public void setRegistrationNumber(String RegistrationNumber) {
         this.RegistrationNumber = RegistrationNumber;
     }
 
     /**
-     * Get Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sex Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Gender: "M" (male) or "F" (female). 
+     * @return Sex Gender: "M" (male) or "F" (female).
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sex Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Gender: "M" (male) or "F" (female).
+     * @param Sex Gender: "M" (male) or "F" (female).
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001 
-     * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
+     * Get Date of birth 
+     * @return Birthday Date of birth
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
-     * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
+     * Set Date of birth
+     * @param Birthday Date of birth
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Permanent Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown 
+     * @return Permanent Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
      */
     public String getPermanent() {
         return this.Permanent;
     }
 
     /**
-     * Set Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Permanent Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
+     * @param Permanent Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
      */
     public void setPermanent(String Permanent) {
         this.Permanent = Permanent;
     }
 
     /**
-     * Get ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E) 
-     * @return LicenseNumber ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
+     * Get Identity number 
+     * @return LicenseNumber Identity number
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
-     * @param LicenseNumber ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
+     * Set Identity number
+     * @param LicenseNumber Identity number
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Symbol Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Document symbol, the symbol under the date of birth, for example, "***AZ" 
+     * @return Symbol Document symbol, the symbol under the date of birth, for example, "***AZ"
      */
     public String getSymbol() {
         return this.Symbol;
     }
 
     /**
-     * Set Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Symbol Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Document symbol, the symbol under the date of birth, for example, "***AZ"
+     * @param Symbol Document symbol, the symbol under the date of birth, for example, "***AZ"
      */
     public void setSymbol(String Symbol) {
         this.Symbol = Symbol;
     }
 
     /**
-     * Get The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedDate The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Date of first issue 
+     * @return IssuedDate Date of first issue
      */
     public String getIssuedDate() {
         return this.IssuedDate;
     }
 
     /**
-     * Set The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedDate The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Date of first issue
+     * @param IssuedDate Date of first issue
      */
     public void setIssuedDate(String IssuedDate) {
         this.IssuedDate = IssuedDate;
     }
 
     /**
-     * Get The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CurrentIssueDate The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Most recent date of issue 
+     * @return CurrentIssueDate Most recent date of issue
      */
     public String getCurrentIssueDate() {
         return this.CurrentIssueDate;
     }
 
     /**
-     * Set The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CurrentIssueDate The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Most recent date of issue
+     * @param CurrentIssueDate Most recent date of issue
      */
     public void setCurrentIssueDate(String CurrentIssueDate) {
         this.CurrentIssueDate = CurrentIssueDate;
     }
 
     /**
-     * Get Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card. 
+     * @return HKIDVersion Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
      */
     public String getHKIDVersion() {
         return this.HKIDVersion;
     }
 
     /**
-     * Set Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
+     * @param HKIDVersion Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
      */
     public void setHKIDVersion(String HKIDVersion) {
         this.HKIDVersion = HKIDVersion;

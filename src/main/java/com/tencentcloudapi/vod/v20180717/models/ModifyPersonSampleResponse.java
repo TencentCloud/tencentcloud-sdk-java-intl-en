@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyPersonSampleResponse extends AbstractModel {
 
     /**
-    * 
+    * Material information.
     */
     @SerializedName("Person")
     @Expose
     private AiSamplePerson Person;
 
     /**
-    * 
+    * Information of facial features that failed processing.
     */
     @SerializedName("FailFaceInfoSet")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyPersonSampleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Person 
+     * Get Material information. 
+     * @return Person Material information.
      */
     public AiSamplePerson getPerson() {
         return this.Person;
     }
 
     /**
-     * Set 
-     * @param Person 
+     * Set Material information.
+     * @param Person Material information.
      */
     public void setPerson(AiSamplePerson Person) {
         this.Person = Person;
     }
 
     /**
-     * Get  
-     * @return FailFaceInfoSet 
+     * Get Information of facial features that failed processing. 
+     * @return FailFaceInfoSet Information of facial features that failed processing.
      */
     public AiSampleFailFaceInfo [] getFailFaceInfoSet() {
         return this.FailFaceInfoSet;
     }
 
     /**
-     * Set 
-     * @param FailFaceInfoSet 
+     * Set Information of facial features that failed processing.
+     * @param FailFaceInfoSet Information of facial features that failed processing.
      */
     public void setFailFaceInfoSet(AiSampleFailFaceInfo [] FailFaceInfoSet) {
         this.FailFaceInfoSet = FailFaceInfoSet;

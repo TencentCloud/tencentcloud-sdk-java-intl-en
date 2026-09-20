@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDailyMostPlayedStatResponse extends AbstractModel {
 
     /**
-    * 
+    * Media file playback statistics information.
     */
     @SerializedName("DailyPlayStatInfoSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDailyMostPlayedStatResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return DailyPlayStatInfoSet 
+     * Get Media file playback statistics information. 
+     * @return DailyPlayStatInfoSet Media file playback statistics information.
      */
     public DailyPlayStatInfo [] getDailyPlayStatInfoSet() {
         return this.DailyPlayStatInfoSet;
     }
 
     /**
-     * Set 
-     * @param DailyPlayStatInfoSet 
+     * Set Media file playback statistics information.
+     * @param DailyPlayStatInfoSet Media file playback statistics information.
      */
     public void setDailyPlayStatInfoSet(DailyPlayStatInfo [] DailyPlayStatInfoSet) {
         this.DailyPlayStatInfoSet = DailyPlayStatInfoSet;

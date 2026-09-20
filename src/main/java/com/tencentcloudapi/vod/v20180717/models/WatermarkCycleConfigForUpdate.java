@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class WatermarkCycleConfigForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
     */
     @SerializedName("StartTime")
     @Expose
     private Float StartTime;
 
     /**
-    * 
+    * Duration of watermark display in a watermark cycle, in seconds.
     */
     @SerializedName("DisplayDuration")
     @Expose
     private Float DisplayDuration;
 
     /**
-    * 
+    * Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
     */
     @SerializedName("CycleDuration")
     @Expose
     private Float CycleDuration;
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Playback time point of the first occurrence of the watermark in the video. Measurement unit: second. 
+     * @return StartTime Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
      */
     public Float getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+     * @param StartTime Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return DisplayDuration 
+     * Get Duration of watermark display in a watermark cycle, in seconds. 
+     * @return DisplayDuration Duration of watermark display in a watermark cycle, in seconds.
      */
     public Float getDisplayDuration() {
         return this.DisplayDuration;
     }
 
     /**
-     * Set 
-     * @param DisplayDuration 
+     * Set Duration of watermark display in a watermark cycle, in seconds.
+     * @param DisplayDuration Duration of watermark display in a watermark cycle, in seconds.
      */
     public void setDisplayDuration(Float DisplayDuration) {
         this.DisplayDuration = DisplayDuration;
     }
 
     /**
-     * Get  
-     * @return CycleDuration 
+     * Get Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video). 
+     * @return CycleDuration Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      */
     public Float getCycleDuration() {
         return this.CycleDuration;
     }
 
     /**
-     * Set 
-     * @param CycleDuration 
+     * Set Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+     * @param CycleDuration Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      */
     public void setCycleDuration(Float CycleDuration) {
         this.CycleDuration = CycleDuration;

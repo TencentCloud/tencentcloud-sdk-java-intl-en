@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ImageUnderstandingItem extends AbstractModel {
 
     /**
-    * 
+    * Template id.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Task output file.
     */
     @SerializedName("OutputFile")
     @Expose
     private MPSOutputFileInfo [] OutputFile;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Template id. 
+     * @return Definition Template id.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Template id.
+     * @param Definition Template id.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return OutputFile 
+     * Get Task output file. 
+     * @return OutputFile Task output file.
      */
     public MPSOutputFileInfo [] getOutputFile() {
         return this.OutputFile;
     }
 
     /**
-     * Set 
-     * @param OutputFile 
+     * Set Task output file.
+     * @param OutputFile Task output file.
      */
     public void setOutputFile(MPSOutputFileInfo [] OutputFile) {
         this.OutputFile = OutputFile;

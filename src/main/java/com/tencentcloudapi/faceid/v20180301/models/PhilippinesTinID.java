@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class PhilippinesTinID extends AbstractModel {
 
     /**
-    * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Code
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address.
     */
     @SerializedName("Address")
     @Expose
@@ -49,85 +46,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Issue date
     */
     @SerializedName("IssueDate")
     @Expose
     private String IssueDate;
 
     /**
-     * Get License number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Code 
+     * @return LicenseNumber Code
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Code
+     * @param LicenseNumber Code
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Full name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return FullName Name
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param FullName Name
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get Address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address. 
+     * @return Address Address.
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address.
+     * @param Address Address.
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Birthday 
      * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBirthday() {
         return this.Birthday;
@@ -135,29 +116,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Date of issue
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssueDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Issue date 
+     * @return IssueDate Issue date
      */
     public String getIssueDate() {
         return this.IssueDate;
     }
 
     /**
-     * Set Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssueDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Issue date
+     * @param IssueDate Issue date
      */
     public void setIssueDate(String IssueDate) {
         this.IssueDate = IssueDate;

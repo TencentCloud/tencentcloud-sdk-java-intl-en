@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLLMComprehendTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Unique identifier of the Large Model Understanding Template</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLLMComprehendTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Unique identifier of the Large Model Understanding Template</p> 
+     * @return Definition <p>Unique identifier of the Large Model Understanding Template</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Unique identifier of the Large Model Understanding Template</p>
+     * @param Definition <p>Unique identifier of the Large Model Understanding Template</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

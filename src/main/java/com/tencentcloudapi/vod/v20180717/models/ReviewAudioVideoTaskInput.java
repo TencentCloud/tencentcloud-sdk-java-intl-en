@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class ReviewAudioVideoTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Media file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Audio/video moderation template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
     */
     @SerializedName("ReviewContents")
     @Expose
     private String [] ReviewContents;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID. 
+     * @return FileId Media file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID.
+     * @param FileId Media file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Audio/video moderation template ID. 
+     * @return Definition Audio/video moderation template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Audio/video moderation template ID.
+     * @param Definition Audio/video moderation template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ReviewContents 
+     * Get Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li> 
+     * @return ReviewContents Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
      */
     public String [] getReviewContents() {
         return this.ReviewContents;
     }
 
     /**
-     * Set 
-     * @param ReviewContents 
+     * Set Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+     * @param ReviewContents Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
      */
     public void setReviewContents(String [] ReviewContents) {
         this.ReviewContents = ReviewContents;

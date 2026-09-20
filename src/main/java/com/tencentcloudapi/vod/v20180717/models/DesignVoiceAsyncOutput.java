@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DesignVoiceAsyncOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>Voice ID.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Audition audio.</p>
     */
     @SerializedName("TrialAudio")
     @Expose
     private String TrialAudio;
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Voice ID.</p> 
+     * @return VoiceId <p>Voice ID.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Voice ID.</p>
+     * @param VoiceId <p>Voice ID.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return TrialAudio 
+     * Get <p>Audition audio.</p> 
+     * @return TrialAudio <p>Audition audio.</p>
      */
     public String getTrialAudio() {
         return this.TrialAudio;
     }
 
     /**
-     * Set 
-     * @param TrialAudio 
+     * Set <p>Audition audio.</p>
+     * @param TrialAudio <p>Audition audio.</p>
      */
     public void setTrialAudio(String TrialAudio) {
         this.TrialAudio = TrialAudio;

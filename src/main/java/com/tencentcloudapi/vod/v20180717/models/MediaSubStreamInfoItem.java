@@ -24,92 +24,107 @@ import java.util.HashMap;
 public class MediaSubStreamInfoItem extends AbstractModel {
 
     /**
-    * 
+    * Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Video image width when the substream is a video stream. Unit: px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * Substream video screen height in px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 
+    * Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li> 
+     * @return Type Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
+     * @param Type Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Video image width when the substream is a video stream. Unit: px. 
+     * @return Width Video image width when the substream is a video stream. Unit: px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Video image width when the substream is a video stream. Unit: px.
+     * @param Width Video image width when the substream is a video stream. Unit: px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Substream video screen height in px. 
+     * @return Height Substream video screen height in px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Substream video screen height in px.
+     * @param Height Substream video screen height in px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return Size 
+     * Get Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z. 
+     * @return Size Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 
-     * @param Size 
+     * Set Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
+     * @param Size Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
      */
     public void setSize(Long Size) {
         this.Size = Size;

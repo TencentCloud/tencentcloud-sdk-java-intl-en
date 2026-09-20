@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class MPSSubtitleLayoutConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
     */
     @SerializedName("SubtitleLayoutConfigSwitch")
     @Expose
     private Long SubtitleLayoutConfigSwitch;
 
     /**
-    * 
+    * <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
     */
     @SerializedName("LineSpacing")
     @Expose
     private Long LineSpacing;
 
     /**
-    * 
+    * <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
     */
     @SerializedName("LineSpacingUnit")
     @Expose
     private Long LineSpacingUnit;
 
     /**
-    * 
+    * <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
     */
     @SerializedName("Alignment")
     @Expose
     private String Alignment;
 
     /**
-     * Get  
-     * @return SubtitleLayoutConfigSwitch 
+     * Get <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p> 
+     * @return SubtitleLayoutConfigSwitch <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
      */
     public Long getSubtitleLayoutConfigSwitch() {
         return this.SubtitleLayoutConfigSwitch;
     }
 
     /**
-     * Set 
-     * @param SubtitleLayoutConfigSwitch 
+     * Set <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
+     * @param SubtitleLayoutConfigSwitch <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
      */
     public void setSubtitleLayoutConfigSwitch(Long SubtitleLayoutConfigSwitch) {
         this.SubtitleLayoutConfigSwitch = SubtitleLayoutConfigSwitch;
     }
 
     /**
-     * Get  
-     * @return LineSpacing 
+     * Get <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p> 
+     * @return LineSpacing <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
      */
     public Long getLineSpacing() {
         return this.LineSpacing;
     }
 
     /**
-     * Set 
-     * @param LineSpacing 
+     * Set <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
+     * @param LineSpacing <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
      */
     public void setLineSpacing(Long LineSpacing) {
         this.LineSpacing = LineSpacing;
     }
 
     /**
-     * Get  
-     * @return LineSpacingUnit 
+     * Get <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p> 
+     * @return LineSpacingUnit <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public Long getLineSpacingUnit() {
         return this.LineSpacingUnit;
     }
 
     /**
-     * Set 
-     * @param LineSpacingUnit 
+     * Set <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param LineSpacingUnit <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public void setLineSpacingUnit(Long LineSpacingUnit) {
         this.LineSpacingUnit = LineSpacingUnit;
     }
 
     /**
-     * Get  
-     * @return Alignment 
+     * Get <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p> 
+     * @return Alignment <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
      */
     public String getAlignment() {
         return this.Alignment;
     }
 
     /**
-     * Set 
-     * @param Alignment 
+     * Set <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
+     * @param Alignment <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
      */
     public void setAlignment(String Alignment) {
         this.Alignment = Alignment;

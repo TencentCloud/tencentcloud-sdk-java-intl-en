@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class CreateAigcHunyuan3DTaskRequest extends AbstractModel {
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+    * <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
     */
     @SerializedName("ImageInfos")
     @Expose
     private AigcHunyuan3DReferenceImageInfo [] ImageInfos;
 
     /**
-    * <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+    * <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
     */
     @SerializedName("MultiViewImageInfos")
     @Expose
     private AigcHunyuan3DMultiViewImageInfo [] MultiViewImageInfos;
 
     /**
-    * <p>Generate a Prompt for the 3D model.</p><p>Input parameter limit: Up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+    * <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+    * <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
     */
     @SerializedName("GenerateType")
     @Expose
     private String GenerateType;
 
     /**
-    * <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: When MeshInfos is filled in, GenerateType must take the value Texture (texture scenario).</p>
+    * <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
     */
     @SerializedName("MeshInfos")
     @Expose
     private AigcHunyuan3DMeshInfo [] MeshInfos;
 
     /**
-    * <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+    * <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
     */
     @SerializedName("EnablePBR")
     @Expose
@@ -80,35 +80,35 @@ public class CreateAigcHunyuan3DTaskRequest extends AbstractModel {
     private Long FaceCount;
 
     /**
-    * <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: retain;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+    * <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
     */
     @SerializedName("KeepUV")
     @Expose
     private String KeepUV;
 
     /**
-    * <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX file format.</li></ul>
+    * <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
     */
     @SerializedName("ResultFormat")
     @Expose
     private String ResultFormat;
 
     /**
-    * <p>Random Seed. Results can be reproduced with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
+    * <p>Random Seed. Results are reproducible with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
     */
     @SerializedName("Seed")
     @Expose
     private Long Seed;
 
     /**
-    * <p>Style control word.</p>
+    * <p>Style control words.</p>
     */
     @SerializedName("Style")
     @Expose
     private String Style;
 
     /**
-    * <p>Output media file configuration of the task.</p>
+    * <p>Configuration of the output media file of the task.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -122,126 +122,126 @@ public class CreateAigcHunyuan3DTaskRequest extends AbstractModel {
     private String SessionId;
 
     /**
-    * <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+    * <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p> 
-     * @return ImageInfos <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * Get <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p> 
+     * @return ImageInfos <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
      */
     public AigcHunyuan3DReferenceImageInfo [] getImageInfos() {
         return this.ImageInfos;
     }
 
     /**
-     * Set <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
-     * @param ImageInfos <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * Set <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * @param ImageInfos <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
      */
     public void setImageInfos(AigcHunyuan3DReferenceImageInfo [] ImageInfos) {
         this.ImageInfos = ImageInfos;
     }
 
     /**
-     * Get <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p> 
-     * @return MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+     * Get <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p> 
+     * @return MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
      */
     public AigcHunyuan3DMultiViewImageInfo [] getMultiViewImageInfos() {
         return this.MultiViewImageInfos;
     }
 
     /**
-     * Set <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
-     * @param MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+     * Set <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+     * @param MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
      */
     public void setMultiViewImageInfos(AigcHunyuan3DMultiViewImageInfo [] MultiViewImageInfos) {
         this.MultiViewImageInfos = MultiViewImageInfos;
     }
 
     /**
-     * Get <p>Generate a Prompt for the 3D model.</p><p>Input parameter limit: Up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p> 
-     * @return Prompt <p>Generate a Prompt for the 3D model.</p><p>Input parameter limit: Up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * Get <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p> 
+     * @return Prompt <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Generate a Prompt for the 3D model.</p><p>Input parameter limit: Up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
-     * @param Prompt <p>Generate a Prompt for the 3D model.</p><p>Input parameter limit: Up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * Set <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+     * @param Prompt <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p> 
-     * @return GenerateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+     * Get <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p> 
+     * @return GenerateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
      */
     public String getGenerateType() {
         return this.GenerateType;
     }
 
     /**
-     * Set <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
-     * @param GenerateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+     * Set <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+     * @param GenerateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
     }
 
     /**
-     * Get <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: When MeshInfos is filled in, GenerateType must take the value Texture (texture scenario).</p> 
-     * @return MeshInfos <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: When MeshInfos is filled in, GenerateType must take the value Texture (texture scenario).</p>
+     * Get <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p> 
+     * @return MeshInfos <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
      */
     public AigcHunyuan3DMeshInfo [] getMeshInfos() {
         return this.MeshInfos;
     }
 
     /**
-     * Set <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: When MeshInfos is filled in, GenerateType must take the value Texture (texture scenario).</p>
-     * @param MeshInfos <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: When MeshInfos is filled in, GenerateType must take the value Texture (texture scenario).</p>
+     * Set <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
+     * @param MeshInfos <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
      */
     public void setMeshInfos(AigcHunyuan3DMeshInfo [] MeshInfos) {
         this.MeshInfos = MeshInfos;
     }
 
     /**
-     * Get <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p> 
-     * @return EnablePBR <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+     * Get <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p> 
+     * @return EnablePBR <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
      */
     public String getEnablePBR() {
         return this.EnablePBR;
     }
 
     /**
-     * Set <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
-     * @param EnablePBR <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+     * Set <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+     * @param EnablePBR <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
      */
     public void setEnablePBR(String EnablePBR) {
         this.EnablePBR = EnablePBR;
@@ -264,80 +264,80 @@ public class CreateAigcHunyuan3DTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: retain;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p> 
-     * @return KeepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: retain;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+     * Get <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p> 
+     * @return KeepUV <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
      */
     public String getKeepUV() {
         return this.KeepUV;
     }
 
     /**
-     * Set <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: retain;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
-     * @param KeepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: retain;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+     * Set <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+     * @param KeepUV <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
      */
     public void setKeepUV(String KeepUV) {
         this.KeepUV = KeepUV;
     }
 
     /**
-     * Get <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX file format.</li></ul> 
-     * @return ResultFormat <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX file format.</li></ul>
+     * Get <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul> 
+     * @return ResultFormat <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
      */
     public String getResultFormat() {
         return this.ResultFormat;
     }
 
     /**
-     * Set <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX file format.</li></ul>
-     * @param ResultFormat <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX file format.</li></ul>
+     * Set <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
+     * @param ResultFormat <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
      */
     public void setResultFormat(String ResultFormat) {
         this.ResultFormat = ResultFormat;
     }
 
     /**
-     * Get <p>Random Seed. Results can be reproduced with the same Seed input.</p><p>Value range: [0, 2147483647]</p> 
-     * @return Seed <p>Random Seed. Results can be reproduced with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
+     * Get <p>Random Seed. Results are reproducible with the same Seed input.</p><p>Value range: [0, 2147483647]</p> 
+     * @return Seed <p>Random Seed. Results are reproducible with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
      */
     public Long getSeed() {
         return this.Seed;
     }
 
     /**
-     * Set <p>Random Seed. Results can be reproduced with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
-     * @param Seed <p>Random Seed. Results can be reproduced with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
+     * Set <p>Random Seed. Results are reproducible with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
+     * @param Seed <p>Random Seed. Results are reproducible with the same Seed input.</p><p>Value range: [0, 2147483647]</p>
      */
     public void setSeed(Long Seed) {
         this.Seed = Seed;
     }
 
     /**
-     * Get <p>Style control word.</p> 
-     * @return Style <p>Style control word.</p>
+     * Get <p>Style control words.</p> 
+     * @return Style <p>Style control words.</p>
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set <p>Style control word.</p>
-     * @param Style <p>Style control word.</p>
+     * Set <p>Style control words.</p>
+     * @param Style <p>Style control words.</p>
      */
     public void setStyle(String Style) {
         this.Style = Style;
     }
 
     /**
-     * Get <p>Output media file configuration of the task.</p> 
-     * @return OutputConfig <p>Output media file configuration of the task.</p>
+     * Get <p>Configuration of the output media file of the task.</p> 
+     * @return OutputConfig <p>Configuration of the output media file of the task.</p>
      */
     public AigcHunyuan3DOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output media file configuration of the task.</p>
-     * @param OutputConfig <p>Output media file configuration of the task.</p>
+     * Set <p>Configuration of the output media file of the task.</p>
+     * @param OutputConfig <p>Configuration of the output media file of the task.</p>
      */
     public void setOutputConfig(AigcHunyuan3DOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
@@ -360,32 +360,32 @@ public class CreateAigcHunyuan3DTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p> 
-     * @return SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Get <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p> 
+     * @return SessionContext <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Set <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
+     * @param SessionContext <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p> 
-     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p> 
+     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
-     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;

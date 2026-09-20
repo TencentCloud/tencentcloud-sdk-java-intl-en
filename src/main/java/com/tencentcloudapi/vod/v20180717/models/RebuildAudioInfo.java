@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RebuildAudioInfo extends AbstractModel {
 
     /**
-    * 
+    * Audio noise reduction control parameters.
     */
     @SerializedName("AudioDenoiseInfo")
     @Expose
     private AudioDenoiseInfo AudioDenoiseInfo;
 
     /**
-     * Get  
-     * @return AudioDenoiseInfo 
+     * Get Audio noise reduction control parameters. 
+     * @return AudioDenoiseInfo Audio noise reduction control parameters.
      */
     public AudioDenoiseInfo getAudioDenoiseInfo() {
         return this.AudioDenoiseInfo;
     }
 
     /**
-     * Set 
-     * @param AudioDenoiseInfo 
+     * Set Audio noise reduction control parameters.
+     * @param AudioDenoiseInfo Audio noise reduction control parameters.
      */
     public void setAudioDenoiseInfo(AudioDenoiseInfo AudioDenoiseInfo) {
         this.AudioDenoiseInfo = AudioDenoiseInfo;

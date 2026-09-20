@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class BeautyEffectItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * <p>Beauty item.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Intensity of beauty effects.</p>
     */
     @SerializedName("Value")
     @Expose
     private Long Value;
 
     /**
-    * 
+    * <p>Extra resource path.</p>
     */
     @SerializedName("ResourcePath")
     @Expose
     private String ResourcePath;
 
     /**
-    * 
+    * <p>Additional information.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get <p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul> 
+     * @return Switch <p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set <p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+     * @param Switch <p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Beauty item.</p> 
+     * @return Type <p>Beauty item.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Beauty item.</p>
+     * @param Type <p>Beauty item.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Value 
+     * Get <p>Intensity of beauty effects.</p> 
+     * @return Value <p>Intensity of beauty effects.</p>
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set 
-     * @param Value 
+     * Set <p>Intensity of beauty effects.</p>
+     * @param Value <p>Intensity of beauty effects.</p>
      */
     public void setValue(Long Value) {
         this.Value = Value;
     }
 
     /**
-     * Get  
-     * @return ResourcePath 
+     * Get <p>Extra resource path.</p> 
+     * @return ResourcePath <p>Extra resource path.</p>
      */
     public String getResourcePath() {
         return this.ResourcePath;
     }
 
     /**
-     * Set 
-     * @param ResourcePath 
+     * Set <p>Extra resource path.</p>
+     * @param ResourcePath <p>Extra resource path.</p>
      */
     public void setResourcePath(String ResourcePath) {
         this.ResourcePath = ResourcePath;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Additional information.</p> 
+     * @return ExtInfo <p>Additional information.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Additional information.</p>
+     * @param ExtInfo <p>Additional information.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

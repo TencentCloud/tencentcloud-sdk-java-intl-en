@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class ImageCenterCut extends AbstractModel {
 
     /**
-    * 
+    * Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Width of the output image in pixels. Valid when Type is Rectangle.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * Height of the output image in pixels. Valid when Type is Rectangle.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 
+    * Radius of the output image in pixels. Valid when Type is Circle.
     */
     @SerializedName("Radius")
     @Expose
     private Long Radius;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li> 
+     * @return Type Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
+     * @param Type Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Width of the output image in pixels. Valid when Type is Rectangle. 
+     * @return Width Width of the output image in pixels. Valid when Type is Rectangle.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Width of the output image in pixels. Valid when Type is Rectangle.
+     * @param Width Width of the output image in pixels. Valid when Type is Rectangle.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Height of the output image in pixels. Valid when Type is Rectangle. 
+     * @return Height Height of the output image in pixels. Valid when Type is Rectangle.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Height of the output image in pixels. Valid when Type is Rectangle.
+     * @param Height Height of the output image in pixels. Valid when Type is Rectangle.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return Radius 
+     * Get Radius of the output image in pixels. Valid when Type is Circle. 
+     * @return Radius Radius of the output image in pixels. Valid when Type is Circle.
      */
     public Long getRadius() {
         return this.Radius;
     }
 
     /**
-     * Set 
-     * @param Radius 
+     * Set Radius of the output image in pixels. Valid when Type is Circle.
+     * @param Radius Radius of the output image in pixels. Valid when Type is Circle.
      */
     public void setRadius(Long Radius) {
         this.Radius = Radius;

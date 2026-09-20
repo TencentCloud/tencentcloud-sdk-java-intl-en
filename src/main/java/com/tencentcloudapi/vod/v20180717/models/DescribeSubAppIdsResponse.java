@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSubAppIdsResponse extends AbstractModel {
 
     /**
-    * 
+    * Application information collection.
     */
     @SerializedName("SubAppIdInfoSet")
     @Expose
     private SubAppIdInfo [] SubAppIdInfoSet;
 
     /**
-    * 
+    * Total number of applications.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSubAppIdsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return SubAppIdInfoSet 
+     * Get Application information collection. 
+     * @return SubAppIdInfoSet Application information collection.
      */
     public SubAppIdInfo [] getSubAppIdInfoSet() {
         return this.SubAppIdInfoSet;
     }
 
     /**
-     * Set 
-     * @param SubAppIdInfoSet 
+     * Set Application information collection.
+     * @param SubAppIdInfoSet Application information collection.
      */
     public void setSubAppIdInfoSet(SubAppIdInfo [] SubAppIdInfoSet) {
         this.SubAppIdInfoSet = SubAppIdInfoSet;
     }
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of applications. 
+     * @return TotalCount Total number of applications.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of applications.
+     * @param TotalCount Total number of applications.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

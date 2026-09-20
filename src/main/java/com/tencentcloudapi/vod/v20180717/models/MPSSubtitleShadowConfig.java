@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class MPSSubtitleShadowConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
     */
     @SerializedName("SubtitleShadowConfigSwitch")
     @Expose
     private Long SubtitleShadowConfigSwitch;
 
     /**
-    * 
+    * <p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
     */
     @SerializedName("ShadowWidth")
     @Expose
     private Float ShadowWidth;
 
     /**
-    * 
+    * <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
     */
     @SerializedName("ShadowWidthUnit")
     @Expose
     private Long ShadowWidthUnit;
 
     /**
-    * 
+    * <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
     */
     @SerializedName("ShadowColor")
     @Expose
     private String ShadowColor;
 
     /**
-    * 
+    * <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
     */
     @SerializedName("ShadowAlpha")
     @Expose
     private Float ShadowAlpha;
 
     /**
-     * Get  
-     * @return SubtitleShadowConfigSwitch 
+     * Get <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p> 
+     * @return SubtitleShadowConfigSwitch <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
      */
     public Long getSubtitleShadowConfigSwitch() {
         return this.SubtitleShadowConfigSwitch;
     }
 
     /**
-     * Set 
-     * @param SubtitleShadowConfigSwitch 
+     * Set <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
+     * @param SubtitleShadowConfigSwitch <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
      */
     public void setSubtitleShadowConfigSwitch(Long SubtitleShadowConfigSwitch) {
         this.SubtitleShadowConfigSwitch = SubtitleShadowConfigSwitch;
     }
 
     /**
-     * Get  
-     * @return ShadowWidth 
+     * Get <p>Shadow width, default unit pixel, underlying default value 0, no shading</p> 
+     * @return ShadowWidth <p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
      */
     public Float getShadowWidth() {
         return this.ShadowWidth;
     }
 
     /**
-     * Set 
-     * @param ShadowWidth 
+     * Set <p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
+     * @param ShadowWidth <p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
      */
     public void setShadowWidth(Float ShadowWidth) {
         this.ShadowWidth = ShadowWidth;
     }
 
     /**
-     * Get  
-     * @return ShadowWidthUnit 
+     * Get <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p> 
+     * @return ShadowWidthUnit <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
      */
     public Long getShadowWidthUnit() {
         return this.ShadowWidthUnit;
     }
 
     /**
-     * Set 
-     * @param ShadowWidthUnit 
+     * Set <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
+     * @param ShadowWidthUnit <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
      */
     public void setShadowWidthUnit(Long ShadowWidthUnit) {
         this.ShadowWidthUnit = ShadowWidthUnit;
     }
 
     /**
-     * Get  
-     * @return ShadowColor 
+     * Get <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p> 
+     * @return ShadowColor <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
      */
     public String getShadowColor() {
         return this.ShadowColor;
     }
 
     /**
-     * Set 
-     * @param ShadowColor 
+     * Set <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+     * @param ShadowColor <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
      */
     public void setShadowColor(String ShadowColor) {
         this.ShadowColor = ShadowColor;
     }
 
     /**
-     * Get  
-     * @return ShadowAlpha 
+     * Get <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p> 
+     * @return ShadowAlpha <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
      */
     public Float getShadowAlpha() {
         return this.ShadowAlpha;
     }
 
     /**
-     * Set 
-     * @param ShadowAlpha 
+     * Set <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
+     * @param ShadowAlpha <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
      */
     public void setShadowAlpha(Float ShadowAlpha) {
         this.ShadowAlpha = ShadowAlpha;

@@ -24,138 +24,168 @@ import java.util.HashMap;
 public class CreatePersonSampleRequest extends AbstractModel {
 
     /**
-    * 
+    * Material name. Length limit: 20 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2.
     */
     @SerializedName("Usages")
     @Expose
     private String [] Usages;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Material description. Length limit: 1024 characters.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
     */
     @SerializedName("FaceContents")
     @Expose
     private String [] FaceContents;
 
     /**
-    * 
+    * Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Material name. Length limit: 20 characters. 
+     * @return Name Material name. Length limit: 20 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Material name. Length limit: 20 characters.
+     * @param Name Material name. Length limit: 20 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Usages 
+     * Get Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2. 
+     * @return Usages Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2.
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set 
-     * @param Usages 
+     * Set Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2.
+     * @param Usages Material application scenario. Available values:
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: for inappropriate content, equivalent to Review.Face.
+3. All: include all of the above, equivalent to 1+2.
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get Material description. Length limit: 1024 characters. 
+     * @return Description Material description. Length limit: 1024 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set Material description. Length limit: 1024 characters.
+     * @param Description Material description. Length limit: 1024 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return FaceContents 
+     * Get Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200. 
+     * @return FaceContents Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
      */
     public String [] getFaceContents() {
         return this.FaceContents;
     }
 
     /**
-     * Set 
-     * @param FaceContents 
+     * Set Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
+     * @param FaceContents Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
      */
     public void setFaceContents(String [] FaceContents) {
         this.FaceContents = FaceContents;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li> 
+     * @return Tags Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li>
+     * @param Tags Material tag
+<li>Array length limit: 20 tags;</li>
+<li>Single tag length limited to 128 characters.</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

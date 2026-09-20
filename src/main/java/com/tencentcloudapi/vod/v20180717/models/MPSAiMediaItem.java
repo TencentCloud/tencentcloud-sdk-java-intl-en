@@ -24,46 +24,126 @@ import java.util.HashMap;
 public class MPSAiMediaItem extends AbstractModel {
 
     /**
-    * 
+    * MPS intelligent processing task type. Valid values:
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 
+    * MPS intelligent processing task result set
     */
     @SerializedName("AiMediaTasks")
     @Expose
     private MPSAiMediaTask [] AiMediaTasks;
 
     /**
-     * Get  
-     * @return TaskType 
+     * Get MPS intelligent processing task type. Valid values:
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li> 
+     * @return TaskType MPS intelligent processing task type. Valid values:
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 
-     * @param TaskType 
+     * Set MPS intelligent processing task type. Valid values:
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+     * @param TaskType MPS intelligent processing task type. Valid values:
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get  
-     * @return AiMediaTasks 
+     * Get MPS intelligent processing task result set 
+     * @return AiMediaTasks MPS intelligent processing task result set
      */
     public MPSAiMediaTask [] getAiMediaTasks() {
         return this.AiMediaTasks;
     }
 
     /**
-     * Set 
-     * @param AiMediaTasks 
+     * Set MPS intelligent processing task result set
+     * @param AiMediaTasks MPS intelligent processing task result set
      */
     public void setAiMediaTasks(MPSAiMediaTask [] AiMediaTasks) {
         this.AiMediaTasks = AiMediaTasks;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeProcedureTemplatesRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Task flow template name filter conditions. The array can contain up to 100 names.</p>
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 
+    * <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Paging offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p>
     */
     @SerializedName("SortBy")
     @Expose
     private SortBy [] SortBy;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Names 
+     * Get <p>Task flow template name filter conditions. The array can contain up to 100 names.</p> 
+     * @return Names <p>Task flow template name filter conditions. The array can contain up to 100 names.</p>
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 
-     * @param Names 
+     * Set <p>Task flow template name filter conditions. The array can contain up to 100 names.</p>
+     * @param Names <p>Task flow template name filter conditions. The array can contain up to 100 names.</p>
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li> 
+     * @return Type <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
+     * @param Type <p>Filtering condition for the task flow template type. Available values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get <p>Paging offset. Default value: 0.</p> 
+     * @return Offset <p>Paging offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set <p>Paging offset. Default value: 0.</p>
+     * @param Offset <p>Paging offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get <p>Number of returned entries. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return SortBy 
+     * Get <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p> 
+     * @return SortBy <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p>
      */
     public SortBy [] getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 
-     * @param SortBy 
+     * Set <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p>
+     * @param SortBy <p>Sort the returned results by the specified field in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order is desc (descending) or asc (ascending).</p><p>Input parameter limit: currently only supports CreateTime as the sorting field.</p>
      */
     public void setSortBy(SortBy [] SortBy) {
         this.SortBy = SortBy;

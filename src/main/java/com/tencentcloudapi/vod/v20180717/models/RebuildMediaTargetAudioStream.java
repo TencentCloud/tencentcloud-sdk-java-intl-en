@@ -24,92 +24,222 @@ import java.util.HashMap;
 public class RebuildMediaTargetAudioStream extends AbstractModel {
 
     /**
-    * 
+    * Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 
+    * Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 
+    * Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz.
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 
+    * Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
     */
     @SerializedName("AudioChannel")
     @Expose
     private Long AudioChannel;
 
     /**
-     * Get  
-     * @return Codec 
+     * Get Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li> 
+     * @return Codec Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 
-     * @param Codec 
+     * Set Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+     * @param Codec Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, optional values:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get  
-     * @return Bitrate 
+     * Get Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate. 
+     * @return Bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 
-     * @param Bitrate 
+     * Set Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+     * @param Bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get  
-     * @return SampleRate 
+     * Get Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz. 
+     * @return SampleRate Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz.
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 
-     * @param SampleRate 
+     * Set Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz.
+     * @param SampleRate Sampling rate of the audio stream. Available values:
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+
+Unit: Hz.
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get  
-     * @return AudioChannel 
+     * Get Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2. 
+     * @return AudioChannel Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
     /**
-     * Set 
-     * @param AudioChannel 
+     * Set Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
+     * @param AudioChannel Audio channel mode. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo</li>
+
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;

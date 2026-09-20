@@ -24,207 +24,272 @@ import java.util.HashMap;
 public class TaskSimpleInfo extends AbstractModel {
 
     /**
-    * 
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Video ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Task type. Value:
+<li>Procedure: video processing task;</li>
+<li>EditMedia: video editing task;</li>
+<li>ReduceMediaBitrate: bitrate reduction task;</li>
+<li>WechatDistribute: publishing on WeChat task;</li>
+<li>ReviewAudioVideo: audio/video moderation task;</li>
+<li>MPSWorkflowTask: MPS video processing task.</li>
+Task types compatible with the 2017 version:
+<li>Transcode: video transcoding task;</li>
+<li>SnapshotByTimeOffset: video screencapturing task;</li>
+<li>Concat: video splicing task;</li>
+<li>Clip: video clipping task;</li>
+<li>ImageSprites: capture image sprite task.</li>
+
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 
+    * Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty.
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * 
+    * Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty.
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * 
+    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * Source context, used to pass through user request information.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated). 
+     * @return Status Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
+     * @param Status Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Video ID. 
+     * @return FileId Video ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Video ID.
+     * @param FileId Video ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return TaskType 
+     * Get Task type. Value:
+<li>Procedure: video processing task;</li>
+<li>EditMedia: video editing task;</li>
+<li>ReduceMediaBitrate: bitrate reduction task;</li>
+<li>WechatDistribute: publishing on WeChat task;</li>
+<li>ReviewAudioVideo: audio/video moderation task;</li>
+<li>MPSWorkflowTask: MPS video processing task.</li>
+Task types compatible with the 2017 version:
+<li>Transcode: video transcoding task;</li>
+<li>SnapshotByTimeOffset: video screencapturing task;</li>
+<li>Concat: video splicing task;</li>
+<li>Clip: video clipping task;</li>
+<li>ImageSprites: capture image sprite task.</li>
+ 
+     * @return TaskType Task type. Value:
+<li>Procedure: video processing task;</li>
+<li>EditMedia: video editing task;</li>
+<li>ReduceMediaBitrate: bitrate reduction task;</li>
+<li>WechatDistribute: publishing on WeChat task;</li>
+<li>ReviewAudioVideo: audio/video moderation task;</li>
+<li>MPSWorkflowTask: MPS video processing task.</li>
+Task types compatible with the 2017 version:
+<li>Transcode: video transcoding task;</li>
+<li>SnapshotByTimeOffset: video screencapturing task;</li>
+<li>Concat: video splicing task;</li>
+<li>Clip: video clipping task;</li>
+<li>ImageSprites: capture image sprite task.</li>
+
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 
-     * @param TaskType 
+     * Set Task type. Value:
+<li>Procedure: video processing task;</li>
+<li>EditMedia: video editing task;</li>
+<li>ReduceMediaBitrate: bitrate reduction task;</li>
+<li>WechatDistribute: publishing on WeChat task;</li>
+<li>ReviewAudioVideo: audio/video moderation task;</li>
+<li>MPSWorkflowTask: MPS video processing task.</li>
+Task types compatible with the 2017 version:
+<li>Transcode: video transcoding task;</li>
+<li>SnapshotByTimeOffset: video screencapturing task;</li>
+<li>Concat: video splicing task;</li>
+<li>Clip: video clipping task;</li>
+<li>ImageSprites: capture image sprite task.</li>
+
+     * @param TaskType Task type. Value:
+<li>Procedure: video processing task;</li>
+<li>EditMedia: video editing task;</li>
+<li>ReduceMediaBitrate: bitrate reduction task;</li>
+<li>WechatDistribute: publishing on WeChat task;</li>
+<li>ReviewAudioVideo: audio/video moderation task;</li>
+<li>MPSWorkflowTask: MPS video processing task.</li>
+Task types compatible with the 2017 version:
+<li>Transcode: video transcoding task;</li>
+<li>SnapshotByTimeOffset: video screencapturing task;</li>
+<li>Concat: video splicing task;</li>
+<li>Clip: video clipping task;</li>
+<li>ImageSprites: capture image sprite task.</li>
+
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return BeginProcessTime 
+     * Get Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty. 
+     * @return BeginProcessTime Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set 
-     * @param BeginProcessTime 
+     * Set Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty.
+     * @param BeginProcessTime Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get  
-     * @return FinishTime 
+     * Get Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty. 
+     * @return FinishTime Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty.
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 
-     * @param FinishTime 
+     * Set Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty.
+     * @param FinishTime Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty.
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Source context, used to pass through user request information. 
+     * @return SessionContext Source context, used to pass through user request information.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Source context, used to pass through user request information.
+     * @param SessionContext Source context, used to pass through user request information.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

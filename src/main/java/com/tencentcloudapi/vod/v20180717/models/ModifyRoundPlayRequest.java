@@ -24,207 +24,222 @@ import java.util.HashMap;
 public class ModifyRoundPlayRequest extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of the carousel playlist.
     */
     @SerializedName("RoundPlayId")
     @Expose
     private String RoundPlayId;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * Carousel list.
+<li>Array length limit: 100.</li>
     */
     @SerializedName("RoundPlaylist")
     @Expose
     private RoundPlayListItemInfo [] RoundPlaylist;
 
     /**
-    * 
+    * Carousel playbill name. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Carousel playlist description, with a length limit of 256 characters.
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * 
+    * Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li>
     */
     @SerializedName("PlayBackMode")
     @Expose
     private String PlayBackMode;
 
     /**
-    * 
+    * Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-     * Get  
-     * @return RoundPlayId 
+     * Get Unique identifier of the carousel playlist. 
+     * @return RoundPlayId Unique identifier of the carousel playlist.
      */
     public String getRoundPlayId() {
         return this.RoundPlayId;
     }
 
     /**
-     * Set 
-     * @param RoundPlayId 
+     * Set Unique identifier of the carousel playlist.
+     * @param RoundPlayId Unique identifier of the carousel playlist.
      */
     public void setRoundPlayId(String RoundPlayId) {
         this.RoundPlayId = RoundPlayId;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return StartTime Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param StartTime Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return RoundPlaylist 
+     * Get Carousel list.
+<li>Array length limit: 100.</li> 
+     * @return RoundPlaylist Carousel list.
+<li>Array length limit: 100.</li>
      */
     public RoundPlayListItemInfo [] getRoundPlaylist() {
         return this.RoundPlaylist;
     }
 
     /**
-     * Set 
-     * @param RoundPlaylist 
+     * Set Carousel list.
+<li>Array length limit: 100.</li>
+     * @param RoundPlaylist Carousel list.
+<li>Array length limit: 100.</li>
      */
     public void setRoundPlaylist(RoundPlayListItemInfo [] RoundPlaylist) {
         this.RoundPlaylist = RoundPlaylist;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Carousel playbill name. Length limit: 64 characters. 
+     * @return Name Carousel playbill name. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Carousel playbill name. Length limit: 64 characters.
+     * @param Name Carousel playbill name. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Desc 
+     * Get Carousel playlist description, with a length limit of 256 characters. 
+     * @return Desc Carousel playlist description, with a length limit of 256 characters.
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 
-     * @param Desc 
+     * Set Carousel playlist description, with a length limit of 256 characters.
+     * @param Desc Carousel playlist description, with a length limit of 256 characters.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li> 
+     * @return Status Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li>
+     * @param Status Playback status. Available values: <li>Disabled: stop playback.</li><li>Enabled: start playback after the duration of play arrives.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return PlayBackMode 
+     * Get Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li> 
+     * @return PlayBackMode Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li>
      */
     public String getPlayBackMode() {
         return this.PlayBackMode;
     }
 
     /**
-     * Set 
-     * @param PlayBackMode 
+     * Set Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li>
+     * @param PlayBackMode Playback mode. Optional values:
+<li>Loop: loop playback playlist;</li>
+<li>Linear: single play, stop playback after playlist finishes.</li>
      */
     public void setPlayBackMode(String PlayBackMode) {
         this.PlayBackMode = PlayBackMode;
     }
 
     /**
-     * Get  
-     * @return ExpiredTime 
+     * Get Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire. 
+     * @return ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 
-     * @param ExpiredTime 
+     * Set Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
+     * @param ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

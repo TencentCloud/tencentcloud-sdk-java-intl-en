@@ -24,138 +24,153 @@ import java.util.HashMap;
 public class ImageProcessingTemplate extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of the image processing template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Image processing template name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Template description information.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
     */
     @SerializedName("Operations")
     @Expose
     private ImageOperation [] Operations;
 
     /**
-    * 
+    * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique identifier of the image processing template. 
+     * @return Definition Unique identifier of the image processing template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique identifier of the image processing template.
+     * @param Definition Unique identifier of the image processing template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li> 
+     * @return Type Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+     * @param Type Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Image processing template name. 
+     * @return Name Image processing template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Image processing template name.
+     * @param Name Image processing template name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Template description information. 
+     * @return Comment Template description information.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Template description information.
+     * @param Comment Template description information.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return Operations 
+     * Get Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li> 
+     * @return Operations Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
      */
     public ImageOperation [] getOperations() {
         return this.Operations;
     }
 
     /**
-     * Set 
-     * @param Operations 
+     * Set Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
+     * @param Operations Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
      */
     public void setOperations(ImageOperation [] Operations) {
         this.Operations = Operations;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

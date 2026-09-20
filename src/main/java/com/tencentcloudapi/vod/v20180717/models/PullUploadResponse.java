@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PullUploadResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Pull the upload video task ID. This can be used to query the pull upload task status.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class PullUploadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get <p>Pull the upload video task ID. This can be used to query the pull upload task status.</p> 
+     * @return TaskId <p>Pull the upload video task ID. This can be used to query the pull upload task status.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set <p>Pull the upload video task ID. This can be used to query the pull upload task status.</p>
+     * @param TaskId <p>Pull the upload video task ID. This can be used to query the pull upload task status.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EnhanceMediaQualityResponse extends AbstractModel {
 
     /**
-    * 
+    * Audio and video quality regeneration task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class EnhanceMediaQualityResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Audio and video quality regeneration task ID. 
+     * @return TaskId Audio and video quality regeneration task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Audio and video quality regeneration task ID.
+     * @param TaskId Audio and video quality regeneration task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

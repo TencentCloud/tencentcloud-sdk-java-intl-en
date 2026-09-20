@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class TrtcRecordInfo extends AbstractModel {
 
     /**
-    * 
+    * TRTC application ID.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 
+    * TRTC room ID.
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 
+    * Recording task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * List of user IDs participating in recording.
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-     * Get  
-     * @return SdkAppId 
+     * Get TRTC application ID. 
+     * @return SdkAppId TRTC application ID.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 
-     * @param SdkAppId 
+     * Set TRTC application ID.
+     * @param SdkAppId TRTC application ID.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get  
-     * @return RoomId 
+     * Get TRTC room ID. 
+     * @return RoomId TRTC room ID.
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 
-     * @param RoomId 
+     * Set TRTC room ID.
+     * @param RoomId TRTC room ID.
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Recording task ID. 
+     * @return TaskId Recording task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Recording task ID.
+     * @param TaskId Recording task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return UserIds 
+     * Get List of user IDs participating in recording. 
+     * @return UserIds List of user IDs participating in recording.
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 
-     * @param UserIds 
+     * Set List of user IDs participating in recording.
+     * @param UserIds List of user IDs participating in recording.
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;

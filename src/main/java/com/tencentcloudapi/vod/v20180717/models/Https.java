@@ -42,7 +42,7 @@ public class Https extends AbstractModel {
     private String Http2;
 
     /**
-    * 
+    * Certificate configuration information.
     */
     @SerializedName("CertInfo")
     @Expose
@@ -97,16 +97,16 @@ public class Https extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CertInfo 
+     * Get Certificate configuration information. 
+     * @return CertInfo Certificate configuration information.
      */
     public CDNCertInfo getCertInfo() {
         return this.CertInfo;
     }
 
     /**
-     * Set 
-     * @param CertInfo 
+     * Set Certificate configuration information.
+     * @param CertInfo Certificate configuration information.
      */
     public void setCertInfo(CDNCertInfo CertInfo) {
         this.CertInfo = CertInfo;

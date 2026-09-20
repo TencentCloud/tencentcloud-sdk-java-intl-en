@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ListFilesRequest extends AbstractModel {
 
     /**
-    * 
+    * VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
     */
     @SerializedName("Prefix")
     @Expose
     private String Prefix;
 
     /**
-    * 
+    * A character separator used for grouping object keys. The same part of all object keys from the prefix or from the beginning (if no prefix is specified) to the first delimiter is used as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
     */
     @SerializedName("Delimiter")
     @Expose
     private String Delimiter;
 
     /**
-    * 
+    * ys 	 Maximum number of entries returned at a time. Default value: 100. Minimum value: 1. Maximum value: 100.
     */
     @SerializedName("MaxKeys")
     @Expose
     private Long MaxKeys;
 
     /**
-    * 
+    * Marker
     */
     @SerializedName("Marker")
     @Expose
     private String Marker;
 
     /**
-    * 
+    * File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
     */
     @SerializedName("Categories")
     @Expose
     private String [] Categories;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. 
+     * @return SubAppId VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
+     * @param SubAppId VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Prefix 
+     * Get Object key prefix matching, limited to object keys whose names contain the specified prefix in response. 
+     * @return Prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set 
-     * @param Prefix 
+     * Set Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+     * @param Prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
     }
 
     /**
-     * Get  
-     * @return Delimiter 
+     * Get A character separator used for grouping object keys. The same part of all object keys from the prefix or from the beginning (if no prefix is specified) to the first delimiter is used as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list. 
+     * @return Delimiter A character separator used for grouping object keys. The same part of all object keys from the prefix or from the beginning (if no prefix is specified) to the first delimiter is used as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
      */
     public String getDelimiter() {
         return this.Delimiter;
     }
 
     /**
-     * Set 
-     * @param Delimiter 
+     * Set A character separator used for grouping object keys. The same part of all object keys from the prefix or from the beginning (if no prefix is specified) to the first delimiter is used as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
+     * @param Delimiter A character separator used for grouping object keys. The same part of all object keys from the prefix or from the beginning (if no prefix is specified) to the first delimiter is used as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
      */
     public void setDelimiter(String Delimiter) {
         this.Delimiter = Delimiter;
     }
 
     /**
-     * Get  
-     * @return MaxKeys 
+     * Get ys 	 Maximum number of entries returned at a time. Default value: 100. Minimum value: 1. Maximum value: 100. 
+     * @return MaxKeys ys 	 Maximum number of entries returned at a time. Default value: 100. Minimum value: 1. Maximum value: 100.
      */
     public Long getMaxKeys() {
         return this.MaxKeys;
     }
 
     /**
-     * Set 
-     * @param MaxKeys 
+     * Set ys 	 Maximum number of entries returned at a time. Default value: 100. Minimum value: 1. Maximum value: 100.
+     * @param MaxKeys ys 	 Maximum number of entries returned at a time. Default value: 100. Minimum value: 1. Maximum value: 100.
      */
     public void setMaxKeys(Long MaxKeys) {
         this.MaxKeys = MaxKeys;
     }
 
     /**
-     * Get  
-     * @return Marker 
+     * Get Marker 
+     * @return Marker Marker
      */
     public String getMarker() {
         return this.Marker;
     }
 
     /**
-     * Set 
-     * @param Marker 
+     * Set Marker
+     * @param Marker Marker
      */
     public void setMarker(String Marker) {
         this.Marker = Marker;
     }
 
     /**
-     * Get  
-     * @return Categories 
+     * Get File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> 
+     * @return Categories File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
      */
     public String [] getCategories() {
         return this.Categories;
     }
 
     /**
-     * Set 
-     * @param Categories 
+     * Set File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
+     * @param Categories File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
      */
     public void setCategories(String [] Categories) {
         this.Categories = Categories;

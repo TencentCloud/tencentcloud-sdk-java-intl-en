@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class BeautyFilterItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * <p>Filter item.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Filter strength.</p>
     */
     @SerializedName("Value")
     @Expose
     private Long Value;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul> 
+     * @return Switch <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+     * @param Switch <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Filter item.</p> 
+     * @return Type <p>Filter item.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Filter item.</p>
+     * @param Type <p>Filter item.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Value 
+     * Get <p>Filter strength.</p> 
+     * @return Value <p>Filter strength.</p>
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set 
-     * @param Value 
+     * Set <p>Filter strength.</p>
+     * @param Value <p>Filter strength.</p>
      */
     public void setValue(Long Value) {
         this.Value = Value;

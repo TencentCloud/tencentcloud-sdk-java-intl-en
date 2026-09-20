@@ -24,115 +24,135 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel {
 
     /**
-    * 
+    * Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Subtitle language.
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * 
+    * Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 
+    * Subtitle file Url.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return Id 
+     * Get Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z. 
+     * @return Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+     * @param Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z. 
+     * @return Name Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+     * @param Name Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Language 
+     * Get Subtitle language. 
+     * @return Language Subtitle language.
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 
-     * @param Language 
+     * Set Subtitle language.
+     * @param Language Subtitle language.
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get  
-     * @return Format 
+     * Get Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li> 
+     * @return Format Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 
-     * @param Format 
+     * Set Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
+     * @param Format Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Subtitle file Url. 
+     * @return Url Subtitle file Url.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Subtitle file Url.
+     * @param Url Subtitle file Url.
      */
     public void setUrl(String Url) {
         this.Url = Url;

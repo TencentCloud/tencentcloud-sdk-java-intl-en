@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class HandleCurrentPlaylistResponse extends AbstractModel {
 
     /**
-    * 
+    * List of successfully operated programs.
     */
     @SerializedName("RoundPlaylist")
     @Expose
@@ -38,16 +38,16 @@ public class HandleCurrentPlaylistResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return RoundPlaylist 
+     * Get List of successfully operated programs. 
+     * @return RoundPlaylist List of successfully operated programs.
      */
     public RoundPlayListItemInfo [] getRoundPlaylist() {
         return this.RoundPlaylist;
     }
 
     /**
-     * Set 
-     * @param RoundPlaylist 
+     * Set List of successfully operated programs.
+     * @param RoundPlaylist List of successfully operated programs.
      */
     public void setRoundPlaylist(RoundPlayListItemInfo [] RoundPlaylist) {
         this.RoundPlaylist = RoundPlaylist;

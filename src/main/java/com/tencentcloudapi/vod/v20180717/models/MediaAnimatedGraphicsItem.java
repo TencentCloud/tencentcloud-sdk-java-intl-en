@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class MediaAnimatedGraphicsItem extends AbstractModel {
 
     /**
-    * 
+    * File address of the animated image.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Animated image file format, for example, gif.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 
+    * Height of the animated image. Measurement unit: px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 
+    * Width of the animated image in px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * Animated image bitrate. Measurement unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 
+    * Animated image size. Unit: byte.
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 
+    * md5 value of the animated image.
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * 
+    * Start time offset of the GIF in the video, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of the GIF in the video, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get  
-     * @return Url 
+     * Get File address of the animated image. 
+     * @return Url File address of the animated image.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set File address of the animated image.
+     * @param Url File address of the animated image.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
+     * @return Definition Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param Definition Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Container 
+     * Get Animated image file format, for example, gif. 
+     * @return Container Animated image file format, for example, gif.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 
-     * @param Container 
+     * Set Animated image file format, for example, gif.
+     * @param Container Animated image file format, for example, gif.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Height of the animated image. Measurement unit: px. 
+     * @return Height Height of the animated image. Measurement unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Height of the animated image. Measurement unit: px.
+     * @param Height Height of the animated image. Measurement unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Width of the animated image in px. 
+     * @return Width Width of the animated image in px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Width of the animated image in px.
+     * @param Width Width of the animated image in px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Bitrate 
+     * Get Animated image bitrate. Measurement unit: bps. 
+     * @return Bitrate Animated image bitrate. Measurement unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 
-     * @param Bitrate 
+     * Set Animated image bitrate. Measurement unit: bps.
+     * @param Bitrate Animated image bitrate. Measurement unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get  
-     * @return Size 
+     * Get Animated image size. Unit: byte. 
+     * @return Size Animated image size. Unit: byte.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 
-     * @param Size 
+     * Set Animated image size. Unit: byte.
+     * @param Size Animated image size. Unit: byte.
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get  
-     * @return Md5 
+     * Get md5 value of the animated image. 
+     * @return Md5 md5 value of the animated image.
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set 
-     * @param Md5 
+     * Set md5 value of the animated image.
+     * @param Md5 md5 value of the animated image.
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Start time offset of the GIF in the video, in seconds. 
+     * @return StartTimeOffset Start time offset of the GIF in the video, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Start time offset of the GIF in the video, in seconds.
+     * @param StartTimeOffset Start time offset of the GIF in the video, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of the GIF in the video, in seconds. 
+     * @return EndTimeOffset End time offset of the GIF in the video, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of the GIF in the video, in seconds.
+     * @param EndTimeOffset End time offset of the GIF in the video, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

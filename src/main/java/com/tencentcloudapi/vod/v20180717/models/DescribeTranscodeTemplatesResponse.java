@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTranscodeTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Transcoding template detail list.
     */
     @SerializedName("TranscodeTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTranscodeTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return TranscodeTemplateSet 
+     * Get Transcoding template detail list. 
+     * @return TranscodeTemplateSet Transcoding template detail list.
      */
     public TranscodeTemplate [] getTranscodeTemplateSet() {
         return this.TranscodeTemplateSet;
     }
 
     /**
-     * Set 
-     * @param TranscodeTemplateSet 
+     * Set Transcoding template detail list.
+     * @param TranscodeTemplateSet Transcoding template detail list.
      */
     public void setTranscodeTemplateSet(TranscodeTemplate [] TranscodeTemplateSet) {
         this.TranscodeTemplateSet = TranscodeTemplateSet;

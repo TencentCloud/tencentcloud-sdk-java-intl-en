@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class BangladeshIDCard extends AbstractModel {
 
     /**
-    * Last name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last name
     */
     @SerializedName("LastName")
     @Expose
     private String LastName;
 
     /**
-    * First name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("FirstName")
     @Expose
     private String FirstName;
 
     /**
-    * License number.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Identity card
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Age.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Age
     */
     @SerializedName("Age")
     @Expose
     private String Age;
 
     /**
-    * Birthday.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Birthday
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Issued country.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * City of issuance
     */
     @SerializedName("IssuedCountry")
     @Expose
     private String IssuedCountry;
 
     /**
-     * Get Last name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastName Last name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last name 
+     * @return LastName Last name
      */
     public String getLastName() {
         return this.LastName;
     }
 
     /**
-     * Set Last name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastName Last name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last name
+     * @param LastName Last name
      */
     public void setLastName(String LastName) {
         this.LastName = LastName;
     }
 
     /**
-     * Get First name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstName First name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return FirstName Name
      */
     public String getFirstName() {
         return this.FirstName;
     }
 
     /**
-     * Set First name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstName First name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param FirstName Name
      */
     public void setFirstName(String FirstName) {
         this.FirstName = FirstName;
     }
 
     /**
-     * Get License number.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Identity card 
+     * @return LicenseNumber Identity card
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Identity card
+     * @param LicenseNumber Identity card
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Age.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Age Age.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Age 
+     * @return Age Age
      */
     public String getAge() {
         return this.Age;
     }
 
     /**
-     * Set Age.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Age Age.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Age
+     * @param Age Age
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get Birthday.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Birthday Birthday.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Birthday 
+     * @return Birthday Birthday
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birthday.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Birthday Birthday.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Birthday
+     * @param Birthday Birthday
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Issued country.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedCountry Issued country.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get City of issuance 
+     * @return IssuedCountry City of issuance
      */
     public String getIssuedCountry() {
         return this.IssuedCountry;
     }
 
     /**
-     * Set Issued country.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedCountry Issued country.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set City of issuance
+     * @param IssuedCountry City of issuance
      */
     public void setIssuedCountry(String IssuedCountry) {
         this.IssuedCountry = IssuedCountry;

@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class LLMComprehendTemplateItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Unique identifier of the image asynchronous processing template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>Image asynchronous processing template name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Description information of the image asynchronous processing template.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * 
+    * <p>Segment summary parsing configuration</p>
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummary Summary;
 
     /**
-    * 
+    * <p>Text transcribing and parsing configuration</p>
     */
     @SerializedName("Asr")
     @Expose
     private LLMComprehendAsr Asr;
 
     /**
-    * 
+    * <p>Face recognition parsing configuration</p>
     */
     @SerializedName("FaceRecognition")
     @Expose
     private LLMComprehendFaceRecognition FaceRecognition;
 
     /**
-    * 
+    * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Unique identifier of the image asynchronous processing template.</p> 
+     * @return Definition <p>Unique identifier of the image asynchronous processing template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Unique identifier of the image asynchronous processing template.</p>
+     * @param Definition <p>Unique identifier of the image asynchronous processing template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Image asynchronous processing template name.</p> 
+     * @return Name <p>Image asynchronous processing template name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Image asynchronous processing template name.</p>
+     * @param Name <p>Image asynchronous processing template name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Description information of the image asynchronous processing template.</p> 
+     * @return Comment <p>Description information of the image asynchronous processing template.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Description information of the image asynchronous processing template.</p>
+     * @param Comment <p>Description information of the image asynchronous processing template.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul> 
+     * @return Type <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
+     * @param Type <p>Template type</p><p>Enumeration values:</p><ul><li>Preset: preset template</li><li>Custom: custom template</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Level 
+     * Get <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul> 
+     * @return Level <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 
-     * @param Level 
+     * Set <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
+     * @param Level <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get  
-     * @return Summary 
+     * Get <p>Segment summary parsing configuration</p> 
+     * @return Summary <p>Segment summary parsing configuration</p>
      */
     public LLMComprehendSummary getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 
-     * @param Summary 
+     * Set <p>Segment summary parsing configuration</p>
+     * @param Summary <p>Segment summary parsing configuration</p>
      */
     public void setSummary(LLMComprehendSummary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get  
-     * @return Asr 
+     * Get <p>Text transcribing and parsing configuration</p> 
+     * @return Asr <p>Text transcribing and parsing configuration</p>
      */
     public LLMComprehendAsr getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set 
-     * @param Asr 
+     * Set <p>Text transcribing and parsing configuration</p>
+     * @param Asr <p>Text transcribing and parsing configuration</p>
      */
     public void setAsr(LLMComprehendAsr Asr) {
         this.Asr = Asr;
     }
 
     /**
-     * Get  
-     * @return FaceRecognition 
+     * Get <p>Face recognition parsing configuration</p> 
+     * @return FaceRecognition <p>Face recognition parsing configuration</p>
      */
     public LLMComprehendFaceRecognition getFaceRecognition() {
         return this.FaceRecognition;
     }
 
     /**
-     * Set 
-     * @param FaceRecognition 
+     * Set <p>Face recognition parsing configuration</p>
+     * @param FaceRecognition <p>Face recognition parsing configuration</p>
      */
     public void setFaceRecognition(LLMComprehendFaceRecognition FaceRecognition) {
         this.FaceRecognition = FaceRecognition;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param UpdateTime <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrWordsResultInput extends AbstractModel {
 
     /**
-    * 
+    * Text keyword recognition template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Text keyword recognition template ID. 
+     * @return Definition Text keyword recognition template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Text keyword recognition template ID.
+     * @param Definition Text keyword recognition template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

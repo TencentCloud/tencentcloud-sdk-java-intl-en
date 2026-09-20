@@ -24,69 +24,94 @@ import java.util.HashMap;
 public class ImageTransform extends AbstractModel {
 
     /**
-    * 
+    * Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
     */
     @SerializedName("RotateAngle")
     @Expose
     private Float RotateAngle;
 
     /**
-    * 
+    * Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
     */
     @SerializedName("Flip")
     @Expose
     private String Flip;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li> 
+     * @return Type Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
+     * @param Type Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return RotateAngle 
+     * Get Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate. 
+     * @return RotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
      */
     public Float getRotateAngle() {
         return this.RotateAngle;
     }
 
     /**
-     * Set 
-     * @param RotateAngle 
+     * Set Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+     * @param RotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
      */
     public void setRotateAngle(Float RotateAngle) {
         this.RotateAngle = RotateAngle;
     }
 
     /**
-     * Get  
-     * @return Flip 
+     * Get Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip. 
+     * @return Flip Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
      */
     public String getFlip() {
         return this.Flip;
     }
 
     /**
-     * Set 
-     * @param Flip 
+     * Set Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
+     * @param Flip Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
      */
     public void setFlip(String Flip) {
         this.Flip = Flip;

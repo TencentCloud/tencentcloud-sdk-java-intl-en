@@ -24,23 +24,253 @@ import java.util.HashMap;
 public class TransitionOperation extends AbstractModel {
 
     /**
-    * 
+    * Transition type. Valid values:
+<ul>
+<li>Image transition operation, used for transition processing between two video clip images:</li>
+<ul>
+<li>ImageFadeInFadeOut: image fade-in and fade-out. </li>
+<li>BowTieHorizontal: horizontal bow. </li>
+<li>BowTieVertical: vertical bow. </li>
+<li>ButterflyWaveScrawler: shake. </li>
+<li>Cannabisleaf: maple leaf. </li>
+<li>Circle: retract and release in an arc. </li>
+<li>CircleCrop: Ring gather. </li>
+<li>Circleopen: ellipse gather. </li>
+<li>Crosswarp: horizontal warping. </li>
+<li>Cube: cube. </li>
+<li>DoomScreenTransition: curtain. </li>
+<li>Doorway: Porch. </li>
+<li>Dreamy: Wave. </li>
+<li>DreamyZoom: horizontal gathering. </li>
+<li>FilmBurn: Burning clouds.</li>
+<li>GlitchMemories: Jitter. </li>
+<li>Heart: heart shape. </li>
+<li>InvertedPageCurl: page turning. </li>
+<li>Luma: Corrode. </li>
+<li>Mosaic: nine-grid. </li>
+<li>Pinwheel: windmill. </li>
+<li>PolarFunction: elliptic diffusion. </li>
+<li>PolkaDotsCurtain: Arc diffusion. </li>
+<li>Radial: radar scanning </li>
+<li>RotateScaleFade: up-down retraction. </li>
+<li>Squeeze: vertical gathering. </li>
+<li>Swap: zoom in and switch.</li>
+<li>Swirl: spiral. </li>
+<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>Windowblinds: window blind. </li>
+<li>WipeDown: collapse downward. </li>
+<li>WipeLeft: collapse to the left. </li>
+<li>WipeRight: Collapse to the right.</li>
+<li>WipeUp: collapse upward. </li>
+<li>ZoomInCircles: water ripple. </li>
+</ul>
+</li>
+<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<ul>
+<li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
+</ul>
+</li>
+</ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Transition type. Valid values:
+<ul>
+<li>Image transition operation, used for transition processing between two video clip images:</li>
+<ul>
+<li>ImageFadeInFadeOut: image fade-in and fade-out. </li>
+<li>BowTieHorizontal: horizontal bow. </li>
+<li>BowTieVertical: vertical bow. </li>
+<li>ButterflyWaveScrawler: shake. </li>
+<li>Cannabisleaf: maple leaf. </li>
+<li>Circle: retract and release in an arc. </li>
+<li>CircleCrop: Ring gather. </li>
+<li>Circleopen: ellipse gather. </li>
+<li>Crosswarp: horizontal warping. </li>
+<li>Cube: cube. </li>
+<li>DoomScreenTransition: curtain. </li>
+<li>Doorway: Porch. </li>
+<li>Dreamy: Wave. </li>
+<li>DreamyZoom: horizontal gathering. </li>
+<li>FilmBurn: Burning clouds.</li>
+<li>GlitchMemories: Jitter. </li>
+<li>Heart: heart shape. </li>
+<li>InvertedPageCurl: page turning. </li>
+<li>Luma: Corrode. </li>
+<li>Mosaic: nine-grid. </li>
+<li>Pinwheel: windmill. </li>
+<li>PolarFunction: elliptic diffusion. </li>
+<li>PolkaDotsCurtain: Arc diffusion. </li>
+<li>Radial: radar scanning </li>
+<li>RotateScaleFade: up-down retraction. </li>
+<li>Squeeze: vertical gathering. </li>
+<li>Swap: zoom in and switch.</li>
+<li>Swirl: spiral. </li>
+<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>Windowblinds: window blind. </li>
+<li>WipeDown: collapse downward. </li>
+<li>WipeLeft: collapse to the left. </li>
+<li>WipeRight: Collapse to the right.</li>
+<li>WipeUp: collapse upward. </li>
+<li>ZoomInCircles: water ripple. </li>
+</ul>
+</li>
+<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<ul>
+<li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
+</ul>
+</li>
+</ul> 
+     * @return Type Transition type. Valid values:
+<ul>
+<li>Image transition operation, used for transition processing between two video clip images:</li>
+<ul>
+<li>ImageFadeInFadeOut: image fade-in and fade-out. </li>
+<li>BowTieHorizontal: horizontal bow. </li>
+<li>BowTieVertical: vertical bow. </li>
+<li>ButterflyWaveScrawler: shake. </li>
+<li>Cannabisleaf: maple leaf. </li>
+<li>Circle: retract and release in an arc. </li>
+<li>CircleCrop: Ring gather. </li>
+<li>Circleopen: ellipse gather. </li>
+<li>Crosswarp: horizontal warping. </li>
+<li>Cube: cube. </li>
+<li>DoomScreenTransition: curtain. </li>
+<li>Doorway: Porch. </li>
+<li>Dreamy: Wave. </li>
+<li>DreamyZoom: horizontal gathering. </li>
+<li>FilmBurn: Burning clouds.</li>
+<li>GlitchMemories: Jitter. </li>
+<li>Heart: heart shape. </li>
+<li>InvertedPageCurl: page turning. </li>
+<li>Luma: Corrode. </li>
+<li>Mosaic: nine-grid. </li>
+<li>Pinwheel: windmill. </li>
+<li>PolarFunction: elliptic diffusion. </li>
+<li>PolkaDotsCurtain: Arc diffusion. </li>
+<li>Radial: radar scanning </li>
+<li>RotateScaleFade: up-down retraction. </li>
+<li>Squeeze: vertical gathering. </li>
+<li>Swap: zoom in and switch.</li>
+<li>Swirl: spiral. </li>
+<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>Windowblinds: window blind. </li>
+<li>WipeDown: collapse downward. </li>
+<li>WipeLeft: collapse to the left. </li>
+<li>WipeRight: Collapse to the right.</li>
+<li>WipeUp: collapse upward. </li>
+<li>ZoomInCircles: water ripple. </li>
+</ul>
+</li>
+<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<ul>
+<li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
+</ul>
+</li>
+</ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Transition type. Valid values:
+<ul>
+<li>Image transition operation, used for transition processing between two video clip images:</li>
+<ul>
+<li>ImageFadeInFadeOut: image fade-in and fade-out. </li>
+<li>BowTieHorizontal: horizontal bow. </li>
+<li>BowTieVertical: vertical bow. </li>
+<li>ButterflyWaveScrawler: shake. </li>
+<li>Cannabisleaf: maple leaf. </li>
+<li>Circle: retract and release in an arc. </li>
+<li>CircleCrop: Ring gather. </li>
+<li>Circleopen: ellipse gather. </li>
+<li>Crosswarp: horizontal warping. </li>
+<li>Cube: cube. </li>
+<li>DoomScreenTransition: curtain. </li>
+<li>Doorway: Porch. </li>
+<li>Dreamy: Wave. </li>
+<li>DreamyZoom: horizontal gathering. </li>
+<li>FilmBurn: Burning clouds.</li>
+<li>GlitchMemories: Jitter. </li>
+<li>Heart: heart shape. </li>
+<li>InvertedPageCurl: page turning. </li>
+<li>Luma: Corrode. </li>
+<li>Mosaic: nine-grid. </li>
+<li>Pinwheel: windmill. </li>
+<li>PolarFunction: elliptic diffusion. </li>
+<li>PolkaDotsCurtain: Arc diffusion. </li>
+<li>Radial: radar scanning </li>
+<li>RotateScaleFade: up-down retraction. </li>
+<li>Squeeze: vertical gathering. </li>
+<li>Swap: zoom in and switch.</li>
+<li>Swirl: spiral. </li>
+<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>Windowblinds: window blind. </li>
+<li>WipeDown: collapse downward. </li>
+<li>WipeLeft: collapse to the left. </li>
+<li>WipeRight: Collapse to the right.</li>
+<li>WipeUp: collapse upward. </li>
+<li>ZoomInCircles: water ripple. </li>
+</ul>
+</li>
+<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<ul>
+<li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
+</ul>
+</li>
+</ul>
+     * @param Type Transition type. Valid values:
+<ul>
+<li>Image transition operation, used for transition processing between two video clip images:</li>
+<ul>
+<li>ImageFadeInFadeOut: image fade-in and fade-out. </li>
+<li>BowTieHorizontal: horizontal bow. </li>
+<li>BowTieVertical: vertical bow. </li>
+<li>ButterflyWaveScrawler: shake. </li>
+<li>Cannabisleaf: maple leaf. </li>
+<li>Circle: retract and release in an arc. </li>
+<li>CircleCrop: Ring gather. </li>
+<li>Circleopen: ellipse gather. </li>
+<li>Crosswarp: horizontal warping. </li>
+<li>Cube: cube. </li>
+<li>DoomScreenTransition: curtain. </li>
+<li>Doorway: Porch. </li>
+<li>Dreamy: Wave. </li>
+<li>DreamyZoom: horizontal gathering. </li>
+<li>FilmBurn: Burning clouds.</li>
+<li>GlitchMemories: Jitter. </li>
+<li>Heart: heart shape. </li>
+<li>InvertedPageCurl: page turning. </li>
+<li>Luma: Corrode. </li>
+<li>Mosaic: nine-grid. </li>
+<li>Pinwheel: windmill. </li>
+<li>PolarFunction: elliptic diffusion. </li>
+<li>PolkaDotsCurtain: Arc diffusion. </li>
+<li>Radial: radar scanning </li>
+<li>RotateScaleFade: up-down retraction. </li>
+<li>Squeeze: vertical gathering. </li>
+<li>Swap: zoom in and switch.</li>
+<li>Swirl: spiral. </li>
+<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>Windowblinds: window blind. </li>
+<li>WipeDown: collapse downward. </li>
+<li>WipeLeft: collapse to the left. </li>
+<li>WipeRight: Collapse to the right.</li>
+<li>WipeUp: collapse upward. </li>
+<li>ZoomInCircles: water ripple. </li>
+</ul>
+</li>
+<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<ul>
+<li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
+</ul>
+</li>
+</ul>
      */
     public void setType(String Type) {
         this.Type = Type;

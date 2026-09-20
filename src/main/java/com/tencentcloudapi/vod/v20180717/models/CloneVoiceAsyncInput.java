@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CloneVoiceAsyncInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Cloning audio URL. Valid when AudioData is empty.</p>
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-    * 
+    * <p>Input audio fileId</p>
     */
     @SerializedName("AudioFileId")
     @Expose
     private String AudioFileId;
 
     /**
-    * 
+    * <p>Audio language</p>
     */
     @SerializedName("LanguageBoost")
     @Expose
     private String LanguageBoost;
 
     /**
-    * 
+    * <p>Extended parameters in the format of a JSON string.</p>
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-     * Get  
-     * @return AudioUrl 
+     * Get <p>Cloning audio URL. Valid when AudioData is empty.</p> 
+     * @return AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 
-     * @param AudioUrl 
+     * Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * @param AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
     }
 
     /**
-     * Get  
-     * @return AudioFileId 
+     * Get <p>Input audio fileId</p> 
+     * @return AudioFileId <p>Input audio fileId</p>
      */
     public String getAudioFileId() {
         return this.AudioFileId;
     }
 
     /**
-     * Set 
-     * @param AudioFileId 
+     * Set <p>Input audio fileId</p>
+     * @param AudioFileId <p>Input audio fileId</p>
      */
     public void setAudioFileId(String AudioFileId) {
         this.AudioFileId = AudioFileId;
     }
 
     /**
-     * Get  
-     * @return LanguageBoost 
+     * Get <p>Audio language</p> 
+     * @return LanguageBoost <p>Audio language</p>
      */
     public String getLanguageBoost() {
         return this.LanguageBoost;
     }
 
     /**
-     * Set 
-     * @param LanguageBoost 
+     * Set <p>Audio language</p>
+     * @param LanguageBoost <p>Audio language</p>
      */
     public void setLanguageBoost(String LanguageBoost) {
         this.LanguageBoost = LanguageBoost;
     }
 
     /**
-     * Get  
-     * @return ExtParam 
+     * Get <p>Extended parameters in the format of a JSON string.</p> 
+     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set 
-     * @param ExtParam 
+     * Set <p>Extended parameters in the format of a JSON string.</p>
+     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class VoiceSettings extends AbstractModel {
 
     /**
-    * 
+    * <p>Voice name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Voice description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
     */
     @SerializedName("Gender")
     @Expose
     private String Gender;
 
     /**
-    * 
+    * <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
     */
     @SerializedName("Age")
     @Expose
     private String Age;
 
     /**
-    * 
+    * <p>Language. Supported languages:<br>zh Chinese<br>en English<br>ja Japanese<br>de German<br>fr French<br>ko Korean<br>ru Russian<br>uk Ukrainian<br>pt Portuguese<br>it Italian<br>es Spanish<br>id Indonesian<br>nl Dutch<br>tr Turkish<br>fil Filipino<br>ms Malay<br>el Greek<br>fi Finnish<br>hr Croatian<br>sk Slovak<br>pl Polish<br>sv Swedish<br>hi Hindi<br>bg Bulgarian<br>ro Romanian<br>ar Arabic<br>cs Czech<br>da Danish<br>ta Tamil<br>hun Hungarian<br>vi Vietnamese<br>no Norwegian<br>yue Cantonese<br>th Thai<br>he Hebrew<br>ca Catalan<br>nn Nynorsk<br>af Afrikaans<br>fa Persian<br>sl Slovenian</p>
     */
     @SerializedName("Languages")
     @Expose
     private String [] Languages;
 
     /**
-    * 
+    * <p>Tag.</p>
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-    * 
+    * <p>Scenario.</p>
     */
     @SerializedName("Scenes")
     @Expose
     private String [] Scenes;
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Voice name.</p> 
+     * @return Name <p>Voice name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Voice name.</p>
+     * @param Name <p>Voice name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get <p>Voice description.</p> 
+     * @return Description <p>Voice description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set <p>Voice description.</p>
+     * @param Description <p>Voice description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return Gender 
+     * Get <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul> 
+     * @return Gender <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
      */
     public String getGender() {
         return this.Gender;
     }
 
     /**
-     * Set 
-     * @param Gender 
+     * Set <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+     * @param Gender <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
      */
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * Get  
-     * @return Age 
+     * Get <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul> 
+     * @return Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
      */
     public String getAge() {
         return this.Age;
     }
 
     /**
-     * Set 
-     * @param Age 
+     * Set <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     * @param Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get  
-     * @return Languages 
+     * Get <p>Language. Supported languages:<br>zh Chinese<br>en English<br>ja Japanese<br>de German<br>fr French<br>ko Korean<br>ru Russian<br>uk Ukrainian<br>pt Portuguese<br>it Italian<br>es Spanish<br>id Indonesian<br>nl Dutch<br>tr Turkish<br>fil Filipino<br>ms Malay<br>el Greek<br>fi Finnish<br>hr Croatian<br>sk Slovak<br>pl Polish<br>sv Swedish<br>hi Hindi<br>bg Bulgarian<br>ro Romanian<br>ar Arabic<br>cs Czech<br>da Danish<br>ta Tamil<br>hun Hungarian<br>vi Vietnamese<br>no Norwegian<br>yue Cantonese<br>th Thai<br>he Hebrew<br>ca Catalan<br>nn Nynorsk<br>af Afrikaans<br>fa Persian<br>sl Slovenian</p> 
+     * @return Languages <p>Language. Supported languages:<br>zh Chinese<br>en English<br>ja Japanese<br>de German<br>fr French<br>ko Korean<br>ru Russian<br>uk Ukrainian<br>pt Portuguese<br>it Italian<br>es Spanish<br>id Indonesian<br>nl Dutch<br>tr Turkish<br>fil Filipino<br>ms Malay<br>el Greek<br>fi Finnish<br>hr Croatian<br>sk Slovak<br>pl Polish<br>sv Swedish<br>hi Hindi<br>bg Bulgarian<br>ro Romanian<br>ar Arabic<br>cs Czech<br>da Danish<br>ta Tamil<br>hun Hungarian<br>vi Vietnamese<br>no Norwegian<br>yue Cantonese<br>th Thai<br>he Hebrew<br>ca Catalan<br>nn Nynorsk<br>af Afrikaans<br>fa Persian<br>sl Slovenian</p>
      */
     public String [] getLanguages() {
         return this.Languages;
     }
 
     /**
-     * Set 
-     * @param Languages 
+     * Set <p>Language. Supported languages:<br>zh Chinese<br>en English<br>ja Japanese<br>de German<br>fr French<br>ko Korean<br>ru Russian<br>uk Ukrainian<br>pt Portuguese<br>it Italian<br>es Spanish<br>id Indonesian<br>nl Dutch<br>tr Turkish<br>fil Filipino<br>ms Malay<br>el Greek<br>fi Finnish<br>hr Croatian<br>sk Slovak<br>pl Polish<br>sv Swedish<br>hi Hindi<br>bg Bulgarian<br>ro Romanian<br>ar Arabic<br>cs Czech<br>da Danish<br>ta Tamil<br>hun Hungarian<br>vi Vietnamese<br>no Norwegian<br>yue Cantonese<br>th Thai<br>he Hebrew<br>ca Catalan<br>nn Nynorsk<br>af Afrikaans<br>fa Persian<br>sl Slovenian</p>
+     * @param Languages <p>Language. Supported languages:<br>zh Chinese<br>en English<br>ja Japanese<br>de German<br>fr French<br>ko Korean<br>ru Russian<br>uk Ukrainian<br>pt Portuguese<br>it Italian<br>es Spanish<br>id Indonesian<br>nl Dutch<br>tr Turkish<br>fil Filipino<br>ms Malay<br>el Greek<br>fi Finnish<br>hr Croatian<br>sk Slovak<br>pl Polish<br>sv Swedish<br>hi Hindi<br>bg Bulgarian<br>ro Romanian<br>ar Arabic<br>cs Czech<br>da Danish<br>ta Tamil<br>hun Hungarian<br>vi Vietnamese<br>no Norwegian<br>yue Cantonese<br>th Thai<br>he Hebrew<br>ca Catalan<br>nn Nynorsk<br>af Afrikaans<br>fa Persian<br>sl Slovenian</p>
      */
     public void setLanguages(String [] Languages) {
         this.Languages = Languages;
     }
 
     /**
-     * Get  
-     * @return Labels 
+     * Get <p>Tag.</p> 
+     * @return Labels <p>Tag.</p>
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 
-     * @param Labels 
+     * Set <p>Tag.</p>
+     * @param Labels <p>Tag.</p>
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get  
-     * @return Scenes 
+     * Get <p>Scenario.</p> 
+     * @return Scenes <p>Scenario.</p>
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set 
-     * @param Scenes 
+     * Set <p>Scenario.</p>
+     * @param Scenes <p>Scenario.</p>
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;

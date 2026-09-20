@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcAdvancedCustomElementResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAigcAdvancedCustomElementResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

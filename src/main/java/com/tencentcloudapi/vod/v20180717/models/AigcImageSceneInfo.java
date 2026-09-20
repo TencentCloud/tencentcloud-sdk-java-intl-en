@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AigcImageSceneInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
     */
     @SerializedName("AiTryOnConfig")
     @Expose
     private AiTryOnConfig AiTryOnConfig;
 
     /**
-    * 
+    * <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
     */
     @SerializedName("ChangeClothesConfig")
     @Expose
     private ChangeClothesConfig ChangeClothesConfig;
 
     /**
-    * 
+    * <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
     */
     @SerializedName("ProductImageConfig")
     @Expose
     private ProductImageConfig ProductImageConfig;
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul> 
+     * @return Type <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+     * @param Type <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return AiTryOnConfig 
+     * Get <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p> 
+     * @return AiTryOnConfig <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
      */
     public AiTryOnConfig getAiTryOnConfig() {
         return this.AiTryOnConfig;
     }
 
     /**
-     * Set 
-     * @param AiTryOnConfig 
+     * Set <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
+     * @param AiTryOnConfig <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
      */
     public void setAiTryOnConfig(AiTryOnConfig AiTryOnConfig) {
         this.AiTryOnConfig = AiTryOnConfig;
     }
 
     /**
-     * Get  
-     * @return ChangeClothesConfig 
+     * Get <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul> 
+     * @return ChangeClothesConfig <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
      */
     public ChangeClothesConfig getChangeClothesConfig() {
         return this.ChangeClothesConfig;
     }
 
     /**
-     * Set 
-     * @param ChangeClothesConfig 
+     * Set <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+     * @param ChangeClothesConfig <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
      */
     public void setChangeClothesConfig(ChangeClothesConfig ChangeClothesConfig) {
         this.ChangeClothesConfig = ChangeClothesConfig;
     }
 
     /**
-     * Get  
-     * @return ProductImageConfig 
+     * Get <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p> 
+     * @return ProductImageConfig <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
      */
     public ProductImageConfig getProductImageConfig() {
         return this.ProductImageConfig;
     }
 
     /**
-     * Set 
-     * @param ProductImageConfig 
+     * Set <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
+     * @param ProductImageConfig <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
      */
     public void setProductImageConfig(ProductImageConfig ProductImageConfig) {
         this.ProductImageConfig = ProductImageConfig;

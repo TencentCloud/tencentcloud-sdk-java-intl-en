@@ -24,92 +24,97 @@ import java.util.HashMap;
 public class DescribeVodDomainsRequest extends AbstractModel {
 
     /**
-    * 
+    * Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li>
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 
+    * Maximum number of results returned for pagination pull. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * Starting offset for pagination pull. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Domains 
+     * Get Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li> 
+     * @return Domains Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 
-     * @param Domains 
+     * Set Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li>
+     * @param Domains Domain name list. If this field is not specified, all domain information is listed by default. The limits of this field are as follows:
+<li>The maximum number of domains is 20.</li>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Maximum number of results returned for pagination pull. Default value: 20. 
+     * @return Limit Maximum number of results returned for pagination pull. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Maximum number of results returned for pagination pull. Default value: 20.
+     * @param Limit Maximum number of results returned for pagination pull. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Starting offset for pagination pull. Default value: 0. 
+     * @return Offset Starting offset for pagination pull. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Starting offset for pagination pull. Default value: 0.
+     * @param Offset Starting offset for pagination pull. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

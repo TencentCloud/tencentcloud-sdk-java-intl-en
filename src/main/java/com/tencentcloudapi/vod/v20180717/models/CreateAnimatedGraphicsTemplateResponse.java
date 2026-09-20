@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAnimatedGraphicsTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier for rotation diagram template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAnimatedGraphicsTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique identifier for rotation diagram template. 
+     * @return Definition Unique identifier for rotation diagram template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique identifier for rotation diagram template.
+     * @param Definition Unique identifier for rotation diagram template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

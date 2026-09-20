@@ -24,115 +24,130 @@ import java.util.HashMap;
 public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
 
     /**
-    * 
+    * Offset time of the start of the suspected segment. Unit: seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of a suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Confidence degree of the suspected segment.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * List of suspicious keywords.
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Offset time of the start of the suspected segment. Unit: seconds. 
+     * @return StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Offset time of the start of the suspected segment. Unit: seconds.
+     * @param StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of a suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of a suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence degree of the suspected segment. 
+     * @return Confidence Confidence degree of the suspected segment.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence degree of the suspected segment.
+     * @param Confidence Confidence degree of the suspected segment.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li> 
+     * @return Suggestion Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param Suggestion Result suggestion for video moderation of the suspected segment. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return KeywordSet 
+     * Get List of suspicious keywords. 
+     * @return KeywordSet List of suspicious keywords.
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set 
-     * @param KeywordSet 
+     * Set List of suspicious keywords.
+     * @param KeywordSet List of suspicious keywords.
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;

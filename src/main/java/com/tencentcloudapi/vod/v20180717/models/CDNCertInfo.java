@@ -31,14 +31,14 @@ public class CDNCertInfo extends AbstractModel {
     private String CertId;
 
     /**
-    * 
+    * Certificate information.
     */
     @SerializedName("Certificate")
     @Expose
     private String Certificate;
 
     /**
-    * 
+    * Key information.
     */
     @SerializedName("PrivateKey")
     @Expose
@@ -69,32 +69,32 @@ No need to fill when used as an input parameter configuration.
     }
 
     /**
-     * Get  
-     * @return Certificate 
+     * Get Certificate information. 
+     * @return Certificate Certificate information.
      */
     public String getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 
-     * @param Certificate 
+     * Set Certificate information.
+     * @param Certificate Certificate information.
      */
     public void setCertificate(String Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get  
-     * @return PrivateKey 
+     * Get Key information. 
+     * @return PrivateKey Key information.
      */
     public String getPrivateKey() {
         return this.PrivateKey;
     }
 
     /**
-     * Set 
-     * @param PrivateKey 
+     * Set Key information.
+     * @param PrivateKey Key information.
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;

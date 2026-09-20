@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class TextToSpeechAsyncInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Voice ID.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Text to convert to speech.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 
+    * <p>Text to speech language.</p>
     */
     @SerializedName("LanguageBoost")
     @Expose
     private String LanguageBoost;
 
     /**
-    * 
+    * <p>Extended parameters in the format of a JSON string.</p>
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Voice ID.</p> 
+     * @return VoiceId <p>Voice ID.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Voice ID.</p>
+     * @param VoiceId <p>Voice ID.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get <p>Text to convert to speech.</p> 
+     * @return Text <p>Text to convert to speech.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set <p>Text to convert to speech.</p>
+     * @param Text <p>Text to convert to speech.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get  
-     * @return LanguageBoost 
+     * Get <p>Text to speech language.</p> 
+     * @return LanguageBoost <p>Text to speech language.</p>
      */
     public String getLanguageBoost() {
         return this.LanguageBoost;
     }
 
     /**
-     * Set 
-     * @param LanguageBoost 
+     * Set <p>Text to speech language.</p>
+     * @param LanguageBoost <p>Text to speech language.</p>
      */
     public void setLanguageBoost(String LanguageBoost) {
         this.LanguageBoost = LanguageBoost;
     }
 
     /**
-     * Get  
-     * @return ExtParam 
+     * Get <p>Extended parameters in the format of a JSON string.</p> 
+     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set 
-     * @param ExtParam 
+     * Set <p>Extended parameters in the format of a JSON string.</p>
+     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;

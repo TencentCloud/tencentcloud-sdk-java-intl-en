@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class ObjectConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li>
     */
     @SerializedName("ObjectLibrary")
     @Expose
     private String ObjectLibrary;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li> 
+     * @return Switch Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li>
+     * @param Switch Object recognition task switch. Available values:
+<li>ON: enable the intelligent object recognition task;</li>
+<li>OFF: Disable the intelligent object recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return ObjectLibrary 
+     * Get Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li> 
+     * @return ObjectLibrary Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li>
      */
     public String getObjectLibrary() {
         return this.ObjectLibrary;
     }
 
     /**
-     * Set 
-     * @param ObjectLibrary 
+     * Set Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li>
+     * @param ObjectLibrary Object library selection. Valid values:
+<li>Default: use the default object library;</li>
+<li>UserDefine: Use the user-defined object library.</li>
+<li>All: Use both the default object library and the user-defined object library.</li>
      */
     public void setObjectLibrary(String ObjectLibrary) {
         this.ObjectLibrary = ObjectLibrary;

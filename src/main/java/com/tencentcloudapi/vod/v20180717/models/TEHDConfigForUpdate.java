@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TEHDConfigForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Maximum video bitrate. If not specified, no modification is made.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made. 
+     * @return Type Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+     * @param Type Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return MaxVideoBitrate 
+     * Get Maximum video bitrate. If not specified, no modification is made. 
+     * @return MaxVideoBitrate Maximum video bitrate. If not specified, no modification is made.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set 
-     * @param MaxVideoBitrate 
+     * Set Maximum video bitrate. If not specified, no modification is made.
+     * @param MaxVideoBitrate Maximum video bitrate. If not specified, no modification is made.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class ArtifactRepairInfo extends AbstractModel {
 
     /**
-    * 
+    * Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li> 
+     * @return Switch Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
+     * @param Switch Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak. 
+     * @return Type Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
+     * @param Type Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
      */
     public void setType(String Type) {
         this.Type = Type;

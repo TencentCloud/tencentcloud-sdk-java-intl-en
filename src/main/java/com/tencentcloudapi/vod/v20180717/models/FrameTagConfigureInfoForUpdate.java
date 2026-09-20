@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class FrameTagConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Switch for the intelligent frame-by-frame tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Frame interception interval in seconds. Minimum value: 0.5 seconds.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Switch for the intelligent frame-by-frame tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li> 
+     * @return Switch Switch for the intelligent frame-by-frame tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Switch for the intelligent frame-by-frame tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li>
+     * @param Switch Switch for the intelligent frame-by-frame tagging task. Available values:
+<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>OFF: Disable the intelligent frame-specific tagging task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return ScreenshotInterval 
+     * Get Frame interception interval in seconds. Minimum value: 0.5 seconds. 
+     * @return ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set 
-     * @param ScreenshotInterval 
+     * Set Frame interception interval in seconds. Minimum value: 0.5 seconds.
+     * @param ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;

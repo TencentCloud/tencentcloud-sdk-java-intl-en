@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AiSampleFaceOperation extends AbstractModel {
 
     /**
-    * 
+    * <p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Face ID collection. This field is required when Type is delete.</p>
     */
     @SerializedName("FaceIds")
     @Expose
     private String [] FaceIds;
 
     /**
-    * 
+    * <p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
     */
     @SerializedName("FaceContents")
     @Expose
     private String [] FaceContents;
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p> 
+     * @return Type <p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
+     * @param Type <p>Operation type. Available values: add, delete, reset. The reset operation clears the existing face data of the person and adds the face data specified by FaceContents.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return FaceIds 
+     * Get <p>Face ID collection. This field is required when Type is delete.</p> 
+     * @return FaceIds <p>Face ID collection. This field is required when Type is delete.</p>
      */
     public String [] getFaceIds() {
         return this.FaceIds;
     }
 
     /**
-     * Set 
-     * @param FaceIds 
+     * Set <p>Face ID collection. This field is required when Type is delete.</p>
+     * @param FaceIds <p>Face ID collection. This field is required when Type is delete.</p>
      */
     public void setFaceIds(String [] FaceIds) {
         this.FaceIds = FaceIds;
     }
 
     /**
-     * Get  
-     * @return FaceContents 
+     * Get <p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200. 
+     * @return FaceContents <p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
      */
     public String [] getFaceContents() {
         return this.FaceContents;
     }
 
     /**
-     * Set 
-     * @param FaceContents 
+     * Set <p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
+     * @param FaceContents <p>Set of strings after the face image is encoded in <a href="https://tools.ietf.org/html/rfc4648">Base64</a>. Only jpeg and png image formats are supported.</p><li>This field is required when Type is add or reset;</li><li>Array length limit: 5 images.</li>Note: The image must be a clear frontal face photo of a single person, with a resolution not less than 200*200.
      */
     public void setFaceContents(String [] FaceContents) {
         this.FaceContents = FaceContents;

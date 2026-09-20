@@ -24,138 +24,168 @@ import java.util.HashMap;
 public class MediaTrackItem extends AbstractModel {
 
     /**
-    * 
+    * Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Video clip. Valid when Type is Video.
     */
     @SerializedName("VideoItem")
     @Expose
     private VideoTrackItem VideoItem;
 
     /**
-    * 
+    * Audio clip. Valid when Type = Audio.
     */
     @SerializedName("AudioItem")
     @Expose
     private AudioTrackItem AudioItem;
 
     /**
-    * 
+    * Texture segment. Valid when Type is Sticker.
     */
     @SerializedName("StickerItem")
     @Expose
     private StickerTrackItem StickerItem;
 
     /**
-    * 
+    * Transition. Valid when Type is Transition.
     */
     @SerializedName("TransitionItem")
     @Expose
     private MediaTransitionItem TransitionItem;
 
     /**
-    * 
+    * Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
     */
     @SerializedName("EmptyItem")
     @Expose
     private EmptyTrackItem EmptyItem;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li> 
+     * @return Type Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
+     * @param Type Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return VideoItem 
+     * Get Video clip. Valid when Type is Video. 
+     * @return VideoItem Video clip. Valid when Type is Video.
      */
     public VideoTrackItem getVideoItem() {
         return this.VideoItem;
     }
 
     /**
-     * Set 
-     * @param VideoItem 
+     * Set Video clip. Valid when Type is Video.
+     * @param VideoItem Video clip. Valid when Type is Video.
      */
     public void setVideoItem(VideoTrackItem VideoItem) {
         this.VideoItem = VideoItem;
     }
 
     /**
-     * Get  
-     * @return AudioItem 
+     * Get Audio clip. Valid when Type = Audio. 
+     * @return AudioItem Audio clip. Valid when Type = Audio.
      */
     public AudioTrackItem getAudioItem() {
         return this.AudioItem;
     }
 
     /**
-     * Set 
-     * @param AudioItem 
+     * Set Audio clip. Valid when Type = Audio.
+     * @param AudioItem Audio clip. Valid when Type = Audio.
      */
     public void setAudioItem(AudioTrackItem AudioItem) {
         this.AudioItem = AudioItem;
     }
 
     /**
-     * Get  
-     * @return StickerItem 
+     * Get Texture segment. Valid when Type is Sticker. 
+     * @return StickerItem Texture segment. Valid when Type is Sticker.
      */
     public StickerTrackItem getStickerItem() {
         return this.StickerItem;
     }
 
     /**
-     * Set 
-     * @param StickerItem 
+     * Set Texture segment. Valid when Type is Sticker.
+     * @param StickerItem Texture segment. Valid when Type is Sticker.
      */
     public void setStickerItem(StickerTrackItem StickerItem) {
         this.StickerItem = StickerItem;
     }
 
     /**
-     * Get  
-     * @return TransitionItem 
+     * Get Transition. Valid when Type is Transition. 
+     * @return TransitionItem Transition. Valid when Type is Transition.
      */
     public MediaTransitionItem getTransitionItem() {
         return this.TransitionItem;
     }
 
     /**
-     * Set 
-     * @param TransitionItem 
+     * Set Transition. Valid when Type is Transition.
+     * @param TransitionItem Transition. Valid when Type is Transition.
      */
     public void setTransitionItem(MediaTransitionItem TransitionItem) {
         this.TransitionItem = TransitionItem;
     }
 
     /**
-     * Get  
-     * @return EmptyItem 
+     * Get Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li> 
+     * @return EmptyItem Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
      */
     public EmptyTrackItem getEmptyItem() {
         return this.EmptyItem;
     }
 
     /**
-     * Set 
-     * @param EmptyItem 
+     * Set Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+     * @param EmptyItem Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
      */
     public void setEmptyItem(EmptyTrackItem EmptyItem) {
         this.EmptyItem = EmptyItem;

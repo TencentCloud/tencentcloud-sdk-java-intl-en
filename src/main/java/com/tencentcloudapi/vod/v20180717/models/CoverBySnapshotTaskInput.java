@@ -24,92 +24,112 @@ import java.util.HashMap;
 public class CoverBySnapshotTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Time point screenshot template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
     */
     @SerializedName("PositionType")
     @Expose
     private String PositionType;
 
     /**
-    * 
+    * Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
     */
     @SerializedName("PositionValue")
     @Expose
     private Float PositionValue;
 
     /**
-    * 
+    * Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Time point screenshot template ID. 
+     * @return Definition Time point screenshot template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Time point screenshot template ID.
+     * @param Definition Time point screenshot template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return PositionType 
+     * Get Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li> 
+     * @return PositionType Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
      */
     public String getPositionType() {
         return this.PositionType;
     }
 
     /**
-     * Set 
-     * @param PositionType 
+     * Set Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
+     * @param PositionType Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
      */
     public void setPositionType(String PositionType) {
         this.PositionType = PositionType;
     }
 
     /**
-     * Get  
-     * @return PositionValue 
+     * Get Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li> 
+     * @return PositionValue Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
      */
     public Float getPositionValue() {
         return this.PositionValue;
     }
 
     /**
-     * Set 
-     * @param PositionValue 
+     * Set Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+     * @param PositionValue Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
      */
     public void setPositionValue(Float PositionValue) {
         this.PositionValue = PositionValue;
     }
 
     /**
-     * Get  
-     * @return WatermarkSet 
+     * Get Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported. 
+     * @return WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set 
-     * @param WatermarkSet 
+     * Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+     * @param WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;

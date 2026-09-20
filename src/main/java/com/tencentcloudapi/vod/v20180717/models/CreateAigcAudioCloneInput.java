@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateAigcAudioCloneInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
     */
     @SerializedName("AudioFileInfo")
     @Expose
     private AigcAudioCloneInputFileInfo AudioFileInfo;
 
     /**
-    * 
+    * <p>Custom Voice ID.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Clone audition parameter.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 
+    * <p>Sample audio for voice replication.</p>
     */
     @SerializedName("PromptAudioFileInfo")
     @Expose
     private AigcAudioCloneInputFileInfo PromptAudioFileInfo;
 
     /**
-    * 
+    * <p>Text content corresponding to the sample audio.</p>
     */
     @SerializedName("PromptText")
     @Expose
     private String PromptText;
 
     /**
-    * 
+    * <p>Pass-through parameter.</p>
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-     * Get  
-     * @return AudioFileInfo 
+     * Get <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p> 
+     * @return AudioFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
      */
     public AigcAudioCloneInputFileInfo getAudioFileInfo() {
         return this.AudioFileInfo;
     }
 
     /**
-     * Set 
-     * @param AudioFileInfo 
+     * Set <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
+     * @param AudioFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
      */
     public void setAudioFileInfo(AigcAudioCloneInputFileInfo AudioFileInfo) {
         this.AudioFileInfo = AudioFileInfo;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Custom Voice ID.</p> 
+     * @return VoiceId <p>Custom Voice ID.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Custom Voice ID.</p>
+     * @param VoiceId <p>Custom Voice ID.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get <p>Clone audition parameter.</p> 
+     * @return Text <p>Clone audition parameter.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set <p>Clone audition parameter.</p>
+     * @param Text <p>Clone audition parameter.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get  
-     * @return PromptAudioFileInfo 
+     * Get <p>Sample audio for voice replication.</p> 
+     * @return PromptAudioFileInfo <p>Sample audio for voice replication.</p>
      */
     public AigcAudioCloneInputFileInfo getPromptAudioFileInfo() {
         return this.PromptAudioFileInfo;
     }
 
     /**
-     * Set 
-     * @param PromptAudioFileInfo 
+     * Set <p>Sample audio for voice replication.</p>
+     * @param PromptAudioFileInfo <p>Sample audio for voice replication.</p>
      */
     public void setPromptAudioFileInfo(AigcAudioCloneInputFileInfo PromptAudioFileInfo) {
         this.PromptAudioFileInfo = PromptAudioFileInfo;
     }
 
     /**
-     * Get  
-     * @return PromptText 
+     * Get <p>Text content corresponding to the sample audio.</p> 
+     * @return PromptText <p>Text content corresponding to the sample audio.</p>
      */
     public String getPromptText() {
         return this.PromptText;
     }
 
     /**
-     * Set 
-     * @param PromptText 
+     * Set <p>Text content corresponding to the sample audio.</p>
+     * @param PromptText <p>Text content corresponding to the sample audio.</p>
      */
     public void setPromptText(String PromptText) {
         this.PromptText = PromptText;
     }
 
     /**
-     * Get  
-     * @return Payload 
+     * Get <p>Pass-through parameter.</p> 
+     * @return Payload <p>Pass-through parameter.</p>
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 
-     * @param Payload 
+     * Set <p>Pass-through parameter.</p>
+     * @param Payload <p>Pass-through parameter.</p>
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;

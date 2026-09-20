@@ -24,368 +24,383 @@ import java.util.HashMap;
 public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
-    * 
+    * Unique ID of a video content recognition template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Video content recognition template name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Description of the video content recognition template.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Head and tail recognition control parameter.
     */
     @SerializedName("HeadTailConfigure")
     @Expose
     private HeadTailConfigureInfo HeadTailConfigure;
 
     /**
-    * 
+    * Segmentation recognition control parameter.
     */
     @SerializedName("SegmentConfigure")
     @Expose
     private SegmentConfigureInfo SegmentConfigure;
 
     /**
-    * 
+    * Face recognition control parameter.
     */
     @SerializedName("FaceConfigure")
     @Expose
     private FaceConfigureInfo FaceConfigure;
 
     /**
-    * 
+    * Text Full-text Recognition Control Parameters.
     */
     @SerializedName("OcrFullTextConfigure")
     @Expose
     private OcrFullTextConfigureInfo OcrFullTextConfigure;
 
     /**
-    * 
+    * Text keyword recognition control parameters.
     */
     @SerializedName("OcrWordsConfigure")
     @Expose
     private OcrWordsConfigureInfo OcrWordsConfigure;
 
     /**
-    * 
+    * Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
     private AsrFullTextConfigureInfo AsrFullTextConfigure;
 
     /**
-    * 
+    * Voice keyword recognition control parameters.
     */
     @SerializedName("AsrWordsConfigure")
     @Expose
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
-    * 
+    * Voice translation recognition control parameters.
     */
     @SerializedName("AsrTranslateConfigure")
     @Expose
     private AsrTranslateConfigureInfo AsrTranslateConfigure;
 
     /**
-    * 
+    * Object recognition control parameter.
     */
     @SerializedName("ObjectConfigure")
     @Expose
     private ObjectConfigureInfo ObjectConfigure;
 
     /**
-    * 
+    * Screenshot interval. Measurement unit: second.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-    * 
+    * Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique ID of a video content recognition template. 
+     * @return Definition Unique ID of a video content recognition template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique ID of a video content recognition template.
+     * @param Definition Unique ID of a video content recognition template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Video content recognition template name. 
+     * @return Name Video content recognition template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Video content recognition template name.
+     * @param Name Video content recognition template name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Description of the video content recognition template. 
+     * @return Comment Description of the video content recognition template.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Description of the video content recognition template.
+     * @param Comment Description of the video content recognition template.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li> 
+     * @return Type Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li>
+     * @param Type Template type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: custom template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return HeadTailConfigure 
+     * Get Head and tail recognition control parameter. 
+     * @return HeadTailConfigure Head and tail recognition control parameter.
      */
     public HeadTailConfigureInfo getHeadTailConfigure() {
         return this.HeadTailConfigure;
     }
 
     /**
-     * Set 
-     * @param HeadTailConfigure 
+     * Set Head and tail recognition control parameter.
+     * @param HeadTailConfigure Head and tail recognition control parameter.
      */
     public void setHeadTailConfigure(HeadTailConfigureInfo HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
     }
 
     /**
-     * Get  
-     * @return SegmentConfigure 
+     * Get Segmentation recognition control parameter. 
+     * @return SegmentConfigure Segmentation recognition control parameter.
      */
     public SegmentConfigureInfo getSegmentConfigure() {
         return this.SegmentConfigure;
     }
 
     /**
-     * Set 
-     * @param SegmentConfigure 
+     * Set Segmentation recognition control parameter.
+     * @param SegmentConfigure Segmentation recognition control parameter.
      */
     public void setSegmentConfigure(SegmentConfigureInfo SegmentConfigure) {
         this.SegmentConfigure = SegmentConfigure;
     }
 
     /**
-     * Get  
-     * @return FaceConfigure 
+     * Get Face recognition control parameter. 
+     * @return FaceConfigure Face recognition control parameter.
      */
     public FaceConfigureInfo getFaceConfigure() {
         return this.FaceConfigure;
     }
 
     /**
-     * Set 
-     * @param FaceConfigure 
+     * Set Face recognition control parameter.
+     * @param FaceConfigure Face recognition control parameter.
      */
     public void setFaceConfigure(FaceConfigureInfo FaceConfigure) {
         this.FaceConfigure = FaceConfigure;
     }
 
     /**
-     * Get  
-     * @return OcrFullTextConfigure 
+     * Get Text Full-text Recognition Control Parameters. 
+     * @return OcrFullTextConfigure Text Full-text Recognition Control Parameters.
      */
     public OcrFullTextConfigureInfo getOcrFullTextConfigure() {
         return this.OcrFullTextConfigure;
     }
 
     /**
-     * Set 
-     * @param OcrFullTextConfigure 
+     * Set Text Full-text Recognition Control Parameters.
+     * @param OcrFullTextConfigure Text Full-text Recognition Control Parameters.
      */
     public void setOcrFullTextConfigure(OcrFullTextConfigureInfo OcrFullTextConfigure) {
         this.OcrFullTextConfigure = OcrFullTextConfigure;
     }
 
     /**
-     * Get  
-     * @return OcrWordsConfigure 
+     * Get Text keyword recognition control parameters. 
+     * @return OcrWordsConfigure Text keyword recognition control parameters.
      */
     public OcrWordsConfigureInfo getOcrWordsConfigure() {
         return this.OcrWordsConfigure;
     }
 
     /**
-     * Set 
-     * @param OcrWordsConfigure 
+     * Set Text keyword recognition control parameters.
+     * @param OcrWordsConfigure Text keyword recognition control parameters.
      */
     public void setOcrWordsConfigure(OcrWordsConfigureInfo OcrWordsConfigure) {
         this.OcrWordsConfigure = OcrWordsConfigure;
     }
 
     /**
-     * Get  
-     * @return AsrFullTextConfigure 
+     * Get Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font> 
+     * @return AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
     }
 
     /**
-     * Set 
-     * @param AsrFullTextConfigure 
+     * Set Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+     * @param AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
     }
 
     /**
-     * Get  
-     * @return AsrWordsConfigure 
+     * Get Voice keyword recognition control parameters. 
+     * @return AsrWordsConfigure Voice keyword recognition control parameters.
      */
     public AsrWordsConfigureInfo getAsrWordsConfigure() {
         return this.AsrWordsConfigure;
     }
 
     /**
-     * Set 
-     * @param AsrWordsConfigure 
+     * Set Voice keyword recognition control parameters.
+     * @param AsrWordsConfigure Voice keyword recognition control parameters.
      */
     public void setAsrWordsConfigure(AsrWordsConfigureInfo AsrWordsConfigure) {
         this.AsrWordsConfigure = AsrWordsConfigure;
     }
 
     /**
-     * Get  
-     * @return AsrTranslateConfigure 
+     * Get Voice translation recognition control parameters. 
+     * @return AsrTranslateConfigure Voice translation recognition control parameters.
      */
     public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
         return this.AsrTranslateConfigure;
     }
 
     /**
-     * Set 
-     * @param AsrTranslateConfigure 
+     * Set Voice translation recognition control parameters.
+     * @param AsrTranslateConfigure Voice translation recognition control parameters.
      */
     public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
         this.AsrTranslateConfigure = AsrTranslateConfigure;
     }
 
     /**
-     * Get  
-     * @return ObjectConfigure 
+     * Get Object recognition control parameter. 
+     * @return ObjectConfigure Object recognition control parameter.
      */
     public ObjectConfigureInfo getObjectConfigure() {
         return this.ObjectConfigure;
     }
 
     /**
-     * Set 
-     * @param ObjectConfigure 
+     * Set Object recognition control parameter.
+     * @param ObjectConfigure Object recognition control parameter.
      */
     public void setObjectConfigure(ObjectConfigureInfo ObjectConfigure) {
         this.ObjectConfigure = ObjectConfigure;
     }
 
     /**
-     * Get  
-     * @return ScreenshotInterval 
+     * Get Screenshot interval. Measurement unit: second. 
+     * @return ScreenshotInterval Screenshot interval. Measurement unit: second.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set 
-     * @param ScreenshotInterval 
+     * Set Screenshot interval. Measurement unit: second.
+     * @param ScreenshotInterval Screenshot interval. Measurement unit: second.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

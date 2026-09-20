@@ -24,92 +24,107 @@ import java.util.HashMap;
 public class DescribeDailyMostPlayedStatRequest extends AbstractModel {
 
     /**
-    * 
+    * Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 
+    * Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 
+    * Statistical metrics for Top data. Valid values:
+<li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+Default value: Traffic.
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Date 
+     * Get Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part. 
+     * @return Date Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 
-     * @param Date 
+     * Set Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
+     * @param Date Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get  
-     * @return DomainName 
+     * Get Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names. 
+     * @return DomainName Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 
-     * @param DomainName 
+     * Set Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
+     * @param DomainName Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get  
-     * @return Metric 
+     * Get Statistical metrics for Top data. Valid values:
+<li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+Default value: Traffic. 
+     * @return Metric Statistical metrics for Top data. Valid values:
+<li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+Default value: Traffic.
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set 
-     * @param Metric 
+     * Set Statistical metrics for Top data. Valid values:
+<li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+Default value: Traffic.
+     * @param Metric Statistical metrics for Top data. Valid values:
+<li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
+<li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+Default value: Traffic.
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

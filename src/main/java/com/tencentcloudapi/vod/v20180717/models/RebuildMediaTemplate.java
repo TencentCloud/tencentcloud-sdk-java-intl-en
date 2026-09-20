@@ -24,299 +24,339 @@ import java.util.HashMap;
 public class RebuildMediaTemplate extends AbstractModel {
 
     /**
-    * 
+    * Audio and video quality rebirth template number.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Audio and video quality rebirth template name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Description of the Audio and Video Quality Rebirth Template.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Audio-visual quality revival video control info.
     */
     @SerializedName("RebuildVideoInfo")
     @Expose
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * 
+    * Audio-visual quality revival audio control info.
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
     private RebuildAudioInfo RebuildAudioInfo;
 
     /**
-    * 
+    * Output video control information.
     */
     @SerializedName("TargetVideoInfo")
     @Expose
     private RebuildMediaTargetVideoStream TargetVideoInfo;
 
     /**
-    * 
+    * Output audio control information.
     */
     @SerializedName("TargetAudioInfo")
     @Expose
     private RebuildMediaTargetAudioStream TargetAudioInfo;
 
     /**
-    * 
+    * Muxing format. Available values: mp4, hls. mp4 is selected by default.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 
+    * Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 
+    * Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 
+    * Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Audio and video quality rebirth template number. 
+     * @return Definition Audio and video quality rebirth template number.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Audio and video quality rebirth template number.
+     * @param Definition Audio and video quality rebirth template number.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li> 
+     * @return Type Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+     * @param Type Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Audio and video quality rebirth template name. 
+     * @return Name Audio and video quality rebirth template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Audio and video quality rebirth template name.
+     * @param Name Audio and video quality rebirth template name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Description of the Audio and Video Quality Rebirth Template. 
+     * @return Comment Description of the Audio and Video Quality Rebirth Template.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Description of the Audio and Video Quality Rebirth Template.
+     * @param Comment Description of the Audio and Video Quality Rebirth Template.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return RebuildVideoInfo 
+     * Get Audio-visual quality revival video control info. 
+     * @return RebuildVideoInfo Audio-visual quality revival video control info.
      */
     public RebuildVideoInfo getRebuildVideoInfo() {
         return this.RebuildVideoInfo;
     }
 
     /**
-     * Set 
-     * @param RebuildVideoInfo 
+     * Set Audio-visual quality revival video control info.
+     * @param RebuildVideoInfo Audio-visual quality revival video control info.
      */
     public void setRebuildVideoInfo(RebuildVideoInfo RebuildVideoInfo) {
         this.RebuildVideoInfo = RebuildVideoInfo;
     }
 
     /**
-     * Get  
-     * @return RebuildAudioInfo 
+     * Get Audio-visual quality revival audio control info. 
+     * @return RebuildAudioInfo Audio-visual quality revival audio control info.
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set 
-     * @param RebuildAudioInfo 
+     * Set Audio-visual quality revival audio control info.
+     * @param RebuildAudioInfo Audio-visual quality revival audio control info.
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;
     }
 
     /**
-     * Get  
-     * @return TargetVideoInfo 
+     * Get Output video control information. 
+     * @return TargetVideoInfo Output video control information.
      */
     public RebuildMediaTargetVideoStream getTargetVideoInfo() {
         return this.TargetVideoInfo;
     }
 
     /**
-     * Set 
-     * @param TargetVideoInfo 
+     * Set Output video control information.
+     * @param TargetVideoInfo Output video control information.
      */
     public void setTargetVideoInfo(RebuildMediaTargetVideoStream TargetVideoInfo) {
         this.TargetVideoInfo = TargetVideoInfo;
     }
 
     /**
-     * Get  
-     * @return TargetAudioInfo 
+     * Get Output audio control information. 
+     * @return TargetAudioInfo Output audio control information.
      */
     public RebuildMediaTargetAudioStream getTargetAudioInfo() {
         return this.TargetAudioInfo;
     }
 
     /**
-     * Set 
-     * @param TargetAudioInfo 
+     * Set Output audio control information.
+     * @param TargetAudioInfo Output audio control information.
      */
     public void setTargetAudioInfo(RebuildMediaTargetAudioStream TargetAudioInfo) {
         this.TargetAudioInfo = TargetAudioInfo;
     }
 
     /**
-     * Get  
-     * @return Container 
+     * Get Muxing format. Available values: mp4, hls. mp4 is selected by default. 
+     * @return Container Muxing format. Available values: mp4, hls. mp4 is selected by default.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 
-     * @param Container 
+     * Set Muxing format. Available values: mp4, hls. mp4 is selected by default.
+     * @param Container Muxing format. Available values: mp4, hls. mp4 is selected by default.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get  
-     * @return RemoveVideo 
+     * Get Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0. 
+     * @return RemoveVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 
-     * @param RemoveVideo 
+     * Set Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
+     * @param RemoveVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get  
-     * @return RemoveAudio 
+     * Get Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0. 
+     * @return RemoveAudio Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 
-     * @param RemoveAudio 
+     * Set Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
+     * @param RemoveAudio Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

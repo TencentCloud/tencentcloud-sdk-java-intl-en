@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SplitMediaResponse extends AbstractModel {
 
     /**
-    * 
+    * Task ID of video splitting, which can be used to query the status of the splitting task (task type: SplitMedia).
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class SplitMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Task ID of video splitting, which can be used to query the status of the splitting task (task type: SplitMedia). 
+     * @return TaskId Task ID of video splitting, which can be used to query the status of the splitting task (task type: SplitMedia).
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Task ID of video splitting, which can be used to query the status of the splitting task (task type: SplitMedia).
+     * @param TaskId Task ID of video splitting, which can be used to query the status of the splitting task (task type: SplitMedia).
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateDomainVerifyRecordRequest extends AbstractModel {
 
     /**
-    * 
+    * Domain name for on-demand acceleration.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2024, this field must be set to the application ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>	
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name for on-demand acceleration. 
+     * @return Domain Domain name for on-demand acceleration.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name for on-demand acceleration.
+     * @param Domain Domain name for on-demand acceleration.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2024, this field must be set to the application ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>	 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2024, this field must be set to the application ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>	
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2024, this field must be set to the application ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>	
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2024, this field must be set to the application ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>	
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

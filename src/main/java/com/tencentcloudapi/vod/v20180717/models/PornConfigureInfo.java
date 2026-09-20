@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class PornConfigureInfo extends AbstractModel {
 
     /**
-    * 
+    * Control parameters for offensive information involved in image recognition.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PornImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * 
+    * Control parameters for offensive information involved in ASR-based recognition.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PornAsrReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * 
+    * Control parameters for offensive information involved in text recognition.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PornOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get  
-     * @return ImgReviewInfo 
+     * Get Control parameters for offensive information involved in image recognition. 
+     * @return ImgReviewInfo Control parameters for offensive information involved in image recognition.
      */
     public PornImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set 
-     * @param ImgReviewInfo 
+     * Set Control parameters for offensive information involved in image recognition.
+     * @param ImgReviewInfo Control parameters for offensive information involved in image recognition.
      */
     public void setImgReviewInfo(PornImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get  
-     * @return AsrReviewInfo 
+     * Get Control parameters for offensive information involved in ASR-based recognition. 
+     * @return AsrReviewInfo Control parameters for offensive information involved in ASR-based recognition.
      */
     public PornAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set 
-     * @param AsrReviewInfo 
+     * Set Control parameters for offensive information involved in ASR-based recognition.
+     * @param AsrReviewInfo Control parameters for offensive information involved in ASR-based recognition.
      */
     public void setAsrReviewInfo(PornAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get  
-     * @return OcrReviewInfo 
+     * Get Control parameters for offensive information involved in text recognition. 
+     * @return OcrReviewInfo Control parameters for offensive information involved in text recognition.
      */
     public PornOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 
-     * @param OcrReviewInfo 
+     * Set Control parameters for offensive information involved in text recognition.
+     * @param OcrReviewInfo Control parameters for offensive information involved in text recognition.
      */
     public void setOcrReviewInfo(PornOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

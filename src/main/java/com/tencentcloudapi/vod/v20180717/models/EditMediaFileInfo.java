@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class EditMediaFileInfo extends AbstractModel {
 
     /**
-    * 
+    * Video ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Start time offset of video editing, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of video editing, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Video ID. 
+     * @return FileId Video ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Video ID.
+     * @param FileId Video ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Start time offset of video editing, in seconds. 
+     * @return StartTimeOffset Start time offset of video editing, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Start time offset of video editing, in seconds.
+     * @param StartTimeOffset Start time offset of video editing, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of video editing, in seconds. 
+     * @return EndTimeOffset End time offset of video editing, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of video editing, in seconds.
+     * @param EndTimeOffset End time offset of video editing, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

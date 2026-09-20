@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class PoliticalOcrReviewTemplateInfo extends AbstractModel {
 
     /**
-    * 
+    * Task switch for text recognition involving inappropriate information. Available values:
+<li>ON: enable the task involving text recognition of inappropriate information;</li>
+<li>OFF: Disable the task involving inappropriate information in text recognition.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Threshold score for suspected violations. If the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 100. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 
+    * Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 75. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Task switch for text recognition involving inappropriate information. Available values:
+<li>ON: enable the task involving text recognition of inappropriate information;</li>
+<li>OFF: Disable the task involving inappropriate information in text recognition.</li> 
+     * @return Switch Task switch for text recognition involving inappropriate information. Available values:
+<li>ON: enable the task involving text recognition of inappropriate information;</li>
+<li>OFF: Disable the task involving inappropriate information in text recognition.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Task switch for text recognition involving inappropriate information. Available values:
+<li>ON: enable the task involving text recognition of inappropriate information;</li>
+<li>OFF: Disable the task involving inappropriate information in text recognition.</li>
+     * @param Switch Task switch for text recognition involving inappropriate information. Available values:
+<li>ON: enable the task involving text recognition of inappropriate information;</li>
+<li>OFF: Disable the task involving inappropriate information in text recognition.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return BlockConfidence 
+     * Get Threshold score for suspected violations. If the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 100. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for suspected violations. If the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 100. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 
-     * @param BlockConfidence 
+     * Set Threshold score for suspected violations. If the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+     * @param BlockConfidence Threshold score for suspected violations. If the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 100. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get  
-     * @return ReviewConfidence 
+     * Get Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 75. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 75. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 
-     * @param ReviewConfidence 
+     * Set Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 75. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 75. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateQualityInspectTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Audio and video quality inspection template ID.</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateQualityInspectTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Audio and video quality inspection template ID.</p> 
+     * @return Definition <p>Audio and video quality inspection template ID.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Audio and video quality inspection template ID.</p>
+     * @param Definition <p>Audio and video quality inspection template ID.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

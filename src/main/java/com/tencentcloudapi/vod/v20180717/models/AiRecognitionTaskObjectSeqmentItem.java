@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AiRecognitionTaskObjectSeqmentItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Start time offset of the recognized segment, in seconds.</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * <p>End time offset of the recognized segment, in seconds.</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * <p>Confidence of the recognized segment. Value range: 0–100.</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get <p>Start time offset of the recognized segment, in seconds.</p> 
+     * @return StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set <p>Start time offset of the recognized segment, in seconds.</p>
+     * @param StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get <p>End time offset of the recognized segment, in seconds.</p> 
+     * @return EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set <p>End time offset of the recognized segment, in seconds.</p>
+     * @param EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get <p>Confidence of the recognized segment. Value range: 0–100.</p> 
+     * @return Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set <p>Confidence of the recognized segment. Value range: 0–100.</p>
+     * @param Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return AreaCoordSet 
+     * Get <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p> 
+     * @return AreaCoordSet <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 
-     * @param AreaCoordSet 
+     * Set <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
+     * @param AreaCoordSet <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

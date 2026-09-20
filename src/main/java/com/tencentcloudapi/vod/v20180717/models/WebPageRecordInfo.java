@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class WebPageRecordInfo extends AbstractModel {
 
     /**
-    * 
+    * Panoramic recording URL.
     */
     @SerializedName("RecordUrl")
     @Expose
     private String RecordUrl;
 
     /**
-    * 
+    * Panoramic recording task ID.
     */
     @SerializedName("RecordTaskId")
     @Expose
     private String RecordTaskId;
 
     /**
-     * Get  
-     * @return RecordUrl 
+     * Get Panoramic recording URL. 
+     * @return RecordUrl Panoramic recording URL.
      */
     public String getRecordUrl() {
         return this.RecordUrl;
     }
 
     /**
-     * Set 
-     * @param RecordUrl 
+     * Set Panoramic recording URL.
+     * @param RecordUrl Panoramic recording URL.
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;
     }
 
     /**
-     * Get  
-     * @return RecordTaskId 
+     * Get Panoramic recording task ID. 
+     * @return RecordTaskId Panoramic recording task ID.
      */
     public String getRecordTaskId() {
         return this.RecordTaskId;
     }
 
     /**
-     * Set 
-     * @param RecordTaskId 
+     * Set Panoramic recording task ID.
+     * @param RecordTaskId Panoramic recording task ID.
      */
     public void setRecordTaskId(String RecordTaskId) {
         this.RecordTaskId = RecordTaskId;

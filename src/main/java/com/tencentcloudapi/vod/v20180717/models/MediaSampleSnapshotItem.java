@@ -24,115 +24,135 @@ import java.util.HashMap;
 public class MediaSampleSnapshotItem extends AbstractModel {
 
     /**
-    * 
+    * Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
     */
     @SerializedName("SampleType")
     @Expose
     private String SampleType;
 
     /**
-    * 
+    * Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 
+    * List of generated screenshot URLs.
     */
     @SerializedName("ImageUrlSet")
     @Expose
     private String [] ImageUrlSet;
 
     /**
-    * 
+    * List of template IDs if the screenshot is watermarked.
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
     private Long [] WaterMarkDefinition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
+     * @return Definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param Definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return SampleType 
+     * Get Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li> 
+     * @return SampleType Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
      */
     public String getSampleType() {
         return this.SampleType;
     }
 
     /**
-     * Set 
-     * @param SampleType 
+     * Set Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
+     * @param SampleType Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
      */
     public void setSampleType(String SampleType) {
         this.SampleType = SampleType;
     }
 
     /**
-     * Get  
-     * @return Interval 
+     * Get Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li> 
+     * @return Interval Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 
-     * @param Interval 
+     * Set Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+     * @param Interval Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get  
-     * @return ImageUrlSet 
+     * Get List of generated screenshot URLs. 
+     * @return ImageUrlSet List of generated screenshot URLs.
      */
     public String [] getImageUrlSet() {
         return this.ImageUrlSet;
     }
 
     /**
-     * Set 
-     * @param ImageUrlSet 
+     * Set List of generated screenshot URLs.
+     * @param ImageUrlSet List of generated screenshot URLs.
      */
     public void setImageUrlSet(String [] ImageUrlSet) {
         this.ImageUrlSet = ImageUrlSet;
     }
 
     /**
-     * Get  
-     * @return WaterMarkDefinition 
+     * Get List of template IDs if the screenshot is watermarked. 
+     * @return WaterMarkDefinition List of template IDs if the screenshot is watermarked.
      */
     public Long [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
     }
 
     /**
-     * Set 
-     * @param WaterMarkDefinition 
+     * Set List of template IDs if the screenshot is watermarked.
+     * @param WaterMarkDefinition List of template IDs if the screenshot is watermarked.
      */
     public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;

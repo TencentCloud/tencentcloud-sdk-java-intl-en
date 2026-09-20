@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class MediaTrack extends AbstractModel {
 
     /**
-    * 
+    * Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * List of media segments on track.
     */
     @SerializedName("TrackItems")
     @Expose
     private MediaTrackItem [] TrackItems;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul> 
+     * @return Type Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
+     * @param Type Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return TrackItems 
+     * Get List of media segments on track. 
+     * @return TrackItems List of media segments on track.
      */
     public MediaTrackItem [] getTrackItems() {
         return this.TrackItems;
     }
 
     /**
-     * Set 
-     * @param TrackItems 
+     * Set List of media segments on track.
+     * @param TrackItems List of media segments on track.
      */
     public void setTrackItems(MediaTrackItem [] TrackItems) {
         this.TrackItems = TrackItems;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteCLSTopicRequest extends AbstractModel {
 
     /**
-    * 
+    * Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
     */
     @SerializedName("CLSRegion")
     @Expose
     private String CLSRegion;
 
     /**
-    * 
+    * Log topic ID.
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get  
-     * @return CLSRegion 
+     * Get Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li> 
+     * @return CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      */
     public String getCLSRegion() {
         return this.CLSRegion;
     }
 
     /**
-     * Set 
-     * @param CLSRegion 
+     * Set Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * @param CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      */
     public void setCLSRegion(String CLSRegion) {
         this.CLSRegion = CLSRegion;
     }
 
     /**
-     * Get  
-     * @return TopicId 
+     * Get Log topic ID. 
+     * @return TopicId Log topic ID.
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 
-     * @param TopicId 
+     * Set Log topic ID.
+     * @param TopicId Log topic ID.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

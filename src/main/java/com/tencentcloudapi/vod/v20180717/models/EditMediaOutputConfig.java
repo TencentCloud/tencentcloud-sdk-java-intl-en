@@ -24,138 +24,143 @@ import java.util.HashMap;
 public class EditMediaOutputConfig extends AbstractModel {
 
     /**
-    * 
+    * Output filename, up to 64 characters. By default, the system assigns a generated filename.
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * 
+    * Output file format. Available values: mp4, hls. mp4 is selected by default.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * 
+    * Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 
+    * Output video information.
     */
     @SerializedName("VideoStream")
     @Expose
     private EditMediaVideoStream VideoStream;
 
     /**
-    * 
+    * TSC transcoding parameters.
     */
     @SerializedName("TEHDConfig")
     @Expose
     private EditMediaTEHDConfig TEHDConfig;
 
     /**
-     * Get  
-     * @return MediaName 
+     * Get Output filename, up to 64 characters. By default, the system assigns a generated filename. 
+     * @return MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set 
-     * @param MediaName 
+     * Set Output filename, up to 64 characters. By default, the system assigns a generated filename.
+     * @param MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Output file format. Available values: mp4, hls. mp4 is selected by default. 
+     * @return Type Output file format. Available values: mp4, hls. mp4 is selected by default.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Output file format. Available values: mp4, hls. mp4 is selected by default.
+     * @param Type Output file format. Available values: mp4, hls. mp4 is selected by default.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return ClassId 
+     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li> 
+     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 
-     * @param ClassId 
+     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
+     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get  
-     * @return VideoStream 
+     * Get Output video information. 
+     * @return VideoStream Output video information.
      */
     public EditMediaVideoStream getVideoStream() {
         return this.VideoStream;
     }
 
     /**
-     * Set 
-     * @param VideoStream 
+     * Set Output video information.
+     * @param VideoStream Output video information.
      */
     public void setVideoStream(EditMediaVideoStream VideoStream) {
         this.VideoStream = VideoStream;
     }
 
     /**
-     * Get  
-     * @return TEHDConfig 
+     * Get TSC transcoding parameters. 
+     * @return TEHDConfig TSC transcoding parameters.
      */
     public EditMediaTEHDConfig getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set 
-     * @param TEHDConfig 
+     * Set TSC transcoding parameters.
+     * @param TEHDConfig TSC transcoding parameters.
      */
     public void setTEHDConfig(EditMediaTEHDConfig TEHDConfig) {
         this.TEHDConfig = TEHDConfig;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MPSEmbedSubtitleTemplate extends AbstractModel {
 
     /**
-    * 
+    * <p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * <p>Subtitle suppression configuration</p>
     */
     @SerializedName("SubtitleEmbedConfig")
     @Expose
     private MPSSubtitleEmbedConfig SubtitleEmbedConfig;
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Subtitle suppression template name<br>Length limit: 64 characters.</p> 
+     * @return Name <p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
+     * @param Name <p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p> 
+     * @return Comment <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
+     * @param Comment <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return SubtitleEmbedConfig 
+     * Get <p>Subtitle suppression configuration</p> 
+     * @return SubtitleEmbedConfig <p>Subtitle suppression configuration</p>
      */
     public MPSSubtitleEmbedConfig getSubtitleEmbedConfig() {
         return this.SubtitleEmbedConfig;
     }
 
     /**
-     * Set 
-     * @param SubtitleEmbedConfig 
+     * Set <p>Subtitle suppression configuration</p>
+     * @param SubtitleEmbedConfig <p>Subtitle suppression configuration</p>
      */
     public void setSubtitleEmbedConfig(MPSSubtitleEmbedConfig SubtitleEmbedConfig) {
         this.SubtitleEmbedConfig = SubtitleEmbedConfig;

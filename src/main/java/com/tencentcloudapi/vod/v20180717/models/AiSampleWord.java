@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AiSampleWord extends AbstractModel {
 
     /**
-    * 
+    * <p>Keyword.</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 
+    * <p>Keyword tag.</p>
     */
     @SerializedName("TagSet")
     @Expose
     private String [] TagSet;
 
     /**
-    * 
+    * <p>Keyword application scenario.</p>
     */
     @SerializedName("UsageSet")
     @Expose
     private String [] UsageSet;
 
     /**
-    * 
+    * <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get  
-     * @return Keyword 
+     * Get <p>Keyword.</p> 
+     * @return Keyword <p>Keyword.</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 
-     * @param Keyword 
+     * Set <p>Keyword.</p>
+     * @param Keyword <p>Keyword.</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get  
-     * @return TagSet 
+     * Get <p>Keyword tag.</p> 
+     * @return TagSet <p>Keyword tag.</p>
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 
-     * @param TagSet 
+     * Set <p>Keyword tag.</p>
+     * @param TagSet <p>Keyword tag.</p>
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get  
-     * @return UsageSet 
+     * Get <p>Keyword application scenario.</p> 
+     * @return UsageSet <p>Keyword application scenario.</p>
      */
     public String [] getUsageSet() {
         return this.UsageSet;
     }
 
     /**
-     * Set 
-     * @param UsageSet 
+     * Set <p>Keyword application scenario.</p>
+     * @param UsageSet <p>Keyword application scenario.</p>
      */
     public void setUsageSet(String [] UsageSet) {
         this.UsageSet = UsageSet;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return CreateTime <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param CreateTime <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param UpdateTime <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AudioTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 
+    * <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 
+    * <p>Sampling rate of the audio stream. Available values:</p><li>16000, selectable only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 
+    * <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
     */
     @SerializedName("AudioChannel")
     @Expose
     private Long AudioChannel;
 
     /**
-    * 
+    * <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p>
     */
     @SerializedName("StreamSelects")
     @Expose
     private Long [] StreamSelects;
 
     /**
-     * Get  
-     * @return Codec 
+     * Get <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li> 
+     * @return Codec <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 
-     * @param Codec 
+     * Set <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
+     * @param Codec <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get  
-     * @return Bitrate 
+     * Get <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p> 
+     * @return Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 
-     * @param Bitrate 
+     * Set <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
+     * @param Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get  
-     * @return SampleRate 
+     * Get <p>Sampling rate of the audio stream. Available values:</p><li>16000, selectable only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz. 
+     * @return SampleRate <p>Sampling rate of the audio stream. Available values:</p><li>16000, selectable only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 
-     * @param SampleRate 
+     * Set <p>Sampling rate of the audio stream. Available values:</p><li>16000, selectable only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
+     * @param SampleRate <p>Sampling rate of the audio stream. Available values:</p><li>16000, selectable only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get  
-     * @return AudioChannel 
+     * Get <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo. 
+     * @return AudioChannel <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
     /**
-     * Set 
-     * @param AudioChannel 
+     * Set <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+     * @param AudioChannel <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Dual-channel</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;
     }
 
     /**
-     * Get  
-     * @return StreamSelects 
+     * Get <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p> 
+     * @return StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p>
      */
     public Long [] getStreamSelects() {
         return this.StreamSelects;
     }
 
     /**
-     * Set 
-     * @param StreamSelects 
+     * Set <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p>
+     * @param StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter; in other cases, it does not take effect.</p>
      */
     public void setStreamSelects(Long [] StreamSelects) {
         this.StreamSelects = StreamSelects;

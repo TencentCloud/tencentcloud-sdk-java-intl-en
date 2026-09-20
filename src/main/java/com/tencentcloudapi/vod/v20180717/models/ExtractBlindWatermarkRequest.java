@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ExtractBlindWatermarkRequest extends AbstractModel {
 
     /**
-    * 
+    * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * File input information for the Media Processing Service (MPS) task.
     */
     @SerializedName("InputInfo")
     @Expose
     private ExtractBlindWatermarkInputInfo InputInfo;
 
     /**
-    * 
+    * VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Configuration of the digital watermark extraction task.
     */
     @SerializedName("ExtractBlindWatermarkConfig")
     @Expose
     private ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig;
 
     /**
-    * 
+    * Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li> 
+     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
+     * @param Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return InputInfo 
+     * Get File input information for the Media Processing Service (MPS) task. 
+     * @return InputInfo File input information for the Media Processing Service (MPS) task.
      */
     public ExtractBlindWatermarkInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 
-     * @param InputInfo 
+     * Set File input information for the Media Processing Service (MPS) task.
+     * @param InputInfo File input information for the Media Processing Service (MPS) task.
      */
     public void setInputInfo(ExtractBlindWatermarkInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark. 
+     * @return SubAppId VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
+     * @param SubAppId VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return ExtractBlindWatermarkConfig 
+     * Get Configuration of the digital watermark extraction task. 
+     * @return ExtractBlindWatermarkConfig Configuration of the digital watermark extraction task.
      */
     public ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() {
         return this.ExtractBlindWatermarkConfig;
     }
 
     /**
-     * Set 
-     * @param ExtractBlindWatermarkConfig 
+     * Set Configuration of the digital watermark extraction task.
+     * @param ExtractBlindWatermarkConfig Configuration of the digital watermark extraction task.
      */
     public void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig) {
         this.ExtractBlindWatermarkConfig = ExtractBlindWatermarkConfig;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters. 
+     * @return SessionContext Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
+     * @param SessionContext Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication. 
+     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+     * @param SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel {
 
     /**
-    * 
+    * Start time offset of a recognized segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of a recognized segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Recognition segment result set.
     */
     @SerializedName("TextSet")
     @Expose
     private AiRecognitionTaskOcrFullTextSegmentTextItem [] TextSet;
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Start time offset of a recognized segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a recognized segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Start time offset of a recognized segment, in seconds.
+     * @param StartTimeOffset Start time offset of a recognized segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of a recognized segment, in seconds. 
+     * @return EndTimeOffset End time offset of a recognized segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of a recognized segment, in seconds.
+     * @param EndTimeOffset End time offset of a recognized segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return TextSet 
+     * Get Recognition segment result set. 
+     * @return TextSet Recognition segment result set.
      */
     public AiRecognitionTaskOcrFullTextSegmentTextItem [] getTextSet() {
         return this.TextSet;
     }
 
     /**
-     * Set 
-     * @param TextSet 
+     * Set Recognition segment result set.
+     * @param TextSet Recognition segment result set.
      */
     public void setTextSet(AiRecognitionTaskOcrFullTextSegmentTextItem [] TextSet) {
         this.TextSet = TextSet;

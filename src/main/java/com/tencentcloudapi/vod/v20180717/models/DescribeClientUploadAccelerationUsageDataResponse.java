@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClientUploadAccelerationUsageDataResponse extends AbstractModel {
 
     /**
-    * 
+    * Client upload acceleration statistics data.
     */
     @SerializedName("ClientUploadAccelerationUsageDataSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeClientUploadAccelerationUsageDataResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get  
-     * @return ClientUploadAccelerationUsageDataSet 
+     * Get Client upload acceleration statistics data. 
+     * @return ClientUploadAccelerationUsageDataSet Client upload acceleration statistics data.
      */
     public StatDataItem [] getClientUploadAccelerationUsageDataSet() {
         return this.ClientUploadAccelerationUsageDataSet;
     }
 
     /**
-     * Set 
-     * @param ClientUploadAccelerationUsageDataSet 
+     * Set Client upload acceleration statistics data.
+     * @param ClientUploadAccelerationUsageDataSet Client upload acceleration statistics data.
      */
     public void setClientUploadAccelerationUsageDataSet(StatDataItem [] ClientUploadAccelerationUsageDataSet) {
         this.ClientUploadAccelerationUsageDataSet = ClientUploadAccelerationUsageDataSet;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DrmStreamingsInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Adaptive bitrate streaming template ID with SimpleAES protection type.
     */
     @SerializedName("SimpleAesDefinition")
     @Expose
     private Long SimpleAesDefinition;
 
     /**
-    * 
+    * Adaptive bitrate streaming template ID with Widevine protection type.
     */
     @SerializedName("WidevineDefinition")
     @Expose
     private Long WidevineDefinition;
 
     /**
-    * 
+    * Adaptive bitstreaming template ID with FairPlay protection.
     */
     @SerializedName("FairPlayDefinition")
     @Expose
     private Long FairPlayDefinition;
 
     /**
-     * Get  
-     * @return SimpleAesDefinition 
+     * Get Adaptive bitrate streaming template ID with SimpleAES protection type. 
+     * @return SimpleAesDefinition Adaptive bitrate streaming template ID with SimpleAES protection type.
      */
     public Long getSimpleAesDefinition() {
         return this.SimpleAesDefinition;
     }
 
     /**
-     * Set 
-     * @param SimpleAesDefinition 
+     * Set Adaptive bitrate streaming template ID with SimpleAES protection type.
+     * @param SimpleAesDefinition Adaptive bitrate streaming template ID with SimpleAES protection type.
      */
     public void setSimpleAesDefinition(Long SimpleAesDefinition) {
         this.SimpleAesDefinition = SimpleAesDefinition;
     }
 
     /**
-     * Get  
-     * @return WidevineDefinition 
+     * Get Adaptive bitrate streaming template ID with Widevine protection type. 
+     * @return WidevineDefinition Adaptive bitrate streaming template ID with Widevine protection type.
      */
     public Long getWidevineDefinition() {
         return this.WidevineDefinition;
     }
 
     /**
-     * Set 
-     * @param WidevineDefinition 
+     * Set Adaptive bitrate streaming template ID with Widevine protection type.
+     * @param WidevineDefinition Adaptive bitrate streaming template ID with Widevine protection type.
      */
     public void setWidevineDefinition(Long WidevineDefinition) {
         this.WidevineDefinition = WidevineDefinition;
     }
 
     /**
-     * Get  
-     * @return FairPlayDefinition 
+     * Get Adaptive bitstreaming template ID with FairPlay protection. 
+     * @return FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection.
      */
     public Long getFairPlayDefinition() {
         return this.FairPlayDefinition;
     }
 
     /**
-     * Set 
-     * @param FairPlayDefinition 
+     * Set Adaptive bitstreaming template ID with FairPlay protection.
+     * @param FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection.
      */
     public void setFairPlayDefinition(Long FairPlayDefinition) {
         this.FairPlayDefinition = FairPlayDefinition;

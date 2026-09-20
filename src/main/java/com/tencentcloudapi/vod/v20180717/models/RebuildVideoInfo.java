@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class RebuildVideoInfo extends AbstractModel {
 
     /**
-    * 
+    * Image quality restoration control parameters.
     */
     @SerializedName("RepairInfo")
     @Expose
     private RepairInfo RepairInfo;
 
     /**
-    * 
+    * Intelligent frame interpolation control parameters.
     */
     @SerializedName("VideoFrameInterpolationInfo")
     @Expose
     private VideoFrameInterpolationInfo VideoFrameInterpolationInfo;
 
     /**
-    * 
+    * Image super-resolution control parameters.
     */
     @SerializedName("SuperResolutionInfo")
     @Expose
     private SuperResolutionInfo SuperResolutionInfo;
 
     /**
-    * 
+    * High dynamic range type control parameter.
     */
     @SerializedName("HDRInfo")
     @Expose
     private HDRInfo HDRInfo;
 
     /**
-    * 
+    * Video noise reduction control parameters.
     */
     @SerializedName("VideoDenoiseInfo")
     @Expose
     private VideoDenoiseInfo VideoDenoiseInfo;
 
     /**
-    * 
+    * Color enhancement control parameters.
     */
     @SerializedName("ColorInfo")
     @Expose
     private ColorEnhanceInfo ColorInfo;
 
     /**
-    * 
+    * Detail enhancement control parameters.
     */
     @SerializedName("SharpInfo")
     @Expose
     private SharpEnhanceInfo SharpInfo;
 
     /**
-    * 
+    * Face enhancement control parameters.
     */
     @SerializedName("FaceInfo")
     @Expose
     private FaceEnhanceInfo FaceInfo;
 
     /**
-    * 
+    * Low-light control parameters.
     */
     @SerializedName("LowLightInfo")
     @Expose
     private LowLightEnhanceInfo LowLightInfo;
 
     /**
-    * 
+    * Scratch removal control parameter.
     */
     @SerializedName("ScratchRepairInfo")
     @Expose
     private ScratchRepairInfo ScratchRepairInfo;
 
     /**
-    * 
+    * Artifact removal control parameter.
     */
     @SerializedName("ArtifactRepairInfo")
     @Expose
     private ArtifactRepairInfo ArtifactRepairInfo;
 
     /**
-     * Get  
-     * @return RepairInfo 
+     * Get Image quality restoration control parameters. 
+     * @return RepairInfo Image quality restoration control parameters.
      */
     public RepairInfo getRepairInfo() {
         return this.RepairInfo;
     }
 
     /**
-     * Set 
-     * @param RepairInfo 
+     * Set Image quality restoration control parameters.
+     * @param RepairInfo Image quality restoration control parameters.
      */
     public void setRepairInfo(RepairInfo RepairInfo) {
         this.RepairInfo = RepairInfo;
     }
 
     /**
-     * Get  
-     * @return VideoFrameInterpolationInfo 
+     * Get Intelligent frame interpolation control parameters. 
+     * @return VideoFrameInterpolationInfo Intelligent frame interpolation control parameters.
      */
     public VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() {
         return this.VideoFrameInterpolationInfo;
     }
 
     /**
-     * Set 
-     * @param VideoFrameInterpolationInfo 
+     * Set Intelligent frame interpolation control parameters.
+     * @param VideoFrameInterpolationInfo Intelligent frame interpolation control parameters.
      */
     public void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo VideoFrameInterpolationInfo) {
         this.VideoFrameInterpolationInfo = VideoFrameInterpolationInfo;
     }
 
     /**
-     * Get  
-     * @return SuperResolutionInfo 
+     * Get Image super-resolution control parameters. 
+     * @return SuperResolutionInfo Image super-resolution control parameters.
      */
     public SuperResolutionInfo getSuperResolutionInfo() {
         return this.SuperResolutionInfo;
     }
 
     /**
-     * Set 
-     * @param SuperResolutionInfo 
+     * Set Image super-resolution control parameters.
+     * @param SuperResolutionInfo Image super-resolution control parameters.
      */
     public void setSuperResolutionInfo(SuperResolutionInfo SuperResolutionInfo) {
         this.SuperResolutionInfo = SuperResolutionInfo;
     }
 
     /**
-     * Get  
-     * @return HDRInfo 
+     * Get High dynamic range type control parameter. 
+     * @return HDRInfo High dynamic range type control parameter.
      */
     public HDRInfo getHDRInfo() {
         return this.HDRInfo;
     }
 
     /**
-     * Set 
-     * @param HDRInfo 
+     * Set High dynamic range type control parameter.
+     * @param HDRInfo High dynamic range type control parameter.
      */
     public void setHDRInfo(HDRInfo HDRInfo) {
         this.HDRInfo = HDRInfo;
     }
 
     /**
-     * Get  
-     * @return VideoDenoiseInfo 
+     * Get Video noise reduction control parameters. 
+     * @return VideoDenoiseInfo Video noise reduction control parameters.
      */
     public VideoDenoiseInfo getVideoDenoiseInfo() {
         return this.VideoDenoiseInfo;
     }
 
     /**
-     * Set 
-     * @param VideoDenoiseInfo 
+     * Set Video noise reduction control parameters.
+     * @param VideoDenoiseInfo Video noise reduction control parameters.
      */
     public void setVideoDenoiseInfo(VideoDenoiseInfo VideoDenoiseInfo) {
         this.VideoDenoiseInfo = VideoDenoiseInfo;
     }
 
     /**
-     * Get  
-     * @return ColorInfo 
+     * Get Color enhancement control parameters. 
+     * @return ColorInfo Color enhancement control parameters.
      */
     public ColorEnhanceInfo getColorInfo() {
         return this.ColorInfo;
     }
 
     /**
-     * Set 
-     * @param ColorInfo 
+     * Set Color enhancement control parameters.
+     * @param ColorInfo Color enhancement control parameters.
      */
     public void setColorInfo(ColorEnhanceInfo ColorInfo) {
         this.ColorInfo = ColorInfo;
     }
 
     /**
-     * Get  
-     * @return SharpInfo 
+     * Get Detail enhancement control parameters. 
+     * @return SharpInfo Detail enhancement control parameters.
      */
     public SharpEnhanceInfo getSharpInfo() {
         return this.SharpInfo;
     }
 
     /**
-     * Set 
-     * @param SharpInfo 
+     * Set Detail enhancement control parameters.
+     * @param SharpInfo Detail enhancement control parameters.
      */
     public void setSharpInfo(SharpEnhanceInfo SharpInfo) {
         this.SharpInfo = SharpInfo;
     }
 
     /**
-     * Get  
-     * @return FaceInfo 
+     * Get Face enhancement control parameters. 
+     * @return FaceInfo Face enhancement control parameters.
      */
     public FaceEnhanceInfo getFaceInfo() {
         return this.FaceInfo;
     }
 
     /**
-     * Set 
-     * @param FaceInfo 
+     * Set Face enhancement control parameters.
+     * @param FaceInfo Face enhancement control parameters.
      */
     public void setFaceInfo(FaceEnhanceInfo FaceInfo) {
         this.FaceInfo = FaceInfo;
     }
 
     /**
-     * Get  
-     * @return LowLightInfo 
+     * Get Low-light control parameters. 
+     * @return LowLightInfo Low-light control parameters.
      */
     public LowLightEnhanceInfo getLowLightInfo() {
         return this.LowLightInfo;
     }
 
     /**
-     * Set 
-     * @param LowLightInfo 
+     * Set Low-light control parameters.
+     * @param LowLightInfo Low-light control parameters.
      */
     public void setLowLightInfo(LowLightEnhanceInfo LowLightInfo) {
         this.LowLightInfo = LowLightInfo;
     }
 
     /**
-     * Get  
-     * @return ScratchRepairInfo 
+     * Get Scratch removal control parameter. 
+     * @return ScratchRepairInfo Scratch removal control parameter.
      */
     public ScratchRepairInfo getScratchRepairInfo() {
         return this.ScratchRepairInfo;
     }
 
     /**
-     * Set 
-     * @param ScratchRepairInfo 
+     * Set Scratch removal control parameter.
+     * @param ScratchRepairInfo Scratch removal control parameter.
      */
     public void setScratchRepairInfo(ScratchRepairInfo ScratchRepairInfo) {
         this.ScratchRepairInfo = ScratchRepairInfo;
     }
 
     /**
-     * Get  
-     * @return ArtifactRepairInfo 
+     * Get Artifact removal control parameter. 
+     * @return ArtifactRepairInfo Artifact removal control parameter.
      */
     public ArtifactRepairInfo getArtifactRepairInfo() {
         return this.ArtifactRepairInfo;
     }
 
     /**
-     * Set 
-     * @param ArtifactRepairInfo 
+     * Set Artifact removal control parameter.
+     * @param ArtifactRepairInfo Artifact removal control parameter.
      */
     public void setArtifactRepairInfo(ArtifactRepairInfo ArtifactRepairInfo) {
         this.ArtifactRepairInfo = ArtifactRepairInfo;

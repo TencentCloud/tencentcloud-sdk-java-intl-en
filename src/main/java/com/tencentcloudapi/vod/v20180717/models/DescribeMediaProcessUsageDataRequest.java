@@ -24,92 +24,277 @@ import java.util.HashMap;
 public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
 
     /**
-    * 
+    * Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Query video processing task type. Currently supported task types include:
+<li> Transcoding: standard transcoding.</li>
+<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Editing: video editing</li>
+<li> Editing-TESHD: extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
+<li> ContentAudit: content review</li>
+<li> ContentRecognition: content recognition.</li>
+<li> RemoveWatermark: remove watermark</li>
+<li> ExtractTraceWatermark: extract watermark.</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia: audio and video quality revival</li>
+<li> QualityInspect: audio and video quality inspection</li>
+<li> VideoHighlight: video intelligent highlights</li>
+<li> VideoTag: video intelligent tag.</li>
+<li> VideoClassification: video intelligent classification.</li>
+<li> VideoCover: video intelligent cover.</li>
+<li> VideoSegment: video intelligent splitting.</li>
+<li> VideoProduce: video production</li>
+<li> MediaCast: media forwarding.</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>VoiceTranslation: speech translation</li>
+<li>JITTranscoding: JIT transcoding</li>
+<li>VideoSnapshot: video screenshot.</li>
+<li>JITEncryption: Instant encryption</li>
+<li>MediaEnhancement: audio and video enhancement</li>
+<li>ImageCompression: image compression</li>
+<li>ImageEnhancement: image enhancement</li>
+<li>ImageSuperResolution: image super resolution.</li>
+<li>ImageAdvanceCompression: image advanced compression.</li>
+<li>ImageUnderstanding: image understanding.</li>
+<li>AddTraceWatermark: Add traceability watermark</li>
+<li>AddBlindWatermark: Add blind watermark</li>
+<li>AddNagraWatermark: Add NAGRA digital watermark</li>
+<li>ExtractTraceWatermark: extract traceability watermark.</li>
+<li>ExtractBlindWatermark: extract a blind watermark.</li>
+<li>ExtractNagraWatermark: Extract NAGRA digital watermark</li>
+
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return EndTime End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param EndTime End date, which should be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Query video processing task type. Currently supported task types include:
+<li> Transcoding: standard transcoding.</li>
+<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Editing: video editing</li>
+<li> Editing-TESHD: extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
+<li> ContentAudit: content review</li>
+<li> ContentRecognition: content recognition.</li>
+<li> RemoveWatermark: remove watermark</li>
+<li> ExtractTraceWatermark: extract watermark.</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia: audio and video quality revival</li>
+<li> QualityInspect: audio and video quality inspection</li>
+<li> VideoHighlight: video intelligent highlights</li>
+<li> VideoTag: video intelligent tag.</li>
+<li> VideoClassification: video intelligent classification.</li>
+<li> VideoCover: video intelligent cover.</li>
+<li> VideoSegment: video intelligent splitting.</li>
+<li> VideoProduce: video production</li>
+<li> MediaCast: media forwarding.</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>VoiceTranslation: speech translation</li>
+<li>JITTranscoding: JIT transcoding</li>
+<li>VideoSnapshot: video screenshot.</li>
+<li>JITEncryption: Instant encryption</li>
+<li>MediaEnhancement: audio and video enhancement</li>
+<li>ImageCompression: image compression</li>
+<li>ImageEnhancement: image enhancement</li>
+<li>ImageSuperResolution: image super resolution.</li>
+<li>ImageAdvanceCompression: image advanced compression.</li>
+<li>ImageUnderstanding: image understanding.</li>
+<li>AddTraceWatermark: Add traceability watermark</li>
+<li>AddBlindWatermark: Add blind watermark</li>
+<li>AddNagraWatermark: Add NAGRA digital watermark</li>
+<li>ExtractTraceWatermark: extract traceability watermark.</li>
+<li>ExtractBlindWatermark: extract a blind watermark.</li>
+<li>ExtractNagraWatermark: Extract NAGRA digital watermark</li>
+ 
+     * @return Type Query video processing task type. Currently supported task types include:
+<li> Transcoding: standard transcoding.</li>
+<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Editing: video editing</li>
+<li> Editing-TESHD: extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
+<li> ContentAudit: content review</li>
+<li> ContentRecognition: content recognition.</li>
+<li> RemoveWatermark: remove watermark</li>
+<li> ExtractTraceWatermark: extract watermark.</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia: audio and video quality revival</li>
+<li> QualityInspect: audio and video quality inspection</li>
+<li> VideoHighlight: video intelligent highlights</li>
+<li> VideoTag: video intelligent tag.</li>
+<li> VideoClassification: video intelligent classification.</li>
+<li> VideoCover: video intelligent cover.</li>
+<li> VideoSegment: video intelligent splitting.</li>
+<li> VideoProduce: video production</li>
+<li> MediaCast: media forwarding.</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>VoiceTranslation: speech translation</li>
+<li>JITTranscoding: JIT transcoding</li>
+<li>VideoSnapshot: video screenshot.</li>
+<li>JITEncryption: Instant encryption</li>
+<li>MediaEnhancement: audio and video enhancement</li>
+<li>ImageCompression: image compression</li>
+<li>ImageEnhancement: image enhancement</li>
+<li>ImageSuperResolution: image super resolution.</li>
+<li>ImageAdvanceCompression: image advanced compression.</li>
+<li>ImageUnderstanding: image understanding.</li>
+<li>AddTraceWatermark: Add traceability watermark</li>
+<li>AddBlindWatermark: Add blind watermark</li>
+<li>AddNagraWatermark: Add NAGRA digital watermark</li>
+<li>ExtractTraceWatermark: extract traceability watermark.</li>
+<li>ExtractBlindWatermark: extract a blind watermark.</li>
+<li>ExtractNagraWatermark: Extract NAGRA digital watermark</li>
+
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Query video processing task type. Currently supported task types include:
+<li> Transcoding: standard transcoding.</li>
+<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Editing: video editing</li>
+<li> Editing-TESHD: extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
+<li> ContentAudit: content review</li>
+<li> ContentRecognition: content recognition.</li>
+<li> RemoveWatermark: remove watermark</li>
+<li> ExtractTraceWatermark: extract watermark.</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia: audio and video quality revival</li>
+<li> QualityInspect: audio and video quality inspection</li>
+<li> VideoHighlight: video intelligent highlights</li>
+<li> VideoTag: video intelligent tag.</li>
+<li> VideoClassification: video intelligent classification.</li>
+<li> VideoCover: video intelligent cover.</li>
+<li> VideoSegment: video intelligent splitting.</li>
+<li> VideoProduce: video production</li>
+<li> MediaCast: media forwarding.</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>VoiceTranslation: speech translation</li>
+<li>JITTranscoding: JIT transcoding</li>
+<li>VideoSnapshot: video screenshot.</li>
+<li>JITEncryption: Instant encryption</li>
+<li>MediaEnhancement: audio and video enhancement</li>
+<li>ImageCompression: image compression</li>
+<li>ImageEnhancement: image enhancement</li>
+<li>ImageSuperResolution: image super resolution.</li>
+<li>ImageAdvanceCompression: image advanced compression.</li>
+<li>ImageUnderstanding: image understanding.</li>
+<li>AddTraceWatermark: Add traceability watermark</li>
+<li>AddBlindWatermark: Add blind watermark</li>
+<li>AddNagraWatermark: Add NAGRA digital watermark</li>
+<li>ExtractTraceWatermark: extract traceability watermark.</li>
+<li>ExtractBlindWatermark: extract a blind watermark.</li>
+<li>ExtractNagraWatermark: Extract NAGRA digital watermark</li>
+
+     * @param Type Query video processing task type. Currently supported task types include:
+<li> Transcoding: standard transcoding.</li>
+<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Editing: video editing</li>
+<li> Editing-TESHD: extremely fast high-definition video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
+<li> ContentAudit: content review</li>
+<li> ContentRecognition: content recognition.</li>
+<li> RemoveWatermark: remove watermark</li>
+<li> ExtractTraceWatermark: extract watermark.</li>
+<li> AddTraceWatermark: Add watermark</li>
+<li> RebuildMedia: audio and video quality revival</li>
+<li> QualityInspect: audio and video quality inspection</li>
+<li> VideoHighlight: video intelligent highlights</li>
+<li> VideoTag: video intelligent tag.</li>
+<li> VideoClassification: video intelligent classification.</li>
+<li> VideoCover: video intelligent cover.</li>
+<li> VideoSegment: video intelligent splitting.</li>
+<li> VideoProduce: video production</li>
+<li> MediaCast: media forwarding.</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>VoiceTranslation: speech translation</li>
+<li>JITTranscoding: JIT transcoding</li>
+<li>VideoSnapshot: video screenshot.</li>
+<li>JITEncryption: Instant encryption</li>
+<li>MediaEnhancement: audio and video enhancement</li>
+<li>ImageCompression: image compression</li>
+<li>ImageEnhancement: image enhancement</li>
+<li>ImageSuperResolution: image super resolution.</li>
+<li>ImageAdvanceCompression: image advanced compression.</li>
+<li>ImageUnderstanding: image understanding.</li>
+<li>AddTraceWatermark: Add traceability watermark</li>
+<li>AddBlindWatermark: Add blind watermark</li>
+<li>AddNagraWatermark: Add NAGRA digital watermark</li>
+<li>ExtractTraceWatermark: extract traceability watermark.</li>
+<li>ExtractBlindWatermark: extract a blind watermark.</li>
+<li>ExtractNagraWatermark: Extract NAGRA digital watermark</li>
+
      */
     public void setType(String Type) {
         this.Type = Type;

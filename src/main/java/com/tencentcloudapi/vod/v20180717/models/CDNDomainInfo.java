@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CDNDomainInfo extends AbstractModel {
 
     /**
-    * 
+    * Domain name.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * Deployment state.
     */
     @SerializedName("DeployStatus")
     @Expose
     private String DeployStatus;
 
     /**
-    * 
+    * Cname record.
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * 
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * cdn domain configuration information.
     */
     @SerializedName("Config")
     @Expose
     private CDNDomainConfig Config;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name. 
+     * @return Domain Domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name.
+     * @param Domain Domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return DeployStatus 
+     * Get Deployment state. 
+     * @return DeployStatus Deployment state.
      */
     public String getDeployStatus() {
         return this.DeployStatus;
     }
 
     /**
-     * Set 
-     * @param DeployStatus 
+     * Set Deployment state.
+     * @param DeployStatus Deployment state.
      */
     public void setDeployStatus(String DeployStatus) {
         this.DeployStatus = DeployStatus;
     }
 
     /**
-     * Get  
-     * @return Cname 
+     * Get Cname record. 
+     * @return Cname Cname record.
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set 
-     * @param Cname 
+     * Set Cname record.
+     * @param Cname Cname record.
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return Config 
+     * Get cdn domain configuration information. 
+     * @return Config cdn domain configuration information.
      */
     public CDNDomainConfig getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 
-     * @param Config 
+     * Set cdn domain configuration information.
+     * @param Config cdn domain configuration information.
      */
     public void setConfig(CDNDomainConfig Config) {
         this.Config = Config;

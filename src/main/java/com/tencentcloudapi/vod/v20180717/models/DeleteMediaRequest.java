@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeleteMediaRequest extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of the media file.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
     */
     @SerializedName("DeleteParts")
     @Expose
     private MediaDeleteItem [] DeleteParts;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Unique identifier of the media file. 
+     * @return FileId Unique identifier of the media file.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Unique identifier of the media file.
+     * @param FileId Unique identifier of the media file.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return DeleteParts 
+     * Get Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files. 
+     * @return DeleteParts Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
      */
     public MediaDeleteItem [] getDeleteParts() {
         return this.DeleteParts;
     }
 
     /**
-     * Set 
-     * @param DeleteParts 
+     * Set Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
+     * @param DeleteParts Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
      */
     public void setDeleteParts(MediaDeleteItem [] DeleteParts) {
         this.DeleteParts = DeleteParts;

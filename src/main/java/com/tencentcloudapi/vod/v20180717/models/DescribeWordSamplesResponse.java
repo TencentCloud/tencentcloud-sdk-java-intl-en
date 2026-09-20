@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeWordSamplesResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of eligible entries.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Keyword information.
     */
     @SerializedName("WordSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeWordSamplesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of eligible entries. 
+     * @return TotalCount Total number of eligible entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of eligible entries.
+     * @param TotalCount Total number of eligible entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return WordSet 
+     * Get Keyword information. 
+     * @return WordSet Keyword information.
      */
     public AiSampleWord [] getWordSet() {
         return this.WordSet;
     }
 
     /**
-     * Set 
-     * @param WordSet 
+     * Set Keyword information.
+     * @param WordSet Keyword information.
      */
     public void setWordSet(AiSampleWord [] WordSet) {
         this.WordSet = WordSet;

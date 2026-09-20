@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ExecuteFunctionRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Backend interface name invoked.</p>
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * 
+    * <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p>
     */
     @SerializedName("FunctionArg")
     @Expose
     private String FunctionArg;
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * <p>Reserved field, used for special purposes.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return FunctionName 
+     * Get <p>Backend interface name invoked.</p> 
+     * @return FunctionName <p>Backend interface name invoked.</p>
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set 
-     * @param FunctionName 
+     * Set <p>Backend interface name invoked.</p>
+     * @param FunctionName <p>Backend interface name invoked.</p>
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get  
-     * @return FunctionArg 
+     * Get <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p> 
+     * @return FunctionArg <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p>
      */
     public String getFunctionArg() {
         return this.FunctionArg;
     }
 
     /**
-     * Set 
-     * @param FunctionArg 
+     * Set <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p>
+     * @param FunctionArg <p>API parameter. The specific parameter format should be coordinated with the backend during the call.</p>
      */
     public void setFunctionArg(String FunctionArg) {
         this.FunctionArg = FunctionArg;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
+     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Reserved field, used for special purposes.</p> 
+     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Reserved field, used for special purposes.</p>
+     * @param ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

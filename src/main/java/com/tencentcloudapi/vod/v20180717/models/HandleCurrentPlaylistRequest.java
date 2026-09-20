@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class HandleCurrentPlaylistRequest extends AbstractModel {
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Carousel playlist unique identifier.
     */
     @SerializedName("RoundPlayId")
     @Expose
     private String RoundPlayId;
 
     /**
-    * 
+    * Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 
+    * Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
     */
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
 
     /**
-    * 
+    * Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
     */
     @SerializedName("SegmentIndex")
     @Expose
     private Long SegmentIndex;
 
     /**
-    * 
+    * Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
     */
     @SerializedName("RoundPlaylist")
     @Expose
     private RoundPlayListItemInfo [] RoundPlaylist;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return RoundPlayId 
+     * Get Carousel playlist unique identifier. 
+     * @return RoundPlayId Carousel playlist unique identifier.
      */
     public String getRoundPlayId() {
         return this.RoundPlayId;
     }
 
     /**
-     * Set 
-     * @param RoundPlayId 
+     * Set Carousel playlist unique identifier.
+     * @param RoundPlayId Carousel playlist unique identifier.
      */
     public void setRoundPlayId(String RoundPlayId) {
         this.RoundPlayId = RoundPlayId;
     }
 
     /**
-     * Get  
-     * @return Operation 
+     * Get Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li> 
+     * @return Operation Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 
-     * @param Operation 
+     * Set Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
+     * @param Operation Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get  
-     * @return ItemId 
+     * Get Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li> 
+     * @return ItemId Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set 
-     * @param ItemId 
+     * Set Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
+     * @param ItemId Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get  
-     * @return SegmentIndex 
+     * Get Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value. 
+     * @return SegmentIndex Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
      */
     public Long getSegmentIndex() {
         return this.SegmentIndex;
     }
 
     /**
-     * Set 
-     * @param SegmentIndex 
+     * Set Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
+     * @param SegmentIndex Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
      */
     public void setSegmentIndex(Long SegmentIndex) {
         this.SegmentIndex = SegmentIndex;
     }
 
     /**
-     * Get  
-     * @return RoundPlaylist 
+     * Get Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10. 
+     * @return RoundPlaylist Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
      */
     public RoundPlayListItemInfo [] getRoundPlaylist() {
         return this.RoundPlaylist;
     }
 
     /**
-     * Set 
-     * @param RoundPlaylist 
+     * Set Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
+     * @param RoundPlaylist Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
      */
     public void setRoundPlaylist(RoundPlayListItemInfo [] RoundPlaylist) {
         this.RoundPlaylist = RoundPlaylist;

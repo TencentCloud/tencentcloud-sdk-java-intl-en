@@ -24,92 +24,172 @@ import java.util.HashMap;
 public class ReviewInfo extends AbstractModel {
 
     /**
-    * 
+    * Content review template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
     */
     @SerializedName("TypeSet")
     @Expose
     private String [] TypeSet;
 
     /**
-    * 
+    * Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ReviewTime")
     @Expose
     private String ReviewTime;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Content review template ID. 
+     * @return Definition Content review template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Content review template ID.
+     * @param Definition Content review template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li> 
+     * @return Suggestion Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
+     * @param Suggestion Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return TypeSet 
+     * Get Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li> 
+     * @return TypeSet Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
      */
     public String [] getTypeSet() {
         return this.TypeSet;
     }
 
     /**
-     * Set 
-     * @param TypeSet 
+     * Set Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
+     * @param TypeSet Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
      */
     public void setTypeSet(String [] TypeSet) {
         this.TypeSet = TypeSet;
     }
 
     /**
-     * Get  
-     * @return ReviewTime 
+     * Get Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ReviewTime Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getReviewTime() {
         return this.ReviewTime;
     }
 
     /**
-     * Set 
-     * @param ReviewTime 
+     * Set Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ReviewTime Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setReviewTime(String ReviewTime) {
         this.ReviewTime = ReviewTime;

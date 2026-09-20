@@ -51,7 +51,6 @@ public class OcrClient extends AbstractClient{
 
     /**
      *This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
-
 This API is used to set the alias SmartStructuralPro.
 
 The default API request rate limit is 5 requests per second.

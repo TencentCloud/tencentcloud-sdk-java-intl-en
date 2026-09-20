@@ -24,40 +24,35 @@ import java.util.HashMap;
 public class NormalCardInfo extends AbstractModel {
 
     /**
-    * Hong Kong (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Hong Kong identity card
     */
     @SerializedName("HKIDCard")
     @Expose
     private NormalHKIDCard HKIDCard;
 
     /**
-    * Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Malaysian identity card
     */
     @SerializedName("MLIDCard")
     @Expose
     private NormalMLIDCard MLIDCard;
 
     /**
-    * Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Philippines voter card
     */
     @SerializedName("PhilippinesVoteID")
     @Expose
     private PhilippinesVoteID PhilippinesVoteID;
 
     /**
-    * Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Indonesian Identity Card
     */
     @SerializedName("IndonesiaIDCard")
     @Expose
     private NormalIndonesiaIDCard IndonesiaIDCard;
 
     /**
-    * Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Philippines driving license
     */
     @SerializedName("PhilippinesDrivingLicense")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PhilippinesTinID")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PhilippinesSSSID")
     @Expose
@@ -81,197 +74,164 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PhilippinesUMID")
     @Expose
     private PhilippinesUMID PhilippinesUMID;
 
     /**
-    * ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Hong Kong, Macao, and Taiwan region as well as overseas passport
     */
     @SerializedName("InternationalIDPassport")
     @Expose
     private InternationalIDPassport InternationalIDPassport;
 
     /**
-    * General license information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * General card certificate information
     */
     @SerializedName("GeneralCard")
     @Expose
     private GeneralCard GeneralCard;
 
     /**
-    * Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Indonesian driving license
     */
     @SerializedName("IndonesiaDrivingLicense")
     @Expose
     private IndonesiaDrivingLicense IndonesiaDrivingLicense;
 
     /**
-    * Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Thai Identity Card
     */
     @SerializedName("ThailandIDCard")
     @Expose
     private NormalThailandIDCard ThailandIDCard;
 
     /**
-    * Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Singapore ID card
     */
     @SerializedName("SingaporeIDCard")
     @Expose
     private SingaporeIDCard SingaporeIDCard;
 
     /**
-    * Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Macao identity card
     */
     @SerializedName("MacaoIDCard")
     @Expose
     private MacaoIDCard MacaoIDCard;
 
     /**
-    * Mainland (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mainland ID card
     */
     @SerializedName("MainlandIDCard")
     @Expose
     private MainlandIDCard MainlandIDCard;
 
     /**
-    * Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Japan identity card
     */
     @SerializedName("JapanIDCard")
     @Expose
     private JapanIDCard JapanIDCard;
 
     /**
-    * Taiwan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Taiwan (China) identity card
     */
     @SerializedName("TaiWanIDCard")
     @Expose
     private TaiWanIDCard TaiWanIDCard;
 
     /**
-    * exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Hong Kong, Macau and Taiwan Travel Permit
     */
     @SerializedName("HMTPermitCard")
     @Expose
     private HMTPermit HMTPermitCard;
 
     /**
-     * Get Hong Kong (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HKIDCard Hong Kong (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Hong Kong identity card 
+     * @return HKIDCard Hong Kong identity card
      */
     public NormalHKIDCard getHKIDCard() {
         return this.HKIDCard;
     }
 
     /**
-     * Set Hong Kong (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HKIDCard Hong Kong (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Hong Kong identity card
+     * @param HKIDCard Hong Kong identity card
      */
     public void setHKIDCard(NormalHKIDCard HKIDCard) {
         this.HKIDCard = HKIDCard;
     }
 
     /**
-     * Get Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MLIDCard Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Malaysian identity card 
+     * @return MLIDCard Malaysian identity card
      */
     public NormalMLIDCard getMLIDCard() {
         return this.MLIDCard;
     }
 
     /**
-     * Set Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MLIDCard Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Malaysian identity card
+     * @param MLIDCard Malaysian identity card
      */
     public void setMLIDCard(NormalMLIDCard MLIDCard) {
         this.MLIDCard = MLIDCard;
     }
 
     /**
-     * Get Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PhilippinesVoteID Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Philippines voter card 
+     * @return PhilippinesVoteID Philippines voter card
      */
     public PhilippinesVoteID getPhilippinesVoteID() {
         return this.PhilippinesVoteID;
     }
 
     /**
-     * Set Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PhilippinesVoteID Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Philippines voter card
+     * @param PhilippinesVoteID Philippines voter card
      */
     public void setPhilippinesVoteID(PhilippinesVoteID PhilippinesVoteID) {
         this.PhilippinesVoteID = PhilippinesVoteID;
     }
 
     /**
-     * Get Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IndonesiaIDCard Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Indonesian Identity Card 
+     * @return IndonesiaIDCard Indonesian Identity Card
      */
     public NormalIndonesiaIDCard getIndonesiaIDCard() {
         return this.IndonesiaIDCard;
     }
 
     /**
-     * Set Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IndonesiaIDCard Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Indonesian Identity Card
+     * @param IndonesiaIDCard Indonesian Identity Card
      */
     public void setIndonesiaIDCard(NormalIndonesiaIDCard IndonesiaIDCard) {
         this.IndonesiaIDCard = IndonesiaIDCard;
     }
 
     /**
-     * Get Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PhilippinesDrivingLicense Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Philippines driving license 
+     * @return PhilippinesDrivingLicense Philippines driving license
      */
     public PhilippinesDrivingLicense getPhilippinesDrivingLicense() {
         return this.PhilippinesDrivingLicense;
     }
 
     /**
-     * Set Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PhilippinesDrivingLicense Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Philippines driving license
+     * @param PhilippinesDrivingLicense Philippines driving license
      */
     public void setPhilippinesDrivingLicense(PhilippinesDrivingLicense PhilippinesDrivingLicense) {
         this.PhilippinesDrivingLicense = PhilippinesDrivingLicense;
     }
 
     /**
-     * Get Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Philippines TinID 
      * @return PhilippinesTinID Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PhilippinesTinID getPhilippinesTinID() {
         return this.PhilippinesTinID;
@@ -279,19 +239,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PhilippinesTinID Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPhilippinesTinID(PhilippinesTinID PhilippinesTinID) {
         this.PhilippinesTinID = PhilippinesTinID;
     }
 
     /**
-     * Get Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Philippines SSSID 
      * @return PhilippinesSSSID Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PhilippinesSSSID getPhilippinesSSSID() {
         return this.PhilippinesSSSID;
@@ -299,19 +255,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PhilippinesSSSID Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPhilippinesSSSID(PhilippinesSSSID PhilippinesSSSID) {
         this.PhilippinesSSSID = PhilippinesSSSID;
     }
 
     /**
-     * Get Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Philippines UMID 
      * @return PhilippinesUMID Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PhilippinesUMID getPhilippinesUMID() {
         return this.PhilippinesUMID;
@@ -319,209 +271,167 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PhilippinesUMID Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPhilippinesUMID(PhilippinesUMID PhilippinesUMID) {
         this.PhilippinesUMID = PhilippinesUMID;
     }
 
     /**
-     * Get ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InternationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Hong Kong, Macao, and Taiwan region as well as overseas passport 
+     * @return InternationalIDPassport Hong Kong, Macao, and Taiwan region as well as overseas passport
      */
     public InternationalIDPassport getInternationalIDPassport() {
         return this.InternationalIDPassport;
     }
 
     /**
-     * Set ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InternationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Hong Kong, Macao, and Taiwan region as well as overseas passport
+     * @param InternationalIDPassport Hong Kong, Macao, and Taiwan region as well as overseas passport
      */
     public void setInternationalIDPassport(InternationalIDPassport InternationalIDPassport) {
         this.InternationalIDPassport = InternationalIDPassport;
     }
 
     /**
-     * Get General license information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GeneralCard General license information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get General card certificate information 
+     * @return GeneralCard General card certificate information
      */
     public GeneralCard getGeneralCard() {
         return this.GeneralCard;
     }
 
     /**
-     * Set General license information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GeneralCard General license information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set General card certificate information
+     * @param GeneralCard General card certificate information
      */
     public void setGeneralCard(GeneralCard GeneralCard) {
         this.GeneralCard = GeneralCard;
     }
 
     /**
-     * Get Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IndonesiaDrivingLicense Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Indonesian driving license 
+     * @return IndonesiaDrivingLicense Indonesian driving license
      */
     public IndonesiaDrivingLicense getIndonesiaDrivingLicense() {
         return this.IndonesiaDrivingLicense;
     }
 
     /**
-     * Set Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IndonesiaDrivingLicense Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Indonesian driving license
+     * @param IndonesiaDrivingLicense Indonesian driving license
      */
     public void setIndonesiaDrivingLicense(IndonesiaDrivingLicense IndonesiaDrivingLicense) {
         this.IndonesiaDrivingLicense = IndonesiaDrivingLicense;
     }
 
     /**
-     * Get Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ThailandIDCard Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Thai Identity Card 
+     * @return ThailandIDCard Thai Identity Card
      */
     public NormalThailandIDCard getThailandIDCard() {
         return this.ThailandIDCard;
     }
 
     /**
-     * Set Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ThailandIDCard Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Thai Identity Card
+     * @param ThailandIDCard Thai Identity Card
      */
     public void setThailandIDCard(NormalThailandIDCard ThailandIDCard) {
         this.ThailandIDCard = ThailandIDCard;
     }
 
     /**
-     * Get Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SingaporeIDCard Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Singapore ID card 
+     * @return SingaporeIDCard Singapore ID card
      */
     public SingaporeIDCard getSingaporeIDCard() {
         return this.SingaporeIDCard;
     }
 
     /**
-     * Set Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SingaporeIDCard Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Singapore ID card
+     * @param SingaporeIDCard Singapore ID card
      */
     public void setSingaporeIDCard(SingaporeIDCard SingaporeIDCard) {
         this.SingaporeIDCard = SingaporeIDCard;
     }
 
     /**
-     * Get Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MacaoIDCard Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Macao identity card 
+     * @return MacaoIDCard Macao identity card
      */
     public MacaoIDCard getMacaoIDCard() {
         return this.MacaoIDCard;
     }
 
     /**
-     * Set Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MacaoIDCard Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Macao identity card
+     * @param MacaoIDCard Macao identity card
      */
     public void setMacaoIDCard(MacaoIDCard MacaoIDCard) {
         this.MacaoIDCard = MacaoIDCard;
     }
 
     /**
-     * Get Mainland (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MainlandIDCard Mainland (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mainland ID card 
+     * @return MainlandIDCard Mainland ID card
      */
     public MainlandIDCard getMainlandIDCard() {
         return this.MainlandIDCard;
     }
 
     /**
-     * Set Mainland (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MainlandIDCard Mainland (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mainland ID card
+     * @param MainlandIDCard Mainland ID card
      */
     public void setMainlandIDCard(MainlandIDCard MainlandIDCard) {
         this.MainlandIDCard = MainlandIDCard;
     }
 
     /**
-     * Get Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JapanIDCard Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Japan identity card 
+     * @return JapanIDCard Japan identity card
      */
     public JapanIDCard getJapanIDCard() {
         return this.JapanIDCard;
     }
 
     /**
-     * Set Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JapanIDCard Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Japan identity card
+     * @param JapanIDCard Japan identity card
      */
     public void setJapanIDCard(JapanIDCard JapanIDCard) {
         this.JapanIDCard = JapanIDCard;
     }
 
     /**
-     * Get Taiwan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaiWanIDCard Taiwan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Taiwan (China) identity card 
+     * @return TaiWanIDCard Taiwan (China) identity card
      */
     public TaiWanIDCard getTaiWanIDCard() {
         return this.TaiWanIDCard;
     }
 
     /**
-     * Set Taiwan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaiWanIDCard Taiwan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Taiwan (China) identity card
+     * @param TaiWanIDCard Taiwan (China) identity card
      */
     public void setTaiWanIDCard(TaiWanIDCard TaiWanIDCard) {
         this.TaiWanIDCard = TaiWanIDCard;
     }
 
     /**
-     * Get exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Hong Kong, Macau and Taiwan Travel Permit 
+     * @return HMTPermitCard Hong Kong, Macau and Taiwan Travel Permit
      */
     public HMTPermit getHMTPermitCard() {
         return this.HMTPermitCard;
     }
 
     /**
-     * Set exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HMTPermitCard exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Hong Kong, Macau and Taiwan Travel Permit
+     * @param HMTPermitCard Hong Kong, Macau and Taiwan Travel Permit
      */
     public void setHMTPermitCard(HMTPermit HMTPermitCard) {
         this.HMTPermitCard = HMTPermitCard;

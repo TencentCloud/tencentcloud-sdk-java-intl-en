@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class TimeRange extends AbstractModel {
 
     /**
-    * 
+    * <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
     */
     @SerializedName("After")
     @Expose
     private String After;
 
     /**
-    * 
+    * <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
     */
     @SerializedName("Before")
     @Expose
     private String Before;
 
     /**
-     * Get  
-     * @return After 
+     * Get <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
+     * @return After <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public String getAfter() {
         return this.After;
     }
 
     /**
-     * Set 
-     * @param After 
+     * Set <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param After <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public void setAfter(String After) {
         this.After = After;
     }
 
     /**
-     * Get  
-     * @return Before 
+     * Get <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
+     * @return Before <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public String getBefore() {
         return this.Before;
     }
 
     /**
-     * Set 
-     * @param Before 
+     * Set <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param Before <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public void setBefore(String Before) {
         this.Before = Before;

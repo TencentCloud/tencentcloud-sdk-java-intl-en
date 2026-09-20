@@ -24,69 +24,99 @@ import java.util.HashMap;
 public class SuperResolutionInfo extends AbstractModel {
 
     /**
-    * 
+    * Super resolution control switch. Optional values:
+<li>ON: Turn on super resolution;</li>
+<li>OFF: Disable super resolution.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+<li>lq: super resolution for low-resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Super resolution multiple. Available value: 2.
+Default value: 2.
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Super resolution control switch. Optional values:
+<li>ON: Turn on super resolution;</li>
+<li>OFF: Disable super resolution.</li> 
+     * @return Switch Super resolution control switch. Optional values:
+<li>ON: Turn on super resolution;</li>
+<li>OFF: Disable super resolution.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Super resolution control switch. Optional values:
+<li>ON: Turn on super resolution;</li>
+<li>OFF: Disable super resolution.</li>
+     * @param Switch Super resolution control switch. Optional values:
+<li>ON: Turn on super resolution;</li>
+<li>OFF: Disable super resolution.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+<li>lq: super resolution for low-resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq. 
+     * @return Type Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+<li>lq: super resolution for low-resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+<li>lq: super resolution for low-resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq.
+     * @param Type Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+<li>lq: super resolution for low-resolution videos with considerable noise;</li>
+<li>hq: For high resolution video super-resolution.</li>
+Default value: lq.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Size 
+     * Get Super resolution multiple. Available value: 2.
+Default value: 2. 
+     * @return Size Super resolution multiple. Available value: 2.
+Default value: 2.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 
-     * @param Size 
+     * Set Super resolution multiple. Available value: 2.
+Default value: 2.
+     * @param Size Super resolution multiple. Available value: 2.
+Default value: 2.
      */
     public void setSize(Long Size) {
         this.Size = Size;

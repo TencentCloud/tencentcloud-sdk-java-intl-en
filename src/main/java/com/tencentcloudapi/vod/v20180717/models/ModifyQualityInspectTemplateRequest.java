@@ -24,391 +24,391 @@ import java.util.HashMap;
 public class ModifyQualityInspectTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Template ID.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Template name. Length limit: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Transcoding template description. Length limit: 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * <p>Configuration parameters for audio and video quality detection.</p>
     */
     @SerializedName("Configs")
     @Expose
     private QualityInspectConfig [] Configs;
 
     /**
-    * 
+    * <p>Spot check policy for audio and video quality inspection.</p>
     */
     @SerializedName("Strategy")
     @Expose
     private QualityInspectStrategy Strategy;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p>
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
     */
     @SerializedName("JitterConfigure")
     @Expose
     private JitterConfigureInfoForUpdate JitterConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
     */
     @SerializedName("BlurConfigure")
     @Expose
     private BlurConfigureInfoForUpdate BlurConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
     */
     @SerializedName("AbnormalLightingConfigure")
     @Expose
     private AbnormalLightingConfigureInfoForUpdate AbnormalLightingConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p>
     */
     @SerializedName("CrashScreenConfigure")
     @Expose
     private CrashScreenConfigureInfoForUpdate CrashScreenConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
     */
     @SerializedName("BlackWhiteEdgeConfigure")
     @Expose
     private BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
     */
     @SerializedName("NoiseConfigure")
     @Expose
     private NoiseConfigureInfoForUpdate NoiseConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
     */
     @SerializedName("MosaicConfigure")
     @Expose
     private MosaicConfigureInfoForUpdate MosaicConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
     */
     @SerializedName("QRCodeConfigure")
     @Expose
     private QRCodeConfigureInfoForUpdate QRCodeConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
     */
     @SerializedName("VoiceConfigure")
     @Expose
     private VoiceConfigureInfoForUpdate VoiceConfigure;
 
     /**
-    * 
+    * <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
     */
     @SerializedName("QualityEvaluationConfigure")
     @Expose
     private QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Template ID.</p> 
+     * @return Definition <p>Template ID.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Template ID.</p>
+     * @param Definition <p>Template ID.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Template name. Length limit: 64 characters.</p> 
+     * @return Name <p>Template name. Length limit: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Template name. Length limit: 64 characters.</p>
+     * @param Name <p>Template name. Length limit: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Transcoding template description. Length limit: 256 characters.</p> 
+     * @return Comment <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Transcoding template description. Length limit: 256 characters.</p>
+     * @param Comment <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return Configs 
+     * Get <p>Configuration parameters for audio and video quality detection.</p> 
+     * @return Configs <p>Configuration parameters for audio and video quality detection.</p>
      */
     public QualityInspectConfig [] getConfigs() {
         return this.Configs;
     }
 
     /**
-     * Set 
-     * @param Configs 
+     * Set <p>Configuration parameters for audio and video quality detection.</p>
+     * @param Configs <p>Configuration parameters for audio and video quality detection.</p>
      */
     public void setConfigs(QualityInspectConfig [] Configs) {
         this.Configs = Configs;
     }
 
     /**
-     * Get  
-     * @return Strategy 
+     * Get <p>Spot check policy for audio and video quality inspection.</p> 
+     * @return Strategy <p>Spot check policy for audio and video quality inspection.</p>
      */
     public QualityInspectStrategy getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * Set 
-     * @param Strategy 
+     * Set <p>Spot check policy for audio and video quality inspection.</p>
+     * @param Strategy <p>Spot check policy for audio and video quality inspection.</p>
      */
     public void setStrategy(QualityInspectStrategy Strategy) {
         this.Strategy = Strategy;
     }
 
     /**
-     * Get  
-     * @return ScreenshotInterval 
+     * Get <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p> 
+     * @return ScreenshotInterval <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p>
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set 
-     * @param ScreenshotInterval 
+     * Set <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p>
+     * @param ScreenshotInterval <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1.</p>
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
     /**
-     * Get  
-     * @return JitterConfigure 
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p> 
+     * @return JitterConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
      */
     public JitterConfigureInfoForUpdate getJitterConfigure() {
         return this.JitterConfigure;
     }
 
     /**
-     * Set 
-     * @param JitterConfigure 
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
+     * @param JitterConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
      */
     public void setJitterConfigure(JitterConfigureInfoForUpdate JitterConfigure) {
         this.JitterConfigure = JitterConfigure;
     }
 
     /**
-     * Get  
-     * @return BlurConfigure 
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p> 
+     * @return BlurConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
      */
     public BlurConfigureInfoForUpdate getBlurConfigure() {
         return this.BlurConfigure;
     }
 
     /**
-     * Set 
-     * @param BlurConfigure 
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+     * @param BlurConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
      */
     public void setBlurConfigure(BlurConfigureInfoForUpdate BlurConfigure) {
         this.BlurConfigure = BlurConfigure;
     }
 
     /**
-     * Get  
-     * @return AbnormalLightingConfigure 
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p> 
+     * @return AbnormalLightingConfigure <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
      */
     public AbnormalLightingConfigureInfoForUpdate getAbnormalLightingConfigure() {
         return this.AbnormalLightingConfigure;
     }
 
     /**
-     * Set 
-     * @param AbnormalLightingConfigure 
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
+     * @param AbnormalLightingConfigure <p>(Not recommended. Use Configs instead.) Control parameters for low-light and overexposure detection in video frames.</p>
      */
     public void setAbnormalLightingConfigure(AbnormalLightingConfigureInfoForUpdate AbnormalLightingConfigure) {
         this.AbnormalLightingConfigure = AbnormalLightingConfigure;
     }
 
     /**
-     * Get  
-     * @return CrashScreenConfigure 
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p> 
+     * @return CrashScreenConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p>
      */
     public CrashScreenConfigureInfoForUpdate getCrashScreenConfigure() {
         return this.CrashScreenConfigure;
     }
 
     /**
-     * Set 
-     * @param CrashScreenConfigure 
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p>
+     * @param CrashScreenConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video image distortion detection.</p>
      */
     public void setCrashScreenConfigure(CrashScreenConfigureInfoForUpdate CrashScreenConfigure) {
         this.CrashScreenConfigure = CrashScreenConfigure;
     }
 
     /**
-     * Get  
-     * @return BlackWhiteEdgeConfigure 
+     * Get <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p> 
+     * @return BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
      */
     public BlackWhiteEdgeConfigureInfoForUpdate getBlackWhiteEdgeConfigure() {
         return this.BlackWhiteEdgeConfigure;
     }
 
     /**
-     * Set 
-     * @param BlackWhiteEdgeConfigure 
+     * Set <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+     * @param BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
      */
     public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure) {
         this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
     }
 
     /**
-     * Get  
-     * @return NoiseConfigure 
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p> 
+     * @return NoiseConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
      */
     public NoiseConfigureInfoForUpdate getNoiseConfigure() {
         return this.NoiseConfigure;
     }
 
     /**
-     * Set 
-     * @param NoiseConfigure 
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+     * @param NoiseConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
      */
     public void setNoiseConfigure(NoiseConfigureInfoForUpdate NoiseConfigure) {
         this.NoiseConfigure = NoiseConfigure;
     }
 
     /**
-     * Get  
-     * @return MosaicConfigure 
+     * Get <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p> 
+     * @return MosaicConfigure <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
      */
     public MosaicConfigureInfoForUpdate getMosaicConfigure() {
         return this.MosaicConfigure;
     }
 
     /**
-     * Set 
-     * @param MosaicConfigure 
+     * Set <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+     * @param MosaicConfigure <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
      */
     public void setMosaicConfigure(MosaicConfigureInfoForUpdate MosaicConfigure) {
         this.MosaicConfigure = MosaicConfigure;
     }
 
     /**
-     * Get  
-     * @return QRCodeConfigure 
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p> 
+     * @return QRCodeConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
      */
     public QRCodeConfigureInfoForUpdate getQRCodeConfigure() {
         return this.QRCodeConfigure;
     }
 
     /**
-     * Set 
-     * @param QRCodeConfigure 
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
+     * @param QRCodeConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame QR code detection.</p>
      */
     public void setQRCodeConfigure(QRCodeConfigureInfoForUpdate QRCodeConfigure) {
         this.QRCodeConfigure = QRCodeConfigure;
     }
 
     /**
-     * Get  
-     * @return VoiceConfigure 
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p> 
+     * @return VoiceConfigure <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
      */
     public VoiceConfigureInfoForUpdate getVoiceConfigure() {
         return this.VoiceConfigure;
     }
 
     /**
-     * Set 
-     * @param VoiceConfigure 
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+     * @param VoiceConfigure <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
      */
     public void setVoiceConfigure(VoiceConfigureInfoForUpdate VoiceConfigure) {
         this.VoiceConfigure = VoiceConfigure;
     }
 
     /**
-     * Get  
-     * @return QualityEvaluationConfigure 
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p> 
+     * @return QualityEvaluationConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
      */
     public QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() {
         return this.QualityEvaluationConfigure;
     }
 
     /**
-     * Set 
-     * @param QualityEvaluationConfigure 
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
+     * @param QualityEvaluationConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
      */
     public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure) {
         this.QualityEvaluationConfigure = QualityEvaluationConfigure;

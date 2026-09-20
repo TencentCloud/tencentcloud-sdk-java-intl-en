@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class OcrFullTextConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Switch for the full text recognition task. Available values:
+<li>ON: Turn on the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Switch for the full text recognition task. Available values:
+<li>ON: Turn on the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li> 
+     * @return Switch Switch for the full text recognition task. Available values:
+<li>ON: Turn on the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Switch for the full text recognition task. Available values:
+<li>ON: Turn on the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li>
+     * @param Switch Switch for the full text recognition task. Available values:
+<li>ON: Turn on the intelligent full text recognition task;</li>
+<li>OFF: disables the intelligent full text recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

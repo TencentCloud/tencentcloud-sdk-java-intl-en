@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class HeadTailTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Opening and ending template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Opening and ending template ID. 
+     * @return Definition Opening and ending template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Opening and ending template ID.
+     * @param Definition Opening and ending template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

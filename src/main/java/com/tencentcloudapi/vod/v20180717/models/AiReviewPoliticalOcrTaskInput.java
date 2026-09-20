@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiReviewPoliticalOcrTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Template ID for authentication involving inappropriate information.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Template ID for authentication involving inappropriate information. 
+     * @return Definition Template ID for authentication involving inappropriate information.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Template ID for authentication involving inappropriate information.
+     * @param Definition Template ID for authentication involving inappropriate information.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -24,184 +24,234 @@ import java.util.HashMap;
 public class ReviewImageSegmentItem extends AbstractModel {
 
     /**
-    * 
+    * Score of offensive information involved in suspected clips.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 
+    * Rule violation subtag.
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * 
+    * Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
     */
     @SerializedName("Form")
     @Expose
     private String Form;
 
     /**
-    * 
+    * Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * 
+    * Valid when Form is OCR. It indicates the recognized OCR text content.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 
+    * Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Score of offensive information involved in suspected clips. 
+     * @return Confidence Score of offensive information involved in suspected clips.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Score of offensive information involved in suspected clips.
+     * @param Confidence Score of offensive information involved in suspected clips.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li> 
+     * @return Suggestion Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+     * @param Suggestion Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return Label 
+     * Get Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li> 
+     * @return Label Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
+     * @param Label Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get  
-     * @return SubLabel 
+     * Get Rule violation subtag. 
+     * @return SubLabel Rule violation subtag.
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set 
-     * @param SubLabel 
+     * Set Rule violation subtag.
+     * @param SubLabel Rule violation subtag.
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get  
-     * @return Form 
+     * Get Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li> 
+     * @return Form Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
      */
     public String getForm() {
         return this.Form;
     }
 
     /**
-     * Set 
-     * @param Form 
+     * Set Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
+     * @param Form Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
      */
     public void setForm(String Form) {
         this.Form = Form;
     }
 
     /**
-     * Get  
-     * @return AreaCoordSet 
+     * Get Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner. 
+     * @return AreaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 
-     * @param AreaCoordSet 
+     * Set Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * @param AreaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get Valid when Form is OCR. It indicates the recognized OCR text content. 
+     * @return Text Valid when Form is OCR. It indicates the recognized OCR text content.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set Valid when Form is OCR. It indicates the recognized OCR text content.
+     * @param Text Valid when Form is OCR. It indicates the recognized OCR text content.
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get  
-     * @return KeywordSet 
+     * Get Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments. 
+     * @return KeywordSet Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set 
-     * @param KeywordSet 
+     * Set Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
+     * @param KeywordSet Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;

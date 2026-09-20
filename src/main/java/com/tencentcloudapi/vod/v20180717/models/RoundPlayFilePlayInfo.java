@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class RoundPlayFilePlayInfo extends AbstractModel {
 
     /**
-    * 
+    * Playlist program ID assigned by the system.
     */
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
 
     /**
-    * 
+    * Media file identifier.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("StartPlayTime")
     @Expose
     private String StartPlayTime;
 
     /**
-    * 
+    * Playback duration, in seconds.
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * 
+    * Playback progress, in seconds.
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-     * Get  
-     * @return ItemId 
+     * Get Playlist program ID assigned by the system. 
+     * @return ItemId Playlist program ID assigned by the system.
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set 
-     * @param ItemId 
+     * Set Playlist program ID assigned by the system.
+     * @param ItemId Playlist program ID assigned by the system.
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file identifier. 
+     * @return FileId Media file identifier.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file identifier.
+     * @param FileId Media file identifier.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return StartPlayTime 
+     * Get Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return StartPlayTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getStartPlayTime() {
         return this.StartPlayTime;
     }
 
     /**
-     * Set 
-     * @param StartPlayTime 
+     * Set Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param StartPlayTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setStartPlayTime(String StartPlayTime) {
         this.StartPlayTime = StartPlayTime;
     }
 
     /**
-     * Get  
-     * @return Duration 
+     * Get Playback duration, in seconds. 
+     * @return Duration Playback duration, in seconds.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 
-     * @param Duration 
+     * Set Playback duration, in seconds.
+     * @param Duration Playback duration, in seconds.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Playback progress, in seconds. 
+     * @return Progress Playback progress, in seconds.
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Playback progress, in seconds.
+     * @param Progress Playback progress, in seconds.
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;

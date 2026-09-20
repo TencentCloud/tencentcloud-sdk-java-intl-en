@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class SharpEnhanceInfo extends AbstractModel {
 
     /**
-    * 
+    * Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
     */
     @SerializedName("Intensity")
     @Expose
     private Float Intensity;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li> 
+     * @return Switch Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
+     * @param Switch Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Intensity 
+     * Get Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0. 
+     * @return Intensity Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
      */
     public Float getIntensity() {
         return this.Intensity;
     }
 
     /**
-     * Set 
-     * @param Intensity 
+     * Set Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
+     * @param Intensity Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
      */
     public void setIntensity(Float Intensity) {
         this.Intensity = Intensity;

@@ -24,55 +24,49 @@ import java.util.HashMap;
 public class GetWebVerificationResultIntlResponse extends AbstractModel {
 
     /**
-    * The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Final result description of this process.</p>
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
 
     /**
-    * The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p>
     */
     @SerializedName("VerificationDetailList")
     @Expose
     private VerificationDetail [] VerificationDetailList;
 
     /**
-    * The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p>
     */
     @SerializedName("VideoBase64")
     @Expose
     private String VideoBase64;
 
     /**
-    * The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p>
     */
     @SerializedName("BestFrameBase64")
     @Expose
     private String BestFrameBase64;
 
     /**
-    * Card recognize result
+    * <p>License recognition result</p>
     */
     @SerializedName("OCRResult")
     @Expose
     private OCRResult [] OCRResult;
 
     /**
-    * The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+    * <p>Service pass-through parameter.</p>
     */
     @SerializedName("Extra")
     @Expose
@@ -86,136 +80,112 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p> 
+     * @return ErrorCode <p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p>
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p>
+     * @param ErrorCode <p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p>
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Final result description of this process.</p> 
+     * @return ErrorMsg <p>Final result description of this process.</p>
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Final result description of this process.</p>
+     * @param ErrorMsg <p>Final result description of this process.</p>
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VerificationDetailList The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p> 
+     * @return VerificationDetailList <p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p>
      */
     public VerificationDetail [] getVerificationDetailList() {
         return this.VerificationDetailList;
     }
 
     /**
-     * Set The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VerificationDetailList The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p>
+     * @param VerificationDetailList <p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p>
      */
     public void setVerificationDetailList(VerificationDetail [] VerificationDetailList) {
         this.VerificationDetailList = VerificationDetailList;
     }
 
     /**
-     * Get The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VideoBase64 The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p> 
+     * @return VideoBase64 <p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p>
      */
     public String getVideoBase64() {
         return this.VideoBase64;
     }
 
     /**
-     * Set The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoBase64 The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p>
+     * @param VideoBase64 <p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p>
      */
     public void setVideoBase64(String VideoBase64) {
         this.VideoBase64 = VideoBase64;
     }
 
     /**
-     * Get The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BestFrameBase64 The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p> 
+     * @return BestFrameBase64 <p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p>
      */
     public String getBestFrameBase64() {
         return this.BestFrameBase64;
     }
 
     /**
-     * Set The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BestFrameBase64 The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p>
+     * @param BestFrameBase64 <p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p>
      */
     public void setBestFrameBase64(String BestFrameBase64) {
         this.BestFrameBase64 = BestFrameBase64;
     }
 
     /**
-     * Get Card recognize result 
-     * @return OCRResult Card recognize result
+     * Get <p>License recognition result</p> 
+     * @return OCRResult <p>License recognition result</p>
      */
     public OCRResult [] getOCRResult() {
         return this.OCRResult;
     }
 
     /**
-     * Set Card recognize result
-     * @param OCRResult Card recognize result
+     * Set <p>License recognition result</p>
+     * @param OCRResult <p>License recognition result</p>
      */
     public void setOCRResult(OCRResult [] OCRResult) {
         this.OCRResult = OCRResult;
     }
 
     /**
-     * Get The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl. 
-     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+     * Get <p>Service pass-through parameter.</p> 
+     * @return Extra <p>Service pass-through parameter.</p>
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
-     * @param Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+     * Set <p>Service pass-through parameter.</p>
+     * @param Extra <p>Service pass-through parameter.</p>
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

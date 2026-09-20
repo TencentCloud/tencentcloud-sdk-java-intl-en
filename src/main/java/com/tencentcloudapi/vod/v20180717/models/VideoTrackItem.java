@@ -24,253 +24,368 @@ import java.util.HashMap;
 public class VideoTrackItem extends AbstractModel {
 
     /**
-    * 
+    * Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
     */
     @SerializedName("SourceMedia")
     @Expose
     private String SourceMedia;
 
     /**
-    * 
+    * Start time of the video clip in the material file, in seconds. Default value: 0.
     */
     @SerializedName("SourceMediaStartTime")
     @Expose
     private Float SourceMediaStartTime;
 
     /**
-    * 
+    * Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * 
+    * Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
     */
     @SerializedName("TargetDuration")
     @Expose
     private Float TargetDuration;
 
     /**
-    * 
+    * Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
     */
     @SerializedName("CoordinateOrigin")
     @Expose
     private String CoordinateOrigin;
 
     /**
-    * 
+    * Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
     */
     @SerializedName("XPos")
     @Expose
     private String XPos;
 
     /**
-    * 
+    * Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
     */
     @SerializedName("YPos")
     @Expose
     private String YPos;
 
     /**
-    * 
+    * Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
     */
     @SerializedName("Width")
     @Expose
     private String Width;
 
     /**
-    * 
+    * Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
     */
     @SerializedName("Height")
     @Expose
     private String Height;
 
     /**
-    * 
+    * Perform operations on audio, such as muting.
     */
     @SerializedName("AudioOperations")
     @Expose
     private AudioTransform [] AudioOperations;
 
     /**
-    * 
+    * Operation performed on the image, for example, image rotation.
     */
     @SerializedName("ImageOperations")
     @Expose
     private ImageTransform [] ImageOperations;
 
     /**
-     * Get  
-     * @return SourceMedia 
+     * Get Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature). 
+     * @return SourceMedia Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public String getSourceMedia() {
         return this.SourceMedia;
     }
 
     /**
-     * Set 
-     * @param SourceMedia 
+     * Set Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+     * @param SourceMedia Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public void setSourceMedia(String SourceMedia) {
         this.SourceMedia = SourceMedia;
     }
 
     /**
-     * Get  
-     * @return SourceMediaStartTime 
+     * Get Start time of the video clip in the material file, in seconds. Default value: 0. 
+     * @return SourceMediaStartTime Start time of the video clip in the material file, in seconds. Default value: 0.
      */
     public Float getSourceMediaStartTime() {
         return this.SourceMediaStartTime;
     }
 
     /**
-     * Set 
-     * @param SourceMediaStartTime 
+     * Set Start time of the video clip in the material file, in seconds. Default value: 0.
+     * @param SourceMediaStartTime Start time of the video clip in the material file, in seconds. Default value: 0.
      */
     public void setSourceMediaStartTime(Float SourceMediaStartTime) {
         this.SourceMediaStartTime = SourceMediaStartTime;
     }
 
     /**
-     * Get  
-     * @return Duration 
+     * Get Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0. 
+     * @return Duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 
-     * @param Duration 
+     * Set Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+     * @param Duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get  
-     * @return TargetDuration 
+     * Get Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li> 
+     * @return TargetDuration Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
      */
     public Float getTargetDuration() {
         return this.TargetDuration;
     }
 
     /**
-     * Set 
-     * @param TargetDuration 
+     * Set Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+     * @param TargetDuration Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
      */
     public void setTargetDuration(Float TargetDuration) {
         this.TargetDuration = TargetDuration;
     }
 
     /**
-     * Get  
-     * @return CoordinateOrigin 
+     * Get Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center. 
+     * @return CoordinateOrigin Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
      */
     public String getCoordinateOrigin() {
         return this.CoordinateOrigin;
     }
 
     /**
-     * Set 
-     * @param CoordinateOrigin 
+     * Set Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
+     * @param CoordinateOrigin Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
      */
     public void setCoordinateOrigin(String CoordinateOrigin) {
         this.CoordinateOrigin = CoordinateOrigin;
     }
 
     /**
-     * Get  
-     * @return XPos 
+     * Get Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px. 
+     * @return XPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
      */
     public String getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set 
-     * @param XPos 
+     * Set Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
+     * @param XPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
      */
     public void setXPos(String XPos) {
         this.XPos = XPos;
     }
 
     /**
-     * Get  
-     * @return YPos 
+     * Get Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px. 
+     * @return YPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
      */
     public String getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set 
-     * @param YPos 
+     * Set Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
+     * @param YPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
      */
     public void setYPos(String YPos) {
         this.YPos = YPos;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li> 
+     * @return Width Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
      */
     public String getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
+     * @param Width Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
      */
     public void setWidth(String Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li> 
+     * @return Height Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
      */
     public String getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
+     * @param Height Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
      */
     public void setHeight(String Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return AudioOperations 
+     * Get Perform operations on audio, such as muting. 
+     * @return AudioOperations Perform operations on audio, such as muting.
      */
     public AudioTransform [] getAudioOperations() {
         return this.AudioOperations;
     }
 
     /**
-     * Set 
-     * @param AudioOperations 
+     * Set Perform operations on audio, such as muting.
+     * @param AudioOperations Perform operations on audio, such as muting.
      */
     public void setAudioOperations(AudioTransform [] AudioOperations) {
         this.AudioOperations = AudioOperations;
     }
 
     /**
-     * Get  
-     * @return ImageOperations 
+     * Get Operation performed on the image, for example, image rotation. 
+     * @return ImageOperations Operation performed on the image, for example, image rotation.
      */
     public ImageTransform [] getImageOperations() {
         return this.ImageOperations;
     }
 
     /**
-     * Set 
-     * @param ImageOperations 
+     * Set Operation performed on the image, for example, image rotation.
+     * @param ImageOperations Operation performed on the image, for example, image rotation.
      */
     public void setImageOperations(ImageTransform [] ImageOperations) {
         this.ImageOperations = ImageOperations;

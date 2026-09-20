@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MediaAdaptiveDynamicStreamingInfo extends AbstractModel {
 
     /**
-    * 
+    * Information array of adaptive bitrate streaming.
     */
     @SerializedName("AdaptiveDynamicStreamingSet")
     @Expose
     private AdaptiveDynamicStreamingInfoItem [] AdaptiveDynamicStreamingSet;
 
     /**
-     * Get  
-     * @return AdaptiveDynamicStreamingSet 
+     * Get Information array of adaptive bitrate streaming. 
+     * @return AdaptiveDynamicStreamingSet Information array of adaptive bitrate streaming.
      */
     public AdaptiveDynamicStreamingInfoItem [] getAdaptiveDynamicStreamingSet() {
         return this.AdaptiveDynamicStreamingSet;
     }
 
     /**
-     * Set 
-     * @param AdaptiveDynamicStreamingSet 
+     * Set Information array of adaptive bitrate streaming.
+     * @param AdaptiveDynamicStreamingSet Information array of adaptive bitrate streaming.
      */
     public void setAdaptiveDynamicStreamingSet(AdaptiveDynamicStreamingInfoItem [] AdaptiveDynamicStreamingSet) {
         this.AdaptiveDynamicStreamingSet = AdaptiveDynamicStreamingSet;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeCurrentPlaylistRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Carousel playlist unique identifier.</p>
     */
     @SerializedName("RoundPlayId")
     @Expose
     private String RoundPlayId;
 
     /**
-    * 
+    * <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p> 
+     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return RoundPlayId 
+     * Get <p>Carousel playlist unique identifier.</p> 
+     * @return RoundPlayId <p>Carousel playlist unique identifier.</p>
      */
     public String getRoundPlayId() {
         return this.RoundPlayId;
     }
 
     /**
-     * Set 
-     * @param RoundPlayId 
+     * Set <p>Carousel playlist unique identifier.</p>
+     * @param RoundPlayId <p>Carousel playlist unique identifier.</p>
      */
     public void setRoundPlayId(String RoundPlayId) {
         this.RoundPlayId = RoundPlayId;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p> 
+     * @return Limit <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
+     * @param Limit <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

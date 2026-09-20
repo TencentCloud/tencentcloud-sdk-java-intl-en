@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SDMCDrmKeyProviderInfo extends AbstractModel {
 
     /**
-    * 
+    * User ID assigned by Huaxida, which contains up to 128 characters.
     */
     @SerializedName("Uid")
     @Expose
     private String Uid;
 
     /**
-    * 
+    * User secret key ID assigned by SDMC, which contains up to 128 characters.
     */
     @SerializedName("SecretId")
     @Expose
     private String SecretId;
 
     /**
-    * 
+    * User key content assigned by Huaxida. Maximum length: 128 characters.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 
+    * FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
     */
     @SerializedName("FairPlayCertificateUrl")
     @Expose
     private String FairPlayCertificateUrl;
 
     /**
-     * Get  
-     * @return Uid 
+     * Get User ID assigned by Huaxida, which contains up to 128 characters. 
+     * @return Uid User ID assigned by Huaxida, which contains up to 128 characters.
      */
     public String getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 
-     * @param Uid 
+     * Set User ID assigned by Huaxida, which contains up to 128 characters.
+     * @param Uid User ID assigned by Huaxida, which contains up to 128 characters.
      */
     public void setUid(String Uid) {
         this.Uid = Uid;
     }
 
     /**
-     * Get  
-     * @return SecretId 
+     * Get User secret key ID assigned by SDMC, which contains up to 128 characters. 
+     * @return SecretId User secret key ID assigned by SDMC, which contains up to 128 characters.
      */
     public String getSecretId() {
         return this.SecretId;
     }
 
     /**
-     * Set 
-     * @param SecretId 
+     * Set User secret key ID assigned by SDMC, which contains up to 128 characters.
+     * @param SecretId User secret key ID assigned by SDMC, which contains up to 128 characters.
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get  
-     * @return SecretKey 
+     * Get User key content assigned by Huaxida. Maximum length: 128 characters. 
+     * @return SecretKey User key content assigned by Huaxida. Maximum length: 128 characters.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 
-     * @param SecretKey 
+     * Set User key content assigned by Huaxida. Maximum length: 128 characters.
+     * @param SecretKey User key content assigned by Huaxida. Maximum length: 128 characters.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get  
-     * @return FairPlayCertificateUrl 
+     * Get FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters. 
+     * @return FairPlayCertificateUrl FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
      */
     public String getFairPlayCertificateUrl() {
         return this.FairPlayCertificateUrl;
     }
 
     /**
-     * Set 
-     * @param FairPlayCertificateUrl 
+     * Set FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
+     * @param FairPlayCertificateUrl FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
      */
     public void setFairPlayCertificateUrl(String FairPlayCertificateUrl) {
         this.FairPlayCertificateUrl = FairPlayCertificateUrl;

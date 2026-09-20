@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class CreateAigcAdvancedCustomElementRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Subject name, cannot exceed 20 characters.</p>
     */
     @SerializedName("ElementName")
     @Expose
     private String ElementName;
 
     /**
-    * 
+    * <p>Subject description, up to 100 characters.</p>
     */
     @SerializedName("ElementDescription")
     @Expose
     private String ElementDescription;
 
     /**
-    * 
+    * <p>Subject reference method. The availability of subjects customized via video and via image is different.</p><p>Enumeration values:</p><ul><li>video_refer: Video role subject. At this point, refer to element_video_list to define the subject appearance.</li><li>image_refer: Multi-image subject. At this point, refer to element_image_list to define the subject appearance.</li></ul>
     */
     @SerializedName("ReferenceType")
     @Expose
     private String ReferenceType;
 
     /**
-    * 
+    * <p>Entity voice type, can bind existing timbres in the timbre library.</p><ul><li>When the current parameter is empty, the current entity is not bound to a timbre.</li><li>Only entities customized for video support binding timbres.</li></ul>
     */
     @SerializedName("ElementVoiceId")
     @Expose
     private String ElementVoiceId;
 
     /**
-    * 
+    * <p>Entity reference video, used to set the entity and its details through video.</p><ul><li>Videos with audio can be uploaded. If the video contains voice, it triggers custom timbre (customize + add to timbre library + bind with entity).</li><li>Required when referencing a video, unavailable when referencing an image.</li><li>Carried in key:value format, as follows:<br><pre><code>{  &quot;refer_videos&quot;:[    {      &quot;video_url&quot;:&quot;video_url_1&quot;    }  ]}</code></pre>● Only MP4/MOV video formats are supported.<br>● Only 1080P videos with a duration between 3s and 8s and an aspect ratio of 16:9 or 9:16 are supported.<br>● Up to 1 video can be uploaded, with a video size no more than 200MB.<br>● The video_url parameter value cannot be empty.</li></ul>
     */
     @SerializedName("ElementVideoList")
     @Expose
     private String ElementVideoList;
 
     /**
-    * 
+    * <p>Subject reference image. You can set the subject and its details through multiple images.</p><ul><li>Including a front reference image and other angle or close-up reference images. Among them:<ul><li>At least 1 front reference image, defined by the frontal_image parameter.</li><li>1–3 other reference images, which must differ from the front reference image, defined by the image_url parameter.</li></ul></li><li>Use key:value to carry them, as follows:<br><pre><code>{  "frontal_image":"image_url_0",  "refer_images":[    {      "image_url":"image_url_1"    },    {      "image_url":"image_url_2"    },    {      "image_url":"image_url_3"    }  ]}</code></pre></li></ul>
     */
     @SerializedName("ElementImageList")
     @Expose
     private String ElementImageList;
 
     /**
-    * 
+    * <p>Configure tags for a principal. A principal can be configured with multiple tags.</p><ul><li>Use key:value to carry them. Among them, details are given below:</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
     */
     @SerializedName("TagList")
     @Expose
     private String TagList;
 
     /**
-    * 
+    * <p>If the overseas custom subject library is enabled, you can pass in <code>True</code> to use it.</p><p>Enumeration values:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Do not use the overseas custom subject library.</li></ul>
     */
     @SerializedName("DisableModeration")
     @Expose
     private String DisableModeration;
 
     /**
-    * 
+    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * <p>Source context. This is used to pass user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return ElementName 
+     * Get <p>Subject name, cannot exceed 20 characters.</p> 
+     * @return ElementName <p>Subject name, cannot exceed 20 characters.</p>
      */
     public String getElementName() {
         return this.ElementName;
     }
 
     /**
-     * Set 
-     * @param ElementName 
+     * Set <p>Subject name, cannot exceed 20 characters.</p>
+     * @param ElementName <p>Subject name, cannot exceed 20 characters.</p>
      */
     public void setElementName(String ElementName) {
         this.ElementName = ElementName;
     }
 
     /**
-     * Get  
-     * @return ElementDescription 
+     * Get <p>Subject description, up to 100 characters.</p> 
+     * @return ElementDescription <p>Subject description, up to 100 characters.</p>
      */
     public String getElementDescription() {
         return this.ElementDescription;
     }
 
     /**
-     * Set 
-     * @param ElementDescription 
+     * Set <p>Subject description, up to 100 characters.</p>
+     * @param ElementDescription <p>Subject description, up to 100 characters.</p>
      */
     public void setElementDescription(String ElementDescription) {
         this.ElementDescription = ElementDescription;
     }
 
     /**
-     * Get  
-     * @return ReferenceType 
+     * Get <p>Subject reference method. The availability of subjects customized via video and via image is different.</p><p>Enumeration values:</p><ul><li>video_refer: Video role subject. At this point, refer to element_video_list to define the subject appearance.</li><li>image_refer: Multi-image subject. At this point, refer to element_image_list to define the subject appearance.</li></ul> 
+     * @return ReferenceType <p>Subject reference method. The availability of subjects customized via video and via image is different.</p><p>Enumeration values:</p><ul><li>video_refer: Video role subject. At this point, refer to element_video_list to define the subject appearance.</li><li>image_refer: Multi-image subject. At this point, refer to element_image_list to define the subject appearance.</li></ul>
      */
     public String getReferenceType() {
         return this.ReferenceType;
     }
 
     /**
-     * Set 
-     * @param ReferenceType 
+     * Set <p>Subject reference method. The availability of subjects customized via video and via image is different.</p><p>Enumeration values:</p><ul><li>video_refer: Video role subject. At this point, refer to element_video_list to define the subject appearance.</li><li>image_refer: Multi-image subject. At this point, refer to element_image_list to define the subject appearance.</li></ul>
+     * @param ReferenceType <p>Subject reference method. The availability of subjects customized via video and via image is different.</p><p>Enumeration values:</p><ul><li>video_refer: Video role subject. At this point, refer to element_video_list to define the subject appearance.</li><li>image_refer: Multi-image subject. At this point, refer to element_image_list to define the subject appearance.</li></ul>
      */
     public void setReferenceType(String ReferenceType) {
         this.ReferenceType = ReferenceType;
     }
 
     /**
-     * Get  
-     * @return ElementVoiceId 
+     * Get <p>Entity voice type, can bind existing timbres in the timbre library.</p><ul><li>When the current parameter is empty, the current entity is not bound to a timbre.</li><li>Only entities customized for video support binding timbres.</li></ul> 
+     * @return ElementVoiceId <p>Entity voice type, can bind existing timbres in the timbre library.</p><ul><li>When the current parameter is empty, the current entity is not bound to a timbre.</li><li>Only entities customized for video support binding timbres.</li></ul>
      */
     public String getElementVoiceId() {
         return this.ElementVoiceId;
     }
 
     /**
-     * Set 
-     * @param ElementVoiceId 
+     * Set <p>Entity voice type, can bind existing timbres in the timbre library.</p><ul><li>When the current parameter is empty, the current entity is not bound to a timbre.</li><li>Only entities customized for video support binding timbres.</li></ul>
+     * @param ElementVoiceId <p>Entity voice type, can bind existing timbres in the timbre library.</p><ul><li>When the current parameter is empty, the current entity is not bound to a timbre.</li><li>Only entities customized for video support binding timbres.</li></ul>
      */
     public void setElementVoiceId(String ElementVoiceId) {
         this.ElementVoiceId = ElementVoiceId;
     }
 
     /**
-     * Get  
-     * @return ElementVideoList 
+     * Get <p>Entity reference video, used to set the entity and its details through video.</p><ul><li>Videos with audio can be uploaded. If the video contains voice, it triggers custom timbre (customize + add to timbre library + bind with entity).</li><li>Required when referencing a video, unavailable when referencing an image.</li><li>Carried in key:value format, as follows:<br><pre><code>{  &quot;refer_videos&quot;:[    {      &quot;video_url&quot;:&quot;video_url_1&quot;    }  ]}</code></pre>● Only MP4/MOV video formats are supported.<br>● Only 1080P videos with a duration between 3s and 8s and an aspect ratio of 16:9 or 9:16 are supported.<br>● Up to 1 video can be uploaded, with a video size no more than 200MB.<br>● The video_url parameter value cannot be empty.</li></ul> 
+     * @return ElementVideoList <p>Entity reference video, used to set the entity and its details through video.</p><ul><li>Videos with audio can be uploaded. If the video contains voice, it triggers custom timbre (customize + add to timbre library + bind with entity).</li><li>Required when referencing a video, unavailable when referencing an image.</li><li>Carried in key:value format, as follows:<br><pre><code>{  &quot;refer_videos&quot;:[    {      &quot;video_url&quot;:&quot;video_url_1&quot;    }  ]}</code></pre>● Only MP4/MOV video formats are supported.<br>● Only 1080P videos with a duration between 3s and 8s and an aspect ratio of 16:9 or 9:16 are supported.<br>● Up to 1 video can be uploaded, with a video size no more than 200MB.<br>● The video_url parameter value cannot be empty.</li></ul>
      */
     public String getElementVideoList() {
         return this.ElementVideoList;
     }
 
     /**
-     * Set 
-     * @param ElementVideoList 
+     * Set <p>Entity reference video, used to set the entity and its details through video.</p><ul><li>Videos with audio can be uploaded. If the video contains voice, it triggers custom timbre (customize + add to timbre library + bind with entity).</li><li>Required when referencing a video, unavailable when referencing an image.</li><li>Carried in key:value format, as follows:<br><pre><code>{  &quot;refer_videos&quot;:[    {      &quot;video_url&quot;:&quot;video_url_1&quot;    }  ]}</code></pre>● Only MP4/MOV video formats are supported.<br>● Only 1080P videos with a duration between 3s and 8s and an aspect ratio of 16:9 or 9:16 are supported.<br>● Up to 1 video can be uploaded, with a video size no more than 200MB.<br>● The video_url parameter value cannot be empty.</li></ul>
+     * @param ElementVideoList <p>Entity reference video, used to set the entity and its details through video.</p><ul><li>Videos with audio can be uploaded. If the video contains voice, it triggers custom timbre (customize + add to timbre library + bind with entity).</li><li>Required when referencing a video, unavailable when referencing an image.</li><li>Carried in key:value format, as follows:<br><pre><code>{  &quot;refer_videos&quot;:[    {      &quot;video_url&quot;:&quot;video_url_1&quot;    }  ]}</code></pre>● Only MP4/MOV video formats are supported.<br>● Only 1080P videos with a duration between 3s and 8s and an aspect ratio of 16:9 or 9:16 are supported.<br>● Up to 1 video can be uploaded, with a video size no more than 200MB.<br>● The video_url parameter value cannot be empty.</li></ul>
      */
     public void setElementVideoList(String ElementVideoList) {
         this.ElementVideoList = ElementVideoList;
     }
 
     /**
-     * Get  
-     * @return ElementImageList 
+     * Get <p>Subject reference image. You can set the subject and its details through multiple images.</p><ul><li>Including a front reference image and other angle or close-up reference images. Among them:<ul><li>At least 1 front reference image, defined by the frontal_image parameter.</li><li>1–3 other reference images, which must differ from the front reference image, defined by the image_url parameter.</li></ul></li><li>Use key:value to carry them, as follows:<br><pre><code>{  "frontal_image":"image_url_0",  "refer_images":[    {      "image_url":"image_url_1"    },    {      "image_url":"image_url_2"    },    {      "image_url":"image_url_3"    }  ]}</code></pre></li></ul> 
+     * @return ElementImageList <p>Subject reference image. You can set the subject and its details through multiple images.</p><ul><li>Including a front reference image and other angle or close-up reference images. Among them:<ul><li>At least 1 front reference image, defined by the frontal_image parameter.</li><li>1–3 other reference images, which must differ from the front reference image, defined by the image_url parameter.</li></ul></li><li>Use key:value to carry them, as follows:<br><pre><code>{  "frontal_image":"image_url_0",  "refer_images":[    {      "image_url":"image_url_1"    },    {      "image_url":"image_url_2"    },    {      "image_url":"image_url_3"    }  ]}</code></pre></li></ul>
      */
     public String getElementImageList() {
         return this.ElementImageList;
     }
 
     /**
-     * Set 
-     * @param ElementImageList 
+     * Set <p>Subject reference image. You can set the subject and its details through multiple images.</p><ul><li>Including a front reference image and other angle or close-up reference images. Among them:<ul><li>At least 1 front reference image, defined by the frontal_image parameter.</li><li>1–3 other reference images, which must differ from the front reference image, defined by the image_url parameter.</li></ul></li><li>Use key:value to carry them, as follows:<br><pre><code>{  "frontal_image":"image_url_0",  "refer_images":[    {      "image_url":"image_url_1"    },    {      "image_url":"image_url_2"    },    {      "image_url":"image_url_3"    }  ]}</code></pre></li></ul>
+     * @param ElementImageList <p>Subject reference image. You can set the subject and its details through multiple images.</p><ul><li>Including a front reference image and other angle or close-up reference images. Among them:<ul><li>At least 1 front reference image, defined by the frontal_image parameter.</li><li>1–3 other reference images, which must differ from the front reference image, defined by the image_url parameter.</li></ul></li><li>Use key:value to carry them, as follows:<br><pre><code>{  "frontal_image":"image_url_0",  "refer_images":[    {      "image_url":"image_url_1"    },    {      "image_url":"image_url_2"    },    {      "image_url":"image_url_3"    }  ]}</code></pre></li></ul>
      */
     public void setElementImageList(String ElementImageList) {
         this.ElementImageList = ElementImageList;
     }
 
     /**
-     * Get  
-     * @return TagList 
+     * Get <p>Configure tags for a principal. A principal can be configured with multiple tags.</p><ul><li>Use key:value to carry them. Among them, details are given below:</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p> 
+     * @return TagList <p>Configure tags for a principal. A principal can be configured with multiple tags.</p><ul><li>Use key:value to carry them. Among them, details are given below:</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
      */
     public String getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 
-     * @param TagList 
+     * Set <p>Configure tags for a principal. A principal can be configured with multiple tags.</p><ul><li>Use key:value to carry them. Among them, details are given below:</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
+     * @param TagList <p>Configure tags for a principal. A principal can be configured with multiple tags.</p><ul><li>Use key:value to carry them. Among them, details are given below:</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
      */
     public void setTagList(String TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get  
-     * @return DisableModeration 
+     * Get <p>If the overseas custom subject library is enabled, you can pass in <code>True</code> to use it.</p><p>Enumeration values:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Do not use the overseas custom subject library.</li></ul> 
+     * @return DisableModeration <p>If the overseas custom subject library is enabled, you can pass in <code>True</code> to use it.</p><p>Enumeration values:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Do not use the overseas custom subject library.</li></ul>
      */
     public String getDisableModeration() {
         return this.DisableModeration;
     }
 
     /**
-     * Set 
-     * @param DisableModeration 
+     * Set <p>If the overseas custom subject library is enabled, you can pass in <code>True</code> to use it.</p><p>Enumeration values:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Do not use the overseas custom subject library.</li></ul>
+     * @param DisableModeration <p>If the overseas custom subject library is enabled, you can pass in <code>True</code> to use it.</p><p>Enumeration values:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Do not use the overseas custom subject library.</li></ul>
      */
     public void setDisableModeration(String DisableModeration) {
         this.DisableModeration = DisableModeration;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
+     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get <p>Source context. This is used to pass user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set <p>Source context. This is used to pass user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. The task complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p> 
+     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;

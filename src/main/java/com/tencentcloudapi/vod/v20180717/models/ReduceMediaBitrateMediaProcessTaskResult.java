@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
 
     /**
-    * 
+    * Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
     */
     @SerializedName("TranscodeTask")
     @Expose
     private ReduceMediaBitrateTranscodeResult TranscodeTask;
 
     /**
-    * 
+    * Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
     private ReduceMediaBitrateAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li> 
+     * @return Type Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+     * @param Type Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return TranscodeTask 
+     * Get Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`. 
+     * @return TranscodeTask Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
      */
     public ReduceMediaBitrateTranscodeResult getTranscodeTask() {
         return this.TranscodeTask;
     }
 
     /**
-     * Set 
-     * @param TranscodeTask 
+     * Set Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
+     * @param TranscodeTask Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
      */
     public void setTranscodeTask(ReduceMediaBitrateTranscodeResult TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get  
-     * @return AdaptiveDynamicStreamingTask 
+     * Get Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`. 
+     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
      */
     public ReduceMediaBitrateAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Set 
-     * @param AdaptiveDynamicStreamingTask 
+     * Set Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+     * @param AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
      */
     public void setAdaptiveDynamicStreamingTask(ReduceMediaBitrateAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;

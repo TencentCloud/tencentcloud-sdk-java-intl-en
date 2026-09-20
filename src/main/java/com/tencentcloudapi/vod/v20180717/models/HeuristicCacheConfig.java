@@ -33,7 +33,7 @@ public class HeuristicCacheConfig extends AbstractModel {
     private String HeuristicCacheTimeSwitch;
 
     /**
-    * 
+    * Unit: seconds.
     */
     @SerializedName("HeuristicCacheTime")
     @Expose
@@ -64,16 +64,16 @@ public class HeuristicCacheConfig extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return HeuristicCacheTime 
+     * Get Unit: seconds. 
+     * @return HeuristicCacheTime Unit: seconds.
      */
     public Long getHeuristicCacheTime() {
         return this.HeuristicCacheTime;
     }
 
     /**
-     * Set 
-     * @param HeuristicCacheTime 
+     * Set Unit: seconds.
+     * @param HeuristicCacheTime Unit: seconds.
      */
     public void setHeuristicCacheTime(Long HeuristicCacheTime) {
         this.HeuristicCacheTime = HeuristicCacheTime;

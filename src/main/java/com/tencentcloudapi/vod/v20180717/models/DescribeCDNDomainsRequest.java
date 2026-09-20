@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCDNDomainsRequest extends AbstractModel {
 
     /**
-    * 
+    * Domain name list. If this field is not specified, all domain information is listed by default.
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 
+    * Maximum number of results returned for pagination pull. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -45,39 +45,39 @@ public class DescribeCDNDomainsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Domains 
+     * Get Domain name list. If this field is not specified, all domain information is listed by default. 
+     * @return Domains Domain name list. If this field is not specified, all domain information is listed by default.
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 
-     * @param Domains 
+     * Set Domain name list. If this field is not specified, all domain information is listed by default.
+     * @param Domains Domain name list. If this field is not specified, all domain information is listed by default.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Maximum number of results returned for pagination pull. Default value: 20. 
+     * @return Limit Maximum number of results returned for pagination pull. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Maximum number of results returned for pagination pull. Default value: 20.
+     * @param Limit Maximum number of results returned for pagination pull. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -100,16 +100,16 @@ public class DescribeCDNDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

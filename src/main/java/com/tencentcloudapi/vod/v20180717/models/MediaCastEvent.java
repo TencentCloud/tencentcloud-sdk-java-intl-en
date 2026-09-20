@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class MediaCastEvent extends AbstractModel {
 
     /**
-    * 
+    * Media forwarding ID.
     */
     @SerializedName("CastId")
     @Expose
     private String CastId;
 
     /**
-    * 
+    * Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get  
-     * @return CastId 
+     * Get Media forwarding ID. 
+     * @return CastId Media forwarding ID.
      */
     public String getCastId() {
         return this.CastId;
     }
 
     /**
-     * Set 
-     * @param CastId 
+     * Set Media forwarding ID.
+     * @param CastId Media forwarding ID.
      */
     public void setCastId(String CastId) {
         this.CastId = CastId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li> 
+     * @return Status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
+     * @param Status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

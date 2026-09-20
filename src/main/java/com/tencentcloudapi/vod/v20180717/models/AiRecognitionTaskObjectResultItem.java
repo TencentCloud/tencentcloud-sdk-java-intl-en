@@ -24,45 +24,45 @@ import java.util.HashMap;
 public class AiRecognitionTaskObjectResultItem extends AbstractModel {
 
     /**
-    * 
+    * Name of a recognized object.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * List of segments that contain the object.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskObjectSeqmentItem [] SegmentSet;
 
     /**
-    * 
+    * List of segments that contain the object.
     */
     @SerializedName("RecognitionSegmentSet")
     @Expose
     private AiRecognitionTaskObjectSegmentItem [] RecognitionSegmentSet;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Name of a recognized object. 
+     * @return Name Name of a recognized object.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Name of a recognized object.
+     * @param Name Name of a recognized object.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get List of segments that contain the object. 
+     * @return SegmentSet List of segments that contain the object.
      * @deprecated
      */
     @Deprecated
@@ -71,8 +71,8 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set List of segments that contain the object.
+     * @param SegmentSet List of segments that contain the object.
      * @deprecated
      */
     @Deprecated
@@ -81,16 +81,16 @@ public class AiRecognitionTaskObjectResultItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RecognitionSegmentSet 
+     * Get List of segments that contain the object. 
+     * @return RecognitionSegmentSet List of segments that contain the object.
      */
     public AiRecognitionTaskObjectSegmentItem [] getRecognitionSegmentSet() {
         return this.RecognitionSegmentSet;
     }
 
     /**
-     * Set 
-     * @param RecognitionSegmentSet 
+     * Set List of segments that contain the object.
+     * @param RecognitionSegmentSet List of segments that contain the object.
      */
     public void setRecognitionSegmentSet(AiRecognitionTaskObjectSegmentItem [] RecognitionSegmentSet) {
         this.RecognitionSegmentSet = RecognitionSegmentSet;

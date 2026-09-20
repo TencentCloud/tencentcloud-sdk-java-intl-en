@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class QualityInspectLLMDetectionResultItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * 
+    * <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * 
+    * <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * 
+    * <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * <p>List of issues detected. This is empty if no issue is detected.</p>
     */
     @SerializedName("IssueSet")
     @Expose
     private QualityInspectLLMDetectionIssue [] IssueSet;
 
     /**
-     * Get  
-     * @return Category 
+     * Get <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul> 
+     * @return Category <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 
-     * @param Category 
+     * Set <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
+     * @param Category <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get  
-     * @return Group 
+     * Get <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul> 
+     * @return Group <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 
-     * @param Group 
+     * Set <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
+     * @param Group <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul> 
+     * @return Type <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
+     * @param Type <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Score 
+     * Get <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p> 
+     * @return Score <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set 
-     * @param Score 
+     * Set <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
+     * @param Score <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p> 
+     * @return Confidence <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
+     * @param Confidence <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return IssueSet 
+     * Get <p>List of issues detected. This is empty if no issue is detected.</p> 
+     * @return IssueSet <p>List of issues detected. This is empty if no issue is detected.</p>
      */
     public QualityInspectLLMDetectionIssue [] getIssueSet() {
         return this.IssueSet;
     }
 
     /**
-     * Set 
-     * @param IssueSet 
+     * Set <p>List of issues detected. This is empty if no issue is detected.</p>
+     * @param IssueSet <p>List of issues detected. This is empty if no issue is detected.</p>
      */
     public void setIssueSet(QualityInspectLLMDetectionIssue [] IssueSet) {
         this.IssueSet = IssueSet;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TerrorismConfigureInfo extends AbstractModel {
 
     /**
-    * 
+    * Task control parameter for image recognition involving unsafe information.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * 
+    * Task control parameter for text identification involving unsafe information.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get  
-     * @return ImgReviewInfo 
+     * Get Task control parameter for image recognition involving unsafe information. 
+     * @return ImgReviewInfo Task control parameter for image recognition involving unsafe information.
      */
     public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set 
-     * @param ImgReviewInfo 
+     * Set Task control parameter for image recognition involving unsafe information.
+     * @param ImgReviewInfo Task control parameter for image recognition involving unsafe information.
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get  
-     * @return OcrReviewInfo 
+     * Get Task control parameter for text identification involving unsafe information. 
+     * @return OcrReviewInfo Task control parameter for text identification involving unsafe information.
      */
     public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 
-     * @param OcrReviewInfo 
+     * Set Task control parameter for text identification involving unsafe information.
+     * @param OcrReviewInfo Task control parameter for text identification involving unsafe information.
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

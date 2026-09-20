@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class MediaVideoStreamItem extends AbstractModel {
 
     /**
-    * Bitrate of the video stream. Unit: bps.
+    * Bitrate of video stream, unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Video stream height in px.
+    * Video stream height. Unit: px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Video stream width in px.
+    * Video stream width. Unit: px.
     */
     @SerializedName("Width")
     @Expose
@@ -52,7 +52,7 @@ public class MediaVideoStreamItem extends AbstractModel {
     private String Codec;
 
     /**
-    * Frame rate. Measurement unit: hz.
+    * Frame rate. Unit: hz.
     */
     @SerializedName("Fps")
     @Expose
@@ -67,55 +67,55 @@ public class MediaVideoStreamItem extends AbstractModel {
 
     /**
     * Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
     */
     @SerializedName("DynamicRangeInfo")
     @Expose
     private DynamicRangeInfo DynamicRangeInfo;
 
     /**
-     * Get Bitrate of the video stream. Unit: bps. 
-     * @return Bitrate Bitrate of the video stream. Unit: bps.
+     * Get Bitrate of video stream, unit: bps. 
+     * @return Bitrate Bitrate of video stream, unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of the video stream. Unit: bps.
-     * @param Bitrate Bitrate of the video stream. Unit: bps.
+     * Set Bitrate of video stream, unit: bps.
+     * @param Bitrate Bitrate of video stream, unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Video stream height in px. 
-     * @return Height Video stream height in px.
+     * Get Video stream height. Unit: px. 
+     * @return Height Video stream height. Unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Video stream height in px.
-     * @param Height Video stream height in px.
+     * Set Video stream height. Unit: px.
+     * @param Height Video stream height. Unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Video stream width in px. 
-     * @return Width Video stream width in px.
+     * Get Video stream width. Unit: px. 
+     * @return Width Video stream width. Unit: px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Video stream width in px.
-     * @param Width Video stream width in px.
+     * Set Video stream width. Unit: px.
+     * @param Width Video stream width. Unit: px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -138,16 +138,16 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get Frame rate. Measurement unit: hz. 
-     * @return Fps Frame rate. Measurement unit: hz.
+     * Get Frame rate. Unit: hz. 
+     * @return Fps Frame rate. Unit: hz.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Frame rate. Measurement unit: hz.
-     * @param Fps Frame rate. Measurement unit: hz.
+     * Set Frame rate. Unit: hz.
+     * @param Fps Frame rate. Unit: hz.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
@@ -171,9 +171,9 @@ public class MediaVideoStreamItem extends AbstractModel {
 
     /**
      * Get Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li> 
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li> 
      * @return DynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public DynamicRangeInfo getDynamicRangeInfo() {
         return this.DynamicRangeInfo;
@@ -181,9 +181,9 @@ public class MediaVideoStreamItem extends AbstractModel {
 
     /**
      * Set Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      * @param DynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public void setDynamicRangeInfo(DynamicRangeInfo DynamicRangeInfo) {
         this.DynamicRangeInfo = DynamicRangeInfo;

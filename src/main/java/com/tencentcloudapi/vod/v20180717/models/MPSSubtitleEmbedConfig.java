@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class MPSSubtitleEmbedConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li>
     */
     @SerializedName("FontType")
     @Expose
     private String FontType;
 
     /**
-    * 
+    * <p>Custom font file url address</p>
     */
     @SerializedName("FontPath")
     @Expose
     private String FontPath;
 
     /**
-    * 
+    * <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p>
     */
     @SerializedName("FontSize")
     @Expose
     private Long FontSize;
 
     /**
-    * 
+    * <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
     */
     @SerializedName("FontSizeUnit")
     @Expose
     private Long FontSizeUnit;
 
     /**
-    * 
+    * <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p>
     */
     @SerializedName("FontColor")
     @Expose
     private String FontColor;
 
     /**
-    * 
+    * <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1.
     */
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
 
     /**
-    * 
+    * <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
     */
     @SerializedName("PosX")
     @Expose
     private Long PosX;
 
     /**
-    * 
+    * <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
     */
     @SerializedName("PosXUnit")
     @Expose
     private Long PosXUnit;
 
     /**
-    * 
+    * <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
     */
     @SerializedName("PosY")
     @Expose
     private Long PosY;
 
     /**
-    * 
+    * <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
     */
     @SerializedName("PosYUnit")
     @Expose
     private Long PosYUnit;
 
     /**
-    * 
+    * <p>Background configuration</p>
     */
     @SerializedName("SubtitleBoardConfig")
     @Expose
     private MPSSubtitleBoardConfig SubtitleBoardConfig;
 
     /**
-    * 
+    * <p>Column configuration</p>
     */
     @SerializedName("SubtitleLayoutConfig")
     @Expose
     private MPSSubtitleLayoutConfig SubtitleLayoutConfig;
 
     /**
-    * 
+    * <p>Text stroke configuration</p>
     */
     @SerializedName("SubtitleOutlineConfig")
     @Expose
     private MPSSubtitleOutlineConfig SubtitleOutlineConfig;
 
     /**
-    * 
+    * <p>Text shadow configuration</p>
     */
     @SerializedName("SubtitleShadowConfig")
     @Expose
     private MPSSubtitleShadowConfig SubtitleShadowConfig;
 
     /**
-    * 
+    * <p>Width of the source video dimensions, in pixels</p>
     */
     @SerializedName("SampleWidth")
     @Expose
     private Long SampleWidth;
 
     /**
-    * 
+    * <p>Height of the source video dimensions, in unit pixel</p>
     */
     @SerializedName("SampleHeight")
     @Expose
     private Long SampleHeight;
 
     /**
-     * Get  
-     * @return FontType 
+     * Get <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li> 
+     * @return FontType <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li>
      */
     public String getFontType() {
         return this.FontType;
     }
 
     /**
-     * Set 
-     * @param FontType 
+     * Set <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li>
+     * @param FontType <p>Font type, supports:</p><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li>Default: hei.ttf Heiti.<br>Note:<li>KaiTi is recommended for use with kai.ttf</li><li>FontPath takes precedence when filled</li>
      */
     public void setFontType(String FontType) {
         this.FontType = FontType;
     }
 
     /**
-     * Get  
-     * @return FontPath 
+     * Get <p>Custom font file url address</p> 
+     * @return FontPath <p>Custom font file url address</p>
      */
     public String getFontPath() {
         return this.FontPath;
     }
 
     /**
-     * Set 
-     * @param FontPath 
+     * Set <p>Custom font file url address</p>
+     * @param FontPath <p>Custom font file url address</p>
      */
     public void setFontPath(String FontPath) {
         this.FontPath = FontPath;
     }
 
     /**
-     * Get  
-     * @return FontSize 
+     * Get <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p> 
+     * @return FontSize <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p>
      */
     public Long getFontSize() {
         return this.FontSize;
     }
 
     /**
-     * Set 
-     * @param FontSize 
+     * Set <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p>
+     * @param FontSize <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height.</li></ul><p>If left blank and the subtitle file has no settings, the default is 5% of the source video height.</p>
      */
     public void setFontSize(Long FontSize) {
         this.FontSize = FontSize;
     }
 
     /**
-     * Get  
-     * @return FontSizeUnit 
+     * Get <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p> 
+     * @return FontSizeUnit <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public Long getFontSizeUnit() {
         return this.FontSizeUnit;
     }
 
     /**
-     * Set 
-     * @param FontSizeUnit 
+     * Set <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param FontSizeUnit <p>FontSize unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public void setFontSizeUnit(Long FontSizeUnit) {
         this.FontSizeUnit = FontSizeUnit;
     }
 
     /**
-     * Get  
-     * @return FontColor 
+     * Get <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p> 
+     * @return FontColor <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p>
      */
     public String getFontColor() {
         return this.FontColor;
     }
 
     /**
-     * Set 
-     * @param FontColor 
+     * Set <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p>
+     * @param FontColor <p>Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).</p>
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;
     }
 
     /**
-     * Get  
-     * @return FontAlpha 
+     * Get <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1. 
+     * @return FontAlpha <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1.
      */
     public Float getFontAlpha() {
         return this.FontAlpha;
     }
 
     /**
-     * Set 
-     * @param FontAlpha 
+     * Set <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1.
+     * @param FontAlpha <p>Text opacity, value ranges from 0 to 1.</p><li>0: completely transparent</li><li>1: completely opaque</li>Default value: 1.
      */
     public void setFontAlpha(Float FontAlpha) {
         this.FontAlpha = FontAlpha;
     }
 
     /**
-     * Get  
-     * @return PosX 
+     * Get <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p> 
+     * @return PosX <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
      */
     public Long getPosX() {
         return this.PosX;
     }
 
     /**
-     * Set 
-     * @param PosX 
+     * Set <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+     * @param PosX <p>The X-coordinate position of subtitles. Specifying this parameter will ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [-4096, 4096].</li><li>Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle equals 10% of the source video width.</li></ul><p>Default value: 0px.<br>Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
      */
     public void setPosX(Long PosX) {
         this.PosX = PosX;
     }
 
     /**
-     * Get  
-     * @return PosXUnit 
+     * Get <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p> 
+     * @return PosXUnit <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public Long getPosXUnit() {
         return this.PosXUnit;
     }
 
     /**
-     * Set 
-     * @param PosXUnit 
+     * Set <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param PosXUnit <p>PosX unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public void setPosXUnit(Long PosXUnit) {
         this.PosXUnit = PosXUnit;
     }
 
     /**
-     * Get  
-     * @return PosY 
+     * Get <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p> 
+     * @return PosY <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
      */
     public Long getPosY() {
         return this.PosY;
     }
 
     /**
-     * Set 
-     * @param PosY 
+     * Set <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+     * @param PosY <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% * source video height.</li></ul><p>Default value: source video height * 4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<br><img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
      */
     public void setPosY(Long PosY) {
         this.PosY = PosY;
     }
 
     /**
-     * Get  
-     * @return PosYUnit 
+     * Get <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p> 
+     * @return PosYUnit <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public Long getPosYUnit() {
         return this.PosYUnit;
     }
 
     /**
-     * Set 
-     * @param PosYUnit 
+     * Set <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param PosYUnit <p>PosY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public void setPosYUnit(Long PosYUnit) {
         this.PosYUnit = PosYUnit;
     }
 
     /**
-     * Get  
-     * @return SubtitleBoardConfig 
+     * Get <p>Background configuration</p> 
+     * @return SubtitleBoardConfig <p>Background configuration</p>
      */
     public MPSSubtitleBoardConfig getSubtitleBoardConfig() {
         return this.SubtitleBoardConfig;
     }
 
     /**
-     * Set 
-     * @param SubtitleBoardConfig 
+     * Set <p>Background configuration</p>
+     * @param SubtitleBoardConfig <p>Background configuration</p>
      */
     public void setSubtitleBoardConfig(MPSSubtitleBoardConfig SubtitleBoardConfig) {
         this.SubtitleBoardConfig = SubtitleBoardConfig;
     }
 
     /**
-     * Get  
-     * @return SubtitleLayoutConfig 
+     * Get <p>Column configuration</p> 
+     * @return SubtitleLayoutConfig <p>Column configuration</p>
      */
     public MPSSubtitleLayoutConfig getSubtitleLayoutConfig() {
         return this.SubtitleLayoutConfig;
     }
 
     /**
-     * Set 
-     * @param SubtitleLayoutConfig 
+     * Set <p>Column configuration</p>
+     * @param SubtitleLayoutConfig <p>Column configuration</p>
      */
     public void setSubtitleLayoutConfig(MPSSubtitleLayoutConfig SubtitleLayoutConfig) {
         this.SubtitleLayoutConfig = SubtitleLayoutConfig;
     }
 
     /**
-     * Get  
-     * @return SubtitleOutlineConfig 
+     * Get <p>Text stroke configuration</p> 
+     * @return SubtitleOutlineConfig <p>Text stroke configuration</p>
      */
     public MPSSubtitleOutlineConfig getSubtitleOutlineConfig() {
         return this.SubtitleOutlineConfig;
     }
 
     /**
-     * Set 
-     * @param SubtitleOutlineConfig 
+     * Set <p>Text stroke configuration</p>
+     * @param SubtitleOutlineConfig <p>Text stroke configuration</p>
      */
     public void setSubtitleOutlineConfig(MPSSubtitleOutlineConfig SubtitleOutlineConfig) {
         this.SubtitleOutlineConfig = SubtitleOutlineConfig;
     }
 
     /**
-     * Get  
-     * @return SubtitleShadowConfig 
+     * Get <p>Text shadow configuration</p> 
+     * @return SubtitleShadowConfig <p>Text shadow configuration</p>
      */
     public MPSSubtitleShadowConfig getSubtitleShadowConfig() {
         return this.SubtitleShadowConfig;
     }
 
     /**
-     * Set 
-     * @param SubtitleShadowConfig 
+     * Set <p>Text shadow configuration</p>
+     * @param SubtitleShadowConfig <p>Text shadow configuration</p>
      */
     public void setSubtitleShadowConfig(MPSSubtitleShadowConfig SubtitleShadowConfig) {
         this.SubtitleShadowConfig = SubtitleShadowConfig;
     }
 
     /**
-     * Get  
-     * @return SampleWidth 
+     * Get <p>Width of the source video dimensions, in pixels</p> 
+     * @return SampleWidth <p>Width of the source video dimensions, in pixels</p>
      */
     public Long getSampleWidth() {
         return this.SampleWidth;
     }
 
     /**
-     * Set 
-     * @param SampleWidth 
+     * Set <p>Width of the source video dimensions, in pixels</p>
+     * @param SampleWidth <p>Width of the source video dimensions, in pixels</p>
      */
     public void setSampleWidth(Long SampleWidth) {
         this.SampleWidth = SampleWidth;
     }
 
     /**
-     * Get  
-     * @return SampleHeight 
+     * Get <p>Height of the source video dimensions, in unit pixel</p> 
+     * @return SampleHeight <p>Height of the source video dimensions, in unit pixel</p>
      */
     public Long getSampleHeight() {
         return this.SampleHeight;
     }
 
     /**
-     * Set 
-     * @param SampleHeight 
+     * Set <p>Height of the source video dimensions, in unit pixel</p>
+     * @param SampleHeight <p>Height of the source video dimensions, in unit pixel</p>
      */
     public void setSampleHeight(Long SampleHeight) {
         this.SampleHeight = SampleHeight;

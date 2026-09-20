@@ -24,69 +24,104 @@ import java.util.HashMap;
 public class PornImageResult extends AbstractModel {
 
     /**
-    * 
+    * Score of authentication involving offensive content. Value range: 0–100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Score of authentication involving offensive content. Value range: 0–100. 
+     * @return Confidence Score of authentication involving offensive content. Value range: 0–100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Score of authentication involving offensive content. Value range: 0–100.
+     * @param Confidence Score of authentication involving offensive content. Value range: 0–100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li> 
+     * @return Suggestion Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+     * @param Suggestion Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return Label 
+     * Get Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li> 
+     * @return Label Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
+     * @param Label Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

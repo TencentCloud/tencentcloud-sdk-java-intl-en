@@ -38,42 +38,42 @@ public class HMTPermit extends AbstractModel {
     private String EnglishName;
 
     /**
-    * License number
+    * ID number
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-    * Gender
+    * Sex
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Valid date
+    * Validity period.
     */
     @SerializedName("ValidDate")
     @Expose
     private String ValidDate;
 
     /**
-    * Issued authority
+    * Issuing authority
     */
     @SerializedName("IssueAuthority")
     @Expose
     private String IssueAuthority;
 
     /**
-    * Issued address
+    * Issuing place
     */
     @SerializedName("IssueAddress")
     @Expose
     private String IssueAddress;
 
     /**
-    * Birthday
+    * Date of birth
     */
     @SerializedName("Birthday")
     @Expose
@@ -112,96 +112,96 @@ public class HMTPermit extends AbstractModel {
     }
 
     /**
-     * Get License number 
-     * @return Number License number
+     * Get ID number 
+     * @return Number ID number
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set License number
-     * @param Number License number
+     * Set ID number
+     * @param Number ID number
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get Gender 
-     * @return Sex Gender
+     * Get Sex 
+     * @return Sex Sex
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender
-     * @param Sex Gender
+     * Set Sex
+     * @param Sex Sex
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Valid date 
-     * @return ValidDate Valid date
+     * Get Validity period. 
+     * @return ValidDate Validity period.
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * Set Valid date
-     * @param ValidDate Valid date
+     * Set Validity period.
+     * @param ValidDate Validity period.
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;
     }
 
     /**
-     * Get Issued authority 
-     * @return IssueAuthority Issued authority
+     * Get Issuing authority 
+     * @return IssueAuthority Issuing authority
      */
     public String getIssueAuthority() {
         return this.IssueAuthority;
     }
 
     /**
-     * Set Issued authority
-     * @param IssueAuthority Issued authority
+     * Set Issuing authority
+     * @param IssueAuthority Issuing authority
      */
     public void setIssueAuthority(String IssueAuthority) {
         this.IssueAuthority = IssueAuthority;
     }
 
     /**
-     * Get Issued address 
-     * @return IssueAddress Issued address
+     * Get Issuing place 
+     * @return IssueAddress Issuing place
      */
     public String getIssueAddress() {
         return this.IssueAddress;
     }
 
     /**
-     * Set Issued address
-     * @param IssueAddress Issued address
+     * Set Issuing place
+     * @param IssueAddress Issuing place
      */
     public void setIssueAddress(String IssueAddress) {
         this.IssueAddress = IssueAddress;
     }
 
     /**
-     * Get Birthday 
-     * @return Birthday Birthday
+     * Get Date of birth 
+     * @return Birthday Date of birth
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birthday
-     * @param Birthday Birthday
+     * Set Date of birth
+     * @param Birthday Date of birth
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;

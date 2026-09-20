@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaAudioStreamItem extends AbstractModel {
 
     /**
-    * <p>Audio stream bitrate, in bps.</p>
+    * <p>Audio stream bitrate, unit: bps.</p>
     */
     @SerializedName("Bitrate")
     @Expose
@@ -45,16 +45,16 @@ public class MediaAudioStreamItem extends AbstractModel {
     private String Codec;
 
     /**
-     * Get <p>Audio stream bitrate, in bps.</p> 
-     * @return Bitrate <p>Audio stream bitrate, in bps.</p>
+     * Get <p>Audio stream bitrate, unit: bps.</p> 
+     * @return Bitrate <p>Audio stream bitrate, unit: bps.</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set <p>Audio stream bitrate, in bps.</p>
-     * @param Bitrate <p>Audio stream bitrate, in bps.</p>
+     * Set <p>Audio stream bitrate, unit: bps.</p>
+     * @param Bitrate <p>Audio stream bitrate, unit: bps.</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

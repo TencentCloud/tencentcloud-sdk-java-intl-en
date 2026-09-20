@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCDNDomainsResponse extends AbstractModel {
 
     /**
-    * 
+    * List of domain names.
     */
     @SerializedName("DomainSet")
     @Expose
     private CDNDomainInfo [] DomainSet;
 
     /**
-    * 
+    * Total number of CDN domains under this application.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCDNDomainsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return DomainSet 
+     * Get List of domain names. 
+     * @return DomainSet List of domain names.
      */
     public CDNDomainInfo [] getDomainSet() {
         return this.DomainSet;
     }
 
     /**
-     * Set 
-     * @param DomainSet 
+     * Set List of domain names.
+     * @param DomainSet List of domain names.
      */
     public void setDomainSet(CDNDomainInfo [] DomainSet) {
         this.DomainSet = DomainSet;
     }
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of CDN domains under this application. 
+     * @return TotalCount Total number of CDN domains under this application.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of CDN domains under this application.
+     * @param TotalCount Total number of CDN domains under this application.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

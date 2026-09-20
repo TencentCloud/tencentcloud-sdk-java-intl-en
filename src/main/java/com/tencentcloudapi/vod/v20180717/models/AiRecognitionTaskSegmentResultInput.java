@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskSegmentResultInput extends AbstractModel {
 
     /**
-    * 
+    * Video splitting template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Video splitting template ID. 
+     * @return Definition Video splitting template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Video splitting template ID.
+     * @param Definition Video splitting template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

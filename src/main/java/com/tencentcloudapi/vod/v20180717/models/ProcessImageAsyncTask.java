@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ProcessImageAsyncTask extends AbstractModel {
 
     /**
-    * 
+    * <p>Image transcoding output configuration.</p>
     */
     @SerializedName("EncodeConfig")
     @Expose
     private ImageEncodeConfig EncodeConfig;
 
     /**
-    * 
+    * <p>Image enhancement configuration.</p>
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private ImageEnhanceConfig EnhanceConfig;
 
     /**
-    * 
+    * <p>Image beauty effect configuration.</p>
     */
     @SerializedName("BeautyConfig")
     @Expose
     private ImageBeautyConfig BeautyConfig;
 
     /**
-    * 
+    * <p>Ai cutout configuration</p>
     */
     @SerializedName("AiCutOutConfig")
     @Expose
     private AiCutOutConfig AiCutOutConfig;
 
     /**
-     * Get  
-     * @return EncodeConfig 
+     * Get <p>Image transcoding output configuration.</p> 
+     * @return EncodeConfig <p>Image transcoding output configuration.</p>
      */
     public ImageEncodeConfig getEncodeConfig() {
         return this.EncodeConfig;
     }
 
     /**
-     * Set 
-     * @param EncodeConfig 
+     * Set <p>Image transcoding output configuration.</p>
+     * @param EncodeConfig <p>Image transcoding output configuration.</p>
      */
     public void setEncodeConfig(ImageEncodeConfig EncodeConfig) {
         this.EncodeConfig = EncodeConfig;
     }
 
     /**
-     * Get  
-     * @return EnhanceConfig 
+     * Get <p>Image enhancement configuration.</p> 
+     * @return EnhanceConfig <p>Image enhancement configuration.</p>
      */
     public ImageEnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set 
-     * @param EnhanceConfig 
+     * Set <p>Image enhancement configuration.</p>
+     * @param EnhanceConfig <p>Image enhancement configuration.</p>
      */
     public void setEnhanceConfig(ImageEnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get  
-     * @return BeautyConfig 
+     * Get <p>Image beauty effect configuration.</p> 
+     * @return BeautyConfig <p>Image beauty effect configuration.</p>
      */
     public ImageBeautyConfig getBeautyConfig() {
         return this.BeautyConfig;
     }
 
     /**
-     * Set 
-     * @param BeautyConfig 
+     * Set <p>Image beauty effect configuration.</p>
+     * @param BeautyConfig <p>Image beauty effect configuration.</p>
      */
     public void setBeautyConfig(ImageBeautyConfig BeautyConfig) {
         this.BeautyConfig = BeautyConfig;
     }
 
     /**
-     * Get  
-     * @return AiCutOutConfig 
+     * Get <p>Ai cutout configuration</p> 
+     * @return AiCutOutConfig <p>Ai cutout configuration</p>
      */
     public AiCutOutConfig getAiCutOutConfig() {
         return this.AiCutOutConfig;
     }
 
     /**
-     * Set 
-     * @param AiCutOutConfig 
+     * Set <p>Ai cutout configuration</p>
+     * @param AiCutOutConfig <p>Ai cutout configuration</p>
      */
     public void setAiCutOutConfig(AiCutOutConfig AiCutOutConfig) {
         this.AiCutOutConfig = AiCutOutConfig;

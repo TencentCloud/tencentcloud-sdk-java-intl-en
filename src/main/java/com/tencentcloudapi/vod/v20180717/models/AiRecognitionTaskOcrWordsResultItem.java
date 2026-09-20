@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrWordsResultItem extends AbstractModel {
 
     /**
-    * 
+    * Text keyword.
     */
     @SerializedName("Word")
     @Expose
     private String Word;
 
     /**
-    * 
+    * List of segments where the text key appears.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskOcrWordsSegmentItem [] SegmentSet;
 
     /**
-     * Get  
-     * @return Word 
+     * Get Text keyword. 
+     * @return Word Text keyword.
      */
     public String getWord() {
         return this.Word;
     }
 
     /**
-     * Set 
-     * @param Word 
+     * Set Text keyword.
+     * @param Word Text keyword.
      */
     public void setWord(String Word) {
         this.Word = Word;
     }
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get List of segments where the text key appears. 
+     * @return SegmentSet List of segments where the text key appears.
      */
     public AiRecognitionTaskOcrWordsSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set List of segments where the text key appears.
+     * @param SegmentSet List of segments where the text key appears.
      */
     public void setSegmentSet(AiRecognitionTaskOcrWordsSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

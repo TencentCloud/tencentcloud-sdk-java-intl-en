@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class TextToSpeechAsyncOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>URL of the synthetic audio result</p>
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-    * 
+    * <p>Used voice ID.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Extended information.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-    * 
+    * <p>FileId of the synthetic audio result</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get  
-     * @return AudioUrl 
+     * Get <p>URL of the synthetic audio result</p> 
+     * @return AudioUrl <p>URL of the synthetic audio result</p>
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 
-     * @param AudioUrl 
+     * Set <p>URL of the synthetic audio result</p>
+     * @param AudioUrl <p>URL of the synthetic audio result</p>
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Used voice ID.</p> 
+     * @return VoiceId <p>Used voice ID.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Used voice ID.</p>
+     * @param VoiceId <p>Used voice ID.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Extended information.</p> 
+     * @return ExtInfo <p>Extended information.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Extended information.</p>
+     * @param ExtInfo <p>Extended information.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>FileId of the synthetic audio result</p> 
+     * @return FileId <p>FileId of the synthetic audio result</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>FileId of the synthetic audio result</p>
+     * @param FileId <p>FileId of the synthetic audio result</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

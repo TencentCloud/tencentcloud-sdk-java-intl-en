@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MPSEraseTimeArea extends AbstractModel {
 
     /**
-    * 
+    * <p>Start time, unit: ms</p>
     */
     @SerializedName("BeginMs")
     @Expose
     private Long BeginMs;
 
     /**
-    * 
+    * <p>End time, unit: ms</p>
     */
     @SerializedName("EndMs")
     @Expose
     private Long EndMs;
 
     /**
-    * 
+    * <p>List of regions removed during the period</p>
     */
     @SerializedName("Areas")
     @Expose
     private MPSEraseArea [] Areas;
 
     /**
-     * Get  
-     * @return BeginMs 
+     * Get <p>Start time, unit: ms</p> 
+     * @return BeginMs <p>Start time, unit: ms</p>
      */
     public Long getBeginMs() {
         return this.BeginMs;
     }
 
     /**
-     * Set 
-     * @param BeginMs 
+     * Set <p>Start time, unit: ms</p>
+     * @param BeginMs <p>Start time, unit: ms</p>
      */
     public void setBeginMs(Long BeginMs) {
         this.BeginMs = BeginMs;
     }
 
     /**
-     * Get  
-     * @return EndMs 
+     * Get <p>End time, unit: ms</p> 
+     * @return EndMs <p>End time, unit: ms</p>
      */
     public Long getEndMs() {
         return this.EndMs;
     }
 
     /**
-     * Set 
-     * @param EndMs 
+     * Set <p>End time, unit: ms</p>
+     * @param EndMs <p>End time, unit: ms</p>
      */
     public void setEndMs(Long EndMs) {
         this.EndMs = EndMs;
     }
 
     /**
-     * Get  
-     * @return Areas 
+     * Get <p>List of regions removed during the period</p> 
+     * @return Areas <p>List of regions removed during the period</p>
      */
     public MPSEraseArea [] getAreas() {
         return this.Areas;
     }
 
     /**
-     * Set 
-     * @param Areas 
+     * Set <p>List of regions removed during the period</p>
+     * @param Areas <p>List of regions removed during the period</p>
      */
     public void setAreas(MPSEraseArea [] Areas) {
         this.Areas = Areas;

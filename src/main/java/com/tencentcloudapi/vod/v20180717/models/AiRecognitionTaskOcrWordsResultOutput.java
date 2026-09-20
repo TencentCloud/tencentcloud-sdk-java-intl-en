@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel {
 
     /**
-    * 
+    * Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
     */
     @SerializedName("ResultSet")
     @Expose
     private AiRecognitionTaskOcrWordsResultItem [] ResultSet;
 
     /**
-    * 
+    * URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
     */
     @SerializedName("ResultSetFileUrl")
     @Expose
     private String ResultSetFileUrl;
 
     /**
-    * 
+    * Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ResultSetFileUrlExpireTime")
     @Expose
     private String ResultSetFileUrlExpireTime;
 
     /**
-     * Get  
-     * @return ResultSet 
+     * Get Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl. 
+     * @return ResultSet Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
      */
     public AiRecognitionTaskOcrWordsResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set 
-     * @param ResultSet 
+     * Set Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
+     * @param ResultSet Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
      */
     public void setResultSet(AiRecognitionTaskOcrWordsResultItem [] ResultSet) {
         this.ResultSet = ResultSet;
     }
 
     /**
-     * Get  
-     * @return ResultSetFileUrl 
+     * Get URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.) 
+     * @return ResultSetFileUrl URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
      */
     public String getResultSetFileUrl() {
         return this.ResultSetFileUrl;
     }
 
     /**
-     * Set 
-     * @param ResultSetFileUrl 
+     * Set URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
+     * @param ResultSetFileUrl URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
      */
     public void setResultSetFileUrl(String ResultSetFileUrl) {
         this.ResultSetFileUrl = ResultSetFileUrl;
     }
 
     /**
-     * Get  
-     * @return ResultSetFileUrlExpireTime 
+     * Get Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ResultSetFileUrlExpireTime Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getResultSetFileUrlExpireTime() {
         return this.ResultSetFileUrlExpireTime;
     }
 
     /**
-     * Set 
-     * @param ResultSetFileUrlExpireTime 
+     * Set Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ResultSetFileUrlExpireTime Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setResultSetFileUrlExpireTime(String ResultSetFileUrlExpireTime) {
         this.ResultSetFileUrlExpireTime = ResultSetFileUrlExpireTime;

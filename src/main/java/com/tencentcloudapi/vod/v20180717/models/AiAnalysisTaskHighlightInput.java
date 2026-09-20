@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskHighlightInput extends AbstractModel {
 
     /**
-    * 
+    * Intelligent highlight template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Intelligent highlight template ID. 
+     * @return Definition Intelligent highlight template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Intelligent highlight template ID.
+     * @param Definition Intelligent highlight template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

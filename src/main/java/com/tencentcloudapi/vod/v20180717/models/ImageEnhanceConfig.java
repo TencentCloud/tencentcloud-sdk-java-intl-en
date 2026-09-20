@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ImageEnhanceConfig extends AbstractModel {
 
     /**
-    * 
+    * Super-resolution configuration.
     */
     @SerializedName("SuperResolution")
     @Expose
     private SuperResolutionInfo SuperResolution;
 
     /**
-    * 
+    * Advanced super-resolution configuration.
     */
     @SerializedName("AdvancedSuperResolution")
     @Expose
     private AdvancedSuperResolutionConfig AdvancedSuperResolution;
 
     /**
-    * 
+    * Denoising configuration.
     */
     @SerializedName("Denoise")
     @Expose
     private ImageDenoiseConfig Denoise;
 
     /**
-    * 
+    * Comprehensive enhancement configuration.
     */
     @SerializedName("ImageQualityEnhance")
     @Expose
     private ImageQualityEnhanceInfo ImageQualityEnhance;
 
     /**
-    * 
+    * Color enhancement configuration.
     */
     @SerializedName("ColorEnhance")
     @Expose
     private ColorEnhanceInfo ColorEnhance;
 
     /**
-    * 
+    * Detail enhancement configuration.
     */
     @SerializedName("SharpEnhance")
     @Expose
     private SharpEnhanceInfo SharpEnhance;
 
     /**
-    * 
+    * Face enhancement configuration.
     */
     @SerializedName("FaceEnhance")
     @Expose
     private FaceEnhanceInfo FaceEnhance;
 
     /**
-    * 
+    * Low-light enhancement configuration.
     */
     @SerializedName("LowLightEnhance")
     @Expose
     private LowLightEnhanceInfo LowLightEnhance;
 
     /**
-     * Get  
-     * @return SuperResolution 
+     * Get Super-resolution configuration. 
+     * @return SuperResolution Super-resolution configuration.
      */
     public SuperResolutionInfo getSuperResolution() {
         return this.SuperResolution;
     }
 
     /**
-     * Set 
-     * @param SuperResolution 
+     * Set Super-resolution configuration.
+     * @param SuperResolution Super-resolution configuration.
      */
     public void setSuperResolution(SuperResolutionInfo SuperResolution) {
         this.SuperResolution = SuperResolution;
     }
 
     /**
-     * Get  
-     * @return AdvancedSuperResolution 
+     * Get Advanced super-resolution configuration. 
+     * @return AdvancedSuperResolution Advanced super-resolution configuration.
      */
     public AdvancedSuperResolutionConfig getAdvancedSuperResolution() {
         return this.AdvancedSuperResolution;
     }
 
     /**
-     * Set 
-     * @param AdvancedSuperResolution 
+     * Set Advanced super-resolution configuration.
+     * @param AdvancedSuperResolution Advanced super-resolution configuration.
      */
     public void setAdvancedSuperResolution(AdvancedSuperResolutionConfig AdvancedSuperResolution) {
         this.AdvancedSuperResolution = AdvancedSuperResolution;
     }
 
     /**
-     * Get  
-     * @return Denoise 
+     * Get Denoising configuration. 
+     * @return Denoise Denoising configuration.
      */
     public ImageDenoiseConfig getDenoise() {
         return this.Denoise;
     }
 
     /**
-     * Set 
-     * @param Denoise 
+     * Set Denoising configuration.
+     * @param Denoise Denoising configuration.
      */
     public void setDenoise(ImageDenoiseConfig Denoise) {
         this.Denoise = Denoise;
     }
 
     /**
-     * Get  
-     * @return ImageQualityEnhance 
+     * Get Comprehensive enhancement configuration. 
+     * @return ImageQualityEnhance Comprehensive enhancement configuration.
      */
     public ImageQualityEnhanceInfo getImageQualityEnhance() {
         return this.ImageQualityEnhance;
     }
 
     /**
-     * Set 
-     * @param ImageQualityEnhance 
+     * Set Comprehensive enhancement configuration.
+     * @param ImageQualityEnhance Comprehensive enhancement configuration.
      */
     public void setImageQualityEnhance(ImageQualityEnhanceInfo ImageQualityEnhance) {
         this.ImageQualityEnhance = ImageQualityEnhance;
     }
 
     /**
-     * Get  
-     * @return ColorEnhance 
+     * Get Color enhancement configuration. 
+     * @return ColorEnhance Color enhancement configuration.
      */
     public ColorEnhanceInfo getColorEnhance() {
         return this.ColorEnhance;
     }
 
     /**
-     * Set 
-     * @param ColorEnhance 
+     * Set Color enhancement configuration.
+     * @param ColorEnhance Color enhancement configuration.
      */
     public void setColorEnhance(ColorEnhanceInfo ColorEnhance) {
         this.ColorEnhance = ColorEnhance;
     }
 
     /**
-     * Get  
-     * @return SharpEnhance 
+     * Get Detail enhancement configuration. 
+     * @return SharpEnhance Detail enhancement configuration.
      */
     public SharpEnhanceInfo getSharpEnhance() {
         return this.SharpEnhance;
     }
 
     /**
-     * Set 
-     * @param SharpEnhance 
+     * Set Detail enhancement configuration.
+     * @param SharpEnhance Detail enhancement configuration.
      */
     public void setSharpEnhance(SharpEnhanceInfo SharpEnhance) {
         this.SharpEnhance = SharpEnhance;
     }
 
     /**
-     * Get  
-     * @return FaceEnhance 
+     * Get Face enhancement configuration. 
+     * @return FaceEnhance Face enhancement configuration.
      */
     public FaceEnhanceInfo getFaceEnhance() {
         return this.FaceEnhance;
     }
 
     /**
-     * Set 
-     * @param FaceEnhance 
+     * Set Face enhancement configuration.
+     * @param FaceEnhance Face enhancement configuration.
      */
     public void setFaceEnhance(FaceEnhanceInfo FaceEnhance) {
         this.FaceEnhance = FaceEnhance;
     }
 
     /**
-     * Get  
-     * @return LowLightEnhance 
+     * Get Low-light enhancement configuration. 
+     * @return LowLightEnhance Low-light enhancement configuration.
      */
     public LowLightEnhanceInfo getLowLightEnhance() {
         return this.LowLightEnhance;
     }
 
     /**
-     * Set 
-     * @param LowLightEnhance 
+     * Set Low-light enhancement configuration.
+     * @param LowLightEnhance Low-light enhancement configuration.
      */
     public void setLowLightEnhance(LowLightEnhanceInfo LowLightEnhance) {
         this.LowLightEnhance = LowLightEnhance;

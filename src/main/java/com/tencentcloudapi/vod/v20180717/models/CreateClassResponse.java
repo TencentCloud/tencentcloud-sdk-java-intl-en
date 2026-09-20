@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClassResponse extends AbstractModel {
 
     /**
-    * 
+    * Category ID
     */
     @SerializedName("ClassId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateClassResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return ClassId 
+     * Get Category ID 
+     * @return ClassId Category ID
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 
-     * @param ClassId 
+     * Set Category ID
+     * @param ClassId Category ID
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;

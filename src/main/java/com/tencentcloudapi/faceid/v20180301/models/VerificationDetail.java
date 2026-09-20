@@ -24,365 +24,315 @@ import java.util.HashMap;
 public class VerificationDetail extends AbstractModel {
 
     /**
-    * The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Final result description of this verification
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
 
     /**
-    * The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Liveness detection result of this verification. 0 indicates success.
     */
     @SerializedName("LivenessErrorCode")
     @Expose
     private Long LivenessErrorCode;
 
     /**
-    * The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Description of the liveness detection result for this verification
     */
     @SerializedName("LivenessErrorMsg")
     @Expose
     private String LivenessErrorMsg;
 
     /**
-    * The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
     */
     @SerializedName("CompareErrorCode")
     @Expose
     private Long CompareErrorCode;
 
     /**
-    * The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Result description of this verification comparison
     */
     @SerializedName("CompareErrorMsg")
     @Expose
     private String CompareErrorMsg;
 
     /**
-    * The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Verification timestamp (ms) this time
     */
     @SerializedName("ReqTimestamp")
     @Expose
     private Long ReqTimestamp;
 
     /**
-    * The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
     */
     @SerializedName("Similarity")
     @Expose
     private Float Similarity;
 
     /**
-    * Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unique identifier for this verification
     */
     @SerializedName("Seq")
     @Expose
     private String Seq;
 
     /**
-    * Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+    * Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LivenessInfoTag")
     @Expose
     private String [] LivenessInfoTag;
 
     /**
-     * Get The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person. 
+     * @return ErrorCode Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
+     * @param ErrorCode Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Final result description of this verification 
+     * @return ErrorMsg Final result description of this verification
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Final result description of this verification
+     * @param ErrorMsg Final result description of this verification
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LivenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Liveness detection result of this verification. 0 indicates success. 
+     * @return LivenessErrorCode Liveness detection result of this verification. 0 indicates success.
      */
     public Long getLivenessErrorCode() {
         return this.LivenessErrorCode;
     }
 
     /**
-     * Set The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LivenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Liveness detection result of this verification. 0 indicates success.
+     * @param LivenessErrorCode Liveness detection result of this verification. 0 indicates success.
      */
     public void setLivenessErrorCode(Long LivenessErrorCode) {
         this.LivenessErrorCode = LivenessErrorCode;
     }
 
     /**
-     * Get The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LivenessErrorMsg The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Description of the liveness detection result for this verification 
+     * @return LivenessErrorMsg Description of the liveness detection result for this verification
      */
     public String getLivenessErrorMsg() {
         return this.LivenessErrorMsg;
     }
 
     /**
-     * Set The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LivenessErrorMsg The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Description of the liveness detection result for this verification
+     * @param LivenessErrorMsg Description of the liveness detection result for this verification
      */
     public void setLivenessErrorMsg(String LivenessErrorMsg) {
         this.LivenessErrorMsg = LivenessErrorMsg;
     }
 
     /**
-     * Get The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person. 
+     * @return CompareErrorCode Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
      */
     public Long getCompareErrorCode() {
         return this.CompareErrorCode;
     }
 
     /**
-     * Set The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
+     * @param CompareErrorCode Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
      */
     public void setCompareErrorCode(Long CompareErrorCode) {
         this.CompareErrorCode = CompareErrorCode;
     }
 
     /**
-     * Get The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CompareErrorMsg The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Result description of this verification comparison 
+     * @return CompareErrorMsg Result description of this verification comparison
      */
     public String getCompareErrorMsg() {
         return this.CompareErrorMsg;
     }
 
     /**
-     * Set The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CompareErrorMsg The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Result description of this verification comparison
+     * @param CompareErrorMsg Result description of this verification comparison
      */
     public void setCompareErrorMsg(String CompareErrorMsg) {
         this.CompareErrorMsg = CompareErrorMsg;
     }
 
     /**
-     * Get The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReqTimestamp The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Verification timestamp (ms) this time 
+     * @return ReqTimestamp Verification timestamp (ms) this time
      */
     public Long getReqTimestamp() {
         return this.ReqTimestamp;
     }
 
     /**
-     * Set The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReqTimestamp The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Verification timestamp (ms) this time
+     * @param ReqTimestamp Verification timestamp (ms) this time
      */
     public void setReqTimestamp(Long ReqTimestamp) {
         this.ReqTimestamp = ReqTimestamp;
     }
 
     /**
-     * Get The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70. 
+     * @return Similarity Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
      */
     public Float getSimilarity() {
         return this.Similarity;
     }
 
     /**
-     * Set The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
+     * @param Similarity Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
      */
     public void setSimilarity(Float Similarity) {
         this.Similarity = Similarity;
     }
 
     /**
-     * Get Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Seq Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unique identifier for this verification 
+     * @return Seq Unique identifier for this verification
      */
     public String getSeq() {
         return this.Seq;
     }
 
     /**
-     * Set Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Seq Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unique identifier for this verification
+     * @param Seq Unique identifier for this verification
      */
     public void setSeq(String Seq) {
         this.Seq = Seq;
     }
 
     /**
-     * Get Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+     * Get Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
-Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LivenessInfoTag Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+Example value: ["01"]. 
+     * @return LivenessInfoTag Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getLivenessInfoTag() {
         return this.LivenessInfoTag;
     }
 
     /**
-     * Set Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+     * Set Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LivenessInfoTag Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+     * @param LivenessInfoTag Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLivenessInfoTag(String [] LivenessInfoTag) {
         this.LivenessInfoTag = LivenessInfoTag;

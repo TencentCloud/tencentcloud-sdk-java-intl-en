@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreateImageSpriteTask2017 extends AbstractModel {
 
     /**
-    * 
+    * <p>Screenshot sprite task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * <p>Error message.</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * <p>Capture the CSS sprite file ID.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>Total number of small images in the sprite sheet.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * <p>Addresses for capturing CSS sprites output.</p>
     */
     @SerializedName("ImageSpriteUrlSet")
     @Expose
     private String [] ImageSpriteUrlSet;
 
     /**
-    * 
+    * <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
     */
     @SerializedName("WebVttUrl")
     @Expose
     private String WebVttUrl;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get <p>Screenshot sprite task ID.</p> 
+     * @return TaskId <p>Screenshot sprite task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set <p>Screenshot sprite task ID.</p>
+     * @param TaskId <p>Screenshot sprite task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li> 
+     * @return ErrCode <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
+     * @param ErrCode <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get <p>Error message.</p> 
+     * @return Message <p>Error message.</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set <p>Error message.</p>
+     * @param Message <p>Error message.</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>Capture the CSS sprite file ID.</p> 
+     * @return FileId <p>Capture the CSS sprite file ID.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>Capture the CSS sprite file ID.</p>
+     * @param FileId <p>Capture the CSS sprite file ID.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p> 
+     * @return Definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+     * @param Definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get <p>Total number of small images in the sprite sheet.</p> 
+     * @return TotalCount <p>Total number of small images in the sprite sheet.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set <p>Total number of small images in the sprite sheet.</p>
+     * @param TotalCount <p>Total number of small images in the sprite sheet.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return ImageSpriteUrlSet 
+     * Get <p>Addresses for capturing CSS sprites output.</p> 
+     * @return ImageSpriteUrlSet <p>Addresses for capturing CSS sprites output.</p>
      */
     public String [] getImageSpriteUrlSet() {
         return this.ImageSpriteUrlSet;
     }
 
     /**
-     * Set 
-     * @param ImageSpriteUrlSet 
+     * Set <p>Addresses for capturing CSS sprites output.</p>
+     * @param ImageSpriteUrlSet <p>Addresses for capturing CSS sprites output.</p>
      */
     public void setImageSpriteUrlSet(String [] ImageSpriteUrlSet) {
         this.ImageSpriteUrlSet = ImageSpriteUrlSet;
     }
 
     /**
-     * Get  
-     * @return WebVttUrl 
+     * Get <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p> 
+     * @return WebVttUrl <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
      */
     public String getWebVttUrl() {
         return this.WebVttUrl;
     }
 
     /**
-     * Set 
-     * @param WebVttUrl 
+     * Set <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
+     * @param WebVttUrl <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
      */
     public void setWebVttUrl(String WebVttUrl) {
         this.WebVttUrl = WebVttUrl;

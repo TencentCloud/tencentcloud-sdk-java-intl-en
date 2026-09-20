@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class UrlSignatureAuthPolicy extends AbstractModel {
 
     /**
-    * 
+    * [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enabled.</li>
+<li>Disabled: disabled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Key used for generating signature in [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1).
+The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisible characters.
     */
     @SerializedName("EncryptedKey")
     @Expose
     private String EncryptedKey;
 
     /**
-     * Get  
-     * @return Status 
+     * Get [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enabled.</li>
+<li>Disabled: disabled.</li> 
+     * @return Status [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enabled.</li>
+<li>Disabled: disabled.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enabled.</li>
+<li>Disabled: disabled.</li>
+     * @param Status [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
+<li>Enabled: enabled.</li>
+<li>Disabled: disabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return EncryptedKey 
+     * Get Key used for generating signature in [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1).
+The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisible characters. 
+     * @return EncryptedKey Key used for generating signature in [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1).
+The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisible characters.
      */
     public String getEncryptedKey() {
         return this.EncryptedKey;
     }
 
     /**
-     * Set 
-     * @param EncryptedKey 
+     * Set Key used for generating signature in [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1).
+The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisible characters.
+     * @param EncryptedKey Key used for generating signature in [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1).
+The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisible characters.
      */
     public void setEncryptedKey(String EncryptedKey) {
         this.EncryptedKey = EncryptedKey;

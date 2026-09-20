@@ -25,15 +25,13 @@ public class PhilippinesVoteID extends AbstractModel {
 
     /**
     * VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VIN")
     @Expose
     private String VIN;
 
     /**
-    * First name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("FirstName")
     @Expose
@@ -41,23 +39,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastName")
     @Expose
     private String LastName;
 
     /**
-    * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Date of birth
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Marital status
     */
     @SerializedName("CivilStatus")
     @Expose
@@ -65,33 +60,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Citizenship")
     @Expose
     private String Citizenship;
 
     /**
-    * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address.
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * Region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("PrecinctNo")
     @Expose
     private String PrecinctNo;
 
     /**
-     * Get VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get VIN of Philippines VoteID 
      * @return VIN VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVIN() {
         return this.VIN;
@@ -99,39 +89,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VIN VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVIN(String VIN) {
         this.VIN = VIN;
     }
 
     /**
-     * Get First name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return FirstName Name
      */
     public String getFirstName() {
         return this.FirstName;
     }
 
     /**
-     * Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param FirstName Name
      */
     public void setFirstName(String FirstName) {
         this.FirstName = FirstName;
     }
 
     /**
-     * Get Last name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last name 
      * @return LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastName() {
         return this.LastName;
@@ -139,59 +121,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastName(String LastName) {
         this.LastName = LastName;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Date of birth 
+     * @return Birthday Date of birth
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Date of birth
+     * @param Birthday Date of birth
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Civil status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CivilStatus Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Marital status 
+     * @return CivilStatus Marital status
      */
     public String getCivilStatus() {
         return this.CivilStatus;
     }
 
     /**
-     * Set Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CivilStatus Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Marital status
+     * @param CivilStatus Marital status
      */
     public void setCivilStatus(String CivilStatus) {
         this.CivilStatus = CivilStatus;
     }
 
     /**
-     * Get Nationality
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Nationality 
      * @return Citizenship Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCitizenship() {
         return this.Citizenship;
@@ -199,49 +169,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Citizenship Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCitizenship(String Citizenship) {
         this.Citizenship = Citizenship;
     }
 
     /**
-     * Get Address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address. 
+     * @return Address Address.
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address.
+     * @param Address Address.
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get Region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrecinctNo Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return PrecinctNo Region.
      */
     public String getPrecinctNo() {
         return this.PrecinctNo;
     }
 
     /**
-     * Set Region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrecinctNo Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param PrecinctNo Region.
      */
     public void setPrecinctNo(String PrecinctNo) {
         this.PrecinctNo = PrecinctNo;

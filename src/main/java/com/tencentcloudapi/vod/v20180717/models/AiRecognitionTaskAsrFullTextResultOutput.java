@@ -24,115 +24,120 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel {
 
     /**
-    * 
+    * Segments undergone full speech recognition.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskAsrFullTextSegmentItem [] SegmentSet;
 
     /**
-    * 
+    * URL of the Segment List File for full speech recognition. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * 
+    * Expiration time of the speech full text recognition segment list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-    * 
+    * Generated subtitle list, corresponding to SubtitleFormats in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
     */
     @SerializedName("SubtitleSet")
     @Expose
     private AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] SubtitleSet;
 
     /**
-    * 
+    * Generated subtitle file Url, corresponding to SubtitleFormat in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
     */
     @SerializedName("SubtitleUrl")
     @Expose
     private String SubtitleUrl;
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get Segments undergone full speech recognition.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
+     * @return SegmentSet Segments undergone full speech recognition.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public AiRecognitionTaskAsrFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set Segments undergone full speech recognition.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param SegmentSet Segments undergone full speech recognition.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public void setSegmentSet(AiRecognitionTaskAsrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get  
-     * @return SegmentSetFileUrl 
+     * Get URL of the Segment List File for full speech recognition. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.) 
+     * @return SegmentSetFileUrl URL of the Segment List File for full speech recognition. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set 
-     * @param SegmentSetFileUrl 
+     * Set URL of the Segment List File for full speech recognition. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @param SegmentSetFileUrl URL of the Segment List File for full speech recognition. The content of the file is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get  
-     * @return SegmentSetFileUrlExpireTime 
+     * Get Expiration time of the speech full text recognition segment list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the speech full text recognition segment list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set 
-     * @param SegmentSetFileUrlExpireTime 
+     * Set Expiration time of the speech full text recognition segment list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param SegmentSetFileUrlExpireTime Expiration time of the speech full text recognition segment list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Get  
-     * @return SubtitleSet 
+     * Get Generated subtitle list, corresponding to SubtitleFormats in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo). 
+     * @return SubtitleSet Generated subtitle list, corresponding to SubtitleFormats in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
      */
     public AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set 
-     * @param SubtitleSet 
+     * Set Generated subtitle list, corresponding to SubtitleFormats in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     * @param SubtitleSet Generated subtitle list, corresponding to SubtitleFormats in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
      */
     public void setSubtitleSet(AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;
     }
 
     /**
-     * Get  
-     * @return SubtitleUrl 
+     * Get Generated subtitle file Url, corresponding to SubtitleFormat in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo). 
+     * @return SubtitleUrl Generated subtitle file Url, corresponding to SubtitleFormat in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
      */
     public String getSubtitleUrl() {
         return this.SubtitleUrl;
     }
 
     /**
-     * Set 
-     * @param SubtitleUrl 
+     * Set Generated subtitle file Url, corresponding to SubtitleFormat in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     * @param SubtitleUrl Generated subtitle file Url, corresponding to SubtitleFormat in [speech full-text recognition task control parameter](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
      */
     public void setSubtitleUrl(String SubtitleUrl) {
         this.SubtitleUrl = SubtitleUrl;

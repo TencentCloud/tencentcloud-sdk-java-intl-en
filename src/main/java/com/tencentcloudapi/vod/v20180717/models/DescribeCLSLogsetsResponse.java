@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCLSLogsetsResponse extends AbstractModel {
 
     /**
-    * 
+    * List of queried logsets.
     */
     @SerializedName("Logsets")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCLSLogsetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Logsets 
+     * Get List of queried logsets. 
+     * @return Logsets List of queried logsets.
      */
     public CLSLogsetInfo [] getLogsets() {
         return this.Logsets;
     }
 
     /**
-     * Set 
-     * @param Logsets 
+     * Set List of queried logsets.
+     * @param Logsets List of queried logsets.
      */
     public void setLogsets(CLSLogsetInfo [] Logsets) {
         this.Logsets = Logsets;

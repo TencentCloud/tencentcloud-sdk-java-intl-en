@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class MediaProcessTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Video transcoding task list.
     */
     @SerializedName("TranscodeTaskSet")
     @Expose
     private TranscodeTaskInput [] TranscodeTaskSet;
 
     /**
-    * 
+    * List of video-to-GIF tasks.
     */
     @SerializedName("AnimatedGraphicTaskSet")
     @Expose
     private AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet;
 
     /**
-    * 
+    * List of time point screencapturing tasks for videos.
     */
     @SerializedName("SnapshotByTimeOffsetTaskSet")
     @Expose
     private SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet;
 
     /**
-    * 
+    * List of sampled screenshot tasks for videos.
     */
     @SerializedName("SampleSnapshotTaskSet")
     @Expose
     private SampleSnapshotTaskInput [] SampleSnapshotTaskSet;
 
     /**
-    * 
+    * List of image sprite tasks for videos.
     */
     @SerializedName("ImageSpriteTaskSet")
     @Expose
     private ImageSpriteTaskInput [] ImageSpriteTaskSet;
 
     /**
-    * 
+    * Task list of screencapturing for cover image tasks for videos.
     */
     @SerializedName("CoverBySnapshotTaskSet")
     @Expose
     private CoverBySnapshotTaskInput [] CoverBySnapshotTaskSet;
 
     /**
-    * 
+    * List of video to adaptive streaming tasks.
     */
     @SerializedName("AdaptiveDynamicStreamingTaskSet")
     @Expose
     private AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet;
 
     /**
-     * Get  
-     * @return TranscodeTaskSet 
+     * Get Video transcoding task list. 
+     * @return TranscodeTaskSet Video transcoding task list.
      */
     public TranscodeTaskInput [] getTranscodeTaskSet() {
         return this.TranscodeTaskSet;
     }
 
     /**
-     * Set 
-     * @param TranscodeTaskSet 
+     * Set Video transcoding task list.
+     * @param TranscodeTaskSet Video transcoding task list.
      */
     public void setTranscodeTaskSet(TranscodeTaskInput [] TranscodeTaskSet) {
         this.TranscodeTaskSet = TranscodeTaskSet;
     }
 
     /**
-     * Get  
-     * @return AnimatedGraphicTaskSet 
+     * Get List of video-to-GIF tasks. 
+     * @return AnimatedGraphicTaskSet List of video-to-GIF tasks.
      */
     public AnimatedGraphicTaskInput [] getAnimatedGraphicTaskSet() {
         return this.AnimatedGraphicTaskSet;
     }
 
     /**
-     * Set 
-     * @param AnimatedGraphicTaskSet 
+     * Set List of video-to-GIF tasks.
+     * @param AnimatedGraphicTaskSet List of video-to-GIF tasks.
      */
     public void setAnimatedGraphicTaskSet(AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet) {
         this.AnimatedGraphicTaskSet = AnimatedGraphicTaskSet;
     }
 
     /**
-     * Get  
-     * @return SnapshotByTimeOffsetTaskSet 
+     * Get List of time point screencapturing tasks for videos. 
+     * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
      */
     public SnapshotByTimeOffsetTaskInput [] getSnapshotByTimeOffsetTaskSet() {
         return this.SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Set 
-     * @param SnapshotByTimeOffsetTaskSet 
+     * Set List of time point screencapturing tasks for videos.
+     * @param SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
      */
     public void setSnapshotByTimeOffsetTaskSet(SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet) {
         this.SnapshotByTimeOffsetTaskSet = SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Get  
-     * @return SampleSnapshotTaskSet 
+     * Get List of sampled screenshot tasks for videos. 
+     * @return SampleSnapshotTaskSet List of sampled screenshot tasks for videos.
      */
     public SampleSnapshotTaskInput [] getSampleSnapshotTaskSet() {
         return this.SampleSnapshotTaskSet;
     }
 
     /**
-     * Set 
-     * @param SampleSnapshotTaskSet 
+     * Set List of sampled screenshot tasks for videos.
+     * @param SampleSnapshotTaskSet List of sampled screenshot tasks for videos.
      */
     public void setSampleSnapshotTaskSet(SampleSnapshotTaskInput [] SampleSnapshotTaskSet) {
         this.SampleSnapshotTaskSet = SampleSnapshotTaskSet;
     }
 
     /**
-     * Get  
-     * @return ImageSpriteTaskSet 
+     * Get List of image sprite tasks for videos. 
+     * @return ImageSpriteTaskSet List of image sprite tasks for videos.
      */
     public ImageSpriteTaskInput [] getImageSpriteTaskSet() {
         return this.ImageSpriteTaskSet;
     }
 
     /**
-     * Set 
-     * @param ImageSpriteTaskSet 
+     * Set List of image sprite tasks for videos.
+     * @param ImageSpriteTaskSet List of image sprite tasks for videos.
      */
     public void setImageSpriteTaskSet(ImageSpriteTaskInput [] ImageSpriteTaskSet) {
         this.ImageSpriteTaskSet = ImageSpriteTaskSet;
     }
 
     /**
-     * Get  
-     * @return CoverBySnapshotTaskSet 
+     * Get Task list of screencapturing for cover image tasks for videos. 
+     * @return CoverBySnapshotTaskSet Task list of screencapturing for cover image tasks for videos.
      */
     public CoverBySnapshotTaskInput [] getCoverBySnapshotTaskSet() {
         return this.CoverBySnapshotTaskSet;
     }
 
     /**
-     * Set 
-     * @param CoverBySnapshotTaskSet 
+     * Set Task list of screencapturing for cover image tasks for videos.
+     * @param CoverBySnapshotTaskSet Task list of screencapturing for cover image tasks for videos.
      */
     public void setCoverBySnapshotTaskSet(CoverBySnapshotTaskInput [] CoverBySnapshotTaskSet) {
         this.CoverBySnapshotTaskSet = CoverBySnapshotTaskSet;
     }
 
     /**
-     * Get  
-     * @return AdaptiveDynamicStreamingTaskSet 
+     * Get List of video to adaptive streaming tasks. 
+     * @return AdaptiveDynamicStreamingTaskSet List of video to adaptive streaming tasks.
      */
     public AdaptiveDynamicStreamingTaskInput [] getAdaptiveDynamicStreamingTaskSet() {
         return this.AdaptiveDynamicStreamingTaskSet;
     }
 
     /**
-     * Set 
-     * @param AdaptiveDynamicStreamingTaskSet 
+     * Set List of video to adaptive streaming tasks.
+     * @param AdaptiveDynamicStreamingTaskSet List of video to adaptive streaming tasks.
      */
     public void setAdaptiveDynamicStreamingTaskSet(AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet) {
         this.AdaptiveDynamicStreamingTaskSet = AdaptiveDynamicStreamingTaskSet;

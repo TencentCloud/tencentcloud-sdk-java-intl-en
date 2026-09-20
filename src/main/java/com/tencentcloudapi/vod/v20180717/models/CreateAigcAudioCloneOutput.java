@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateAigcAudioCloneOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * <p>Processing status.</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 
+    * <p>User-defined voice_id. It is not returned if the task fails.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
     */
     @SerializedName("DemoAudio")
     @Expose
     private String DemoAudio;
 
     /**
-    * 
+    * <p>Pass-through parameter passed in for this call.</p>
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-    * 
+    * <p>Task creation time.</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return State 
+     * Get <p>Processing status.</p> 
+     * @return State <p>Processing status.</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 
-     * @param State 
+     * Set <p>Processing status.</p>
+     * @param State <p>Processing status.</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>User-defined voice_id. It is not returned if the task fails.</p> 
+     * @return VoiceId <p>User-defined voice_id. It is not returned if the task fails.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>User-defined voice_id. It is not returned if the task fails.</p>
+     * @param VoiceId <p>User-defined voice_id. It is not returned if the task fails.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return DemoAudio 
+     * Get <p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p> 
+     * @return DemoAudio <p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
      */
     public String getDemoAudio() {
         return this.DemoAudio;
     }
 
     /**
-     * Set 
-     * @param DemoAudio 
+     * Set <p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
+     * @param DemoAudio <p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
      */
     public void setDemoAudio(String DemoAudio) {
         this.DemoAudio = DemoAudio;
     }
 
     /**
-     * Get  
-     * @return Payload 
+     * Get <p>Pass-through parameter passed in for this call.</p> 
+     * @return Payload <p>Pass-through parameter passed in for this call.</p>
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 
-     * @param Payload 
+     * Set <p>Pass-through parameter passed in for this call.</p>
+     * @param Payload <p>Pass-through parameter passed in for this call.</p>
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
     }
 
     /**
-     * Get  
-     * @return CreatedAt 
+     * Get <p>Task creation time.</p> 
+     * @return CreatedAt <p>Task creation time.</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 
-     * @param CreatedAt 
+     * Set <p>Task creation time.</p>
+     * @param CreatedAt <p>Task creation time.</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;

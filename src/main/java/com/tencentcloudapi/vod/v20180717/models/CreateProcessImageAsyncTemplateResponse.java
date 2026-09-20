@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateProcessImageAsyncTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of the image asynchronous processing template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateProcessImageAsyncTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique identifier of the image asynchronous processing template. 
+     * @return Definition Unique identifier of the image asynchronous processing template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique identifier of the image asynchronous processing template.
+     * @param Definition Unique identifier of the image asynchronous processing template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

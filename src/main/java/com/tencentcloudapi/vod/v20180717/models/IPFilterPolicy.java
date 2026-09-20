@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class IPFilterPolicy extends AbstractModel {
 
     /**
-    * 
+    * IP access restriction status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disable.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
+<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * 
+    * IP list. Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or IP ranges in /N format (IPV4: 1≤N≤32; IPV6: 1≤N≤128). You can fill up to 200 IPs or ranges. When Status is Enabled, IPList must be assigned a value.
     */
     @SerializedName("IPList")
     @Expose
     private String [] IPList;
 
     /**
-     * Get  
-     * @return Status 
+     * Get IP access restriction status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disable.</li> 
+     * @return Status IP access restriction status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disable.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set IP access restriction status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disable.</li>
+     * @param Status IP access restriction status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disable.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return FilterType 
+     * Get IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
+<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value. 
+     * @return FilterType IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
+<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set 
-     * @param FilterType 
+     * Set IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
+<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+     * @param FilterType IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
+<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get  
-     * @return IPList 
+     * Get IP list. Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or IP ranges in /N format (IPV4: 1≤N≤32; IPV6: 1≤N≤128). You can fill up to 200 IPs or ranges. When Status is Enabled, IPList must be assigned a value. 
+     * @return IPList IP list. Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or IP ranges in /N format (IPV4: 1≤N≤32; IPV6: 1≤N≤128). You can fill up to 200 IPs or ranges. When Status is Enabled, IPList must be assigned a value.
      */
     public String [] getIPList() {
         return this.IPList;
     }
 
     /**
-     * Set 
-     * @param IPList 
+     * Set IP list. Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or IP ranges in /N format (IPV4: 1≤N≤32; IPV6: 1≤N≤128). You can fill up to 200 IPs or ranges. When Status is Enabled, IPList must be assigned a value.
+     * @param IPList IP list. Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or IP ranges in /N format (IPV4: 1≤N≤32; IPV6: 1≤N≤128). You can fill up to 200 IPs or ranges. When Status is Enabled, IPList must be assigned a value.
      */
     public void setIPList(String [] IPList) {
         this.IPList = IPList;

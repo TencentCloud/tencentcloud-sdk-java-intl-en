@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class MainlandIDCard extends AbstractModel {
 
     /**
-    * <p>name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Name</p>
     */
     @SerializedName("FullName")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Gender</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Sex")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Ethnicity</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Nation")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Birthday</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Birthday")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Address")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Identity card number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LicenseNumber")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FormattedAddress")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Issuing authority</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Authority")
     @Expose
@@ -89,37 +81,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Validity period</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ValidDate")
     @Expose
     private String ValidDate;
 
     /**
-     * Get <p>name</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName <p>name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Name</p> 
+     * @return FullName <p>Name</p>
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set <p>name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName <p>name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Name</p>
+     * @param FullName <p>Name</p>
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get <p>Gender</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Gender</p> 
      * @return Sex <p>Gender</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSex() {
         return this.Sex;
@@ -127,19 +112,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Gender</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Sex <p>Gender</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get <p>Ethnicity</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Ethnicity</p> 
      * @return Nation <p>Ethnicity</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNation() {
         return this.Nation;
@@ -147,19 +128,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Ethnicity</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Nation <p>Ethnicity</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNation(String Nation) {
         this.Nation = Nation;
     }
 
     /**
-     * Get <p>Birthday</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Birthday</p> 
      * @return Birthday <p>Birthday</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBirthday() {
         return this.Birthday;
@@ -167,19 +144,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Birthday</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Birthday <p>Birthday</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Address</p> 
      * @return Address <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -189,9 +162,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Address <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -200,10 +171,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Identity card number</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Identity card number</p> 
      * @return LicenseNumber <p>Identity card number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
@@ -211,19 +180,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Identity card number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LicenseNumber <p>Identity card number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Address</p> 
      * @return FormattedAddress <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFormattedAddress() {
         return this.FormattedAddress;
@@ -231,19 +196,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FormattedAddress <p>Address</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFormattedAddress(String FormattedAddress) {
         this.FormattedAddress = FormattedAddress;
     }
 
     /**
-     * Get <p>Issuing authority</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Issuing authority</p> 
      * @return Authority <p>Issuing authority</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAuthority() {
         return this.Authority;
@@ -251,19 +212,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Issuing authority</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Authority <p>Issuing authority</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAuthority(String Authority) {
         this.Authority = Authority;
     }
 
     /**
-     * Get <p>Validity period</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Validity period</p> 
      * @return ValidDate <p>Validity period</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getValidDate() {
         return this.ValidDate;
@@ -271,9 +228,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Validity period</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ValidDate <p>Validity period</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;

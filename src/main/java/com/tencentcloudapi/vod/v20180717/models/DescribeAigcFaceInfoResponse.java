@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAigcFaceInfoResponse extends AbstractModel {
 
     /**
-    * 
+    * Face information.
     */
     @SerializedName("FaceInfoSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAigcFaceInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return FaceInfoSet 
+     * Get Face information. 
+     * @return FaceInfoSet Face information.
      */
     public AigcFaceInfo [] getFaceInfoSet() {
         return this.FaceInfoSet;
     }
 
     /**
-     * Set 
-     * @param FaceInfoSet 
+     * Set Face information.
+     * @param FaceInfoSet Face information.
      */
     public void setFaceInfoSet(AigcFaceInfo [] FaceInfoSet) {
         this.FaceInfoSet = FaceInfoSet;

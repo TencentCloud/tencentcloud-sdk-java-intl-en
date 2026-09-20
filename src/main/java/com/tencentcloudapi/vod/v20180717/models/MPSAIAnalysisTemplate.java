@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class MPSAIAnalysisTemplate extends AbstractModel {
 
     /**
-    * 
+    * <p>Video analysis template name, with a length limit of 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Video analysis template description. Length limit: 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * <p>Intelligent Classification Task Control Parameters.</p>
     */
     @SerializedName("ClassificationConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo ClassificationConfigure;
 
     /**
-    * 
+    * <p>Control parameter for the intelligent tag task.</p>
     */
     @SerializedName("TagConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo TagConfigure;
 
     /**
-    * 
+    * <p>Intelligent Cover Task Control Parameters.</p>
     */
     @SerializedName("CoverConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo CoverConfigure;
 
     /**
-    * 
+    * <p>Control parameters for the intelligent frame-specific tagging task.</p>
     */
     @SerializedName("FrameTagConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo FrameTagConfigure;
 
     /**
-    * 
+    * <p>Intelligent splitting task control parameters.</p>
     */
     @SerializedName("SplitConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo SplitConfigure;
 
     /**
-    * 
+    * <p>Control parameter for the intelligent highlights task.</p>
     */
     @SerializedName("HighlightConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo HighlightConfigure;
 
     /**
-    * 
+    * <p>Intelligent opening and ending content task control parameters.</p>
     */
     @SerializedName("OpeningAndEndingConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure;
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Video analysis template name, with a length limit of 64 characters.</p> 
+     * @return Name <p>Video analysis template name, with a length limit of 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Video analysis template name, with a length limit of 64 characters.</p>
+     * @param Name <p>Video analysis template name, with a length limit of 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Video analysis template description. Length limit: 256 characters.</p> 
+     * @return Comment <p>Video analysis template description. Length limit: 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Video analysis template description. Length limit: 256 characters.</p>
+     * @param Comment <p>Video analysis template description. Length limit: 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return ClassificationConfigure 
+     * Get <p>Intelligent Classification Task Control Parameters.</p> 
+     * @return ClassificationConfigure <p>Intelligent Classification Task Control Parameters.</p>
      */
     public MPSAIAnalysisConfigureInfo getClassificationConfigure() {
         return this.ClassificationConfigure;
     }
 
     /**
-     * Set 
-     * @param ClassificationConfigure 
+     * Set <p>Intelligent Classification Task Control Parameters.</p>
+     * @param ClassificationConfigure <p>Intelligent Classification Task Control Parameters.</p>
      */
     public void setClassificationConfigure(MPSAIAnalysisConfigureInfo ClassificationConfigure) {
         this.ClassificationConfigure = ClassificationConfigure;
     }
 
     /**
-     * Get  
-     * @return TagConfigure 
+     * Get <p>Control parameter for the intelligent tag task.</p> 
+     * @return TagConfigure <p>Control parameter for the intelligent tag task.</p>
      */
     public MPSAIAnalysisConfigureInfo getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set 
-     * @param TagConfigure 
+     * Set <p>Control parameter for the intelligent tag task.</p>
+     * @param TagConfigure <p>Control parameter for the intelligent tag task.</p>
      */
     public void setTagConfigure(MPSAIAnalysisConfigureInfo TagConfigure) {
         this.TagConfigure = TagConfigure;
     }
 
     /**
-     * Get  
-     * @return CoverConfigure 
+     * Get <p>Intelligent Cover Task Control Parameters.</p> 
+     * @return CoverConfigure <p>Intelligent Cover Task Control Parameters.</p>
      */
     public MPSAIAnalysisConfigureInfo getCoverConfigure() {
         return this.CoverConfigure;
     }
 
     /**
-     * Set 
-     * @param CoverConfigure 
+     * Set <p>Intelligent Cover Task Control Parameters.</p>
+     * @param CoverConfigure <p>Intelligent Cover Task Control Parameters.</p>
      */
     public void setCoverConfigure(MPSAIAnalysisConfigureInfo CoverConfigure) {
         this.CoverConfigure = CoverConfigure;
     }
 
     /**
-     * Get  
-     * @return FrameTagConfigure 
+     * Get <p>Control parameters for the intelligent frame-specific tagging task.</p> 
+     * @return FrameTagConfigure <p>Control parameters for the intelligent frame-specific tagging task.</p>
      */
     public MPSAIAnalysisConfigureInfo getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set 
-     * @param FrameTagConfigure 
+     * Set <p>Control parameters for the intelligent frame-specific tagging task.</p>
+     * @param FrameTagConfigure <p>Control parameters for the intelligent frame-specific tagging task.</p>
      */
     public void setFrameTagConfigure(MPSAIAnalysisConfigureInfo FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;
     }
 
     /**
-     * Get  
-     * @return SplitConfigure 
+     * Get <p>Intelligent splitting task control parameters.</p> 
+     * @return SplitConfigure <p>Intelligent splitting task control parameters.</p>
      */
     public MPSAIAnalysisConfigureInfo getSplitConfigure() {
         return this.SplitConfigure;
     }
 
     /**
-     * Set 
-     * @param SplitConfigure 
+     * Set <p>Intelligent splitting task control parameters.</p>
+     * @param SplitConfigure <p>Intelligent splitting task control parameters.</p>
      */
     public void setSplitConfigure(MPSAIAnalysisConfigureInfo SplitConfigure) {
         this.SplitConfigure = SplitConfigure;
     }
 
     /**
-     * Get  
-     * @return HighlightConfigure 
+     * Get <p>Control parameter for the intelligent highlights task.</p> 
+     * @return HighlightConfigure <p>Control parameter for the intelligent highlights task.</p>
      */
     public MPSAIAnalysisConfigureInfo getHighlightConfigure() {
         return this.HighlightConfigure;
     }
 
     /**
-     * Set 
-     * @param HighlightConfigure 
+     * Set <p>Control parameter for the intelligent highlights task.</p>
+     * @param HighlightConfigure <p>Control parameter for the intelligent highlights task.</p>
      */
     public void setHighlightConfigure(MPSAIAnalysisConfigureInfo HighlightConfigure) {
         this.HighlightConfigure = HighlightConfigure;
     }
 
     /**
-     * Get  
-     * @return OpeningAndEndingConfigure 
+     * Get <p>Intelligent opening and ending content task control parameters.</p> 
+     * @return OpeningAndEndingConfigure <p>Intelligent opening and ending content task control parameters.</p>
      */
     public MPSAIAnalysisConfigureInfo getOpeningAndEndingConfigure() {
         return this.OpeningAndEndingConfigure;
     }
 
     /**
-     * Set 
-     * @param OpeningAndEndingConfigure 
+     * Set <p>Intelligent opening and ending content task control parameters.</p>
+     * @param OpeningAndEndingConfigure <p>Intelligent opening and ending content task control parameters.</p>
      */
     public void setOpeningAndEndingConfigure(MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure) {
         this.OpeningAndEndingConfigure = OpeningAndEndingConfigure;

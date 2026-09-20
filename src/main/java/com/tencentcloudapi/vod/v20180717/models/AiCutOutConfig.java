@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AiCutOutConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * <p>Matting target type: "foreground" / "pattern"</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
     */
     @SerializedName("PatternConfig")
     @Expose
     private PatternConfig PatternConfig;
 
     /**
-    * 
+    * <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p> 
+     * @return Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @param Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Matting target type: "foreground" / "pattern"</p> 
+     * @return Type <p>Matting target type: "foreground" / "pattern"</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Matting target type: "foreground" / "pattern"</p>
+     * @param Type <p>Matting target type: "foreground" / "pattern"</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return PatternConfig 
+     * Get <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p> 
+     * @return PatternConfig <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
      */
     public PatternConfig getPatternConfig() {
         return this.PatternConfig;
     }
 
     /**
-     * Set 
-     * @param PatternConfig 
+     * Set <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+     * @param PatternConfig <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
      */
     public void setPatternConfig(PatternConfig PatternConfig) {
         this.PatternConfig = PatternConfig;
     }
 
     /**
-     * Get  
-     * @return Model 
+     * Get <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul> 
+     * @return Model <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 
-     * @param Model 
+     * Set <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
+     * @param Model <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;

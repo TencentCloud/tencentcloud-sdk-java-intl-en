@@ -31,21 +31,21 @@ public class MediaMetaData extends AbstractModel {
     private Long Size;
 
     /**
-    * Container type, for example, m4a, mp4.
+    * Container type, for example, m4a and mp4.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+    * Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Maximum video stream height in px.
+    * Maximum height of the video stream. Unit: px.
     */
     @SerializedName("Height")
     @Expose
@@ -66,7 +66,7 @@ public class MediaMetaData extends AbstractModel {
     private Float Duration;
 
     /**
-    * Selection angle during video shooting. Unit: degree.
+    * Selection angle during video shooting. Measurement unit: degree.
     */
     @SerializedName("Rotate")
     @Expose
@@ -94,7 +94,7 @@ public class MediaMetaData extends AbstractModel {
     private Float VideoDuration;
 
     /**
-    * Audio duration, in seconds.
+    * Audio duration in seconds.
     */
     @SerializedName("AudioDuration")
     @Expose
@@ -125,48 +125,48 @@ public class MediaMetaData extends AbstractModel {
     }
 
     /**
-     * Get Container type, for example, m4a, mp4. 
-     * @return Container Container type, for example, m4a, mp4.
+     * Get Container type, for example, m4a and mp4. 
+     * @return Container Container type, for example, m4a and mp4.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container type, for example, m4a, mp4.
-     * @param Container Container type, for example, m4a, mp4.
+     * Set Container type, for example, m4a and mp4.
+     * @param Container Container type, for example, m4a and mp4.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Sum of the mean video stream bitrate and mean audio stream bitrate, in bps. 
-     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+     * Get Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps. 
+     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
-     * @param Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+     * Set Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+     * @param Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Maximum video stream height in px. 
-     * @return Height Maximum video stream height in px.
+     * Get Maximum height of the video stream. Unit: px. 
+     * @return Height Maximum height of the video stream. Unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum video stream height in px.
-     * @param Height Maximum video stream height in px.
+     * Set Maximum height of the video stream. Unit: px.
+     * @param Height Maximum height of the video stream. Unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -205,16 +205,16 @@ public class MediaMetaData extends AbstractModel {
     }
 
     /**
-     * Get Selection angle during video shooting. Unit: degree. 
-     * @return Rotate Selection angle during video shooting. Unit: degree.
+     * Get Selection angle during video shooting. Measurement unit: degree. 
+     * @return Rotate Selection angle during video shooting. Measurement unit: degree.
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set Selection angle during video shooting. Unit: degree.
-     * @param Rotate Selection angle during video shooting. Unit: degree.
+     * Set Selection angle during video shooting. Measurement unit: degree.
+     * @param Rotate Selection angle during video shooting. Measurement unit: degree.
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
@@ -269,16 +269,16 @@ public class MediaMetaData extends AbstractModel {
     }
 
     /**
-     * Get Audio duration, in seconds. 
-     * @return AudioDuration Audio duration, in seconds.
+     * Get Audio duration in seconds. 
+     * @return AudioDuration Audio duration in seconds.
      */
     public Float getAudioDuration() {
         return this.AudioDuration;
     }
 
     /**
-     * Set Audio duration, in seconds.
-     * @param AudioDuration Audio duration, in seconds.
+     * Set Audio duration in seconds.
+     * @param AudioDuration Audio duration in seconds.
      */
     public void setAudioDuration(Float AudioDuration) {
         this.AudioDuration = AudioDuration;

@@ -125,6 +125,20 @@ When set to en, the added key is english.
     private String OutputLanguage;
 
     /**
+    * Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+    */
+    @SerializedName("NewItemNames")
+    @Expose
+    private ItemNames [] NewItemNames;
+
+    /**
+    * The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+    */
+    @SerializedName("MultiModelVersion")
+    @Expose
+    private String MultiModelVersion;
+
+    /**
      * Get The Url address of the image. supported image formats: PNG, JPG, JPEG, WORD, EXCEL. GIF format is not currently supported. supported image size: no more than 10M after Base64 encoding. image download time should not exceed 3 seconds. supported image pixels: between 20-10000px. images stored in tencent cloud's Url ensure higher download speed and stability. it is recommended to store images in tencent cloud. the speed and stability of non-tencent cloud storage urls may be impacted. 
      * @return ImageUrl The Url address of the image. supported image formats: PNG, JPG, JPEG, WORD, EXCEL. GIF format is not currently supported. supported image size: no more than 10M after Base64 encoding. image download time should not exceed 3 seconds. supported image pixels: between 20-10000px. images stored in tencent cloud's Url ensure higher download speed and stability. it is recommended to store images in tencent cloud. the speed and stability of non-tencent cloud storage urls may be impacted.
      */
@@ -396,6 +410,38 @@ When set to en, the added key is english.
         this.OutputLanguage = OutputLanguage;
     }
 
+    /**
+     * Get Custom extraction field configuration, specify the custom extracted field name, field type and field prompt. 
+     * @return NewItemNames Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+     */
+    public ItemNames [] getNewItemNames() {
+        return this.NewItemNames;
+    }
+
+    /**
+     * Set Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+     * @param NewItemNames Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+     */
+    public void setNewItemNames(ItemNames [] NewItemNames) {
+        this.NewItemNames = NewItemNames;
+    }
+
+    /**
+     * Get The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended. 
+     * @return MultiModelVersion The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+     */
+    public String getMultiModelVersion() {
+        return this.MultiModelVersion;
+    }
+
+    /**
+     * Set The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+     * @param MultiModelVersion The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+     */
+    public void setMultiModelVersion(String MultiModelVersion) {
+        this.MultiModelVersion = MultiModelVersion;
+    }
+
     public ExtractDocMultiRequest() {
     }
 
@@ -440,6 +486,15 @@ When set to en, the added key is english.
         if (source.OutputLanguage != null) {
             this.OutputLanguage = new String(source.OutputLanguage);
         }
+        if (source.NewItemNames != null) {
+            this.NewItemNames = new ItemNames[source.NewItemNames.length];
+            for (int i = 0; i < source.NewItemNames.length; i++) {
+                this.NewItemNames[i] = new ItemNames(source.NewItemNames[i]);
+            }
+        }
+        if (source.MultiModelVersion != null) {
+            this.MultiModelVersion = new String(source.MultiModelVersion);
+        }
     }
 
 
@@ -458,6 +513,8 @@ When set to en, the added key is english.
         this.setParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
         this.setParamObj(map, prefix + "ConfigAdvanced.", this.ConfigAdvanced);
         this.setParamSimple(map, prefix + "OutputLanguage", this.OutputLanguage);
+        this.setParamArrayObj(map, prefix + "NewItemNames.", this.NewItemNames);
+        this.setParamSimple(map, prefix + "MultiModelVersion", this.MultiModelVersion);
 
     }
 }

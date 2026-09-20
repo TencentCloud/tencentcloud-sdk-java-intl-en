@@ -24,483 +24,483 @@ import java.util.HashMap;
 public class RebuildMediaRequest extends AbstractModel {
 
     /**
-    * 
+    * Media file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End offset time, in seconds. Not filled indicates cutting to the end of the video.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Image quality restoration control parameters.
     */
     @SerializedName("RepairInfo")
     @Expose
     private RepairInfo RepairInfo;
 
     /**
-    * 
+    * Intelligent frame interpolation control parameters.
     */
     @SerializedName("VideoFrameInterpolationInfo")
     @Expose
     private VideoFrameInterpolationInfo VideoFrameInterpolationInfo;
 
     /**
-    * 
+    * Image super-resolution control parameters.
     */
     @SerializedName("SuperResolutionInfo")
     @Expose
     private SuperResolutionInfo SuperResolutionInfo;
 
     /**
-    * 
+    * High dynamic range type control parameter.
     */
     @SerializedName("HDRInfo")
     @Expose
     private HDRInfo HDRInfo;
 
     /**
-    * 
+    * Video noise reduction control parameters.
     */
     @SerializedName("VideoDenoiseInfo")
     @Expose
     private VideoDenoiseInfo VideoDenoiseInfo;
 
     /**
-    * 
+    * Audio noise reduction control parameters.
     */
     @SerializedName("AudioDenoiseInfo")
     @Expose
     private AudioDenoiseInfo AudioDenoiseInfo;
 
     /**
-    * 
+    * Color enhancement control parameters.
     */
     @SerializedName("ColorInfo")
     @Expose
     private ColorEnhanceInfo ColorInfo;
 
     /**
-    * 
+    * Detail enhancement control parameters.
     */
     @SerializedName("SharpInfo")
     @Expose
     private SharpEnhanceInfo SharpInfo;
 
     /**
-    * 
+    * Face enhancement control parameters.
     */
     @SerializedName("FaceInfo")
     @Expose
     private FaceEnhanceInfo FaceInfo;
 
     /**
-    * 
+    * Low-light control parameters.
     */
     @SerializedName("LowLightInfo")
     @Expose
     private LowLightEnhanceInfo LowLightInfo;
 
     /**
-    * 
+    * Scratch removal control parameter.
     */
     @SerializedName("ScratchRepairInfo")
     @Expose
     private ScratchRepairInfo ScratchRepairInfo;
 
     /**
-    * 
+    * Artifact (burr) removal control parameter.
     */
     @SerializedName("ArtifactRepairInfo")
     @Expose
     private ArtifactRepairInfo ArtifactRepairInfo;
 
     /**
-    * 
+    * Output target parameters for audio-visual quality rebirth.
     */
     @SerializedName("TargetInfo")
     @Expose
     private RebuildMediaTargetInfo TargetInfo;
 
     /**
-    * 
+    * An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 
+    * Reserved field, used for special purposes.
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID. 
+     * @return FileId Media file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID.
+     * @param FileId Media file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video. 
+     * @return StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * @param StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End offset time, in seconds. Not filled indicates cutting to the end of the video. 
+     * @return EndTimeOffset End offset time, in seconds. Not filled indicates cutting to the end of the video.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End offset time, in seconds. Not filled indicates cutting to the end of the video.
+     * @param EndTimeOffset End offset time, in seconds. Not filled indicates cutting to the end of the video.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return RepairInfo 
+     * Get Image quality restoration control parameters. 
+     * @return RepairInfo Image quality restoration control parameters.
      */
     public RepairInfo getRepairInfo() {
         return this.RepairInfo;
     }
 
     /**
-     * Set 
-     * @param RepairInfo 
+     * Set Image quality restoration control parameters.
+     * @param RepairInfo Image quality restoration control parameters.
      */
     public void setRepairInfo(RepairInfo RepairInfo) {
         this.RepairInfo = RepairInfo;
     }
 
     /**
-     * Get  
-     * @return VideoFrameInterpolationInfo 
+     * Get Intelligent frame interpolation control parameters. 
+     * @return VideoFrameInterpolationInfo Intelligent frame interpolation control parameters.
      */
     public VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() {
         return this.VideoFrameInterpolationInfo;
     }
 
     /**
-     * Set 
-     * @param VideoFrameInterpolationInfo 
+     * Set Intelligent frame interpolation control parameters.
+     * @param VideoFrameInterpolationInfo Intelligent frame interpolation control parameters.
      */
     public void setVideoFrameInterpolationInfo(VideoFrameInterpolationInfo VideoFrameInterpolationInfo) {
         this.VideoFrameInterpolationInfo = VideoFrameInterpolationInfo;
     }
 
     /**
-     * Get  
-     * @return SuperResolutionInfo 
+     * Get Image super-resolution control parameters. 
+     * @return SuperResolutionInfo Image super-resolution control parameters.
      */
     public SuperResolutionInfo getSuperResolutionInfo() {
         return this.SuperResolutionInfo;
     }
 
     /**
-     * Set 
-     * @param SuperResolutionInfo 
+     * Set Image super-resolution control parameters.
+     * @param SuperResolutionInfo Image super-resolution control parameters.
      */
     public void setSuperResolutionInfo(SuperResolutionInfo SuperResolutionInfo) {
         this.SuperResolutionInfo = SuperResolutionInfo;
     }
 
     /**
-     * Get  
-     * @return HDRInfo 
+     * Get High dynamic range type control parameter. 
+     * @return HDRInfo High dynamic range type control parameter.
      */
     public HDRInfo getHDRInfo() {
         return this.HDRInfo;
     }
 
     /**
-     * Set 
-     * @param HDRInfo 
+     * Set High dynamic range type control parameter.
+     * @param HDRInfo High dynamic range type control parameter.
      */
     public void setHDRInfo(HDRInfo HDRInfo) {
         this.HDRInfo = HDRInfo;
     }
 
     /**
-     * Get  
-     * @return VideoDenoiseInfo 
+     * Get Video noise reduction control parameters. 
+     * @return VideoDenoiseInfo Video noise reduction control parameters.
      */
     public VideoDenoiseInfo getVideoDenoiseInfo() {
         return this.VideoDenoiseInfo;
     }
 
     /**
-     * Set 
-     * @param VideoDenoiseInfo 
+     * Set Video noise reduction control parameters.
+     * @param VideoDenoiseInfo Video noise reduction control parameters.
      */
     public void setVideoDenoiseInfo(VideoDenoiseInfo VideoDenoiseInfo) {
         this.VideoDenoiseInfo = VideoDenoiseInfo;
     }
 
     /**
-     * Get  
-     * @return AudioDenoiseInfo 
+     * Get Audio noise reduction control parameters. 
+     * @return AudioDenoiseInfo Audio noise reduction control parameters.
      */
     public AudioDenoiseInfo getAudioDenoiseInfo() {
         return this.AudioDenoiseInfo;
     }
 
     /**
-     * Set 
-     * @param AudioDenoiseInfo 
+     * Set Audio noise reduction control parameters.
+     * @param AudioDenoiseInfo Audio noise reduction control parameters.
      */
     public void setAudioDenoiseInfo(AudioDenoiseInfo AudioDenoiseInfo) {
         this.AudioDenoiseInfo = AudioDenoiseInfo;
     }
 
     /**
-     * Get  
-     * @return ColorInfo 
+     * Get Color enhancement control parameters. 
+     * @return ColorInfo Color enhancement control parameters.
      */
     public ColorEnhanceInfo getColorInfo() {
         return this.ColorInfo;
     }
 
     /**
-     * Set 
-     * @param ColorInfo 
+     * Set Color enhancement control parameters.
+     * @param ColorInfo Color enhancement control parameters.
      */
     public void setColorInfo(ColorEnhanceInfo ColorInfo) {
         this.ColorInfo = ColorInfo;
     }
 
     /**
-     * Get  
-     * @return SharpInfo 
+     * Get Detail enhancement control parameters. 
+     * @return SharpInfo Detail enhancement control parameters.
      */
     public SharpEnhanceInfo getSharpInfo() {
         return this.SharpInfo;
     }
 
     /**
-     * Set 
-     * @param SharpInfo 
+     * Set Detail enhancement control parameters.
+     * @param SharpInfo Detail enhancement control parameters.
      */
     public void setSharpInfo(SharpEnhanceInfo SharpInfo) {
         this.SharpInfo = SharpInfo;
     }
 
     /**
-     * Get  
-     * @return FaceInfo 
+     * Get Face enhancement control parameters. 
+     * @return FaceInfo Face enhancement control parameters.
      */
     public FaceEnhanceInfo getFaceInfo() {
         return this.FaceInfo;
     }
 
     /**
-     * Set 
-     * @param FaceInfo 
+     * Set Face enhancement control parameters.
+     * @param FaceInfo Face enhancement control parameters.
      */
     public void setFaceInfo(FaceEnhanceInfo FaceInfo) {
         this.FaceInfo = FaceInfo;
     }
 
     /**
-     * Get  
-     * @return LowLightInfo 
+     * Get Low-light control parameters. 
+     * @return LowLightInfo Low-light control parameters.
      */
     public LowLightEnhanceInfo getLowLightInfo() {
         return this.LowLightInfo;
     }
 
     /**
-     * Set 
-     * @param LowLightInfo 
+     * Set Low-light control parameters.
+     * @param LowLightInfo Low-light control parameters.
      */
     public void setLowLightInfo(LowLightEnhanceInfo LowLightInfo) {
         this.LowLightInfo = LowLightInfo;
     }
 
     /**
-     * Get  
-     * @return ScratchRepairInfo 
+     * Get Scratch removal control parameter. 
+     * @return ScratchRepairInfo Scratch removal control parameter.
      */
     public ScratchRepairInfo getScratchRepairInfo() {
         return this.ScratchRepairInfo;
     }
 
     /**
-     * Set 
-     * @param ScratchRepairInfo 
+     * Set Scratch removal control parameter.
+     * @param ScratchRepairInfo Scratch removal control parameter.
      */
     public void setScratchRepairInfo(ScratchRepairInfo ScratchRepairInfo) {
         this.ScratchRepairInfo = ScratchRepairInfo;
     }
 
     /**
-     * Get  
-     * @return ArtifactRepairInfo 
+     * Get Artifact (burr) removal control parameter. 
+     * @return ArtifactRepairInfo Artifact (burr) removal control parameter.
      */
     public ArtifactRepairInfo getArtifactRepairInfo() {
         return this.ArtifactRepairInfo;
     }
 
     /**
-     * Set 
-     * @param ArtifactRepairInfo 
+     * Set Artifact (burr) removal control parameter.
+     * @param ArtifactRepairInfo Artifact (burr) removal control parameter.
      */
     public void setArtifactRepairInfo(ArtifactRepairInfo ArtifactRepairInfo) {
         this.ArtifactRepairInfo = ArtifactRepairInfo;
     }
 
     /**
-     * Get  
-     * @return TargetInfo 
+     * Get Output target parameters for audio-visual quality rebirth. 
+     * @return TargetInfo Output target parameters for audio-visual quality rebirth.
      */
     public RebuildMediaTargetInfo getTargetInfo() {
         return this.TargetInfo;
     }
 
     /**
-     * Set 
-     * @param TargetInfo 
+     * Set Output target parameters for audio-visual quality rebirth.
+     * @param TargetInfo Output target parameters for audio-visual quality rebirth.
      */
     public void setTargetInfo(RebuildMediaTargetInfo TargetInfo) {
         this.TargetInfo = TargetInfo;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0. 
+     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+     * @param TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get Reserved field, used for special purposes. 
+     * @return ExtInfo Reserved field, used for special purposes.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set Reserved field, used for special purposes.
+     * @param ExtInfo Reserved field, used for special purposes.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

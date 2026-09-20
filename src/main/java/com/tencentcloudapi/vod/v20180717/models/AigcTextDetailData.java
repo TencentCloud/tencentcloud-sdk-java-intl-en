@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class AigcTextDetailData extends AbstractModel {
 
     /**
-    * 
+    * <p>Request start time (RFC3339)</p>
     */
     @SerializedName("Timestamp")
     @Expose
     private String Timestamp;
 
     /**
-    * 
+    * <p>Gateway layer request ID</p>
     */
     @SerializedName("ReqId")
     @Expose
     private String ReqId;
 
     /**
-    * 
+    * <p>Dialogue ID returned by the backend model</p>
     */
     @SerializedName("ChatId")
     @Expose
     private String ChatId;
 
     /**
-    * 
+    * <p>HTTP status code returned to client</p>
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * 
+    * <p>Model name</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 
+    * <p>Application ID.</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
     */
     @SerializedName("ApiKey")
     @Expose
     private String ApiKey;
 
     /**
-    * 
+    * <p>Whether to return in streaming mode</p>
     */
     @SerializedName("Stream")
     @Expose
     private Boolean Stream;
 
     /**
-    * 
+    * <p>Input token count</p>
     */
     @SerializedName("InputTokens")
     @Expose
     private Long InputTokens;
 
     /**
-    * 
+    * <p>Output token count</p>
     */
     @SerializedName("OutputTokens")
     @Expose
     private Long OutputTokens;
 
     /**
-    * 
+    * <p>Number of tokens that hit the prompt cache</p>
     */
     @SerializedName("CacheInputTokens")
     @Expose
     private Long CacheInputTokens;
 
     /**
-    * 
+    * <p>Total token count</p>
     */
     @SerializedName("TotalTokens")
     @Expose
     private Long TotalTokens;
 
     /**
-    * 
+    * <p>tokens/second in the generation stage</p>
     */
     @SerializedName("TPS")
     @Expose
     private Float TPS;
 
     /**
-    * 
+    * <p>Time To First Token</p><p>Unit: seconds</p>
     */
     @SerializedName("TTFT")
     @Expose
     private Float TTFT;
 
     /**
-    * 
+    * <p>End-to-end total time</p><p>Unit: seconds</p>
     */
     @SerializedName("Total")
     @Expose
     private Float Total;
 
     /**
-    * 
+    * <p>Entry protocol: completions / responses / anthropic</p>
     */
     @SerializedName("ApiType")
     @Expose
     private String ApiType;
 
     /**
-     * Get  
-     * @return Timestamp 
+     * Get <p>Request start time (RFC3339)</p> 
+     * @return Timestamp <p>Request start time (RFC3339)</p>
      */
     public String getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 
-     * @param Timestamp 
+     * Set <p>Request start time (RFC3339)</p>
+     * @param Timestamp <p>Request start time (RFC3339)</p>
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get  
-     * @return ReqId 
+     * Get <p>Gateway layer request ID</p> 
+     * @return ReqId <p>Gateway layer request ID</p>
      */
     public String getReqId() {
         return this.ReqId;
     }
 
     /**
-     * Set 
-     * @param ReqId 
+     * Set <p>Gateway layer request ID</p>
+     * @param ReqId <p>Gateway layer request ID</p>
      */
     public void setReqId(String ReqId) {
         this.ReqId = ReqId;
     }
 
     /**
-     * Get  
-     * @return ChatId 
+     * Get <p>Dialogue ID returned by the backend model</p> 
+     * @return ChatId <p>Dialogue ID returned by the backend model</p>
      */
     public String getChatId() {
         return this.ChatId;
     }
 
     /**
-     * Set 
-     * @param ChatId 
+     * Set <p>Dialogue ID returned by the backend model</p>
+     * @param ChatId <p>Dialogue ID returned by the backend model</p>
      */
     public void setChatId(String ChatId) {
         this.ChatId = ChatId;
     }
 
     /**
-     * Get  
-     * @return StatusCode 
+     * Get <p>HTTP status code returned to client</p> 
+     * @return StatusCode <p>HTTP status code returned to client</p>
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set 
-     * @param StatusCode 
+     * Set <p>HTTP status code returned to client</p>
+     * @param StatusCode <p>HTTP status code returned to client</p>
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get  
-     * @return Model 
+     * Get <p>Model name</p> 
+     * @return Model <p>Model name</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 
-     * @param Model 
+     * Set <p>Model name</p>
+     * @param Model <p>Model name</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p>Application ID.</p> 
+     * @return SubAppId <p>Application ID.</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p>Application ID.</p>
+     * @param SubAppId <p>Application ID.</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return ApiKey 
+     * Get <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p> 
+     * @return ApiKey <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
      */
     public String getApiKey() {
         return this.ApiKey;
     }
 
     /**
-     * Set 
-     * @param ApiKey 
+     * Set <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
+     * @param ApiKey <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
      */
     public void setApiKey(String ApiKey) {
         this.ApiKey = ApiKey;
     }
 
     /**
-     * Get  
-     * @return Stream 
+     * Get <p>Whether to return in streaming mode</p> 
+     * @return Stream <p>Whether to return in streaming mode</p>
      */
     public Boolean getStream() {
         return this.Stream;
     }
 
     /**
-     * Set 
-     * @param Stream 
+     * Set <p>Whether to return in streaming mode</p>
+     * @param Stream <p>Whether to return in streaming mode</p>
      */
     public void setStream(Boolean Stream) {
         this.Stream = Stream;
     }
 
     /**
-     * Get  
-     * @return InputTokens 
+     * Get <p>Input token count</p> 
+     * @return InputTokens <p>Input token count</p>
      */
     public Long getInputTokens() {
         return this.InputTokens;
     }
 
     /**
-     * Set 
-     * @param InputTokens 
+     * Set <p>Input token count</p>
+     * @param InputTokens <p>Input token count</p>
      */
     public void setInputTokens(Long InputTokens) {
         this.InputTokens = InputTokens;
     }
 
     /**
-     * Get  
-     * @return OutputTokens 
+     * Get <p>Output token count</p> 
+     * @return OutputTokens <p>Output token count</p>
      */
     public Long getOutputTokens() {
         return this.OutputTokens;
     }
 
     /**
-     * Set 
-     * @param OutputTokens 
+     * Set <p>Output token count</p>
+     * @param OutputTokens <p>Output token count</p>
      */
     public void setOutputTokens(Long OutputTokens) {
         this.OutputTokens = OutputTokens;
     }
 
     /**
-     * Get  
-     * @return CacheInputTokens 
+     * Get <p>Number of tokens that hit the prompt cache</p> 
+     * @return CacheInputTokens <p>Number of tokens that hit the prompt cache</p>
      */
     public Long getCacheInputTokens() {
         return this.CacheInputTokens;
     }
 
     /**
-     * Set 
-     * @param CacheInputTokens 
+     * Set <p>Number of tokens that hit the prompt cache</p>
+     * @param CacheInputTokens <p>Number of tokens that hit the prompt cache</p>
      */
     public void setCacheInputTokens(Long CacheInputTokens) {
         this.CacheInputTokens = CacheInputTokens;
     }
 
     /**
-     * Get  
-     * @return TotalTokens 
+     * Get <p>Total token count</p> 
+     * @return TotalTokens <p>Total token count</p>
      */
     public Long getTotalTokens() {
         return this.TotalTokens;
     }
 
     /**
-     * Set 
-     * @param TotalTokens 
+     * Set <p>Total token count</p>
+     * @param TotalTokens <p>Total token count</p>
      */
     public void setTotalTokens(Long TotalTokens) {
         this.TotalTokens = TotalTokens;
     }
 
     /**
-     * Get  
-     * @return TPS 
+     * Get <p>tokens/second in the generation stage</p> 
+     * @return TPS <p>tokens/second in the generation stage</p>
      */
     public Float getTPS() {
         return this.TPS;
     }
 
     /**
-     * Set 
-     * @param TPS 
+     * Set <p>tokens/second in the generation stage</p>
+     * @param TPS <p>tokens/second in the generation stage</p>
      */
     public void setTPS(Float TPS) {
         this.TPS = TPS;
     }
 
     /**
-     * Get  
-     * @return TTFT 
+     * Get <p>Time To First Token</p><p>Unit: seconds</p> 
+     * @return TTFT <p>Time To First Token</p><p>Unit: seconds</p>
      */
     public Float getTTFT() {
         return this.TTFT;
     }
 
     /**
-     * Set 
-     * @param TTFT 
+     * Set <p>Time To First Token</p><p>Unit: seconds</p>
+     * @param TTFT <p>Time To First Token</p><p>Unit: seconds</p>
      */
     public void setTTFT(Float TTFT) {
         this.TTFT = TTFT;
     }
 
     /**
-     * Get  
-     * @return Total 
+     * Get <p>End-to-end total time</p><p>Unit: seconds</p> 
+     * @return Total <p>End-to-end total time</p><p>Unit: seconds</p>
      */
     public Float getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 
-     * @param Total 
+     * Set <p>End-to-end total time</p><p>Unit: seconds</p>
+     * @param Total <p>End-to-end total time</p><p>Unit: seconds</p>
      */
     public void setTotal(Float Total) {
         this.Total = Total;
     }
 
     /**
-     * Get  
-     * @return ApiType 
+     * Get <p>Entry protocol: completions / responses / anthropic</p> 
+     * @return ApiType <p>Entry protocol: completions / responses / anthropic</p>
      */
     public String getApiType() {
         return this.ApiType;
     }
 
     /**
-     * Set 
-     * @param ApiType 
+     * Set <p>Entry protocol: completions / responses / anthropic</p>
+     * @param ApiType <p>Entry protocol: completions / responses / anthropic</p>
      */
     public void setApiType(String ApiType) {
         this.ApiType = ApiType;

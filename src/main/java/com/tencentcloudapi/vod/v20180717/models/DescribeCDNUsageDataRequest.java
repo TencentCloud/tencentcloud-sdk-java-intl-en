@@ -24,138 +24,168 @@ import java.util.HashMap;
 public class DescribeCDNUsageDataRequest extends AbstractModel {
 
     /**
-    * 
+    * Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
     */
     @SerializedName("DataType")
     @Expose
     private String DataType;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
     */
     @SerializedName("DataInterval")
     @Expose
     private Long DataInterval;
 
     /**
-    * 
+    * Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
     */
     @SerializedName("DomainNames")
     @Expose
     private String [] DomainNames;
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return EndTime End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param EndTime End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return DataType 
+     * Get CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li> 
+     * @return DataType CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
      */
     public String getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set 
-     * @param DataType 
+     * Set CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
+     * @param DataType CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return DataInterval 
+     * Get Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned. 
+     * @return DataInterval Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
      */
     public Long getDataInterval() {
         return this.DataInterval;
     }
 
     /**
-     * Set 
-     * @param DataInterval 
+     * Set Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
+     * @param DataInterval Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
      */
     public void setDataInterval(Long DataInterval) {
         this.DataInterval = DataInterval;
     }
 
     /**
-     * Get  
-     * @return DomainNames 
+     * Get Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned. 
+     * @return DomainNames Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
      */
     public String [] getDomainNames() {
         return this.DomainNames;
     }
 
     /**
-     * Set 
-     * @param DomainNames 
+     * Set Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
+     * @param DomainNames Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
      */
     public void setDomainNames(String [] DomainNames) {
         this.DomainNames = DomainNames;

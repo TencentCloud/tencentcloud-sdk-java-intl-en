@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Total number of records that meet filter conditions.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * <p>Large model parsing template detail list.</p>
     */
     @SerializedName("LLMComprehendTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get <p>Total number of records that meet filter conditions.</p> 
+     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set <p>Total number of records that meet filter conditions.</p>
+     * @param TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return LLMComprehendTemplateSet 
+     * Get <p>Large model parsing template detail list.</p> 
+     * @return LLMComprehendTemplateSet <p>Large model parsing template detail list.</p>
      */
     public LLMComprehendTemplateItem [] getLLMComprehendTemplateSet() {
         return this.LLMComprehendTemplateSet;
     }
 
     /**
-     * Set 
-     * @param LLMComprehendTemplateSet 
+     * Set <p>Large model parsing template detail list.</p>
+     * @param LLMComprehendTemplateSet <p>Large model parsing template detail list.</p>
      */
     public void setLLMComprehendTemplateSet(LLMComprehendTemplateItem [] LLMComprehendTemplateSet) {
         this.LLMComprehendTemplateSet = LLMComprehendTemplateSet;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AigcHunyuan3DMeshInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p> 
+     * @return Type <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
+     * @param Type <p>Input file type. Valid values: <li>File: VOD file;</li> <li>Url: accessible URL;</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p> 
+     * @return FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p>
+     * @param FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: image format values: glb and obj are supported.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p> 
+     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p>
+     * @param Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported file formats: glb, obj.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

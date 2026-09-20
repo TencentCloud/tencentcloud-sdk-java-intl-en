@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MediaAnimatedGraphicsInfo extends AbstractModel {
 
     /**
-    * 
+    * Video motion graphic result information
     */
     @SerializedName("AnimatedGraphicsSet")
     @Expose
     private MediaAnimatedGraphicsItem [] AnimatedGraphicsSet;
 
     /**
-     * Get  
-     * @return AnimatedGraphicsSet 
+     * Get Video motion graphic result information 
+     * @return AnimatedGraphicsSet Video motion graphic result information
      */
     public MediaAnimatedGraphicsItem [] getAnimatedGraphicsSet() {
         return this.AnimatedGraphicsSet;
     }
 
     /**
-     * Set 
-     * @param AnimatedGraphicsSet 
+     * Set Video motion graphic result information
+     * @param AnimatedGraphicsSet Video motion graphic result information
      */
     public void setAnimatedGraphicsSet(MediaAnimatedGraphicsItem [] AnimatedGraphicsSet) {
         this.AnimatedGraphicsSet = AnimatedGraphicsSet;

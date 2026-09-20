@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class SearchMediaBySemanticsRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Content to search</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 
+    * <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
     private String KnowledgeBaseId;
 
     /**
-    * 
+    * <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
     */
     @SerializedName("Categories")
     @Expose
     private String [] Categories;
 
     /**
-    * 
+    * <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 
+    * <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
     */
     @SerializedName("Persons")
     @Expose
     private String [] Persons;
 
     /**
-    * 
+    * <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
     */
     @SerializedName("TaskTypes")
     @Expose
     private String [] TaskTypes;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get <p>Content to search</p> 
+     * @return Text <p>Content to search</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set <p>Content to search</p>
+     * @param Text <p>Content to search</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get  
-     * @return KnowledgeBaseId 
+     * Get <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p> 
+     * @return KnowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBaseId 
+     * Set <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+     * @param KnowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p> 
+     * @return Limit <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
+     * @param Limit <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return Categories 
+     * Get <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p> 
+     * @return Categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
      */
     public String [] getCategories() {
         return this.Categories;
     }
 
     /**
-     * Set 
-     * @param Categories 
+     * Set <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+     * @param Categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
      */
     public void setCategories(String [] Categories) {
         this.Categories = Categories;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p> 
+     * @return Tags <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+     * @param Tags <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get  
-     * @return Persons 
+     * Get <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p> 
+     * @return Persons <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
      */
     public String [] getPersons() {
         return this.Persons;
     }
 
     /**
-     * Set 
-     * @param Persons 
+     * Set <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+     * @param Persons <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
      */
     public void setPersons(String [] Persons) {
         this.Persons = Persons;
     }
 
     /**
-     * Get  
-     * @return TaskTypes 
+     * Get <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul> 
+     * @return TaskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     public String [] getTaskTypes() {
         return this.TaskTypes;
     }
 
     /**
-     * Set 
-     * @param TaskTypes 
+     * Set <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @param TaskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     public void setTaskTypes(String [] TaskTypes) {
         this.TaskTypes = TaskTypes;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ProcessMediaByProcedureResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Task ID of the task type Procedure. The task is initiated when the task flow template specified by the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * <p>Task ID of the task type ReviewAudioVideo. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ReviewAudioVideoTask.</p>
     */
     @SerializedName("ReviewAudioVideoTaskId")
     @Expose
     private String ReviewAudioVideoTaskId;
 
     /**
-    * 
+    * <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
     */
     @SerializedName("ImportMediaKnowledgeTaskIdSet")
     @Expose
@@ -52,48 +52,48 @@ public class ProcessMediaByProcedureResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get <p>Task ID of the task type Procedure. The task is initiated when the task flow template specified by the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p> 
+     * @return TaskId <p>Task ID of the task type Procedure. The task is initiated when the task flow template specified by the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set <p>Task ID of the task type Procedure. The task is initiated when the task flow template specified by the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
+     * @param TaskId <p>Task ID of the task type Procedure. The task is initiated when the task flow template specified by the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return ReviewAudioVideoTaskId 
+     * Get <p>Task ID of the task type ReviewAudioVideo. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ReviewAudioVideoTask.</p> 
+     * @return ReviewAudioVideoTaskId <p>Task ID of the task type ReviewAudioVideo. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ReviewAudioVideoTask.</p>
      */
     public String getReviewAudioVideoTaskId() {
         return this.ReviewAudioVideoTaskId;
     }
 
     /**
-     * Set 
-     * @param ReviewAudioVideoTaskId 
+     * Set <p>Task ID of the task type ReviewAudioVideo. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ReviewAudioVideoTask.</p>
+     * @param ReviewAudioVideoTaskId <p>Task ID of the task type ReviewAudioVideo. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ReviewAudioVideoTask.</p>
      */
     public void setReviewAudioVideoTaskId(String ReviewAudioVideoTaskId) {
         this.ReviewAudioVideoTaskId = ReviewAudioVideoTaskId;
     }
 
     /**
-     * Get  
-     * @return ImportMediaKnowledgeTaskIdSet 
+     * Get <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p> 
+     * @return ImportMediaKnowledgeTaskIdSet <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
      */
     public String [] getImportMediaKnowledgeTaskIdSet() {
         return this.ImportMediaKnowledgeTaskIdSet;
     }
 
     /**
-     * Set 
-     * @param ImportMediaKnowledgeTaskIdSet 
+     * Set <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
+     * @param ImportMediaKnowledgeTaskIdSet <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
      */
     public void setImportMediaKnowledgeTaskIdSet(String [] ImportMediaKnowledgeTaskIdSet) {
         this.ImportMediaKnowledgeTaskIdSet = ImportMediaKnowledgeTaskIdSet;

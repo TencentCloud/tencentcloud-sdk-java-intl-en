@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class ProhibitedOcrReviewTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Text prohibition task switch. Value range:
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 
+    * Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Text prohibition task switch. Value range:
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li> 
+     * @return Switch Text prohibition task switch. Value range:
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Text prohibition task switch. Value range:
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
+     * @param Switch Text prohibition task switch. Value range:
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return BlockConfidence 
+     * Get Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 
-     * @param BlockConfidence 
+     * Set Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
+     * @param BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get  
-     * @return ReviewConfidence 
+     * Get Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 
-     * @param ReviewConfidence 
+     * Set Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

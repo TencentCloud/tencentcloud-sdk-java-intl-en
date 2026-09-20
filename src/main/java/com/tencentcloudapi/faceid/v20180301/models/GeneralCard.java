@@ -24,56 +24,49 @@ import java.util.HashMap;
 public class GeneralCard extends AbstractModel {
 
     /**
-    * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID number
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Personal number. It is returned when the identity document type is a passport.
     */
     @SerializedName("PersonalNumber")
     @Expose
     private String PersonalNumber;
 
     /**
-    * The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+    * MRZ line 1 of the passport
     */
     @SerializedName("PassportCodeFirst")
     @Expose
     private String PassportCodeFirst;
 
     /**
-    * The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+    * MRZ line 2 of the passport
     */
     @SerializedName("PassportCodeSecond")
     @Expose
     private String PassportCodeSecond;
 
     /**
-    * Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Expiration date in YYYY-MM-DD format
     */
     @SerializedName("ExpirationDate")
     @Expose
     private String ExpirationDate;
 
     /**
-    * Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Expiration date in YYYY-MM-DD format
     */
     @SerializedName("DueDate")
     @Expose
     private String DueDate;
 
     /**
-    * Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Issue date in YYYY-MM-DD format
     */
     @SerializedName("IssuedDate")
     @Expose
@@ -81,32 +74,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IssuedAuthority")
     @Expose
     private String IssuedAuthority;
 
     /**
-    * Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
+    * Issuing country. Return following the ISO 3166 country coding specification.
     */
     @SerializedName("IssuedCountry")
     @Expose
     private String IssuedCountry;
 
     /**
-    * Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * First name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("FirstName")
     @Expose
@@ -114,35 +102,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastName")
     @Expose
     private String LastName;
 
     /**
-    * Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
+    * Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Age. 0 indicates that no valid information is obtained.
-Example: 0
+    * Age. 0 indicates no valid info is obtained.
     */
     @SerializedName("Age")
     @Expose
     private String Age;
 
     /**
-    * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Date of birth
     */
     @SerializedName("Birthday")
     @Expose
@@ -150,16 +133,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BirthPlace")
     @Expose
     private String BirthPlace;
 
     /**
-    * Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+    * Document nationality. Return following the ISO 3166 country coding specification.
     */
     @SerializedName("Nationality")
     @Expose
@@ -167,186 +147,154 @@ Example: IND
 
     /**
     * Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RegistrationNumber")
     @Expose
     private String RegistrationNumber;
 
     /**
-    * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Document address information
     */
     @SerializedName("Address")
     @Expose
     private Address Address;
 
     /**
-    * Localized name.
+    * Localized name
     */
     @SerializedName("FullNameLocal")
     @Expose
     private String FullNameLocal;
 
     /**
-    * Localization.
+    * Localized name
     */
     @SerializedName("FirstNameLocal")
     @Expose
     private String FirstNameLocal;
 
     /**
-    * Localized surname.
+    * Localized last name
     */
     @SerializedName("LastNameLocal")
     @Expose
     private String LastNameLocal;
 
     /**
-     * Get License number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID number 
+     * @return LicenseNumber ID number
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID number
+     * @param LicenseNumber ID number
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PersonalNumber Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Personal number. It is returned when the identity document type is a passport. 
+     * @return PersonalNumber Personal number. It is returned when the identity document type is a passport.
      */
     public String getPersonalNumber() {
         return this.PersonalNumber;
     }
 
     /**
-     * Set Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PersonalNumber Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Personal number. It is returned when the identity document type is a passport.
+     * @param PersonalNumber Personal number. It is returned when the identity document type is a passport.
      */
     public void setPersonalNumber(String PersonalNumber) {
         this.PersonalNumber = PersonalNumber;
     }
 
     /**
-     * Get The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassportCodeFirst The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get MRZ line 1 of the passport 
+     * @return PassportCodeFirst MRZ line 1 of the passport
      */
     public String getPassportCodeFirst() {
         return this.PassportCodeFirst;
     }
 
     /**
-     * Set The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassportCodeFirst The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set MRZ line 1 of the passport
+     * @param PassportCodeFirst MRZ line 1 of the passport
      */
     public void setPassportCodeFirst(String PassportCodeFirst) {
         this.PassportCodeFirst = PassportCodeFirst;
     }
 
     /**
-     * Get The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassportCodeSecond The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get MRZ line 2 of the passport 
+     * @return PassportCodeSecond MRZ line 2 of the passport
      */
     public String getPassportCodeSecond() {
         return this.PassportCodeSecond;
     }
 
     /**
-     * Set The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassportCodeSecond The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set MRZ line 2 of the passport
+     * @param PassportCodeSecond MRZ line 2 of the passport
      */
     public void setPassportCodeSecond(String PassportCodeSecond) {
         this.PassportCodeSecond = PassportCodeSecond;
     }
 
     /**
-     * Get Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpirationDate Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Expiration date in YYYY-MM-DD format 
+     * @return ExpirationDate Expiration date in YYYY-MM-DD format
      */
     public String getExpirationDate() {
         return this.ExpirationDate;
     }
 
     /**
-     * Set Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpirationDate Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Expiration date in YYYY-MM-DD format
+     * @param ExpirationDate Expiration date in YYYY-MM-DD format
      */
     public void setExpirationDate(String ExpirationDate) {
         this.ExpirationDate = ExpirationDate;
     }
 
     /**
-     * Get Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DueDate Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Expiration date in YYYY-MM-DD format 
+     * @return DueDate Expiration date in YYYY-MM-DD format
      */
     public String getDueDate() {
         return this.DueDate;
     }
 
     /**
-     * Set Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DueDate Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Expiration date in YYYY-MM-DD format
+     * @param DueDate Expiration date in YYYY-MM-DD format
      */
     public void setDueDate(String DueDate) {
         this.DueDate = DueDate;
     }
 
     /**
-     * Get Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedDate Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Issue date in YYYY-MM-DD format 
+     * @return IssuedDate Issue date in YYYY-MM-DD format
      */
     public String getIssuedDate() {
         return this.IssuedDate;
     }
 
     /**
-     * Set Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedDate Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Issue date in YYYY-MM-DD format
+     * @param IssuedDate Issue date in YYYY-MM-DD format
      */
     public void setIssuedDate(String IssuedDate) {
         this.IssuedDate = IssuedDate;
     }
 
     /**
-     * Get Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Issuing authority 
      * @return IssuedAuthority Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIssuedAuthority() {
         return this.IssuedAuthority;
@@ -354,83 +302,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IssuedAuthority Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIssuedAuthority(String IssuedAuthority) {
         this.IssuedAuthority = IssuedAuthority;
     }
 
     /**
-     * Get Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS 
-     * @return IssuedCountry Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
+     * Get Issuing country. Return following the ISO 3166 country coding specification. 
+     * @return IssuedCountry Issuing country. Return following the ISO 3166 country coding specification.
      */
     public String getIssuedCountry() {
         return this.IssuedCountry;
     }
 
     /**
-     * Set Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
-     * @param IssuedCountry Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
+     * Set Issuing country. Return following the ISO 3166 country coding specification.
+     * @param IssuedCountry Issuing country. Return following the ISO 3166 country coding specification.
      */
     public void setIssuedCountry(String IssuedCountry) {
         this.IssuedCountry = IssuedCountry;
     }
 
     /**
-     * Get Full Name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return FullName Name
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param FullName Name
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get First name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return FirstName Name
      */
     public String getFirstName() {
         return this.FirstName;
     }
 
     /**
-     * Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param FirstName Name
      */
     public void setFirstName(String FirstName) {
         this.FirstName = FirstName;
     }
 
     /**
-     * Get Last name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last name 
      * @return LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastName() {
         return this.LastName;
@@ -438,95 +366,75 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastName(String LastName) {
         this.LastName = LastName;
     }
 
     /**
-     * Get Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M 
-     * @return Sex Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
+     * Get Gender on the document
+-M: male
+-F: female
+- X: Other gender identity 
+     * @return Sex Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
-     * @param Sex Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
+     * Set Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
+     * @param Sex Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Age. 0 indicates that no valid information is obtained.
-Example: 0 
-     * @return Age Age. 0 indicates that no valid information is obtained.
-Example: 0
+     * Get Age. 0 indicates no valid info is obtained. 
+     * @return Age Age. 0 indicates no valid info is obtained.
      */
     public String getAge() {
         return this.Age;
     }
 
     /**
-     * Set Age. 0 indicates that no valid information is obtained.
-Example: 0
-     * @param Age Age. 0 indicates that no valid information is obtained.
-Example: 0
+     * Set Age. 0 indicates no valid info is obtained.
+     * @param Age Age. 0 indicates no valid info is obtained.
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Date of birth 
+     * @return Birthday Date of birth
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Date of birth
+     * @param Birthday Date of birth
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Birth place
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Birth place 
      * @return BirthPlace Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBirthPlace() {
         return this.BirthPlace;
@@ -534,43 +442,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BirthPlace Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBirthPlace(String BirthPlace) {
         this.BirthPlace = BirthPlace;
     }
 
     /**
-     * Get Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND 
-     * @return Nationality Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+     * Get Document nationality. Return following the ISO 3166 country coding specification. 
+     * @return Nationality Document nationality. Return following the ISO 3166 country coding specification.
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
-     * @param Nationality Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+     * Set Document nationality. Return following the ISO 3166 country coding specification.
+     * @param Nationality Document nationality. Return following the ISO 3166 country coding specification.
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get Registration number
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Registration number 
      * @return RegistrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegistrationNumber() {
         return this.RegistrationNumber;
@@ -578,77 +474,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RegistrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegistrationNumber(String RegistrationNumber) {
         this.RegistrationNumber = RegistrationNumber;
     }
 
     /**
-     * Get Address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Document address information 
+     * @return Address Document address information
      */
     public Address getAddress() {
         return this.Address;
     }
 
     /**
-     * Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Document address information
+     * @param Address Document address information
      */
     public void setAddress(Address Address) {
         this.Address = Address;
     }
 
     /**
-     * Get Localized name. 
-     * @return FullNameLocal Localized name.
+     * Get Localized name 
+     * @return FullNameLocal Localized name
      */
     public String getFullNameLocal() {
         return this.FullNameLocal;
     }
 
     /**
-     * Set Localized name.
-     * @param FullNameLocal Localized name.
+     * Set Localized name
+     * @param FullNameLocal Localized name
      */
     public void setFullNameLocal(String FullNameLocal) {
         this.FullNameLocal = FullNameLocal;
     }
 
     /**
-     * Get Localization. 
-     * @return FirstNameLocal Localization.
+     * Get Localized name 
+     * @return FirstNameLocal Localized name
      */
     public String getFirstNameLocal() {
         return this.FirstNameLocal;
     }
 
     /**
-     * Set Localization.
-     * @param FirstNameLocal Localization.
+     * Set Localized name
+     * @param FirstNameLocal Localized name
      */
     public void setFirstNameLocal(String FirstNameLocal) {
         this.FirstNameLocal = FirstNameLocal;
     }
 
     /**
-     * Get Localized surname. 
-     * @return LastNameLocal Localized surname.
+     * Get Localized last name 
+     * @return LastNameLocal Localized last name
      */
     public String getLastNameLocal() {
         return this.LastNameLocal;
     }
 
     /**
-     * Set Localized surname.
-     * @param LastNameLocal Localized surname.
+     * Set Localized last name
+     * @param LastNameLocal Localized last name
      */
     public void setLastNameLocal(String LastNameLocal) {
         this.LastNameLocal = LastNameLocal;

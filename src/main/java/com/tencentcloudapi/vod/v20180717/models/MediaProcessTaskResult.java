@@ -24,184 +24,219 @@ import java.util.HashMap;
 public class MediaProcessTaskResult extends AbstractModel {
 
     /**
-    * 
+    * Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
+<li>SnapshotByTimeOffset: time point screenshot.</li>
+<li>SampleSnapshot: sampled screenshot.</li>
+<li>ImageSprites: sprite sheets</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Query result of the video transcoding task. Valid when the task type is `Transcode`.
     */
     @SerializedName("TranscodeTask")
     @Expose
     private MediaProcessTaskTranscodeResult TranscodeTask;
 
     /**
-    * 
+    * Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
     */
     @SerializedName("AnimatedGraphicTask")
     @Expose
     private MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask;
 
     /**
-    * 
+    * Query result of a video time point screenshot task. Valid when the task type is `SnapshotByTimeOffset`.
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
     private MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask;
 
     /**
-    * 
+    * Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
     */
     @SerializedName("SampleSnapshotTask")
     @Expose
     private MediaProcessTaskSampleSnapshotResult SampleSnapshotTask;
 
     /**
-    * 
+    * Query result of an image sprite task. Valid when the task type is `ImageSprite`.
     */
     @SerializedName("ImageSpriteTask")
     @Expose
     private MediaProcessTaskImageSpriteResult ImageSpriteTask;
 
     /**
-    * 
+    * Query result of the video screencapturing for cover image task. Valid when the task type is `CoverBySnapshot`.
     */
     @SerializedName("CoverBySnapshotTask")
     @Expose
     private MediaProcessTaskCoverBySnapshotResult CoverBySnapshotTask;
 
     /**
-    * 
+    * Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
     private MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
+<li>SnapshotByTimeOffset: time point screenshot.</li>
+<li>SampleSnapshot: sampled screenshot.</li>
+<li>ImageSprites: sprite sheets</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li> 
+     * @return Type Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
+<li>SnapshotByTimeOffset: time point screenshot.</li>
+<li>SampleSnapshot: sampled screenshot.</li>
+<li>ImageSprites: sprite sheets</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
+<li>SnapshotByTimeOffset: time point screenshot.</li>
+<li>SampleSnapshot: sampled screenshot.</li>
+<li>ImageSprites: sprite sheets</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+     * @param Type Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AnimatedGraphics: animated image</li>
+<li>SnapshotByTimeOffset: time point screenshot.</li>
+<li>SampleSnapshot: sampled screenshot.</li>
+<li>ImageSprites: sprite sheets</li>
+<li>CoverBySnapshot: screencapturing for cover image</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return TranscodeTask 
+     * Get Query result of the video transcoding task. Valid when the task type is `Transcode`. 
+     * @return TranscodeTask Query result of the video transcoding task. Valid when the task type is `Transcode`.
      */
     public MediaProcessTaskTranscodeResult getTranscodeTask() {
         return this.TranscodeTask;
     }
 
     /**
-     * Set 
-     * @param TranscodeTask 
+     * Set Query result of the video transcoding task. Valid when the task type is `Transcode`.
+     * @param TranscodeTask Query result of the video transcoding task. Valid when the task type is `Transcode`.
      */
     public void setTranscodeTask(MediaProcessTaskTranscodeResult TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get  
-     * @return AnimatedGraphicTask 
+     * Get Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`. 
+     * @return AnimatedGraphicTask Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
      */
     public MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() {
         return this.AnimatedGraphicTask;
     }
 
     /**
-     * Set 
-     * @param AnimatedGraphicTask 
+     * Set Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
+     * @param AnimatedGraphicTask Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
      */
     public void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask) {
         this.AnimatedGraphicTask = AnimatedGraphicTask;
     }
 
     /**
-     * Get  
-     * @return SnapshotByTimeOffsetTask 
+     * Get Query result of a video time point screenshot task. Valid when the task type is `SnapshotByTimeOffset`. 
+     * @return SnapshotByTimeOffsetTask Query result of a video time point screenshot task. Valid when the task type is `SnapshotByTimeOffset`.
      */
     public MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Set 
-     * @param SnapshotByTimeOffsetTask 
+     * Set Query result of a video time point screenshot task. Valid when the task type is `SnapshotByTimeOffset`.
+     * @param SnapshotByTimeOffsetTask Query result of a video time point screenshot task. Valid when the task type is `SnapshotByTimeOffset`.
      */
     public void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get  
-     * @return SampleSnapshotTask 
+     * Get Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`. 
+     * @return SampleSnapshotTask Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
      */
     public MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() {
         return this.SampleSnapshotTask;
     }
 
     /**
-     * Set 
-     * @param SampleSnapshotTask 
+     * Set Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
+     * @param SampleSnapshotTask Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
      */
     public void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult SampleSnapshotTask) {
         this.SampleSnapshotTask = SampleSnapshotTask;
     }
 
     /**
-     * Get  
-     * @return ImageSpriteTask 
+     * Get Query result of an image sprite task. Valid when the task type is `ImageSprite`. 
+     * @return ImageSpriteTask Query result of an image sprite task. Valid when the task type is `ImageSprite`.
      */
     public MediaProcessTaskImageSpriteResult getImageSpriteTask() {
         return this.ImageSpriteTask;
     }
 
     /**
-     * Set 
-     * @param ImageSpriteTask 
+     * Set Query result of an image sprite task. Valid when the task type is `ImageSprite`.
+     * @param ImageSpriteTask Query result of an image sprite task. Valid when the task type is `ImageSprite`.
      */
     public void setImageSpriteTask(MediaProcessTaskImageSpriteResult ImageSpriteTask) {
         this.ImageSpriteTask = ImageSpriteTask;
     }
 
     /**
-     * Get  
-     * @return CoverBySnapshotTask 
+     * Get Query result of the video screencapturing for cover image task. Valid when the task type is `CoverBySnapshot`. 
+     * @return CoverBySnapshotTask Query result of the video screencapturing for cover image task. Valid when the task type is `CoverBySnapshot`.
      */
     public MediaProcessTaskCoverBySnapshotResult getCoverBySnapshotTask() {
         return this.CoverBySnapshotTask;
     }
 
     /**
-     * Set 
-     * @param CoverBySnapshotTask 
+     * Set Query result of the video screencapturing for cover image task. Valid when the task type is `CoverBySnapshot`.
+     * @param CoverBySnapshotTask Query result of the video screencapturing for cover image task. Valid when the task type is `CoverBySnapshot`.
      */
     public void setCoverBySnapshotTask(MediaProcessTaskCoverBySnapshotResult CoverBySnapshotTask) {
         this.CoverBySnapshotTask = CoverBySnapshotTask;
     }
 
     /**
-     * Get  
-     * @return AdaptiveDynamicStreamingTask 
+     * Get Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`. 
+     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
      */
     public MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Set 
-     * @param AdaptiveDynamicStreamingTask 
+     * Set Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
+     * @param AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
      */
     public void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;

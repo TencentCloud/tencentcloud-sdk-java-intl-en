@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MediaAiAnalysisClassificationItem extends AbstractModel {
 
     /**
-    * 
+    * Category name for intelligent categorization.
     */
     @SerializedName("Classification")
     @Expose
     private String Classification;
 
     /**
-    * 
+    * Confidence of the intelligent classification, with a value range from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get  
-     * @return Classification 
+     * Get Category name for intelligent categorization. 
+     * @return Classification Category name for intelligent categorization.
      */
     public String getClassification() {
         return this.Classification;
     }
 
     /**
-     * Set 
-     * @param Classification 
+     * Set Category name for intelligent categorization.
+     * @param Classification Category name for intelligent categorization.
      */
     public void setClassification(String Classification) {
         this.Classification = Classification;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence of the intelligent classification, with a value range from 0 to 100. 
+     * @return Confidence Confidence of the intelligent classification, with a value range from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence of the intelligent classification, with a value range from 0 to 100.
+     * @param Confidence Confidence of the intelligent classification, with a value range from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

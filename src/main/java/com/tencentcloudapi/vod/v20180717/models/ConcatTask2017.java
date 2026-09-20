@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ConcatTask2017 extends AbstractModel {
 
     /**
-    * 
+    * Video splicing task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Video splicing source file information.
     */
     @SerializedName("FileInfoSet")
     @Expose
     private ConcatFileInfo2017 [] FileInfoSet;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Video splicing task ID. 
+     * @return TaskId Video splicing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Video splicing task ID.
+     * @param TaskId Video splicing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return FileInfoSet 
+     * Get Video splicing source file information. 
+     * @return FileInfoSet Video splicing source file information.
      */
     public ConcatFileInfo2017 [] getFileInfoSet() {
         return this.FileInfoSet;
     }
 
     /**
-     * Set 
-     * @param FileInfoSet 
+     * Set Video splicing source file information.
+     * @param FileInfoSet Video splicing source file information.
      */
     public void setFileInfoSet(ConcatFileInfo2017 [] FileInfoSet) {
         this.FileInfoSet = FileInfoSet;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CloneVoiceAsyncOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>Voice ID.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Audition audio.</p>
     */
     @SerializedName("DemoAudio")
     @Expose
     private String DemoAudio;
 
     /**
-    * 
+    * <p>Extended information.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Voice ID.</p> 
+     * @return VoiceId <p>Voice ID.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Voice ID.</p>
+     * @param VoiceId <p>Voice ID.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return DemoAudio 
+     * Get <p>Audition audio.</p> 
+     * @return DemoAudio <p>Audition audio.</p>
      */
     public String getDemoAudio() {
         return this.DemoAudio;
     }
 
     /**
-     * Set 
-     * @param DemoAudio 
+     * Set <p>Audition audio.</p>
+     * @param DemoAudio <p>Audition audio.</p>
      */
     public void setDemoAudio(String DemoAudio) {
         this.DemoAudio = DemoAudio;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Extended information.</p> 
+     * @return ExtInfo <p>Extended information.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Extended information.</p>
+     * @param ExtInfo <p>Extended information.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

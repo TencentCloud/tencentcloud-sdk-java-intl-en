@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class KnowledgeBasesInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>List of knowledge bases currently importing media assets</p>
     */
     @SerializedName("Bases")
     @Expose
     private String [] Bases;
 
     /**
-    * 
+    * <p>Media analysis information in the knowledge base</p>
     */
     @SerializedName("KnowledgeAnalysisInfos")
     @Expose
     private KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos;
 
     /**
-    * 
+    * <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
     */
     @SerializedName("KnowledgeBaseDetails")
     @Expose
     private KnowledgeBaseDetail [] KnowledgeBaseDetails;
 
     /**
-     * Get  
-     * @return Bases 
+     * Get <p>List of knowledge bases currently importing media assets</p> 
+     * @return Bases <p>List of knowledge bases currently importing media assets</p>
      */
     public String [] getBases() {
         return this.Bases;
     }
 
     /**
-     * Set 
-     * @param Bases 
+     * Set <p>List of knowledge bases currently importing media assets</p>
+     * @param Bases <p>List of knowledge bases currently importing media assets</p>
      */
     public void setBases(String [] Bases) {
         this.Bases = Bases;
     }
 
     /**
-     * Get  
-     * @return KnowledgeAnalysisInfos 
+     * Get <p>Media analysis information in the knowledge base</p> 
+     * @return KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
      */
     public KnowledgeAnalysisInfo [] getKnowledgeAnalysisInfos() {
         return this.KnowledgeAnalysisInfos;
     }
 
     /**
-     * Set 
-     * @param KnowledgeAnalysisInfos 
+     * Set <p>Media analysis information in the knowledge base</p>
+     * @param KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
      */
     public void setKnowledgeAnalysisInfos(KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos) {
         this.KnowledgeAnalysisInfos = KnowledgeAnalysisInfos;
     }
 
     /**
-     * Get  
-     * @return KnowledgeBaseDetails 
+     * Get <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p> 
+     * @return KnowledgeBaseDetails <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
      */
     public KnowledgeBaseDetail [] getKnowledgeBaseDetails() {
         return this.KnowledgeBaseDetails;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBaseDetails 
+     * Set <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
+     * @param KnowledgeBaseDetails <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
      */
     public void setKnowledgeBaseDetails(KnowledgeBaseDetail [] KnowledgeBaseDetails) {
         this.KnowledgeBaseDetails = KnowledgeBaseDetails;

@@ -24,69 +24,89 @@ import java.util.HashMap;
 public class VerifyDomainRecordRequest extends AbstractModel {
 
     /**
-    * 
+    * Domain name for on-demand acceleration.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>	
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Verification method:
+<li>dns: dns resolution verification;</li>
+<li>fIle: file validation.</li>
+
+Default value: dns.
     */
     @SerializedName("VerifyType")
     @Expose
     private String VerifyType;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name for on-demand acceleration. 
+     * @return Domain Domain name for on-demand acceleration.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name for on-demand acceleration.
+     * @param Domain Domain name for on-demand acceleration.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>	 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>	
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>	
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>	
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return VerifyType 
+     * Get Verification method:
+<li>dns: dns resolution verification;</li>
+<li>fIle: file validation.</li>
+
+Default value: dns. 
+     * @return VerifyType Verification method:
+<li>dns: dns resolution verification;</li>
+<li>fIle: file validation.</li>
+
+Default value: dns.
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set 
-     * @param VerifyType 
+     * Set Verification method:
+<li>dns: dns resolution verification;</li>
+<li>fIle: file validation.</li>
+
+Default value: dns.
+     * @param VerifyType Verification method:
+<li>dns: dns resolution verification;</li>
+<li>fIle: file validation.</li>
+
+Default value: dns.
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;

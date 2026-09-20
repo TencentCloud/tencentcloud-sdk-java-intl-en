@@ -24,92 +24,137 @@ import java.util.HashMap;
 public class AreaCLSTargetInfo extends AbstractModel {
 
     /**
-    * 
+    * Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
     */
     @SerializedName("CLSRegion")
     @Expose
     private String CLSRegion;
 
     /**
-    * 
+    * ID of the destination topic for delivery.
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 
+    * ID of the target set for submission.
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 
+    * Log delivery status.
+ON: enabled.
+OFF: disabled.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get  
-     * @return CLSRegion 
+     * Get Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li> 
+     * @return CLSRegion Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
      */
     public String getCLSRegion() {
         return this.CLSRegion;
     }
 
     /**
-     * Set 
-     * @param CLSRegion 
+     * Set Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
+     * @param CLSRegion Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
      */
     public void setCLSRegion(String CLSRegion) {
         this.CLSRegion = CLSRegion;
     }
 
     /**
-     * Get  
-     * @return TopicId 
+     * Get ID of the destination topic for delivery. 
+     * @return TopicId ID of the destination topic for delivery.
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 
-     * @param TopicId 
+     * Set ID of the destination topic for delivery.
+     * @param TopicId ID of the destination topic for delivery.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get  
-     * @return LogsetId 
+     * Get ID of the target set for submission. 
+     * @return LogsetId ID of the target set for submission.
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 
-     * @param LogsetId 
+     * Set ID of the target set for submission.
+     * @param LogsetId ID of the target set for submission.
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Log delivery status.
+ON: enabled.
+OFF: disabled. 
+     * @return Switch Log delivery status.
+ON: enabled.
+OFF: disabled.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Log delivery status.
+ON: enabled.
+OFF: disabled.
+     * @param Switch Log delivery status.
+ON: enabled.
+OFF: disabled.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

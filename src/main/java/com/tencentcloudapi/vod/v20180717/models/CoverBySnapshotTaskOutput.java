@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CoverBySnapshotTaskOutput extends AbstractModel {
 
     /**
-    * 
+    * Cover URL.
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-     * Get  
-     * @return CoverUrl 
+     * Get Cover URL. 
+     * @return CoverUrl Cover URL.
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set 
-     * @param CoverUrl 
+     * Set Cover URL.
+     * @param CoverUrl Cover URL.
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

@@ -24,92 +24,112 @@ import java.util.HashMap;
 public class ReviewImageRequest extends AbstractModel {
 
     /**
-    * 
+    * Image content review template ID. Valid values:
+<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+Either FileId or MediaStoragePath must be provided.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided.
     */
     @SerializedName("MediaStoragePath")
     @Expose
     private String MediaStoragePath;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Image content review template ID. Valid values:
+<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li> 
+     * @return Definition Image content review template ID. Valid values:
+<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Image content review template ID. Valid values:
+<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
+     * @param Definition Image content review template ID. Valid values:
+<li>10: Pre-set template. Violation labels supported for detection include Porn, Terror, and Polity.</li>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+Either FileId or MediaStoragePath must be provided. 
+     * @return FileId Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+Either FileId or MediaStoragePath must be provided.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+Either FileId or MediaStoragePath must be provided.
+     * @param FileId Media file ID, which is the globally unique identifier of the file on VOD. This interface requires that the media file must be in an image format.
+Either FileId or MediaStoragePath must be provided.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return MediaStoragePath 
+     * Get Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided. 
+     * @return MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided.
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set 
-     * @param MediaStoragePath 
+     * Set Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided.
+     * @param MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+Either FileId or MediaStoragePath must be provided.
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

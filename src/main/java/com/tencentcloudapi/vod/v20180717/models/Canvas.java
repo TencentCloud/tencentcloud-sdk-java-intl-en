@@ -24,69 +24,94 @@ import java.util.HashMap;
 public class Canvas extends AbstractModel {
 
     /**
-    * 
+    * Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
     */
     @SerializedName("Color")
     @Expose
     private String Color;
 
     /**
-    * 
+    * Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get  
-     * @return Color 
+     * Get Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black. 
+     * @return Color Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
      */
     public String getColor() {
         return this.Color;
     }
 
     /**
-     * Set 
-     * @param Color 
+     * Set Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
+     * @param Color Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
      */
     public void setColor(String Color) {
         this.Color = Color;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track. 
+     * @return Width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
+     * @param Width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track. 
+     * @return Height Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
+     * @param Height Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ForbidMediaDistributionResponse extends AbstractModel {
 
     /**
-    * 
+    * List of non-existent file IDs.
     */
     @SerializedName("NotExistFileIdSet")
     @Expose
@@ -38,16 +38,16 @@ public class ForbidMediaDistributionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return NotExistFileIdSet 
+     * Get List of non-existent file IDs. 
+     * @return NotExistFileIdSet List of non-existent file IDs.
      */
     public String [] getNotExistFileIdSet() {
         return this.NotExistFileIdSet;
     }
 
     /**
-     * Set 
-     * @param NotExistFileIdSet 
+     * Set List of non-existent file IDs.
+     * @param NotExistFileIdSet List of non-existent file IDs.
      */
     public void setNotExistFileIdSet(String [] NotExistFileIdSet) {
         this.NotExistFileIdSet = NotExistFileIdSet;

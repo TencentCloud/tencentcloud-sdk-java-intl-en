@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Total number of log download links.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
     */
     @SerializedName("OverseaCdnLogs")
     @Expose
     private CdnLogInfo [] OverseaCdnLogs;
 
     /**
-    * 
+    * <p>Log Download List of Domestic CDN Nodes.</p>
     */
     @SerializedName("DomesticCdnLogs")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeCdnLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get <p>Total number of log download links.</p> 
+     * @return TotalCount <p>Total number of log download links.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set <p>Total number of log download links.</p>
+     * @param TotalCount <p>Total number of log download links.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return OverseaCdnLogs 
+     * Get <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p> 
+     * @return OverseaCdnLogs <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
      */
     public CdnLogInfo [] getOverseaCdnLogs() {
         return this.OverseaCdnLogs;
     }
 
     /**
-     * Set 
-     * @param OverseaCdnLogs 
+     * Set <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
+     * @param OverseaCdnLogs <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
      */
     public void setOverseaCdnLogs(CdnLogInfo [] OverseaCdnLogs) {
         this.OverseaCdnLogs = OverseaCdnLogs;
     }
 
     /**
-     * Get  
-     * @return DomesticCdnLogs 
+     * Get <p>Log Download List of Domestic CDN Nodes.</p> 
+     * @return DomesticCdnLogs <p>Log Download List of Domestic CDN Nodes.</p>
      */
     public CdnLogInfo [] getDomesticCdnLogs() {
         return this.DomesticCdnLogs;
     }
 
     /**
-     * Set 
-     * @param DomesticCdnLogs 
+     * Set <p>Log Download List of Domestic CDN Nodes.</p>
+     * @param DomesticCdnLogs <p>Log Download List of Domestic CDN Nodes.</p>
      */
     public void setDomesticCdnLogs(CdnLogInfo [] DomesticCdnLogs) {
         this.DomesticCdnLogs = DomesticCdnLogs;

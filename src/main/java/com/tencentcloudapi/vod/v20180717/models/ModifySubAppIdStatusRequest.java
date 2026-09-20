@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class ModifySubAppIdStatusRequest extends AbstractModel {
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling. 
+     * @return Status Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+     * @param Status Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
      */
     public void setStatus(String Status) {
         this.Status = Status;

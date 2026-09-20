@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KnowledgeAnalysisInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Large model parsing template number</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>Large model parsing result</p>
     */
     @SerializedName("AnalysisResults")
     @Expose
     private KnowledgeAnalysisResult [] AnalysisResults;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Large model parsing template number</p> 
+     * @return Definition <p>Large model parsing template number</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Large model parsing template number</p>
+     * @param Definition <p>Large model parsing template number</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return AnalysisResults 
+     * Get <p>Large model parsing result</p> 
+     * @return AnalysisResults <p>Large model parsing result</p>
      */
     public KnowledgeAnalysisResult [] getAnalysisResults() {
         return this.AnalysisResults;
     }
 
     /**
-     * Set 
-     * @param AnalysisResults 
+     * Set <p>Large model parsing result</p>
+     * @param AnalysisResults <p>Large model parsing result</p>
      */
     public void setAnalysisResults(KnowledgeAnalysisResult [] AnalysisResults) {
         this.AnalysisResults = AnalysisResults;

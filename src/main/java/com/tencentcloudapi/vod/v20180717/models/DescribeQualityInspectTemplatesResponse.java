@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeQualityInspectTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Audio and video quality detection template detail list.
     */
     @SerializedName("QualityInspectTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeQualityInspectTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return QualityInspectTemplateSet 
+     * Get Audio and video quality detection template detail list. 
+     * @return QualityInspectTemplateSet Audio and video quality detection template detail list.
      */
     public QualityInspectTemplateItem [] getQualityInspectTemplateSet() {
         return this.QualityInspectTemplateSet;
     }
 
     /**
-     * Set 
-     * @param QualityInspectTemplateSet 
+     * Set Audio and video quality detection template detail list.
+     * @param QualityInspectTemplateSet Audio and video quality detection template detail list.
      */
     public void setQualityInspectTemplateSet(QualityInspectTemplateItem [] QualityInspectTemplateSet) {
         this.QualityInspectTemplateSet = QualityInspectTemplateSet;

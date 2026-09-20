@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SetVodDomainCertificateRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Domain name.</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
     */
     @SerializedName("CertID")
     @Expose
     private String CertID;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get <p>Domain name.</p> 
+     * @return Domain <p>Domain name.</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set <p>Domain name.</p>
+     * @param Domain <p>Domain name.</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return Operation 
+     * Get <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li> 
+     * @return Operation <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 
-     * @param Operation 
+     * Set <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+     * @param Operation <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return CertID 
+     * Get <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p> 
+     * @return CertID <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
      */
     public String getCertID() {
         return this.CertID;
     }
 
     /**
-     * Set 
-     * @param CertID 
+     * Set <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
+     * @param CertID <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
      */
     public void setCertID(String CertID) {
         this.CertID = CertID;

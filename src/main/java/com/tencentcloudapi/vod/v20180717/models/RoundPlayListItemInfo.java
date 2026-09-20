@@ -24,92 +24,107 @@ import java.util.HashMap;
 public class RoundPlayListItemInfo extends AbstractModel {
 
     /**
-    * 
+    * Media file identifier.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * 
+    * Program ID assigned by the system.
     */
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
 
     /**
-    * 
+    * Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file identifier. 
+     * @return FileId Media file identifier.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file identifier.
+     * @param FileId Media file identifier.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return AudioVideoType 
+     * Get Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format. 
+     * @return AudioVideoType Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set 
-     * @param AudioVideoType 
+     * Set Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
+     * @param AudioVideoType Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get  
-     * @return ItemId 
+     * Get Program ID assigned by the system. 
+     * @return ItemId Program ID assigned by the system.
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set 
-     * @param ItemId 
+     * Set Program ID assigned by the system.
+     * @param ItemId Program ID assigned by the system.
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode. 
+     * @return Definition Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
+     * @param Definition Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

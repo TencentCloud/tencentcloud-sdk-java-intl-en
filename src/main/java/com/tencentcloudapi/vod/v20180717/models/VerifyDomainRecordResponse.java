@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VerifyDomainRecordResponse extends AbstractModel {
 
     /**
-    * 
+    * Whether the verification is successful.
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class VerifyDomainRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Result 
+     * Get Whether the verification is successful. 
+     * @return Result Whether the verification is successful.
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 
-     * @param Result 
+     * Set Whether the verification is successful.
+     * @param Result Whether the verification is successful.
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateLLMComprehendTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Large model parsing template name. Length limit: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Large model parsing template description. Length limit: 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummary Summary;
 
     /**
-    * 
+    * <p>Text transcribing and parsing configuration</p>
     */
     @SerializedName("Asr")
     @Expose
     private LLMComprehendAsr Asr;
 
     /**
-    * 
+    * <p>Face recognition configuration</p>
     */
     @SerializedName("FaceRecognition")
     @Expose
     private LLMComprehendFaceRecognition FaceRecognition;
 
     /**
-     * Get  
-     * @return Level 
+     * Get <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul> 
+     * @return Level <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 
-     * @param Level 
+     * Set <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
+     * @param Level <p>Parsing level. Available values are:</p><ul><li>Audio: audio-level parsing</li><li>Video: video-level parsing</li></ul>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Large model parsing template name. Length limit: 64 characters.</p> 
+     * @return Name <p>Large model parsing template name. Length limit: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Large model parsing template name. Length limit: 64 characters.</p>
+     * @param Name <p>Large model parsing template name. Length limit: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Large model parsing template description. Length limit: 256 characters.</p> 
+     * @return Comment <p>Large model parsing template description. Length limit: 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Large model parsing template description. Length limit: 256 characters.</p>
+     * @param Comment <p>Large model parsing template description. Length limit: 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return Summary 
+     * Get <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p> 
+     * @return Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
      */
     public LLMComprehendSummary getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 
-     * @param Summary 
+     * Set <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+     * @param Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
      */
     public void setSummary(LLMComprehendSummary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get  
-     * @return Asr 
+     * Get <p>Text transcribing and parsing configuration</p> 
+     * @return Asr <p>Text transcribing and parsing configuration</p>
      */
     public LLMComprehendAsr getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set 
-     * @param Asr 
+     * Set <p>Text transcribing and parsing configuration</p>
+     * @param Asr <p>Text transcribing and parsing configuration</p>
      */
     public void setAsr(LLMComprehendAsr Asr) {
         this.Asr = Asr;
     }
 
     /**
-     * Get  
-     * @return FaceRecognition 
+     * Get <p>Face recognition configuration</p> 
+     * @return FaceRecognition <p>Face recognition configuration</p>
      */
     public LLMComprehendFaceRecognition getFaceRecognition() {
         return this.FaceRecognition;
     }
 
     /**
-     * Set 
-     * @param FaceRecognition 
+     * Set <p>Face recognition configuration</p>
+     * @param FaceRecognition <p>Face recognition configuration</p>
      */
     public void setFaceRecognition(LLMComprehendFaceRecognition FaceRecognition) {
         this.FaceRecognition = FaceRecognition;

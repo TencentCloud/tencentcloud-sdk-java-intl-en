@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class TranscodePlayInfo2017 extends AbstractModel {
 
     /**
-    * 
+    * Playback address.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Sum of the mean video stream bitrate and mean audio stream bitrate. Unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 
+    * Maximum height of the video stream. Measurement unit: px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 
+    * Maximum value of the video stream width in px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-     * Get  
-     * @return Url 
+     * Get Playback address. 
+     * @return Url Playback address.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Playback address.
+     * @param Url Playback address.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1). 
+     * @return Definition Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+     * @param Definition Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Bitrate 
+     * Get Sum of the mean video stream bitrate and mean audio stream bitrate. Unit: bps. 
+     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate. Unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 
-     * @param Bitrate 
+     * Set Sum of the mean video stream bitrate and mean audio stream bitrate. Unit: bps.
+     * @param Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate. Unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Maximum height of the video stream. Measurement unit: px. 
+     * @return Height Maximum height of the video stream. Measurement unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Maximum height of the video stream. Measurement unit: px.
+     * @param Height Maximum height of the video stream. Measurement unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Maximum value of the video stream width in px. 
+     * @return Width Maximum value of the video stream width in px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Maximum value of the video stream width in px.
+     * @param Width Maximum value of the video stream width in px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;

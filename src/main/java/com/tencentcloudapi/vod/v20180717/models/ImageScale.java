@@ -24,115 +24,140 @@ import java.util.HashMap;
 public class ImageScale extends AbstractModel {
 
     /**
-    * 
+    * Operation type of image scaling. Optional modes:
+<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
+<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
+<li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
+<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 
+    * Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
     */
     @SerializedName("LongEdge")
     @Expose
     private Long LongEdge;
 
     /**
-    * 
+    * Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
     */
     @SerializedName("ShortEdge")
     @Expose
     private Long ShortEdge;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Operation type of image scaling. Optional modes:
+<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
+<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
+<li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
+<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li> 
+     * @return Type Operation type of image scaling. Optional modes:
+<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
+<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
+<li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
+<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Operation type of image scaling. Optional modes:
+<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
+<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
+<li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
+<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
+     * @param Type Operation type of image scaling. Optional modes:
+<li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
+<li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+<li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
+<li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
+<li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Height of the output image in pixels. This field is valid when Type is HeightFirst or Force. 
+     * @return Height Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
+     * @param Height Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force. 
+     * @return Width Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
+     * @param Width Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return LongEdge 
+     * Get Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst. 
+     * @return LongEdge Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
      */
     public Long getLongEdge() {
         return this.LongEdge;
     }
 
     /**
-     * Set 
-     * @param LongEdge 
+     * Set Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
+     * @param LongEdge Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
      */
     public void setLongEdge(Long LongEdge) {
         this.LongEdge = LongEdge;
     }
 
     /**
-     * Get  
-     * @return ShortEdge 
+     * Get Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst. 
+     * @return ShortEdge Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
      */
     public Long getShortEdge() {
         return this.ShortEdge;
     }
 
     /**
-     * Set 
-     * @param ShortEdge 
+     * Set Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
+     * @param ShortEdge Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
      */
     public void setShortEdge(Long ShortEdge) {
         this.ShortEdge = ShortEdge;

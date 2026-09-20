@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class QualityEvaluationConfigureInfo extends AbstractModel {
 
     /**
-    * 
+    * Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li> 
+     * @return Switch Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
+     * @param Switch Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Score 
+     * Get Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60. 
+     * @return Score Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 
-     * @param Score 
+     * Set Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+     * @param Score Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
      */
     public void setScore(Long Score) {
         this.Score = Score;

@@ -33,21 +33,21 @@ public class HwPrivateAccess extends AbstractModel {
     private String Switch;
 
     /**
-    * 
+    * Access ID.
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * 
+    * Key.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 
+    * Bucket Name.
     */
     @SerializedName("Bucket")
     @Expose
@@ -78,48 +78,48 @@ public class HwPrivateAccess extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AccessKey 
+     * Get Access ID. 
+     * @return AccessKey Access ID.
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set 
-     * @param AccessKey 
+     * Set Access ID.
+     * @param AccessKey Access ID.
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get  
-     * @return SecretKey 
+     * Get Key. 
+     * @return SecretKey Key.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 
-     * @param SecretKey 
+     * Set Key.
+     * @param SecretKey Key.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get  
-     * @return Bucket 
+     * Get Bucket Name. 
+     * @return Bucket Bucket Name.
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 
-     * @param Bucket 
+     * Set Bucket Name.
+     * @param Bucket Bucket Name.
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;

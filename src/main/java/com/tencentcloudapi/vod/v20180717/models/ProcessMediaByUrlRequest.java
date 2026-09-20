@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class ProcessMediaByUrlRequest extends AbstractModel {
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * The API is <font color='red'>no longer maintained</font>. For the Recommended Alternative API, refer to the API description.
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * 
+    * Output file COS path information.
     */
     @SerializedName("OutputInfo")
     @Expose
     private MediaOutputInfo OutputInfo;
 
     /**
-    * 
+    * Parameters for the video content review task.
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * 
+    * Parameters for the video content analysis task.
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * 
+    * Parameters for the video content recognition task.
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * 
+    * Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 
+    * Task flow status change notification mode. Valid values: Finish, Change, and None. If not specified, the default is Finish.
     */
     @SerializedName("TasksNotifyMode")
     @Expose
     private String TasksNotifyMode;
 
     /**
-    * 
+    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * Identifier for deduplication. If a request with the same identifier has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return InputInfo 
+     * Get The API is <font color='red'>no longer maintained</font>. For the Recommended Alternative API, refer to the API description. 
+     * @return InputInfo The API is <font color='red'>no longer maintained</font>. For the Recommended Alternative API, refer to the API description.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 
-     * @param InputInfo 
+     * Set The API is <font color='red'>no longer maintained</font>. For the Recommended Alternative API, refer to the API description.
+     * @param InputInfo The API is <font color='red'>no longer maintained</font>. For the Recommended Alternative API, refer to the API description.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get  
-     * @return OutputInfo 
+     * Get Output file COS path information. 
+     * @return OutputInfo Output file COS path information.
      */
     public MediaOutputInfo getOutputInfo() {
         return this.OutputInfo;
     }
 
     /**
-     * Set 
-     * @param OutputInfo 
+     * Set Output file COS path information.
+     * @param OutputInfo Output file COS path information.
      */
     public void setOutputInfo(MediaOutputInfo OutputInfo) {
         this.OutputInfo = OutputInfo;
     }
 
     /**
-     * Get  
-     * @return AiContentReviewTask 
+     * Get Parameters for the video content review task. 
+     * @return AiContentReviewTask Parameters for the video content review task.
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set 
-     * @param AiContentReviewTask 
+     * Set Parameters for the video content review task.
+     * @param AiContentReviewTask Parameters for the video content review task.
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get  
-     * @return AiAnalysisTask 
+     * Get Parameters for the video content analysis task. 
+     * @return AiAnalysisTask Parameters for the video content analysis task.
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set 
-     * @param AiAnalysisTask 
+     * Set Parameters for the video content analysis task.
+     * @param AiAnalysisTask Parameters for the video content analysis task.
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get  
-     * @return AiRecognitionTask 
+     * Get Parameters for the video content recognition task. 
+     * @return AiRecognitionTask Parameters for the video content recognition task.
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set 
-     * @param AiRecognitionTask 
+     * Set Parameters for the video content recognition task.
+     * @param AiRecognitionTask Parameters for the video content recognition task.
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TasksPriority Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TasksPriority Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get  
-     * @return TasksNotifyMode 
+     * Get Task flow status change notification mode. Valid values: Finish, Change, and None. If not specified, the default is Finish. 
+     * @return TasksNotifyMode Task flow status change notification mode. Valid values: Finish, Change, and None. If not specified, the default is Finish.
      */
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
     }
 
     /**
-     * Set 
-     * @param TasksNotifyMode 
+     * Set Task flow status change notification mode. Valid values: Finish, Change, and None. If not specified, the default is Finish.
+     * @param TasksNotifyMode Task flow status change notification mode. Valid values: Finish, Change, and None. If not specified, the default is Finish.
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
+     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

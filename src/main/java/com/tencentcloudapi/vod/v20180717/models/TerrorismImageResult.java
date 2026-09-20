@@ -24,69 +24,119 @@ import java.util.HashMap;
 public class TerrorismImageResult extends AbstractModel {
 
     /**
-    * 
+    * Authentication involves scoring unsafe information, with a score from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Authentication involves scoring unsafe information, with a score from 0 to 100. 
+     * @return Confidence Authentication involves scoring unsafe information, with a score from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Authentication involves scoring unsafe information, with a score from 0 to 100.
+     * @param Confidence Authentication involves scoring unsafe information, with a score from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li> 
+     * @return Suggestion Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+     * @param Suggestion Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return Label 
+     * Get Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li> 
+     * @return Label Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
+     * @param Label Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

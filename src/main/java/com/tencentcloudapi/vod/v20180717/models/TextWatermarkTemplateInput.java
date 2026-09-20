@@ -24,92 +24,117 @@ import java.util.HashMap;
 public class TextWatermarkTemplateInput extends AbstractModel {
 
     /**
-    * 
+    * Font type. Currently, two are supported:
+<li>simkai.ttf: supports Chinese and English;</li>
+<li>arial.ttf: English only.</li>
     */
     @SerializedName("FontType")
     @Expose
     private String FontType;
 
     /**
-    * 
+    * Font size. Format: Npx, where N is a numerical value.
     */
     @SerializedName("FontSize")
     @Expose
     private String FontSize;
 
     /**
-    * 
+    * Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
     */
     @SerializedName("FontColor")
     @Expose
     private String FontColor;
 
     /**
-    * 
+    * Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1.
     */
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
 
     /**
-     * Get  
-     * @return FontType 
+     * Get Font type. Currently, two are supported:
+<li>simkai.ttf: supports Chinese and English;</li>
+<li>arial.ttf: English only.</li> 
+     * @return FontType Font type. Currently, two are supported:
+<li>simkai.ttf: supports Chinese and English;</li>
+<li>arial.ttf: English only.</li>
      */
     public String getFontType() {
         return this.FontType;
     }
 
     /**
-     * Set 
-     * @param FontType 
+     * Set Font type. Currently, two are supported:
+<li>simkai.ttf: supports Chinese and English;</li>
+<li>arial.ttf: English only.</li>
+     * @param FontType Font type. Currently, two are supported:
+<li>simkai.ttf: supports Chinese and English;</li>
+<li>arial.ttf: English only.</li>
      */
     public void setFontType(String FontType) {
         this.FontType = FontType;
     }
 
     /**
-     * Get  
-     * @return FontSize 
+     * Get Font size. Format: Npx, where N is a numerical value. 
+     * @return FontSize Font size. Format: Npx, where N is a numerical value.
      */
     public String getFontSize() {
         return this.FontSize;
     }
 
     /**
-     * Set 
-     * @param FontSize 
+     * Set Font size. Format: Npx, where N is a numerical value.
+     * @param FontSize Font size. Format: Npx, where N is a numerical value.
      */
     public void setFontSize(String FontSize) {
         this.FontSize = FontSize;
     }
 
     /**
-     * Get  
-     * @return FontColor 
+     * Get Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white). 
+     * @return FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
      */
     public String getFontColor() {
         return this.FontColor;
     }
 
     /**
-     * Set 
-     * @param FontColor 
+     * Set Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+     * @param FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;
     }
 
     /**
-     * Get  
-     * @return FontAlpha 
+     * Get Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1. 
+     * @return FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1.
      */
     public Float getFontAlpha() {
         return this.FontAlpha;
     }
 
     /**
-     * Set 
-     * @param FontAlpha 
+     * Set Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1.
+     * @param FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1.
      */
     public void setFontAlpha(Float FontAlpha) {
         this.FontAlpha = FontAlpha;

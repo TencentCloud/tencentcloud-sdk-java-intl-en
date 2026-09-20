@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CLSLogsetInfo extends AbstractModel {
 
     /**
-    * 
+    * Logset ID.
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 
+    * Logset name.
     */
     @SerializedName("LogsetName")
     @Expose
     private String LogsetName;
 
     /**
-     * Get  
-     * @return LogsetId 
+     * Get Logset ID. 
+     * @return LogsetId Logset ID.
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 
-     * @param LogsetId 
+     * Set Logset ID.
+     * @param LogsetId Logset ID.
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get  
-     * @return LogsetName 
+     * Get Logset name. 
+     * @return LogsetName Logset name.
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set 
-     * @param LogsetName 
+     * Set Logset name.
+     * @param LogsetName Logset name.
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;

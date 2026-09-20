@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class AiReviewTaskProhibitedOcrResult extends AbstractModel {
 
     /**
-    * 
+    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * 
+    * Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Input for Ocr text moderation tasks in audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewProhibitedOcrTaskInput Input;
 
     /**
-    * 
+    * Output of Ocr text moderation for prohibited tasks in audio/video moderation.
     */
     @SerializedName("Output")
     @Expose
     private AiReviewProhibitedOcrTaskOutput Output;
 
     /**
-    * 
+    * Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCodeExt 
+     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set 
-     * @param ErrCodeExt 
+     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.) 
+     * @return ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @param ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get Input for Ocr text moderation tasks in audio/video moderation. 
+     * @return Input Input for Ocr text moderation tasks in audio/video moderation.
      */
     public AiReviewProhibitedOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Input for Ocr text moderation tasks in audio/video moderation.
+     * @param Input Input for Ocr text moderation tasks in audio/video moderation.
      */
     public void setInput(AiReviewProhibitedOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of Ocr text moderation for prohibited tasks in audio/video moderation. 
+     * @return Output Output of Ocr text moderation for prohibited tasks in audio/video moderation.
      */
     public AiReviewProhibitedOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+     * @param Output Output of Ocr text moderation for prohibited tasks in audio/video moderation.
      */
     public void setOutput(AiReviewProhibitedOcrTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100. 
+     * @return Progress Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+     * @param Progress Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

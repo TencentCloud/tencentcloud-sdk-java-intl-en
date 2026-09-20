@@ -24,207 +24,217 @@ import java.util.HashMap;
 public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
 
     /**
-    * 
+    * **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Scenario-based video generation parameter configuration.
     */
     @SerializedName("SceneInfo")
     @Expose
     private AigcVideoSceneInfo SceneInfo;
 
     /**
-    * 
+    * Output media file configuration for scenario-based video tasks.
     */
     @SerializedName("OutputConfig")
     @Expose
     private SceneAigcVideoOutputConfig OutputConfig;
 
     /**
-    * 
+    * Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+
     */
     @SerializedName("FileInfos")
     @Expose
     private SceneAigcVideoTaskInputFileInfo [] FileInfos;
 
     /**
-    * 
+    * An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 
+    * Reserved field, used for special purposes.
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-    * 
+    * User-customized prompt
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).** 
+     * @return SubAppId **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+     * @param SubAppId **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return SceneInfo 
+     * Get Scenario-based video generation parameter configuration. 
+     * @return SceneInfo Scenario-based video generation parameter configuration.
      */
     public AigcVideoSceneInfo getSceneInfo() {
         return this.SceneInfo;
     }
 
     /**
-     * Set 
-     * @param SceneInfo 
+     * Set Scenario-based video generation parameter configuration.
+     * @param SceneInfo Scenario-based video generation parameter configuration.
      */
     public void setSceneInfo(AigcVideoSceneInfo SceneInfo) {
         this.SceneInfo = SceneInfo;
     }
 
     /**
-     * Get  
-     * @return OutputConfig 
+     * Get Output media file configuration for scenario-based video tasks. 
+     * @return OutputConfig Output media file configuration for scenario-based video tasks.
      */
     public SceneAigcVideoOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 
-     * @param OutputConfig 
+     * Set Output media file configuration for scenario-based video tasks.
+     * @param OutputConfig Output media file configuration for scenario-based video tasks.
      */
     public void setOutputConfig(SceneAigcVideoOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get  
-     * @return FileInfos 
+     * Get Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+ 
+     * @return FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+
      */
     public SceneAigcVideoTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 
-     * @param FileInfos 
+     * Set Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+
+     * @param FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp.
+
+
      */
     public void setFileInfos(SceneAigcVideoTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters. 
+     * @return SessionContext Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+     * @param SessionContext Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get Reserved field, used for special purposes. 
+     * @return ExtInfo Reserved field, used for special purposes.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set Reserved field, used for special purposes.
+     * @param ExtInfo Reserved field, used for special purposes.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
     }
 
     /**
-     * Get  
-     * @return Prompt 
+     * Get User-customized prompt 
+     * @return Prompt User-customized prompt
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 
-     * @param Prompt 
+     * Set User-customized prompt
+     * @param Prompt User-customized prompt
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;

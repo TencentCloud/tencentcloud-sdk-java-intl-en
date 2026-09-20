@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class ProcessImageAsyncRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>FileId that needs image processing. It cannot be used with Url.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
     */
     @SerializedName("Base64")
     @Expose
     private String Base64;
 
     /**
-    * 
+    * <p>Image processing parameter.</p>
     */
     @SerializedName("ImageTaskInput")
     @Expose
     private ProcessImageAsyncTaskInput ImageTaskInput;
 
     /**
-    * 
+    * <p>Output media file configuration for image processing tasks.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private ProcessImageAsyncOutputConfig OutputConfig;
 
     /**
-    * 
+    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * <p>Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 
+    * <p>Reserved field, used for special purpose.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>FileId that needs image processing. It cannot be used with Url.</p> 
+     * @return FileId <p>FileId that needs image processing. It cannot be used with Url.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>FileId that needs image processing. It cannot be used with Url.</p>
+     * @param FileId <p>FileId that needs image processing. It cannot be used with Url.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p> 
+     * @return Url <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
+     * @param Url <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return Base64 
+     * Get <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p> 
+     * @return Base64 <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
      */
     public String getBase64() {
         return this.Base64;
     }
 
     /**
-     * Set 
-     * @param Base64 
+     * Set <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+     * @param Base64 <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
      */
     public void setBase64(String Base64) {
         this.Base64 = Base64;
     }
 
     /**
-     * Get  
-     * @return ImageTaskInput 
+     * Get <p>Image processing parameter.</p> 
+     * @return ImageTaskInput <p>Image processing parameter.</p>
      */
     public ProcessImageAsyncTaskInput getImageTaskInput() {
         return this.ImageTaskInput;
     }
 
     /**
-     * Set 
-     * @param ImageTaskInput 
+     * Set <p>Image processing parameter.</p>
+     * @param ImageTaskInput <p>Image processing parameter.</p>
      */
     public void setImageTaskInput(ProcessImageAsyncTaskInput ImageTaskInput) {
         this.ImageTaskInput = ImageTaskInput;
     }
 
     /**
-     * Get  
-     * @return OutputConfig 
+     * Get <p>Output media file configuration for image processing tasks.</p> 
+     * @return OutputConfig <p>Output media file configuration for image processing tasks.</p>
      */
     public ProcessImageAsyncOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 
-     * @param OutputConfig 
+     * Set <p>Output media file configuration for image processing tasks.</p>
+     * @param OutputConfig <p>Output media file configuration for image processing tasks.</p>
      */
     public void setOutputConfig(ProcessImageAsyncOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
+     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get <p>Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.</p> 
+     * @return SessionContext <p>Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set <p>Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.</p>
+     * @param SessionContext <p>Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p> 
+     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Reserved field, used for special purpose.</p> 
+     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Reserved field, used for special purpose.</p>
+     * @param ExtInfo <p>Reserved field, used for special purpose.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetNFCTokenResponse extends AbstractModel {
 
     /**
-    * NFCToken
+    * NFCToken (valid for 10 minutes)
     */
     @SerializedName("Token")
     @Expose
@@ -38,16 +38,16 @@ public class GetNFCTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get NFCToken 
-     * @return Token NFCToken
+     * Get NFCToken (valid for 10 minutes) 
+     * @return Token NFCToken (valid for 10 minutes)
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set NFCToken
-     * @param Token NFCToken
+     * Set NFCToken (valid for 10 minutes)
+     * @param Token NFCToken (valid for 10 minutes)
      */
     public void setToken(String Token) {
         this.Token = Token;

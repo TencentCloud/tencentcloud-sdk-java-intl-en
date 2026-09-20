@@ -24,276 +24,316 @@ import java.util.HashMap;
 public class ModifySuperPlayerConfigRequest extends AbstractModel {
 
     /**
-    * 
+    * Player configuration name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * 
+    * Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
     */
     @SerializedName("DrmSwitch")
     @Expose
     private String DrmSwitch;
 
     /**
-    * 
+    * Allowed output of unencrypted adaptive bitstream template ID.
     */
     @SerializedName("AdaptiveDynamicStreamingDefinition")
     @Expose
     private Long AdaptiveDynamicStreamingDefinition;
 
     /**
-    * 
+    * Allowed output of DRM adaptive bitstream template content.
     */
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfoForUpdate DrmStreamingsInfo;
 
     /**
-    * 
+    * Allowed output transcoding template ID.
     */
     @SerializedName("TranscodeDefinition")
     @Expose
     private Long TranscodeDefinition;
 
     /**
-    * 
+    * Allowed output sprite template ID.
     */
     @SerializedName("ImageSpriteDefinition")
     @Expose
     private Long ImageSpriteDefinition;
 
     /**
-    * 
+    * Player's display name for substreams of different resolutions.
     */
     @SerializedName("ResolutionNames")
     @Expose
     private ResolutionNameInfo [] ResolutionNames;
 
     /**
-    * 
+    * Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * 
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Player configuration name. 
+     * @return Name Player configuration name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Player configuration name.
+     * @param Name Player configuration name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return AudioVideoType 
+     * Get Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li> 
+     * @return AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set 
-     * @param AudioVideoType 
+     * Set Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+     * @param AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get  
-     * @return DrmSwitch 
+     * Get Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li> 
+     * @return DrmSwitch Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public String getDrmSwitch() {
         return this.DrmSwitch;
     }
 
     /**
-     * Set 
-     * @param DrmSwitch 
+     * Set Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+     * @param DrmSwitch Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public void setDrmSwitch(String DrmSwitch) {
         this.DrmSwitch = DrmSwitch;
     }
 
     /**
-     * Get  
-     * @return AdaptiveDynamicStreamingDefinition 
+     * Get Allowed output of unencrypted adaptive bitstream template ID. 
+     * @return AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
      */
     public Long getAdaptiveDynamicStreamingDefinition() {
         return this.AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Set 
-     * @param AdaptiveDynamicStreamingDefinition 
+     * Set Allowed output of unencrypted adaptive bitstream template ID.
+     * @param AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
      */
     public void setAdaptiveDynamicStreamingDefinition(Long AdaptiveDynamicStreamingDefinition) {
         this.AdaptiveDynamicStreamingDefinition = AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Get  
-     * @return DrmStreamingsInfo 
+     * Get Allowed output of DRM adaptive bitstream template content. 
+     * @return DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
      */
     public DrmStreamingsInfoForUpdate getDrmStreamingsInfo() {
         return this.DrmStreamingsInfo;
     }
 
     /**
-     * Set 
-     * @param DrmStreamingsInfo 
+     * Set Allowed output of DRM adaptive bitstream template content.
+     * @param DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfoForUpdate DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
     }
 
     /**
-     * Get  
-     * @return TranscodeDefinition 
+     * Get Allowed output transcoding template ID. 
+     * @return TranscodeDefinition Allowed output transcoding template ID.
      */
     public Long getTranscodeDefinition() {
         return this.TranscodeDefinition;
     }
 
     /**
-     * Set 
-     * @param TranscodeDefinition 
+     * Set Allowed output transcoding template ID.
+     * @param TranscodeDefinition Allowed output transcoding template ID.
      */
     public void setTranscodeDefinition(Long TranscodeDefinition) {
         this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
-     * Get  
-     * @return ImageSpriteDefinition 
+     * Get Allowed output sprite template ID. 
+     * @return ImageSpriteDefinition Allowed output sprite template ID.
      */
     public Long getImageSpriteDefinition() {
         return this.ImageSpriteDefinition;
     }
 
     /**
-     * Set 
-     * @param ImageSpriteDefinition 
+     * Set Allowed output sprite template ID.
+     * @param ImageSpriteDefinition Allowed output sprite template ID.
      */
     public void setImageSpriteDefinition(Long ImageSpriteDefinition) {
         this.ImageSpriteDefinition = ImageSpriteDefinition;
     }
 
     /**
-     * Get  
-     * @return ResolutionNames 
+     * Get Player's display name for substreams of different resolutions. 
+     * @return ResolutionNames Player's display name for substreams of different resolutions.
      */
     public ResolutionNameInfo [] getResolutionNames() {
         return this.ResolutionNames;
     }
 
     /**
-     * Set 
-     * @param ResolutionNames 
+     * Set Player's display name for substreams of different resolutions.
+     * @param ResolutionNames Player's display name for substreams of different resolutions.
      */
     public void setResolutionNames(ResolutionNameInfo [] ResolutionNames) {
         this.ResolutionNames = ResolutionNames;
     }
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). 
+     * @return Domain Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+     * @param Domain Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return Scheme 
+     * Get Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li> 
+     * @return Scheme Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 
-     * @param Scheme 
+     * Set Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
+     * @param Scheme Scheme used during playback. Valid values:
+<li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

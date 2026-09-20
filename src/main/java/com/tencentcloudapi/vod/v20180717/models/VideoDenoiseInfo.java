@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class VideoDenoiseInfo extends AbstractModel {
 
     /**
-    * 
+    * Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li> 
+     * @return Switch Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li>
+     * @param Switch Video noise reduction control switch. Available values:
+<li>ON: turn on video noise reduction</li>
+<li>OFF: Turn off video noise reduction.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak. 
+     * @return Type Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak.
+     * @param Type Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+<li>weak: light video noise reduction;</li>
+<li>strong: strong video noise reduction.</li>
+Default value: weak.
      */
     public void setType(String Type) {
         this.Type = Type;

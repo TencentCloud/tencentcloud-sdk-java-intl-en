@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrFullTextResultInput extends AbstractModel {
 
     /**
-    * 
+    * Full text recognition template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Full text recognition template ID. 
+     * @return Definition Full text recognition template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Full text recognition template ID.
+     * @param Definition Full text recognition template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

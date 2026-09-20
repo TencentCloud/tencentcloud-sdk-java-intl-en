@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MediaSnapshotByTimeOffsetInfo extends AbstractModel {
 
     /**
-    * 
+    * Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
     */
     @SerializedName("SnapshotByTimeOffsetSet")
     @Expose
     private MediaSnapshotByTimeOffsetItem [] SnapshotByTimeOffsetSet;
 
     /**
-     * Get  
-     * @return SnapshotByTimeOffsetSet 
+     * Get Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots. 
+     * @return SnapshotByTimeOffsetSet Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
      */
     public MediaSnapshotByTimeOffsetItem [] getSnapshotByTimeOffsetSet() {
         return this.SnapshotByTimeOffsetSet;
     }
 
     /**
-     * Set 
-     * @param SnapshotByTimeOffsetSet 
+     * Set Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
+     * @param SnapshotByTimeOffsetSet Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
      */
     public void setSnapshotByTimeOffsetSet(MediaSnapshotByTimeOffsetItem [] SnapshotByTimeOffsetSet) {
         this.SnapshotByTimeOffsetSet = SnapshotByTimeOffsetSet;

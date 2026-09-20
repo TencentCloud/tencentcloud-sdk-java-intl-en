@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AigcQuotaItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
     */
     @SerializedName("QuotaType")
     @Expose
     private String QuotaType;
 
     /**
-    * 
+    * <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
     */
     @SerializedName("ApiToken")
     @Expose
     private String ApiToken;
 
     /**
-    * 
+    * <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
     */
     @SerializedName("QuotaLimit")
     @Expose
     private Long QuotaLimit;
 
     /**
-    * 
+    * <p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
     */
     @SerializedName("Usage")
     @Expose
     private Long Usage;
 
     /**
-     * Get  
-     * @return QuotaType 
+     * Get <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul> 
+     * @return QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
      */
     public String getQuotaType() {
         return this.QuotaType;
     }
 
     /**
-     * Set 
-     * @param QuotaType 
+     * Set <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+     * @param QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
      */
     public void setQuotaType(String QuotaType) {
         this.QuotaType = QuotaType;
     }
 
     /**
-     * Get  
-     * @return ApiToken 
+     * Get <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p> 
+     * @return ApiToken <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
      */
     public String getApiToken() {
         return this.ApiToken;
     }
 
     /**
-     * Set 
-     * @param ApiToken 
+     * Set <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+     * @param ApiToken <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;
     }
 
     /**
-     * Get  
-     * @return QuotaLimit 
+     * Get <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul> 
+     * @return QuotaLimit <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
      */
     public Long getQuotaLimit() {
         return this.QuotaLimit;
     }
 
     /**
-     * Set 
-     * @param QuotaLimit 
+     * Set <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+     * @param QuotaLimit <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
      */
     public void setQuotaLimit(Long QuotaLimit) {
         this.QuotaLimit = QuotaLimit;
     }
 
     /**
-     * Get  
-     * @return Usage 
+     * Get <p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul> 
+     * @return Usage <p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
      */
     public Long getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set 
-     * @param Usage 
+     * Set <p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
+     * @param Usage <p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
      */
     public void setUsage(Long Usage) {
         this.Usage = Usage;

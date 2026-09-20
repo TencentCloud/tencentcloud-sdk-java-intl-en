@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ProcessMediaByMPS extends AbstractModel {
 
     /**
-    * 
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * MPS video processing task.
     */
     @SerializedName("SubTaskSet")
     @Expose
     private MPSSubTaskResult [] SubTaskSet;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li> 
+     * @return Status Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+     * @param Status Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task. 
+     * @return ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * @param ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task. 
+     * @return Message Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
+     * @param Message Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return SubTaskSet 
+     * Get MPS video processing task. 
+     * @return SubTaskSet MPS video processing task.
      */
     public MPSSubTaskResult [] getSubTaskSet() {
         return this.SubTaskSet;
     }
 
     /**
-     * Set 
-     * @param SubTaskSet 
+     * Set MPS video processing task.
+     * @param SubTaskSet MPS video processing task.
      */
     public void setSubTaskSet(MPSSubTaskResult [] SubTaskSet) {
         this.SubTaskSet = SubTaskSet;

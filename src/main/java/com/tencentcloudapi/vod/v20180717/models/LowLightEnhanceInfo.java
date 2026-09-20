@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class LowLightEnhanceInfo extends AbstractModel {
 
     /**
-    * 
+    * Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li> 
+     * @return Switch Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
+     * @param Switch Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal. 
+     * @return Type Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
+     * @param Type Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;

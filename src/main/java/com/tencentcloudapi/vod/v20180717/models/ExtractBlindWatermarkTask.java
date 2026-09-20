@@ -24,276 +24,291 @@ import java.util.HashMap;
 public class ExtractBlindWatermarkTask extends AbstractModel {
 
     /**
-    * 
+    * Media processing task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Error code. `0` indicates success. Other values indicate failure.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Input information of the file for digital watermark extraction.
     */
     @SerializedName("InputInfo")
     @Expose
     private ExtractBlindWatermarkInputInfo InputInfo;
 
     /**
-    * 
+    * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
     */
     @SerializedName("IsDetected")
     @Expose
     private Boolean IsDetected;
 
     /**
-    * 
+    * Extracted digital watermark content. This field will not be returned if no watermark is detected.
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 
+    * Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
     */
     @SerializedName("ResultUV")
     @Expose
     private String ResultUV;
 
     /**
-    * 
+    * Configuration for digital watermark extraction.
     */
     @SerializedName("ExtractBlindWatermarkConfig")
     @Expose
     private ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig;
 
     /**
-    * 
+    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Media processing task ID. 
+     * @return TaskId Media processing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Media processing task ID.
+     * @param TaskId Media processing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li> 
+     * @return Status Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param Status Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code. `0` indicates success. Other values indicate failure. 
+     * @return ErrCode Error code. `0` indicates success. Other values indicate failure.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code. `0` indicates success. Other values indicate failure.
+     * @param ErrCode Error code. `0` indicates success. Other values indicate failure.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return InputInfo 
+     * Get Input information of the file for digital watermark extraction. 
+     * @return InputInfo Input information of the file for digital watermark extraction.
      */
     public ExtractBlindWatermarkInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 
-     * @param InputInfo 
+     * Set Input information of the file for digital watermark extraction.
+     * @param InputInfo Input information of the file for digital watermark extraction.
      */
     public void setInputInfo(ExtractBlindWatermarkInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li> 
+     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+     * @param Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return IsDetected 
+     * Get Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return. 
+     * @return IsDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
      */
     public Boolean getIsDetected() {
         return this.IsDetected;
     }
 
     /**
-     * Set 
-     * @param IsDetected 
+     * Set Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+     * @param IsDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
      */
     public void setIsDetected(Boolean IsDetected) {
         this.IsDetected = IsDetected;
     }
 
     /**
-     * Get  
-     * @return Result 
+     * Get Extracted digital watermark content. This field will not be returned if no watermark is detected. 
+     * @return Result Extracted digital watermark content. This field will not be returned if no watermark is detected.
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 
-     * @param Result 
+     * Set Extracted digital watermark content. This field will not be returned if no watermark is detected.
+     * @param Result Extracted digital watermark content. This field will not be returned if no watermark is detected.
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get  
-     * @return ResultUV 
+     * Get Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total. 
+     * @return ResultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
      */
     public String getResultUV() {
         return this.ResultUV;
     }
 
     /**
-     * Set 
-     * @param ResultUV 
+     * Set Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+     * @param ResultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
      */
     public void setResultUV(String ResultUV) {
         this.ResultUV = ResultUV;
     }
 
     /**
-     * Get  
-     * @return ExtractBlindWatermarkConfig 
+     * Get Configuration for digital watermark extraction. 
+     * @return ExtractBlindWatermarkConfig Configuration for digital watermark extraction.
      */
     public ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() {
         return this.ExtractBlindWatermarkConfig;
     }
 
     /**
-     * Set 
-     * @param ExtractBlindWatermarkConfig 
+     * Set Configuration for digital watermark extraction.
+     * @param ExtractBlindWatermarkConfig Configuration for digital watermark extraction.
      */
     public void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig) {
         this.ExtractBlindWatermarkConfig = ExtractBlindWatermarkConfig;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
+     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

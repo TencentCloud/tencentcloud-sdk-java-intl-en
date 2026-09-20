@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateAigcCustomVoiceInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Timbre name.</p>
     */
     @SerializedName("VoiceName")
     @Expose
     private String VoiceName;
 
     /**
-    * 
+    * <p>Link to obtain the timbre data file.</p>
     */
     @SerializedName("VoiceUrl")
     @Expose
     private String VoiceUrl;
 
     /**
-    * 
+    * <p>Historic works ID, which can provide audio material by referring to historic works.</p>
     */
     @SerializedName("VideoId")
     @Expose
     private String VideoId;
 
     /**
-     * Get  
-     * @return VoiceName 
+     * Get <p>Timbre name.</p> 
+     * @return VoiceName <p>Timbre name.</p>
      */
     public String getVoiceName() {
         return this.VoiceName;
     }
 
     /**
-     * Set 
-     * @param VoiceName 
+     * Set <p>Timbre name.</p>
+     * @param VoiceName <p>Timbre name.</p>
      */
     public void setVoiceName(String VoiceName) {
         this.VoiceName = VoiceName;
     }
 
     /**
-     * Get  
-     * @return VoiceUrl 
+     * Get <p>Link to obtain the timbre data file.</p> 
+     * @return VoiceUrl <p>Link to obtain the timbre data file.</p>
      */
     public String getVoiceUrl() {
         return this.VoiceUrl;
     }
 
     /**
-     * Set 
-     * @param VoiceUrl 
+     * Set <p>Link to obtain the timbre data file.</p>
+     * @param VoiceUrl <p>Link to obtain the timbre data file.</p>
      */
     public void setVoiceUrl(String VoiceUrl) {
         this.VoiceUrl = VoiceUrl;
     }
 
     /**
-     * Get  
-     * @return VideoId 
+     * Get <p>Historic works ID, which can provide audio material by referring to historic works.</p> 
+     * @return VideoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
      */
     public String getVideoId() {
         return this.VideoId;
     }
 
     /**
-     * Set 
-     * @param VideoId 
+     * Set <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+     * @param VideoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
      */
     public void setVideoId(String VideoId) {
         this.VideoId = VideoId;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ProcessMediaByMPSRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p>
     */
     @SerializedName("MPSProcessMediaParams")
     @Expose
     private String MPSProcessMediaParams;
 
     /**
-    * 
+    * <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private MPSAiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * 
+    * <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p>
     */
     @SerializedName("SmartSubtitlesTask")
     @Expose
     private MPSSmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
-    * 
+    * <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p>
     */
     @SerializedName("SmartEraseTask")
     @Expose
     private MPSSmartEraseTaskInput SmartEraseTask;
 
     /**
-    * 
+    * <p>Reserved field, used for special purposes.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p> 
+     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * @param FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p> 
+     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return MPSProcessMediaParams 
+     * Get <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p> 
+     * @return MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p>
      */
     public String getMPSProcessMediaParams() {
         return this.MPSProcessMediaParams;
     }
 
     /**
-     * Set 
-     * @param MPSProcessMediaParams 
+     * Set <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p>
+     * @param MPSProcessMediaParams <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) so that MPS video processing tasks can be triggered from the VOD side. For details on different types of video processing parameters, see <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capacity</a>. You can create a custom template through the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> api.</p>
      */
     public void setMPSProcessMediaParams(String MPSProcessMediaParams) {
         this.MPSProcessMediaParams = MPSProcessMediaParams;
     }
 
     /**
-     * Get  
-     * @return AiAnalysisTask 
+     * Get <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p> 
+     * @return AiAnalysisTask <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
      */
     public MPSAiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set 
-     * @param AiAnalysisTask 
+     * Set <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+     * @param AiAnalysisTask <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
      */
     public void setAiAnalysisTask(MPSAiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get  
-     * @return SmartSubtitlesTask 
+     * Get <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p> 
+     * @return SmartSubtitlesTask <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p>
      */
     public MPSSmartSubtitlesTaskInput getSmartSubtitlesTask() {
         return this.SmartSubtitlesTask;
     }
 
     /**
-     * Set 
-     * @param SmartSubtitlesTask 
+     * Set <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p>
+     * @param SmartSubtitlesTask <p>Parameters for the smart subtitling task. Valid when MPSProcessMediaParams is empty.</p>
      */
     public void setSmartSubtitlesTask(MPSSmartSubtitlesTaskInput SmartSubtitlesTask) {
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
     /**
-     * Get  
-     * @return SmartEraseTask 
+     * Get <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p> 
+     * @return SmartEraseTask <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p>
      */
     public MPSSmartEraseTaskInput getSmartEraseTask() {
         return this.SmartEraseTask;
     }
 
     /**
-     * Set 
-     * @param SmartEraseTask 
+     * Set <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p>
+     * @param SmartEraseTask <p>Intelligent erasure type task parameter. Valid when MPSProcessMediaParams is empty.</p>
      */
     public void setSmartEraseTask(MPSSmartEraseTaskInput SmartEraseTask) {
         this.SmartEraseTask = SmartEraseTask;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Reserved field, used for special purposes.</p> 
+     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Reserved field, used for special purposes.</p>
+     * @param ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AigcHunyuan3DOutputConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-     * Get  
-     * @return StorageMode 
+     * Get <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p> 
+     * @return StorageMode <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set 
-     * @param StorageMode 
+     * Set <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
+     * @param StorageMode <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;

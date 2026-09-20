@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class JapanIDCard extends AbstractModel {
 
     /**
-    * Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name.
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Identity card
     */
     @SerializedName("LicenseNumber")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Age
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Age")
     @Expose
@@ -49,73 +46,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Expire date
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Expiration time.
     */
     @SerializedName("ExpirationDate")
     @Expose
     private String ExpirationDate;
 
     /**
-    * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address.
     */
     @SerializedName("FormattedAddress")
     @Expose
     private String FormattedAddress;
 
     /**
-     * Get Full name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name. 
+     * @return FullName Name.
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name.
+     * @param FullName Name.
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get License number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Identity card 
+     * @return LicenseNumber Identity card
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Identity card
+     * @param LicenseNumber Identity card
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Age
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Age 
      * @return Age Age
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAge() {
         return this.Age;
@@ -123,19 +107,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Age
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Age Age
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Birthday 
      * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBirthday() {
         return this.Birthday;
@@ -143,49 +123,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Expire date
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpirationDate Expire date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Expiration time. 
+     * @return ExpirationDate Expiration time.
      */
     public String getExpirationDate() {
         return this.ExpirationDate;
     }
 
     /**
-     * Set Expire date
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpirationDate Expire date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Expiration time.
+     * @param ExpirationDate Expiration time.
      */
     public void setExpirationDate(String ExpirationDate) {
         this.ExpirationDate = ExpirationDate;
     }
 
     /**
-     * Get Address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address. 
+     * @return FormattedAddress Address.
      */
     public String getFormattedAddress() {
         return this.FormattedAddress;
     }
 
     /**
-     * Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address.
+     * @param FormattedAddress Address.
      */
     public void setFormattedAddress(String FormattedAddress) {
         this.FormattedAddress = FormattedAddress;

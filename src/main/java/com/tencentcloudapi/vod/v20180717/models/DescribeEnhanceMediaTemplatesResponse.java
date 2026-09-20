@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEnhanceMediaTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Audio and video quality rebirth template detail list.
     */
     @SerializedName("RebuildMediaTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeEnhanceMediaTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return RebuildMediaTemplateSet 
+     * Get Audio and video quality rebirth template detail list. 
+     * @return RebuildMediaTemplateSet Audio and video quality rebirth template detail list.
      */
     public RebuildMediaTemplate [] getRebuildMediaTemplateSet() {
         return this.RebuildMediaTemplateSet;
     }
 
     /**
-     * Set 
-     * @param RebuildMediaTemplateSet 
+     * Set Audio and video quality rebirth template detail list.
+     * @param RebuildMediaTemplateSet Audio and video quality rebirth template detail list.
      */
     public void setRebuildMediaTemplateSet(RebuildMediaTemplate [] RebuildMediaTemplateSet) {
         this.RebuildMediaTemplateSet = RebuildMediaTemplateSet;

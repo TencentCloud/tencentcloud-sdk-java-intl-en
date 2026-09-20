@@ -25,15 +25,13 @@ public class InternationalIDPassport extends AbstractModel {
 
     /**
     * Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("FullName")
     @Expose
@@ -41,39 +39,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Surname")
     @Expose
     private String Surname;
 
     /**
-    * First name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("GivenName")
     @Expose
     private String GivenName;
 
     /**
-    * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Date of birth
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Gender (F: female, M: male).
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Validity period.
     */
     @SerializedName("DateOfExpiration")
     @Expose
@@ -81,41 +74,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IssuingCountry")
     @Expose
     private String IssuingCountry;
 
     /**
-    * Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Country region code
     */
     @SerializedName("NationalityCode")
     @Expose
     private String NationalityCode;
 
     /**
-    * The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+    * MRZ Code sequence in the first row at the bottom
     */
     @SerializedName("PassportCodeFirst")
     @Expose
     private String PassportCodeFirst;
 
     /**
-    * The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+    * MRZ Code sequence in the second line from the bottom
     */
     @SerializedName("PassportCodeSecond")
     @Expose
     private String PassportCodeSecond;
 
     /**
-     * Get Passport ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Passport ID 
      * @return LicenseNumber Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
@@ -123,39 +110,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LicenseNumber Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Full name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return FullName Name
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param FullName Name
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get Last name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last name 
      * @return Surname Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSurname() {
         return this.Surname;
@@ -163,99 +142,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Surname Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSurname(String Surname) {
         this.Surname = Surname;
     }
 
     /**
-     * Get First name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GivenName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return GivenName Name
      */
     public String getGivenName() {
         return this.GivenName;
     }
 
     /**
-     * Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GivenName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param GivenName Name
      */
     public void setGivenName(String GivenName) {
         this.GivenName = GivenName;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Date of birth 
+     * @return Birthday Date of birth
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Date of birth
+     * @param Birthday Date of birth
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sex Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Gender (F: female, M: male). 
+     * @return Sex Gender (F: female, M: male).
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sex Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Gender (F: female, M: male).
+     * @param Sex Gender (F: female, M: male).
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Expiration date
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DateOfExpiration Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Validity period. 
+     * @return DateOfExpiration Validity period.
      */
     public String getDateOfExpiration() {
         return this.DateOfExpiration;
     }
 
     /**
-     * Set Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DateOfExpiration Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Validity period.
+     * @param DateOfExpiration Validity period.
      */
     public void setDateOfExpiration(String DateOfExpiration) {
         this.DateOfExpiration = DateOfExpiration;
     }
 
     /**
-     * Get Issuing country
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Issuing country 
      * @return IssuingCountry Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIssuingCountry() {
         return this.IssuingCountry;
@@ -263,69 +222,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IssuingCountry Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIssuingCountry(String IssuingCountry) {
         this.IssuingCountry = IssuingCountry;
     }
 
     /**
-     * Get Nationality code
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NationalityCode Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Country region code 
+     * @return NationalityCode Country region code
      */
     public String getNationalityCode() {
         return this.NationalityCode;
     }
 
     /**
-     * Set Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NationalityCode Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Country region code
+     * @param NationalityCode Country region code
      */
     public void setNationalityCode(String NationalityCode) {
         this.NationalityCode = NationalityCode;
     }
 
     /**
-     * Get The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassportCodeFirst The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get MRZ Code sequence in the first row at the bottom 
+     * @return PassportCodeFirst MRZ Code sequence in the first row at the bottom
      */
     public String getPassportCodeFirst() {
         return this.PassportCodeFirst;
     }
 
     /**
-     * Set The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassportCodeFirst The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set MRZ Code sequence in the first row at the bottom
+     * @param PassportCodeFirst MRZ Code sequence in the first row at the bottom
      */
     public void setPassportCodeFirst(String PassportCodeFirst) {
         this.PassportCodeFirst = PassportCodeFirst;
     }
 
     /**
-     * Get The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassportCodeSecond The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get MRZ Code sequence in the second line from the bottom 
+     * @return PassportCodeSecond MRZ Code sequence in the second line from the bottom
      */
     public String getPassportCodeSecond() {
         return this.PassportCodeSecond;
     }
 
     /**
-     * Set The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassportCodeSecond The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set MRZ Code sequence in the second line from the bottom
+     * @param PassportCodeSecond MRZ Code sequence in the second line from the bottom
      */
     public void setPassportCodeSecond(String PassportCodeSecond) {
         this.PassportCodeSecond = PassportCodeSecond;

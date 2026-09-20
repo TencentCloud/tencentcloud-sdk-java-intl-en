@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMediaProcessUsageDataResponse extends AbstractModel {
 
     /**
-    * 
+    * Video processing statistics overview, which displays an overview and detailed data of the queried task.
     */
     @SerializedName("MediaProcessDataSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMediaProcessUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return MediaProcessDataSet 
+     * Get Video processing statistics overview, which displays an overview and detailed data of the queried task. 
+     * @return MediaProcessDataSet Video processing statistics overview, which displays an overview and detailed data of the queried task.
      */
     public TaskStatData [] getMediaProcessDataSet() {
         return this.MediaProcessDataSet;
     }
 
     /**
-     * Set 
-     * @param MediaProcessDataSet 
+     * Set Video processing statistics overview, which displays an overview and detailed data of the queried task.
+     * @param MediaProcessDataSet Video processing statistics overview, which displays an overview and detailed data of the queried task.
      */
     public void setMediaProcessDataSet(TaskStatData [] MediaProcessDataSet) {
         this.MediaProcessDataSet = MediaProcessDataSet;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FileDeleteResultItem extends AbstractModel {
 
     /**
-    * 
+    * File ID deleted.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Files deleted this time.
     */
     @SerializedName("DeleteParts")
     @Expose
     private MediaDeleteItem [] DeleteParts;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get File ID deleted. 
+     * @return FileId File ID deleted.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set File ID deleted.
+     * @param FileId File ID deleted.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return DeleteParts 
+     * Get Files deleted this time. 
+     * @return DeleteParts Files deleted this time.
      */
     public MediaDeleteItem [] getDeleteParts() {
         return this.DeleteParts;
     }
 
     /**
-     * Set 
-     * @param DeleteParts 
+     * Set Files deleted this time.
+     * @param DeleteParts Files deleted this time.
      */
     public void setDeleteParts(MediaDeleteItem [] DeleteParts) {
         this.DeleteParts = DeleteParts;

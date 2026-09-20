@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class ClassificationConfigureInfo extends AbstractModel {
 
     /**
-    * 
+    * Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li> 
+     * @return Switch Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
+     * @param Switch Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

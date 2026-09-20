@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DomainHTTPSConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Certificate expiration time.<li>Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
     */
     @SerializedName("CertExpireTime")
     @Expose
     private String CertExpireTime;
 
     /**
-    * 
+    * <p>Certificate ID in the Tencent Cloud SSL product.</p>
     */
     @SerializedName("CloudCertId")
     @Expose
     private String CloudCertId;
 
     /**
-     * Get  
-     * @return CertExpireTime 
+     * Get <p>Certificate expiration time.<li>Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p> 
+     * @return CertExpireTime <p>Certificate expiration time.<li>Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
      */
     public String getCertExpireTime() {
         return this.CertExpireTime;
     }
 
     /**
-     * Set 
-     * @param CertExpireTime 
+     * Set <p>Certificate expiration time.<li>Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
+     * @param CertExpireTime <p>Certificate expiration time.<li>Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
      */
     public void setCertExpireTime(String CertExpireTime) {
         this.CertExpireTime = CertExpireTime;
     }
 
     /**
-     * Get  
-     * @return CloudCertId 
+     * Get <p>Certificate ID in the Tencent Cloud SSL product.</p> 
+     * @return CloudCertId <p>Certificate ID in the Tencent Cloud SSL product.</p>
      */
     public String getCloudCertId() {
         return this.CloudCertId;
     }
 
     /**
-     * Set 
-     * @param CloudCertId 
+     * Set <p>Certificate ID in the Tencent Cloud SSL product.</p>
+     * @param CloudCertId <p>Certificate ID in the Tencent Cloud SSL product.</p>
      */
     public void setCloudCertId(String CloudCertId) {
         this.CloudCertId = CloudCertId;

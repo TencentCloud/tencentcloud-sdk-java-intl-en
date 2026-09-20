@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PullEventsResponse extends AbstractModel {
 
     /**
-    * 
+    * List of events.
     */
     @SerializedName("EventSet")
     @Expose
@@ -38,16 +38,16 @@ public class PullEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return EventSet 
+     * Get List of events. 
+     * @return EventSet List of events.
      */
     public EventContent [] getEventSet() {
         return this.EventSet;
     }
 
     /**
-     * Set 
-     * @param EventSet 
+     * Set List of events.
+     * @param EventSet List of events.
      */
     public void setEventSet(EventContent [] EventSet) {
         this.EventSet = EventSet;

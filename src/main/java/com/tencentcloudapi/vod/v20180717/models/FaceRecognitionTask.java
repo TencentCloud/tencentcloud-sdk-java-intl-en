@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FaceRecognitionTask extends AbstractModel {
 
     /**
-    * 
+    * <p>Face recognition template No.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>Output file information</p>
     */
     @SerializedName("OutputFile")
     @Expose
     private FaceRecognitionOutputFileInfo [] OutputFile;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Face recognition template No.</p> 
+     * @return Definition <p>Face recognition template No.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Face recognition template No.</p>
+     * @param Definition <p>Face recognition template No.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return OutputFile 
+     * Get <p>Output file information</p> 
+     * @return OutputFile <p>Output file information</p>
      */
     public FaceRecognitionOutputFileInfo [] getOutputFile() {
         return this.OutputFile;
     }
 
     /**
-     * Set 
-     * @param OutputFile 
+     * Set <p>Output file information</p>
+     * @param OutputFile <p>Output file information</p>
      */
     public void setOutputFile(FaceRecognitionOutputFileInfo [] OutputFile) {
         this.OutputFile = OutputFile;

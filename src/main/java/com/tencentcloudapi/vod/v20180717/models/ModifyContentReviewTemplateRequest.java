@@ -24,253 +24,273 @@ import java.util.HashMap;
 public class ModifyContentReviewTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of the content review template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Content review template name, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Content review template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Control parameters for unsafe information.
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfoForUpdate TerrorismConfigure;
 
     /**
-    * 
+    * Control parameters for offensive information.
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfoForUpdate PornConfigure;
 
     /**
-    * 
+    * Control parameter for inappropriate information.
     */
     @SerializedName("PoliticalConfigure")
     @Expose
     private PoliticalConfigureInfoForUpdate PoliticalConfigure;
 
     /**
-    * 
+    * Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
     private ProhibitedConfigureInfoForUpdate ProhibitedConfigure;
 
     /**
-    * 
+    * User-defined content review control parameters.
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfoForUpdate UserDefineConfigure;
 
     /**
-    * 
+    * Frame interception interval in seconds. Minimum value: 0.5 seconds.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-    * 
+    * Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
     private String ReviewWallSwitch;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique identifier of the content review template. 
+     * @return Definition Unique identifier of the content review template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique identifier of the content review template.
+     * @param Definition Unique identifier of the content review template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Content review template name, with a length limit of 64 characters. 
+     * @return Name Content review template name, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Content review template name, with a length limit of 64 characters.
+     * @param Name Content review template name, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Content review template description, with a length limit of 256 characters. 
+     * @return Comment Content review template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Content review template description, with a length limit of 256 characters.
+     * @param Comment Content review template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return TerrorismConfigure 
+     * Get Control parameters for unsafe information. 
+     * @return TerrorismConfigure Control parameters for unsafe information.
      */
     public TerrorismConfigureInfoForUpdate getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set 
-     * @param TerrorismConfigure 
+     * Set Control parameters for unsafe information.
+     * @param TerrorismConfigure Control parameters for unsafe information.
      */
     public void setTerrorismConfigure(TerrorismConfigureInfoForUpdate TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get  
-     * @return PornConfigure 
+     * Get Control parameters for offensive information. 
+     * @return PornConfigure Control parameters for offensive information.
      */
     public PornConfigureInfoForUpdate getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set 
-     * @param PornConfigure 
+     * Set Control parameters for offensive information.
+     * @param PornConfigure Control parameters for offensive information.
      */
     public void setPornConfigure(PornConfigureInfoForUpdate PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get  
-     * @return PoliticalConfigure 
+     * Get Control parameter for inappropriate information. 
+     * @return PoliticalConfigure Control parameter for inappropriate information.
      */
     public PoliticalConfigureInfoForUpdate getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set 
-     * @param PoliticalConfigure 
+     * Set Control parameter for inappropriate information.
+     * @param PoliticalConfigure Control parameter for inappropriate information.
      */
     public void setPoliticalConfigure(PoliticalConfigureInfoForUpdate PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
     }
 
     /**
-     * Get  
-     * @return ProhibitedConfigure 
+     * Get Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li> 
+     * @return ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
      */
     public ProhibitedConfigureInfoForUpdate getProhibitedConfigure() {
         return this.ProhibitedConfigure;
     }
 
     /**
-     * Set 
-     * @param ProhibitedConfigure 
+     * Set Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+     * @param ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;
     }
 
     /**
-     * Get  
-     * @return UserDefineConfigure 
+     * Get User-defined content review control parameters. 
+     * @return UserDefineConfigure User-defined content review control parameters.
      */
     public UserDefineConfigureInfoForUpdate getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set 
-     * @param UserDefineConfigure 
+     * Set User-defined content review control parameters.
+     * @param UserDefineConfigure User-defined content review control parameters.
      */
     public void setUserDefineConfigure(UserDefineConfigureInfoForUpdate UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
     }
 
     /**
-     * Get  
-     * @return ScreenshotInterval 
+     * Get Frame interception interval in seconds. Minimum value: 0.5 seconds. 
+     * @return ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set 
-     * @param ScreenshotInterval 
+     * Set Frame interception interval in seconds. Minimum value: 0.5 seconds.
+     * @param ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
     /**
-     * Get  
-     * @return ReviewWallSwitch 
+     * Get Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li> 
+     * @return ReviewWallSwitch Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
     }
 
     /**
-     * Set 
-     * @param ReviewWallSwitch 
+     * Set Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
+     * @param ReviewWallSwitch Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;

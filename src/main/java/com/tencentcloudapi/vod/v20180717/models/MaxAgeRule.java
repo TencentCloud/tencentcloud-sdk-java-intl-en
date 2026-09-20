@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class MaxAgeRule extends AbstractModel {
 
     /**
-    * <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+    * <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
     */
     @SerializedName("MaxAgeType")
     @Expose
     private String MaxAgeType;
 
     /**
-    * <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+    * <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
     */
     @SerializedName("MaxAgeContents")
     @Expose
     private String [] MaxAgeContents;
 
     /**
-    * <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
+    * <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
     */
     @SerializedName("MaxAgeTime")
     @Expose
     private Long MaxAgeTime;
 
     /**
-    * <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
+    * <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p>
     */
     @SerializedName("FollowOrigin")
     @Expose
     private String FollowOrigin;
 
     /**
-     * Get <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li> 
-     * @return MaxAgeType <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+     * Get <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li> 
+     * @return MaxAgeType <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
      */
     public String getMaxAgeType() {
         return this.MaxAgeType;
     }
 
     /**
-     * Set <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
-     * @param MaxAgeType <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+     * Set <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+     * @param MaxAgeType <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
      */
     public void setMaxAgeType(String MaxAgeType) {
         this.MaxAgeType = MaxAgeType;
     }
 
     /**
-     * Get <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b> 
-     * @return MaxAgeContents <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+     * Get <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b> 
+     * @return MaxAgeContents <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
      */
     public String [] getMaxAgeContents() {
         return this.MaxAgeContents;
     }
 
     /**
-     * Set <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
-     * @param MaxAgeContents <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+     * Set <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+     * @param MaxAgeContents <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
      */
     public void setMaxAgeContents(String [] MaxAgeContents) {
         this.MaxAgeContents = MaxAgeContents;
     }
 
     /**
-     * Get <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p> 
-     * @return MaxAgeTime <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
+     * Get <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p> 
+     * @return MaxAgeTime <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
     }
 
     /**
-     * Set <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
-     * @param MaxAgeTime <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
+     * Set <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
+     * @param MaxAgeTime <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;
     }
 
     /**
-     * Get <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p> 
-     * @return FollowOrigin <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
+     * Get <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p> 
+     * @return FollowOrigin <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p>
      */
     public String getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
-     * @param FollowOrigin <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
+     * Set <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p>
+     * @param FollowOrigin <p>Whether to follow the origin site. Valid values: on, off. When enabled, the time setting is ignored.</p>
      */
     public void setFollowOrigin(String FollowOrigin) {
         this.FollowOrigin = FollowOrigin;

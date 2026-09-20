@@ -24,138 +24,203 @@ import java.util.HashMap;
 public class AiReviewTerrorismTaskOutput extends AbstractModel {
 
     /**
-    * 
+    * Video terrorism score. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 
+    * List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-    * 
+    * URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * 
+    * File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Video terrorism score. Value range: 0-100. 
+     * @return Confidence Video terrorism score. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Video terrorism score. Value range: 0-100.
+     * @param Confidence Video terrorism score. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li> 
+     * @return Suggestion Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param Suggestion Terrorism result suggestion. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return Label 
+     * Get Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li> 
+     * @return Label Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li>
+     * @param Label Video terrorism result tag. Value range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: violent and terrorist flags.</li>
+<li>militant: militants.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: violent and terrorist persons.</li>
+<li>scenario: violent and terrorist scene.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
+     * @return SegmentSet List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+     * @param SegmentSet List of video segments with suspected terrorism.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get  
-     * @return SegmentSetFileUrl 
+     * Get URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.) 
+     * @return SegmentSetFileUrl URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set 
-     * @param SegmentSetFileUrl 
+     * Set URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @param SegmentSetFileUrl URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get  
-     * @return SegmentSetFileUrlExpireTime 
+     * Get File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return SegmentSetFileUrlExpireTime File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set 
-     * @param SegmentSetFileUrlExpireTime 
+     * Set File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param SegmentSetFileUrlExpireTime File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

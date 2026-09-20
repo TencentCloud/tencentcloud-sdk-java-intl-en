@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrWordsResultItem extends AbstractModel {
 
     /**
-    * 
+    * Speech keyword.
     */
     @SerializedName("Word")
     @Expose
     private String Word;
 
     /**
-    * 
+    * List of segments where the speech keyword appears.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskAsrWordsSegmentItem [] SegmentSet;
 
     /**
-     * Get  
-     * @return Word 
+     * Get Speech keyword. 
+     * @return Word Speech keyword.
      */
     public String getWord() {
         return this.Word;
     }
 
     /**
-     * Set 
-     * @param Word 
+     * Set Speech keyword.
+     * @param Word Speech keyword.
      */
     public void setWord(String Word) {
         this.Word = Word;
     }
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get List of segments where the speech keyword appears. 
+     * @return SegmentSet List of segments where the speech keyword appears.
      */
     public AiRecognitionTaskAsrWordsSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set List of segments where the speech keyword appears.
+     * @param SegmentSet List of segments where the speech keyword appears.
      */
     public void setSegmentSet(AiRecognitionTaskAsrWordsSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

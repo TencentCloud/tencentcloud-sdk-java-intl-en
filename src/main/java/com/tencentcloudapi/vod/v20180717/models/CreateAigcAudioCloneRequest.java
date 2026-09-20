@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class CreateAigcAudioCloneRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
     */
     @SerializedName("AudioFileInfo")
     @Expose
     private AigcAudioCloneInputFileInfo AudioFileInfo;
 
     /**
-    * 
+    * <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 
+    * <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
     */
     @SerializedName("PromptAudioFileInfo")
     @Expose
     private AigcAudioCloneInputFileInfo PromptAudioFileInfo;
 
     /**
-    * 
+    * <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
     */
     @SerializedName("PromptText")
     @Expose
     private String PromptText;
 
     /**
-    * 
+    * <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-    * 
+    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 
+    * <p>Reserved field, used for special purposes.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return AudioFileInfo 
+     * Get <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p> 
+     * @return AudioFileInfo <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
      */
     public AigcAudioCloneInputFileInfo getAudioFileInfo() {
         return this.AudioFileInfo;
     }
 
     /**
-     * Set 
-     * @param AudioFileInfo 
+     * Set <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
+     * @param AudioFileInfo <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
      */
     public void setAudioFileInfo(AigcAudioCloneInputFileInfo AudioFileInfo) {
         this.AudioFileInfo = AudioFileInfo;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul> 
+     * @return VoiceId <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
+     * @param VoiceId <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p> 
+     * @return Text <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
+     * @param Text <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get  
-     * @return PromptAudioFileInfo 
+     * Get <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p> 
+     * @return PromptAudioFileInfo <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
      */
     public AigcAudioCloneInputFileInfo getPromptAudioFileInfo() {
         return this.PromptAudioFileInfo;
     }
 
     /**
-     * Set 
-     * @param PromptAudioFileInfo 
+     * Set <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
+     * @param PromptAudioFileInfo <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
      */
     public void setPromptAudioFileInfo(AigcAudioCloneInputFileInfo PromptAudioFileInfo) {
         this.PromptAudioFileInfo = PromptAudioFileInfo;
     }
 
     /**
-     * Get  
-     * @return PromptText 
+     * Get <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p> 
+     * @return PromptText <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
      */
     public String getPromptText() {
         return this.PromptText;
     }
 
     /**
-     * Set 
-     * @param PromptText 
+     * Set <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
+     * @param PromptText <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
      */
     public void setPromptText(String PromptText) {
         this.PromptText = PromptText;
     }
 
     /**
-     * Get  
-     * @return Payload 
+     * Get <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p> 
+     * @return Payload <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 
-     * @param Payload 
+     * Set <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
+     * @param Payload <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
+     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p> 
+     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Reserved field, used for special purposes.</p> 
+     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Reserved field, used for special purposes.</p>
+     * @param ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

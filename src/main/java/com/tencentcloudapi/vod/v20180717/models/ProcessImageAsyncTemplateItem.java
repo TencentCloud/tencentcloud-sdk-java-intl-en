@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ProcessImageAsyncTemplateItem extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of the image asynchronous processing template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Template type.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Image async processing template name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Description information of the async image processing template.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 
+    * Image async processing template configuration.
     */
     @SerializedName("ProcessImageConfigure")
     @Expose
     private ProcessImageAsyncTask ProcessImageConfigure;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique identifier of the image asynchronous processing template. 
+     * @return Definition Unique identifier of the image asynchronous processing template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique identifier of the image asynchronous processing template.
+     * @param Definition Unique identifier of the image asynchronous processing template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Template type. 
+     * @return Type Template type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Template type.
+     * @param Type Template type.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Image async processing template name. 
+     * @return Name Image async processing template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Image async processing template name.
+     * @param Name Image async processing template name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Description information of the async image processing template. 
+     * @return Comment Description information of the async image processing template.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Description information of the async image processing template.
+     * @param Comment Description information of the async image processing template.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return ProcessImageConfigure 
+     * Get Image async processing template configuration. 
+     * @return ProcessImageConfigure Image async processing template configuration.
      */
     public ProcessImageAsyncTask getProcessImageConfigure() {
         return this.ProcessImageConfigure;
     }
 
     /**
-     * Set 
-     * @param ProcessImageConfigure 
+     * Set Image async processing template configuration.
+     * @param ProcessImageConfigure Image async processing template configuration.
      */
     public void setProcessImageConfigure(ProcessImageAsyncTask ProcessImageConfigure) {
         this.ProcessImageConfigure = ProcessImageConfigure;

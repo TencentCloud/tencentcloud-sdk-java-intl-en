@@ -24,69 +24,94 @@ import java.util.HashMap;
 public class ScratchRepairInfo extends AbstractModel {
 
     /**
-    * 
+    * Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
     */
     @SerializedName("Intensity")
     @Expose
     private Float Intensity;
 
     /**
-    * 
+    * Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li> 
+     * @return Switch Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
+     * @param Switch Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Intensity 
+     * Get Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0. 
+     * @return Intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     public Float getIntensity() {
         return this.Intensity;
     }
 
     /**
-     * Set 
-     * @param Intensity 
+     * Set Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
+     * @param Intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     public void setIntensity(Float Intensity) {
         this.Intensity = Intensity;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal. 
+     * @return Type Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
+     * @param Type Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;

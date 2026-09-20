@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class AsrWordsConfigureInfo extends AbstractModel {
 
     /**
-    * 
+    * Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
     */
     @SerializedName("LabelSet")
     @Expose
     private String [] LabelSet;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li> 
+     * @return Switch Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
+     * @param Switch Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return LabelSet 
+     * Get Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters. 
+     * @return LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set 
-     * @param LabelSet 
+     * Set Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+     * @param LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;

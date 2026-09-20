@@ -24,69 +24,109 @@ import java.util.HashMap;
 public class AudioSeparateInfo extends AbstractModel {
 
     /**
-    * 
+    * Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
     */
     @SerializedName("Track")
     @Expose
     private String Track;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li> 
+     * @return Switch Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
+     * @param Switch Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal. 
+     * @return Type Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
+     * @param Type Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Track 
+     * Get Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal. 
+     * @return Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
      */
     public String getTrack() {
         return this.Track;
     }
 
     /**
-     * Set 
-     * @param Track 
+     * Set Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
+     * @param Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
      */
     public void setTrack(String Track) {
         this.Track = Track;

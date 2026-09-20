@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Unique identifier of the Large Model Understanding template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Large model parsing template name. Length limit: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Large model parsing template description. Length limit: 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 
+    * <p>Segment summary parsing configuration</p>
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummaryForUpdate Summary;
 
     /**
-    * 
+    * <p>Text transcription parsing configuration</p>
     */
     @SerializedName("Asr")
     @Expose
     private LLMComprehendAsrForUpdate Asr;
 
     /**
-    * 
+    * <p>Facial recognition configuration</p>
     */
     @SerializedName("FaceRecognition")
     @Expose
     private LLMComprehendFaceRecognitionForUpdate FaceRecognition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Unique identifier of the Large Model Understanding template.</p> 
+     * @return Definition <p>Unique identifier of the Large Model Understanding template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Unique identifier of the Large Model Understanding template.</p>
+     * @param Definition <p>Unique identifier of the Large Model Understanding template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Large model parsing template name. Length limit: 64 characters.</p> 
+     * @return Name <p>Large model parsing template name. Length limit: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Large model parsing template name. Length limit: 64 characters.</p>
+     * @param Name <p>Large model parsing template name. Length limit: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Large model parsing template description. Length limit: 256 characters.</p> 
+     * @return Comment <p>Large model parsing template description. Length limit: 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Large model parsing template description. Length limit: 256 characters.</p>
+     * @param Comment <p>Large model parsing template description. Length limit: 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return Model 
+     * Get <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul> 
+     * @return Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 
-     * @param Model 
+     * Set <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+     * @param Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get  
-     * @return Summary 
+     * Get <p>Segment summary parsing configuration</p> 
+     * @return Summary <p>Segment summary parsing configuration</p>
      */
     public LLMComprehendSummaryForUpdate getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 
-     * @param Summary 
+     * Set <p>Segment summary parsing configuration</p>
+     * @param Summary <p>Segment summary parsing configuration</p>
      */
     public void setSummary(LLMComprehendSummaryForUpdate Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get  
-     * @return Asr 
+     * Get <p>Text transcription parsing configuration</p> 
+     * @return Asr <p>Text transcription parsing configuration</p>
      */
     public LLMComprehendAsrForUpdate getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set 
-     * @param Asr 
+     * Set <p>Text transcription parsing configuration</p>
+     * @param Asr <p>Text transcription parsing configuration</p>
      */
     public void setAsr(LLMComprehendAsrForUpdate Asr) {
         this.Asr = Asr;
     }
 
     /**
-     * Get  
-     * @return FaceRecognition 
+     * Get <p>Facial recognition configuration</p> 
+     * @return FaceRecognition <p>Facial recognition configuration</p>
      */
     public LLMComprehendFaceRecognitionForUpdate getFaceRecognition() {
         return this.FaceRecognition;
     }
 
     /**
-     * Set 
-     * @param FaceRecognition 
+     * Set <p>Facial recognition configuration</p>
+     * @param FaceRecognition <p>Facial recognition configuration</p>
      */
     public void setFaceRecognition(LLMComprehendFaceRecognitionForUpdate FaceRecognition) {
         this.FaceRecognition = FaceRecognition;

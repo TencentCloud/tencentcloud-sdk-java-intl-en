@@ -33,7 +33,7 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
     /**
     * Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
     */
     @SerializedName("SignParam")
     @Expose
@@ -49,22 +49,22 @@ In seconds. Maximum settable value: 630720000.
 
     /**
     * List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
     */
     @SerializedName("FileExtensions")
     @Expose
     private String [] FileExtensions;
 
     /**
-    * whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+    * whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * Secondary key for signature calculation;
+    * Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
     */
     @SerializedName("BackupSecretKey")
@@ -93,9 +93,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
     /**
      * Get Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit. 
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit. 
      * @return SignParam Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
      */
     public String getSignParam() {
         return this.SignParam;
@@ -103,9 +103,9 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
     /**
      * Set Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
      * @param SignParam Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
      */
     public void setSignParam(String SignParam) {
         this.SignParam = SignParam;
@@ -133,9 +133,9 @@ In seconds. Maximum settable value: 630720000.
 
     /**
      * Get List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files. 
+If it contains the character *, it means all files. 
      * @return FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      */
     public String [] getFileExtensions() {
         return this.FileExtensions;
@@ -143,38 +143,38 @@ If it contains the character *, it indicates all files.
 
     /**
      * Set List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      * @param FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      */
     public void setFileExtensions(String [] FileExtensions) {
         this.FileExtensions = FileExtensions;
     }
 
     /**
-     * Get whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions. 
-     * @return FilterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+     * Get whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions. 
+     * @return FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
-     * @param FilterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+     * Set whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+     * @param FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get Secondary key for signature calculation;
+     * Get Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters. 
-     * @return BackupSecretKey Secondary key for signature calculation;
+     * @return BackupSecretKey Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
      */
     public String getBackupSecretKey() {
@@ -182,9 +182,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
     }
 
     /**
-     * Set Secondary key for signature calculation;
+     * Set Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
-     * @param BackupSecretKey Secondary key for signature calculation;
+     * @param BackupSecretKey Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
      */
     public void setBackupSecretKey(String BackupSecretKey) {

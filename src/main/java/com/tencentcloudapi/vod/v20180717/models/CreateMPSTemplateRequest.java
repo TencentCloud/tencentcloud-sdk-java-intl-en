@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateMPSTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Type of MPS template to create. Values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Create a subtitle suppression template.</li>
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * 
+    * <p>MPS template creation parameter. This parameter is used to pass through to the media processing service (MPS) to create user-defined MPS task templates from the VOD side.<br>Currently, only the following task types can be created as templates in this way:</p><ol><li>AI analysis: Only the content of the Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40249?from_cn_redirect=1">Create Content Analysis Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: Only the content of the Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117004?from_cn_redirect=1">Create Smart Subtitle Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: Only the content of the Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123735?from_cn_redirect=1">Create Intelligent Erasure Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol><p>Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them. The above pass-through parameters are represented in JSON format.</p>
     */
     @SerializedName("MPSCreateTemplateParams")
     @Expose
     private String MPSCreateTemplateParams;
 
     /**
-    * 
+    * <p>Intelligent analysis template parameter. Valid when MPSCreateTemplateParams is empty.</p>
     */
     @SerializedName("AIAnalysisTemplate")
     @Expose
     private MPSAIAnalysisTemplate AIAnalysisTemplate;
 
     /**
-    * 
+    * <p>Smart subtitle template parameter. Valid when MPSCreateTemplateParams is empty.</p>
     */
     @SerializedName("SmartSubtitleTemplate")
     @Expose
     private MPSSmartSubtitleTemplate SmartSubtitleTemplate;
 
     /**
-    * 
+    * <p>Intelligent erasure template parameter. Valid when MPSCreateTemplateParams is empty.</p>
     */
     @SerializedName("SmartEraseTemplate")
     @Expose
     private MPSSmartEraseTemplate SmartEraseTemplate;
 
     /**
-    * 
+    * <p>Subtitle suppression template parameter. Valid when MPSCreateTemplateParams is empty.</p>
     */
     @SerializedName("EmbedSubtitleTemplate")
     @Expose
     private MPSEmbedSubtitleTemplate EmbedSubtitleTemplate;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p> 
+     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return TemplateType 
+     * Get <p>Type of MPS template to create. Values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Create a subtitle suppression template.</li> 
+     * @return TemplateType <p>Type of MPS template to create. Values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Create a subtitle suppression template.</li>
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 
-     * @param TemplateType 
+     * Set <p>Type of MPS template to create. Values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Create a subtitle suppression template.</li>
+     * @param TemplateType <p>Type of MPS template to create. Values:</p><li>AIAnalysis: Create an intelligent analysis template.</li><li>SmartSubtitle: Create an intelligent subtitle template.</li><li>SmartErase: Create an intelligent erasure template.</li><li>EmbedSubtitle: Create a subtitle suppression template.</li>
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get  
-     * @return MPSCreateTemplateParams 
+     * Get <p>MPS template creation parameter. This parameter is used to pass through to the media processing service (MPS) to create user-defined MPS task templates from the VOD side.<br>Currently, only the following task types can be created as templates in this way:</p><ol><li>AI analysis: Only the content of the Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40249?from_cn_redirect=1">Create Content Analysis Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: Only the content of the Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117004?from_cn_redirect=1">Create Smart Subtitle Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: Only the content of the Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123735?from_cn_redirect=1">Create Intelligent Erasure Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol><p>Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them. The above pass-through parameters are represented in JSON format.</p> 
+     * @return MPSCreateTemplateParams <p>MPS template creation parameter. This parameter is used to pass through to the media processing service (MPS) to create user-defined MPS task templates from the VOD side.<br>Currently, only the following task types can be created as templates in this way:</p><ol><li>AI analysis: Only the content of the Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40249?from_cn_redirect=1">Create Content Analysis Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: Only the content of the Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117004?from_cn_redirect=1">Create Smart Subtitle Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: Only the content of the Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123735?from_cn_redirect=1">Create Intelligent Erasure Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol><p>Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them. The above pass-through parameters are represented in JSON format.</p>
      */
     public String getMPSCreateTemplateParams() {
         return this.MPSCreateTemplateParams;
     }
 
     /**
-     * Set 
-     * @param MPSCreateTemplateParams 
+     * Set <p>MPS template creation parameter. This parameter is used to pass through to the media processing service (MPS) to create user-defined MPS task templates from the VOD side.<br>Currently, only the following task types can be created as templates in this way:</p><ol><li>AI analysis: Only the content of the Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40249?from_cn_redirect=1">Create Content Analysis Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: Only the content of the Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117004?from_cn_redirect=1">Create Smart Subtitle Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: Only the content of the Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123735?from_cn_redirect=1">Create Intelligent Erasure Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol><p>Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them. The above pass-through parameters are represented in JSON format.</p>
+     * @param MPSCreateTemplateParams <p>MPS template creation parameter. This parameter is used to pass through to the media processing service (MPS) to create user-defined MPS task templates from the VOD side.<br>Currently, only the following task types can be created as templates in this way:</p><ol><li>AI analysis: Only the content of the Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40249?from_cn_redirect=1">Create Content Analysis Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: Only the content of the Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117004?from_cn_redirect=1">Create Smart Subtitle Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: Only the content of the Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123735?from_cn_redirect=1">Create Intelligent Erasure Template</a> API can be specified. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol><p>Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them. The above pass-through parameters are represented in JSON format.</p>
      */
     public void setMPSCreateTemplateParams(String MPSCreateTemplateParams) {
         this.MPSCreateTemplateParams = MPSCreateTemplateParams;
     }
 
     /**
-     * Get  
-     * @return AIAnalysisTemplate 
+     * Get <p>Intelligent analysis template parameter. Valid when MPSCreateTemplateParams is empty.</p> 
+     * @return AIAnalysisTemplate <p>Intelligent analysis template parameter. Valid when MPSCreateTemplateParams is empty.</p>
      */
     public MPSAIAnalysisTemplate getAIAnalysisTemplate() {
         return this.AIAnalysisTemplate;
     }
 
     /**
-     * Set 
-     * @param AIAnalysisTemplate 
+     * Set <p>Intelligent analysis template parameter. Valid when MPSCreateTemplateParams is empty.</p>
+     * @param AIAnalysisTemplate <p>Intelligent analysis template parameter. Valid when MPSCreateTemplateParams is empty.</p>
      */
     public void setAIAnalysisTemplate(MPSAIAnalysisTemplate AIAnalysisTemplate) {
         this.AIAnalysisTemplate = AIAnalysisTemplate;
     }
 
     /**
-     * Get  
-     * @return SmartSubtitleTemplate 
+     * Get <p>Smart subtitle template parameter. Valid when MPSCreateTemplateParams is empty.</p> 
+     * @return SmartSubtitleTemplate <p>Smart subtitle template parameter. Valid when MPSCreateTemplateParams is empty.</p>
      */
     public MPSSmartSubtitleTemplate getSmartSubtitleTemplate() {
         return this.SmartSubtitleTemplate;
     }
 
     /**
-     * Set 
-     * @param SmartSubtitleTemplate 
+     * Set <p>Smart subtitle template parameter. Valid when MPSCreateTemplateParams is empty.</p>
+     * @param SmartSubtitleTemplate <p>Smart subtitle template parameter. Valid when MPSCreateTemplateParams is empty.</p>
      */
     public void setSmartSubtitleTemplate(MPSSmartSubtitleTemplate SmartSubtitleTemplate) {
         this.SmartSubtitleTemplate = SmartSubtitleTemplate;
     }
 
     /**
-     * Get  
-     * @return SmartEraseTemplate 
+     * Get <p>Intelligent erasure template parameter. Valid when MPSCreateTemplateParams is empty.</p> 
+     * @return SmartEraseTemplate <p>Intelligent erasure template parameter. Valid when MPSCreateTemplateParams is empty.</p>
      */
     public MPSSmartEraseTemplate getSmartEraseTemplate() {
         return this.SmartEraseTemplate;
     }
 
     /**
-     * Set 
-     * @param SmartEraseTemplate 
+     * Set <p>Intelligent erasure template parameter. Valid when MPSCreateTemplateParams is empty.</p>
+     * @param SmartEraseTemplate <p>Intelligent erasure template parameter. Valid when MPSCreateTemplateParams is empty.</p>
      */
     public void setSmartEraseTemplate(MPSSmartEraseTemplate SmartEraseTemplate) {
         this.SmartEraseTemplate = SmartEraseTemplate;
     }
 
     /**
-     * Get  
-     * @return EmbedSubtitleTemplate 
+     * Get <p>Subtitle suppression template parameter. Valid when MPSCreateTemplateParams is empty.</p> 
+     * @return EmbedSubtitleTemplate <p>Subtitle suppression template parameter. Valid when MPSCreateTemplateParams is empty.</p>
      */
     public MPSEmbedSubtitleTemplate getEmbedSubtitleTemplate() {
         return this.EmbedSubtitleTemplate;
     }
 
     /**
-     * Set 
-     * @param EmbedSubtitleTemplate 
+     * Set <p>Subtitle suppression template parameter. Valid when MPSCreateTemplateParams is empty.</p>
+     * @param EmbedSubtitleTemplate <p>Subtitle suppression template parameter. Valid when MPSCreateTemplateParams is empty.</p>
      */
     public void setEmbedSubtitleTemplate(MPSEmbedSubtitleTemplate EmbedSubtitleTemplate) {
         this.EmbedSubtitleTemplate = EmbedSubtitleTemplate;

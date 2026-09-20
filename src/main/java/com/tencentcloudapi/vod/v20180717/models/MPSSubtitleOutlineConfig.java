@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class MPSSubtitleOutlineConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
     */
     @SerializedName("SubtitleOutlineConfigSwitch")
     @Expose
     private Long SubtitleOutlineConfigSwitch;
 
     /**
-    * 
+    * <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
     */
     @SerializedName("OutlineWidth")
     @Expose
     private Float OutlineWidth;
 
     /**
-    * 
+    * <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
     */
     @SerializedName("OutlineWidthUnit")
     @Expose
     private Long OutlineWidthUnit;
 
     /**
-    * 
+    * <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
     */
     @SerializedName("OutlineColor")
     @Expose
     private String OutlineColor;
 
     /**
-    * 
+    * <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
     */
     @SerializedName("OutlineAlpha")
     @Expose
     private Float OutlineAlpha;
 
     /**
-     * Get  
-     * @return SubtitleOutlineConfigSwitch 
+     * Get <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p> 
+     * @return SubtitleOutlineConfigSwitch <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
      */
     public Long getSubtitleOutlineConfigSwitch() {
         return this.SubtitleOutlineConfigSwitch;
     }
 
     /**
-     * Set 
-     * @param SubtitleOutlineConfigSwitch 
+     * Set <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
+     * @param SubtitleOutlineConfigSwitch <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
      */
     public void setSubtitleOutlineConfigSwitch(Long SubtitleOutlineConfigSwitch) {
         this.SubtitleOutlineConfigSwitch = SubtitleOutlineConfigSwitch;
     }
 
     /**
-     * Get  
-     * @return OutlineWidth 
+     * Get <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p> 
+     * @return OutlineWidth <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
      */
     public Float getOutlineWidth() {
         return this.OutlineWidth;
     }
 
     /**
-     * Set 
-     * @param OutlineWidth 
+     * Set <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
+     * @param OutlineWidth <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
      */
     public void setOutlineWidth(Float OutlineWidth) {
         this.OutlineWidth = OutlineWidth;
     }
 
     /**
-     * Get  
-     * @return OutlineWidthUnit 
+     * Get <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p> 
+     * @return OutlineWidthUnit <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public Long getOutlineWidthUnit() {
         return this.OutlineWidthUnit;
     }
 
     /**
-     * Set 
-     * @param OutlineWidthUnit 
+     * Set <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * @param OutlineWidthUnit <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
      */
     public void setOutlineWidthUnit(Long OutlineWidthUnit) {
         this.OutlineWidthUnit = OutlineWidthUnit;
     }
 
     /**
-     * Get  
-     * @return OutlineColor 
+     * Get <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p> 
+     * @return OutlineColor <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
      */
     public String getOutlineColor() {
         return this.OutlineColor;
     }
 
     /**
-     * Set 
-     * @param OutlineColor 
+     * Set <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
+     * @param OutlineColor <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
      */
     public void setOutlineColor(String OutlineColor) {
         this.OutlineColor = OutlineColor;
     }
 
     /**
-     * Get  
-     * @return OutlineAlpha 
+     * Get <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p> 
+     * @return OutlineAlpha <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
      */
     public Float getOutlineAlpha() {
         return this.OutlineAlpha;
     }
 
     /**
-     * Set 
-     * @param OutlineAlpha 
+     * Set <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
+     * @param OutlineAlpha <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
      */
     public void setOutlineAlpha(Float OutlineAlpha) {
         this.OutlineAlpha = OutlineAlpha;

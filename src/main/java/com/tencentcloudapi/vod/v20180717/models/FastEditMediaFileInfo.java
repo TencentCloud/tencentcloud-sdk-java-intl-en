@@ -24,115 +24,130 @@ import java.util.HashMap;
 public class FastEditMediaFileInfo extends AbstractModel {
 
     /**
-    * 
+    * Media ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * 
+    * Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
     */
     @SerializedName("TranscodeDefinition")
     @Expose
     private Long TranscodeDefinition;
 
     /**
-    * 
+    * Media editing start offset time in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * Media editing end time offset, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media ID. 
+     * @return FileId Media ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media ID.
+     * @param FileId Media ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return AudioVideoType 
+     * Get Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format. 
+     * @return AudioVideoType Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set 
-     * @param AudioVideoType 
+     * Set Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
+     * @param AudioVideoType Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get  
-     * @return TranscodeDefinition 
+     * Get Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation. 
+     * @return TranscodeDefinition Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
      */
     public Long getTranscodeDefinition() {
         return this.TranscodeDefinition;
     }
 
     /**
-     * Set 
-     * @param TranscodeDefinition 
+     * Set Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+     * @param TranscodeDefinition Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
      */
     public void setTranscodeDefinition(Long TranscodeDefinition) {
         this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Media editing start offset time in seconds. 
+     * @return StartTimeOffset Media editing start offset time in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Media editing start offset time in seconds.
+     * @param StartTimeOffset Media editing start offset time in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get Media editing end time offset, in seconds. 
+     * @return EndTimeOffset Media editing end time offset, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set Media editing end time offset, in seconds.
+     * @param EndTimeOffset Media editing end time offset, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

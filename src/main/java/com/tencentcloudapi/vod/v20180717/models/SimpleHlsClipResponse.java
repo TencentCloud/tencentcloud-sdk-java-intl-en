@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class SimpleHlsClipResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Trimmed video address.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * 
+    * <p>Unique identifier of media file for post-editing solidified video.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p>Edited video task flow ID after solidification.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -59,64 +59,64 @@ public class SimpleHlsClipResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>Trimmed video address.</p> 
+     * @return Url <p>Trimmed video address.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>Trimmed video address.</p>
+     * @param Url <p>Trimmed video address.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return MetaData 
+     * Get <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p> 
+     * @return MetaData <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 
-     * @param MetaData 
+     * Set <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
+     * @param MetaData <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>Unique identifier of media file for post-editing solidified video.</p> 
+     * @return FileId <p>Unique identifier of media file for post-editing solidified video.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>Unique identifier of media file for post-editing solidified video.</p>
+     * @param FileId <p>Unique identifier of media file for post-editing solidified video.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get <p>Edited video task flow ID after solidification.</p> 
+     * @return TaskId <p>Edited video task flow ID after solidification.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set <p>Edited video task flow ID after solidification.</p>
+     * @param TaskId <p>Edited video task flow ID after solidification.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

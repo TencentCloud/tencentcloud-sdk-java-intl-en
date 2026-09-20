@@ -24,92 +24,117 @@ import java.util.HashMap;
 public class CreateAigcCustomElementRequest extends AbstractModel {
 
     /**
-    * 
+    * Subject name. It cannot exceed 20 characters.
     */
     @SerializedName("ElementName")
     @Expose
     private String ElementName;
 
     /**
-    * 
+    * Subject description.
+
+Up to 100 characters.
     */
     @SerializedName("ElementDescription")
     @Expose
     private String ElementDescription;
 
     /**
-    * 
+    * Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
     */
     @SerializedName("ElementFrontalImage")
     @Expose
     private String ElementFrontalImage;
 
     /**
-    * 
+    * Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
     */
     @SerializedName("ElementReferList")
     @Expose
     private ElementReferInfo [] ElementReferList;
 
     /**
-     * Get  
-     * @return ElementName 
+     * Get Subject name. It cannot exceed 20 characters. 
+     * @return ElementName Subject name. It cannot exceed 20 characters.
      */
     public String getElementName() {
         return this.ElementName;
     }
 
     /**
-     * Set 
-     * @param ElementName 
+     * Set Subject name. It cannot exceed 20 characters.
+     * @param ElementName Subject name. It cannot exceed 20 characters.
      */
     public void setElementName(String ElementName) {
         this.ElementName = ElementName;
     }
 
     /**
-     * Get  
-     * @return ElementDescription 
+     * Get Subject description.
+
+Up to 100 characters. 
+     * @return ElementDescription Subject description.
+
+Up to 100 characters.
      */
     public String getElementDescription() {
         return this.ElementDescription;
     }
 
     /**
-     * Set 
-     * @param ElementDescription 
+     * Set Subject description.
+
+Up to 100 characters.
+     * @param ElementDescription Subject description.
+
+Up to 100 characters.
      */
     public void setElementDescription(String ElementDescription) {
         this.ElementDescription = ElementDescription;
     }
 
     /**
-     * Get  
-     * @return ElementFrontalImage 
+     * Get Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1. 
+     * @return ElementFrontalImage Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
      */
     public String getElementFrontalImage() {
         return this.ElementFrontalImage;
     }
 
     /**
-     * Set 
-     * @param ElementFrontalImage 
+     * Set Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
+     * @param ElementFrontalImage Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
      */
     public void setElementFrontalImage(String ElementFrontalImage) {
         this.ElementFrontalImage = ElementFrontalImage;
     }
 
     /**
-     * Get  
-     * @return ElementReferList 
+     * Get Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images. 
+     * @return ElementReferList Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
      */
     public ElementReferInfo [] getElementReferList() {
         return this.ElementReferList;
     }
 
     /**
-     * Set 
-     * @param ElementReferList 
+     * Set Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
+     * @param ElementReferList Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
      */
     public void setElementReferList(ElementReferInfo [] ElementReferList) {
         this.ElementReferList = ElementReferList;

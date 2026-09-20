@@ -24,184 +24,194 @@ import java.util.HashMap;
 public class TranscodeTask2017 extends AbstractModel {
 
     /**
-    * 
+    * Transcoding task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Transcoded file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Name of the transcoded file.
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 
+    * Video duration, in seconds.
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 
+    * Address of a cover.
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-    * 
+    * Playback information generated after video transcoding.
     */
     @SerializedName("PlayInfoSet")
     @Expose
     private TranscodePlayInfo2017 [] PlayInfoSet;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Transcoding task ID. 
+     * @return TaskId Transcoding task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Transcoding task ID.
+     * @param TaskId Transcoding task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li> 
+     * @return ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+     * @param ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Transcoded file ID. 
+     * @return FileId Transcoded file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Transcoded file ID.
+     * @param FileId Transcoded file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return FileName 
+     * Get Name of the transcoded file. 
+     * @return FileName Name of the transcoded file.
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 
-     * @param FileName 
+     * Set Name of the transcoded file.
+     * @param FileName Name of the transcoded file.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get  
-     * @return Duration 
+     * Get Video duration, in seconds. 
+     * @return Duration Video duration, in seconds.
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 
-     * @param Duration 
+     * Set Video duration, in seconds.
+     * @param Duration Video duration, in seconds.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get  
-     * @return CoverUrl 
+     * Get Address of a cover. 
+     * @return CoverUrl Address of a cover.
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set 
-     * @param CoverUrl 
+     * Set Address of a cover.
+     * @param CoverUrl Address of a cover.
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
     }
 
     /**
-     * Get  
-     * @return PlayInfoSet 
+     * Get Playback information generated after video transcoding. 
+     * @return PlayInfoSet Playback information generated after video transcoding.
      */
     public TranscodePlayInfo2017 [] getPlayInfoSet() {
         return this.PlayInfoSet;
     }
 
     /**
-     * Set 
-     * @param PlayInfoSet 
+     * Set Playback information generated after video transcoding.
+     * @param PlayInfoSet Playback information generated after video transcoding.
      */
     public void setPlayInfoSet(TranscodePlayInfo2017 [] PlayInfoSet) {
         this.PlayInfoSet = PlayInfoSet;

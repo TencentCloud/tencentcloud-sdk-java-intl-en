@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SnapshotByTimeOffsetTaskInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Time point screenshot template ID.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
     */
     @SerializedName("ExtTimeOffsetSet")
     @Expose
     private String [] ExtTimeOffsetSet;
 
     /**
-    * 
+    * <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
     */
     @SerializedName("TimeOffsetSet")
     @Expose
     private Float [] TimeOffsetSet;
 
     /**
-    * 
+    * <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Time point screenshot template ID.</p> 
+     * @return Definition <p>Time point screenshot template ID.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Time point screenshot template ID.</p>
+     * @param Definition <p>Time point screenshot template ID.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ExtTimeOffsetSet 
+     * Get <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li> 
+     * @return ExtTimeOffsetSet <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
      */
     public String [] getExtTimeOffsetSet() {
         return this.ExtTimeOffsetSet;
     }
 
     /**
-     * Set 
-     * @param ExtTimeOffsetSet 
+     * Set <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
+     * @param ExtTimeOffsetSet <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
      */
     public void setExtTimeOffsetSet(String [] ExtTimeOffsetSet) {
         this.ExtTimeOffsetSet = ExtTimeOffsetSet;
     }
 
     /**
-     * Get  
-     * @return TimeOffsetSet 
+     * Get <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p> 
+     * @return TimeOffsetSet <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
      */
     public Float [] getTimeOffsetSet() {
         return this.TimeOffsetSet;
     }
 
     /**
-     * Set 
-     * @param TimeOffsetSet 
+     * Set <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+     * @param TimeOffsetSet <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
      */
     public void setTimeOffsetSet(Float [] TimeOffsetSet) {
         this.TimeOffsetSet = TimeOffsetSet;
     }
 
     /**
-     * Get  
-     * @return WatermarkSet 
+     * Get <p>Watermark list. Up to 10 image or text watermarks are supported.</p> 
+     * @return WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set 
-     * @param WatermarkSet 
+     * Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * @param WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;

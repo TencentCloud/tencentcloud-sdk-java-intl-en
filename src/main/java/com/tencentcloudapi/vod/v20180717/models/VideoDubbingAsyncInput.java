@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class VideoDubbingAsyncInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Input video Url</p>
     */
     @SerializedName("InputUrl")
     @Expose
     private String InputUrl;
 
     /**
-    * 
+    * <p>FileId of the input video</p>
     */
     @SerializedName("InputFileId")
     @Expose
     private String InputFileId;
 
     /**
-    * 
+    * <p>Video source language. The default value is zh.</p>
     */
     @SerializedName("SrcLanguage")
     @Expose
     private String SrcLanguage;
 
     /**
-    * 
+    * <p>Target language of the video. Default: en.</p>
     */
     @SerializedName("DstLanguage")
     @Expose
     private String DstLanguage;
 
     /**
-    * 
+    * <p>Dubbing model</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-     * Get  
-     * @return InputUrl 
+     * Get <p>Input video Url</p> 
+     * @return InputUrl <p>Input video Url</p>
      */
     public String getInputUrl() {
         return this.InputUrl;
     }
 
     /**
-     * Set 
-     * @param InputUrl 
+     * Set <p>Input video Url</p>
+     * @param InputUrl <p>Input video Url</p>
      */
     public void setInputUrl(String InputUrl) {
         this.InputUrl = InputUrl;
     }
 
     /**
-     * Get  
-     * @return InputFileId 
+     * Get <p>FileId of the input video</p> 
+     * @return InputFileId <p>FileId of the input video</p>
      */
     public String getInputFileId() {
         return this.InputFileId;
     }
 
     /**
-     * Set 
-     * @param InputFileId 
+     * Set <p>FileId of the input video</p>
+     * @param InputFileId <p>FileId of the input video</p>
      */
     public void setInputFileId(String InputFileId) {
         this.InputFileId = InputFileId;
     }
 
     /**
-     * Get  
-     * @return SrcLanguage 
+     * Get <p>Video source language. The default value is zh.</p> 
+     * @return SrcLanguage <p>Video source language. The default value is zh.</p>
      */
     public String getSrcLanguage() {
         return this.SrcLanguage;
     }
 
     /**
-     * Set 
-     * @param SrcLanguage 
+     * Set <p>Video source language. The default value is zh.</p>
+     * @param SrcLanguage <p>Video source language. The default value is zh.</p>
      */
     public void setSrcLanguage(String SrcLanguage) {
         this.SrcLanguage = SrcLanguage;
     }
 
     /**
-     * Get  
-     * @return DstLanguage 
+     * Get <p>Target language of the video. Default: en.</p> 
+     * @return DstLanguage <p>Target language of the video. Default: en.</p>
      */
     public String getDstLanguage() {
         return this.DstLanguage;
     }
 
     /**
-     * Set 
-     * @param DstLanguage 
+     * Set <p>Target language of the video. Default: en.</p>
+     * @param DstLanguage <p>Target language of the video. Default: en.</p>
      */
     public void setDstLanguage(String DstLanguage) {
         this.DstLanguage = DstLanguage;
     }
 
     /**
-     * Get  
-     * @return Model 
+     * Get <p>Dubbing model</p> 
+     * @return Model <p>Dubbing model</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 
-     * @param Model 
+     * Set <p>Dubbing model</p>
+     * @param Model <p>Dubbing model</p>
      */
     public void setModel(String Model) {
         this.Model = Model;

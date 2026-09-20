@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Referer extends AbstractModel {
 
     /**
-    * Referrer blocklist configuration switch. Parameter value:
+    * Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -33,17 +33,17 @@ public class Referer extends AbstractModel {
     private String Switch;
 
     /**
-    * 
+    * referer blocklist/allowlist rule configuration
     */
     @SerializedName("RefererRules")
     @Expose
     private RefererRule [] RefererRules;
 
     /**
-     * Get Referrer blocklist configuration switch. Parameter value:
+     * Get Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Referrer blocklist configuration switch. Parameter value:
+     * @return Switch Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -52,10 +52,10 @@ public class Referer extends AbstractModel {
     }
 
     /**
-     * Set Referrer blocklist configuration switch. Parameter value:
+     * Set Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Referrer blocklist configuration switch. Parameter value:
+     * @param Switch Referrer blocklist/allowlist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -64,16 +64,16 @@ public class Referer extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RefererRules 
+     * Get referer blocklist/allowlist rule configuration 
+     * @return RefererRules referer blocklist/allowlist rule configuration
      */
     public RefererRule [] getRefererRules() {
         return this.RefererRules;
     }
 
     /**
-     * Set 
-     * @param RefererRules 
+     * Set referer blocklist/allowlist rule configuration
+     * @param RefererRules referer blocklist/allowlist rule configuration
      */
     public void setRefererRules(RefererRule [] RefererRules) {
         this.RefererRules = RefererRules;

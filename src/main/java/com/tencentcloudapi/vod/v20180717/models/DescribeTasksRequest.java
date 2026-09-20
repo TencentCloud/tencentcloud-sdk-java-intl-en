@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * <p>Filter criteria: file ID.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p>Filter condition: task creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private TimeRange CreateTime;
 
     /**
-    * 
+    * <p>Filter condition: task end time.</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private TimeRange FinishTime;
 
     /**
-    * 
+    * <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
     */
     @SerializedName("Sort")
     @Expose
     private SortBy Sort;
 
     /**
-    * 
+    * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p> 
+     * @return Status <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
+     * @param Status <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>Filter criteria: file ID.</p> 
+     * @return FileId <p>Filter criteria: file ID.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>Filter criteria: file ID.</p>
+     * @param FileId <p>Filter criteria: file ID.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Filter condition: task creation time.</p> 
+     * @return CreateTime <p>Filter condition: task creation time.</p>
      */
     public TimeRange getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Filter condition: task creation time.</p>
+     * @param CreateTime <p>Filter condition: task creation time.</p>
      */
     public void setCreateTime(TimeRange CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return FinishTime 
+     * Get <p>Filter condition: task end time.</p> 
+     * @return FinishTime <p>Filter condition: task end time.</p>
      */
     public TimeRange getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 
-     * @param FinishTime 
+     * Set <p>Filter condition: task end time.</p>
+     * @param FinishTime <p>Filter condition: task end time.</p>
      */
     public void setFinishTime(TimeRange FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get  
-     * @return Sort 
+     * Get <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li> 
+     * @return Sort <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
      */
     public SortBy getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 
-     * @param Sort 
+     * Set <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+     * @param Sort <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
      */
     public void setSort(SortBy Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get <p>Number of returned entries. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return ScrollToken 
+     * Get <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p> 
+     * @return ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 
-     * @param ScrollToken 
+     * Set <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+     * @param ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

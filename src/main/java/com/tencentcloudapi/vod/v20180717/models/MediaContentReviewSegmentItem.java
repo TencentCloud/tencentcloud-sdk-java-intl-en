@@ -24,160 +24,180 @@ import java.util.HashMap;
 public class MediaContentReviewSegmentItem extends AbstractModel {
 
     /**
-    * 
+    * Time offset of the start of the suspected segment. Unit: second.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of the suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Score of offensive information involved in suspected clips.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Tag of the result that the suspected segment involves offensive content.
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 
+    * Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * This field is deprecated. Please use PicUrlExpireTime.
     */
     @SerializedName("PicUrlExpireTimeStamp")
     @Expose
     private Long PicUrlExpireTimeStamp;
 
     /**
-    * 
+    * Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Time offset of the start of the suspected segment. Unit: second. 
+     * @return StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Time offset of the start of the suspected segment. Unit: second.
+     * @param StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of the suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of the suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of the suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Score of offensive information involved in suspected clips. 
+     * @return Confidence Score of offensive information involved in suspected clips.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Score of offensive information involved in suspected clips.
+     * @param Confidence Score of offensive information involved in suspected clips.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Label 
+     * Get Tag of the result that the suspected segment involves offensive content. 
+     * @return Label Tag of the result that the suspected segment involves offensive content.
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Tag of the result that the suspected segment involves offensive content.
+     * @param Label Tag of the result that the suspected segment involves offensive content.
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li> 
+     * @return Suggestion Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param Suggestion Result suggestions for identifying suspected segments involving offensive content. Value range:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point). 
+     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return PicUrlExpireTimeStamp 
+     * Get This field is deprecated. Please use PicUrlExpireTime. 
+     * @return PicUrlExpireTimeStamp This field is deprecated. Please use PicUrlExpireTime.
      * @deprecated
      */
     @Deprecated
@@ -186,8 +206,8 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param PicUrlExpireTimeStamp 
+     * Set This field is deprecated. Please use PicUrlExpireTime.
+     * @param PicUrlExpireTimeStamp This field is deprecated. Please use PicUrlExpireTime.
      * @deprecated
      */
     @Deprecated
@@ -196,16 +216,16 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return PicUrlExpireTime 
+     * Get Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return PicUrlExpireTime Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set 
-     * @param PicUrlExpireTime 
+     * Set Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param PicUrlExpireTime Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

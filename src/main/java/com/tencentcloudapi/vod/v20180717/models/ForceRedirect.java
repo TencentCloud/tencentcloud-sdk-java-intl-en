@@ -34,7 +34,7 @@ public class ForceRedirect extends AbstractModel {
 
     /**
     * Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
     */
     @SerializedName("RedirectType")
@@ -42,14 +42,14 @@ public class ForceRedirect extends AbstractModel {
     private String RedirectType;
 
     /**
-    * 
+    * Status code returned for forced redirection. Supports 301 and 302.
     */
     @SerializedName("RedirectStatusCode")
     @Expose
     private Long RedirectStatusCode;
 
     /**
-    * 
+    * Whether to return the added header during forced redirection.
     */
     @SerializedName("CarryHeaders")
     @Expose
@@ -81,10 +81,10 @@ public class ForceRedirect extends AbstractModel {
 
     /**
      * Get Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li> 
      * @return RedirectType Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
      */
     public String getRedirectType() {
@@ -93,10 +93,10 @@ public class ForceRedirect extends AbstractModel {
 
     /**
      * Set Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
      * @param RedirectType Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
      */
     public void setRedirectType(String RedirectType) {
@@ -104,32 +104,32 @@ public class ForceRedirect extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RedirectStatusCode 
+     * Get Status code returned for forced redirection. Supports 301 and 302. 
+     * @return RedirectStatusCode Status code returned for forced redirection. Supports 301 and 302.
      */
     public Long getRedirectStatusCode() {
         return this.RedirectStatusCode;
     }
 
     /**
-     * Set 
-     * @param RedirectStatusCode 
+     * Set Status code returned for forced redirection. Supports 301 and 302.
+     * @param RedirectStatusCode Status code returned for forced redirection. Supports 301 and 302.
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {
         this.RedirectStatusCode = RedirectStatusCode;
     }
 
     /**
-     * Get  
-     * @return CarryHeaders 
+     * Get Whether to return the added header during forced redirection. 
+     * @return CarryHeaders Whether to return the added header during forced redirection.
      */
     public String getCarryHeaders() {
         return this.CarryHeaders;
     }
 
     /**
-     * Set 
-     * @param CarryHeaders 
+     * Set Whether to return the added header during forced redirection.
+     * @param CarryHeaders Whether to return the added header during forced redirection.
      */
     public void setCarryHeaders(String CarryHeaders) {
         this.CarryHeaders = CarryHeaders;

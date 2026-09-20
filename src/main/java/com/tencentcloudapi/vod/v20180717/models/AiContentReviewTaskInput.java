@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiContentReviewTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Audio/video moderation template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Audio/video moderation template ID. 
+     * @return Definition Audio/video moderation template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Audio/video moderation template ID.
+     * @param Definition Audio/video moderation template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

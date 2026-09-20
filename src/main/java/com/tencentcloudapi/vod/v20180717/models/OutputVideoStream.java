@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class OutputVideoStream extends AbstractModel {
 
     /**
-    * 
+    * Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding.</li>
+Default value: libx264.
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 
+    * Video frame rate. Value range: [0, 60]. Unit: Hz.
+Default value: 0, which means the frame rate is the same as that of the first video clip in the first video track.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-     * Get  
-     * @return Codec 
+     * Get Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding.</li>
+Default value: libx264. 
+     * @return Codec Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding.</li>
+Default value: libx264.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 
-     * @param Codec 
+     * Set Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding.</li>
+Default value: libx264.
+     * @param Codec Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding.</li>
+Default value: libx264.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get  
-     * @return Fps 
+     * Get Video frame rate. Value range: [0, 60]. Unit: Hz.
+Default value: 0, which means the frame rate is the same as that of the first video clip in the first video track. 
+     * @return Fps Video frame rate. Value range: [0, 60]. Unit: Hz.
+Default value: 0, which means the frame rate is the same as that of the first video clip in the first video track.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 
-     * @param Fps 
+     * Set Video frame rate. Value range: [0, 60]. Unit: Hz.
+Default value: 0, which means the frame rate is the same as that of the first video clip in the first video track.
+     * @param Fps Video frame rate. Value range: [0, 60]. Unit: Hz.
+Default value: 0, which means the frame rate is the same as that of the first video clip in the first video track.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

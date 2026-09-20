@@ -24,137 +24,152 @@ import java.util.HashMap;
 public class RestoreMediaTask extends AbstractModel {
 
     /**
-    * 
+    * File ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Original storage type of the file.
     */
     @SerializedName("OriginalStorageClass")
     @Expose
     private String OriginalStorageClass;
 
     /**
-    * 
+    * Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
     */
     @SerializedName("TargetStorageClass")
     @Expose
     private String TargetStorageClass;
 
     /**
-    * 
+    * Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
     */
     @SerializedName("RestoreTier")
     @Expose
     private String RestoreTier;
 
     /**
-    * 
+    * Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
     */
     @SerializedName("RestoreDay")
     @Expose
     private Long RestoreDay;
 
     /**
-    * 
+    * Deprecated.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Deprecated.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get File ID. 
+     * @return FileId File ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set File ID.
+     * @param FileId File ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return OriginalStorageClass 
+     * Get Original storage type of the file. 
+     * @return OriginalStorageClass Original storage type of the file.
      */
     public String getOriginalStorageClass() {
         return this.OriginalStorageClass;
     }
 
     /**
-     * Set 
-     * @param OriginalStorageClass 
+     * Set Original storage type of the file.
+     * @param OriginalStorageClass Original storage type of the file.
      */
     public void setOriginalStorageClass(String OriginalStorageClass) {
         this.OriginalStorageClass = OriginalStorageClass;
     }
 
     /**
-     * Get  
-     * @return TargetStorageClass 
+     * Get Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class. 
+     * @return TargetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
      */
     public String getTargetStorageClass() {
         return this.TargetStorageClass;
     }
 
     /**
-     * Set 
-     * @param TargetStorageClass 
+     * Set Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+     * @param TargetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
      */
     public void setTargetStorageClass(String TargetStorageClass) {
         this.TargetStorageClass = TargetStorageClass;
     }
 
     /**
-     * Get  
-     * @return RestoreTier 
+     * Get Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li> 
+     * @return RestoreTier Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
      */
     public String getRestoreTier() {
         return this.RestoreTier;
     }
 
     /**
-     * Set 
-     * @param RestoreTier 
+     * Set Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
+     * @param RestoreTier Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
      */
     public void setRestoreTier(String RestoreTier) {
         this.RestoreTier = RestoreTier;
     }
 
     /**
-     * Get  
-     * @return RestoreDay 
+     * Get Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0. 
+     * @return RestoreDay Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
      */
     public Long getRestoreDay() {
         return this.RestoreDay;
     }
 
     /**
-     * Set 
-     * @param RestoreDay 
+     * Set Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
+     * @param RestoreDay Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
      */
     public void setRestoreDay(Long RestoreDay) {
         this.RestoreDay = RestoreDay;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Deprecated. 
+     * @return Status Deprecated.
      * @deprecated
      */
     @Deprecated
@@ -163,8 +178,8 @@ public class RestoreMediaTask extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Deprecated.
+     * @param Status Deprecated.
      * @deprecated
      */
     @Deprecated
@@ -173,8 +188,8 @@ public class RestoreMediaTask extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Deprecated. 
+     * @return Message Deprecated.
      * @deprecated
      */
     @Deprecated
@@ -183,8 +198,8 @@ public class RestoreMediaTask extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Deprecated.
+     * @param Message Deprecated.
      * @deprecated
      */
     @Deprecated

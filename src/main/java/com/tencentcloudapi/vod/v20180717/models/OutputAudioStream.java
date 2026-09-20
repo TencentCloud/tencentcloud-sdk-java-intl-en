@@ -24,92 +24,152 @@ import java.util.HashMap;
 public class OutputAudioStream extends AbstractModel {
 
     /**
-    * 
+    * Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 
+    * Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 
+    * Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
     */
     @SerializedName("AudioChannel")
     @Expose
     private Long AudioChannel;
 
     /**
-    * 
+    * Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-     * Get  
-     * @return Codec 
+     * Get Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac. 
+     * @return Codec Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 
-     * @param Codec 
+     * Set Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
+     * @param Codec Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get  
-     * @return SampleRate 
+     * Get Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000. 
+     * @return SampleRate Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 
-     * @param SampleRate 
+     * Set Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
+     * @param SampleRate Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get  
-     * @return AudioChannel 
+     * Get Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2. 
+     * @return AudioChannel Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
     /**
-     * Set 
-     * @param AudioChannel 
+     * Set Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
+     * @param AudioChannel Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;
     }
 
     /**
-     * Get  
-     * @return Bitrate 
+     * Get Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically. 
+     * @return Bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 
-     * @param Bitrate 
+     * Set Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
+     * @param Bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

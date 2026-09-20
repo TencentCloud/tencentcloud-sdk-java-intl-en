@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteWordSamplesRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Keywords. Array length limit: 100 words.</p>
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Keywords 
+     * Get <p>Keywords. Array length limit: 100 words.</p> 
+     * @return Keywords <p>Keywords. Array length limit: 100 words.</p>
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 
-     * @param Keywords 
+     * Set <p>Keywords. Array length limit: 100 words.</p>
+     * @param Keywords <p>Keywords. Array length limit: 100 words.</p>
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

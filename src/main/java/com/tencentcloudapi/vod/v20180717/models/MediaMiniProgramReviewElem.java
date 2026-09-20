@@ -24,69 +24,119 @@ import java.util.HashMap;
 public class MediaMiniProgramReviewElem extends AbstractModel {
 
     /**
-    * 
+    * Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Confidence of the audio/video moderation result. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li> 
+     * @return Type Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li>
+     * @param Type Audio and video moderation type. 
+<li>Porn: The visual involves offensive content,</li>
+<li>Porn.Ocr: text involves offensive content,</li>
+<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Terrorism: The visual involves unsafe information,</li>
+<li>Political: The visual involves inappropriate information,</li>
+<li>Political.Ocr: The text involves inappropriate information,</li>
+<li>Political.Asr: The sound involves inappropriate information.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li> 
+     * @return Suggestion Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li>
+     * @param Suggestion Audio and video review comments.
+<li>pass: confirm normal,</li>
+<li>block: confirmed violation,</li>
+<li>review: suspected violation.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence of the audio/video moderation result. Value range: 0-100. 
+     * @return Confidence Confidence of the audio/video moderation result. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence of the audio/video moderation result. Value range: 0-100.
+     * @param Confidence Confidence of the audio/video moderation result. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

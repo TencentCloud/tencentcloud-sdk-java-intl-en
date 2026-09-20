@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateReviewTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Review template unique identifier.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateReviewTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Review template unique identifier. 
+     * @return Definition Review template unique identifier.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Review template unique identifier.
+     * @param Definition Review template unique identifier.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DesignVoiceAsyncRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Voice description.</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 
+    * <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private String SubAppId;
 
     /**
-    * 
+    * <p>Voice settings</p>
     */
     @SerializedName("VoiceSettings")
     @Expose
     private VoiceSettings VoiceSettings;
 
     /**
-    * 
+    * <p>Audition synthetic text, up to 500 characters</p>
     */
     @SerializedName("PreviewText")
     @Expose
     private String PreviewText;
 
     /**
-    * 
+    * <p>Extended parameters in the format of a JSON string.</p>
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-    * 
+    * <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get  
-     * @return Prompt 
+     * Get <p>Voice description.</p> 
+     * @return Prompt <p>Voice description.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 
-     * @param Prompt 
+     * Set <p>Voice description.</p>
+     * @param Prompt <p>Voice description.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p> 
+     * @return SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      */
     public String getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @param SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return VoiceSettings 
+     * Get <p>Voice settings</p> 
+     * @return VoiceSettings <p>Voice settings</p>
      */
     public VoiceSettings getVoiceSettings() {
         return this.VoiceSettings;
     }
 
     /**
-     * Set 
-     * @param VoiceSettings 
+     * Set <p>Voice settings</p>
+     * @param VoiceSettings <p>Voice settings</p>
      */
     public void setVoiceSettings(VoiceSettings VoiceSettings) {
         this.VoiceSettings = VoiceSettings;
     }
 
     /**
-     * Get  
-     * @return PreviewText 
+     * Get <p>Audition synthetic text, up to 500 characters</p> 
+     * @return PreviewText <p>Audition synthetic text, up to 500 characters</p>
      */
     public String getPreviewText() {
         return this.PreviewText;
     }
 
     /**
-     * Set 
-     * @param PreviewText 
+     * Set <p>Audition synthetic text, up to 500 characters</p>
+     * @param PreviewText <p>Audition synthetic text, up to 500 characters</p>
      */
     public void setPreviewText(String PreviewText) {
         this.PreviewText = PreviewText;
     }
 
     /**
-     * Get  
-     * @return ExtParam 
+     * Get <p>Extended parameters in the format of a JSON string.</p> 
+     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set 
-     * @param ExtParam 
+     * Set <p>Extended parameters in the format of a JSON string.</p>
+     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p> 
+     * @return SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+     * @param SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

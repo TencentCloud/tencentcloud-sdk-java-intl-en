@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeRoundPlaysResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * <p>Carousel playlist details list.</p>
     */
     @SerializedName("RoundPlaySet")
     @Expose
     private RoundPlayInfo [] RoundPlaySet;
 
     /**
-    * 
+    * <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
     */
     @SerializedName("ScrollToken")
     @Expose
@@ -52,8 +52,8 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get <p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p> 
+     * @return TotalCount <p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p>
      * @deprecated
      */
     @Deprecated
@@ -62,8 +62,8 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set <p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p>
+     * @param TotalCount <p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p>
      * @deprecated
      */
     @Deprecated
@@ -72,32 +72,32 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RoundPlaySet 
+     * Get <p>Carousel playlist details list.</p> 
+     * @return RoundPlaySet <p>Carousel playlist details list.</p>
      */
     public RoundPlayInfo [] getRoundPlaySet() {
         return this.RoundPlaySet;
     }
 
     /**
-     * Set 
-     * @param RoundPlaySet 
+     * Set <p>Carousel playlist details list.</p>
+     * @param RoundPlaySet <p>Carousel playlist details list.</p>
      */
     public void setRoundPlaySet(RoundPlayInfo [] RoundPlaySet) {
         this.RoundPlaySet = RoundPlaySet;
     }
 
     /**
-     * Get  
-     * @return ScrollToken 
+     * Get <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p> 
+     * @return ScrollToken <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 
-     * @param ScrollToken 
+     * Set <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+     * @param ScrollToken <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

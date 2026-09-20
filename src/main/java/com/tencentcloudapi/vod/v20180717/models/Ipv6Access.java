@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Ipv6Access extends AbstractModel {
 
     /**
-    * Switch for enabling ipv6 access configuration for the domain. Valid values:
+    * Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -33,10 +33,10 @@ public class Ipv6Access extends AbstractModel {
     private String Switch;
 
     /**
-     * Get Switch for enabling ipv6 access configuration for the domain. Valid values:
+     * Get Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+     * @return Switch Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -45,10 +45,10 @@ public class Ipv6Access extends AbstractModel {
     }
 
     /**
-     * Set Switch for enabling ipv6 access configuration for the domain. Valid values:
+     * Set Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+     * @param Switch Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

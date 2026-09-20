@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class PlayStatInfo extends AbstractModel {
 
     /**
-    * 
+    * Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 
+    * Media file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Number of plays.
     */
     @SerializedName("PlayTimes")
     @Expose
     private Long PlayTimes;
 
     /**
-    * 
+    * Playback traffic volume. Measurement unit: byte.
     */
     @SerializedName("Traffic")
     @Expose
     private Long Traffic;
 
     /**
-     * Get  
-     * @return Time 
+     * Get Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li> 
+     * @return Time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 
-     * @param Time 
+     * Set Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+     * @param Time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID. 
+     * @return FileId Media file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID.
+     * @param FileId Media file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return PlayTimes 
+     * Get Number of plays. 
+     * @return PlayTimes Number of plays.
      */
     public Long getPlayTimes() {
         return this.PlayTimes;
     }
 
     /**
-     * Set 
-     * @param PlayTimes 
+     * Set Number of plays.
+     * @param PlayTimes Number of plays.
      */
     public void setPlayTimes(Long PlayTimes) {
         this.PlayTimes = PlayTimes;
     }
 
     /**
-     * Get  
-     * @return Traffic 
+     * Get Playback traffic volume. Measurement unit: byte. 
+     * @return Traffic Playback traffic volume. Measurement unit: byte.
      */
     public Long getTraffic() {
         return this.Traffic;
     }
 
     /**
-     * Set 
-     * @param Traffic 
+     * Set Playback traffic volume. Measurement unit: byte.
+     * @param Traffic Playback traffic volume. Measurement unit: byte.
      */
     public void setTraffic(Long Traffic) {
         this.Traffic = Traffic;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MediaSnapshotByTimeOffsetItem extends AbstractModel {
 
     /**
-    * 
+    * SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Screenshot information set of the same specification. Each element represents a screenshot.
     */
     @SerializedName("PicInfoSet")
     @Expose
     private MediaSnapshotByTimePicInfoItem [] PicInfoSet;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
+     * @return Definition SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param Definition SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return PicInfoSet 
+     * Get Screenshot information set of the same specification. Each element represents a screenshot. 
+     * @return PicInfoSet Screenshot information set of the same specification. Each element represents a screenshot.
      */
     public MediaSnapshotByTimePicInfoItem [] getPicInfoSet() {
         return this.PicInfoSet;
     }
 
     /**
-     * Set 
-     * @param PicInfoSet 
+     * Set Screenshot information set of the same specification. Each element represents a screenshot.
+     * @param PicInfoSet Screenshot information set of the same specification. Each element represents a screenshot.
      */
     public void setPicInfoSet(MediaSnapshotByTimePicInfoItem [] PicInfoSet) {
         this.PicInfoSet = PicInfoSet;

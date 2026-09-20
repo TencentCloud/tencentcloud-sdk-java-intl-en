@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyKnowledgeBaseRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>ID of the knowledge base to modify.</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
     private String KnowledgeBaseId;
 
     /**
-    * 
+    * <p>New knowledge base name. Length limit: 1-64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>New repository description. Length limit: up to 256 characters.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</p> 
+     * @return SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</p>
+     * @param SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return KnowledgeBaseId 
+     * Get <p>ID of the knowledge base to modify.</p> 
+     * @return KnowledgeBaseId <p>ID of the knowledge base to modify.</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBaseId 
+     * Set <p>ID of the knowledge base to modify.</p>
+     * @param KnowledgeBaseId <p>ID of the knowledge base to modify.</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>New knowledge base name. Length limit: 1-64 characters.</p> 
+     * @return Name <p>New knowledge base name. Length limit: 1-64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>New knowledge base name. Length limit: 1-64 characters.</p>
+     * @param Name <p>New knowledge base name. Length limit: 1-64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get <p>New repository description. Length limit: up to 256 characters.</p> 
+     * @return Description <p>New repository description. Length limit: up to 256 characters.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set <p>New repository description. Length limit: up to 256 characters.</p>
+     * @param Description <p>New repository description. Length limit: up to 256 characters.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

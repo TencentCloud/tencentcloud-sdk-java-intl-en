@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class PornImgReviewTemplateInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * <p>Filter tags for offensive content involved in image recognition. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
     */
     @SerializedName("LabelSet")
     @Expose
     private String [] LabelSet;
 
     /**
-    * 
+    * <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. If not specified, it defaults to 90 points. Value range: 0–100.</p>
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 
+    * <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 0 points. Value range: 0–100.</p>
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li> 
+     * @return Switch <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li>
+     * @param Switch <p>Task switch for image recognition involving offensive content. Available values:</p><li>ON: Enable the task of image recognition involving offensive content;</li><li>OFF: Disable the task of image recognition involving offensive content.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return LabelSet 
+     * Get <p>Filter tags for offensive content involved in image recognition. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li> 
+     * @return LabelSet <p>Filter tags for offensive content involved in image recognition. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set 
-     * @param LabelSet 
+     * Set <p>Filter tags for offensive content involved in image recognition. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
+     * @param LabelSet <p>Filter tags for offensive content involved in image recognition. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. Available values are:</p><li>porn: Pornography;</li><li>vulgar: Vulgarity;</li><li>intimacy: Intimate behavior;</li><li>sexy: Sexiness.</li>
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;
     }
 
     /**
-     * Get  
-     * @return BlockConfidence 
+     * Get <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. If not specified, it defaults to 90 points. Value range: 0–100.</p> 
+     * @return BlockConfidence <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. If not specified, it defaults to 90 points. Value range: 0–100.</p>
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 
-     * @param BlockConfidence 
+     * Set <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. If not specified, it defaults to 90 points. Value range: 0–100.</p>
+     * @param BlockConfidence <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. If not specified, it defaults to 90 points. Value range: 0–100.</p>
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get  
-     * @return ReviewConfidence 
+     * Get <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 0 points. Value range: 0–100.</p> 
+     * @return ReviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 0 points. Value range: 0–100.</p>
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 
-     * @param ReviewConfidence 
+     * Set <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 0 points. Value range: 0–100.</p>
+     * @param ReviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 0 points. Value range: 0–100.</p>
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

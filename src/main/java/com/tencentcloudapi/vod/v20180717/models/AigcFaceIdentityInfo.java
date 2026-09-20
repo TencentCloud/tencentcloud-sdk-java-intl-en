@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AigcFaceIdentityInfo extends AbstractModel {
 
     /**
-    * 
+    * Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
     */
     @SerializedName("FaceId")
     @Expose
     private String FaceId;
 
     /**
-    * 
+    * Schematic diagram of a human face captured from the video.
     */
     @SerializedName("FaceImage")
     @Expose
     private String FaceImage;
 
     /**
-    * 
+    * Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 
+    * End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get  
-     * @return FaceId 
+     * Get Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video. 
+     * @return FaceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
      */
     public String getFaceId() {
         return this.FaceId;
     }
 
     /**
-     * Set 
-     * @param FaceId 
+     * Set Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+     * @param FaceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
      */
     public void setFaceId(String FaceId) {
         this.FaceId = FaceId;
     }
 
     /**
-     * Get  
-     * @return FaceImage 
+     * Get Schematic diagram of a human face captured from the video. 
+     * @return FaceImage Schematic diagram of a human face captured from the video.
      */
     public String getFaceImage() {
         return this.FaceImage;
     }
 
     /**
-     * Set 
-     * @param FaceImage 
+     * Set Schematic diagram of a human face captured from the video.
+     * @param FaceImage Schematic diagram of a human face captured from the video.
      */
     public void setFaceImage(String FaceImage) {
         this.FaceImage = FaceImage;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms. 
+     * @return StartTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+     * @param StartTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms. 
+     * @return EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+     * @param EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateComplexAdaptiveDynamicStreamingTaskRequest extends AbstractModel {
 
     /**
-    * 
+    * <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Media ID of the main media file.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Adaptive bitrate parameters. Supports up to 8.
     */
     @SerializedName("StreamParaSet")
     @Expose
     private ComplexAdaptiveDynamicStreamingTaskStreamPara [] StreamParaSet;
 
     /**
-    * 
+    * List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
     */
     @SerializedName("HeadTailSet")
     @Expose
     private HeadTailTaskInput [] HeadTailSet;
 
     /**
-    * 
+    * Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
     */
     @SerializedName("AudioSet")
     @Expose
     private ComplexAdaptiveDynamicStreamingTaskAudioInput [] AudioSet;
 
     /**
-    * 
+    * Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
     */
     @SerializedName("SubtitleSet")
     @Expose
     private ComplexAdaptiveDynamicStreamingTaskSubtitleInput [] SubtitleSet;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * @param SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media ID of the main media file. 
+     * @return FileId Media ID of the main media file.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media ID of the main media file.
+     * @param FileId Media ID of the main media file.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return StreamParaSet 
+     * Get Adaptive bitrate parameters. Supports up to 8. 
+     * @return StreamParaSet Adaptive bitrate parameters. Supports up to 8.
      */
     public ComplexAdaptiveDynamicStreamingTaskStreamPara [] getStreamParaSet() {
         return this.StreamParaSet;
     }
 
     /**
-     * Set 
-     * @param StreamParaSet 
+     * Set Adaptive bitrate parameters. Supports up to 8.
+     * @param StreamParaSet Adaptive bitrate parameters. Supports up to 8.
      */
     public void setStreamParaSet(ComplexAdaptiveDynamicStreamingTaskStreamPara [] StreamParaSet) {
         this.StreamParaSet = StreamParaSet;
     }
 
     /**
-     * Get  
-     * @return HeadTailSet 
+     * Get List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media. 
+     * @return HeadTailSet List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
      */
     public HeadTailTaskInput [] getHeadTailSet() {
         return this.HeadTailSet;
     }
 
     /**
-     * Set 
-     * @param HeadTailSet 
+     * Set List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
+     * @param HeadTailSet List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
      */
     public void setHeadTailSet(HeadTailTaskInput [] HeadTailSet) {
         this.HeadTailSet = HeadTailSet;
     }
 
     /**
-     * Get  
-     * @return AudioSet 
+     * Get Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored. 
+     * @return AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
      */
     public ComplexAdaptiveDynamicStreamingTaskAudioInput [] getAudioSet() {
         return this.AudioSet;
     }
 
     /**
-     * Set 
-     * @param AudioSet 
+     * Set Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+     * @param AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
      */
     public void setAudioSet(ComplexAdaptiveDynamicStreamingTaskAudioInput [] AudioSet) {
         this.AudioSet = AudioSet;
     }
 
     /**
-     * Get  
-     * @return SubtitleSet 
+     * Get Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream. 
+     * @return SubtitleSet Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
      */
     public ComplexAdaptiveDynamicStreamingTaskSubtitleInput [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set 
-     * @param SubtitleSet 
+     * Set Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
+     * @param SubtitleSet Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
      */
     public void setSubtitleSet(ComplexAdaptiveDynamicStreamingTaskSubtitleInput [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;

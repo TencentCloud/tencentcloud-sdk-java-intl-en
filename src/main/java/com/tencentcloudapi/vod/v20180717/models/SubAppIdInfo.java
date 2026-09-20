@@ -24,207 +24,242 @@ import java.util.HashMap;
 public class SubAppIdInfo extends AbstractModel {
 
     /**
-    * 
+    * Subapplication ID.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Subapplication name.
     */
     @SerializedName("SubAppIdName")
     @Expose
     private String SubAppIdName;
 
     /**
-    * 
+    * Sub-application description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default.
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 
+    * Storage region where the sub-application is enabled.
     */
     @SerializedName("StorageRegions")
     @Expose
     private String [] StorageRegions;
 
     /**
-    * 
+    * tag bound to the sub-application.
     */
     @SerializedName("Tags")
     @Expose
     private ResourceTag [] Tags;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get Subapplication ID. 
+     * @return SubAppId Subapplication ID.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set Subapplication ID.
+     * @param SubAppId Subapplication ID.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return SubAppIdName 
+     * Get Subapplication name. 
+     * @return SubAppIdName Subapplication name.
      */
     public String getSubAppIdName() {
         return this.SubAppIdName;
     }
 
     /**
-     * Set 
-     * @param SubAppIdName 
+     * Set Subapplication name.
+     * @param SubAppIdName Subapplication name.
      */
     public void setSubAppIdName(String SubAppIdName) {
         this.SubAppIdName = SubAppIdName;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get Sub-application description. 
+     * @return Description Sub-application description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set Sub-application description.
+     * @param Description Sub-application description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li> 
+     * @return Status Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li>
+     * @param Status Subapplication status. Valid values:
+<li>On: enabled;</li>
+<li>Off: disabled</li>
+<li>Destroying: Being destroyed.</li>
+<li>Destroyed: completion of destruction.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead). 
+     * @return Name Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+     * @param Name Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Mode 
+     * Get Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default. 
+     * @return Mode Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 
-     * @param Mode 
+     * Set Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default.
+     * @param Mode Application mode. Valid values:
+- fileid: FileID mode only
+- - fileid+path: FileID & Path mode
+Leave empty to select the FileID-only mode by default.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get  
-     * @return StorageRegions 
+     * Get Storage region where the sub-application is enabled. 
+     * @return StorageRegions Storage region where the sub-application is enabled.
      */
     public String [] getStorageRegions() {
         return this.StorageRegions;
     }
 
     /**
-     * Set 
-     * @param StorageRegions 
+     * Set Storage region where the sub-application is enabled.
+     * @param StorageRegions Storage region where the sub-application is enabled.
      */
     public void setStorageRegions(String [] StorageRegions) {
         this.StorageRegions = StorageRegions;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get tag bound to the sub-application. 
+     * @return Tags tag bound to the sub-application.
      */
     public ResourceTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set tag bound to the sub-application.
+     * @param Tags tag bound to the sub-application.
      */
     public void setTags(ResourceTag [] Tags) {
         this.Tags = Tags;

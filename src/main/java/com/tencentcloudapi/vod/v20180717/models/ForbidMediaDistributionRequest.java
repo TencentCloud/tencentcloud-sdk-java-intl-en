@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ForbidMediaDistributionRequest extends AbstractModel {
 
     /**
-    * 
+    * Media file list. A maximum of 20 entries can be submitted each time.
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 
+    * forbid: forbid. recover: unblock.
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return FileIds 
+     * Get Media file list. A maximum of 20 entries can be submitted each time. 
+     * @return FileIds Media file list. A maximum of 20 entries can be submitted each time.
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 
-     * @param FileIds 
+     * Set Media file list. A maximum of 20 entries can be submitted each time.
+     * @param FileIds Media file list. A maximum of 20 entries can be submitted each time.
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get  
-     * @return Operation 
+     * Get forbid: forbid. recover: unblock. 
+     * @return Operation forbid: forbid. recover: unblock.
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 
-     * @param Operation 
+     * Set forbid: forbid. recover: unblock.
+     * @param Operation forbid: forbid. recover: unblock.
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

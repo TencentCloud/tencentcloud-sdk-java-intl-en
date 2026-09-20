@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProcedureTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Total number of records that meet filter conditions.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * <p>Task flow template detail list.</p>
     */
     @SerializedName("ProcedureTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeProcedureTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get <p>Total number of records that meet filter conditions.</p> 
+     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set <p>Total number of records that meet filter conditions.</p>
+     * @param TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return ProcedureTemplateSet 
+     * Get <p>Task flow template detail list.</p> 
+     * @return ProcedureTemplateSet <p>Task flow template detail list.</p>
      */
     public ProcedureTemplate [] getProcedureTemplateSet() {
         return this.ProcedureTemplateSet;
     }
 
     /**
-     * Set 
-     * @param ProcedureTemplateSet 
+     * Set <p>Task flow template detail list.</p>
+     * @param ProcedureTemplateSet <p>Task flow template detail list.</p>
      */
     public void setProcedureTemplateSet(ProcedureTemplate [] ProcedureTemplateSet) {
         this.ProcedureTemplateSet = ProcedureTemplateSet;

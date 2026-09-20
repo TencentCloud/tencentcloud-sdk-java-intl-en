@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRebuildMediaTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Video rebirth template ID.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRebuildMediaTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Video rebirth template ID. 
+     * @return Definition Video rebirth template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Video rebirth template ID.
+     * @param Definition Video rebirth template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

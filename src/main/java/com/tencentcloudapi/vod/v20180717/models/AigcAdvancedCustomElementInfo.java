@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AigcAdvancedCustomElementInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Principal ID.</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * <p>Subject name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Main voice ID.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Subject description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get  
-     * @return Id 
+     * Get <p>Principal ID.</p> 
+     * @return Id <p>Principal ID.</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set <p>Principal ID.</p>
+     * @param Id <p>Principal ID.</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Subject name.</p> 
+     * @return Name <p>Subject name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Subject name.</p>
+     * @param Name <p>Subject name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Main voice ID.</p> 
+     * @return VoiceId <p>Main voice ID.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Main voice ID.</p>
+     * @param VoiceId <p>Main voice ID.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get <p>Subject description.</p> 
+     * @return Description <p>Subject description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set <p>Subject description.</p>
+     * @param Description <p>Subject description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
+     * @return CreateTime <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param CreateTime <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

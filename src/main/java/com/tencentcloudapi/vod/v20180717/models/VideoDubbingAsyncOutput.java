@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VideoDubbingAsyncOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>Dubbing result Url</p>
     */
     @SerializedName("ResultUrl")
     @Expose
     private String ResultUrl;
 
     /**
-    * 
+    * <p>Dubbing result FileId</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-     * Get  
-     * @return ResultUrl 
+     * Get <p>Dubbing result Url</p> 
+     * @return ResultUrl <p>Dubbing result Url</p>
      */
     public String getResultUrl() {
         return this.ResultUrl;
     }
 
     /**
-     * Set 
-     * @param ResultUrl 
+     * Set <p>Dubbing result Url</p>
+     * @param ResultUrl <p>Dubbing result Url</p>
      */
     public void setResultUrl(String ResultUrl) {
         this.ResultUrl = ResultUrl;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>Dubbing result FileId</p> 
+     * @return FileId <p>Dubbing result FileId</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>Dubbing result FileId</p>
+     * @param FileId <p>Dubbing result FileId</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class AiAnalysisTaskCoverOutput extends AbstractModel {
 
     /**
-    * 
+    * List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
     */
     @SerializedName("CoverSet")
     @Expose
     private MediaAiAnalysisCoverItem [] CoverSet;
 
     /**
-    * 
+    * Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
     */
     @SerializedName("CoverSetFileUrl")
     @Expose
     private String CoverSetFileUrl;
 
     /**
-    * 
+    * Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CoverSetFileUrlExpireTime")
     @Expose
     private String CoverSetFileUrlExpireTime;
 
     /**
-     * Get  
-     * @return CoverSet 
+     * Get List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl. 
+     * @return CoverSet List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
      */
     public MediaAiAnalysisCoverItem [] getCoverSet() {
         return this.CoverSet;
     }
 
     /**
-     * Set 
-     * @param CoverSet 
+     * Set List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
+     * @param CoverSet List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
      */
     public void setCoverSet(MediaAiAnalysisCoverItem [] CoverSet) {
         this.CoverSet = CoverSet;
     }
 
     /**
-     * Get  
-     * @return CoverSetFileUrl 
+     * Get Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point). 
+     * @return CoverSetFileUrl Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
      */
     public String getCoverSetFileUrl() {
         return this.CoverSetFileUrl;
     }
 
     /**
-     * Set 
-     * @param CoverSetFileUrl 
+     * Set Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
+     * @param CoverSetFileUrl Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
      */
     public void setCoverSetFileUrl(String CoverSetFileUrl) {
         this.CoverSetFileUrl = CoverSetFileUrl;
     }
 
     /**
-     * Get  
-     * @return CoverSetFileUrlExpireTime 
+     * Get Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CoverSetFileUrlExpireTime Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCoverSetFileUrlExpireTime() {
         return this.CoverSetFileUrlExpireTime;
     }
 
     /**
-     * Set 
-     * @param CoverSetFileUrlExpireTime 
+     * Set Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CoverSetFileUrlExpireTime Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCoverSetFileUrlExpireTime(String CoverSetFileUrlExpireTime) {
         this.CoverSetFileUrlExpireTime = CoverSetFileUrlExpireTime;

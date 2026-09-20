@@ -24,115 +24,125 @@ import java.util.HashMap;
 public class ClipFileInfo2017 extends AbstractModel {
 
     /**
-    * 
+    * Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error description.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Output the file ID of the target file.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * File address of the output target file.
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 
+    * Output file type of the target file.
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li> 
+     * @return ErrCode Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
+     * @param ErrCode Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error description. 
+     * @return Message Error description.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error description.
+     * @param Message Error description.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Output the file ID of the target file. 
+     * @return FileId Output the file ID of the target file.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Output the file ID of the target file.
+     * @param FileId Output the file ID of the target file.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return FileUrl 
+     * Get File address of the output target file. 
+     * @return FileUrl File address of the output target file.
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 
-     * @param FileUrl 
+     * Set File address of the output target file.
+     * @param FileUrl File address of the output target file.
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get  
-     * @return FileType 
+     * Get Output file type of the target file. 
+     * @return FileType Output file type of the target file.
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 
-     * @param FileType 
+     * Set Output file type of the target file.
+     * @param FileType Output file type of the target file.
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

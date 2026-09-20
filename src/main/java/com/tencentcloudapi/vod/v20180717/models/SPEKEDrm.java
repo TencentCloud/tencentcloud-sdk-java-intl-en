@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class SPEKEDrm extends AbstractModel {
 
     /**
-    * 
+    * <p>Resource tagging. The field content is user-customized. It supports 1-128 characters, including numbers, letters, underscores (_), and hyphens (-). This field corresponds to the cid field in the Speke request. Note: Different DRM manufacturers have different restrictions on this field (for example, SDMC does not support underscores in this field). For specific rules, please confirm with the DRM manufacturer.</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 
+    * <p>DRM manufacturer access address. The field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits it to no more than 5 substreams, while DRMtoday supports a maximum of 9 substreams for encryption.</p>
     */
     @SerializedName("KeyServerUrl")
     @Expose
     private String KeyServerUrl;
 
     /**
-    * 
+    * <p>Encryption initialization vector (32-byte hexadecimal string). The field content is user-customized.</p>
     */
     @SerializedName("Vector")
     @Expose
     private String Vector;
 
     /**
-    * 
+    * <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady supported;<br>If left blank, cbcs is used by default for FairPlay;<br>cenc is used by default for PlayReady and Widevine;<br>cbcs is used by default for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay;<br>cenc is used by default for Widevine+PlayReady;</p>
     */
     @SerializedName("EncryptionMethod")
     @Expose
     private String EncryptionMethod;
 
     /**
-    * 
+    * <p>Substream encryption rule. Default value: preset0.<br>preset0: All substreams use the same key for encryption.<br>preset1: Each substream uses a different key for encryption.</p>
     */
     @SerializedName("EncryptionPreset")
     @Expose
     private String EncryptionPreset;
 
     /**
-    * 
+    * <p>Request method of the DRM manufacturer.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p>
     */
     @SerializedName("KeyAcquireMode")
     @Expose
     private String KeyAcquireMode;
 
     /**
-     * Get  
-     * @return ResourceId 
+     * Get <p>Resource tagging. The field content is user-customized. It supports 1-128 characters, including numbers, letters, underscores (_), and hyphens (-). This field corresponds to the cid field in the Speke request. Note: Different DRM manufacturers have different restrictions on this field (for example, SDMC does not support underscores in this field). For specific rules, please confirm with the DRM manufacturer.</p> 
+     * @return ResourceId <p>Resource tagging. The field content is user-customized. It supports 1-128 characters, including numbers, letters, underscores (_), and hyphens (-). This field corresponds to the cid field in the Speke request. Note: Different DRM manufacturers have different restrictions on this field (for example, SDMC does not support underscores in this field). For specific rules, please confirm with the DRM manufacturer.</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 
-     * @param ResourceId 
+     * Set <p>Resource tagging. The field content is user-customized. It supports 1-128 characters, including numbers, letters, underscores (_), and hyphens (-). This field corresponds to the cid field in the Speke request. Note: Different DRM manufacturers have different restrictions on this field (for example, SDMC does not support underscores in this field). For specific rules, please confirm with the DRM manufacturer.</p>
+     * @param ResourceId <p>Resource tagging. The field content is user-customized. It supports 1-128 characters, including numbers, letters, underscores (_), and hyphens (-). This field corresponds to the cid field in the Speke request. Note: Different DRM manufacturers have different restrictions on this field (for example, SDMC does not support underscores in this field). For specific rules, please confirm with the DRM manufacturer.</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get  
-     * @return KeyServerUrl 
+     * Get <p>DRM manufacturer access address. The field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits it to no more than 5 substreams, while DRMtoday supports a maximum of 9 substreams for encryption.</p> 
+     * @return KeyServerUrl <p>DRM manufacturer access address. The field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits it to no more than 5 substreams, while DRMtoday supports a maximum of 9 substreams for encryption.</p>
      */
     public String getKeyServerUrl() {
         return this.KeyServerUrl;
     }
 
     /**
-     * Set 
-     * @param KeyServerUrl 
+     * Set <p>DRM manufacturer access address. The field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits it to no more than 5 substreams, while DRMtoday supports a maximum of 9 substreams for encryption.</p>
+     * @param KeyServerUrl <p>DRM manufacturer access address. The field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits it to no more than 5 substreams, while DRMtoday supports a maximum of 9 substreams for encryption.</p>
      */
     public void setKeyServerUrl(String KeyServerUrl) {
         this.KeyServerUrl = KeyServerUrl;
     }
 
     /**
-     * Get  
-     * @return Vector 
+     * Get <p>Encryption initialization vector (32-byte hexadecimal string). The field content is user-customized.</p> 
+     * @return Vector <p>Encryption initialization vector (32-byte hexadecimal string). The field content is user-customized.</p>
      */
     public String getVector() {
         return this.Vector;
     }
 
     /**
-     * Set 
-     * @param Vector 
+     * Set <p>Encryption initialization vector (32-byte hexadecimal string). The field content is user-customized.</p>
+     * @param Vector <p>Encryption initialization vector (32-byte hexadecimal string). The field content is user-customized.</p>
      */
     public void setVector(String Vector) {
         this.Vector = Vector;
     }
 
     /**
-     * Get  
-     * @return EncryptionMethod 
+     * Get <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady supported;<br>If left blank, cbcs is used by default for FairPlay;<br>cenc is used by default for PlayReady and Widevine;<br>cbcs is used by default for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay;<br>cenc is used by default for Widevine+PlayReady;</p> 
+     * @return EncryptionMethod <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady supported;<br>If left blank, cbcs is used by default for FairPlay;<br>cenc is used by default for PlayReady and Widevine;<br>cbcs is used by default for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay;<br>cenc is used by default for Widevine+PlayReady;</p>
      */
     public String getEncryptionMethod() {
         return this.EncryptionMethod;
     }
 
     /**
-     * Set 
-     * @param EncryptionMethod 
+     * Set <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady supported;<br>If left blank, cbcs is used by default for FairPlay;<br>cenc is used by default for PlayReady and Widevine;<br>cbcs is used by default for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay;<br>cenc is used by default for Widevine+PlayReady;</p>
+     * @param EncryptionMethod <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady supported;<br>If left blank, cbcs is used by default for FairPlay;<br>cenc is used by default for PlayReady and Widevine;<br>cbcs is used by default for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay;<br>cenc is used by default for Widevine+PlayReady;</p>
      */
     public void setEncryptionMethod(String EncryptionMethod) {
         this.EncryptionMethod = EncryptionMethod;
     }
 
     /**
-     * Get  
-     * @return EncryptionPreset 
+     * Get <p>Substream encryption rule. Default value: preset0.<br>preset0: All substreams use the same key for encryption.<br>preset1: Each substream uses a different key for encryption.</p> 
+     * @return EncryptionPreset <p>Substream encryption rule. Default value: preset0.<br>preset0: All substreams use the same key for encryption.<br>preset1: Each substream uses a different key for encryption.</p>
      */
     public String getEncryptionPreset() {
         return this.EncryptionPreset;
     }
 
     /**
-     * Set 
-     * @param EncryptionPreset 
+     * Set <p>Substream encryption rule. Default value: preset0.<br>preset0: All substreams use the same key for encryption.<br>preset1: Each substream uses a different key for encryption.</p>
+     * @param EncryptionPreset <p>Substream encryption rule. Default value: preset0.<br>preset0: All substreams use the same key for encryption.<br>preset1: Each substream uses a different key for encryption.</p>
      */
     public void setEncryptionPreset(String EncryptionPreset) {
         this.EncryptionPreset = EncryptionPreset;
     }
 
     /**
-     * Get  
-     * @return KeyAcquireMode 
+     * Get <p>Request method of the DRM manufacturer.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p> 
+     * @return KeyAcquireMode <p>Request method of the DRM manufacturer.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p>
      */
     public String getKeyAcquireMode() {
         return this.KeyAcquireMode;
     }
 
     /**
-     * Set 
-     * @param KeyAcquireMode 
+     * Set <p>Request method of the DRM manufacturer.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p>
+     * @param KeyAcquireMode <p>Request method of the DRM manufacturer.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p>
      */
     public void setKeyAcquireMode(String KeyAcquireMode) {
         this.KeyAcquireMode = KeyAcquireMode;

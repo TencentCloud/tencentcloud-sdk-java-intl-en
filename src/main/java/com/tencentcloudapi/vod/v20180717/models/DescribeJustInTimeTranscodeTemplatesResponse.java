@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeJustInTimeTranscodeTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Template detail list.
     */
     @SerializedName("JustInTimeTranscodeTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeJustInTimeTranscodeTemplatesResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return JustInTimeTranscodeTemplateSet 
+     * Get Template detail list. 
+     * @return JustInTimeTranscodeTemplateSet Template detail list.
      */
     public JustInTimeTranscodeTemplate [] getJustInTimeTranscodeTemplateSet() {
         return this.JustInTimeTranscodeTemplateSet;
     }
 
     /**
-     * Set 
-     * @param JustInTimeTranscodeTemplateSet 
+     * Set Template detail list.
+     * @param JustInTimeTranscodeTemplateSet Template detail list.
      */
     public void setJustInTimeTranscodeTemplateSet(JustInTimeTranscodeTemplate [] JustInTimeTranscodeTemplateSet) {
         this.JustInTimeTranscodeTemplateSet = JustInTimeTranscodeTemplateSet;

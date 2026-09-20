@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class NormalIndonesiaIDCard extends AbstractModel {
 
     /**
-    * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID number
     */
     @SerializedName("LicenseNumber")
     @Expose
@@ -33,23 +32,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Birthplace/Date of birth
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sex
     */
     @SerializedName("Sex")
     @Expose
@@ -57,15 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BloodType")
     @Expose
     private String BloodType;
 
     /**
-    * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address.
     */
     @SerializedName("FormattedAddress")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Street
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Street")
     @Expose
@@ -81,23 +74,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Village
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Village")
     @Expose
     private String Village;
 
     /**
-    * Region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Religious belief
     */
     @SerializedName("Religion")
     @Expose
@@ -105,15 +95,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaritalStatus")
     @Expose
     private String MaritalStatus;
 
     /**
-    * Job
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Occupation
     */
     @SerializedName("Occupation")
     @Expose
@@ -121,23 +109,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Validity period of the ID card
     */
     @SerializedName("DueDate")
     @Expose
     private String DueDate;
 
     /**
-    * Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Issue date
     */
     @SerializedName("IssuedDate")
     @Expose
@@ -145,45 +130,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Province
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Province")
     @Expose
     private String Province;
 
     /**
-    * City
-Note: This field may return null, indicating that no valid values can be obtained.
+    * city
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-     * Get License number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID number 
+     * @return LicenseNumber ID number
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID number
+     * @param LicenseNumber ID number
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Name 
      * @return FullName Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFullName() {
         return this.FullName;
@@ -191,59 +168,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FullName Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Birthday Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Birthplace/Date of birth 
+     * @return Birthday Birthplace/Date of birth
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Birthday Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Birthplace/Date of birth
+     * @param Birthday Birthplace/Date of birth
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Gender
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sex 
+     * @return Sex Sex
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sex
+     * @param Sex Sex
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Blood type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Blood type 
      * @return BloodType Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBloodType() {
         return this.BloodType;
@@ -251,39 +216,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BloodType Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBloodType(String BloodType) {
         this.BloodType = BloodType;
     }
 
     /**
-     * Get Address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address. 
+     * @return FormattedAddress Address.
      */
     public String getFormattedAddress() {
         return this.FormattedAddress;
     }
 
     /**
-     * Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address.
+     * @param FormattedAddress Address.
      */
     public void setFormattedAddress(String FormattedAddress) {
         this.FormattedAddress = FormattedAddress;
     }
 
     /**
-     * Get Street
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Street 
      * @return Street Street
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStreet() {
         return this.Street;
@@ -291,19 +248,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Street
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Street Street
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStreet(String Street) {
         this.Street = Street;
     }
 
     /**
-     * Get Village
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Village 
      * @return Village Village
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVillage() {
         return this.Village;
@@ -311,59 +264,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Village
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Village Village
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVillage(String Village) {
         this.Village = Village;
     }
 
     /**
-     * Get Region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Area Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Area Region.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Area Region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Area Region.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Religion Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Religious belief 
+     * @return Religion Religious belief
      */
     public String getReligion() {
         return this.Religion;
     }
 
     /**
-     * Set Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Religion Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Religious belief
+     * @param Religion Religious belief
      */
     public void setReligion(String Religion) {
         this.Religion = Religion;
     }
 
     /**
-     * Get Marital status
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Marital status 
      * @return MaritalStatus Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMaritalStatus() {
         return this.MaritalStatus;
@@ -371,39 +312,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MaritalStatus Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaritalStatus(String MaritalStatus) {
         this.MaritalStatus = MaritalStatus;
     }
 
     /**
-     * Get Job
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Occupation Job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Occupation 
+     * @return Occupation Occupation
      */
     public String getOccupation() {
         return this.Occupation;
     }
 
     /**
-     * Set Job
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Occupation Job
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Occupation
+     * @param Occupation Occupation
      */
     public void setOccupation(String Occupation) {
         this.Occupation = Occupation;
     }
 
     /**
-     * Get Nationality
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Nationality 
      * @return Nationality Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNationality() {
         return this.Nationality;
@@ -411,59 +344,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Nationality Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DueDate ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Validity period of the ID card 
+     * @return DueDate Validity period of the ID card
      */
     public String getDueDate() {
         return this.DueDate;
     }
 
     /**
-     * Set ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DueDate ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Validity period of the ID card
+     * @param DueDate Validity period of the ID card
      */
     public void setDueDate(String DueDate) {
         this.DueDate = DueDate;
     }
 
     /**
-     * Get Date of issue
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Issue date 
+     * @return IssuedDate Issue date
      */
     public String getIssuedDate() {
         return this.IssuedDate;
     }
 
     /**
-     * Set Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Issue date
+     * @param IssuedDate Issue date
      */
     public void setIssuedDate(String IssuedDate) {
         this.IssuedDate = IssuedDate;
     }
 
     /**
-     * Get Province
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Province 
      * @return Province Province
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProvince() {
         return this.Province;
@@ -471,29 +392,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Province
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Province Province
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get City
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return City City
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get city 
+     * @return City city
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set City
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param City City
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set city
+     * @param City city
      */
     public void setCity(String City) {
         this.City = City;

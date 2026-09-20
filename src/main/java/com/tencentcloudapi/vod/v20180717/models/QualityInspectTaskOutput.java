@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class QualityInspectTaskOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
     */
     @SerializedName("NoAudio")
     @Expose
     private Long NoAudio;
 
     /**
-    * 
+    * <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
     */
     @SerializedName("NoVideo")
     @Expose
     private Long NoVideo;
 
     /**
-    * 
+    * <p>Video picture quality score. Value range: [0, 100].</p>
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
     private Long QualityEvaluationScore;
 
     /**
-    * 
+    * <p>List of abnormalities detected in audio and video quality.</p>
     */
     @SerializedName("QualityInspectResultSet")
     @Expose
     private QualityInspectResultItem [] QualityInspectResultSet;
 
     /**
-    * 
+    * <p>No-reference quality score of the video (MOS).</p>
     */
     @SerializedName("QualityEvaluationMeanOpinionScore")
     @Expose
     private Float QualityEvaluationMeanOpinionScore;
 
     /**
-    * 
+    * <p>Video aesthetic score. Value range: [0, 100].</p>
     */
     @SerializedName("AestheticEvaluationScore")
     @Expose
     private Long AestheticEvaluationScore;
 
     /**
-    * 
+    * <p>Exception items detected in format diagnosis.</p>
     */
     @SerializedName("ContainerDiagnoseResultSet")
     @Expose
     private QualityInspectContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
 
     /**
-    * 
+    * <p>LLM AIGC quality detection result.</p>
     */
     @SerializedName("LLMDetectionReport")
     @Expose
     private QualityInspectLLMDetectionReport LLMDetectionReport;
 
     /**
-     * Get  
-     * @return NoAudio 
+     * Get <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li> 
+     * @return NoAudio <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
      */
     public Long getNoAudio() {
         return this.NoAudio;
     }
 
     /**
-     * Set 
-     * @param NoAudio 
+     * Set <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
+     * @param NoAudio <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
      */
     public void setNoAudio(Long NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get  
-     * @return NoVideo 
+     * Get <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li> 
+     * @return NoVideo <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
      */
     public Long getNoVideo() {
         return this.NoVideo;
     }
 
     /**
-     * Set 
-     * @param NoVideo 
+     * Set <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
+     * @param NoVideo <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
      */
     public void setNoVideo(Long NoVideo) {
         this.NoVideo = NoVideo;
     }
 
     /**
-     * Get  
-     * @return QualityEvaluationScore 
+     * Get <p>Video picture quality score. Value range: [0, 100].</p> 
+     * @return QualityEvaluationScore <p>Video picture quality score. Value range: [0, 100].</p>
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
     }
 
     /**
-     * Set 
-     * @param QualityEvaluationScore 
+     * Set <p>Video picture quality score. Value range: [0, 100].</p>
+     * @param QualityEvaluationScore <p>Video picture quality score. Value range: [0, 100].</p>
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
     }
 
     /**
-     * Get  
-     * @return QualityInspectResultSet 
+     * Get <p>List of abnormalities detected in audio and video quality.</p> 
+     * @return QualityInspectResultSet <p>List of abnormalities detected in audio and video quality.</p>
      */
     public QualityInspectResultItem [] getQualityInspectResultSet() {
         return this.QualityInspectResultSet;
     }
 
     /**
-     * Set 
-     * @param QualityInspectResultSet 
+     * Set <p>List of abnormalities detected in audio and video quality.</p>
+     * @param QualityInspectResultSet <p>List of abnormalities detected in audio and video quality.</p>
      */
     public void setQualityInspectResultSet(QualityInspectResultItem [] QualityInspectResultSet) {
         this.QualityInspectResultSet = QualityInspectResultSet;
     }
 
     /**
-     * Get  
-     * @return QualityEvaluationMeanOpinionScore 
+     * Get <p>No-reference quality score of the video (MOS).</p> 
+     * @return QualityEvaluationMeanOpinionScore <p>No-reference quality score of the video (MOS).</p>
      */
     public Float getQualityEvaluationMeanOpinionScore() {
         return this.QualityEvaluationMeanOpinionScore;
     }
 
     /**
-     * Set 
-     * @param QualityEvaluationMeanOpinionScore 
+     * Set <p>No-reference quality score of the video (MOS).</p>
+     * @param QualityEvaluationMeanOpinionScore <p>No-reference quality score of the video (MOS).</p>
      */
     public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
         this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
     }
 
     /**
-     * Get  
-     * @return AestheticEvaluationScore 
+     * Get <p>Video aesthetic score. Value range: [0, 100].</p> 
+     * @return AestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
      */
     public Long getAestheticEvaluationScore() {
         return this.AestheticEvaluationScore;
     }
 
     /**
-     * Set 
-     * @param AestheticEvaluationScore 
+     * Set <p>Video aesthetic score. Value range: [0, 100].</p>
+     * @param AestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
      */
     public void setAestheticEvaluationScore(Long AestheticEvaluationScore) {
         this.AestheticEvaluationScore = AestheticEvaluationScore;
     }
 
     /**
-     * Get  
-     * @return ContainerDiagnoseResultSet 
+     * Get <p>Exception items detected in format diagnosis.</p> 
+     * @return ContainerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
      */
     public QualityInspectContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
         return this.ContainerDiagnoseResultSet;
     }
 
     /**
-     * Set 
-     * @param ContainerDiagnoseResultSet 
+     * Set <p>Exception items detected in format diagnosis.</p>
+     * @param ContainerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
      */
     public void setContainerDiagnoseResultSet(QualityInspectContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
         this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
     }
 
     /**
-     * Get  
-     * @return LLMDetectionReport 
+     * Get <p>LLM AIGC quality detection result.</p> 
+     * @return LLMDetectionReport <p>LLM AIGC quality detection result.</p>
      */
     public QualityInspectLLMDetectionReport getLLMDetectionReport() {
         return this.LLMDetectionReport;
     }
 
     /**
-     * Set 
-     * @param LLMDetectionReport 
+     * Set <p>LLM AIGC quality detection result.</p>
+     * @param LLMDetectionReport <p>LLM AIGC quality detection result.</p>
      */
     public void setLLMDetectionReport(QualityInspectLLMDetectionReport LLMDetectionReport) {
         this.LLMDetectionReport = LLMDetectionReport;

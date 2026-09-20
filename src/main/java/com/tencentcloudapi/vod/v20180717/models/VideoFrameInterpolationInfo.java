@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class VideoFrameInterpolationInfo extends AbstractModel {
 
     /**
-    * 
+    * Intelligent frame interpolation control switch. Valid values:
+<li>ON: enable intelligent frame interpolation;</li>
+<li>OFF: disables intelligent frame interpolation.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Intelligent frame interpolation control switch. Valid values:
+<li>ON: enable intelligent frame interpolation;</li>
+<li>OFF: disables intelligent frame interpolation.</li> 
+     * @return Switch Intelligent frame interpolation control switch. Valid values:
+<li>ON: enable intelligent frame interpolation;</li>
+<li>OFF: disables intelligent frame interpolation.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Intelligent frame interpolation control switch. Valid values:
+<li>ON: enable intelligent frame interpolation;</li>
+<li>OFF: disables intelligent frame interpolation.</li>
+     * @param Switch Intelligent frame interpolation control switch. Valid values:
+<li>ON: enable intelligent frame interpolation;</li>
+<li>OFF: disables intelligent frame interpolation.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Fps 
+     * Get Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate. 
+     * @return Fps Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 
-     * @param Fps 
+     * Set Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
+     * @param Fps Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

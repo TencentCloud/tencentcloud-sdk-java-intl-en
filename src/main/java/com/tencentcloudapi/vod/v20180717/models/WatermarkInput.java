@@ -24,115 +24,155 @@ import java.util.HashMap;
 public class WatermarkInput extends AbstractModel {
 
     /**
-    * 
+    * Watermark template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
     */
     @SerializedName("TextContent")
     @Expose
     private String TextContent;
 
     /**
-    * 
+    * SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
     */
     @SerializedName("SvgContent")
     @Expose
     private String SvgContent;
 
     /**
-    * 
+    * Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Watermark template ID. 
+     * @return Definition Watermark template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Watermark template ID.
+     * @param Definition Watermark template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return TextContent 
+     * Get Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots. 
+     * @return TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
      */
     public String getTextContent() {
         return this.TextContent;
     }
 
     /**
-     * Set 
-     * @param TextContent 
+     * Set Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
+     * @param TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
      */
     public void setTextContent(String TextContent) {
         this.TextContent = TextContent;
     }
 
     /**
-     * Get  
-     * @return SvgContent 
+     * Get SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking. 
+     * @return SvgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
      */
     public String getSvgContent() {
         return this.SvgContent;
     }
 
     /**
-     * Set 
-     * @param SvgContent 
+     * Set SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
+     * @param SvgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li> 
+     * @return StartTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
+     * @param StartTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li> 
+     * @return EndTimeOffset End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+     * @param EndTimeOffset End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

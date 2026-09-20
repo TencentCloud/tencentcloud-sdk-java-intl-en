@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAllClassResponse extends AbstractModel {
 
     /**
-    * 
+    * Classification information collection
     */
     @SerializedName("ClassInfoSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAllClassResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return ClassInfoSet 
+     * Get Classification information collection 
+     * @return ClassInfoSet Classification information collection
      */
     public MediaClassInfo [] getClassInfoSet() {
         return this.ClassInfoSet;
     }
 
     /**
-     * Set 
-     * @param ClassInfoSet 
+     * Set Classification information collection
+     * @param ClassInfoSet Classification information collection
      */
     public void setClassInfoSet(MediaClassInfo [] ClassInfoSet) {
         this.ClassInfoSet = ClassInfoSet;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class AiRecognitionTaskSegmentSegmentItem extends AbstractModel {
 
     /**
-    * 
+    * File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Video splitting segment Url.
     */
     @SerializedName("SegmentUrl")
     @Expose
     private String SegmentUrl;
 
     /**
-    * 
+    * Confidence of a split segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Start time offset of a split segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of a split segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Segment cover image Url.
     */
     @SerializedName("CovImgUrl")
     @Expose
     private String CovImgUrl;
 
     /**
-    * 
+    * Special field. Ignore it.
     */
     @SerializedName("SpecialInfo")
     @Expose
     private String SpecialInfo;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get File ID. Valid only when processing VOD files and the generated sub-segments are VOD files. 
+     * @return FileId File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
+     * @param FileId File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return SegmentUrl 
+     * Get Video splitting segment Url. 
+     * @return SegmentUrl Video splitting segment Url.
      */
     public String getSegmentUrl() {
         return this.SegmentUrl;
     }
 
     /**
-     * Set 
-     * @param SegmentUrl 
+     * Set Video splitting segment Url.
+     * @param SegmentUrl Video splitting segment Url.
      */
     public void setSegmentUrl(String SegmentUrl) {
         this.SegmentUrl = SegmentUrl;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence of a split segment. Value range: 0-100. 
+     * @return Confidence Confidence of a split segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence of a split segment. Value range: 0-100.
+     * @param Confidence Confidence of a split segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Start time offset of a split segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a split segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Start time offset of a split segment, in seconds.
+     * @param StartTimeOffset Start time offset of a split segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of a split segment, in seconds. 
+     * @return EndTimeOffset End time offset of a split segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of a split segment, in seconds.
+     * @param EndTimeOffset End time offset of a split segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return CovImgUrl 
+     * Get Segment cover image Url. 
+     * @return CovImgUrl Segment cover image Url.
      */
     public String getCovImgUrl() {
         return this.CovImgUrl;
     }
 
     /**
-     * Set 
-     * @param CovImgUrl 
+     * Set Segment cover image Url.
+     * @param CovImgUrl Segment cover image Url.
      */
     public void setCovImgUrl(String CovImgUrl) {
         this.CovImgUrl = CovImgUrl;
     }
 
     /**
-     * Get  
-     * @return SpecialInfo 
+     * Get Special field. Ignore it. 
+     * @return SpecialInfo Special field. Ignore it.
      */
     public String getSpecialInfo() {
         return this.SpecialInfo;
     }
 
     /**
-     * Set 
-     * @param SpecialInfo 
+     * Set Special field. Ignore it.
+     * @param SpecialInfo Special field. Ignore it.
      */
     public void setSpecialInfo(String SpecialInfo) {
         this.SpecialInfo = SpecialInfo;

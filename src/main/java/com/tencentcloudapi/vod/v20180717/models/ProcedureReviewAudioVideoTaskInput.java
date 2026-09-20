@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class ProcedureReviewAudioVideoTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Moderation template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
     */
     @SerializedName("ReviewContents")
     @Expose
     private String [] ReviewContents;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Moderation template. 
+     * @return Definition Moderation template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Moderation template.
+     * @param Definition Moderation template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ReviewContents 
+     * Get Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default. 
+     * @return ReviewContents Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
      */
     public String [] getReviewContents() {
         return this.ReviewContents;
     }
 
     /**
-     * Set 
-     * @param ReviewContents 
+     * Set Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+     * @param ReviewContents Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
      */
     public void setReviewContents(String [] ReviewContents) {
         this.ReviewContents = ReviewContents;

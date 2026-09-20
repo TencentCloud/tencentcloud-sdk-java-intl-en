@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiReviewProhibitedAsrTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Prohibited information recognition template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Prohibited information recognition template ID. 
+     * @return Definition Prohibited information recognition template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Prohibited information recognition template ID.
+     * @param Definition Prohibited information recognition template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

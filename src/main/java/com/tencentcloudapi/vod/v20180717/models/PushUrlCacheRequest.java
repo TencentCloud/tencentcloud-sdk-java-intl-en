@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PushUrlCacheRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
     */
     @SerializedName("Urls")
     @Expose
     private String [] Urls;
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get  
-     * @return Urls 
+     * Get <p>Preheated URL list. You can specify up to 20 URLs at a time.</p> 
+     * @return Urls <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
      */
     public String [] getUrls() {
         return this.Urls;
     }
 
     /**
-     * Set 
-     * @param Urls 
+     * Set <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
+     * @param Urls <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
      */
     public void setUrls(String [] Urls) {
         this.Urls = Urls;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

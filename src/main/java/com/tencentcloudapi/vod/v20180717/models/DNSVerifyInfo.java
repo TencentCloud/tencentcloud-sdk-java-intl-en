@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DNSVerifyInfo extends AbstractModel {
 
     /**
-    * 
+    * Sub-parsing.
     */
     @SerializedName("SubDomain")
     @Expose
     private String SubDomain;
 
     /**
-    * 
+    * Parse the value.
     */
     @SerializedName("Record")
     @Expose
     private String Record;
 
     /**
-    * 
+    * Parsing type.
     */
     @SerializedName("RecordType")
     @Expose
     private String RecordType;
 
     /**
-     * Get  
-     * @return SubDomain 
+     * Get Sub-parsing. 
+     * @return SubDomain Sub-parsing.
      */
     public String getSubDomain() {
         return this.SubDomain;
     }
 
     /**
-     * Set 
-     * @param SubDomain 
+     * Set Sub-parsing.
+     * @param SubDomain Sub-parsing.
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get  
-     * @return Record 
+     * Get Parse the value. 
+     * @return Record Parse the value.
      */
     public String getRecord() {
         return this.Record;
     }
 
     /**
-     * Set 
-     * @param Record 
+     * Set Parse the value.
+     * @param Record Parse the value.
      */
     public void setRecord(String Record) {
         this.Record = Record;
     }
 
     /**
-     * Get  
-     * @return RecordType 
+     * Get Parsing type. 
+     * @return RecordType Parsing type.
      */
     public String getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * Set 
-     * @param RecordType 
+     * Set Parsing type.
+     * @param RecordType Parsing type.
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;

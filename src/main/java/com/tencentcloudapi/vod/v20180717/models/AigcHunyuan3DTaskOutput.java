@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AigcHunyuan3DTaskOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcHunyuan3DTaskOutputFileInfo [] FileInfos;
 
     /**
-     * Get  
-     * @return FileInfos 
+     * Get <p>Information of the output file of an AIGC Hunyuan 3D task.</p> 
+     * @return FileInfos <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
      */
     public AigcHunyuan3DTaskOutputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 
-     * @param FileInfos 
+     * Set <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
+     * @param FileInfos <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
      */
     public void setFileInfos(AigcHunyuan3DTaskOutputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;

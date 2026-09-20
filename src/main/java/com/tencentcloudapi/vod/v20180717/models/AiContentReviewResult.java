@@ -24,253 +24,303 @@ import java.util.HashMap;
 public class AiContentReviewResult extends AbstractModel {
 
     /**
-    * 
+    * Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
     */
     @SerializedName("PornTask")
     @Expose
     private AiReviewTaskPornResult PornTask;
 
     /**
-    * 
+    * Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
     */
     @SerializedName("TerrorismTask")
     @Expose
     private AiReviewTaskTerrorismResult TerrorismTask;
 
     /**
-    * 
+    * Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
     */
     @SerializedName("PoliticalTask")
     @Expose
     private AiReviewTaskPoliticalResult PoliticalTask;
 
     /**
-    * 
+    * Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
     */
     @SerializedName("PornAsrTask")
     @Expose
     private AiReviewTaskPornAsrResult PornAsrTask;
 
     /**
-    * 
+    * Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
     */
     @SerializedName("PornOcrTask")
     @Expose
     private AiReviewTaskPornOcrResult PornOcrTask;
 
     /**
-    * 
+    * Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
     */
     @SerializedName("PoliticalAsrTask")
     @Expose
     private AiReviewTaskPoliticalAsrResult PoliticalAsrTask;
 
     /**
-    * 
+    * Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
     */
     @SerializedName("PoliticalOcrTask")
     @Expose
     private AiReviewTaskPoliticalOcrResult PoliticalOcrTask;
 
     /**
-    * 
+    * Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
     */
     @SerializedName("TerrorismOcrTask")
     @Expose
     private AiReviewTaskTerrorismOcrResult TerrorismOcrTask;
 
     /**
-    * 
+    * Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
     */
     @SerializedName("ProhibitedOcrTask")
     @Expose
     private AiReviewTaskProhibitedOcrResult ProhibitedOcrTask;
 
     /**
-    * 
+    * Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
     */
     @SerializedName("ProhibitedAsrTask")
     @Expose
     private AiReviewTaskProhibitedAsrResult ProhibitedAsrTask;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li> 
+     * @return Type Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
+     * @param Type Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return PornTask 
+     * Get Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn. 
+     * @return PornTask Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
      */
     public AiReviewTaskPornResult getPornTask() {
         return this.PornTask;
     }
 
     /**
-     * Set 
-     * @param PornTask 
+     * Set Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
+     * @param PornTask Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
      */
     public void setPornTask(AiReviewTaskPornResult PornTask) {
         this.PornTask = PornTask;
     }
 
     /**
-     * Get  
-     * @return TerrorismTask 
+     * Get Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism. 
+     * @return TerrorismTask Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
      */
     public AiReviewTaskTerrorismResult getTerrorismTask() {
         return this.TerrorismTask;
     }
 
     /**
-     * Set 
-     * @param TerrorismTask 
+     * Set Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
+     * @param TerrorismTask Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
      */
     public void setTerrorismTask(AiReviewTaskTerrorismResult TerrorismTask) {
         this.TerrorismTask = TerrorismTask;
     }
 
     /**
-     * Get  
-     * @return PoliticalTask 
+     * Get Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political. 
+     * @return PoliticalTask Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
      */
     public AiReviewTaskPoliticalResult getPoliticalTask() {
         return this.PoliticalTask;
     }
 
     /**
-     * Set 
-     * @param PoliticalTask 
+     * Set Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
+     * @param PoliticalTask Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
      */
     public void setPoliticalTask(AiReviewTaskPoliticalResult PoliticalTask) {
         this.PoliticalTask = PoliticalTask;
     }
 
     /**
-     * Get  
-     * @return PornAsrTask 
+     * Get Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr. 
+     * @return PornAsrTask Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
      */
     public AiReviewTaskPornAsrResult getPornAsrTask() {
         return this.PornAsrTask;
     }
 
     /**
-     * Set 
-     * @param PornAsrTask 
+     * Set Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
+     * @param PornAsrTask Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
      */
     public void setPornAsrTask(AiReviewTaskPornAsrResult PornAsrTask) {
         this.PornAsrTask = PornAsrTask;
     }
 
     /**
-     * Get  
-     * @return PornOcrTask 
+     * Get Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr. 
+     * @return PornOcrTask Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
      */
     public AiReviewTaskPornOcrResult getPornOcrTask() {
         return this.PornOcrTask;
     }
 
     /**
-     * Set 
-     * @param PornOcrTask 
+     * Set Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
+     * @param PornOcrTask Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
      */
     public void setPornOcrTask(AiReviewTaskPornOcrResult PornOcrTask) {
         this.PornOcrTask = PornOcrTask;
     }
 
     /**
-     * Get  
-     * @return PoliticalAsrTask 
+     * Get Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr. 
+     * @return PoliticalAsrTask Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
      */
     public AiReviewTaskPoliticalAsrResult getPoliticalAsrTask() {
         return this.PoliticalAsrTask;
     }
 
     /**
-     * Set 
-     * @param PoliticalAsrTask 
+     * Set Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
+     * @param PoliticalAsrTask Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
      */
     public void setPoliticalAsrTask(AiReviewTaskPoliticalAsrResult PoliticalAsrTask) {
         this.PoliticalAsrTask = PoliticalAsrTask;
     }
 
     /**
-     * Get  
-     * @return PoliticalOcrTask 
+     * Get Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr. 
+     * @return PoliticalOcrTask Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
      */
     public AiReviewTaskPoliticalOcrResult getPoliticalOcrTask() {
         return this.PoliticalOcrTask;
     }
 
     /**
-     * Set 
-     * @param PoliticalOcrTask 
+     * Set Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
+     * @param PoliticalOcrTask Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
      */
     public void setPoliticalOcrTask(AiReviewTaskPoliticalOcrResult PoliticalOcrTask) {
         this.PoliticalOcrTask = PoliticalOcrTask;
     }
 
     /**
-     * Get  
-     * @return TerrorismOcrTask 
+     * Get Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr. 
+     * @return TerrorismOcrTask Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
      */
     public AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() {
         return this.TerrorismOcrTask;
     }
 
     /**
-     * Set 
-     * @param TerrorismOcrTask 
+     * Set Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
+     * @param TerrorismOcrTask Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
      */
     public void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult TerrorismOcrTask) {
         this.TerrorismOcrTask = TerrorismOcrTask;
     }
 
     /**
-     * Get  
-     * @return ProhibitedOcrTask 
+     * Get Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr. 
+     * @return ProhibitedOcrTask Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
      */
     public AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() {
         return this.ProhibitedOcrTask;
     }
 
     /**
-     * Set 
-     * @param ProhibitedOcrTask 
+     * Set Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
+     * @param ProhibitedOcrTask Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
      */
     public void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult ProhibitedOcrTask) {
         this.ProhibitedOcrTask = ProhibitedOcrTask;
     }
 
     /**
-     * Get  
-     * @return ProhibitedAsrTask 
+     * Get Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr. 
+     * @return ProhibitedAsrTask Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
      */
     public AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() {
         return this.ProhibitedAsrTask;
     }
 
     /**
-     * Set 
-     * @param ProhibitedAsrTask 
+     * Set Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
+     * @param ProhibitedAsrTask Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
      */
     public void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult ProhibitedAsrTask) {
         this.ProhibitedAsrTask = ProhibitedAsrTask;

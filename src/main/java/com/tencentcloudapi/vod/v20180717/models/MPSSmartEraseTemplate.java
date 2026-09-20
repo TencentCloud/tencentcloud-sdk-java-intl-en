@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class MPSSmartEraseTemplate extends AbstractModel {
 
     /**
-    * 
+    * <p>Length limit for the smart erasing template name: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
     */
     @SerializedName("EraseType")
     @Expose
     private String EraseType;
 
     /**
-    * 
+    * <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
     */
     @SerializedName("EraseSubtitleConfig")
     @Expose
     private MPSSmartEraseSubtitleConfig EraseSubtitleConfig;
 
     /**
-    * 
+    * <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
     */
     @SerializedName("EraseWatermarkConfig")
     @Expose
     private MPSSmartEraseWatermarkConfig EraseWatermarkConfig;
 
     /**
-    * 
+    * <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
     */
     @SerializedName("ErasePrivacyConfig")
     @Expose
     private MPSSmartErasePrivacyConfig ErasePrivacyConfig;
 
     /**
-    * 
+    * <p>Width of the sample video or image, in pixels.</p>
     */
     @SerializedName("SampleWidth")
     @Expose
     private Long SampleWidth;
 
     /**
-    * 
+    * <p>Height of the sample video or image, in pixels.</p>
     */
     @SerializedName("SampleHeight")
     @Expose
     private Long SampleHeight;
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Length limit for the smart erasing template name: 64 characters.</p> 
+     * @return Name <p>Length limit for the smart erasing template name: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Length limit for the smart erasing template name: 64 characters.</p>
+     * @param Name <p>Length limit for the smart erasing template name: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return EraseType 
+     * Get <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul> 
+     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public String getEraseType() {
         return this.EraseType;
     }
 
     /**
-     * Set 
-     * @param EraseType 
+     * Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public void setEraseType(String EraseType) {
         this.EraseType = EraseType;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Length limit for the description information of the smart erasing template: 256 characters.</p> 
+     * @return Comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+     * @param Comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return EraseSubtitleConfig 
+     * Get <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p> 
+     * @return EraseSubtitleConfig <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
      */
     public MPSSmartEraseSubtitleConfig getEraseSubtitleConfig() {
         return this.EraseSubtitleConfig;
     }
 
     /**
-     * Set 
-     * @param EraseSubtitleConfig 
+     * Set <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
+     * @param EraseSubtitleConfig <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
      */
     public void setEraseSubtitleConfig(MPSSmartEraseSubtitleConfig EraseSubtitleConfig) {
         this.EraseSubtitleConfig = EraseSubtitleConfig;
     }
 
     /**
-     * Get  
-     * @return EraseWatermarkConfig 
+     * Get <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p> 
+     * @return EraseWatermarkConfig <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
      */
     public MPSSmartEraseWatermarkConfig getEraseWatermarkConfig() {
         return this.EraseWatermarkConfig;
     }
 
     /**
-     * Set 
-     * @param EraseWatermarkConfig 
+     * Set <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
+     * @param EraseWatermarkConfig <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
      */
     public void setEraseWatermarkConfig(MPSSmartEraseWatermarkConfig EraseWatermarkConfig) {
         this.EraseWatermarkConfig = EraseWatermarkConfig;
     }
 
     /**
-     * Get  
-     * @return ErasePrivacyConfig 
+     * Get <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p> 
+     * @return ErasePrivacyConfig <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
      */
     public MPSSmartErasePrivacyConfig getErasePrivacyConfig() {
         return this.ErasePrivacyConfig;
     }
 
     /**
-     * Set 
-     * @param ErasePrivacyConfig 
+     * Set <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
+     * @param ErasePrivacyConfig <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
      */
     public void setErasePrivacyConfig(MPSSmartErasePrivacyConfig ErasePrivacyConfig) {
         this.ErasePrivacyConfig = ErasePrivacyConfig;
     }
 
     /**
-     * Get  
-     * @return SampleWidth 
+     * Get <p>Width of the sample video or image, in pixels.</p> 
+     * @return SampleWidth <p>Width of the sample video or image, in pixels.</p>
      */
     public Long getSampleWidth() {
         return this.SampleWidth;
     }
 
     /**
-     * Set 
-     * @param SampleWidth 
+     * Set <p>Width of the sample video or image, in pixels.</p>
+     * @param SampleWidth <p>Width of the sample video or image, in pixels.</p>
      */
     public void setSampleWidth(Long SampleWidth) {
         this.SampleWidth = SampleWidth;
     }
 
     /**
-     * Get  
-     * @return SampleHeight 
+     * Get <p>Height of the sample video or image, in pixels.</p> 
+     * @return SampleHeight <p>Height of the sample video or image, in pixels.</p>
      */
     public Long getSampleHeight() {
         return this.SampleHeight;
     }
 
     /**
-     * Set 
-     * @param SampleHeight 
+     * Set <p>Height of the sample video or image, in pixels.</p>
+     * @param SampleHeight <p>Height of the sample video or image, in pixels.</p>
      */
     public void setSampleHeight(Long SampleHeight) {
         this.SampleHeight = SampleHeight;

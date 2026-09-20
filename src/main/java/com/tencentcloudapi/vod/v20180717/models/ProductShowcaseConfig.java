@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ProductShowcaseConfig extends AbstractModel {
 
     /**
-    * 
+    * Lens movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
     */
     @SerializedName("CameraMovement")
     @Expose
     private String CameraMovement;
 
     /**
-     * Get  
-     * @return CameraMovement 
+     * Get Lens movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown. 
+     * @return CameraMovement Lens movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
      */
     public String getCameraMovement() {
         return this.CameraMovement;
     }
 
     /**
-     * Set 
-     * @param CameraMovement 
+     * Set Lens movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
+     * @param CameraMovement Lens movement method. Supported values: AutoMatch, ZoomIn, ZoomOut, GlideRight, GlideLeft, CraneDown.
      */
     public void setCameraMovement(String CameraMovement) {
         this.CameraMovement = CameraMovement;

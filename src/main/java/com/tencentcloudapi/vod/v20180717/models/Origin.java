@@ -32,7 +32,7 @@ When modifying the primary origin server, fill in the corresponding OriginType a
     private String [] Origins;
 
     /**
-    * Primary origin server type. The input parameter supports the following types:
+    * Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -42,7 +42,7 @@ When modifying the primary origin server, fill in the corresponding OriginType a
     private String OriginType;
 
     /**
-    * Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+    * Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
     */
     @SerializedName("ServerName")
@@ -50,7 +50,7 @@ When the origin server type is COS, the ServerName field is required.
     private String ServerName;
 
     /**
-    * Origin-pull protocol configuration:
+    * Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
@@ -61,7 +61,7 @@ When the origin server type is COS, the ServerName field is required.
 
     /**
     * Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
     */
     @SerializedName("BackupOrigins")
     @Expose
@@ -78,14 +78,14 @@ When modifying the standby origin server, fill in the corresponding OriginType a
     private String BackupOriginType;
 
     /**
-    * 
+    * Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
     */
     @SerializedName("BackupServerName")
     @Expose
     private String BackupServerName;
 
     /**
-    * Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+    * Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
@@ -116,11 +116,11 @@ When modifying the primary origin server, fill in the corresponding OriginType a
     }
 
     /**
-     * Get Primary origin server type. The input parameter supports the following types:
+     * Get Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li> 
-     * @return OriginType Primary origin server type. The input parameter supports the following types:
+     * @return OriginType Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -130,11 +130,11 @@ When modifying the primary origin server, fill in the corresponding OriginType a
     }
 
     /**
-     * Set Primary origin server type. The input parameter supports the following types:
+     * Set Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
-     * @param OriginType Primary origin server type. The input parameter supports the following types:
+     * @param OriginType Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -144,9 +144,9 @@ When modifying the primary origin server, fill in the corresponding OriginType a
     }
 
     /**
-     * Get Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+     * Get Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required. 
-     * @return ServerName Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+     * @return ServerName Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
      */
     public String getServerName() {
@@ -154,9 +154,9 @@ When the origin server type is COS, the ServerName field is required.
     }
 
     /**
-     * Set Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+     * Set Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
-     * @param ServerName Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+     * @param ServerName Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
      */
     public void setServerName(String ServerName) {
@@ -164,11 +164,11 @@ When the origin server type is COS, the ServerName field is required.
     }
 
     /**
-     * Get Origin-pull protocol configuration:
+     * Get Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li> 
-     * @return OriginPullProtocol Origin-pull protocol configuration:
+     * @return OriginPullProtocol Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
@@ -178,11 +178,11 @@ When the origin server type is COS, the ServerName field is required.
     }
 
     /**
-     * Set Origin-pull protocol configuration:
+     * Set Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
-     * @param OriginPullProtocol Origin-pull protocol configuration:
+     * @param OriginPullProtocol Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
@@ -193,9 +193,9 @@ When the origin server type is COS, the ServerName field is required.
 
     /**
      * Get Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time. 
+When modifying the backup origin server, fill in the corresponding OriginType at the same time. 
      * @return BackupOrigins Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
      */
     public String [] getBackupOrigins() {
         return this.BackupOrigins;
@@ -203,9 +203,9 @@ When modifying the standby origin server, fill in the corresponding OriginType a
 
     /**
      * Set Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
      * @param BackupOrigins Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
      */
     public void setBackupOrigins(String [] BackupOrigins) {
         this.BackupOrigins = BackupOrigins;
@@ -240,28 +240,28 @@ When modifying the standby origin server, fill in the corresponding OriginType a
     }
 
     /**
-     * Get  
-     * @return BackupServerName 
+     * Get Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default. 
+     * @return BackupServerName Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
      */
     public String getBackupServerName() {
         return this.BackupServerName;
     }
 
     /**
-     * Set 
-     * @param BackupServerName 
+     * Set Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+     * @param BackupServerName Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
      */
     public void setBackupServerName(String BackupServerName) {
         this.BackupServerName = BackupServerName;
     }
 
     /**
-     * Get Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+     * Get Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
 <li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li> 
-     * @return OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+     * @return OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
@@ -272,12 +272,12 @@ When modifying the standby origin server, fill in the corresponding OriginType a
     }
 
     /**
-     * Set Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+     * Set Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
 <li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
-     * @param OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+     * @param OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>

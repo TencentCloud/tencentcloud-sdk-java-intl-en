@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TaskOutputMediaInfo extends AbstractModel {
 
     /**
-    * 
+    * Media file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Basic information of the generated media file after pull conversion is completed.
     */
     @SerializedName("MediaBasicInfo")
     @Expose
     private MediaBasicInfo MediaBasicInfo;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID. 
+     * @return FileId Media file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID.
+     * @param FileId Media file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return MediaBasicInfo 
+     * Get Basic information of the generated media file after pull conversion is completed. 
+     * @return MediaBasicInfo Basic information of the generated media file after pull conversion is completed.
      */
     public MediaBasicInfo getMediaBasicInfo() {
         return this.MediaBasicInfo;
     }
 
     /**
-     * Set 
-     * @param MediaBasicInfo 
+     * Set Basic information of the generated media file after pull conversion is completed.
+     * @param MediaBasicInfo Basic information of the generated media file after pull conversion is completed.
      */
     public void setMediaBasicInfo(MediaBasicInfo MediaBasicInfo) {
         this.MediaBasicInfo = MediaBasicInfo;

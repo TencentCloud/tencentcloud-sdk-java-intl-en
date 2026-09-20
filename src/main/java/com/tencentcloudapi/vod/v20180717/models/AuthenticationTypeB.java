@@ -32,7 +32,7 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
     private String SecretKey;
 
     /**
-    * Signature expiration time setting;
+    * Signature expiration time settings;
 In seconds. Maximum settable value: 630720000.
     */
     @SerializedName("ExpireTime")
@@ -41,7 +41,7 @@ In seconds. Maximum settable value: 630720000.
 
     /**
     * List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
     */
     @SerializedName("FileExtensions")
     @Expose
@@ -49,14 +49,14 @@ If it contains the character *, it indicates all files.
 
     /**
     * whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * Secondary key for signature calculation;
+    * Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
     */
     @SerializedName("BackupSecretKey")
@@ -84,9 +84,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
     }
 
     /**
-     * Get Signature expiration time setting;
+     * Get Signature expiration time settings;
 In seconds. Maximum settable value: 630720000. 
-     * @return ExpireTime Signature expiration time setting;
+     * @return ExpireTime Signature expiration time settings;
 In seconds. Maximum settable value: 630720000.
      */
     public Long getExpireTime() {
@@ -94,9 +94,9 @@ In seconds. Maximum settable value: 630720000.
     }
 
     /**
-     * Set Signature expiration time setting;
+     * Set Signature expiration time settings;
 In seconds. Maximum settable value: 630720000.
-     * @param ExpireTime Signature expiration time setting;
+     * @param ExpireTime Signature expiration time settings;
 In seconds. Maximum settable value: 630720000.
      */
     public void setExpireTime(Long ExpireTime) {
@@ -105,9 +105,9 @@ In seconds. Maximum settable value: 630720000.
 
     /**
      * Get List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files. 
+If it contains the character *, it means all files. 
      * @return FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      */
     public String [] getFileExtensions() {
         return this.FileExtensions;
@@ -115,9 +115,9 @@ If it contains the character *, it indicates all files.
 
     /**
      * Set List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      * @param FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
      */
     public void setFileExtensions(String [] FileExtensions) {
         this.FileExtensions = FileExtensions;
@@ -125,9 +125,9 @@ If it contains the character *, it indicates all files.
 
     /**
      * Get whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions. 
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions. 
      * @return FilterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
      */
     public String getFilterType() {
         return this.FilterType;
@@ -135,18 +135,18 @@ blacklist: blocklist, means only applicable to authenticate the types in FileExt
 
     /**
      * Set whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
      * @param FilterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get Secondary key for signature calculation;
+     * Get Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters. 
-     * @return BackupSecretKey Secondary key for signature calculation;
+     * @return BackupSecretKey Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
      */
     public String getBackupSecretKey() {
@@ -154,9 +154,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
     }
 
     /**
-     * Set Secondary key for signature calculation;
+     * Set Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
-     * @param BackupSecretKey Secondary key for signature calculation;
+     * @param BackupSecretKey Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
      */
     public void setBackupSecretKey(String BackupSecretKey) {

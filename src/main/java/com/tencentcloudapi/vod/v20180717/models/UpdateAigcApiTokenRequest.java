@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class UpdateAigcApiTokenRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>To update the Api Key</p>
     */
     @SerializedName("ApiToken")
     @Expose
     private String ApiToken;
 
     /**
-    * 
+    * <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * 
+    * <p>Extended information of the token.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return ApiToken 
+     * Get <p>To update the Api Key</p> 
+     * @return ApiToken <p>To update the Api Key</p>
      */
     public String getApiToken() {
         return this.ApiToken;
     }
 
     /**
-     * Set 
-     * @param ApiToken 
+     * Set <p>To update the Api Key</p>
+     * @param ApiToken <p>To update the Api Key</p>
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;
     }
 
     /**
-     * Get  
-     * @return ActionType 
+     * Get <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p> 
+     * @return ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 
-     * @param ActionType 
+     * Set <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
+     * @param ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Extended information of the token.</p> 
+     * @return ExtInfo <p>Extended information of the token.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Extended information of the token.</p>
+     * @param ExtInfo <p>Extended information of the token.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

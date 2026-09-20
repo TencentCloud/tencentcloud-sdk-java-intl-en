@@ -24,203 +24,173 @@ import java.util.HashMap;
 public class NormalMLIDCard extends AbstractModel {
 
     /**
-    * Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Identity card number
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sex
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address.
     */
     @SerializedName("FormattedAddress")
     @Expose
     private String FormattedAddress;
 
     /**
-    * Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+    * Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-     * Get Full Name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return FullName Name
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param FullName Name
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get License number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Identity card number 
+     * @return LicenseNumber Identity card number
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Identity card number
+     * @param LicenseNumber Identity card number
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Gender
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sex 
+     * @return Sex Sex
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sex
+     * @param Sex Sex
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address. 
+     * @return FormattedAddress Address.
      */
     public String getFormattedAddress() {
         return this.FormattedAddress;
     }
 
     /**
-     * Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address.
+     * @param FormattedAddress Address.
      */
     public void setFormattedAddress(String FormattedAddress) {
         this.FormattedAddress = FormattedAddress;
     }
 
     /**
-     * Get Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+     * Get Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
-MyKid Juvenile ID card
-Example: MyKad 
-     * @return Type Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+IKAD labor ID card
+MyKid Juvenile ID card 
+     * @return Type Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+     * Set Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
-     * @param Type Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+     * @param Type Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Birthday Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card) 
+     * @return Birthday Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Birthday Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
+     * @param Birthday Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;

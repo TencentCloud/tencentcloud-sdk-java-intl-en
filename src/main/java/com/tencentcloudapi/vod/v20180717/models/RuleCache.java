@@ -27,7 +27,7 @@ public class RuleCache extends AbstractModel {
     * Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
     */
     @SerializedName("RuleType")
@@ -46,7 +46,7 @@ public class RuleCache extends AbstractModel {
     private String [] RulePaths;
 
     /**
-    * 
+    * Cache configuration.
     */
     @SerializedName("CacheConfig")
     @Expose
@@ -56,12 +56,12 @@ public class RuleCache extends AbstractModel {
      * Get Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li> 
      * @return RuleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
      */
     public String getRuleType() {
@@ -72,12 +72,12 @@ public class RuleCache extends AbstractModel {
      * Set Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
      * @param RuleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
      */
     public void setRuleType(String RuleType) {
@@ -117,16 +117,16 @@ public class RuleCache extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CacheConfig 
+     * Get Cache configuration. 
+     * @return CacheConfig Cache configuration.
      */
     public RuleCacheConfig getCacheConfig() {
         return this.CacheConfig;
     }
 
     /**
-     * Set 
-     * @param CacheConfig 
+     * Set Cache configuration.
+     * @param CacheConfig Cache configuration.
      */
     public void setCacheConfig(RuleCacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;

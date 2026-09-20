@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreateAIAnalysisTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Audio and video content analysis template name. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Description of the audio and video content analysis template, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Intelligent classification task control parameters.
     */
     @SerializedName("ClassificationConfigure")
     @Expose
     private ClassificationConfigureInfo ClassificationConfigure;
 
     /**
-    * 
+    * Control parameter of an intelligent tag task.
     */
     @SerializedName("TagConfigure")
     @Expose
     private TagConfigureInfo TagConfigure;
 
     /**
-    * 
+    * Intelligent cover task control parameters.
     */
     @SerializedName("CoverConfigure")
     @Expose
     private CoverConfigureInfo CoverConfigure;
 
     /**
-    * 
+    * Control parameter of the intelligent frame-specific tagging task.
     */
     @SerializedName("FrameTagConfigure")
     @Expose
     private FrameTagConfigureInfo FrameTagConfigure;
 
     /**
-    * 
+    * Control parameters for the intelligent highlights compilation task.
     */
     @SerializedName("HighlightConfigure")
     @Expose
     private HighlightsConfigureInfo HighlightConfigure;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Audio and video content analysis template name. Length limit: 64 characters. 
+     * @return Name Audio and video content analysis template name. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Audio and video content analysis template name. Length limit: 64 characters.
+     * @param Name Audio and video content analysis template name. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Description of the audio and video content analysis template, with a length limit of 256 characters. 
+     * @return Comment Description of the audio and video content analysis template, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Description of the audio and video content analysis template, with a length limit of 256 characters.
+     * @param Comment Description of the audio and video content analysis template, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return ClassificationConfigure 
+     * Get Intelligent classification task control parameters. 
+     * @return ClassificationConfigure Intelligent classification task control parameters.
      */
     public ClassificationConfigureInfo getClassificationConfigure() {
         return this.ClassificationConfigure;
     }
 
     /**
-     * Set 
-     * @param ClassificationConfigure 
+     * Set Intelligent classification task control parameters.
+     * @param ClassificationConfigure Intelligent classification task control parameters.
      */
     public void setClassificationConfigure(ClassificationConfigureInfo ClassificationConfigure) {
         this.ClassificationConfigure = ClassificationConfigure;
     }
 
     /**
-     * Get  
-     * @return TagConfigure 
+     * Get Control parameter of an intelligent tag task. 
+     * @return TagConfigure Control parameter of an intelligent tag task.
      */
     public TagConfigureInfo getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set 
-     * @param TagConfigure 
+     * Set Control parameter of an intelligent tag task.
+     * @param TagConfigure Control parameter of an intelligent tag task.
      */
     public void setTagConfigure(TagConfigureInfo TagConfigure) {
         this.TagConfigure = TagConfigure;
     }
 
     /**
-     * Get  
-     * @return CoverConfigure 
+     * Get Intelligent cover task control parameters. 
+     * @return CoverConfigure Intelligent cover task control parameters.
      */
     public CoverConfigureInfo getCoverConfigure() {
         return this.CoverConfigure;
     }
 
     /**
-     * Set 
-     * @param CoverConfigure 
+     * Set Intelligent cover task control parameters.
+     * @param CoverConfigure Intelligent cover task control parameters.
      */
     public void setCoverConfigure(CoverConfigureInfo CoverConfigure) {
         this.CoverConfigure = CoverConfigure;
     }
 
     /**
-     * Get  
-     * @return FrameTagConfigure 
+     * Get Control parameter of the intelligent frame-specific tagging task. 
+     * @return FrameTagConfigure Control parameter of the intelligent frame-specific tagging task.
      */
     public FrameTagConfigureInfo getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set 
-     * @param FrameTagConfigure 
+     * Set Control parameter of the intelligent frame-specific tagging task.
+     * @param FrameTagConfigure Control parameter of the intelligent frame-specific tagging task.
      */
     public void setFrameTagConfigure(FrameTagConfigureInfo FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;
     }
 
     /**
-     * Get  
-     * @return HighlightConfigure 
+     * Get Control parameters for the intelligent highlights compilation task. 
+     * @return HighlightConfigure Control parameters for the intelligent highlights compilation task.
      */
     public HighlightsConfigureInfo getHighlightConfigure() {
         return this.HighlightConfigure;
     }
 
     /**
-     * Set 
-     * @param HighlightConfigure 
+     * Set Control parameters for the intelligent highlights compilation task.
+     * @param HighlightConfigure Control parameters for the intelligent highlights compilation task.
      */
     public void setHighlightConfigure(HighlightsConfigureInfo HighlightConfigure) {
         this.HighlightConfigure = HighlightConfigure;

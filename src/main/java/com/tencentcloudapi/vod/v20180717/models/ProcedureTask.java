@@ -24,166 +24,187 @@ import java.util.HashMap;
 public class ProcedureTask extends AbstractModel {
 
     /**
-    * 
+    * Media processing task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Deprecated. Please use the ErrCode of each specific task.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Deprecated. Please use the Message of each specific task.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 
+    * Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 
+    * Metadata of the original audio/video.
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * 
+    * Execution status and results of the audio/video processing task.
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * 
+    * Execution status and results of an audio/video moderation task.
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
     private AiContentReviewResult [] AiContentReviewResultSet;
 
     /**
-    * 
+    * Execution status and results of an audio/video content analysis task.
     */
     @SerializedName("AiAnalysisResultSet")
     @Expose
     private AiAnalysisResult [] AiAnalysisResultSet;
 
     /**
-    * 
+    * Execution status and results of an audio/video content recognition task.
     */
     @SerializedName("AiRecognitionResultSet")
     @Expose
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-    * 
+    * Priority of the task flow, with a value range of [-10, 10].
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 
+    * Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
     */
     @SerializedName("TasksNotifyMode")
     @Expose
     private String TasksNotifyMode;
 
     /**
-    * 
+    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * Operator. Valid values:
+<li>System: indicates a system trigger.</li>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 
+    * Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
     */
     @SerializedName("OperationType")
     @Expose
     private String OperationType;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Media processing task ID. 
+     * @return TaskId Media processing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Media processing task ID.
+     * @param TaskId Media processing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li> 
+     * @return Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Deprecated. Please use the ErrCode of each specific task. 
+     * @return ErrCode Deprecated. Please use the ErrCode of each specific task.
      * @deprecated
      */
     @Deprecated
@@ -192,8 +213,8 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Deprecated. Please use the ErrCode of each specific task.
+     * @param ErrCode Deprecated. Please use the ErrCode of each specific task.
      * @deprecated
      */
     @Deprecated
@@ -202,8 +223,8 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Deprecated. Please use the Message of each specific task. 
+     * @return Message Deprecated. Please use the Message of each specific task.
      * @deprecated
      */
     @Deprecated
@@ -212,8 +233,8 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Deprecated. Please use the Message of each specific task.
+     * @param Message Deprecated. Please use the Message of each specific task.
      * @deprecated
      */
     @Deprecated
@@ -222,224 +243,268 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li> 
+     * @return FileId Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+     * @param FileId Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return FileName 
+     * Get Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li> 
+     * @return FileName Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 
-     * @param FileName 
+     * Set Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+     * @param FileName Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get  
-     * @return FileUrl 
+     * Get Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li> 
+     * @return FileUrl Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 
-     * @param FileUrl 
+     * Set Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+     * @param FileUrl Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get  
-     * @return MetaData 
+     * Get Metadata of the original audio/video. 
+     * @return MetaData Metadata of the original audio/video.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 
-     * @param MetaData 
+     * Set Metadata of the original audio/video.
+     * @param MetaData Metadata of the original audio/video.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get  
-     * @return MediaProcessResultSet 
+     * Get Execution status and results of the audio/video processing task. 
+     * @return MediaProcessResultSet Execution status and results of the audio/video processing task.
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set 
-     * @param MediaProcessResultSet 
+     * Set Execution status and results of the audio/video processing task.
+     * @param MediaProcessResultSet Execution status and results of the audio/video processing task.
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get  
-     * @return AiContentReviewResultSet 
+     * Get Execution status and results of an audio/video moderation task. 
+     * @return AiContentReviewResultSet Execution status and results of an audio/video moderation task.
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set 
-     * @param AiContentReviewResultSet 
+     * Set Execution status and results of an audio/video moderation task.
+     * @param AiContentReviewResultSet Execution status and results of an audio/video moderation task.
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;
     }
 
     /**
-     * Get  
-     * @return AiAnalysisResultSet 
+     * Get Execution status and results of an audio/video content analysis task. 
+     * @return AiAnalysisResultSet Execution status and results of an audio/video content analysis task.
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
         return this.AiAnalysisResultSet;
     }
 
     /**
-     * Set 
-     * @param AiAnalysisResultSet 
+     * Set Execution status and results of an audio/video content analysis task.
+     * @param AiAnalysisResultSet Execution status and results of an audio/video content analysis task.
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
         this.AiAnalysisResultSet = AiAnalysisResultSet;
     }
 
     /**
-     * Get  
-     * @return AiRecognitionResultSet 
+     * Get Execution status and results of an audio/video content recognition task. 
+     * @return AiRecognitionResultSet Execution status and results of an audio/video content recognition task.
      */
     public AiRecognitionResult [] getAiRecognitionResultSet() {
         return this.AiRecognitionResultSet;
     }
 
     /**
-     * Set 
-     * @param AiRecognitionResultSet 
+     * Set Execution status and results of an audio/video content recognition task.
+     * @param AiRecognitionResultSet Execution status and results of an audio/video content recognition task.
      */
     public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
         this.AiRecognitionResultSet = AiRecognitionResultSet;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get Priority of the task flow, with a value range of [-10, 10]. 
+     * @return TasksPriority Priority of the task flow, with a value range of [-10, 10].
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set Priority of the task flow, with a value range of [-10, 10].
+     * @param TasksPriority Priority of the task flow, with a value range of [-10, 10].
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get  
-     * @return TasksNotifyMode 
+     * Get Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li> 
+     * @return TasksNotifyMode Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
      */
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
     }
 
     /**
-     * Set 
-     * @param TasksNotifyMode 
+     * Set Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
+     * @param TasksNotifyMode Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return Operator 
+     * Get Operator. Valid values:
+<li>System: indicates a system trigger.</li> 
+     * @return Operator Operator. Valid values:
+<li>System: indicates a system trigger.</li>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 
-     * @param Operator 
+     * Set Operator. Valid values:
+<li>System: indicates a system trigger.</li>
+     * @param Operator Operator. Valid values:
+<li>System: indicates a system trigger.</li>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get  
-     * @return OperationType 
+     * Get Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li> 
+     * @return OperationType Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
      */
     public String getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set 
-     * @param OperationType 
+     * Set Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
+     * @param OperationType Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;

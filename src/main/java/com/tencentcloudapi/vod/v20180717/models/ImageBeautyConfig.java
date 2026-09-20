@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ImageBeautyConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Beauty effect item.</p>
     */
     @SerializedName("BeautyEffectItems")
     @Expose
     private BeautyEffectItem [] BeautyEffectItems;
 
     /**
-    * 
+    * <p>Beauty filter item.</p>
     */
     @SerializedName("BeautyFilterItems")
     @Expose
     private BeautyFilterItem [] BeautyFilterItems;
 
     /**
-     * Get  
-     * @return BeautyEffectItems 
+     * Get <p>Beauty effect item.</p> 
+     * @return BeautyEffectItems <p>Beauty effect item.</p>
      */
     public BeautyEffectItem [] getBeautyEffectItems() {
         return this.BeautyEffectItems;
     }
 
     /**
-     * Set 
-     * @param BeautyEffectItems 
+     * Set <p>Beauty effect item.</p>
+     * @param BeautyEffectItems <p>Beauty effect item.</p>
      */
     public void setBeautyEffectItems(BeautyEffectItem [] BeautyEffectItems) {
         this.BeautyEffectItems = BeautyEffectItems;
     }
 
     /**
-     * Get  
-     * @return BeautyFilterItems 
+     * Get <p>Beauty filter item.</p> 
+     * @return BeautyFilterItems <p>Beauty filter item.</p>
      */
     public BeautyFilterItem [] getBeautyFilterItems() {
         return this.BeautyFilterItems;
     }
 
     /**
-     * Set 
-     * @param BeautyFilterItems 
+     * Set <p>Beauty filter item.</p>
+     * @param BeautyFilterItems <p>Beauty filter item.</p>
      */
     public void setBeautyFilterItems(BeautyFilterItem [] BeautyFilterItems) {
         this.BeautyFilterItems = BeautyFilterItems;

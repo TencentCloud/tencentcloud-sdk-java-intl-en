@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskObjectResultInput extends AbstractModel {
 
     /**
-    * 
+    * Object recognition template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Object recognition template ID. 
+     * @return Definition Object recognition template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Object recognition template ID.
+     * @param Definition Object recognition template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyVodDomainConfigRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Domain name.</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
     */
     @SerializedName("RefererAuthPolicy")
     @Expose
     private RefererAuthPolicy RefererAuthPolicy;
 
     /**
-    * 
+    * <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
     */
     @SerializedName("UrlSignatureAuthPolicy")
     @Expose
     private UrlSignatureAuthPolicy UrlSignatureAuthPolicy;
 
     /**
-    * 
+    * <p>QUIC configuration.</p>
     */
     @SerializedName("QUICConfig")
     @Expose
     private DomainQUICConfig QUICConfig;
 
     /**
-    * 
+    * <p>IP access restriction rule.</p>
     */
     @SerializedName("IPFilterPolicy")
     @Expose
     private IPFilterPolicy IPFilterPolicy;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get <p>Domain name.</p> 
+     * @return Domain <p>Domain name.</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set <p>Domain name.</p>
+     * @param Domain <p>Domain name.</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return RefererAuthPolicy 
+     * Get <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p> 
+     * @return RefererAuthPolicy <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
      */
     public RefererAuthPolicy getRefererAuthPolicy() {
         return this.RefererAuthPolicy;
     }
 
     /**
-     * Set 
-     * @param RefererAuthPolicy 
+     * Set <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
+     * @param RefererAuthPolicy <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
      */
     public void setRefererAuthPolicy(RefererAuthPolicy RefererAuthPolicy) {
         this.RefererAuthPolicy = RefererAuthPolicy;
     }
 
     /**
-     * Get  
-     * @return UrlSignatureAuthPolicy 
+     * Get <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p> 
+     * @return UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
      */
     public UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() {
         return this.UrlSignatureAuthPolicy;
     }
 
     /**
-     * Set 
-     * @param UrlSignatureAuthPolicy 
+     * Set <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
+     * @param UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
      */
     public void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy UrlSignatureAuthPolicy) {
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;
     }
 
     /**
-     * Get  
-     * @return QUICConfig 
+     * Get <p>QUIC configuration.</p> 
+     * @return QUICConfig <p>QUIC configuration.</p>
      */
     public DomainQUICConfig getQUICConfig() {
         return this.QUICConfig;
     }
 
     /**
-     * Set 
-     * @param QUICConfig 
+     * Set <p>QUIC configuration.</p>
+     * @param QUICConfig <p>QUIC configuration.</p>
      */
     public void setQUICConfig(DomainQUICConfig QUICConfig) {
         this.QUICConfig = QUICConfig;
     }
 
     /**
-     * Get  
-     * @return IPFilterPolicy 
+     * Get <p>IP access restriction rule.</p> 
+     * @return IPFilterPolicy <p>IP access restriction rule.</p>
      */
     public IPFilterPolicy getIPFilterPolicy() {
         return this.IPFilterPolicy;
     }
 
     /**
-     * Set 
-     * @param IPFilterPolicy 
+     * Set <p>IP access restriction rule.</p>
+     * @param IPFilterPolicy <p>IP access restriction rule.</p>
      */
     public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
         this.IPFilterPolicy = IPFilterPolicy;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBlindWatermarkTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of the digital watermark template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateBlindWatermarkTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique identifier of the digital watermark template. 
+     * @return Definition Unique identifier of the digital watermark template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique identifier of the digital watermark template.
+     * @param Definition Unique identifier of the digital watermark template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

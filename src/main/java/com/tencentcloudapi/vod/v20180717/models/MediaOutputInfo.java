@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaOutputInfo extends AbstractModel {
 
     /**
-    * 
+    * Region of the output file Bucket, for example, ap-guangzhou.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * Output file Bucket.
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 
+    * Output file directory. The directory name must end with "/".
     */
     @SerializedName("Dir")
     @Expose
     private String Dir;
 
     /**
-     * Get  
-     * @return Region 
+     * Get Region of the output file Bucket, for example, ap-guangzhou. 
+     * @return Region Region of the output file Bucket, for example, ap-guangzhou.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Region of the output file Bucket, for example, ap-guangzhou.
+     * @param Region Region of the output file Bucket, for example, ap-guangzhou.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return Bucket 
+     * Get Output file Bucket. 
+     * @return Bucket Output file Bucket.
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 
-     * @param Bucket 
+     * Set Output file Bucket.
+     * @param Bucket Output file Bucket.
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get  
-     * @return Dir 
+     * Get Output file directory. The directory name must end with "/". 
+     * @return Dir Output file directory. The directory name must end with "/".
      */
     public String getDir() {
         return this.Dir;
     }
 
     /**
-     * Set 
-     * @param Dir 
+     * Set Output file directory. The directory name must end with "/".
+     * @param Dir Output file directory. The directory name must end with "/".
      */
     public void setDir(String Dir) {
         this.Dir = Dir;

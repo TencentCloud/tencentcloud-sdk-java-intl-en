@@ -24,437 +24,472 @@ import java.util.HashMap;
 public class MediaBasicInfo extends AbstractModel {
 
     /**
-    * 
+    * Media file name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Media file description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 
+    * Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 
+    * Category ID of the media file.
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * 
+    * Category name of the media file.
     */
     @SerializedName("ClassName")
     @Expose
     private String ClassName;
 
     /**
-    * 
+    * Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
     */
     @SerializedName("ClassPath")
     @Expose
     private String ClassPath;
 
     /**
-    * 
+    * Thumbnail URL of the media file.
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-    * 
+    * Muxing format of the media file, such as mp4 and flv.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * URL address of the original media file.
     */
     @SerializedName("MediaUrl")
     @Expose
     private String MediaUrl;
 
     /**
-    * 
+    * Source information of the media file.
     */
     @SerializedName("SourceInfo")
     @Expose
     private MediaSourceData SourceInfo;
 
     /**
-    * 
+    * Storage region of media files, for example, ap-chongqing. See region list.
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * 
+    * Media storage path.
     */
     @SerializedName("StoragePath")
     @Expose
     private String StoragePath;
 
     /**
-    * 
+    * Tag information of a media file.
     */
     @SerializedName("TagSet")
     @Expose
     private String [] TagSet;
 
     /**
-    * 
+    * Unique identifier of the live streaming recording file.
     */
     @SerializedName("Vid")
     @Expose
     private String Vid;
 
     /**
-    * 
+    * File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * 
+    * File status: Normal: normal, Forbidden: blocked.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Storage class of a media file
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
     */
     @SerializedName("StorageClass")
     @Expose
     private String StorageClass;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Media file name. 
+     * @return Name Media file name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Media file name.
+     * @param Name Media file name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get Media file description. 
+     * @return Description Media file description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set Media file description.
+     * @param Description Media file description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires. 
+     * @return ExpireTime Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires.
+     * @param ExpireTime Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get  
-     * @return ClassId 
+     * Get Category ID of the media file. 
+     * @return ClassId Category ID of the media file.
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 
-     * @param ClassId 
+     * Set Category ID of the media file.
+     * @param ClassId Category ID of the media file.
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get  
-     * @return ClassName 
+     * Get Category name of the media file. 
+     * @return ClassName Category name of the media file.
      */
     public String getClassName() {
         return this.ClassName;
     }
 
     /**
-     * Set 
-     * @param ClassName 
+     * Set Category name of the media file.
+     * @param ClassName Category name of the media file.
      */
     public void setClassName(String ClassName) {
         this.ClassName = ClassName;
     }
 
     /**
-     * Get  
-     * @return ClassPath 
+     * Get Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category". 
+     * @return ClassPath Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
      */
     public String getClassPath() {
         return this.ClassPath;
     }
 
     /**
-     * Set 
-     * @param ClassPath 
+     * Set Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+     * @param ClassPath Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
      */
     public void setClassPath(String ClassPath) {
         this.ClassPath = ClassPath;
     }
 
     /**
-     * Get  
-     * @return CoverUrl 
+     * Get Thumbnail URL of the media file. 
+     * @return CoverUrl Thumbnail URL of the media file.
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set 
-     * @param CoverUrl 
+     * Set Thumbnail URL of the media file.
+     * @param CoverUrl Thumbnail URL of the media file.
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Muxing format of the media file, such as mp4 and flv. 
+     * @return Type Muxing format of the media file, such as mp4 and flv.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Muxing format of the media file, such as mp4 and flv.
+     * @param Type Muxing format of the media file, such as mp4 and flv.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return MediaUrl 
+     * Get URL address of the original media file. 
+     * @return MediaUrl URL address of the original media file.
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set 
-     * @param MediaUrl 
+     * Set URL address of the original media file.
+     * @param MediaUrl URL address of the original media file.
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
     }
 
     /**
-     * Get  
-     * @return SourceInfo 
+     * Get Source information of the media file. 
+     * @return SourceInfo Source information of the media file.
      */
     public MediaSourceData getSourceInfo() {
         return this.SourceInfo;
     }
 
     /**
-     * Set 
-     * @param SourceInfo 
+     * Set Source information of the media file.
+     * @param SourceInfo Source information of the media file.
      */
     public void setSourceInfo(MediaSourceData SourceInfo) {
         this.SourceInfo = SourceInfo;
     }
 
     /**
-     * Get  
-     * @return StorageRegion 
+     * Get Storage region of media files, for example, ap-chongqing. See region list. 
+     * @return StorageRegion Storage region of media files, for example, ap-chongqing. See region list.
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set 
-     * @param StorageRegion 
+     * Set Storage region of media files, for example, ap-chongqing. See region list.
+     * @param StorageRegion Storage region of media files, for example, ap-chongqing. See region list.
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get  
-     * @return StoragePath 
+     * Get Media storage path. 
+     * @return StoragePath Media storage path.
      */
     public String getStoragePath() {
         return this.StoragePath;
     }
 
     /**
-     * Set 
-     * @param StoragePath 
+     * Set Media storage path.
+     * @param StoragePath Media storage path.
      */
     public void setStoragePath(String StoragePath) {
         this.StoragePath = StoragePath;
     }
 
     /**
-     * Get  
-     * @return TagSet 
+     * Get Tag information of a media file. 
+     * @return TagSet Tag information of a media file.
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 
-     * @param TagSet 
+     * Set Tag information of a media file.
+     * @param TagSet Tag information of a media file.
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get  
-     * @return Vid 
+     * Get Unique identifier of the live streaming recording file. 
+     * @return Vid Unique identifier of the live streaming recording file.
      */
     public String getVid() {
         return this.Vid;
     }
 
     /**
-     * Set 
-     * @param Vid 
+     * Set Unique identifier of the live streaming recording file.
+     * @param Vid Unique identifier of the live streaming recording file.
      */
     public void setVid(String Vid) {
         this.Vid = Vid;
     }
 
     /**
-     * Get  
-     * @return Category 
+     * Get File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li> 
+     * @return Category File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 
-     * @param Category 
+     * Set File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     * @param Category File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get File status: Normal: normal, Forbidden: blocked. 
+     * @return Status File status: Normal: normal, Forbidden: blocked.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set File status: Normal: normal, Forbidden: blocked.
+     * @param Status File status: Normal: normal, Forbidden: blocked.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return StorageClass 
+     * Get Storage class of a media file
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li> 
+     * @return StorageClass Storage class of a media file
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
      */
     public String getStorageClass() {
         return this.StorageClass;
     }
 
     /**
-     * Set 
-     * @param StorageClass 
+     * Set Storage class of a media file
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
+     * @param StorageClass Storage class of a media file
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: Deep archive storage.</li>
      */
     public void setStorageClass(String StorageClass) {
         this.StorageClass = StorageClass;

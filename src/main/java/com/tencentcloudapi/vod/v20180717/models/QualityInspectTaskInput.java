@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class QualityInspectTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Media file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Audio and video quality inspection template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID. 
+     * @return FileId Media file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID.
+     * @param FileId Media file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Audio and video quality inspection template ID. 
+     * @return Definition Audio and video quality inspection template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Audio and video quality inspection template ID.
+     * @param Definition Audio and video quality inspection template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

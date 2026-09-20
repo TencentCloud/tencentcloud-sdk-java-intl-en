@@ -24,253 +24,273 @@ import java.util.HashMap;
 public class ReduceMediaBitrateTask extends AbstractModel {
 
     /**
-    * 
+    * Video processing task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Media file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Media filename.
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 
+    * Media file address.
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 
+    * Metadata of the original video.
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * 
+    * Bitrate reduction task execution status and results.
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
     private ReduceMediaBitrateMediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * 
+    * Priority of the task flow, with a value range of [-10, 10].
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 
+    * Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
     */
     @SerializedName("TasksNotifyMode")
     @Expose
     private String TasksNotifyMode;
 
     /**
-    * 
+    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Video processing task ID. 
+     * @return TaskId Video processing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Video processing task ID.
+     * @param TaskId Video processing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li> 
+     * @return Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID. 
+     * @return FileId Media file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID.
+     * @param FileId Media file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return FileName 
+     * Get Media filename. 
+     * @return FileName Media filename.
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 
-     * @param FileName 
+     * Set Media filename.
+     * @param FileName Media filename.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get  
-     * @return FileUrl 
+     * Get Media file address. 
+     * @return FileUrl Media file address.
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 
-     * @param FileUrl 
+     * Set Media file address.
+     * @param FileUrl Media file address.
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get  
-     * @return MetaData 
+     * Get Metadata of the original video. 
+     * @return MetaData Metadata of the original video.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 
-     * @param MetaData 
+     * Set Metadata of the original video.
+     * @param MetaData Metadata of the original video.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get  
-     * @return MediaProcessResultSet 
+     * Get Bitrate reduction task execution status and results. 
+     * @return MediaProcessResultSet Bitrate reduction task execution status and results.
      */
     public ReduceMediaBitrateMediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set 
-     * @param MediaProcessResultSet 
+     * Set Bitrate reduction task execution status and results.
+     * @param MediaProcessResultSet Bitrate reduction task execution status and results.
      */
     public void setMediaProcessResultSet(ReduceMediaBitrateMediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get Priority of the task flow, with a value range of [-10, 10]. 
+     * @return TasksPriority Priority of the task flow, with a value range of [-10, 10].
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set Priority of the task flow, with a value range of [-10, 10].
+     * @param TasksPriority Priority of the task flow, with a value range of [-10, 10].
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get  
-     * @return TasksNotifyMode 
+     * Get Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li> 
+     * @return TasksNotifyMode Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
      */
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
     }
 
     /**
-     * Set 
-     * @param TasksNotifyMode 
+     * Set Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
+     * @param TasksNotifyMode Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
+     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

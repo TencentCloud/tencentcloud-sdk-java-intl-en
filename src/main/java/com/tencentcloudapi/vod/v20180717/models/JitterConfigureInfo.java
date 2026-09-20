@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class JitterConfigureInfo extends AbstractModel {
 
     /**
-    * 
+    * Video frame jitter and ghosting detection switch. Value range:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Video frame jitter and ghosting detection switch. Value range:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li> 
+     * @return Switch Video frame jitter and ghosting detection switch. Value range:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Video frame jitter and ghosting detection switch. Value range:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+     * @param Switch Video frame jitter and ghosting detection switch. Value range:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

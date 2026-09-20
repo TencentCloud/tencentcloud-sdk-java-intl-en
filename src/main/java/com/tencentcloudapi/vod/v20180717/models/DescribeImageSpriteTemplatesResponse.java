@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeImageSpriteTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Sprite template details list.
     */
     @SerializedName("ImageSpriteTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeImageSpriteTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return ImageSpriteTemplateSet 
+     * Get Sprite template details list. 
+     * @return ImageSpriteTemplateSet Sprite template details list.
      */
     public ImageSpriteTemplate [] getImageSpriteTemplateSet() {
         return this.ImageSpriteTemplateSet;
     }
 
     /**
-     * Set 
-     * @param ImageSpriteTemplateSet 
+     * Set Sprite template details list.
+     * @param ImageSpriteTemplateSet Sprite template details list.
      */
     public void setImageSpriteTemplateSet(ImageSpriteTemplate [] ImageSpriteTemplateSet) {
         this.ImageSpriteTemplateSet = ImageSpriteTemplateSet;

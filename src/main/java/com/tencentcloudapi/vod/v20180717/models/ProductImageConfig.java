@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ProductImageConfig extends AbstractModel {
 
     /**
-    * 
+    * Prompt for image generation background. If this field is default, inspiration is generated automatically.
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 
+    * Prompt content used to prevent the model from generating images.
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * 
+    * A detailed product description helps generate images that better meet requirements.
     */
     @SerializedName("ProductDesc")
     @Expose
     private String ProductDesc;
 
     /**
-    * 
+    * Special requirements. If any, input them through this field.
     */
     @SerializedName("MoreRequirement")
     @Expose
     private String MoreRequirement;
 
     /**
-    * 
+    * Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
     */
     @SerializedName("OutputImageCount")
     @Expose
     private Long OutputImageCount;
 
     /**
-     * Get  
-     * @return Prompt 
+     * Get Prompt for image generation background. If this field is default, inspiration is generated automatically. 
+     * @return Prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 
-     * @param Prompt 
+     * Set Prompt for image generation background. If this field is default, inspiration is generated automatically.
+     * @param Prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get  
-     * @return NegativePrompt 
+     * Get Prompt content used to prevent the model from generating images. 
+     * @return NegativePrompt Prompt content used to prevent the model from generating images.
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set 
-     * @param NegativePrompt 
+     * Set Prompt content used to prevent the model from generating images.
+     * @param NegativePrompt Prompt content used to prevent the model from generating images.
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get  
-     * @return ProductDesc 
+     * Get A detailed product description helps generate images that better meet requirements. 
+     * @return ProductDesc A detailed product description helps generate images that better meet requirements.
      */
     public String getProductDesc() {
         return this.ProductDesc;
     }
 
     /**
-     * Set 
-     * @param ProductDesc 
+     * Set A detailed product description helps generate images that better meet requirements.
+     * @param ProductDesc A detailed product description helps generate images that better meet requirements.
      */
     public void setProductDesc(String ProductDesc) {
         this.ProductDesc = ProductDesc;
     }
 
     /**
-     * Get  
-     * @return MoreRequirement 
+     * Get Special requirements. If any, input them through this field. 
+     * @return MoreRequirement Special requirements. If any, input them through this field.
      */
     public String getMoreRequirement() {
         return this.MoreRequirement;
     }
 
     /**
-     * Set 
-     * @param MoreRequirement 
+     * Set Special requirements. If any, input them through this field.
+     * @param MoreRequirement Special requirements. If any, input them through this field.
      */
     public void setMoreRequirement(String MoreRequirement) {
         this.MoreRequirement = MoreRequirement;
     }
 
     /**
-     * Get  
-     * @return OutputImageCount 
+     * Get Number of images expected to be generated. Default value: 1. Maximum valid value: 10. 
+     * @return OutputImageCount Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
      */
     public Long getOutputImageCount() {
         return this.OutputImageCount;
     }
 
     /**
-     * Set 
-     * @param OutputImageCount 
+     * Set Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
+     * @param OutputImageCount Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
      */
     public void setOutputImageCount(Long OutputImageCount) {
         this.OutputImageCount = OutputImageCount;

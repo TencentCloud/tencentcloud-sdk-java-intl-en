@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class QualityInspectLLMDetectionReport extends AbstractModel {
 
     /**
-    * 
+    * <p>Number of detection results.</p>
     */
     @SerializedName("ResultCount")
     @Expose
     private Long ResultCount;
 
     /**
-    * 
+    * <p>Detection item result list.</p>
     */
     @SerializedName("ResultSet")
     @Expose
     private QualityInspectLLMDetectionResultItem [] ResultSet;
 
     /**
-     * Get  
-     * @return ResultCount 
+     * Get <p>Number of detection results.</p> 
+     * @return ResultCount <p>Number of detection results.</p>
      */
     public Long getResultCount() {
         return this.ResultCount;
     }
 
     /**
-     * Set 
-     * @param ResultCount 
+     * Set <p>Number of detection results.</p>
+     * @param ResultCount <p>Number of detection results.</p>
      */
     public void setResultCount(Long ResultCount) {
         this.ResultCount = ResultCount;
     }
 
     /**
-     * Get  
-     * @return ResultSet 
+     * Get <p>Detection item result list.</p> 
+     * @return ResultSet <p>Detection item result list.</p>
      */
     public QualityInspectLLMDetectionResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set 
-     * @param ResultSet 
+     * Set <p>Detection item result list.</p>
+     * @param ResultSet <p>Detection item result list.</p>
      */
     public void setResultSet(QualityInspectLLMDetectionResultItem [] ResultSet) {
         this.ResultSet = ResultSet;

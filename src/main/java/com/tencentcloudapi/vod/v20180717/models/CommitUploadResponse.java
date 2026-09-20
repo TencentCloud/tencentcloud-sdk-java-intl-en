@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CommitUploadResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Unique identifier of the media file.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p>Media playback address.</p>
     */
     @SerializedName("MediaUrl")
     @Expose
     private String MediaUrl;
 
     /**
-    * 
+    * <p>Media cover address.</p>
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -52,48 +52,48 @@ public class CommitUploadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>Unique identifier of the media file.</p> 
+     * @return FileId <p>Unique identifier of the media file.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>Unique identifier of the media file.</p>
+     * @param FileId <p>Unique identifier of the media file.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return MediaUrl 
+     * Get <p>Media playback address.</p> 
+     * @return MediaUrl <p>Media playback address.</p>
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set 
-     * @param MediaUrl 
+     * Set <p>Media playback address.</p>
+     * @param MediaUrl <p>Media playback address.</p>
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
     }
 
     /**
-     * Get  
-     * @return CoverUrl 
+     * Get <p>Media cover address.</p> 
+     * @return CoverUrl <p>Media cover address.</p>
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set 
-     * @param CoverUrl 
+     * Set <p>Media cover address.</p>
+     * @param CoverUrl <p>Media cover address.</p>
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateWatermarkTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Watermark template unique identifier.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Watermark image address. This field is valid only when Type is image.
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -45,32 +45,32 @@ public class CreateWatermarkTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Watermark template unique identifier. 
+     * @return Definition Watermark template unique identifier.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Watermark template unique identifier.
+     * @param Definition Watermark template unique identifier.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ImageUrl 
+     * Get Watermark image address. This field is valid only when Type is image. 
+     * @return ImageUrl Watermark image address. This field is valid only when Type is image.
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 
-     * @param ImageUrl 
+     * Set Watermark image address. This field is valid only when Type is image.
+     * @param ImageUrl Watermark image address. This field is valid only when Type is image.
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

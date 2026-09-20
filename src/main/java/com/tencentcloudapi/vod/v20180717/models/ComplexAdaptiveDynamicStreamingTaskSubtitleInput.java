@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskSubtitleInput extends AbstractModel {
 
     /**
-    * 
+    * Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li>
     */
     @SerializedName("Default")
     @Expose
     private String Default;
 
     /**
-     * Get  
-     * @return Id 
+     * Get Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task. 
+     * @return Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+     * @param Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return Default 
+     * Get Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li> 
+     * @return Default Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li>
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set 
-     * @param Default 
+     * Set Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li>
+     * @param Default Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+<li>YES: set as default subtitle;</li>
+<li>NO: not set as default subtitle (default value).</li>
      */
     public void setDefault(String Default) {
         this.Default = Default;

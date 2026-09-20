@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcCustomElementResponse extends AbstractModel {
 
     /**
-    * 
+    * Principal ID. You need to record the returned principal ID.
     */
     @SerializedName("ElementId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAigcCustomElementResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return ElementId 
+     * Get Principal ID. You need to record the returned principal ID. 
+     * @return ElementId Principal ID. You need to record the returned principal ID.
      */
     public String getElementId() {
         return this.ElementId;
     }
 
     /**
-     * Set 
-     * @param ElementId 
+     * Set Principal ID. You need to record the returned principal ID.
+     * @param ElementId Principal ID. You need to record the returned principal ID.
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;

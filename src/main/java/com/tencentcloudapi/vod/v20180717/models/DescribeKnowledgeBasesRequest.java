@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeKnowledgeBasesRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Paging offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p> 
+     * @return SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+     * @param SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get <p>Paging offset. Default value: 0.</p> 
+     * @return Offset <p>Paging offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set <p>Paging offset. Default value: 0.</p>
+     * @param Offset <p>Paging offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get <p>Number of returned entries. Default value: 100. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p> 
+     * @return Name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+     * @param Name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
      */
     public void setName(String Name) {
         this.Name = Name;

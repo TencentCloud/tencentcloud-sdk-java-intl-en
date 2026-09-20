@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DomainCLSTargetInfo extends AbstractModel {
 
     /**
-    * 
+    * Domain name.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * Log push target in the Chinese mainland.
     */
     @SerializedName("ChineseMainlandCLSTargetInfo")
     @Expose
     private AreaCLSTargetInfo ChineseMainlandCLSTargetInfo;
 
     /**
-    * 
+    * Log push targets outside the Chinese mainland.
     */
     @SerializedName("OutsideChineseMainlandCLSTargetInfo")
     @Expose
     private AreaCLSTargetInfo OutsideChineseMainlandCLSTargetInfo;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name. 
+     * @return Domain Domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name.
+     * @param Domain Domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return ChineseMainlandCLSTargetInfo 
+     * Get Log push target in the Chinese mainland. 
+     * @return ChineseMainlandCLSTargetInfo Log push target in the Chinese mainland.
      */
     public AreaCLSTargetInfo getChineseMainlandCLSTargetInfo() {
         return this.ChineseMainlandCLSTargetInfo;
     }
 
     /**
-     * Set 
-     * @param ChineseMainlandCLSTargetInfo 
+     * Set Log push target in the Chinese mainland.
+     * @param ChineseMainlandCLSTargetInfo Log push target in the Chinese mainland.
      */
     public void setChineseMainlandCLSTargetInfo(AreaCLSTargetInfo ChineseMainlandCLSTargetInfo) {
         this.ChineseMainlandCLSTargetInfo = ChineseMainlandCLSTargetInfo;
     }
 
     /**
-     * Get  
-     * @return OutsideChineseMainlandCLSTargetInfo 
+     * Get Log push targets outside the Chinese mainland. 
+     * @return OutsideChineseMainlandCLSTargetInfo Log push targets outside the Chinese mainland.
      */
     public AreaCLSTargetInfo getOutsideChineseMainlandCLSTargetInfo() {
         return this.OutsideChineseMainlandCLSTargetInfo;
     }
 
     /**
-     * Set 
-     * @param OutsideChineseMainlandCLSTargetInfo 
+     * Set Log push targets outside the Chinese mainland.
+     * @param OutsideChineseMainlandCLSTargetInfo Log push targets outside the Chinese mainland.
      */
     public void setOutsideChineseMainlandCLSTargetInfo(AreaCLSTargetInfo OutsideChineseMainlandCLSTargetInfo) {
         this.OutsideChineseMainlandCLSTargetInfo = OutsideChineseMainlandCLSTargetInfo;

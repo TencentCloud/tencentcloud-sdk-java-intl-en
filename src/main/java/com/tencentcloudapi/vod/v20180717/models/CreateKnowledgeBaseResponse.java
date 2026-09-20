@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateKnowledgeBaseResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>ID of the knowledge base after successful creation.</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateKnowledgeBaseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return KnowledgeBaseId 
+     * Get <p>ID of the knowledge base after successful creation.</p> 
+     * @return KnowledgeBaseId <p>ID of the knowledge base after successful creation.</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBaseId 
+     * Set <p>ID of the knowledge base after successful creation.</p>
+     * @param KnowledgeBaseId <p>ID of the knowledge base after successful creation.</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;

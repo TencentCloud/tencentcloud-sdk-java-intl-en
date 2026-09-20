@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AigcTextDetail extends AbstractModel {
 
     /**
-    * 
+    * <p>Entries per page</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 
+    * <p>scroll_token returned in the previous page response, used for turning to the next page</p>
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-    * 
+    * <p>Text generation details</p>
     */
     @SerializedName("Data")
     @Expose
     private AigcTextDetailData [] Data;
 
     /**
-     * Get  
-     * @return PageSize 
+     * Get <p>Entries per page</p> 
+     * @return PageSize <p>Entries per page</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 
-     * @param PageSize 
+     * Set <p>Entries per page</p>
+     * @param PageSize <p>Entries per page</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get  
-     * @return ScrollToken 
+     * Get <p>scroll_token returned in the previous page response, used for turning to the next page</p> 
+     * @return ScrollToken <p>scroll_token returned in the previous page response, used for turning to the next page</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 
-     * @param ScrollToken 
+     * Set <p>scroll_token returned in the previous page response, used for turning to the next page</p>
+     * @param ScrollToken <p>scroll_token returned in the previous page response, used for turning to the next page</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;
     }
 
     /**
-     * Get  
-     * @return Data 
+     * Get <p>Text generation details</p> 
+     * @return Data <p>Text generation details</p>
      */
     public AigcTextDetailData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 
-     * @param Data 
+     * Set <p>Text generation details</p>
+     * @param Data <p>Text generation details</p>
      */
     public void setData(AigcTextDetailData [] Data) {
         this.Data = Data;

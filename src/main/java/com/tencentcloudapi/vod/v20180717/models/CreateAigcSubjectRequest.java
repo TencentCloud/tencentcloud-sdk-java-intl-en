@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreateAigcSubjectRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Subject name.</p>
     */
     @SerializedName("SubjectName")
     @Expose
     private String SubjectName;
 
     /**
-    * 
+    * <p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
     */
     @SerializedName("SubjectImages")
     @Expose
     private String [] SubjectImages;
 
     /**
-    * 
+    * <p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
     */
     @SerializedName("SubjectVideos")
     @Expose
     private String [] SubjectVideos;
 
     /**
-    * 
+    * <p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return SubjectName 
+     * Get <p>Subject name.</p> 
+     * @return SubjectName <p>Subject name.</p>
      */
     public String getSubjectName() {
         return this.SubjectName;
     }
 
     /**
-     * Set 
-     * @param SubjectName 
+     * Set <p>Subject name.</p>
+     * @param SubjectName <p>Subject name.</p>
      */
     public void setSubjectName(String SubjectName) {
         this.SubjectName = SubjectName;
     }
 
     /**
-     * Get  
-     * @return SubjectImages 
+     * Get <p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p> 
+     * @return SubjectImages <p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
      */
     public String [] getSubjectImages() {
         return this.SubjectImages;
     }
 
     /**
-     * Set 
-     * @param SubjectImages 
+     * Set <p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
+     * @param SubjectImages <p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
      */
     public void setSubjectImages(String [] SubjectImages) {
         this.SubjectImages = SubjectImages;
     }
 
     /**
-     * Get  
-     * @return SubjectVideos 
+     * Get <p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul> 
+     * @return SubjectVideos <p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
      */
     public String [] getSubjectVideos() {
         return this.SubjectVideos;
     }
 
     /**
-     * Set 
-     * @param SubjectVideos 
+     * Set <p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
+     * @param SubjectVideos <p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
      */
     public void setSubjectVideos(String [] SubjectVideos) {
         this.SubjectVideos = SubjectVideos;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul> 
+     * @return VoiceId <p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
+     * @param VoiceId <p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
+     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p> 
+     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;

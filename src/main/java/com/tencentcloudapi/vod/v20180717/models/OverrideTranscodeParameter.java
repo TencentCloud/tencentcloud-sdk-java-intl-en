@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
-    * 
+    * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 
+    * <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 
+    * <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 
+    * <p>Video stream configuration parameters.</p>
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfoForUpdate VideoTemplate;
 
     /**
-    * 
+    * <p>Audio stream configuration parameters.</p>
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * 
+    * <p>TSC transcoding configuration parameters.</p>
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
-    * 
+    * <p>Standard extended fields for special usage.</p>
     */
     @SerializedName("StdExtInfo")
     @Expose
     private String StdExtInfo;
 
     /**
-     * Get  
-     * @return Container 
+     * Get <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p> 
+     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 
-     * @param Container 
+     * Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+     * @param Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get  
-     * @return RemoveVideo 
+     * Get <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p> 
+     * @return RemoveVideo <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 
-     * @param RemoveVideo 
+     * Set <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+     * @param RemoveVideo <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get  
-     * @return RemoveAudio 
+     * Get <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p> 
+     * @return RemoveAudio <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 
-     * @param RemoveAudio 
+     * Set <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+     * @param RemoveAudio <p>Indicates whether to remove audio data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get  
-     * @return VideoTemplate 
+     * Get <p>Video stream configuration parameters.</p> 
+     * @return VideoTemplate <p>Video stream configuration parameters.</p>
      */
     public VideoTemplateInfoForUpdate getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set 
-     * @param VideoTemplate 
+     * Set <p>Video stream configuration parameters.</p>
+     * @param VideoTemplate <p>Video stream configuration parameters.</p>
      */
     public void setVideoTemplate(VideoTemplateInfoForUpdate VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get  
-     * @return AudioTemplate 
+     * Get <p>Audio stream configuration parameters.</p> 
+     * @return AudioTemplate <p>Audio stream configuration parameters.</p>
      */
     public AudioTemplateInfoForUpdate getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set 
-     * @param AudioTemplate 
+     * Set <p>Audio stream configuration parameters.</p>
+     * @param AudioTemplate <p>Audio stream configuration parameters.</p>
      */
     public void setAudioTemplate(AudioTemplateInfoForUpdate AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get  
-     * @return TEHDConfig 
+     * Get <p>TSC transcoding configuration parameters.</p> 
+     * @return TEHDConfig <p>TSC transcoding configuration parameters.</p>
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set 
-     * @param TEHDConfig 
+     * Set <p>TSC transcoding configuration parameters.</p>
+     * @param TEHDConfig <p>TSC transcoding configuration parameters.</p>
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get  
-     * @return StdExtInfo 
+     * Get <p>Standard extended fields for special usage.</p> 
+     * @return StdExtInfo <p>Standard extended fields for special usage.</p>
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
     }
 
     /**
-     * Set 
-     * @param StdExtInfo 
+     * Set <p>Standard extended fields for special usage.</p>
+     * @param StdExtInfo <p>Standard extended fields for special usage.</p>
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

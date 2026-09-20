@@ -24,115 +24,125 @@ import java.util.HashMap;
 public class MediaMiniProgramReviewInfoItem extends AbstractModel {
 
     /**
-    * 
+    * Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Video metadata.
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * 
+    * Video playback address for Mini Program Audio and Video review.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li>
     */
     @SerializedName("ReviewResult")
     @Expose
     private String ReviewResult;
 
     /**
-    * 
+    * Mini Program Audio and Video moderation element.
     */
     @SerializedName("ReviewSummary")
     @Expose
     private MediaMiniProgramReviewElem [] ReviewSummary;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video. 
+     * @return Definition Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
+     * @param Definition Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return MetaData 
+     * Get Video metadata. 
+     * @return MetaData Video metadata.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 
-     * @param MetaData 
+     * Set Video metadata.
+     * @param MetaData Video metadata.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Video playback address for Mini Program Audio and Video review. 
+     * @return Url Video playback address for Mini Program Audio and Video review.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Video playback address for Mini Program Audio and Video review.
+     * @param Url Video playback address for Mini Program Audio and Video review.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return ReviewResult 
+     * Get Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li> 
+     * @return ReviewResult Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li>
      */
     public String getReviewResult() {
         return this.ReviewResult;
     }
 
     /**
-     * Set 
-     * @param ReviewResult 
+     * Set Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li>
+     * @param ReviewResult Publishing status of the mini program video:
+<li>Pass: Succeeded.</li>
+<li>Rejected: failed.</li>
      */
     public void setReviewResult(String ReviewResult) {
         this.ReviewResult = ReviewResult;
     }
 
     /**
-     * Get  
-     * @return ReviewSummary 
+     * Get Mini Program Audio and Video moderation element. 
+     * @return ReviewSummary Mini Program Audio and Video moderation element.
      */
     public MediaMiniProgramReviewElem [] getReviewSummary() {
         return this.ReviewSummary;
     }
 
     /**
-     * Set 
-     * @param ReviewSummary 
+     * Set Mini Program Audio and Video moderation element.
+     * @param ReviewSummary Mini Program Audio and Video moderation element.
      */
     public void setReviewSummary(MediaMiniProgramReviewElem [] ReviewSummary) {
         this.ReviewSummary = ReviewSummary;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateCLSTopicRequest extends AbstractModel {
 
     /**
-    * 
+    * Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
     */
     @SerializedName("CLSRegion")
     @Expose
     private String CLSRegion;
 
     /**
-    * 
+    * Log topic name.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 
+    * Logset ID.
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-     * Get  
-     * @return CLSRegion 
+     * Get Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li> 
+     * @return CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      */
     public String getCLSRegion() {
         return this.CLSRegion;
     }
 
     /**
-     * Set 
-     * @param CLSRegion 
+     * Set Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * @param CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      */
     public void setCLSRegion(String CLSRegion) {
         this.CLSRegion = CLSRegion;
     }
 
     /**
-     * Get  
-     * @return TopicName 
+     * Get Log topic name. 
+     * @return TopicName Log topic name.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 
-     * @param TopicName 
+     * Set Log topic name.
+     * @param TopicName Log topic name.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get  
-     * @return LogsetId 
+     * Get Logset ID. 
+     * @return LogsetId Logset ID.
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 
-     * @param LogsetId 
+     * Set Logset ID.
+     * @param LogsetId Logset ID.
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

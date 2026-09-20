@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeReviewDetailsResponse extends AbstractModel {
 
     /**
-    * 
+    * Content intelligent identification trigger count.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Total duration of content intelligent identification.
     */
     @SerializedName("TotalDuration")
     @Expose
     private Long TotalDuration;
 
     /**
-    * 
+    * Duration stats of content intelligent identification, one data point per day.
     */
     @SerializedName("Data")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeReviewDetailsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Content intelligent identification trigger count. 
+     * @return TotalCount Content intelligent identification trigger count.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Content intelligent identification trigger count.
+     * @param TotalCount Content intelligent identification trigger count.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return TotalDuration 
+     * Get Total duration of content intelligent identification. 
+     * @return TotalDuration Total duration of content intelligent identification.
      */
     public Long getTotalDuration() {
         return this.TotalDuration;
     }
 
     /**
-     * Set 
-     * @param TotalDuration 
+     * Set Total duration of content intelligent identification.
+     * @param TotalDuration Total duration of content intelligent identification.
      */
     public void setTotalDuration(Long TotalDuration) {
         this.TotalDuration = TotalDuration;
     }
 
     /**
-     * Get  
-     * @return Data 
+     * Get Duration stats of content intelligent identification, one data point per day. 
+     * @return Data Duration stats of content intelligent identification, one data point per day.
      */
     public StatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 
-     * @param Data 
+     * Set Duration stats of content intelligent identification, one data point per day.
+     * @param Data Duration stats of content intelligent identification, one data point per day.
      */
     public void setData(StatDataItem [] Data) {
         this.Data = Data;

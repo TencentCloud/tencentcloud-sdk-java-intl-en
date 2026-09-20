@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextResultInput extends AbstractModel {
 
     /**
-    * 
+    * Template ID for full text speech recognition.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Template ID for full text speech recognition. 
+     * @return Definition Template ID for full text speech recognition.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Template ID for full text speech recognition.
+     * @param Definition Template ID for full text speech recognition.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

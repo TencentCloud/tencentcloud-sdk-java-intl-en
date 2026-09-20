@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class MPSRawSmartEraseParameter extends AbstractModel {
 
     /**
-    * 
+    * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
     */
     @SerializedName("EraseType")
     @Expose
     private String EraseType;
 
     /**
-    * 
+    * <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
     */
     @SerializedName("EraseSubtitleConfig")
     @Expose
     private MPSSmartEraseSubtitleConfig EraseSubtitleConfig;
 
     /**
-    * 
+    * <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
     */
     @SerializedName("EraseWatermarkConfig")
     @Expose
     private MPSSmartEraseWatermarkConfig EraseWatermarkConfig;
 
     /**
-    * 
+    * <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
     */
     @SerializedName("ErasePrivacyConfig")
     @Expose
     private MPSSmartErasePrivacyConfig ErasePrivacyConfig;
 
     /**
-    * 
+    * <p>id of the subtitle removal suppression template.</p>
     */
     @SerializedName("SubtitleEmbedId")
     @Expose
     private Long SubtitleEmbedId;
 
     /**
-    * 
+    * <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
     */
     @SerializedName("UseOriginalPos")
     @Expose
     private Long UseOriginalPos;
 
     /**
-    * 
+    * <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
     */
     @SerializedName("UseOriginalSize")
     @Expose
     private Long UseOriginalSize;
 
     /**
-     * Get  
-     * @return EraseType 
+     * Get <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul> 
+     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public String getEraseType() {
         return this.EraseType;
     }
 
     /**
-     * Set 
-     * @param EraseType 
+     * Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public void setEraseType(String EraseType) {
         this.EraseType = EraseType;
     }
 
     /**
-     * Get  
-     * @return EraseSubtitleConfig 
+     * Get <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p> 
+     * @return EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
      */
     public MPSSmartEraseSubtitleConfig getEraseSubtitleConfig() {
         return this.EraseSubtitleConfig;
     }
 
     /**
-     * Set 
-     * @param EraseSubtitleConfig 
+     * Set <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+     * @param EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
      */
     public void setEraseSubtitleConfig(MPSSmartEraseSubtitleConfig EraseSubtitleConfig) {
         this.EraseSubtitleConfig = EraseSubtitleConfig;
     }
 
     /**
-     * Get  
-     * @return EraseWatermarkConfig 
+     * Get <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p> 
+     * @return EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
      */
     public MPSSmartEraseWatermarkConfig getEraseWatermarkConfig() {
         return this.EraseWatermarkConfig;
     }
 
     /**
-     * Set 
-     * @param EraseWatermarkConfig 
+     * Set <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+     * @param EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
      */
     public void setEraseWatermarkConfig(MPSSmartEraseWatermarkConfig EraseWatermarkConfig) {
         this.EraseWatermarkConfig = EraseWatermarkConfig;
     }
 
     /**
-     * Get  
-     * @return ErasePrivacyConfig 
+     * Get <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p> 
+     * @return ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
      */
     public MPSSmartErasePrivacyConfig getErasePrivacyConfig() {
         return this.ErasePrivacyConfig;
     }
 
     /**
-     * Set 
-     * @param ErasePrivacyConfig 
+     * Set <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+     * @param ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
      */
     public void setErasePrivacyConfig(MPSSmartErasePrivacyConfig ErasePrivacyConfig) {
         this.ErasePrivacyConfig = ErasePrivacyConfig;
     }
 
     /**
-     * Get  
-     * @return SubtitleEmbedId 
+     * Get <p>id of the subtitle removal suppression template.</p> 
+     * @return SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
      */
     public Long getSubtitleEmbedId() {
         return this.SubtitleEmbedId;
     }
 
     /**
-     * Set 
-     * @param SubtitleEmbedId 
+     * Set <p>id of the subtitle removal suppression template.</p>
+     * @param SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
      */
     public void setSubtitleEmbedId(Long SubtitleEmbedId) {
         this.SubtitleEmbedId = SubtitleEmbedId;
     }
 
     /**
-     * Get  
-     * @return UseOriginalPos 
+     * Get <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p> 
+     * @return UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
      */
     public Long getUseOriginalPos() {
         return this.UseOriginalPos;
     }
 
     /**
-     * Set 
-     * @param UseOriginalPos 
+     * Set <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     * @param UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
      */
     public void setUseOriginalPos(Long UseOriginalPos) {
         this.UseOriginalPos = UseOriginalPos;
     }
 
     /**
-     * Get  
-     * @return UseOriginalSize 
+     * Get <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p> 
+     * @return UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
      */
     public Long getUseOriginalSize() {
         return this.UseOriginalSize;
     }
 
     /**
-     * Set 
-     * @param UseOriginalSize 
+     * Set <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     * @param UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
      */
     public void setUseOriginalSize(Long UseOriginalSize) {
         this.UseOriginalSize = UseOriginalSize;

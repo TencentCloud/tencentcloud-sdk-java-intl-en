@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ImageUnderstandingInfo extends AbstractModel {
 
     /**
-    * 
+    * Collection of image understanding items.
     */
     @SerializedName("ImageUnderstandingSet")
     @Expose
     private ImageUnderstandingItem [] ImageUnderstandingSet;
 
     /**
-     * Get  
-     * @return ImageUnderstandingSet 
+     * Get Collection of image understanding items. 
+     * @return ImageUnderstandingSet Collection of image understanding items.
      */
     public ImageUnderstandingItem [] getImageUnderstandingSet() {
         return this.ImageUnderstandingSet;
     }
 
     /**
-     * Set 
-     * @param ImageUnderstandingSet 
+     * Set Collection of image understanding items.
+     * @param ImageUnderstandingSet Collection of image understanding items.
      */
     public void setImageUnderstandingSet(ImageUnderstandingItem [] ImageUnderstandingSet) {
         this.ImageUnderstandingSet = ImageUnderstandingSet;

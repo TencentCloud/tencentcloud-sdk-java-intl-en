@@ -24,115 +24,135 @@ import java.util.HashMap;
 public class StorageRegionInfo extends AbstractModel {
 
     /**
-    * 
+    * Storage region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * Store region description information.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Whether it is the default storage region. true: yes; false: no.
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 
+    * Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get  
-     * @return Region 
+     * Get Storage region. 
+     * @return Region Storage region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Storage region.
+     * @param Region Storage region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get Store region description information. 
+     * @return Description Store region description information.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set Store region description information.
+     * @param Description Store region description information.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li> 
+     * @return Status Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li>
+     * @param Status Status. Whether it is enabled. Valid values:
+<li>opened: enabled.</li>
+<li>unopened: not activated.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return IsDefault 
+     * Get Whether it is the default storage region. true: yes; false: no. 
+     * @return IsDefault Whether it is the default storage region. true: yes; false: no.
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 
-     * @param IsDefault 
+     * Set Whether it is the default storage region. true: yes; false: no.
+     * @param IsDefault Whether it is the default storage region. true: yes; false: no.
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get  
-     * @return Area 
+     * Get Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li> 
+     * @return Area Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 
-     * @param Area 
+     * Set Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+     * @param Area Storage area. Valid values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;

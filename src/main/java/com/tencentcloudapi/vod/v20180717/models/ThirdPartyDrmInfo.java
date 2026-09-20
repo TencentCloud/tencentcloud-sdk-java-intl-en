@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ThirdPartyDrmInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
     */
     @SerializedName("DrmTypes")
     @Expose
     private String [] DrmTypes;
 
     /**
-    * 
+    * <p>External DRM vendor information.</p>
     */
     @SerializedName("SPEKEDrm")
     @Expose
     private SPEKEDrm SPEKEDrm;
 
     /**
-     * Get  
-     * @return DrmTypes 
+     * Get <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul> 
+     * @return DrmTypes <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
      */
     public String [] getDrmTypes() {
         return this.DrmTypes;
     }
 
     /**
-     * Set 
-     * @param DrmTypes 
+     * Set <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
+     * @param DrmTypes <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
      */
     public void setDrmTypes(String [] DrmTypes) {
         this.DrmTypes = DrmTypes;
     }
 
     /**
-     * Get  
-     * @return SPEKEDrm 
+     * Get <p>External DRM vendor information.</p> 
+     * @return SPEKEDrm <p>External DRM vendor information.</p>
      */
     public SPEKEDrm getSPEKEDrm() {
         return this.SPEKEDrm;
     }
 
     /**
-     * Set 
-     * @param SPEKEDrm 
+     * Set <p>External DRM vendor information.</p>
+     * @param SPEKEDrm <p>External DRM vendor information.</p>
      */
     public void setSPEKEDrm(SPEKEDrm SPEKEDrm) {
         this.SPEKEDrm = SPEKEDrm;

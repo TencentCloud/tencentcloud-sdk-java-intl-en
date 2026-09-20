@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class TaiWanIDCard extends AbstractModel {
 
     /**
-    * Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name.
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Identity card
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sex
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+    * City of issuance
     */
     @SerializedName("IssuedCountry")
     @Expose
@@ -57,97 +53,78 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RegistrationNumber")
     @Expose
     private String RegistrationNumber;
 
     /**
-     * Get Full name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name. 
+     * @return FullName Name.
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name.
+     * @param FullName Name.
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get License number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Identity card 
+     * @return LicenseNumber Identity card
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Identity card
+     * @param LicenseNumber Identity card
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Gender
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sex 
+     * @return Sex Sex
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sex
+     * @param Sex Sex
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Issued country
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedCountry Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get City of issuance 
+     * @return IssuedCountry City of issuance
      */
     public String getIssuedCountry() {
         return this.IssuedCountry;
     }
 
     /**
-     * Set Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedCountry Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set City of issuance
+     * @param IssuedCountry City of issuance
      */
     public void setIssuedCountry(String IssuedCountry) {
         this.IssuedCountry = IssuedCountry;
     }
 
     /**
-     * Get Registration number
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Registration number 
      * @return RegistrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegistrationNumber() {
         return this.RegistrationNumber;
@@ -155,9 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RegistrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegistrationNumber(String RegistrationNumber) {
         this.RegistrationNumber = RegistrationNumber;

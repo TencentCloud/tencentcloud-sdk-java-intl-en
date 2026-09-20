@@ -24,161 +24,191 @@ import java.util.HashMap;
 public class ContentReviewResult extends AbstractModel {
 
     /**
-    * 
+    * Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Authentication result for offensive content in the image. Valid when Type is Porn.Image.
     */
     @SerializedName("PornImageResult")
     @Expose
     private PornImageResult PornImageResult;
 
     /**
-    * 
+    * Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
     */
     @SerializedName("TerrorismImageResult")
     @Expose
     private TerrorismImageResult TerrorismImageResult;
 
     /**
-    * 
+    * Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
     */
     @SerializedName("PoliticalImageResult")
     @Expose
     private PoliticalImageResult PoliticalImageResult;
 
     /**
-    * 
+    * Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr.
     */
     @SerializedName("PornOcrResult")
     @Expose
     private ContentReviewOcrResult PornOcrResult;
 
     /**
-    * 
+    * Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr.
     */
     @SerializedName("TerrorismOcrResult")
     @Expose
     private ContentReviewOcrResult TerrorismOcrResult;
 
     /**
-    * 
+    * The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
     */
     @SerializedName("PoliticalOcrResult")
     @Expose
     private ContentReviewOcrResult PoliticalOcrResult;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li> 
+     * @return Type Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+     * @param Type Result type. Valid values:
+<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Terrorism.Image: authentication result of unsafe information in the image;</li>
+<li>Political.Image: authentication result of inappropriate information in the image;</li>
+<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
+<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return PornImageResult 
+     * Get Authentication result for offensive content in the image. Valid when Type is Porn.Image. 
+     * @return PornImageResult Authentication result for offensive content in the image. Valid when Type is Porn.Image.
      */
     public PornImageResult getPornImageResult() {
         return this.PornImageResult;
     }
 
     /**
-     * Set 
-     * @param PornImageResult 
+     * Set Authentication result for offensive content in the image. Valid when Type is Porn.Image.
+     * @param PornImageResult Authentication result for offensive content in the image. Valid when Type is Porn.Image.
      */
     public void setPornImageResult(PornImageResult PornImageResult) {
         this.PornImageResult = PornImageResult;
     }
 
     /**
-     * Get  
-     * @return TerrorismImageResult 
+     * Get Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image. 
+     * @return TerrorismImageResult Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
      */
     public TerrorismImageResult getTerrorismImageResult() {
         return this.TerrorismImageResult;
     }
 
     /**
-     * Set 
-     * @param TerrorismImageResult 
+     * Set Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+     * @param TerrorismImageResult Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
      */
     public void setTerrorismImageResult(TerrorismImageResult TerrorismImageResult) {
         this.TerrorismImageResult = TerrorismImageResult;
     }
 
     /**
-     * Get  
-     * @return PoliticalImageResult 
+     * Get Authentication of inappropriate information results in the image. Valid when Type is Political.Image. 
+     * @return PoliticalImageResult Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
      */
     public PoliticalImageResult getPoliticalImageResult() {
         return this.PoliticalImageResult;
     }
 
     /**
-     * Set 
-     * @param PoliticalImageResult 
+     * Set Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+     * @param PoliticalImageResult Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
      */
     public void setPoliticalImageResult(PoliticalImageResult PoliticalImageResult) {
         this.PoliticalImageResult = PoliticalImageResult;
     }
 
     /**
-     * Get  
-     * @return PornOcrResult 
+     * Get Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr. 
+     * @return PornOcrResult Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr.
      */
     public ContentReviewOcrResult getPornOcrResult() {
         return this.PornOcrResult;
     }
 
     /**
-     * Set 
-     * @param PornOcrResult 
+     * Set Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr.
+     * @param PornOcrResult Authentication result for offensive content in image OCR text. Valid when Type is Porn.Ocr.
      */
     public void setPornOcrResult(ContentReviewOcrResult PornOcrResult) {
         this.PornOcrResult = PornOcrResult;
     }
 
     /**
-     * Get  
-     * @return TerrorismOcrResult 
+     * Get Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr. 
+     * @return TerrorismOcrResult Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr.
      */
     public ContentReviewOcrResult getTerrorismOcrResult() {
         return this.TerrorismOcrResult;
     }
 
     /**
-     * Set 
-     * @param TerrorismOcrResult 
+     * Set Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr.
+     * @param TerrorismOcrResult Authentication result of unsafe information in image OCR. Valid when Type is Terrorism.Ocr.
      */
     public void setTerrorismOcrResult(ContentReviewOcrResult TerrorismOcrResult) {
         this.TerrorismOcrResult = TerrorismOcrResult;
     }
 
     /**
-     * Get  
-     * @return PoliticalOcrResult 
+     * Get The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr. 
+     * @return PoliticalOcrResult The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
      */
     public ContentReviewOcrResult getPoliticalOcrResult() {
         return this.PoliticalOcrResult;
     }
 
     /**
-     * Set 
-     * @param PoliticalOcrResult 
+     * Set The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+     * @param PoliticalOcrResult The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
      */
     public void setPoliticalOcrResult(ContentReviewOcrResult PoliticalOcrResult) {
         this.PoliticalOcrResult = PoliticalOcrResult;

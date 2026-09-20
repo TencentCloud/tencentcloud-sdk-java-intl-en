@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class PhilippinesUMID extends AbstractModel {
 
     /**
-    * Surname
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last name
     */
     @SerializedName("Surname")
     @Expose
     private String Surname;
 
     /**
-    * Middle Name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Middle name
     */
     @SerializedName("MiddleName")
     @Expose
     private String MiddleName;
 
     /**
-    * First name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("GivenName")
     @Expose
     private String GivenName;
 
     /**
-    * Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address.
     */
     @SerializedName("Sex")
     @Expose
@@ -57,113 +53,92 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address.
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * CRN code
-Note: This field may return null, indicating that no valid values can be obtained.
+    * crn code
     */
     @SerializedName("CRN")
     @Expose
     private String CRN;
 
     /**
-     * Get Surname
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Surname Surname
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last name 
+     * @return Surname Last name
      */
     public String getSurname() {
         return this.Surname;
     }
 
     /**
-     * Set Surname
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Surname Surname
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last name
+     * @param Surname Last name
      */
     public void setSurname(String Surname) {
         this.Surname = Surname;
     }
 
     /**
-     * Get Middle Name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MiddleName Middle Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Middle name 
+     * @return MiddleName Middle name
      */
     public String getMiddleName() {
         return this.MiddleName;
     }
 
     /**
-     * Set Middle Name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MiddleName Middle Name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Middle name
+     * @param MiddleName Middle name
      */
     public void setMiddleName(String MiddleName) {
         this.MiddleName = MiddleName;
     }
 
     /**
-     * Get First name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GivenName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return GivenName Name
      */
     public String getGivenName() {
         return this.GivenName;
     }
 
     /**
-     * Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GivenName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param GivenName Name
      */
     public void setGivenName(String GivenName) {
         this.GivenName = GivenName;
     }
 
     /**
-     * Get Gender
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address. 
+     * @return Sex Address.
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address.
+     * @param Sex Address.
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Birthday 
      * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBirthday() {
         return this.Birthday;
@@ -171,49 +146,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address. 
+     * @return Address Address.
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set Address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address.
+     * @param Address Address.
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get CRN code
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CRN CRN code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get crn code 
+     * @return CRN crn code
      */
     public String getCRN() {
         return this.CRN;
     }
 
     /**
-     * Set CRN code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CRN CRN code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set crn code
+     * @param CRN crn code
      */
     public void setCRN(String CRN) {
         this.CRN = CRN;

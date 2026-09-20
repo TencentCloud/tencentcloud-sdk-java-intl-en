@@ -25,7 +25,6 @@ public class MacaoIDCard extends AbstractModel {
 
     /**
     * First name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FirstName")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastName")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Birthday")
     @Expose
@@ -49,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpirationDate")
     @Expose
     private String ExpirationDate;
 
     /**
-    * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Identity number
     */
     @SerializedName("LicenseNumber")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Sex
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Sex")
     @Expose
@@ -73,41 +67,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Age
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Age")
     @Expose
     private String Age;
 
     /**
-    * Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Issuing country
     */
     @SerializedName("IssuedCountry")
     @Expose
     private String IssuedCountry;
 
     /**
-    * MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * mrz field 1
     */
     @SerializedName("Field1")
     @Expose
     private String Field1;
 
     /**
-    * MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained.
+    * mrz field 2
     */
     @SerializedName("Field2")
     @Expose
     private String Field2;
 
     /**
-     * Get First name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get First name 
      * @return FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFirstName() {
         return this.FirstName;
@@ -115,19 +103,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set First name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFirstName(String FirstName) {
         this.FirstName = FirstName;
     }
 
     /**
-     * Get Last name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last name 
      * @return LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastName() {
         return this.LastName;
@@ -135,19 +119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastName(String LastName) {
         this.LastName = LastName;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Birthday 
      * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBirthday() {
         return this.Birthday;
@@ -155,19 +135,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Expiration date
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Expiration date 
      * @return ExpirationDate Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpirationDate() {
         return this.ExpirationDate;
@@ -175,39 +151,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExpirationDate Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpirationDate(String ExpirationDate) {
         this.ExpirationDate = ExpirationDate;
     }
 
     /**
-     * Get License number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Identity number 
+     * @return LicenseNumber Identity number
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Identity number
+     * @param LicenseNumber Identity number
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Sex
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Sex 
      * @return Sex Sex
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSex() {
         return this.Sex;
@@ -215,19 +183,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Sex
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Sex Sex
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Age
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Age 
      * @return Age Age
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAge() {
         return this.Age;
@@ -235,69 +199,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Age
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Age Age
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get Issued country
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedCountry Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Issuing country 
+     * @return IssuedCountry Issuing country
      */
     public String getIssuedCountry() {
         return this.IssuedCountry;
     }
 
     /**
-     * Set Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedCountry Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Issuing country
+     * @param IssuedCountry Issuing country
      */
     public void setIssuedCountry(String IssuedCountry) {
         this.IssuedCountry = IssuedCountry;
     }
 
     /**
-     * Get MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained.  
-     * @return Field1 MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get mrz field 1 
+     * @return Field1 mrz field 1
      */
     public String getField1() {
         return this.Field1;
     }
 
     /**
-     * Set MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @param Field1 MRZ1 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Set mrz field 1
+     * @param Field1 mrz field 1
      */
     public void setField1(String Field1) {
         this.Field1 = Field1;
     }
 
     /**
-     * Get MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Field2 MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get mrz field 2 
+     * @return Field2 mrz field 2
      */
     public String getField2() {
         return this.Field2;
     }
 
     /**
-     * Set MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Field2 MRZ2 on card
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set mrz field 2
+     * @param Field2 mrz field 2
      */
     public void setField2(String Field2) {
         this.Field2 = Field2;

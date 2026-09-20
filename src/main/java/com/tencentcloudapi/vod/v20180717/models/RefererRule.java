@@ -27,7 +27,7 @@ public class RefererRule extends AbstractModel {
     * Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li>
     */
     @SerializedName("RuleType")
@@ -48,14 +48,14 @@ public class RefererRule extends AbstractModel {
     /**
     * referer configuration type. Value:
 <li>whitelist: allowlist;</li>
-<li>blocklist: Blocklist.</li>
+<li>blacklist: blocklist.</li>
     */
     @SerializedName("RefererType")
     @Expose
     private String RefererType;
 
     /**
-    * 
+    * referer list.
     */
     @SerializedName("Referers")
     @Expose
@@ -63,8 +63,8 @@ public class RefererRule extends AbstractModel {
 
     /**
     * Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
-If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
+If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
     */
     @SerializedName("AllowEmpty")
     @Expose
@@ -74,12 +74,12 @@ If the anti-hotlinking type is a blocklist, true indicates that empty referers a
      * Get Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li> 
      * @return RuleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li>
      */
     public String getRuleType() {
@@ -90,12 +90,12 @@ If the anti-hotlinking type is a blocklist, true indicates that empty referers a
      * Set Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li>
      * @param RuleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li>
      */
     public void setRuleType(String RuleType) {
@@ -137,10 +137,10 @@ If the anti-hotlinking type is a blocklist, true indicates that empty referers a
     /**
      * Get referer configuration type. Value:
 <li>whitelist: allowlist;</li>
-<li>blocklist: Blocklist.</li> 
+<li>blacklist: blocklist.</li> 
      * @return RefererType referer configuration type. Value:
 <li>whitelist: allowlist;</li>
-<li>blocklist: Blocklist.</li>
+<li>blacklist: blocklist.</li>
      */
     public String getRefererType() {
         return this.RefererType;
@@ -149,26 +149,26 @@ If the anti-hotlinking type is a blocklist, true indicates that empty referers a
     /**
      * Set referer configuration type. Value:
 <li>whitelist: allowlist;</li>
-<li>blocklist: Blocklist.</li>
+<li>blacklist: blocklist.</li>
      * @param RefererType referer configuration type. Value:
 <li>whitelist: allowlist;</li>
-<li>blocklist: Blocklist.</li>
+<li>blacklist: blocklist.</li>
      */
     public void setRefererType(String RefererType) {
         this.RefererType = RefererType;
     }
 
     /**
-     * Get  
-     * @return Referers 
+     * Get referer list. 
+     * @return Referers referer list.
      */
     public String [] getReferers() {
         return this.Referers;
     }
 
     /**
-     * Set 
-     * @param Referers 
+     * Set referer list.
+     * @param Referers referer list.
      */
     public void setReferers(String [] Referers) {
         this.Referers = Referers;
@@ -176,11 +176,11 @@ If the anti-hotlinking type is a blocklist, true indicates that empty referers a
 
     /**
      * Get Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
-If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied. 
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
+If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers. 
      * @return AllowEmpty Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
-If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
+If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
      */
     public Boolean getAllowEmpty() {
         return this.AllowEmpty;
@@ -188,11 +188,11 @@ If the anti-hotlinking type is a blocklist, true indicates that empty referers a
 
     /**
      * Set Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
-If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
+If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
      * @param AllowEmpty Whether to allow empty referer:
-When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
-If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
+If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
      */
     public void setAllowEmpty(Boolean AllowEmpty) {
         this.AllowEmpty = AllowEmpty;

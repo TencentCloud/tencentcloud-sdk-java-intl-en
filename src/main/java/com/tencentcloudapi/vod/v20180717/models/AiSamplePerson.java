@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class AiSamplePerson extends AbstractModel {
 
     /**
-    * 
+    * <p>Figure ID.</p>
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * 
+    * <p>Figure name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Character description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * <p>Face information.</p>
     */
     @SerializedName("FaceInfoSet")
     @Expose
     private AiSampleFaceInfo [] FaceInfoSet;
 
     /**
-    * 
+    * <p>Figure tag.</p>
     */
     @SerializedName("TagSet")
     @Expose
     private String [] TagSet;
 
     /**
-    * 
+    * <p>Application scenarios.</p>
     */
     @SerializedName("UsageSet")
     @Expose
     private String [] UsageSet;
 
     /**
-    * 
+    * <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get  
-     * @return PersonId 
+     * Get <p>Figure ID.</p> 
+     * @return PersonId <p>Figure ID.</p>
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set 
-     * @param PersonId 
+     * Set <p>Figure ID.</p>
+     * @param PersonId <p>Figure ID.</p>
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Figure name.</p> 
+     * @return Name <p>Figure name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Figure name.</p>
+     * @param Name <p>Figure name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get <p>Character description.</p> 
+     * @return Description <p>Character description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set <p>Character description.</p>
+     * @param Description <p>Character description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return FaceInfoSet 
+     * Get <p>Face information.</p> 
+     * @return FaceInfoSet <p>Face information.</p>
      */
     public AiSampleFaceInfo [] getFaceInfoSet() {
         return this.FaceInfoSet;
     }
 
     /**
-     * Set 
-     * @param FaceInfoSet 
+     * Set <p>Face information.</p>
+     * @param FaceInfoSet <p>Face information.</p>
      */
     public void setFaceInfoSet(AiSampleFaceInfo [] FaceInfoSet) {
         this.FaceInfoSet = FaceInfoSet;
     }
 
     /**
-     * Get  
-     * @return TagSet 
+     * Get <p>Figure tag.</p> 
+     * @return TagSet <p>Figure tag.</p>
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 
-     * @param TagSet 
+     * Set <p>Figure tag.</p>
+     * @param TagSet <p>Figure tag.</p>
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get  
-     * @return UsageSet 
+     * Get <p>Application scenarios.</p> 
+     * @return UsageSet <p>Application scenarios.</p>
      */
     public String [] getUsageSet() {
         return this.UsageSet;
     }
 
     /**
-     * Set 
-     * @param UsageSet 
+     * Set <p>Application scenarios.</p>
+     * @param UsageSet <p>Application scenarios.</p>
      */
     public void setUsageSet(String [] UsageSet) {
         this.UsageSet = UsageSet;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return CreateTime <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param CreateTime <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param UpdateTime <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

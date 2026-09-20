@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyWatermarkTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyWatermarkTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return ImageUrl 
+     * Get Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty. 
+     * @return ImageUrl Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 
-     * @param ImageUrl 
+     * Set Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
+     * @param ImageUrl Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

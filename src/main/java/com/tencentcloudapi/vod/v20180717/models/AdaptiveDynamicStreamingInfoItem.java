@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Adaptive bitrate streaming specification.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
     */
     @SerializedName("Package")
     @Expose
     private String Package;
 
     /**
-    * 
+    * <p>Encryption type.</p>
     */
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
 
     /**
-    * 
+    * <p>Playback address.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 
+    * <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
     private String DigitalWatermarkType;
 
     /**
-    * 
+    * <p>Subflow information list.</p>
     */
     @SerializedName("SubStreamSet")
     @Expose
     private MediaSubStreamInfoItem [] SubStreamSet;
 
     /**
-    * 
+    * <p>Copyright information.</p>
     */
     @SerializedName("CopyRightWatermarkText")
     @Expose
     private String CopyRightWatermarkText;
 
     /**
-    * 
+    * <p>Digital watermark template id.</p>
     */
     @SerializedName("BlindWatermarkDefinition")
     @Expose
     private Long BlindWatermarkDefinition;
 
     /**
-    * 
+    * <p>Subtitle information list.</p>
     */
     @SerializedName("SubtitleSet")
     @Expose
     private MediaSubtitleItem [] SubtitleSet;
 
     /**
-    * 
+    * <p>Unique identifier for default subtitle.</p>
     */
     @SerializedName("DefaultSubtitleId")
     @Expose
     private String DefaultSubtitleId;
 
     /**
-    * 
+    * <p>DRM encryption method.</p>
     */
     @SerializedName("DrmEncryptType")
     @Expose
     private String DrmEncryptType;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Adaptive bitrate streaming specification.</p> 
+     * @return Definition <p>Adaptive bitrate streaming specification.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Adaptive bitrate streaming specification.</p>
+     * @param Definition <p>Adaptive bitrate streaming specification.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Package 
+     * Get <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li> 
+     * @return Package <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
      */
     public String getPackage() {
         return this.Package;
     }
 
     /**
-     * Set 
-     * @param Package 
+     * Set <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
+     * @param Package <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
      */
     public void setPackage(String Package) {
         this.Package = Package;
     }
 
     /**
-     * Get  
-     * @return DrmType 
+     * Get <p>Encryption type.</p> 
+     * @return DrmType <p>Encryption type.</p>
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set 
-     * @param DrmType 
+     * Set <p>Encryption type.</p>
+     * @param DrmType <p>Encryption type.</p>
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>Playback address.</p> 
+     * @return Url <p>Playback address.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>Playback address.</p>
+     * @param Url <p>Playback address.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return Size 
+     * Get <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li> 
+     * @return Size <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 
-     * @param Size 
+     * Set <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
+     * @param Size <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get  
-     * @return DigitalWatermarkType 
+     * Get <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li> 
+     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
      */
     public String getDigitalWatermarkType() {
         return this.DigitalWatermarkType;
     }
 
     /**
-     * Set 
-     * @param DigitalWatermarkType 
+     * Set <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+     * @param DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
     /**
-     * Get  
-     * @return SubStreamSet 
+     * Get <p>Subflow information list.</p> 
+     * @return SubStreamSet <p>Subflow information list.</p>
      */
     public MediaSubStreamInfoItem [] getSubStreamSet() {
         return this.SubStreamSet;
     }
 
     /**
-     * Set 
-     * @param SubStreamSet 
+     * Set <p>Subflow information list.</p>
+     * @param SubStreamSet <p>Subflow information list.</p>
      */
     public void setSubStreamSet(MediaSubStreamInfoItem [] SubStreamSet) {
         this.SubStreamSet = SubStreamSet;
     }
 
     /**
-     * Get  
-     * @return CopyRightWatermarkText 
+     * Get <p>Copyright information.</p> 
+     * @return CopyRightWatermarkText <p>Copyright information.</p>
      */
     public String getCopyRightWatermarkText() {
         return this.CopyRightWatermarkText;
     }
 
     /**
-     * Set 
-     * @param CopyRightWatermarkText 
+     * Set <p>Copyright information.</p>
+     * @param CopyRightWatermarkText <p>Copyright information.</p>
      */
     public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
         this.CopyRightWatermarkText = CopyRightWatermarkText;
     }
 
     /**
-     * Get  
-     * @return BlindWatermarkDefinition 
+     * Get <p>Digital watermark template id.</p> 
+     * @return BlindWatermarkDefinition <p>Digital watermark template id.</p>
      */
     public Long getBlindWatermarkDefinition() {
         return this.BlindWatermarkDefinition;
     }
 
     /**
-     * Set 
-     * @param BlindWatermarkDefinition 
+     * Set <p>Digital watermark template id.</p>
+     * @param BlindWatermarkDefinition <p>Digital watermark template id.</p>
      */
     public void setBlindWatermarkDefinition(Long BlindWatermarkDefinition) {
         this.BlindWatermarkDefinition = BlindWatermarkDefinition;
     }
 
     /**
-     * Get  
-     * @return SubtitleSet 
+     * Get <p>Subtitle information list.</p> 
+     * @return SubtitleSet <p>Subtitle information list.</p>
      */
     public MediaSubtitleItem [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set 
-     * @param SubtitleSet 
+     * Set <p>Subtitle information list.</p>
+     * @param SubtitleSet <p>Subtitle information list.</p>
      */
     public void setSubtitleSet(MediaSubtitleItem [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;
     }
 
     /**
-     * Get  
-     * @return DefaultSubtitleId 
+     * Get <p>Unique identifier for default subtitle.</p> 
+     * @return DefaultSubtitleId <p>Unique identifier for default subtitle.</p>
      */
     public String getDefaultSubtitleId() {
         return this.DefaultSubtitleId;
     }
 
     /**
-     * Set 
-     * @param DefaultSubtitleId 
+     * Set <p>Unique identifier for default subtitle.</p>
+     * @param DefaultSubtitleId <p>Unique identifier for default subtitle.</p>
      */
     public void setDefaultSubtitleId(String DefaultSubtitleId) {
         this.DefaultSubtitleId = DefaultSubtitleId;
     }
 
     /**
-     * Get  
-     * @return DrmEncryptType 
+     * Get <p>DRM encryption method.</p> 
+     * @return DrmEncryptType <p>DRM encryption method.</p>
      */
     public String getDrmEncryptType() {
         return this.DrmEncryptType;
     }
 
     /**
-     * Set 
-     * @param DrmEncryptType 
+     * Set <p>DRM encryption method.</p>
+     * @param DrmEncryptType <p>DRM encryption method.</p>
      */
     public void setDrmEncryptType(String DrmEncryptType) {
         this.DrmEncryptType = DrmEncryptType;

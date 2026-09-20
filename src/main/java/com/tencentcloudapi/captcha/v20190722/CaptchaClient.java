@@ -83,7 +83,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the result of CAPTCHA ticket verification (web and app).
+     *This API is used to check the ticket results of verification codes for Web and APP.
      * @param req DescribeCaptchaResultRequest
      * @return DescribeCaptchaResultResponse
      * @throws TencentCloudSDKException

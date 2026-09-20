@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyJustInTimeTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * Template name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Video parameter configuration.
     */
     @SerializedName("VideoConfigure")
     @Expose
     private VideoConfigureInfoForUpdate VideoConfigure;
 
     /**
-    * 
+    * Watermark parameter configuration.
     */
     @SerializedName("WatermarkConfigure")
     @Expose
     private WatermarkConfigureInfoForUpdate WatermarkConfigure;
 
     /**
-    * 
+    * Template description. The length cannot exceed 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Template name. 
+     * @return Name Template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Template name.
+     * @param Name Template name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return VideoConfigure 
+     * Get Video parameter configuration. 
+     * @return VideoConfigure Video parameter configuration.
      */
     public VideoConfigureInfoForUpdate getVideoConfigure() {
         return this.VideoConfigure;
     }
 
     /**
-     * Set 
-     * @param VideoConfigure 
+     * Set Video parameter configuration.
+     * @param VideoConfigure Video parameter configuration.
      */
     public void setVideoConfigure(VideoConfigureInfoForUpdate VideoConfigure) {
         this.VideoConfigure = VideoConfigure;
     }
 
     /**
-     * Get  
-     * @return WatermarkConfigure 
+     * Get Watermark parameter configuration. 
+     * @return WatermarkConfigure Watermark parameter configuration.
      */
     public WatermarkConfigureInfoForUpdate getWatermarkConfigure() {
         return this.WatermarkConfigure;
     }
 
     /**
-     * Set 
-     * @param WatermarkConfigure 
+     * Set Watermark parameter configuration.
+     * @param WatermarkConfigure Watermark parameter configuration.
      */
     public void setWatermarkConfigure(WatermarkConfigureInfoForUpdate WatermarkConfigure) {
         this.WatermarkConfigure = WatermarkConfigure;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Template description. The length cannot exceed 256 characters. 
+     * @return Comment Template description. The length cannot exceed 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Template description. The length cannot exceed 256 characters.
+     * @param Comment Template description. The length cannot exceed 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

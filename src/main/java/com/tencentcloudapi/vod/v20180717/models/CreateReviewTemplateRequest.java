@@ -24,92 +24,127 @@ import java.util.HashMap;
 public class CreateReviewTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * List of rule violation tags to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private String SubAppId;
 
     /**
-    * 
+    * Review template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Review template description information, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-     * Get  
-     * @return Labels 
+     * Get List of rule violation tags to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li> 
+     * @return Labels List of rule violation tags to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 
-     * @param Labels 
+     * Set List of rule violation tags to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+     * @param Labels List of rule violation tags to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
      */
     public String getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Review template name. The length cannot exceed 64 characters. 
+     * @return Name Review template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Review template name. The length cannot exceed 64 characters.
+     * @param Name Review template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Review template description information, with a length limit of 256 characters. 
+     * @return Comment Review template description information, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Review template description information, with a length limit of 256 characters.
+     * @param Comment Review template description information, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

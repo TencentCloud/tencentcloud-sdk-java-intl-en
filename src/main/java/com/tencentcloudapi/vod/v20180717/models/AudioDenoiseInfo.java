@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class AudioDenoiseInfo extends AbstractModel {
 
     /**
-    * 
+    * Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li> 
+     * @return Switch Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li>
+     * @param Switch Audio noise reduction control switch. Available values:
+<li>ON: enable audio noise reduction;</li>
+<li>OFF: Turn off audio noise reduction.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal. 
+     * @return Type Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal.
+     * @param Type Audio noise reduction type. It is valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: Normal audio noise reduction;</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;

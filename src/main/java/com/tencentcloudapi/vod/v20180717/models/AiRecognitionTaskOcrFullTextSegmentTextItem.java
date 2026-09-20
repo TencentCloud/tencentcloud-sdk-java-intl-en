@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel {
 
     /**
-    * 
+    * Confidence of a recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * 
+    * Recognized text.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence of a recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence of a recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return AreaCoordSet 
+     * Get Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively. 
+     * @return AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 
-     * @param AreaCoordSet 
+     * Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+     * @param AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get Recognized text. 
+     * @return Text Recognized text.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set Recognized text.
+     * @param Text Recognized text.
      */
     public void setText(String Text) {
         this.Text = Text;

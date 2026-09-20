@@ -24,46 +24,76 @@ import java.util.HashMap;
 public class DiffusionEnhanceInfo extends AbstractModel {
 
     /**
-    * 
+    * Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li> 
+     * @return Switch Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+     * @param Switch Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal. 
+     * @return Type Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
+     * @param Type Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;

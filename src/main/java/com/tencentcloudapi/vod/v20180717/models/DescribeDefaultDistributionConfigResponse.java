@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Distribute the configured domain name (abandoned).</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 
+    * <p>Distribute the configured domain name.</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * <p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p>
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * 
+    * <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
     */
     @SerializedName("PlayKey")
     @Expose
@@ -59,8 +59,8 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return DomainName 
+     * Get <p>Distribute the configured domain name (abandoned).</p> 
+     * @return DomainName <p>Distribute the configured domain name (abandoned).</p>
      * @deprecated
      */
     @Deprecated
@@ -69,8 +69,8 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param DomainName 
+     * Set <p>Distribute the configured domain name (abandoned).</p>
+     * @param DomainName <p>Distribute the configured domain name (abandoned).</p>
      * @deprecated
      */
     @Deprecated
@@ -79,48 +79,48 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Domain 
+     * Get <p>Distribute the configured domain name.</p> 
+     * @return Domain <p>Distribute the configured domain name.</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set <p>Distribute the configured domain name.</p>
+     * @param Domain <p>Distribute the configured domain name.</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return Scheme 
+     * Get <p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p> 
+     * @return Scheme <p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p>
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 
-     * @param Scheme 
+     * Set <p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p>
+     * @param Scheme <p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p>
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get  
-     * @return PlayKey 
+     * Get <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p> 
+     * @return PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
      */
     public String getPlayKey() {
         return this.PlayKey;
     }
 
     /**
-     * Set 
-     * @param PlayKey 
+     * Set <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
+     * @param PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
      */
     public void setPlayKey(String PlayKey) {
         this.PlayKey = PlayKey;

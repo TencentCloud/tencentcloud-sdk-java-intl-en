@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AigcVideoTaskInputSubjectInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
     */
     @SerializedName("ImageUrls")
     @Expose
     private String [] ImageUrls;
 
     /**
-    * 
+    * <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
     */
     @SerializedName("VideoUrls")
     @Expose
     private String [] VideoUrls;
 
     /**
-     * Get  
-     * @return Id 
+     * Get <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul> 
+     * @return Id <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
+     * @param Id <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul> 
+     * @return Name <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
+     * @param Name <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p> 
+     * @return VoiceId <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
+     * @param VoiceId <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return ImageUrls 
+     * Get <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p> 
+     * @return ImageUrls <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
      */
     public String [] getImageUrls() {
         return this.ImageUrls;
     }
 
     /**
-     * Set 
-     * @param ImageUrls 
+     * Set <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
+     * @param ImageUrls <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
      */
     public void setImageUrls(String [] ImageUrls) {
         this.ImageUrls = ImageUrls;
     }
 
     /**
-     * Get  
-     * @return VideoUrls 
+     * Get <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p> 
+     * @return VideoUrls <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
      */
     public String [] getVideoUrls() {
         return this.VideoUrls;
     }
 
     /**
-     * Set 
-     * @param VideoUrls 
+     * Set <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
+     * @param VideoUrls <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
      */
     public void setVideoUrls(String [] VideoUrls) {
         this.VideoUrls = VideoUrls;

@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class Address extends AbstractModel {
 
     /**
-    * Nationality.
+    * Country
     */
     @SerializedName("Country")
     @Expose
     private String Country;
 
     /**
-    * Post code.
+    * Postal code
     */
     @SerializedName("PostalCode")
     @Expose
     private String PostalCode;
 
     /**
-    * Subregion.
+    * Sub-region
     */
     @SerializedName("Subdivision")
     @Expose
     private String Subdivision;
 
     /**
-    * City.
+    * city
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-    * Complete address.
+    * Complete address
     */
     @SerializedName("FormattedAddress")
     @Expose
     private String FormattedAddress;
 
     /**
-    * The first line of address.
+    * First line of the address bar
     */
     @SerializedName("LineOne")
     @Expose
     private String LineOne;
 
     /**
-    * The second line of address.
+    * Second line of the address bar
     */
     @SerializedName("LineTwo")
     @Expose
     private String LineTwo;
 
     /**
-    * The third line of address.
+    * Third line of the address bar
     */
     @SerializedName("LineThree")
     @Expose
     private String LineThree;
 
     /**
-    * The fourth line of address.
+    * Fourth line of the address bar
     */
     @SerializedName("LineFour")
     @Expose
     private String LineFour;
 
     /**
-    * The fifth line of address.
+    * Fifth line of the address bar
     */
     @SerializedName("LineFive")
     @Expose
     private String LineFive;
 
     /**
-     * Get Nationality. 
-     * @return Country Nationality.
+     * Get Country 
+     * @return Country Country
      */
     public String getCountry() {
         return this.Country;
     }
 
     /**
-     * Set Nationality.
-     * @param Country Nationality.
+     * Set Country
+     * @param Country Country
      */
     public void setCountry(String Country) {
         this.Country = Country;
     }
 
     /**
-     * Get Post code. 
-     * @return PostalCode Post code.
+     * Get Postal code 
+     * @return PostalCode Postal code
      */
     public String getPostalCode() {
         return this.PostalCode;
     }
 
     /**
-     * Set Post code.
-     * @param PostalCode Post code.
+     * Set Postal code
+     * @param PostalCode Postal code
      */
     public void setPostalCode(String PostalCode) {
         this.PostalCode = PostalCode;
     }
 
     /**
-     * Get Subregion. 
-     * @return Subdivision Subregion.
+     * Get Sub-region 
+     * @return Subdivision Sub-region
      */
     public String getSubdivision() {
         return this.Subdivision;
     }
 
     /**
-     * Set Subregion.
-     * @param Subdivision Subregion.
+     * Set Sub-region
+     * @param Subdivision Sub-region
      */
     public void setSubdivision(String Subdivision) {
         this.Subdivision = Subdivision;
     }
 
     /**
-     * Get City. 
-     * @return City City.
+     * Get city 
+     * @return City city
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set City.
-     * @param City City.
+     * Set city
+     * @param City city
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get Complete address. 
-     * @return FormattedAddress Complete address.
+     * Get Complete address 
+     * @return FormattedAddress Complete address
      */
     public String getFormattedAddress() {
         return this.FormattedAddress;
     }
 
     /**
-     * Set Complete address.
-     * @param FormattedAddress Complete address.
+     * Set Complete address
+     * @param FormattedAddress Complete address
      */
     public void setFormattedAddress(String FormattedAddress) {
         this.FormattedAddress = FormattedAddress;
     }
 
     /**
-     * Get The first line of address. 
-     * @return LineOne The first line of address.
+     * Get First line of the address bar 
+     * @return LineOne First line of the address bar
      */
     public String getLineOne() {
         return this.LineOne;
     }
 
     /**
-     * Set The first line of address.
-     * @param LineOne The first line of address.
+     * Set First line of the address bar
+     * @param LineOne First line of the address bar
      */
     public void setLineOne(String LineOne) {
         this.LineOne = LineOne;
     }
 
     /**
-     * Get The second line of address. 
-     * @return LineTwo The second line of address.
+     * Get Second line of the address bar 
+     * @return LineTwo Second line of the address bar
      */
     public String getLineTwo() {
         return this.LineTwo;
     }
 
     /**
-     * Set The second line of address.
-     * @param LineTwo The second line of address.
+     * Set Second line of the address bar
+     * @param LineTwo Second line of the address bar
      */
     public void setLineTwo(String LineTwo) {
         this.LineTwo = LineTwo;
     }
 
     /**
-     * Get The third line of address. 
-     * @return LineThree The third line of address.
+     * Get Third line of the address bar 
+     * @return LineThree Third line of the address bar
      */
     public String getLineThree() {
         return this.LineThree;
     }
 
     /**
-     * Set The third line of address.
-     * @param LineThree The third line of address.
+     * Set Third line of the address bar
+     * @param LineThree Third line of the address bar
      */
     public void setLineThree(String LineThree) {
         this.LineThree = LineThree;
     }
 
     /**
-     * Get The fourth line of address. 
-     * @return LineFour The fourth line of address.
+     * Get Fourth line of the address bar 
+     * @return LineFour Fourth line of the address bar
      */
     public String getLineFour() {
         return this.LineFour;
     }
 
     /**
-     * Set The fourth line of address.
-     * @param LineFour The fourth line of address.
+     * Set Fourth line of the address bar
+     * @param LineFour Fourth line of the address bar
      */
     public void setLineFour(String LineFour) {
         this.LineFour = LineFour;
     }
 
     /**
-     * Get The fifth line of address. 
-     * @return LineFive The fifth line of address.
+     * Get Fifth line of the address bar 
+     * @return LineFive Fifth line of the address bar
      */
     public String getLineFive() {
         return this.LineFive;
     }
 
     /**
-     * Set The fifth line of address.
-     * @param LineFive The fifth line of address.
+     * Set Fifth line of the address bar
+     * @param LineFive Fifth line of the address bar
      */
     public void setLineFive(String LineFive) {
         this.LineFive = LineFive;

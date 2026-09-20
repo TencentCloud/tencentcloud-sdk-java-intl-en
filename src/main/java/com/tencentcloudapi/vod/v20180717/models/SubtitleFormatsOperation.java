@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class SubtitleFormatsOperation extends AbstractModel {
 
     /**
-    * 
+    * Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
     */
     @SerializedName("Formats")
     @Expose
     private String [] Formats;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li> 
+     * @return Type Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
+     * @param Type Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Formats 
+     * Get Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li> 
+     * @return Formats Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
      */
     public String [] getFormats() {
         return this.Formats;
     }
 
     /**
-     * Set 
-     * @param Formats 
+     * Set Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
+     * @param Formats Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
      */
     public void setFormats(String [] Formats) {
         this.Formats = Formats;

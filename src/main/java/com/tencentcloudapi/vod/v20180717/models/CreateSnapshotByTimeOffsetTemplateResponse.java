@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSnapshotByTimeOffsetTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Time point screenshot template unique identifier.</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSnapshotByTimeOffsetTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Time point screenshot template unique identifier.</p> 
+     * @return Definition <p>Time point screenshot template unique identifier.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Time point screenshot template unique identifier.</p>
+     * @param Definition <p>Time point screenshot template unique identifier.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

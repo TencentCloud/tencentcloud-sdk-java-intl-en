@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class PhilippinesSSSID extends AbstractModel {
 
     /**
-    * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * No.
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("FullName")
     @Expose
@@ -41,57 +39,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-     * Get License number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get No. 
+     * @return LicenseNumber No.
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set License number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set No.
+     * @param LicenseNumber No.
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Full name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return FullName Name
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param FullName Name
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get Birthday
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Birthday 
      * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBirthday() {
         return this.Birthday;
@@ -99,9 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateImageSpriteTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Sprite template unique identifier.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateImageSpriteTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Sprite template unique identifier. 
+     * @return Definition Sprite template unique identifier.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Sprite template unique identifier.
+     * @param Definition Sprite template unique identifier.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

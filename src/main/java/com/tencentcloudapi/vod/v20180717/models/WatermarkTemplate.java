@@ -24,276 +24,326 @@ import java.util.HashMap;
 public class WatermarkTemplate extends AbstractModel {
 
     /**
-    * 
+    * Watermark template unique identifier.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Watermark template name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Template description information.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
     */
     @SerializedName("XPos")
     @Expose
     private String XPos;
 
     /**
-    * 
+    * Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
     */
     @SerializedName("YPos")
     @Expose
     private String YPos;
 
     /**
-    * 
+    * Image watermark template. This field is valid only when Type is image.
     */
     @SerializedName("ImageTemplate")
     @Expose
     private ImageWatermarkTemplate ImageTemplate;
 
     /**
-    * 
+    * Text watermarking template. This field is valid only when Type is text.
     */
     @SerializedName("TextTemplate")
     @Expose
     private TextWatermarkTemplateInput TextTemplate;
 
     /**
-    * 
+    * SVG watermark template. This field is valid when Type is `svg`.
     */
     @SerializedName("SvgTemplate")
     @Expose
     private SvgWatermarkInput SvgTemplate;
 
     /**
-    * 
+    * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 
+    * Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
     */
     @SerializedName("CoordinateOrigin")
     @Expose
     private String CoordinateOrigin;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Watermark template unique identifier. 
+     * @return Definition Watermark template unique identifier.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Watermark template unique identifier.
+     * @param Definition Watermark template unique identifier.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li> 
+     * @return Type Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
+     * @param Type Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Watermark template name. 
+     * @return Name Watermark template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Watermark template name.
+     * @param Name Watermark template name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Template description information. 
+     * @return Comment Template description information.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Template description information.
+     * @param Comment Template description information.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return XPos 
+     * Get Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li> 
+     * @return XPos Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
      */
     public String getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set 
-     * @param XPos 
+     * Set Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
+     * @param XPos Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
      */
     public void setXPos(String XPos) {
         this.XPos = XPos;
     }
 
     /**
-     * Get  
-     * @return YPos 
+     * Get Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li> 
+     * @return YPos Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
      */
     public String getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set 
-     * @param YPos 
+     * Set Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+     * @param YPos Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
      */
     public void setYPos(String YPos) {
         this.YPos = YPos;
     }
 
     /**
-     * Get  
-     * @return ImageTemplate 
+     * Get Image watermark template. This field is valid only when Type is image. 
+     * @return ImageTemplate Image watermark template. This field is valid only when Type is image.
      */
     public ImageWatermarkTemplate getImageTemplate() {
         return this.ImageTemplate;
     }
 
     /**
-     * Set 
-     * @param ImageTemplate 
+     * Set Image watermark template. This field is valid only when Type is image.
+     * @param ImageTemplate Image watermark template. This field is valid only when Type is image.
      */
     public void setImageTemplate(ImageWatermarkTemplate ImageTemplate) {
         this.ImageTemplate = ImageTemplate;
     }
 
     /**
-     * Get  
-     * @return TextTemplate 
+     * Get Text watermarking template. This field is valid only when Type is text. 
+     * @return TextTemplate Text watermarking template. This field is valid only when Type is text.
      */
     public TextWatermarkTemplateInput getTextTemplate() {
         return this.TextTemplate;
     }
 
     /**
-     * Set 
-     * @param TextTemplate 
+     * Set Text watermarking template. This field is valid only when Type is text.
+     * @param TextTemplate Text watermarking template. This field is valid only when Type is text.
      */
     public void setTextTemplate(TextWatermarkTemplateInput TextTemplate) {
         this.TextTemplate = TextTemplate;
     }
 
     /**
-     * Get  
-     * @return SvgTemplate 
+     * Get SVG watermark template. This field is valid when Type is `svg`. 
+     * @return SvgTemplate SVG watermark template. This field is valid when Type is `svg`.
      */
     public SvgWatermarkInput getSvgTemplate() {
         return this.SvgTemplate;
     }
 
     /**
-     * Set 
-     * @param SvgTemplate 
+     * Set SVG watermark template. This field is valid when Type is `svg`.
+     * @param SvgTemplate SVG watermark template. This field is valid when Type is `svg`.
      */
     public void setSvgTemplate(SvgWatermarkInput SvgTemplate) {
         this.SvgTemplate = SvgTemplate;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return CoordinateOrigin 
+     * Get Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li> 
+     * @return CoordinateOrigin Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
      */
     public String getCoordinateOrigin() {
         return this.CoordinateOrigin;
     }
 
     /**
-     * Set 
-     * @param CoordinateOrigin 
+     * Set Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+     * @param CoordinateOrigin Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
      */
     public void setCoordinateOrigin(String CoordinateOrigin) {
         this.CoordinateOrigin = CoordinateOrigin;

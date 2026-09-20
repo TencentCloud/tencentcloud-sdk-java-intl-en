@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DailyPlayStatInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 
+    * <p>Media file ID.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * <p>Number of plays.</p>
     */
     @SerializedName("PlayTimes")
     @Expose
     private Long PlayTimes;
 
     /**
-    * 
+    * <p>Playback traffic volume, unit: byte.</p>
     */
     @SerializedName("Traffic")
     @Expose
     private Long Traffic;
 
     /**
-     * Get  
-     * @return Date 
+     * Get <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return Date <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 
-     * @param Date 
+     * Set <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param Date <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get <p>Media file ID.</p> 
+     * @return FileId <p>Media file ID.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set <p>Media file ID.</p>
+     * @param FileId <p>Media file ID.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return PlayTimes 
+     * Get <p>Number of plays.</p> 
+     * @return PlayTimes <p>Number of plays.</p>
      */
     public Long getPlayTimes() {
         return this.PlayTimes;
     }
 
     /**
-     * Set 
-     * @param PlayTimes 
+     * Set <p>Number of plays.</p>
+     * @param PlayTimes <p>Number of plays.</p>
      */
     public void setPlayTimes(Long PlayTimes) {
         this.PlayTimes = PlayTimes;
     }
 
     /**
-     * Get  
-     * @return Traffic 
+     * Get <p>Playback traffic volume, unit: byte.</p> 
+     * @return Traffic <p>Playback traffic volume, unit: byte.</p>
      */
     public Long getTraffic() {
         return this.Traffic;
     }
 
     /**
-     * Set 
-     * @param Traffic 
+     * Set <p>Playback traffic volume, unit: byte.</p>
+     * @param Traffic <p>Playback traffic volume, unit: byte.</p>
      */
     public void setTraffic(Long Traffic) {
         this.Traffic = Traffic;

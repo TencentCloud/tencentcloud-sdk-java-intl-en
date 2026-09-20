@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ClipTask2017 extends AbstractModel {
 
     /**
-    * 
+    * Video clipping task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Video editing task source file ID.
     */
     @SerializedName("SrcFileId")
     @Expose
     private String SrcFileId;
 
     /**
-    * 
+    * File information of the video editing output.
     */
     @SerializedName("FileInfo")
     @Expose
     private ClipFileInfo2017 FileInfo;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Video clipping task ID. 
+     * @return TaskId Video clipping task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Video clipping task ID.
+     * @param TaskId Video clipping task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return SrcFileId 
+     * Get Video editing task source file ID. 
+     * @return SrcFileId Video editing task source file ID.
      */
     public String getSrcFileId() {
         return this.SrcFileId;
     }
 
     /**
-     * Set 
-     * @param SrcFileId 
+     * Set Video editing task source file ID.
+     * @param SrcFileId Video editing task source file ID.
      */
     public void setSrcFileId(String SrcFileId) {
         this.SrcFileId = SrcFileId;
     }
 
     /**
-     * Get  
-     * @return FileInfo 
+     * Get File information of the video editing output. 
+     * @return FileInfo File information of the video editing output.
      */
     public ClipFileInfo2017 getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set 
-     * @param FileInfo 
+     * Set File information of the video editing output.
+     * @param FileInfo File information of the video editing output.
      */
     public void setFileInfo(ClipFileInfo2017 FileInfo) {
         this.FileInfo = FileInfo;

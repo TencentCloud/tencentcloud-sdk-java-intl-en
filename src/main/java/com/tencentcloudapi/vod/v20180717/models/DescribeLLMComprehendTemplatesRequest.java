@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p>
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * 
+    * <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
     */
     @SerializedName("Sort")
     @Expose
     private SortBy Sort;
 
     /**
-    * 
+    * <p>Paging offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Definitions 
+     * Get <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p> 
+     * @return Definitions <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p>
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set 
-     * @param Definitions 
+     * Set <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p>
+     * @param Definitions <p>Filter condition for the unique identifier of the large model parsing template. The array can contain up to 100 unique identifiers.</p>
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get  
-     * @return Sort 
+     * Get <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p> 
+     * @return Sort <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
      */
     public SortBy getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 
-     * @param Sort 
+     * Set <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
+     * @param Sort <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
      */
     public void setSort(SortBy Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get <p>Paging offset. Default value: 0.</p> 
+     * @return Offset <p>Paging offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set <p>Paging offset. Default value: 0.</p>
+     * @param Offset <p>Paging offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get <p>Number of returned entries. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

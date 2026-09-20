@@ -24,276 +24,346 @@ import java.util.HashMap;
 public class ReviewAudioVideoSegmentItem extends AbstractModel {
 
     /**
-    * 
+    * Time offset of the start of the suspected segment. Unit: second.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of the suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Score of offensive information involved in suspected clips.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Label of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Moan: panting.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 
+    * Rule-violating subtag.
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * 
+    * Suspected segment violation type. Value range:
+<li>Image: People or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
     */
     @SerializedName("Form")
     @Expose
     private String Form;
 
     /**
-    * 
+    * Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * 
+    * Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 
+    * Valid when Form is OCR or ASR. It indicates the list of violation keywords hit by suspicious fragments.
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-    * 
+    * Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Time offset of the start of the suspected segment. Unit: second. 
+     * @return StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Time offset of the start of the suspected segment. Unit: second.
+     * @param StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of the suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of the suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of the suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Score of offensive information involved in suspected clips. 
+     * @return Confidence Score of offensive information involved in suspected clips.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Score of offensive information involved in suspected clips.
+     * @param Confidence Score of offensive information involved in suspected clips.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li> 
+     * @return Suggestion Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+     * @param Suggestion Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return Label 
+     * Get Label of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Moan: panting.</li> 
+     * @return Label Label of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Moan: panting.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Label of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Moan: panting.</li>
+     * @param Label Label of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Moan: panting.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get  
-     * @return SubLabel 
+     * Get Rule-violating subtag. 
+     * @return SubLabel Rule-violating subtag.
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set 
-     * @param SubLabel 
+     * Set Rule-violating subtag.
+     * @param SubLabel Rule-violating subtag.
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get  
-     * @return Form 
+     * Get Suspected segment violation type. Value range:
+<li>Image: People or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li> 
+     * @return Form Suspected segment violation type. Value range:
+<li>Image: People or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
      */
     public String getForm() {
         return this.Form;
     }
 
     /**
-     * Set 
-     * @param Form 
+     * Set Suspected segment violation type. Value range:
+<li>Image: People or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+     * @param Form Suspected segment violation type. Value range:
+<li>Image: People or icons in the image;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
      */
     public void setForm(String Form) {
         this.Form = Form;
     }
 
     /**
-     * Get  
-     * @return AreaCoordSet 
+     * Get Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner. 
+     * @return AreaCoordSet Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 
-     * @param AreaCoordSet 
+     * Set Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+     * @param AreaCoordSet Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content. 
+     * @return Text Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+     * @param Text Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get  
-     * @return KeywordSet 
+     * Get Valid when Form is OCR or ASR. It indicates the list of violation keywords hit by suspicious fragments. 
+     * @return KeywordSet Valid when Form is OCR or ASR. It indicates the list of violation keywords hit by suspicious fragments.
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set 
-     * @param KeywordSet 
+     * Set Valid when Form is OCR or ASR. It indicates the list of violation keywords hit by suspicious fragments.
+     * @param KeywordSet Valid when Form is OCR or ASR. It indicates the list of violation keywords hit by suspicious fragments.
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point). 
+     * @return Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return PicUrlExpireTime 
+     * Get Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set 
-     * @param PicUrlExpireTime 
+     * Set Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

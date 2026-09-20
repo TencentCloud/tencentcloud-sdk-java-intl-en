@@ -24,38 +24,48 @@ import java.util.HashMap;
 public class TraceWatermarkInput extends AbstractModel {
 
     /**
-    * 
+    * Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Deprecated. Do not use.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li> 
+     * @return Switch Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
+     * @param Switch Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Deprecated. Do not use. 
+     * @return Definition Deprecated. Do not use.
      * @deprecated
      */
     @Deprecated
@@ -64,8 +74,8 @@ public class TraceWatermarkInput extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Deprecated. Do not use.
+     * @param Definition Deprecated. Do not use.
      * @deprecated
      */
     @Deprecated

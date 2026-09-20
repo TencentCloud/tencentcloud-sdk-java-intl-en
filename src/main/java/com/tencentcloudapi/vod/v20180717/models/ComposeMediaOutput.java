@@ -24,207 +24,242 @@ import java.util.HashMap;
 public class ComposeMediaOutput extends AbstractModel {
 
     /**
-    * 
+    * Filename, which contains up to 64 characters.
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 
+    * Description. Up to 128 characters.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * 
+    * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 
+    * Muxing format. Available values: mp4 and mp3. Among them, mp3 is for audio-only files.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 
+    * Output video information.
     */
     @SerializedName("VideoStream")
     @Expose
     private OutputVideoStream VideoStream;
 
     /**
-    * 
+    * Output audio content.
     */
     @SerializedName("AudioStream")
     @Expose
     private OutputAudioStream AudioStream;
 
     /**
-    * 
+    * Indicates whether to remove video data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0.
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 
+    * Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0.
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-     * Get  
-     * @return FileName 
+     * Get Filename, which contains up to 64 characters. 
+     * @return FileName Filename, which contains up to 64 characters.
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 
-     * @param FileName 
+     * Set Filename, which contains up to 64 characters.
+     * @param FileName Filename, which contains up to 64 characters.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get Description. Up to 128 characters. 
+     * @return Description Description. Up to 128 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set Description. Up to 128 characters.
+     * @param Description Description. Up to 128 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return ClassId 
+     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li> 
+     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 
-     * @param ClassId 
+     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
+     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+<li>Default value: 0, indicate other categories.</li>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get  
-     * @return ExpireTime 
+     * Get Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 
-     * @param ExpireTime 
+     * Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get  
-     * @return Container 
+     * Get Muxing format. Available values: mp4 and mp3. Among them, mp3 is for audio-only files. 
+     * @return Container Muxing format. Available values: mp4 and mp3. Among them, mp3 is for audio-only files.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 
-     * @param Container 
+     * Set Muxing format. Available values: mp4 and mp3. Among them, mp3 is for audio-only files.
+     * @param Container Muxing format. Available values: mp4 and mp3. Among them, mp3 is for audio-only files.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get  
-     * @return VideoStream 
+     * Get Output video information. 
+     * @return VideoStream Output video information.
      */
     public OutputVideoStream getVideoStream() {
         return this.VideoStream;
     }
 
     /**
-     * Set 
-     * @param VideoStream 
+     * Set Output video information.
+     * @param VideoStream Output video information.
      */
     public void setVideoStream(OutputVideoStream VideoStream) {
         this.VideoStream = VideoStream;
     }
 
     /**
-     * Get  
-     * @return AudioStream 
+     * Get Output audio content. 
+     * @return AudioStream Output audio content.
      */
     public OutputAudioStream getAudioStream() {
         return this.AudioStream;
     }
 
     /**
-     * Set 
-     * @param AudioStream 
+     * Set Output audio content.
+     * @param AudioStream Output audio content.
      */
     public void setAudioStream(OutputAudioStream AudioStream) {
         this.AudioStream = AudioStream;
     }
 
     /**
-     * Get  
-     * @return RemoveVideo 
+     * Get Indicates whether to remove video data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0. 
+     * @return RemoveVideo Indicates whether to remove video data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0.
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 
-     * @param RemoveVideo 
+     * Set Indicates whether to remove video data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0.
+     * @param RemoveVideo Indicates whether to remove video data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0.
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get  
-     * @return RemoveAudio 
+     * Get Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0. 
+     * @return RemoveAudio Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0.
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 
-     * @param RemoveAudio 
+     * Set Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0.
+     * @param RemoveAudio Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+Default value: 0.
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;

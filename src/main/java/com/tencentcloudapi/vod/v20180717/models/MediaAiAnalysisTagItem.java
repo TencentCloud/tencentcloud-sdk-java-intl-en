@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MediaAiAnalysisTagItem extends AbstractModel {
 
     /**
-    * 
+    * Tag name.
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * 
+    * Confidence of the tag, with a value range from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get  
-     * @return Tag 
+     * Get Tag name. 
+     * @return Tag Tag name.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 
-     * @param Tag 
+     * Set Tag name.
+     * @param Tag Tag name.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence of the tag, with a value range from 0 to 100. 
+     * @return Confidence Confidence of the tag, with a value range from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence of the tag, with a value range from 0 to 100.
+     * @param Confidence Confidence of the tag, with a value range from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

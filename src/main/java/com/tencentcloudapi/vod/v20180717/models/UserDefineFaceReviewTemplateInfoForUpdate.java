@@ -24,92 +24,107 @@ import java.util.HashMap;
 public class UserDefineFaceReviewTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Turn off the customized figure audio/video moderation task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
     */
     @SerializedName("LabelSet")
     @Expose
     private String [] LabelSet;
 
     /**
-    * 
+    * Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 
+    * Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Turn off the customized figure audio/video moderation task.</li> 
+     * @return Switch Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Turn off the customized figure audio/video moderation task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Turn off the customized figure audio/video moderation task.</li>
+     * @param Switch Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Turn off the customized figure audio/video moderation task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return LabelSet 
+     * Get User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
+The number of tags can be up to 10, and each tag can contain up to 16 characters. 
+     * @return LabelSet User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set 
-     * @param LabelSet 
+     * Set User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+     * @param LabelSet User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;
     }
 
     /**
-     * Get  
-     * @return BlockConfidence 
+     * Get Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 
-     * @param BlockConfidence 
+     * Set Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+     * @param BlockConfidence Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get  
-     * @return ReviewConfidence 
+     * Get Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 
-     * @param ReviewConfidence 
+     * Set Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

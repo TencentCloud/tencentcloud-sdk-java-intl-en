@@ -24,115 +24,125 @@ import java.util.HashMap;
 public class DescribeSuperPlayerConfigsRequest extends AbstractModel {
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Player configuration name filter conditions, with an array length limit of 100.
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * Number of returned entries. Default value: 10. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Names 
+     * Get Player configuration name filter conditions, with an array length limit of 100. 
+     * @return Names Player configuration name filter conditions, with an array length limit of 100.
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 
-     * @param Names 
+     * Set Player configuration name filter conditions, with an array length limit of 100.
+     * @param Names Player configuration name filter conditions, with an array length limit of 100.
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
+     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li> 
+     * @return Type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
+     * @param Type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

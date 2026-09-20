@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeAigcUsageDataRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
     */
     @SerializedName("AigcType")
     @Expose
     private String AigcType;
 
     /**
-    * 
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -66,85 +66,85 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     private String [] APIKeys;
 
     /**
-    * 
+    * <p>Query cursor</p>
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-    * 
+    * <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 
+    * <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
     */
     @SerializedName("ReqId")
     @Expose
     private String ReqId;
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p> 
+     * @return StartTime <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+     * @param StartTime <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p> 
+     * @return EndTime <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+     * @param EndTime <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return AigcType 
+     * Get <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul> 
+     * @return AigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
      */
     public String getAigcType() {
         return this.AigcType;
     }
 
     /**
-     * Set 
-     * @param AigcType 
+     * Set <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+     * @param AigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
      */
     public void setAigcType(String AigcType) {
         this.AigcType = AigcType;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -183,48 +183,48 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ScrollToken 
+     * Get <p>Query cursor</p> 
+     * @return ScrollToken <p>Query cursor</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 
-     * @param ScrollToken 
+     * Set <p>Query cursor</p>
+     * @param ScrollToken <p>Query cursor</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;
     }
 
     /**
-     * Get  
-     * @return PageSize 
+     * Get <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p> 
+     * @return PageSize <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 
-     * @param PageSize 
+     * Set <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
+     * @param PageSize <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get  
-     * @return ReqId 
+     * Get <p>RequestId for text generation. Valid when AigcType is TextDetail.</p> 
+     * @return ReqId <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
      */
     public String getReqId() {
         return this.ReqId;
     }
 
     /**
-     * Set 
-     * @param ReqId 
+     * Set <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
+     * @param ReqId <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
      */
     public void setReqId(String ReqId) {
         this.ReqId = ReqId;

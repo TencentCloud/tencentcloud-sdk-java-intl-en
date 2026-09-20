@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class TranscodeTemplate extends AbstractModel {
 
     /**
-    * 
+    * <p>Unique identifier of the transcoding template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private String Definition;
 
     /**
-    * 
+    * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 
+    * <p>Transcoding template name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Template description information.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 
+    * <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 
+    * <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfo VideoTemplate;
 
     /**
-    * 
+    * <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * 
+    * <p>Top Speed Codec transcoding parameters.</p>
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfig TEHDConfig;
 
     /**
-    * 
+    * <p>Audio/video enhancement configurations.</p>
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * 
+    * <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
     */
     @SerializedName("ContainerType")
     @Expose
     private String ContainerType;
 
     /**
-    * 
+    * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 
+    * <p>Segment type. Valid only when Container is hls.</p>
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-    * 
+    * <p>Extended parameter.</p>
     */
     @SerializedName("StdExtInfo")
     @Expose
     private String StdExtInfo;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Unique identifier of the transcoding template.</p> 
+     * @return Definition <p>Unique identifier of the transcoding template.</p>
      */
     public String getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Unique identifier of the transcoding template.</p>
+     * @param Definition <p>Unique identifier of the transcoding template.</p>
      */
     public void setDefinition(String Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Container 
+     * Get <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p> 
+     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 
-     * @param Container 
+     * Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+     * @param Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Transcoding template name.</p> 
+     * @return Name <p>Transcoding template name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Transcoding template name.</p>
+     * @param Name <p>Transcoding template name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Template description information.</p> 
+     * @return Comment <p>Template description information.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Template description information.</p>
+     * @param Comment <p>Template description information.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li> 
+     * @return Type <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+     * @param Type <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return RemoveVideo 
+     * Get <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li> 
+     * @return RemoveVideo <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 
-     * @param RemoveVideo 
+     * Set <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+     * @param RemoveVideo <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get  
-     * @return RemoveAudio 
+     * Get <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li> 
+     * @return RemoveAudio <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 
-     * @param RemoveAudio 
+     * Set <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+     * @param RemoveAudio <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get  
-     * @return VideoTemplate 
+     * Get <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p> 
+     * @return VideoTemplate <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
      */
     public VideoTemplateInfo getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set 
-     * @param VideoTemplate 
+     * Set <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
+     * @param VideoTemplate <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get  
-     * @return AudioTemplate 
+     * Get <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p> 
+     * @return AudioTemplate <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
      */
     public AudioTemplateInfo getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set 
-     * @param AudioTemplate 
+     * Set <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
+     * @param AudioTemplate <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get  
-     * @return TEHDConfig 
+     * Get <p>Top Speed Codec transcoding parameters.</p> 
+     * @return TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
      */
     public TEHDConfig getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set 
-     * @param TEHDConfig 
+     * Set <p>Top Speed Codec transcoding parameters.</p>
+     * @param TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get  
-     * @return EnhanceConfig 
+     * Get <p>Audio/video enhancement configurations.</p> 
+     * @return EnhanceConfig <p>Audio/video enhancement configurations.</p>
      */
     public EnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set 
-     * @param EnhanceConfig 
+     * Set <p>Audio/video enhancement configurations.</p>
+     * @param EnhanceConfig <p>Audio/video enhancement configurations.</p>
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get  
-     * @return ContainerType 
+     * Get <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li> 
+     * @return ContainerType <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
      */
     public String getContainerType() {
         return this.ContainerType;
     }
 
     /**
-     * Set 
-     * @param ContainerType 
+     * Set <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+     * @param ContainerType <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
      */
     public void setContainerType(String ContainerType) {
         this.ContainerType = ContainerType;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return SegmentType 
+     * Get <p>Segment type. Valid only when Container is hls.</p> 
+     * @return SegmentType <p>Segment type. Valid only when Container is hls.</p>
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set 
-     * @param SegmentType 
+     * Set <p>Segment type. Valid only when Container is hls.</p>
+     * @param SegmentType <p>Segment type. Valid only when Container is hls.</p>
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
     }
 
     /**
-     * Get  
-     * @return StdExtInfo 
+     * Get <p>Extended parameter.</p> 
+     * @return StdExtInfo <p>Extended parameter.</p>
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
     }
 
     /**
-     * Set 
-     * @param StdExtInfo 
+     * Set <p>Extended parameter.</p>
+     * @param StdExtInfo <p>Extended parameter.</p>
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

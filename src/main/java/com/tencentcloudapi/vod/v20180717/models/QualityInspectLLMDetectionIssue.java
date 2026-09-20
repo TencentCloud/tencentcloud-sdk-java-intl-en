@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class QualityInspectLLMDetectionIssue extends AbstractModel {
 
     /**
-    * 
+    * <p>Issue category tag.</p>
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * 
+    * <p>Issue description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * 
+    * <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * <p>Issue start time.</p><p>Unit: ms.</p>
     */
     @SerializedName("StartTimeMs")
     @Expose
     private Long StartTimeMs;
 
     /**
-    * 
+    * <p>Issue end time.</p><p>Unit: ms.</p>
     */
     @SerializedName("EndTimeMs")
     @Expose
     private Long EndTimeMs;
 
     /**
-    * 
+    * <p>Additional data (JSON format), such as severity and other supplementary information.</p>
     */
     @SerializedName("ExtraData")
     @Expose
     private String ExtraData;
 
     /**
-     * Get  
-     * @return Tag 
+     * Get <p>Issue category tag.</p> 
+     * @return Tag <p>Issue category tag.</p>
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 
-     * @param Tag 
+     * Set <p>Issue category tag.</p>
+     * @param Tag <p>Issue category tag.</p>
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get <p>Issue description.</p> 
+     * @return Description <p>Issue description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set <p>Issue description.</p>
+     * @param Description <p>Issue description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return Score 
+     * Get <p>Quality score of the issue</p><p>Value range: [0, 100]</p> 
+     * @return Score <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set 
-     * @param Score 
+     * Set <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
+     * @param Score <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p> 
+     * @return Confidence <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
+     * @param Confidence <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return StartTimeMs 
+     * Get <p>Issue start time.</p><p>Unit: ms.</p> 
+     * @return StartTimeMs <p>Issue start time.</p><p>Unit: ms.</p>
      */
     public Long getStartTimeMs() {
         return this.StartTimeMs;
     }
 
     /**
-     * Set 
-     * @param StartTimeMs 
+     * Set <p>Issue start time.</p><p>Unit: ms.</p>
+     * @param StartTimeMs <p>Issue start time.</p><p>Unit: ms.</p>
      */
     public void setStartTimeMs(Long StartTimeMs) {
         this.StartTimeMs = StartTimeMs;
     }
 
     /**
-     * Get  
-     * @return EndTimeMs 
+     * Get <p>Issue end time.</p><p>Unit: ms.</p> 
+     * @return EndTimeMs <p>Issue end time.</p><p>Unit: ms.</p>
      */
     public Long getEndTimeMs() {
         return this.EndTimeMs;
     }
 
     /**
-     * Set 
-     * @param EndTimeMs 
+     * Set <p>Issue end time.</p><p>Unit: ms.</p>
+     * @param EndTimeMs <p>Issue end time.</p><p>Unit: ms.</p>
      */
     public void setEndTimeMs(Long EndTimeMs) {
         this.EndTimeMs = EndTimeMs;
     }
 
     /**
-     * Get  
-     * @return ExtraData 
+     * Get <p>Additional data (JSON format), such as severity and other supplementary information.</p> 
+     * @return ExtraData <p>Additional data (JSON format), such as severity and other supplementary information.</p>
      */
     public String getExtraData() {
         return this.ExtraData;
     }
 
     /**
-     * Set 
-     * @param ExtraData 
+     * Set <p>Additional data (JSON format), such as severity and other supplementary information.</p>
+     * @param ExtraData <p>Additional data (JSON format), such as severity and other supplementary information.</p>
      */
     public void setExtraData(String ExtraData) {
         this.ExtraData = ExtraData;

@@ -33,7 +33,7 @@ public class CacheConfigFollowOrigin extends AbstractModel {
     private String Switch;
 
     /**
-    * 
+    * Heuristic cache configuration.
     */
     @SerializedName("HeuristicCache")
     @Expose
@@ -64,16 +64,16 @@ public class CacheConfigFollowOrigin extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return HeuristicCache 
+     * Get Heuristic cache configuration. 
+     * @return HeuristicCache Heuristic cache configuration.
      */
     public HeuristicCache getHeuristicCache() {
         return this.HeuristicCache;
     }
 
     /**
-     * Set 
-     * @param HeuristicCache 
+     * Set Heuristic cache configuration.
+     * @param HeuristicCache Heuristic cache configuration.
      */
     public void setHeuristicCache(HeuristicCache HeuristicCache) {
         this.HeuristicCache = HeuristicCache;

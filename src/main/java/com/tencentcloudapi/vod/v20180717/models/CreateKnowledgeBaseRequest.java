@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateKnowledgeBaseRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Knowledge base name. Length limit: 1-64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Knowledge base description. Length limit: up to 256 characters.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p> 
+     * @return SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @param SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Knowledge base name. Length limit: 1-64 characters.</p> 
+     * @return Name <p>Knowledge base name. Length limit: 1-64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Knowledge base name. Length limit: 1-64 characters.</p>
+     * @param Name <p>Knowledge base name. Length limit: 1-64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get <p>Knowledge base description. Length limit: up to 256 characters.</p> 
+     * @return Description <p>Knowledge base description. Length limit: up to 256 characters.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set <p>Knowledge base description. Length limit: up to 256 characters.</p>
+     * @param Description <p>Knowledge base description. Length limit: up to 256 characters.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

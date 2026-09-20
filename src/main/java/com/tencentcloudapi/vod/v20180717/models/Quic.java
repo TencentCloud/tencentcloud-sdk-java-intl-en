@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Quic extends AbstractModel {
 
     /**
-    * Quic configuration switch. Valid values:
+    * Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -33,10 +33,10 @@ public class Quic extends AbstractModel {
     private String Switch;
 
     /**
-     * Get Quic configuration switch. Valid values:
+     * Get Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Quic configuration switch. Valid values:
+     * @return Switch Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -45,10 +45,10 @@ public class Quic extends AbstractModel {
     }
 
     /**
-     * Set Quic configuration switch. Valid values:
+     * Set Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Quic configuration switch. Valid values:
+     * @param Switch Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

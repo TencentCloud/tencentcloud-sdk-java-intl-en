@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ImportMediaKnowledgeTaskInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Large Model Understanding Template</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
     */
     @SerializedName("KnowledgeBaseIds")
     @Expose
     private String [] KnowledgeBaseIds;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Large Model Understanding Template</p> 
+     * @return Definition <p>Large Model Understanding Template</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Large Model Understanding Template</p>
+     * @param Definition <p>Large Model Understanding Template</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return KnowledgeBaseIds 
+     * Get <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p> 
+     * @return KnowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
      */
     public String [] getKnowledgeBaseIds() {
         return this.KnowledgeBaseIds;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBaseIds 
+     * Set <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+     * @param KnowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
      */
     public void setKnowledgeBaseIds(String [] KnowledgeBaseIds) {
         this.KnowledgeBaseIds = KnowledgeBaseIds;

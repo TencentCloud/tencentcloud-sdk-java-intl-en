@@ -24,322 +24,322 @@ import java.util.HashMap;
 public class PlayerConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Player configuration name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * 
+    * <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
     */
     @SerializedName("DrmSwitch")
     @Expose
     private String DrmSwitch;
 
     /**
-    * 
+    * <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
     */
     @SerializedName("AdaptiveDynamicStreamingDefinition")
     @Expose
     private Long AdaptiveDynamicStreamingDefinition;
 
     /**
-    * 
+    * <p>Allowed output of DRM adaptive bitstream template content.</p>
     */
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfo DrmStreamingsInfo;
 
     /**
-    * 
+    * <p>Allowed output transcoding template ID.</p>
     */
     @SerializedName("TranscodeDefinition")
     @Expose
     private Long TranscodeDefinition;
 
     /**
-    * 
+    * <p>Allowed output sprite template ID.</p>
     */
     @SerializedName("ImageSpriteDefinition")
     @Expose
     private Long ImageSpriteDefinition;
 
     /**
-    * 
+    * <p>The player displays names for substreams of different resolutions.</p>
     */
     @SerializedName("ResolutionNameSet")
     @Expose
     private ResolutionNameInfo [] ResolutionNameSet;
 
     /**
-    * 
+    * <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 
+    * <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * 
+    * <p>Template description information.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-     * Get  
-     * @return Name 
+     * Get <p>Player configuration name.</p> 
+     * @return Name <p>Player configuration name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set <p>Player configuration name.</p>
+     * @param Name <p>Player configuration name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li> 
+     * @return Type <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
+     * @param Type <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return AudioVideoType 
+     * Get <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li> 
+     * @return AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set 
-     * @param AudioVideoType 
+     * Set <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+     * @param AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get  
-     * @return DrmSwitch 
+     * Get <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li> 
+     * @return DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public String getDrmSwitch() {
         return this.DrmSwitch;
     }
 
     /**
-     * Set 
-     * @param DrmSwitch 
+     * Set <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+     * @param DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public void setDrmSwitch(String DrmSwitch) {
         this.DrmSwitch = DrmSwitch;
     }
 
     /**
-     * Get  
-     * @return AdaptiveDynamicStreamingDefinition 
+     * Get <p>Allowed output of unencrypted adaptive bitstream template ID.</p> 
+     * @return AdaptiveDynamicStreamingDefinition <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
      */
     public Long getAdaptiveDynamicStreamingDefinition() {
         return this.AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Set 
-     * @param AdaptiveDynamicStreamingDefinition 
+     * Set <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
+     * @param AdaptiveDynamicStreamingDefinition <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
      */
     public void setAdaptiveDynamicStreamingDefinition(Long AdaptiveDynamicStreamingDefinition) {
         this.AdaptiveDynamicStreamingDefinition = AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Get  
-     * @return DrmStreamingsInfo 
+     * Get <p>Allowed output of DRM adaptive bitstream template content.</p> 
+     * @return DrmStreamingsInfo <p>Allowed output of DRM adaptive bitstream template content.</p>
      */
     public DrmStreamingsInfo getDrmStreamingsInfo() {
         return this.DrmStreamingsInfo;
     }
 
     /**
-     * Set 
-     * @param DrmStreamingsInfo 
+     * Set <p>Allowed output of DRM adaptive bitstream template content.</p>
+     * @param DrmStreamingsInfo <p>Allowed output of DRM adaptive bitstream template content.</p>
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfo DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
     }
 
     /**
-     * Get  
-     * @return TranscodeDefinition 
+     * Get <p>Allowed output transcoding template ID.</p> 
+     * @return TranscodeDefinition <p>Allowed output transcoding template ID.</p>
      */
     public Long getTranscodeDefinition() {
         return this.TranscodeDefinition;
     }
 
     /**
-     * Set 
-     * @param TranscodeDefinition 
+     * Set <p>Allowed output transcoding template ID.</p>
+     * @param TranscodeDefinition <p>Allowed output transcoding template ID.</p>
      */
     public void setTranscodeDefinition(Long TranscodeDefinition) {
         this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
-     * Get  
-     * @return ImageSpriteDefinition 
+     * Get <p>Allowed output sprite template ID.</p> 
+     * @return ImageSpriteDefinition <p>Allowed output sprite template ID.</p>
      */
     public Long getImageSpriteDefinition() {
         return this.ImageSpriteDefinition;
     }
 
     /**
-     * Set 
-     * @param ImageSpriteDefinition 
+     * Set <p>Allowed output sprite template ID.</p>
+     * @param ImageSpriteDefinition <p>Allowed output sprite template ID.</p>
      */
     public void setImageSpriteDefinition(Long ImageSpriteDefinition) {
         this.ImageSpriteDefinition = ImageSpriteDefinition;
     }
 
     /**
-     * Get  
-     * @return ResolutionNameSet 
+     * Get <p>The player displays names for substreams of different resolutions.</p> 
+     * @return ResolutionNameSet <p>The player displays names for substreams of different resolutions.</p>
      */
     public ResolutionNameInfo [] getResolutionNameSet() {
         return this.ResolutionNameSet;
     }
 
     /**
-     * Set 
-     * @param ResolutionNameSet 
+     * Set <p>The player displays names for substreams of different resolutions.</p>
+     * @param ResolutionNameSet <p>The player displays names for substreams of different resolutions.</p>
      */
     public void setResolutionNameSet(ResolutionNameInfo [] ResolutionNameSet) {
         this.ResolutionNameSet = ResolutionNameSet;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return CreateTime <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param CreateTime <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param UpdateTime <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return Domain 
+     * Get <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p> 
+     * @return Domain <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
+     * @param Domain <p>Domain name used during playback. If the value is Default, it indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return Scheme 
+     * Get <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li> 
+     * @return Scheme <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 
-     * @param Scheme 
+     * Set <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
+     * @param Scheme <p>Scheme used during playback. Value range:</p><li>Default: use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get <p>Template description information.</p> 
+     * @return Comment <p>Template description information.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set <p>Template description information.</p>
+     * @param Comment <p>Template description information.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

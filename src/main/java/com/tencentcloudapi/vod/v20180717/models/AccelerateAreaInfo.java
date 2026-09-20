@@ -24,69 +24,89 @@ import java.util.HashMap;
 public class AccelerateAreaInfo extends AbstractModel {
 
     /**
-    * 
+    * Acceleration region. Available values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 
+    * Tencent disable reason. Available values:
+<li>ForLegalReasons: Acceleration disabled due to legal reasons;</li>
+<li>ForOverdueBills: Acceleration is disabled due to service suspension for overdue payment.</li>
     */
     @SerializedName("TencentDisableReason")
     @Expose
     private String TencentDisableReason;
 
     /**
-    * 
+    * CNAME domain name corresponding to the acceleration domain.
     */
     @SerializedName("TencentEdgeDomain")
     @Expose
     private String TencentEdgeDomain;
 
     /**
-     * Get  
-     * @return Area 
+     * Get Acceleration region. Available values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li> 
+     * @return Area Acceleration region. Available values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 
-     * @param Area 
+     * Set Acceleration region. Available values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+     * @param Area Acceleration region. Available values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get  
-     * @return TencentDisableReason 
+     * Get Tencent disable reason. Available values:
+<li>ForLegalReasons: Acceleration disabled due to legal reasons;</li>
+<li>ForOverdueBills: Acceleration is disabled due to service suspension for overdue payment.</li> 
+     * @return TencentDisableReason Tencent disable reason. Available values:
+<li>ForLegalReasons: Acceleration disabled due to legal reasons;</li>
+<li>ForOverdueBills: Acceleration is disabled due to service suspension for overdue payment.</li>
      */
     public String getTencentDisableReason() {
         return this.TencentDisableReason;
     }
 
     /**
-     * Set 
-     * @param TencentDisableReason 
+     * Set Tencent disable reason. Available values:
+<li>ForLegalReasons: Acceleration disabled due to legal reasons;</li>
+<li>ForOverdueBills: Acceleration is disabled due to service suspension for overdue payment.</li>
+     * @param TencentDisableReason Tencent disable reason. Available values:
+<li>ForLegalReasons: Acceleration disabled due to legal reasons;</li>
+<li>ForOverdueBills: Acceleration is disabled due to service suspension for overdue payment.</li>
      */
     public void setTencentDisableReason(String TencentDisableReason) {
         this.TencentDisableReason = TencentDisableReason;
     }
 
     /**
-     * Get  
-     * @return TencentEdgeDomain 
+     * Get CNAME domain name corresponding to the acceleration domain. 
+     * @return TencentEdgeDomain CNAME domain name corresponding to the acceleration domain.
      */
     public String getTencentEdgeDomain() {
         return this.TencentEdgeDomain;
     }
 
     /**
-     * Set 
-     * @param TencentEdgeDomain 
+     * Set CNAME domain name corresponding to the acceleration domain.
+     * @param TencentEdgeDomain CNAME domain name corresponding to the acceleration domain.
      */
     public void setTencentEdgeDomain(String TencentEdgeDomain) {
         this.TencentEdgeDomain = TencentEdgeDomain;

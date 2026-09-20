@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCLSPushTargetsResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of domain name pushes.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Domain name push to CLS target list.
     */
     @SerializedName("DomainCLSTargets")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCLSPushTargetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of domain name pushes. 
+     * @return TotalCount Total number of domain name pushes.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of domain name pushes.
+     * @param TotalCount Total number of domain name pushes.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return DomainCLSTargets 
+     * Get Domain name push to CLS target list. 
+     * @return DomainCLSTargets Domain name push to CLS target list.
      */
     public DomainCLSTargetInfo [] getDomainCLSTargets() {
         return this.DomainCLSTargets;
     }
 
     /**
-     * Set 
-     * @param DomainCLSTargets 
+     * Set Domain name push to CLS target list.
+     * @param DomainCLSTargets Domain name push to CLS target list.
      */
     public void setDomainCLSTargets(DomainCLSTargetInfo [] DomainCLSTargets) {
         this.DomainCLSTargets = DomainCLSTargets;

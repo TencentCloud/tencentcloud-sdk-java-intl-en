@@ -31,7 +31,7 @@ public class GetNFCResultRequest extends AbstractModel {
     private String NFCToken;
 
     /**
-    * Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+    * Identity card number / passport number / Hong Kong and Macao travel permit
     */
     @SerializedName("IdNum")
     @Expose
@@ -145,16 +145,16 @@ public class GetNFCResultRequest extends AbstractModel {
     }
 
     /**
-     * Get Identity card number / passport number / Hong Kong, China and Macao, China travel permit 
-     * @return IdNum Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+     * Get Identity card number / passport number / Hong Kong and Macao travel permit 
+     * @return IdNum Identity card number / passport number / Hong Kong and Macao travel permit
      */
     public String getIdNum() {
         return this.IdNum;
     }
 
     /**
-     * Set Identity card number / passport number / Hong Kong, China and Macao, China travel permit
-     * @param IdNum Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+     * Set Identity card number / passport number / Hong Kong and Macao travel permit
+     * @param IdNum Identity card number / passport number / Hong Kong and Macao travel permit
      */
     public void setIdNum(String IdNum) {
         this.IdNum = IdNum;

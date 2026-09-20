@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAIRecognitionTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Unique ID of the audio/video content recognition template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAIRecognitionTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique ID of the audio/video content recognition template. 
+     * @return Definition Unique ID of the audio/video content recognition template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique ID of the audio/video content recognition template.
+     * @param Definition Unique ID of the audio/video content recognition template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

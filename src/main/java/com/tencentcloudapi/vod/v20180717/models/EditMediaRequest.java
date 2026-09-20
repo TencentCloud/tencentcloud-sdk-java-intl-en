@@ -24,253 +24,263 @@ import java.util.HashMap;
 public class EditMediaRequest extends AbstractModel {
 
     /**
-    * 
+    * Type of input video. Valid values: `File` and `Stream`.
     */
     @SerializedName("InputType")
     @Expose
     private String InputType;
 
     /**
-    * 
+    * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Input video file information. Required when InputType is File.
     */
     @SerializedName("FileInfos")
     @Expose
     private EditMediaFileInfo [] FileInfos;
 
     /**
-    * 
+    * Input stream information. Required when `InputType` is `Stream`.
     */
     @SerializedName("StreamInfos")
     @Expose
     private EditMediaStreamInfo [] StreamInfos;
 
     /**
-    * 
+    * Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video.
     */
     @SerializedName("ProcedureName")
     @Expose
     private String ProcedureName;
 
     /**
-    * 
+    * File configuration generated after editing.
     */
     @SerializedName("OutputConfig")
     @Expose
     private EditMediaOutputConfig OutputConfig;
 
     /**
-    * 
+    * Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 
+    * Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 
+    * Reserved field, used for special purposes.
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get  
-     * @return InputType 
+     * Get Type of input video. Valid values: `File` and `Stream`. 
+     * @return InputType Type of input video. Valid values: `File` and `Stream`.
      */
     public String getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set 
-     * @param InputType 
+     * Set Type of input video. Valid values: `File` and `Stream`.
+     * @param InputType Type of input video. Valid values: `File` and `Stream`.
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return FileInfos 
+     * Get Input video file information. Required when InputType is File. 
+     * @return FileInfos Input video file information. Required when InputType is File.
      */
     public EditMediaFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 
-     * @param FileInfos 
+     * Set Input video file information. Required when InputType is File.
+     * @param FileInfos Input video file information. Required when InputType is File.
      */
     public void setFileInfos(EditMediaFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get  
-     * @return StreamInfos 
+     * Get Input stream information. Required when `InputType` is `Stream`. 
+     * @return StreamInfos Input stream information. Required when `InputType` is `Stream`.
      */
     public EditMediaStreamInfo [] getStreamInfos() {
         return this.StreamInfos;
     }
 
     /**
-     * Set 
-     * @param StreamInfos 
+     * Set Input stream information. Required when `InputType` is `Stream`.
+     * @param StreamInfos Input stream information. Required when `InputType` is `Stream`.
      */
     public void setStreamInfos(EditMediaStreamInfo [] StreamInfos) {
         this.StreamInfos = StreamInfos;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li> 
+     * @return Definition Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li>
+     * @param Definition Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+<li>10: During splicing, use the input with the highest resolution as the base;</li>
+<li>20: During splicing, use the input with the highest bitrate as the base.</li>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ProcedureName 
+     * Get [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video. 
+     * @return ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video.
      */
     public String getProcedureName() {
         return this.ProcedureName;
     }
 
     /**
-     * Set 
-     * @param ProcedureName 
+     * Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video.
+     * @param ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you want to execute a task flow on the generated new video.
      */
     public void setProcedureName(String ProcedureName) {
         this.ProcedureName = ProcedureName;
     }
 
     /**
-     * Get  
-     * @return OutputConfig 
+     * Get File configuration generated after editing. 
+     * @return OutputConfig File configuration generated after editing.
      */
     public EditMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 
-     * @param OutputConfig 
+     * Set File configuration generated after editing.
+     * @param OutputConfig File configuration generated after editing.
      */
     public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters. 
+     * @return SessionContext Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+     * @param SessionContext Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return TasksPriority 
+     * Get Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 
-     * @param TasksPriority 
+     * Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
+     * @return SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get Reserved field, used for special purposes. 
+     * @return ExtInfo Reserved field, used for special purposes.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set Reserved field, used for special purposes.
+     * @param ExtInfo Reserved field, used for special purposes.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

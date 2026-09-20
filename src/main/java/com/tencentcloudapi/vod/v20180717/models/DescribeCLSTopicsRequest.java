@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeCLSTopicsRequest extends AbstractModel {
 
     /**
-    * 
+    * Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
     */
     @SerializedName("CLSRegion")
     @Expose
     private String CLSRegion;
 
     /**
-    * 
+    * Logset ID of the log topic.
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 
+    * List of log topic IDs. If left empty, it means query all log topics.
     */
     @SerializedName("TopicIds")
     @Expose
     private String [] TopicIds;
 
     /**
-    * 
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * Number of returned entries. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get  
-     * @return CLSRegion 
+     * Get Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li> 
+     * @return CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      */
     public String getCLSRegion() {
         return this.CLSRegion;
     }
 
     /**
-     * Set 
-     * @param CLSRegion 
+     * Set Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+     * @param CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
      */
     public void setCLSRegion(String CLSRegion) {
         this.CLSRegion = CLSRegion;
     }
 
     /**
-     * Get  
-     * @return LogsetId 
+     * Get Logset ID of the log topic. 
+     * @return LogsetId Logset ID of the log topic.
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 
-     * @param LogsetId 
+     * Set Logset ID of the log topic.
+     * @param LogsetId Logset ID of the log topic.
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get  
-     * @return TopicIds 
+     * Get List of log topic IDs. If left empty, it means query all log topics. 
+     * @return TopicIds List of log topic IDs. If left empty, it means query all log topics.
      */
     public String [] getTopicIds() {
         return this.TopicIds;
     }
 
     /**
-     * Set 
-     * @param TopicIds 
+     * Set List of log topic IDs. If left empty, it means query all log topics.
+     * @param TopicIds List of log topic IDs. If left empty, it means query all log topics.
      */
     public void setTopicIds(String [] TopicIds) {
         this.TopicIds = TopicIds;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Number of returned entries. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of returned entries. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Number of returned entries. Default value: 20. Maximum value: 100.
+     * @param Limit Number of returned entries. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MediaKeyFrameDescItem extends AbstractModel {
 
     /**
-    * 
+    * Video offset time of the timestamp, in seconds.
     */
     @SerializedName("TimeOffset")
     @Expose
     private Float TimeOffset;
 
     /**
-    * 
+    * Timestamp content string, limited to 1–128 characters.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get  
-     * @return TimeOffset 
+     * Get Video offset time of the timestamp, in seconds. 
+     * @return TimeOffset Video offset time of the timestamp, in seconds.
      */
     public Float getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set 
-     * @param TimeOffset 
+     * Set Video offset time of the timestamp, in seconds.
+     * @param TimeOffset Video offset time of the timestamp, in seconds.
      */
     public void setTimeOffset(Float TimeOffset) {
         this.TimeOffset = TimeOffset;
     }
 
     /**
-     * Get  
-     * @return Content 
+     * Get Timestamp content string, limited to 1–128 characters. 
+     * @return Content Timestamp content string, limited to 1–128 characters.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 
-     * @param Content 
+     * Set Timestamp content string, limited to 1–128 characters.
+     * @param Content Timestamp content string, limited to 1–128 characters.
      */
     public void setContent(String Content) {
         this.Content = Content;

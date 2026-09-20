@@ -24,115 +24,160 @@ import java.util.HashMap;
 public class ImageWatermarkInputForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Base64-encoded string of the watermark image. Supports jpeg and png image formats.
     */
     @SerializedName("ImageContent")
     @Expose
     private String ImageContent;
 
     /**
-    * 
+    * Width of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels. Value range: [8, 4096].</li>
     */
     @SerializedName("Width")
     @Expose
     private String Width;
 
     /**
-    * 
+    * Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. Value range: 0 or [8, 4096].</li>
     */
     @SerializedName("Height")
     @Expose
     private String Height;
 
     /**
-    * 
+    * Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>repeat: The watermark loops until the video ends.</li>
     */
     @SerializedName("RepeatType")
     @Expose
     private String RepeatType;
 
     /**
-    * 
+    * Image transparency. Value range: [0, 100].
+<li>0: completely opaque.</li>
+<li>100: completely transparent.</li>
     */
     @SerializedName("Transparency")
     @Expose
     private Long Transparency;
 
     /**
-     * Get  
-     * @return ImageContent 
+     * Get Base64-encoded string of the watermark image. Supports jpeg and png image formats. 
+     * @return ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
      */
     public String getImageContent() {
         return this.ImageContent;
     }
 
     /**
-     * Set 
-     * @param ImageContent 
+     * Set Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+     * @param ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
      */
     public void setImageContent(String ImageContent) {
         this.ImageContent = ImageContent;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Width of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels. Value range: [8, 4096].</li> 
+     * @return Width Width of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels. Value range: [8, 4096].</li>
      */
     public String getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Width of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels. Value range: [8, 4096].</li>
+     * @param Width Width of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels. Value range: [8, 4096].</li>
      */
     public void setWidth(String Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. Value range: 0 or [8, 4096].</li> 
+     * @return Height Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. Value range: 0 or [8, 4096].</li>
      */
     public String getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. Value range: 0 or [8, 4096].</li>
+     * @param Height Height of a watermark, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. Value range: 0 or [8, 4096].</li>
      */
     public void setHeight(String Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return RepeatType 
+     * Get Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>repeat: The watermark loops until the video ends.</li> 
+     * @return RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>repeat: The watermark loops until the video ends.</li>
      */
     public String getRepeatType() {
         return this.RepeatType;
     }
 
     /**
-     * Set 
-     * @param RepeatType 
+     * Set Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>repeat: The watermark loops until the video ends.</li>
+     * @param RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
+<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>repeat: The watermark loops until the video ends.</li>
      */
     public void setRepeatType(String RepeatType) {
         this.RepeatType = RepeatType;
     }
 
     /**
-     * Get  
-     * @return Transparency 
+     * Get Image transparency. Value range: [0, 100].
+<li>0: completely opaque.</li>
+<li>100: completely transparent.</li> 
+     * @return Transparency Image transparency. Value range: [0, 100].
+<li>0: completely opaque.</li>
+<li>100: completely transparent.</li>
      */
     public Long getTransparency() {
         return this.Transparency;
     }
 
     /**
-     * Set 
-     * @param Transparency 
+     * Set Image transparency. Value range: [0, 100].
+<li>0: completely opaque.</li>
+<li>100: completely transparent.</li>
+     * @param Transparency Image transparency. Value range: [0, 100].
+<li>0: completely opaque.</li>
+<li>100: completely transparent.</li>
      */
     public void setTransparency(Long Transparency) {
         this.Transparency = Transparency;

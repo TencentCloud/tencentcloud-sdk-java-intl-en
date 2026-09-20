@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrTranslateSegmentItem extends AbstractModel {
 
     /**
-    * 
+    * Confidence of a recognized segment in speech translation. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Start time offset of a speech translation recognized segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of a voice translation recognized segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Recognized text.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 
+    * Translated text.
     */
     @SerializedName("Translation")
     @Expose
     private String Translation;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence of a recognized segment in speech translation. Value range: 0-100. 
+     * @return Confidence Confidence of a recognized segment in speech translation. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence of a recognized segment in speech translation. Value range: 0-100.
+     * @param Confidence Confidence of a recognized segment in speech translation. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Start time offset of a speech translation recognized segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a speech translation recognized segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Start time offset of a speech translation recognized segment, in seconds.
+     * @param StartTimeOffset Start time offset of a speech translation recognized segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of a voice translation recognized segment, in seconds. 
+     * @return EndTimeOffset End time offset of a voice translation recognized segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of a voice translation recognized segment, in seconds.
+     * @param EndTimeOffset End time offset of a voice translation recognized segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get Recognized text. 
+     * @return Text Recognized text.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set Recognized text.
+     * @param Text Recognized text.
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get  
-     * @return Translation 
+     * Get Translated text. 
+     * @return Translation Translated text.
      */
     public String getTranslation() {
         return this.Translation;
     }
 
     /**
-     * Set 
-     * @param Translation 
+     * Set Translated text.
+     * @param Translation Translated text.
      */
     public void setTranslation(String Translation) {
         this.Translation = Translation;

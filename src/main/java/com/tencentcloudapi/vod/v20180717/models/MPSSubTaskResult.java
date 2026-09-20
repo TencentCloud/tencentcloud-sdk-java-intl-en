@@ -24,138 +24,238 @@ import java.util.HashMap;
 public class MPSSubTaskResult extends AbstractModel {
 
     /**
-    * 
+    * Task type. The specific subtask type in the WorkflowTask structure of MPS. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 
+    * Task status. It can be PROCESSING, SUCCESS, or FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Error code. `0` indicates success. Other values indicate failure.
     */
     @SerializedName("ErrCode")
     @Expose
     private String ErrCode;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * 
+    * Output of MPS video processing task.
     */
     @SerializedName("Output")
     @Expose
     private MPSTaskOutput Output;
 
     /**
-     * Get  
-     * @return TaskType 
+     * Get Task type. The specific subtask type in the WorkflowTask structure of MPS. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+ 
+     * @return TaskType Task type. The specific subtask type in the WorkflowTask structure of MPS. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 
-     * @param TaskType 
+     * Set Task type. The specific subtask type in the WorkflowTask structure of MPS. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
+     * @param TaskType Task type. The specific subtask type in the WorkflowTask structure of MPS. Value:
+<li>MediaProcess.Transcode: audio and video transcoding task.</li>
+<li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+<li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+<li>AiAnalysis.TagTask: intelligent tag task.</li>
+<li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+<li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+<li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
+<li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+<li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+<li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
+<li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+<li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+<li>SmartSubtitle.TransTextTask: Translation result.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+<li>SmartErase: intelligent erasure task.</li>
+
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. It can be PROCESSING, SUCCESS, or FAIL. 
+     * @return Status Task status. It can be PROCESSING, SUCCESS, or FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. It can be PROCESSING, SUCCESS, or FAIL.
+     * @param Status Task status. It can be PROCESSING, SUCCESS, or FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code. `0` indicates success. Other values indicate failure. 
+     * @return ErrCode Error code. `0` indicates success. Other values indicate failure.
      */
     public String getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code. `0` indicates success. Other values indicate failure.
+     * @param ErrCode Error code. `0` indicates success. Other values indicate failure.
      */
     public void setErrCode(String ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format. 
+     * @return Input MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
+     * @param Input MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of MPS video processing task. 
+     * @return Output Output of MPS video processing task.
      */
     public MPSTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of MPS video processing task.
+     * @param Output Output of MPS video processing task.
      */
     public void setOutput(MPSTaskOutput Output) {
         this.Output = Output;

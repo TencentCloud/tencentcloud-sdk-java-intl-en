@@ -24,322 +24,327 @@ import java.util.HashMap;
 public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * Audio and video content recognition template unique identifier.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Video content recognition template name. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Description of the audio/video content recognition template, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Control parameters for video opening and closing recognition.
     */
     @SerializedName("HeadTailConfigure")
     @Expose
     private HeadTailConfigureInfoForUpdate HeadTailConfigure;
 
     /**
-    * 
+    * Video split recognition control parameters.
     */
     @SerializedName("SegmentConfigure")
     @Expose
     private SegmentConfigureInfoForUpdate SegmentConfigure;
 
     /**
-    * 
+    * Control parameters for face recognition.
     */
     @SerializedName("FaceConfigure")
     @Expose
     private FaceConfigureInfoForUpdate FaceConfigure;
 
     /**
-    * 
+    * Text Full-text Recognition Control Parameters.
     */
     @SerializedName("OcrFullTextConfigure")
     @Expose
     private OcrFullTextConfigureInfoForUpdate OcrFullTextConfigure;
 
     /**
-    * 
+    * Text keyword recognition control parameters.
     */
     @SerializedName("OcrWordsConfigure")
     @Expose
     private OcrWordsConfigureInfoForUpdate OcrWordsConfigure;
 
     /**
-    * 
+    * Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
     private AsrFullTextConfigureInfoForUpdate AsrFullTextConfigure;
 
     /**
-    * 
+    * Voice keyword recognition control parameters.
     */
     @SerializedName("AsrWordsConfigure")
     @Expose
     private AsrWordsConfigureInfoForUpdate AsrWordsConfigure;
 
     /**
-    * 
+    * Voice translation recognition control parameters.
     */
     @SerializedName("AsrTranslateConfigure")
     @Expose
     private AsrTranslateConfigureInfoForUpdate AsrTranslateConfigure;
 
     /**
-    * 
+    * Object recognition control parameter.
     */
     @SerializedName("ObjectConfigure")
     @Expose
     private ObjectConfigureInfoForUpdate ObjectConfigure;
 
     /**
-    * 
+    * Frame interception interval in seconds. Minimum value: 0.5 seconds.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Audio and video content recognition template unique identifier. 
+     * @return Definition Audio and video content recognition template unique identifier.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Audio and video content recognition template unique identifier.
+     * @param Definition Audio and video content recognition template unique identifier.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Video content recognition template name. Length limit: 64 characters. 
+     * @return Name Video content recognition template name. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Video content recognition template name. Length limit: 64 characters.
+     * @param Name Video content recognition template name. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Description of the audio/video content recognition template, with a length limit of 256 characters. 
+     * @return Comment Description of the audio/video content recognition template, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Description of the audio/video content recognition template, with a length limit of 256 characters.
+     * @param Comment Description of the audio/video content recognition template, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return HeadTailConfigure 
+     * Get Control parameters for video opening and closing recognition. 
+     * @return HeadTailConfigure Control parameters for video opening and closing recognition.
      */
     public HeadTailConfigureInfoForUpdate getHeadTailConfigure() {
         return this.HeadTailConfigure;
     }
 
     /**
-     * Set 
-     * @param HeadTailConfigure 
+     * Set Control parameters for video opening and closing recognition.
+     * @param HeadTailConfigure Control parameters for video opening and closing recognition.
      */
     public void setHeadTailConfigure(HeadTailConfigureInfoForUpdate HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
     }
 
     /**
-     * Get  
-     * @return SegmentConfigure 
+     * Get Video split recognition control parameters. 
+     * @return SegmentConfigure Video split recognition control parameters.
      */
     public SegmentConfigureInfoForUpdate getSegmentConfigure() {
         return this.SegmentConfigure;
     }
 
     /**
-     * Set 
-     * @param SegmentConfigure 
+     * Set Video split recognition control parameters.
+     * @param SegmentConfigure Video split recognition control parameters.
      */
     public void setSegmentConfigure(SegmentConfigureInfoForUpdate SegmentConfigure) {
         this.SegmentConfigure = SegmentConfigure;
     }
 
     /**
-     * Get  
-     * @return FaceConfigure 
+     * Get Control parameters for face recognition. 
+     * @return FaceConfigure Control parameters for face recognition.
      */
     public FaceConfigureInfoForUpdate getFaceConfigure() {
         return this.FaceConfigure;
     }
 
     /**
-     * Set 
-     * @param FaceConfigure 
+     * Set Control parameters for face recognition.
+     * @param FaceConfigure Control parameters for face recognition.
      */
     public void setFaceConfigure(FaceConfigureInfoForUpdate FaceConfigure) {
         this.FaceConfigure = FaceConfigure;
     }
 
     /**
-     * Get  
-     * @return OcrFullTextConfigure 
+     * Get Text Full-text Recognition Control Parameters. 
+     * @return OcrFullTextConfigure Text Full-text Recognition Control Parameters.
      */
     public OcrFullTextConfigureInfoForUpdate getOcrFullTextConfigure() {
         return this.OcrFullTextConfigure;
     }
 
     /**
-     * Set 
-     * @param OcrFullTextConfigure 
+     * Set Text Full-text Recognition Control Parameters.
+     * @param OcrFullTextConfigure Text Full-text Recognition Control Parameters.
      */
     public void setOcrFullTextConfigure(OcrFullTextConfigureInfoForUpdate OcrFullTextConfigure) {
         this.OcrFullTextConfigure = OcrFullTextConfigure;
     }
 
     /**
-     * Get  
-     * @return OcrWordsConfigure 
+     * Get Text keyword recognition control parameters. 
+     * @return OcrWordsConfigure Text keyword recognition control parameters.
      */
     public OcrWordsConfigureInfoForUpdate getOcrWordsConfigure() {
         return this.OcrWordsConfigure;
     }
 
     /**
-     * Set 
-     * @param OcrWordsConfigure 
+     * Set Text keyword recognition control parameters.
+     * @param OcrWordsConfigure Text keyword recognition control parameters.
      */
     public void setOcrWordsConfigure(OcrWordsConfigureInfoForUpdate OcrWordsConfigure) {
         this.OcrWordsConfigure = OcrWordsConfigure;
     }
 
     /**
-     * Get  
-     * @return AsrFullTextConfigure 
+     * Get Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font> 
+     * @return AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public AsrFullTextConfigureInfoForUpdate getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
     }
 
     /**
-     * Set 
-     * @param AsrFullTextConfigure 
+     * Set Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+     * @param AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfoForUpdate AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
     }
 
     /**
-     * Get  
-     * @return AsrWordsConfigure 
+     * Get Voice keyword recognition control parameters. 
+     * @return AsrWordsConfigure Voice keyword recognition control parameters.
      */
     public AsrWordsConfigureInfoForUpdate getAsrWordsConfigure() {
         return this.AsrWordsConfigure;
     }
 
     /**
-     * Set 
-     * @param AsrWordsConfigure 
+     * Set Voice keyword recognition control parameters.
+     * @param AsrWordsConfigure Voice keyword recognition control parameters.
      */
     public void setAsrWordsConfigure(AsrWordsConfigureInfoForUpdate AsrWordsConfigure) {
         this.AsrWordsConfigure = AsrWordsConfigure;
     }
 
     /**
-     * Get  
-     * @return AsrTranslateConfigure 
+     * Get Voice translation recognition control parameters. 
+     * @return AsrTranslateConfigure Voice translation recognition control parameters.
      */
     public AsrTranslateConfigureInfoForUpdate getAsrTranslateConfigure() {
         return this.AsrTranslateConfigure;
     }
 
     /**
-     * Set 
-     * @param AsrTranslateConfigure 
+     * Set Voice translation recognition control parameters.
+     * @param AsrTranslateConfigure Voice translation recognition control parameters.
      */
     public void setAsrTranslateConfigure(AsrTranslateConfigureInfoForUpdate AsrTranslateConfigure) {
         this.AsrTranslateConfigure = AsrTranslateConfigure;
     }
 
     /**
-     * Get  
-     * @return ObjectConfigure 
+     * Get Object recognition control parameter. 
+     * @return ObjectConfigure Object recognition control parameter.
      */
     public ObjectConfigureInfoForUpdate getObjectConfigure() {
         return this.ObjectConfigure;
     }
 
     /**
-     * Set 
-     * @param ObjectConfigure 
+     * Set Object recognition control parameter.
+     * @param ObjectConfigure Object recognition control parameter.
      */
     public void setObjectConfigure(ObjectConfigureInfoForUpdate ObjectConfigure) {
         this.ObjectConfigure = ObjectConfigure;
     }
 
     /**
-     * Get  
-     * @return ScreenshotInterval 
+     * Get Frame interception interval in seconds. Minimum value: 0.5 seconds. 
+     * @return ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set 
-     * @param ScreenshotInterval 
+     * Set Frame interception interval in seconds. Minimum value: 0.5 seconds.
+     * @param ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;

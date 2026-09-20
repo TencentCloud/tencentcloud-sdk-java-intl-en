@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ImageEncodeConfig extends AbstractModel {
 
     /**
-    * 
+    * Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 
+    * Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
     */
     @SerializedName("Quality")
     @Expose
     private Long Quality;
 
     /**
-     * Get  
-     * @return Format 
+     * Get Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported. 
+     * @return Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 
-     * @param Format 
+     * Set Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
+     * @param Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get  
-     * @return Quality 
+     * Get Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality. 
+     * @return Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
      */
     public Long getQuality() {
         return this.Quality;
     }
 
     /**
-     * Set 
-     * @param Quality 
+     * Set Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
+     * @param Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
      */
     public void setQuality(Long Quality) {
         this.Quality = Quality;

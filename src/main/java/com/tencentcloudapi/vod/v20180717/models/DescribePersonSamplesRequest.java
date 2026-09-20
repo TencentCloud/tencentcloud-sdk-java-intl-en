@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribePersonSamplesRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Material ID. Array length limit: 100.</p>
     */
     @SerializedName("PersonIds")
     @Expose
     private String [] PersonIds;
 
     /**
-    * 
+    * <p>Material name. Array length limit: 20.</p>
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 
+    * <p>Material tag. Array length limit: 20.</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 
+    * <p>Paging offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p> 
+     * @return Type <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
+     * @param Type <p>Pulled material type. Available values:</p><li>UserDefine: user-customized material library;</li><li>Default: system default material library.</li><p>Default value: UserDefine, pull user-customized material library materials.<br>Description: If pulling the system default material library, you can only pull via material name or material ID + material name, and only one facial features image is returned.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return PersonIds 
+     * Get <p>Material ID. Array length limit: 100.</p> 
+     * @return PersonIds <p>Material ID. Array length limit: 100.</p>
      */
     public String [] getPersonIds() {
         return this.PersonIds;
     }
 
     /**
-     * Set 
-     * @param PersonIds 
+     * Set <p>Material ID. Array length limit: 100.</p>
+     * @param PersonIds <p>Material ID. Array length limit: 100.</p>
      */
     public void setPersonIds(String [] PersonIds) {
         this.PersonIds = PersonIds;
     }
 
     /**
-     * Get  
-     * @return Names 
+     * Get <p>Material name. Array length limit: 20.</p> 
+     * @return Names <p>Material name. Array length limit: 20.</p>
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 
-     * @param Names 
+     * Set <p>Material name. Array length limit: 20.</p>
+     * @param Names <p>Material name. Array length limit: 20.</p>
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get <p>Material tag. Array length limit: 20.</p> 
+     * @return Tags <p>Material tag. Array length limit: 20.</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set <p>Material tag. Array length limit: 20.</p>
+     * @param Tags <p>Material tag. Array length limit: 20.</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get <p>Paging offset. Default value: 0.</p> 
+     * @return Offset <p>Paging offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set <p>Paging offset. Default value: 0.</p>
+     * @param Offset <p>Paging offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get <p>Number of returned entries. Default value: 100. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

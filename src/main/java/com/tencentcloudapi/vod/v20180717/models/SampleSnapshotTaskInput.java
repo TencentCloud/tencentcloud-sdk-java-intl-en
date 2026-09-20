@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SampleSnapshotTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Sampled screenshot template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Sampled screenshot template ID. 
+     * @return Definition Sampled screenshot template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Sampled screenshot template ID.
+     * @param Definition Sampled screenshot template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return WatermarkSet 
+     * Get Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported. 
+     * @return WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set 
-     * @param WatermarkSet 
+     * Set Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+     * @param WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;

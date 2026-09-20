@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAdaptiveDynamicStreamingTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Adaptive Transcoding Template Unique Identifier.</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAdaptiveDynamicStreamingTemplateResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Adaptive Transcoding Template Unique Identifier.</p> 
+     * @return Definition <p>Adaptive Transcoding Template Unique Identifier.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Adaptive Transcoding Template Unique Identifier.</p>
+     * @param Definition <p>Adaptive Transcoding Template Unique Identifier.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

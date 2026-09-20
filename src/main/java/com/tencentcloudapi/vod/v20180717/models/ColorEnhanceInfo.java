@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ColorEnhanceInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Color enhancement control switch</p><p>Enumeration values: </p><ul><li>ON: Enable color enhancement</li><li>OFF: Disable color enhancement</li></ul>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get <p>Color enhancement control switch</p><p>Enumeration values: </p><ul><li>ON: Enable color enhancement</li><li>OFF: Disable color enhancement</li></ul> 
+     * @return Switch <p>Color enhancement control switch</p><p>Enumeration values: </p><ul><li>ON: Enable color enhancement</li><li>OFF: Disable color enhancement</li></ul>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set <p>Color enhancement control switch</p><p>Enumeration values: </p><ul><li>ON: Enable color enhancement</li><li>OFF: Disable color enhancement</li></ul>
+     * @param Switch <p>Color enhancement control switch</p><p>Enumeration values: </p><ul><li>ON: Enable color enhancement</li><li>OFF: Disable color enhancement</li></ul>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak. 
+     * @return Type <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
+     * @param Type <p>Color enhancement type. It is valid only when the color enhancement control switch is ON. Available values:</p><li>weak: light color enhancement;</li><li>normal: normal color enhancement;</li><li>strong: strong color enhancement.</li>Default value: weak.
      */
     public void setType(String Type) {
         this.Type = Type;

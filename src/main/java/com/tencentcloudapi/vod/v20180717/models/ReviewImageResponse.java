@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class ReviewImageResponse extends AbstractModel {
 
     /**
-    * 
+    * Image moderation job result.
+<font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font>
     */
     @SerializedName("ReviewResultSet")
     @Expose
     private ContentReviewResult [] ReviewResultSet;
 
     /**
-    * 
+    * Image moderation job result.
     */
     @SerializedName("MediaReviewResult")
     @Expose
@@ -45,8 +46,10 @@ public class ReviewImageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return ReviewResultSet 
+     * Get Image moderation job result.
+<font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font> 
+     * @return ReviewResultSet Image moderation job result.
+<font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font>
      * @deprecated
      */
     @Deprecated
@@ -55,8 +58,10 @@ public class ReviewImageResponse extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param ReviewResultSet 
+     * Set Image moderation job result.
+<font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font>
+     * @param ReviewResultSet Image moderation job result.
+<font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font>
      * @deprecated
      */
     @Deprecated
@@ -65,16 +70,16 @@ public class ReviewImageResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return MediaReviewResult 
+     * Get Image moderation job result. 
+     * @return MediaReviewResult Image moderation job result.
      */
     public ReviewImageResult getMediaReviewResult() {
         return this.MediaReviewResult;
     }
 
     /**
-     * Set 
-     * @param MediaReviewResult 
+     * Set Image moderation job result.
+     * @param MediaReviewResult Image moderation job result.
      */
     public void setMediaReviewResult(ReviewImageResult MediaReviewResult) {
         this.MediaReviewResult = MediaReviewResult;

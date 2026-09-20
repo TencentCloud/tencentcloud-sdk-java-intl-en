@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateContentReviewTemplateResponse extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of an audio and video content review template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateContentReviewTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique identifier of an audio and video content review template. 
+     * @return Definition Unique identifier of an audio and video content review template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique identifier of an audio and video content review template.
+     * @param Definition Unique identifier of an audio and video content review template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

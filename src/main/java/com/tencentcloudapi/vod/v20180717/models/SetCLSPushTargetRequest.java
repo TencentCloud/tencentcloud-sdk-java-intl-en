@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SetCLSPushTargetRequest extends AbstractModel {
 
     /**
-    * 
+    * Domain name.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Push target to set for logs in the Chinese mainland.
     */
     @SerializedName("ChineseMainlandCLSTargetInfo")
     @Expose
     private AreaCLSTargetInfo ChineseMainlandCLSTargetInfo;
 
     /**
-    * 
+    * Push target for logs outside the Chinese mainland to be set.
     */
     @SerializedName("OutsideChineseMainlandCLSTargetInfo")
     @Expose
     private AreaCLSTargetInfo OutsideChineseMainlandCLSTargetInfo;
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name. 
+     * @return Domain Domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name.
+     * @param Domain Domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return ChineseMainlandCLSTargetInfo 
+     * Get Push target to set for logs in the Chinese mainland. 
+     * @return ChineseMainlandCLSTargetInfo Push target to set for logs in the Chinese mainland.
      */
     public AreaCLSTargetInfo getChineseMainlandCLSTargetInfo() {
         return this.ChineseMainlandCLSTargetInfo;
     }
 
     /**
-     * Set 
-     * @param ChineseMainlandCLSTargetInfo 
+     * Set Push target to set for logs in the Chinese mainland.
+     * @param ChineseMainlandCLSTargetInfo Push target to set for logs in the Chinese mainland.
      */
     public void setChineseMainlandCLSTargetInfo(AreaCLSTargetInfo ChineseMainlandCLSTargetInfo) {
         this.ChineseMainlandCLSTargetInfo = ChineseMainlandCLSTargetInfo;
     }
 
     /**
-     * Get  
-     * @return OutsideChineseMainlandCLSTargetInfo 
+     * Get Push target for logs outside the Chinese mainland to be set. 
+     * @return OutsideChineseMainlandCLSTargetInfo Push target for logs outside the Chinese mainland to be set.
      */
     public AreaCLSTargetInfo getOutsideChineseMainlandCLSTargetInfo() {
         return this.OutsideChineseMainlandCLSTargetInfo;
     }
 
     /**
-     * Set 
-     * @param OutsideChineseMainlandCLSTargetInfo 
+     * Set Push target for logs outside the Chinese mainland to be set.
+     * @param OutsideChineseMainlandCLSTargetInfo Push target for logs outside the Chinese mainland to be set.
      */
     public void setOutsideChineseMainlandCLSTargetInfo(AreaCLSTargetInfo OutsideChineseMainlandCLSTargetInfo) {
         this.OutsideChineseMainlandCLSTargetInfo = OutsideChineseMainlandCLSTargetInfo;

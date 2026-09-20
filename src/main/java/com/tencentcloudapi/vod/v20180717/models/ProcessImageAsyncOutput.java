@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ProcessImageAsyncOutput extends AbstractModel {
 
     /**
-    * 
+    * Output file information for an image asynchronous processing task.
     */
     @SerializedName("FileInfo")
     @Expose
     private ProcessImageAsyncOutputFileInfo FileInfo;
 
     /**
-    * 
+    * Image understanding result.
     */
     @SerializedName("OutputText")
     @Expose
     private String OutputText;
 
     /**
-     * Get  
-     * @return FileInfo 
+     * Get Output file information for an image asynchronous processing task. 
+     * @return FileInfo Output file information for an image asynchronous processing task.
      */
     public ProcessImageAsyncOutputFileInfo getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set 
-     * @param FileInfo 
+     * Set Output file information for an image asynchronous processing task.
+     * @param FileInfo Output file information for an image asynchronous processing task.
      */
     public void setFileInfo(ProcessImageAsyncOutputFileInfo FileInfo) {
         this.FileInfo = FileInfo;
     }
 
     /**
-     * Get  
-     * @return OutputText 
+     * Get Image understanding result. 
+     * @return OutputText Image understanding result.
      */
     public String getOutputText() {
         return this.OutputText;
     }
 
     /**
-     * Set 
-     * @param OutputText 
+     * Set Image understanding result.
+     * @param OutputText Image understanding result.
      */
     public void setOutputText(String OutputText) {
         this.OutputText = OutputText;

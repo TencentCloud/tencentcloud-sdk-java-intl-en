@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class ModifyAIAnalysisTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * Audio and video content analysis template unique identifier.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Audio and video content analysis template name, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Audio and video content analysis template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * Intelligent classification task control parameters.
     */
     @SerializedName("ClassificationConfigure")
     @Expose
     private ClassificationConfigureInfoForUpdate ClassificationConfigure;
 
     /**
-    * 
+    * Intelligent tag task control parameter.
     */
     @SerializedName("TagConfigure")
     @Expose
     private TagConfigureInfoForUpdate TagConfigure;
 
     /**
-    * 
+    * Intelligent cover task control parameters.
     */
     @SerializedName("CoverConfigure")
     @Expose
     private CoverConfigureInfoForUpdate CoverConfigure;
 
     /**
-    * 
+    * Control parameter for the intelligent frame-specific tagging task.
     */
     @SerializedName("FrameTagConfigure")
     @Expose
     private FrameTagConfigureInfoForUpdate FrameTagConfigure;
 
     /**
-    * 
+    * Intelligent Highlights Compilation Task Control Parameters.
     */
     @SerializedName("HighlightConfigure")
     @Expose
     private HighlightsConfigureInfoForUpdate HighlightConfigure;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Audio and video content analysis template unique identifier. 
+     * @return Definition Audio and video content analysis template unique identifier.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Audio and video content analysis template unique identifier.
+     * @param Definition Audio and video content analysis template unique identifier.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Audio and video content analysis template name, with a length limit of 64 characters. 
+     * @return Name Audio and video content analysis template name, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Audio and video content analysis template name, with a length limit of 64 characters.
+     * @param Name Audio and video content analysis template name, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Audio and video content analysis template description, with a length limit of 256 characters. 
+     * @return Comment Audio and video content analysis template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Audio and video content analysis template description, with a length limit of 256 characters.
+     * @param Comment Audio and video content analysis template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return ClassificationConfigure 
+     * Get Intelligent classification task control parameters. 
+     * @return ClassificationConfigure Intelligent classification task control parameters.
      */
     public ClassificationConfigureInfoForUpdate getClassificationConfigure() {
         return this.ClassificationConfigure;
     }
 
     /**
-     * Set 
-     * @param ClassificationConfigure 
+     * Set Intelligent classification task control parameters.
+     * @param ClassificationConfigure Intelligent classification task control parameters.
      */
     public void setClassificationConfigure(ClassificationConfigureInfoForUpdate ClassificationConfigure) {
         this.ClassificationConfigure = ClassificationConfigure;
     }
 
     /**
-     * Get  
-     * @return TagConfigure 
+     * Get Intelligent tag task control parameter. 
+     * @return TagConfigure Intelligent tag task control parameter.
      */
     public TagConfigureInfoForUpdate getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set 
-     * @param TagConfigure 
+     * Set Intelligent tag task control parameter.
+     * @param TagConfigure Intelligent tag task control parameter.
      */
     public void setTagConfigure(TagConfigureInfoForUpdate TagConfigure) {
         this.TagConfigure = TagConfigure;
     }
 
     /**
-     * Get  
-     * @return CoverConfigure 
+     * Get Intelligent cover task control parameters. 
+     * @return CoverConfigure Intelligent cover task control parameters.
      */
     public CoverConfigureInfoForUpdate getCoverConfigure() {
         return this.CoverConfigure;
     }
 
     /**
-     * Set 
-     * @param CoverConfigure 
+     * Set Intelligent cover task control parameters.
+     * @param CoverConfigure Intelligent cover task control parameters.
      */
     public void setCoverConfigure(CoverConfigureInfoForUpdate CoverConfigure) {
         this.CoverConfigure = CoverConfigure;
     }
 
     /**
-     * Get  
-     * @return FrameTagConfigure 
+     * Get Control parameter for the intelligent frame-specific tagging task. 
+     * @return FrameTagConfigure Control parameter for the intelligent frame-specific tagging task.
      */
     public FrameTagConfigureInfoForUpdate getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set 
-     * @param FrameTagConfigure 
+     * Set Control parameter for the intelligent frame-specific tagging task.
+     * @param FrameTagConfigure Control parameter for the intelligent frame-specific tagging task.
      */
     public void setFrameTagConfigure(FrameTagConfigureInfoForUpdate FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;
     }
 
     /**
-     * Get  
-     * @return HighlightConfigure 
+     * Get Intelligent Highlights Compilation Task Control Parameters. 
+     * @return HighlightConfigure Intelligent Highlights Compilation Task Control Parameters.
      */
     public HighlightsConfigureInfoForUpdate getHighlightConfigure() {
         return this.HighlightConfigure;
     }
 
     /**
-     * Set 
-     * @param HighlightConfigure 
+     * Set Intelligent Highlights Compilation Task Control Parameters.
+     * @param HighlightConfigure Intelligent Highlights Compilation Task Control Parameters.
      */
     public void setHighlightConfigure(HighlightsConfigureInfoForUpdate HighlightConfigure) {
         this.HighlightConfigure = HighlightConfigure;

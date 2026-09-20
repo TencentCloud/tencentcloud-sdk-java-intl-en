@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProcessImageAsyncTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * List of image asynchronous processing template details.
     */
     @SerializedName("ProcessImageAsyncTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeProcessImageAsyncTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return ProcessImageAsyncTemplateSet 
+     * Get List of image asynchronous processing template details. 
+     * @return ProcessImageAsyncTemplateSet List of image asynchronous processing template details.
      */
     public ProcessImageAsyncTemplateItem [] getProcessImageAsyncTemplateSet() {
         return this.ProcessImageAsyncTemplateSet;
     }
 
     /**
-     * Set 
-     * @param ProcessImageAsyncTemplateSet 
+     * Set List of image asynchronous processing template details.
+     * @param ProcessImageAsyncTemplateSet List of image asynchronous processing template details.
      */
     public void setProcessImageAsyncTemplateSet(ProcessImageAsyncTemplateItem [] ProcessImageAsyncTemplateSet) {
         this.ProcessImageAsyncTemplateSet = ProcessImageAsyncTemplateSet;

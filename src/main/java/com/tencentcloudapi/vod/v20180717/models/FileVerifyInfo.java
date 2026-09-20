@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class FileVerifyInfo extends AbstractModel {
 
     /**
-    * 
+    * File validation URL guide.
     */
     @SerializedName("FileVerifyUrl")
     @Expose
     private String FileVerifyUrl;
 
     /**
-    * 
+    * File verification domain name list.
     */
     @SerializedName("FileVerifyDomains")
     @Expose
     private String [] FileVerifyDomains;
 
     /**
-    * 
+    * File verification file name.
     */
     @SerializedName("FileVerifyName")
     @Expose
     private String FileVerifyName;
 
     /**
-     * Get  
-     * @return FileVerifyUrl 
+     * Get File validation URL guide. 
+     * @return FileVerifyUrl File validation URL guide.
      */
     public String getFileVerifyUrl() {
         return this.FileVerifyUrl;
     }
 
     /**
-     * Set 
-     * @param FileVerifyUrl 
+     * Set File validation URL guide.
+     * @param FileVerifyUrl File validation URL guide.
      */
     public void setFileVerifyUrl(String FileVerifyUrl) {
         this.FileVerifyUrl = FileVerifyUrl;
     }
 
     /**
-     * Get  
-     * @return FileVerifyDomains 
+     * Get File verification domain name list. 
+     * @return FileVerifyDomains File verification domain name list.
      */
     public String [] getFileVerifyDomains() {
         return this.FileVerifyDomains;
     }
 
     /**
-     * Set 
-     * @param FileVerifyDomains 
+     * Set File verification domain name list.
+     * @param FileVerifyDomains File verification domain name list.
      */
     public void setFileVerifyDomains(String [] FileVerifyDomains) {
         this.FileVerifyDomains = FileVerifyDomains;
     }
 
     /**
-     * Get  
-     * @return FileVerifyName 
+     * Get File verification file name. 
+     * @return FileVerifyName File verification file name.
      */
     public String getFileVerifyName() {
         return this.FileVerifyName;
     }
 
     /**
-     * Set 
-     * @param FileVerifyName 
+     * Set File verification file name.
+     * @param FileVerifyName File verification file name.
      */
     public void setFileVerifyName(String FileVerifyName) {
         this.FileVerifyName = FileVerifyName;

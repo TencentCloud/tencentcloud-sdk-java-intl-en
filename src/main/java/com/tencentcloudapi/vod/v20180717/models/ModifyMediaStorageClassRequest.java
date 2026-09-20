@@ -24,92 +24,147 @@ import java.util.HashMap;
 public class ModifyMediaStorageClassRequest extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier list of media files. Maximum length: 100.
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 
+    * Destination storage class. Optional values:
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
     */
     @SerializedName("StorageClass")
     @Expose
     private String StorageClass;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of the media file is archive storage, the parameter values are as follows:
+<li>Expedited: speed mode.</li>
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
     */
     @SerializedName("RestoreTier")
     @Expose
     private String RestoreTier;
 
     /**
-     * Get  
-     * @return FileIds 
+     * Get Unique identifier list of media files. Maximum length: 100. 
+     * @return FileIds Unique identifier list of media files. Maximum length: 100.
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 
-     * @param FileIds 
+     * Set Unique identifier list of media files. Maximum length: 100.
+     * @param FileIds Unique identifier list of media files. Maximum length: 100.
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get  
-     * @return StorageClass 
+     * Get Destination storage class. Optional values:
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li> 
+     * @return StorageClass Destination storage class. Optional values:
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
      */
     public String getStorageClass() {
         return this.StorageClass;
     }
 
     /**
-     * Set 
-     * @param StorageClass 
+     * Set Destination storage class. Optional values:
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
+     * @param StorageClass Destination storage class. Optional values:
+<li> STANDARD: standard storage.</li>
+<li> STANDARD_IA: Infrequent storage.</li>
+<li> ARCHIVE: Archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
      */
     public void setStorageClass(String StorageClass) {
         this.StorageClass = StorageClass;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return RestoreTier 
+     * Get Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of the media file is archive storage, the parameter values are as follows:
+<li>Expedited: speed mode.</li>
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li> 
+     * @return RestoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of the media file is archive storage, the parameter values are as follows:
+<li>Expedited: speed mode.</li>
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
      */
     public String getRestoreTier() {
         return this.RestoreTier;
     }
 
     /**
-     * Set 
-     * @param RestoreTier 
+     * Set Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of the media file is archive storage, the parameter values are as follows:
+<li>Expedited: speed mode.</li>
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
+     * @param RestoreTier Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+When the current storage type of the media file is archive storage, the parameter values are as follows:
+<li>Expedited: speed mode.</li>
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
+When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard: standard mode.</li>
+<li>Bulk: batch mode.</li>
      */
     public void setRestoreTier(String RestoreTier) {
         this.RestoreTier = RestoreTier;

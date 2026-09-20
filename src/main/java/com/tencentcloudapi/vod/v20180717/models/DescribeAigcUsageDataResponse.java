@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAigcUsageDataResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>AIGC stats.</p>
     */
     @SerializedName("AigcUsageDataSet")
     @Expose
     private AigcUsageDataItem [] AigcUsageDataSet;
 
     /**
-    * 
+    * <p>Text generation detailed log</p>
     */
     @SerializedName("AigcTextDetails")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAigcUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return AigcUsageDataSet 
+     * Get <p>AIGC stats.</p> 
+     * @return AigcUsageDataSet <p>AIGC stats.</p>
      */
     public AigcUsageDataItem [] getAigcUsageDataSet() {
         return this.AigcUsageDataSet;
     }
 
     /**
-     * Set 
-     * @param AigcUsageDataSet 
+     * Set <p>AIGC stats.</p>
+     * @param AigcUsageDataSet <p>AIGC stats.</p>
      */
     public void setAigcUsageDataSet(AigcUsageDataItem [] AigcUsageDataSet) {
         this.AigcUsageDataSet = AigcUsageDataSet;
     }
 
     /**
-     * Get  
-     * @return AigcTextDetails 
+     * Get <p>Text generation detailed log</p> 
+     * @return AigcTextDetails <p>Text generation detailed log</p>
      */
     public AigcTextDetail getAigcTextDetails() {
         return this.AigcTextDetails;
     }
 
     /**
-     * Set 
-     * @param AigcTextDetails 
+     * Set <p>Text generation detailed log</p>
+     * @param AigcTextDetails <p>Text generation detailed log</p>
      */
     public void setAigcTextDetails(AigcTextDetail AigcTextDetails) {
         this.AigcTextDetails = AigcTextDetails;

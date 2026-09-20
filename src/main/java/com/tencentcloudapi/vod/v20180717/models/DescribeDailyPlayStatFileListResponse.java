@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDailyPlayStatFileListResponse extends AbstractModel {
 
     /**
-    * 
+    * Playback statistics file list.
     */
     @SerializedName("PlayStatFileSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDailyPlayStatFileListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return PlayStatFileSet 
+     * Get Playback statistics file list. 
+     * @return PlayStatFileSet Playback statistics file list.
      */
     public PlayStatFileInfo [] getPlayStatFileSet() {
         return this.PlayStatFileSet;
     }
 
     /**
-     * Set 
-     * @param PlayStatFileSet 
+     * Set Playback statistics file list.
+     * @param PlayStatFileSet Playback statistics file list.
      */
     public void setPlayStatFileSet(PlayStatFileInfo [] PlayStatFileSet) {
         this.PlayStatFileSet = PlayStatFileSet;

@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class AudioBeautifyInfo extends AbstractModel {
 
     /**
-    * 
+    * Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
     */
     @SerializedName("Types")
     @Expose
     private String [] Types;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li> 
+     * @return Switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
+     * @param Switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Types 
+     * Get Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick. 
+     * @return Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
      */
     public String [] getTypes() {
         return this.Types;
     }
 
     /**
-     * Set 
-     * @param Types 
+     * Set Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
+     * @param Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
      */
     public void setTypes(String [] Types) {
         this.Types = Types;

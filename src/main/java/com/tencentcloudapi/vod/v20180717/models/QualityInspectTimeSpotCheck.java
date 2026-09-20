@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class QualityInspectTimeSpotCheck extends AbstractModel {
 
     /**
-    * 
+    * <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
     */
     @SerializedName("CheckDuration")
     @Expose
     private Long CheckDuration;
 
     /**
-    * 
+    * <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
     */
     @SerializedName("CheckInterval")
     @Expose
     private Long CheckInterval;
 
     /**
-    * 
+    * <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
     */
     @SerializedName("SkipDuration")
     @Expose
     private Long SkipDuration;
 
     /**
-    * 
+    * <p>Number of loops.</p><p>Value range: [0, 1000]</p>
     */
     @SerializedName("CirclesNumber")
     @Expose
     private Long CirclesNumber;
 
     /**
-     * Get  
-     * @return CheckDuration 
+     * Get <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p> 
+     * @return CheckDuration <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
      */
     public Long getCheckDuration() {
         return this.CheckDuration;
     }
 
     /**
-     * Set 
-     * @param CheckDuration 
+     * Set <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
+     * @param CheckDuration <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
      */
     public void setCheckDuration(Long CheckDuration) {
         this.CheckDuration = CheckDuration;
     }
 
     /**
-     * Get  
-     * @return CheckInterval 
+     * Get <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p> 
+     * @return CheckInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
      */
     public Long getCheckInterval() {
         return this.CheckInterval;
     }
 
     /**
-     * Set 
-     * @param CheckInterval 
+     * Set <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+     * @param CheckInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
      */
     public void setCheckInterval(Long CheckInterval) {
         this.CheckInterval = CheckInterval;
     }
 
     /**
-     * Get  
-     * @return SkipDuration 
+     * Get <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p> 
+     * @return SkipDuration <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
      */
     public Long getSkipDuration() {
         return this.SkipDuration;
     }
 
     /**
-     * Set 
-     * @param SkipDuration 
+     * Set <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
+     * @param SkipDuration <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
      */
     public void setSkipDuration(Long SkipDuration) {
         this.SkipDuration = SkipDuration;
     }
 
     /**
-     * Get  
-     * @return CirclesNumber 
+     * Get <p>Number of loops.</p><p>Value range: [0, 1000]</p> 
+     * @return CirclesNumber <p>Number of loops.</p><p>Value range: [0, 1000]</p>
      */
     public Long getCirclesNumber() {
         return this.CirclesNumber;
     }
 
     /**
-     * Set 
-     * @param CirclesNumber 
+     * Set <p>Number of loops.</p><p>Value range: [0, 1000]</p>
+     * @param CirclesNumber <p>Number of loops.</p><p>Value range: [0, 1000]</p>
      */
     public void setCirclesNumber(Long CirclesNumber) {
         this.CirclesNumber = CirclesNumber;

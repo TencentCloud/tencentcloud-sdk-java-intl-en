@@ -24,138 +24,168 @@ import java.util.HashMap;
 public class MPSOutputFile extends AbstractModel {
 
     /**
-    * 
+    * File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
+Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 
+    * Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * 
+    * Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 
+    * Downloadable Url of the result file.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * Transcoding specification ID. Valid when FileType is equal to MediaProcess.Transcode.Video. A value of 0 represents the original file.
     */
     @SerializedName("Definition")
     @Expose
     private String Definition;
 
     /**
-    * 
+    * Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds.
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-     * Get  
-     * @return FileType 
+     * Get File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
+Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+ 
+     * @return FileType File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
+Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 
-     * @param FileType 
+     * Set File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
+Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+
+     * @param FileType File type. Used to identify the specific return file in the execution results of MPS video processing tasks.
+Parameter Value: <li>AiAnalysis.DeLogo.Video: Video file generated after removal in an intelligent erasure task. Stored in the original file type by default.</li><li>AiAnalysis.DeLogo.OriginSubtitle: Subtitle file extracted from video in an intelligent erasure task.</li><li>AiAnalysis.DeLogo.TranslateSubtitle: Translation file of the subtitle extracted from video in an intelligent erasure task.</li><li>MediaProcess.Transcode.Video: Enhanced audio/video file in an audio and video enhancement task. Stored as a transcoded file type by default.</li>
+<li>AiAnalysis.HorizontalToVerticalTask.Video: Video file generated in the horizontal to vertical task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.VideoRemakeTaskk.Video: Video file generated in the intelligent deduplication task, stored as an intelligent media type by default.</li>
+<li>AiAnalysis.SegmentTask.Video: Video file generated in the intelligent splitting task, stored as an intelligent media type by default.</li>
+<li>SmartErase.Video: Video file generated in the intelligent erasure task. It is stored as an intelligent media type by default.</li>
+
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get  
-     * @return StorageMode 
+     * Get Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li> 
+     * @return StorageMode Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set 
-     * @param StorageMode 
+     * Set Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
+     * @param StorageMode Storage format. It is used to represent the storage format of the result file. Valid values: <li> Permanent: retained permanently;</li><li> Temporary: temporary storage.</li>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get  
-     * @return FileId 
+     * Get Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset. 
+     * @return FileId Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 
-     * @param FileId 
+     * Set Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset.
+     * @param FileId Media file ID. Valid when Type is Permanent. It means the result file is stored in the VOD platform as a media asset, and the field value is the FileId of the media asset.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Downloadable Url of the result file. 
+     * @return Url Downloadable Url of the result file.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Downloadable Url of the result file.
+     * @param Url Downloadable Url of the result file.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Transcoding specification ID. Valid when FileType is equal to MediaProcess.Transcode.Video. A value of 0 represents the original file. 
+     * @return Definition Transcoding specification ID. Valid when FileType is equal to MediaProcess.Transcode.Video. A value of 0 represents the original file.
      */
     public String getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Transcoding specification ID. Valid when FileType is equal to MediaProcess.Transcode.Video. A value of 0 represents the original file.
+     * @param Definition Transcoding specification ID. Valid when FileType is equal to MediaProcess.Transcode.Video. A value of 0 represents the original file.
      */
     public void setDefinition(String Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ExpiredTime 
+     * Get Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds. 
+     * @return ExpiredTime Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds.
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 
-     * @param ExpiredTime 
+     * Set Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds.
+     * @param ExpiredTime Expiration time. Valid when StorageMode is Temporary. It indicates the expiration time of the Url, in seconds.
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

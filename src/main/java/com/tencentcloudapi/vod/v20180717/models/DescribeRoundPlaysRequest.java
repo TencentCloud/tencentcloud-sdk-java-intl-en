@@ -24,160 +24,160 @@ import java.util.HashMap;
 public class DescribeRoundPlaysRequest extends AbstractModel {
 
     /**
-    * 
+    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
     */
     @SerializedName("RoundPlayIds")
     @Expose
     private String [] RoundPlayIds;
 
     /**
-    * 
+    * <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * <p>Filter criteria: Carousel Playlist Creation Time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private TimeRange CreateTime;
 
     /**
-    * 
+    * <p>Filter criteria: carousel playlist update time.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private TimeRange UpdateTime;
 
     /**
-    * 
+    * <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-    * 
+    * <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return RoundPlayIds 
+     * Get <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p> 
+     * @return RoundPlayIds <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
      */
     public String [] getRoundPlayIds() {
         return this.RoundPlayIds;
     }
 
     /**
-     * Set 
-     * @param RoundPlayIds 
+     * Set <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+     * @param RoundPlayIds <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
      */
     public void setRoundPlayIds(String [] RoundPlayIds) {
         this.RoundPlayIds = RoundPlayIds;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p> 
+     * @return Status <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+     * @param Status <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Filter criteria: Carousel Playlist Creation Time.</p> 
+     * @return CreateTime <p>Filter criteria: Carousel Playlist Creation Time.</p>
      */
     public TimeRange getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Filter criteria: Carousel Playlist Creation Time.</p>
+     * @param CreateTime <p>Filter criteria: Carousel Playlist Creation Time.</p>
      */
     public void setCreateTime(TimeRange CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get <p>Filter criteria: carousel playlist update time.</p> 
+     * @return UpdateTime <p>Filter criteria: carousel playlist update time.</p>
      */
     public TimeRange getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set <p>Filter criteria: carousel playlist update time.</p>
+     * @param UpdateTime <p>Filter criteria: carousel playlist update time.</p>
      */
     public void setUpdateTime(TimeRange UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return ScrollToken 
+     * Get <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p> 
+     * @return ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 
-     * @param ScrollToken 
+     * Set <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+     * @param ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p> 
+     * @return Offset <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
      * @deprecated
      */
     @Deprecated
@@ -186,8 +186,8 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
+     * @param Offset <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
      * @deprecated
      */
     @Deprecated
@@ -196,16 +196,16 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get <p>Number of returned entries. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

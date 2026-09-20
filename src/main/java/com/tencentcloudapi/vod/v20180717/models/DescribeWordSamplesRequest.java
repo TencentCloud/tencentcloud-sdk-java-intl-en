@@ -24,138 +24,178 @@ import java.util.HashMap;
 public class DescribeWordSamplesRequest extends AbstractModel {
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * <b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
     */
     @SerializedName("Usages")
     @Expose
     private String [] Usages;
 
     /**
-    * 
+    * Keyword filtering conditions. Array length limit: 100 words.
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-    * 
+    * Tag filtering condition. Array length limit: 20 words.
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * Number of returned entries. Default value: 100. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Usages 
+     * Get <b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition. 
+     * @return Usages <b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set 
-     * @param Usages 
+     * Set <b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+     * @param Usages <b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
     }
 
     /**
-     * Get  
-     * @return Keywords 
+     * Get Keyword filtering conditions. Array length limit: 100 words. 
+     * @return Keywords Keyword filtering conditions. Array length limit: 100 words.
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 
-     * @param Keywords 
+     * Set Keyword filtering conditions. Array length limit: 100 words.
+     * @param Keywords Keyword filtering conditions. Array length limit: 100 words.
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Tag filtering condition. Array length limit: 20 words. 
+     * @return Tags Tag filtering condition. Array length limit: 20 words.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Tag filtering condition. Array length limit: 20 words.
+     * @param Tags Tag filtering condition. Array length limit: 20 words.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Number of returned entries. Default value: 100. Maximum value: 100. 
+     * @return Limit Number of returned entries. Default value: 100. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Number of returned entries. Default value: 100. Maximum value: 100.
+     * @param Limit Number of returned entries. Default value: 100. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class AiAnalysisTaskTagOutput extends AbstractModel {
 
     /**
-    * 
+    * Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
     */
     @SerializedName("TagSet")
     @Expose
     private MediaAiAnalysisTagItem [] TagSet;
 
     /**
-    * 
+    * URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
     */
     @SerializedName("TagSetFileUrl")
     @Expose
     private String TagSetFileUrl;
 
     /**
-    * 
+    * Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("TagSetFileUrlExpireTime")
     @Expose
     private String TagSetFileUrlExpireTime;
 
     /**
-     * Get  
-     * @return TagSet 
+     * Get Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl. 
+     * @return TagSet Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
      */
     public MediaAiAnalysisTagItem [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 
-     * @param TagSet 
+     * Set Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
+     * @param TagSet Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
      */
     public void setTagSet(MediaAiAnalysisTagItem [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get  
-     * @return TagSetFileUrl 
+     * Get URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached. 
+     * @return TagSetFileUrl URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
      */
     public String getTagSetFileUrl() {
         return this.TagSetFileUrl;
     }
 
     /**
-     * Set 
-     * @param TagSetFileUrl 
+     * Set URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
+     * @param TagSetFileUrl URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
      */
     public void setTagSetFileUrl(String TagSetFileUrl) {
         this.TagSetFileUrl = TagSetFileUrl;
     }
 
     /**
-     * Get  
-     * @return TagSetFileUrlExpireTime 
+     * Get Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return TagSetFileUrlExpireTime Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getTagSetFileUrlExpireTime() {
         return this.TagSetFileUrlExpireTime;
     }
 
     /**
-     * Set 
-     * @param TagSetFileUrlExpireTime 
+     * Set Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param TagSetFileUrlExpireTime Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setTagSetFileUrlExpireTime(String TagSetFileUrlExpireTime) {
         this.TagSetFileUrlExpireTime = TagSetFileUrlExpireTime;

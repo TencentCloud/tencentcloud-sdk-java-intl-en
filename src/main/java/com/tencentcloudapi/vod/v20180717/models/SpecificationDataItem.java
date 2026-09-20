@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SpecificationDataItem extends AbstractModel {
 
     /**
-    * 
+    * Task specification.
     */
     @SerializedName("Specification")
     @Expose
     private String Specification;
 
     /**
-    * 
+    * Statistical data.
     */
     @SerializedName("Data")
     @Expose
     private TaskStatDataItem [] Data;
 
     /**
-     * Get  
-     * @return Specification 
+     * Get Task specification. 
+     * @return Specification Task specification.
      */
     public String getSpecification() {
         return this.Specification;
     }
 
     /**
-     * Set 
-     * @param Specification 
+     * Set Task specification.
+     * @param Specification Task specification.
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;
     }
 
     /**
-     * Get  
-     * @return Data 
+     * Get Statistical data. 
+     * @return Data Statistical data.
      */
     public TaskStatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 
-     * @param Data 
+     * Set Statistical data.
+     * @param Data Statistical data.
      */
     public void setData(TaskStatDataItem [] Data) {
         this.Data = Data;

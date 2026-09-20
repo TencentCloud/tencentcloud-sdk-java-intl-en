@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel {
 
     /**
-    * 
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * List of specified time point screenshot template details.
     */
     @SerializedName("SnapshotByTimeOffsetTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return SnapshotByTimeOffsetTemplateSet 
+     * Get List of specified time point screenshot template details. 
+     * @return SnapshotByTimeOffsetTemplateSet List of specified time point screenshot template details.
      */
     public SnapshotByTimeOffsetTemplate [] getSnapshotByTimeOffsetTemplateSet() {
         return this.SnapshotByTimeOffsetTemplateSet;
     }
 
     /**
-     * Set 
-     * @param SnapshotByTimeOffsetTemplateSet 
+     * Set List of specified time point screenshot template details.
+     * @param SnapshotByTimeOffsetTemplateSet List of specified time point screenshot template details.
      */
     public void setSnapshotByTimeOffsetTemplateSet(SnapshotByTimeOffsetTemplate [] SnapshotByTimeOffsetTemplateSet) {
         this.SnapshotByTimeOffsetTemplateSet = SnapshotByTimeOffsetTemplateSet;

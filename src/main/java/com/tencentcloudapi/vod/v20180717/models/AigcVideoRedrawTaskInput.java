@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AigcVideoRedrawTaskInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Input file information of the AIGC video conversion task.</p>
     */
     @SerializedName("FileInfo")
     @Expose
     private AigcVideoRedrawTaskInputFileInfo FileInfo;
 
     /**
-    * 
+    * <p>AIGC video conversion task parameter information.</p>
     */
     @SerializedName("TaskInfo")
     @Expose
     private AigcVideoRedrawTaskInfo TaskInfo;
 
     /**
-    * 
+    * <p>Output configuration for AIGC video conversion.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcVideoRedrawOutputConfig OutputConfig;
 
     /**
-     * Get  
-     * @return FileInfo 
+     * Get <p>Input file information of the AIGC video conversion task.</p> 
+     * @return FileInfo <p>Input file information of the AIGC video conversion task.</p>
      */
     public AigcVideoRedrawTaskInputFileInfo getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set 
-     * @param FileInfo 
+     * Set <p>Input file information of the AIGC video conversion task.</p>
+     * @param FileInfo <p>Input file information of the AIGC video conversion task.</p>
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;
     }
 
     /**
-     * Get  
-     * @return TaskInfo 
+     * Get <p>AIGC video conversion task parameter information.</p> 
+     * @return TaskInfo <p>AIGC video conversion task parameter information.</p>
      */
     public AigcVideoRedrawTaskInfo getTaskInfo() {
         return this.TaskInfo;
     }
 
     /**
-     * Set 
-     * @param TaskInfo 
+     * Set <p>AIGC video conversion task parameter information.</p>
+     * @param TaskInfo <p>AIGC video conversion task parameter information.</p>
      */
     public void setTaskInfo(AigcVideoRedrawTaskInfo TaskInfo) {
         this.TaskInfo = TaskInfo;
     }
 
     /**
-     * Get  
-     * @return OutputConfig 
+     * Get <p>Output configuration for AIGC video conversion.</p> 
+     * @return OutputConfig <p>Output configuration for AIGC video conversion.</p>
      */
     public AigcVideoRedrawOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 
-     * @param OutputConfig 
+     * Set <p>Output configuration for AIGC video conversion.</p>
+     * @param OutputConfig <p>Output configuration for AIGC video conversion.</p>
      */
     public void setOutputConfig(AigcVideoRedrawOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class KnowledgeBaseDetail extends AbstractModel {
 
     /**
-    * 
+    * <p>Knowledge base ID</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
     private String KnowledgeBaseId;
 
     /**
-    * 
+    * <p>Associated large model parsing template</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>Storage time</p>
     */
     @SerializedName("ImportTime")
     @Expose
     private String ImportTime;
 
     /**
-     * Get  
-     * @return KnowledgeBaseId 
+     * Get <p>Knowledge base ID</p> 
+     * @return KnowledgeBaseId <p>Knowledge base ID</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBaseId 
+     * Set <p>Knowledge base ID</p>
+     * @param KnowledgeBaseId <p>Knowledge base ID</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Associated large model parsing template</p> 
+     * @return Definition <p>Associated large model parsing template</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Associated large model parsing template</p>
+     * @param Definition <p>Associated large model parsing template</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ImportTime 
+     * Get <p>Storage time</p> 
+     * @return ImportTime <p>Storage time</p>
      */
     public String getImportTime() {
         return this.ImportTime;
     }
 
     /**
-     * Set 
-     * @param ImportTime 
+     * Set <p>Storage time</p>
+     * @param ImportTime <p>Storage time</p>
      */
     public void setImportTime(String ImportTime) {
         this.ImportTime = ImportTime;

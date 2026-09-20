@@ -24,115 +24,160 @@ import java.util.HashMap;
 public class ModifyReviewTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * Unique identifier of the review template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Review template name, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Review template description information, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 
+    * List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Unique identifier of the review template. 
+     * @return Definition Unique identifier of the review template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Unique identifier of the review template.
+     * @param Definition Unique identifier of the review template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Review template name, with a length limit of 64 characters. 
+     * @return Name Review template name, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Review template name, with a length limit of 64 characters.
+     * @param Name Review template name, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Review template description information, with a length limit of 256 characters. 
+     * @return Comment Review template description information, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Review template description information, with a length limit of 256 characters.
+     * @param Comment Review template description information, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get  
-     * @return Labels 
+     * Get List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update. 
+     * @return Labels List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 
-     * @param Labels 
+     * Set List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
+     * @param Labels List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class QualityInspectStrategy extends AbstractModel {
 
     /**
-    * 
+    * <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
     */
     @SerializedName("StrategyType")
     @Expose
     private String StrategyType;
 
     /**
-    * 
+    * <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
     */
     @SerializedName("TimeSpotCheck")
     @Expose
     private QualityInspectTimeSpotCheck TimeSpotCheck;
 
     /**
-     * Get  
-     * @return StrategyType 
+     * Get <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul> 
+     * @return StrategyType <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
      */
     public String getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 
-     * @param StrategyType 
+     * Set <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
+     * @param StrategyType <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get  
-     * @return TimeSpotCheck 
+     * Get <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p> 
+     * @return TimeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
      */
     public QualityInspectTimeSpotCheck getTimeSpotCheck() {
         return this.TimeSpotCheck;
     }
 
     /**
-     * Set 
-     * @param TimeSpotCheck 
+     * Set <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+     * @param TimeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
      */
     public void setTimeSpotCheck(QualityInspectTimeSpotCheck TimeSpotCheck) {
         this.TimeSpotCheck = TimeSpotCheck;

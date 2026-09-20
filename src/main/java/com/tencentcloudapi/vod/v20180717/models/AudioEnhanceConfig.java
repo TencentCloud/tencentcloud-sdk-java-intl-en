@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AudioEnhanceConfig extends AbstractModel {
 
     /**
-    * 
+    * Audio noise reduction configuration.
     */
     @SerializedName("Denoise")
     @Expose
     private AudioDenoiseInfo Denoise;
 
     /**
-    * 
+    * Audio separation configuration.
     */
     @SerializedName("Separate")
     @Expose
     private AudioSeparateInfo Separate;
 
     /**
-    * 
+    * Volume equalization configuration.
     */
     @SerializedName("VolumeBalance")
     @Expose
     private AudioVolumeBalanceInfo VolumeBalance;
 
     /**
-    * 
+    * Volume beautification configuration.
     */
     @SerializedName("Beautify")
     @Expose
     private AudioBeautifyInfo Beautify;
 
     /**
-     * Get  
-     * @return Denoise 
+     * Get Audio noise reduction configuration. 
+     * @return Denoise Audio noise reduction configuration.
      */
     public AudioDenoiseInfo getDenoise() {
         return this.Denoise;
     }
 
     /**
-     * Set 
-     * @param Denoise 
+     * Set Audio noise reduction configuration.
+     * @param Denoise Audio noise reduction configuration.
      */
     public void setDenoise(AudioDenoiseInfo Denoise) {
         this.Denoise = Denoise;
     }
 
     /**
-     * Get  
-     * @return Separate 
+     * Get Audio separation configuration. 
+     * @return Separate Audio separation configuration.
      */
     public AudioSeparateInfo getSeparate() {
         return this.Separate;
     }
 
     /**
-     * Set 
-     * @param Separate 
+     * Set Audio separation configuration.
+     * @param Separate Audio separation configuration.
      */
     public void setSeparate(AudioSeparateInfo Separate) {
         this.Separate = Separate;
     }
 
     /**
-     * Get  
-     * @return VolumeBalance 
+     * Get Volume equalization configuration. 
+     * @return VolumeBalance Volume equalization configuration.
      */
     public AudioVolumeBalanceInfo getVolumeBalance() {
         return this.VolumeBalance;
     }
 
     /**
-     * Set 
-     * @param VolumeBalance 
+     * Set Volume equalization configuration.
+     * @param VolumeBalance Volume equalization configuration.
      */
     public void setVolumeBalance(AudioVolumeBalanceInfo VolumeBalance) {
         this.VolumeBalance = VolumeBalance;
     }
 
     /**
-     * Get  
-     * @return Beautify 
+     * Get Volume beautification configuration. 
+     * @return Beautify Volume beautification configuration.
      */
     public AudioBeautifyInfo getBeautify() {
         return this.Beautify;
     }
 
     /**
-     * Set 
-     * @param Beautify 
+     * Set Volume beautification configuration.
+     * @param Beautify Volume beautification configuration.
      */
     public void setBeautify(AudioBeautifyInfo Beautify) {
         this.Beautify = Beautify;

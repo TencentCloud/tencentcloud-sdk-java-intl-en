@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DomainQUICConfig extends AbstractModel {
 
     /**
-    * 
+    * QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get  
-     * @return Status 
+     * Get QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li> 
+     * @return Status QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li>
+     * @param Status QUIC configuration status. Available values:
+<li>Enabled: enabled;</li>
+<li>Disabled: Disabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

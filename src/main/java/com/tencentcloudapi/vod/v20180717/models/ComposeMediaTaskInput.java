@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ComposeMediaTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Input media track list, including multiple track information composed of materials such as video, audio, and images.
     */
     @SerializedName("Tracks")
     @Expose
     private MediaTrack [] Tracks;
 
     /**
-    * 
+    * Canvas used when making video files.
     */
     @SerializedName("Canvas")
     @Expose
     private Canvas Canvas;
 
     /**
-    * 
+    * Output media file information.
     */
     @SerializedName("Output")
     @Expose
     private ComposeMediaOutput Output;
 
     /**
-     * Get  
-     * @return Tracks 
+     * Get Input media track list, including multiple track information composed of materials such as video, audio, and images. 
+     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
      */
     public MediaTrack [] getTracks() {
         return this.Tracks;
     }
 
     /**
-     * Set 
-     * @param Tracks 
+     * Set Input media track list, including multiple track information composed of materials such as video, audio, and images.
+     * @param Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
      */
     public void setTracks(MediaTrack [] Tracks) {
         this.Tracks = Tracks;
     }
 
     /**
-     * Get  
-     * @return Canvas 
+     * Get Canvas used when making video files. 
+     * @return Canvas Canvas used when making video files.
      */
     public Canvas getCanvas() {
         return this.Canvas;
     }
 
     /**
-     * Set 
-     * @param Canvas 
+     * Set Canvas used when making video files.
+     * @param Canvas Canvas used when making video files.
      */
     public void setCanvas(Canvas Canvas) {
         this.Canvas = Canvas;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output media file information. 
+     * @return Output Output media file information.
      */
     public ComposeMediaOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output media file information.
+     * @param Output Output media file information.
      */
     public void setOutput(ComposeMediaOutput Output) {
         this.Output = Output;

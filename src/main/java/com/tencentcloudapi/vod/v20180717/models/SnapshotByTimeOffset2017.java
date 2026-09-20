@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class SnapshotByTimeOffset2017 extends AbstractModel {
 
     /**
-    * 
+    * Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Screenshot time, in milliseconds.
     */
     @SerializedName("TimeOffset")
     @Expose
     private Long TimeOffset;
 
     /**
-    * 
+    * Screenshot output file address.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li> 
+     * @return ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+     * @param ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return TimeOffset 
+     * Get Screenshot time, in milliseconds. 
+     * @return TimeOffset Screenshot time, in milliseconds.
      */
     public Long getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set 
-     * @param TimeOffset 
+     * Set Screenshot time, in milliseconds.
+     * @param TimeOffset Screenshot time, in milliseconds.
      */
     public void setTimeOffset(Long TimeOffset) {
         this.TimeOffset = TimeOffset;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Screenshot output file address. 
+     * @return Url Screenshot output file address.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Screenshot output file address.
+     * @param Url Screenshot output file address.
      */
     public void setUrl(String Url) {
         this.Url = Url;

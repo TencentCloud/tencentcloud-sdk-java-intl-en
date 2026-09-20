@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class BlurConfigureInfo extends AbstractModel {
 
     /**
-    * 
+    * Video frame blur detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Video frame blur detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li> 
+     * @return Switch Video frame blur detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Video frame blur detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+     * @param Switch Video frame blur detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

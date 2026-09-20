@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyMediaInfoResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>New video cover URL.</p><ul><li>Note: This return value is valid only when the request carries CoverData. *</li></ul>
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-    * 
+    * <p>New subtitle information.</p>
     */
     @SerializedName("AddedSubtitleSet")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyMediaInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return CoverUrl 
+     * Get <p>New video cover URL.</p><ul><li>Note: This return value is valid only when the request carries CoverData. *</li></ul> 
+     * @return CoverUrl <p>New video cover URL.</p><ul><li>Note: This return value is valid only when the request carries CoverData. *</li></ul>
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set 
-     * @param CoverUrl 
+     * Set <p>New video cover URL.</p><ul><li>Note: This return value is valid only when the request carries CoverData. *</li></ul>
+     * @param CoverUrl <p>New video cover URL.</p><ul><li>Note: This return value is valid only when the request carries CoverData. *</li></ul>
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
     }
 
     /**
-     * Get  
-     * @return AddedSubtitleSet 
+     * Get <p>New subtitle information.</p> 
+     * @return AddedSubtitleSet <p>New subtitle information.</p>
      */
     public MediaSubtitleItem [] getAddedSubtitleSet() {
         return this.AddedSubtitleSet;
     }
 
     /**
-     * Set 
-     * @param AddedSubtitleSet 
+     * Set <p>New subtitle information.</p>
+     * @param AddedSubtitleSet <p>New subtitle information.</p>
      */
     public void setAddedSubtitleSet(MediaSubtitleItem [] AddedSubtitleSet) {
         this.AddedSubtitleSet = AddedSubtitleSet;

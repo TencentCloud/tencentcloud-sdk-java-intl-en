@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class FileReviewInfo extends AbstractModel {
 
     /**
-    * 
+    * Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
     */
     @SerializedName("MediaReviewInfo")
     @Expose
     private ReviewInfo MediaReviewInfo;
 
     /**
-    * 
+    * Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
     */
     @SerializedName("CoverReviewInfo")
     @Expose
     private ReviewInfo CoverReviewInfo;
 
     /**
-     * Get  
-     * @return MediaReviewInfo 
+     * Get Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1). 
+     * @return MediaReviewInfo Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
      */
     public ReviewInfo getMediaReviewInfo() {
         return this.MediaReviewInfo;
     }
 
     /**
-     * Set 
-     * @param MediaReviewInfo 
+     * Set Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+     * @param MediaReviewInfo Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
      */
     public void setMediaReviewInfo(ReviewInfo MediaReviewInfo) {
         this.MediaReviewInfo = MediaReviewInfo;
     }
 
     /**
-     * Get  
-     * @return CoverReviewInfo 
+     * Get Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1). 
+     * @return CoverReviewInfo Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
      */
     public ReviewInfo getCoverReviewInfo() {
         return this.CoverReviewInfo;
     }
 
     /**
-     * Set 
-     * @param CoverReviewInfo 
+     * Set Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+     * @param CoverReviewInfo Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
      */
     public void setCoverReviewInfo(ReviewInfo CoverReviewInfo) {
         this.CoverReviewInfo = CoverReviewInfo;

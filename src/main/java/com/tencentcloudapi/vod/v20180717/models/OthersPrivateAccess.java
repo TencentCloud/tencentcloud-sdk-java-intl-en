@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OthersPrivateAccess extends AbstractModel {
 
     /**
-    * Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+    * Authentication configuration switch for origin-pull from other vendors. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -33,38 +33,38 @@ public class OthersPrivateAccess extends AbstractModel {
     private String Switch;
 
     /**
-    * 
+    * Access ID.
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * 
+    * Key.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * 
+    * Region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * Bucket Name.
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-     * Get Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+     * Get Authentication configuration switch for origin-pull from other vendors. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+     * @return Switch Authentication configuration switch for origin-pull from other vendors. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -73,10 +73,10 @@ public class OthersPrivateAccess extends AbstractModel {
     }
 
     /**
-     * Set Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+     * Set Authentication configuration switch for origin-pull from other vendors. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+     * @param Switch Authentication configuration switch for origin-pull from other vendors. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -85,64 +85,64 @@ public class OthersPrivateAccess extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AccessKey 
+     * Get Access ID. 
+     * @return AccessKey Access ID.
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set 
-     * @param AccessKey 
+     * Set Access ID.
+     * @param AccessKey Access ID.
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get  
-     * @return SecretKey 
+     * Get Key. 
+     * @return SecretKey Key.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 
-     * @param SecretKey 
+     * Set Key.
+     * @param SecretKey Key.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return Bucket 
+     * Get Bucket Name. 
+     * @return Bucket Bucket Name.
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 
-     * @param Bucket 
+     * Set Bucket Name.
+     * @param Bucket Bucket Name.
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;

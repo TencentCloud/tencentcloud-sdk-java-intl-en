@@ -33,7 +33,7 @@ public class ResponseHeader extends AbstractModel {
     private String Switch;
 
     /**
-    * 
+    * Custom response header rule.
     */
     @SerializedName("HeaderRules")
     @Expose
@@ -64,16 +64,16 @@ public class ResponseHeader extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return HeaderRules 
+     * Get Custom response header rule. 
+     * @return HeaderRules Custom response header rule.
      */
     public HttpHeaderPathRule [] getHeaderRules() {
         return this.HeaderRules;
     }
 
     /**
-     * Set 
-     * @param HeaderRules 
+     * Set Custom response header rule.
+     * @param HeaderRules Custom response header rule.
      */
     public void setHeaderRules(HttpHeaderPathRule [] HeaderRules) {
         this.HeaderRules = HeaderRules;

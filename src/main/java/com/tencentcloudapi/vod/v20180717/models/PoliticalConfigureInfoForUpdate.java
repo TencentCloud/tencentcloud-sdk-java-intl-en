@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class PoliticalConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Control parameters for image recognition involving inappropriate information.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * 
+    * Control parameters for ASR-based recognition involving inappropriate information.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * 
+    * Control parameters for text recognition involving inappropriate information.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get  
-     * @return ImgReviewInfo 
+     * Get Control parameters for image recognition involving inappropriate information. 
+     * @return ImgReviewInfo Control parameters for image recognition involving inappropriate information.
      */
     public PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set 
-     * @param ImgReviewInfo 
+     * Set Control parameters for image recognition involving inappropriate information.
+     * @param ImgReviewInfo Control parameters for image recognition involving inappropriate information.
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get  
-     * @return AsrReviewInfo 
+     * Get Control parameters for ASR-based recognition involving inappropriate information. 
+     * @return AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
      */
     public PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set 
-     * @param AsrReviewInfo 
+     * Set Control parameters for ASR-based recognition involving inappropriate information.
+     * @param AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get  
-     * @return OcrReviewInfo 
+     * Get Control parameters for text recognition involving inappropriate information. 
+     * @return OcrReviewInfo Control parameters for text recognition involving inappropriate information.
      */
     public PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 
-     * @param OcrReviewInfo 
+     * Set Control parameters for text recognition involving inappropriate information.
+     * @param OcrReviewInfo Control parameters for text recognition involving inappropriate information.
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

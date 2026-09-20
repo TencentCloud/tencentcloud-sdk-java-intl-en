@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MPSSmartErasePrivacyConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Privacy protection removal method.</p><p>Enumeration values:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
     */
     @SerializedName("PrivacyModel")
     @Expose
     private String PrivacyModel;
 
     /**
-    * 
+    * <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
     */
     @SerializedName("PrivacyTargets")
     @Expose
     private String [] PrivacyTargets;
 
     /**
-     * Get  
-     * @return PrivacyModel 
+     * Get <p>Privacy protection removal method.</p><p>Enumeration values:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul> 
+     * @return PrivacyModel <p>Privacy protection removal method.</p><p>Enumeration values:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
      */
     public String getPrivacyModel() {
         return this.PrivacyModel;
     }
 
     /**
-     * Set 
-     * @param PrivacyModel 
+     * Set <p>Privacy protection removal method.</p><p>Enumeration values:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
+     * @param PrivacyModel <p>Privacy protection removal method.</p><p>Enumeration values:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
      */
     public void setPrivacyModel(String PrivacyModel) {
         this.PrivacyModel = PrivacyModel;
     }
 
     /**
-     * Get  
-     * @return PrivacyTargets 
+     * Get <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul> 
+     * @return PrivacyTargets <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
      */
     public String [] getPrivacyTargets() {
         return this.PrivacyTargets;
     }
 
     /**
-     * Set 
-     * @param PrivacyTargets 
+     * Set <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+     * @param PrivacyTargets <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
      */
     public void setPrivacyTargets(String [] PrivacyTargets) {
         this.PrivacyTargets = PrivacyTargets;

@@ -24,46 +24,76 @@ import java.util.HashMap;
 public class RepairInfo extends AbstractModel {
 
     /**
-    * 
+    * Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li> 
+     * @return Switch Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
+     * @param Switch Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak. 
+     * @return Type Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
+     * @param Type Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeSubAppIdsRequest extends AbstractModel {
 
     /**
-    * 
+    * Application name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Tag information. Query the application list with a specified tag.
     */
     @SerializedName("Tags")
     @Expose
     private ResourceTag [] Tags;
 
     /**
-    * 
+    * Starting offset for pagination pull. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Application name 
+     * @return Name Application name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Application name
+     * @param Name Application name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Tag information. Query the application list with a specified tag. 
+     * @return Tags Tag information. Query the application list with a specified tag.
      */
     public ResourceTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Tag information. Query the application list with a specified tag.
+     * @param Tags Tag information. Query the application list with a specified tag.
      */
     public void setTags(ResourceTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Starting offset for pagination pull. Default value: 0. 
+     * @return Offset Starting offset for pagination pull. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Starting offset for pagination pull. Default value: 0.
+     * @param Offset Starting offset for pagination pull. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200. 
+     * @return Limit Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
+     * @param Limit Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

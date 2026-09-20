@@ -24,230 +24,310 @@ import java.util.HashMap;
 public class AiRecognitionResult extends AbstractModel {
 
     /**
-    * 
+    * Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Video start and end recognition result. When Type is
+Valid for HeadTailRecognition.
     */
     @SerializedName("HeadTailTask")
     @Expose
     private AiRecognitionTaskHeadTailResult HeadTailTask;
 
     /**
-    * 
+    * Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition.
     */
     @SerializedName("SegmentTask")
     @Expose
     private AiRecognitionTaskSegmentResult SegmentTask;
 
     /**
-    * 
+    * Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
     */
     @SerializedName("FaceTask")
     @Expose
     private AiRecognitionTaskFaceResult FaceTask;
 
     /**
-    * 
+    * Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition.
     */
     @SerializedName("AsrWordsTask")
     @Expose
     private AiRecognitionTaskAsrWordsResult AsrWordsTask;
 
     /**
-    * 
+    * Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
     */
     @SerializedName("AsrFullTextTask")
     @Expose
     private AiRecognitionTaskAsrFullTextResult AsrFullTextTask;
 
     /**
-    * 
+    * Voice translation result. Valid when Type is AsrTranslateRecognition.
     */
     @SerializedName("AsrTranslateTask")
     @Expose
     private AiRecognitionTaskAsrTranslateResult AsrTranslateTask;
 
     /**
-    * 
+    * Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition.
     */
     @SerializedName("OcrWordsTask")
     @Expose
     private AiRecognitionTaskOcrWordsResult OcrWordsTask;
 
     /**
-    * 
+    * Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
     */
     @SerializedName("OcrFullTextTask")
     @Expose
     private AiRecognitionTaskOcrFullTextResult OcrFullTextTask;
 
     /**
-    * 
+    * Object recognition result, which is valid when Type is
+Valid for ObjectRecognition.
     */
     @SerializedName("ObjectTask")
     @Expose
     private AiRecognitionTaskObjectResult ObjectTask;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li> 
+     * @return Type Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li>
+     * @param Type Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>AsrTranslateRecognition: voice translation recognition,</li>
+<li>OcrFullTextRecognition: full text recognition,</li>
+<li>HeadTailRecognition: video start and end recognition,</li>
+<li>ObjectRecognition: object recognition.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return HeadTailTask 
+     * Get Video start and end recognition result. When Type is
+Valid for HeadTailRecognition. 
+     * @return HeadTailTask Video start and end recognition result. When Type is
+Valid for HeadTailRecognition.
      */
     public AiRecognitionTaskHeadTailResult getHeadTailTask() {
         return this.HeadTailTask;
     }
 
     /**
-     * Set 
-     * @param HeadTailTask 
+     * Set Video start and end recognition result. When Type is
+Valid for HeadTailRecognition.
+     * @param HeadTailTask Video start and end recognition result. When Type is
+Valid for HeadTailRecognition.
      */
     public void setHeadTailTask(AiRecognitionTaskHeadTailResult HeadTailTask) {
         this.HeadTailTask = HeadTailTask;
     }
 
     /**
-     * Get  
-     * @return SegmentTask 
+     * Get Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition. 
+     * @return SegmentTask Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition.
      */
     public AiRecognitionTaskSegmentResult getSegmentTask() {
         return this.SegmentTask;
     }
 
     /**
-     * Set 
-     * @param SegmentTask 
+     * Set Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition.
+     * @param SegmentTask Video splitting recognition result, which is valid when Type is
+Valid for SegmentRecognition.
      */
     public void setSegmentTask(AiRecognitionTaskSegmentResult SegmentTask) {
         this.SegmentTask = SegmentTask;
     }
 
     /**
-     * Get  
-     * @return FaceTask 
+     * Get Face recognition result, which is valid when Type is 
+Valid for FaceRecognition. 
+     * @return FaceTask Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
      */
     public AiRecognitionTaskFaceResult getFaceTask() {
         return this.FaceTask;
     }
 
     /**
-     * Set 
-     * @param FaceTask 
+     * Set Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
+     * @param FaceTask Face recognition result, which is valid when Type is 
+Valid for FaceRecognition.
      */
     public void setFaceTask(AiRecognitionTaskFaceResult FaceTask) {
         this.FaceTask = FaceTask;
     }
 
     /**
-     * Get  
-     * @return AsrWordsTask 
+     * Get Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition. 
+     * @return AsrWordsTask Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition.
      */
     public AiRecognitionTaskAsrWordsResult getAsrWordsTask() {
         return this.AsrWordsTask;
     }
 
     /**
-     * Set 
-     * @param AsrWordsTask 
+     * Set Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition.
+     * @param AsrWordsTask Speech keyword recognition result. When Type is
+Valid for AsrWordsRecognition.
      */
     public void setAsrWordsTask(AiRecognitionTaskAsrWordsResult AsrWordsTask) {
         this.AsrWordsTask = AsrWordsTask;
     }
 
     /**
-     * Get  
-     * @return AsrFullTextTask 
+     * Get Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used. 
+     * @return AsrFullTextTask Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
      */
     public AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() {
         return this.AsrFullTextTask;
     }
 
     /**
-     * Set 
-     * @param AsrFullTextTask 
+     * Set Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
+     * @param AsrFullTextTask Full speech recognition result. When Type is
+Valid when AsrFullTextRecognition is used.
      */
     public void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult AsrFullTextTask) {
         this.AsrFullTextTask = AsrFullTextTask;
     }
 
     /**
-     * Get  
-     * @return AsrTranslateTask 
+     * Get Voice translation result. Valid when Type is AsrTranslateRecognition. 
+     * @return AsrTranslateTask Voice translation result. Valid when Type is AsrTranslateRecognition.
      */
     public AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() {
         return this.AsrTranslateTask;
     }
 
     /**
-     * Set 
-     * @param AsrTranslateTask 
+     * Set Voice translation result. Valid when Type is AsrTranslateRecognition.
+     * @param AsrTranslateTask Voice translation result. Valid when Type is AsrTranslateRecognition.
      */
     public void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult AsrTranslateTask) {
         this.AsrTranslateTask = AsrTranslateTask;
     }
 
     /**
-     * Get  
-     * @return OcrWordsTask 
+     * Get Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition. 
+     * @return OcrWordsTask Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition.
      */
     public AiRecognitionTaskOcrWordsResult getOcrWordsTask() {
         return this.OcrWordsTask;
     }
 
     /**
-     * Set 
-     * @param OcrWordsTask 
+     * Set Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition.
+     * @param OcrWordsTask Text keyword recognition result. When Type is
+Valid for OcrWordsRecognition.
      */
     public void setOcrWordsTask(AiRecognitionTaskOcrWordsResult OcrWordsTask) {
         this.OcrWordsTask = OcrWordsTask;
     }
 
     /**
-     * Get  
-     * @return OcrFullTextTask 
+     * Get Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used. 
+     * @return OcrFullTextTask Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
      */
     public AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() {
         return this.OcrFullTextTask;
     }
 
     /**
-     * Set 
-     * @param OcrFullTextTask 
+     * Set Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
+     * @param OcrFullTextTask Full text recognition result. When Type is
+Valid when OcrFullTextRecognition is used.
      */
     public void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult OcrFullTextTask) {
         this.OcrFullTextTask = OcrFullTextTask;
     }
 
     /**
-     * Get  
-     * @return ObjectTask 
+     * Get Object recognition result, which is valid when Type is
+Valid for ObjectRecognition. 
+     * @return ObjectTask Object recognition result, which is valid when Type is
+Valid for ObjectRecognition.
      */
     public AiRecognitionTaskObjectResult getObjectTask() {
         return this.ObjectTask;
     }
 
     /**
-     * Set 
-     * @param ObjectTask 
+     * Set Object recognition result, which is valid when Type is
+Valid for ObjectRecognition.
+     * @param ObjectTask Object recognition result, which is valid when Type is
+Valid for ObjectRecognition.
      */
     public void setObjectTask(AiRecognitionTaskObjectResult ObjectTask) {
         this.ObjectTask = ObjectTask;

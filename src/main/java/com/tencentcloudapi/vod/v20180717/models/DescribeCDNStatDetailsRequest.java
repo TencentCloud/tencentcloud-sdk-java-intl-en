@@ -24,207 +24,507 @@ import java.util.HashMap;
 public class DescribeCDNStatDetailsRequest extends AbstractModel {
 
     /**
-    * 
+    * Queried metric. Valid values:
+<li>Traffic: Total Traffic, in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: request count.</li>
+<li>QUICRequests: number of QUIC requests.</li>
+<li>IpVisit: number of IP visits.</li>
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
-    * 
+    * Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default.
     */
     @SerializedName("DomainNames")
     @Expose
     private String [] DomainNames;
 
     /**
-    * 
+    * Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland. </li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
+<li>Middle East: Middle East. </li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default value: Chinese mainland.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 
+    * Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hu’nan: Hunan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: Other.</li>
     */
     @SerializedName("Districts")
     @Expose
     private String [] Districts;
 
     /**
-    * 
+    * User's Operator Information. When Area is Chinese Mainland, the value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: China Telecom.</li>
+<li>China Unicom: China Unicom. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: China Mobile.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li>
     */
     @SerializedName("Isps")
     @Expose
     private String [] Isps;
 
     /**
-    * 
+    * Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
     */
     @SerializedName("DataInterval")
     @Expose
     private Long DataInterval;
 
     /**
-     * Get  
-     * @return Metric 
+     * Get Queried metric. Valid values:
+<li>Traffic: Total Traffic, in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: request count.</li>
+<li>QUICRequests: number of QUIC requests.</li>
+<li>IpVisit: number of IP visits.</li> 
+     * @return Metric Queried metric. Valid values:
+<li>Traffic: Total Traffic, in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: request count.</li>
+<li>QUICRequests: number of QUIC requests.</li>
+<li>IpVisit: number of IP visits.</li>
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set 
-     * @param Metric 
+     * Set Queried metric. Valid values:
+<li>Traffic: Total Traffic, in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: request count.</li>
+<li>QUICRequests: number of QUIC requests.</li>
+<li>IpVisit: number of IP visits.</li>
+     * @param Metric Queried metric. Valid values:
+<li>Traffic: Total Traffic, in bytes.</li>
+<li>Bandwidth: bandwidth, in Bps.</li>
+<li>Requests: request count.</li>
+<li>QUICRequests: number of QUIC requests.</li>
+<li>IpVisit: number of IP visits.</li>
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return StartTime Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param StartTime Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return EndTime End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param EndTime End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b> 
+     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
+     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return DomainNames 
+     * Get Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default. 
+     * @return DomainNames Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default.
      */
     public String [] getDomainNames() {
         return this.DomainNames;
     }
 
     /**
-     * Set 
-     * @param DomainNames 
+     * Set Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default.
+     * @param DomainNames Domain name list. Query data for up to 20 domains at a time. Usage data for all domains is overlaid by default.
      */
     public void setDomainNames(String [] DomainNames) {
         this.DomainNames = DomainNames;
     }
 
     /**
-     * Get  
-     * @return Area 
+     * Get Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland. </li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
+<li>Middle East: Middle East. </li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default value: Chinese mainland. 
+     * @return Area Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland. </li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
+<li>Middle East: Middle East. </li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default value: Chinese mainland.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 
-     * @param Area 
+     * Set Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland. </li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
+<li>Middle East: Middle East. </li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default value: Chinese mainland.
+     * @param Area Service area. Valid values:
+<li>Chinese Mainland: Chinese mainland. </li>
+<li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand. </li>
+<li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, and South Korea. </li>
+<li>Asia Pacific Region 3: Asia Pacific zone 3, including the Philippines, India, Australia, and other countries and regions in Asia Pacific. </li>
+<li>Middle East: Middle East. </li>
+<li>Europe: Europe.</li>
+<li>North America: North America.</li>
+<li>South America: South America.</li>
+<li>Africa: Africa.</li>
+Default value: Chinese mainland.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get  
-     * @return Districts 
+     * Get Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hu’nan: Hunan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: Other.</li> 
+     * @return Districts Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hu’nan: Hunan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: Other.</li>
      */
     public String [] getDistricts() {
         return this.Districts;
     }
 
     /**
-     * Set 
-     * @param Districts 
+     * Set Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hu’nan: Hunan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: Other.</li>
+     * @param Districts Region where the user is located. If Area is Chinese Mainland, the value is the following region information. If Area is set to other values, ignore the Districts parameter.
+<li>Beijing: Beijing.</li>
+<li>Inner Mongolia: Inner Mongolia.</li>
+<li>Shanxi: Shanxi.</li>
+<li>Hebei: Hebei.</li>
+<li>Tianjin: Tianjin.</li>
+<li>Ningxia: Ningxia.</li>
+<li>Shaanxi: Shaanxi.</li>
+<li>Gansu: Gansu.</li>
+<li>Qinghai: Qinghai.</li>
+<li>Xinjiang: Xinjiang.</li>
+<li>Heilongjiang: Heilongjiang.</li>
+<li>Jilin: Jilin.</li>
+<li>Liaoning: Liaoning.</li>
+<li>Fujian: Fujian.</li>
+<li>Jiangsu: Jiangsu.</li>
+<li>Anhui: Anhui.</li>
+<li>Shandong: Shandong.</li>
+<li>Shanghai: Shanghai.</li>
+<li>Zhejiang: Zhejiang.</li>
+<li>Henan: Henan.</li>
+<li>Hubei: Hubei.</li>
+<li>Jiangxi: Jiangxi.</li>
+<li>Hu’nan: Hunan.</li>
+<li>Guizhou: Guizhou.</li>
+<li>Yunnan: Yunnan.</li>
+<li>Chongqing: Chongqing.</li>
+<li>Sichuan: Sichuan.</li>
+<li>Xizang: Tibet.</li>
+<li>Guangdong: Guangdong.</li>
+<li>Guangxi: Guangxi.</li>
+<li>Hainan: Hainan.</li>
+<li>Hong Kong (China), Macao (China), and Taiwan (China): Hong Kong, Macao and Taiwan.</li>
+<li>Outside Chinese Mainland: overseas.</li>
+<li>Other: Other.</li>
      */
     public void setDistricts(String [] Districts) {
         this.Districts = Districts;
     }
 
     /**
-     * Get  
-     * @return Isps 
+     * Get User's Operator Information. When Area is Chinese Mainland, the value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: China Telecom.</li>
+<li>China Unicom: China Unicom. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: China Mobile.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li> 
+     * @return Isps User's Operator Information. When Area is Chinese Mainland, the value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: China Telecom.</li>
+<li>China Unicom: China Unicom. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: China Mobile.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li>
      */
     public String [] getIsps() {
         return this.Isps;
     }
 
     /**
-     * Set 
-     * @param Isps 
+     * Set User's Operator Information. When Area is Chinese Mainland, the value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: China Telecom.</li>
+<li>China Unicom: China Unicom. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: China Mobile.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li>
+     * @param Isps User's Operator Information. When Area is Chinese Mainland, the value is the following carrier information. When Area is other values, ignore the Isps parameter.
+<li>China Telecom: China Telecom.</li>
+<li>China Unicom: China Unicom. </li>
+<li>CERNET: China Education Network.</li>
+<li>Great Wall Broadband Network: Great Wall Broadband.</li>
+<li>China Mobile: China Mobile.</li>
+<li>China Mobile Tietong: China Tietong.</li>
+<li>ISPs outside Chinese Mainland: overseas carriers.</li>
+<li>Other ISPs: Other ISPs.</li>
      */
     public void setIsps(String [] Isps) {
         this.Isps = Isps;
     }
 
     /**
-     * Get  
-     * @return DataInterval 
+     * Get Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440. 
+     * @return DataInterval Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
      */
     public Long getDataInterval() {
         return this.DataInterval;
     }
 
     /**
-     * Set 
-     * @param DataInterval 
+     * Set Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
+     * @param DataInterval Time granularity of each data entry. Unit: minute. Valid values:
+<li>5: 5 minutes. Return detailed data at a 5-minute granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data at 1-day granularity within the specified query time. If the span between the start time and end time is more than 24 hours, only day granularity data is supported.</li>
+When the time span between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
      */
     public void setDataInterval(Long DataInterval) {
         this.DataInterval = DataInterval;

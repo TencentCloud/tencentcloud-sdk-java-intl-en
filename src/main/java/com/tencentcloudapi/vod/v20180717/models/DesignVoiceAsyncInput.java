@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DesignVoiceAsyncInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Voice description.</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 
+    * <p>Tone information</p>
     */
     @SerializedName("VoiceSettings")
     @Expose
     private VoiceSettings VoiceSettings;
 
     /**
-    * 
+    * <p>Trial text.</p>
     */
     @SerializedName("PreviewText")
     @Expose
     private String PreviewText;
 
     /**
-    * 
+    * <p>Extended parameters in the format of a JSON string.</p>
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-     * Get  
-     * @return Prompt 
+     * Get <p>Voice description.</p> 
+     * @return Prompt <p>Voice description.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 
-     * @param Prompt 
+     * Set <p>Voice description.</p>
+     * @param Prompt <p>Voice description.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get  
-     * @return VoiceSettings 
+     * Get <p>Tone information</p> 
+     * @return VoiceSettings <p>Tone information</p>
      */
     public VoiceSettings getVoiceSettings() {
         return this.VoiceSettings;
     }
 
     /**
-     * Set 
-     * @param VoiceSettings 
+     * Set <p>Tone information</p>
+     * @param VoiceSettings <p>Tone information</p>
      */
     public void setVoiceSettings(VoiceSettings VoiceSettings) {
         this.VoiceSettings = VoiceSettings;
     }
 
     /**
-     * Get  
-     * @return PreviewText 
+     * Get <p>Trial text.</p> 
+     * @return PreviewText <p>Trial text.</p>
      */
     public String getPreviewText() {
         return this.PreviewText;
     }
 
     /**
-     * Set 
-     * @param PreviewText 
+     * Set <p>Trial text.</p>
+     * @param PreviewText <p>Trial text.</p>
      */
     public void setPreviewText(String PreviewText) {
         this.PreviewText = PreviewText;
     }
 
     /**
-     * Get  
-     * @return ExtParam 
+     * Get <p>Extended parameters in the format of a JSON string.</p> 
+     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set 
-     * @param ExtParam 
+     * Set <p>Extended parameters in the format of a JSON string.</p>
+     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p>
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;

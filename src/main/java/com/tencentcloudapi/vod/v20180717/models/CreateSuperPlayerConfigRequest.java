@@ -24,276 +24,391 @@ import java.util.HashMap;
 public class CreateSuperPlayerConfigRequest extends AbstractModel {
 
     /**
-    * 
+    * Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 
+    * Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * 
+    * Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
     */
     @SerializedName("DrmSwitch")
     @Expose
     private String DrmSwitch;
 
     /**
-    * 
+    * Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
     */
     @SerializedName("AdaptiveDynamicStreamingDefinition")
     @Expose
     private Long AdaptiveDynamicStreamingDefinition;
 
     /**
-    * 
+    * Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
     */
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfo DrmStreamingsInfo;
 
     /**
-    * 
+    * Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
     */
     @SerializedName("TranscodeDefinition")
     @Expose
     private Long TranscodeDefinition;
 
     /**
-    * 
+    * Allowed output sprite template ID.
     */
     @SerializedName("ImageSpriteDefinition")
     @Expose
     private Long ImageSpriteDefinition;
 
     /**
-    * 
+    * Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
     */
     @SerializedName("ResolutionNames")
     @Expose
     private ResolutionNameInfo [] ResolutionNames;
 
     /**
-    * 
+    * Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * 
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user. 
+     * @return Name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+     * @param Name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return SubAppId 
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 
-     * @param SubAppId 
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get  
-     * @return AudioVideoType 
+     * Get Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default. 
+     * @return AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set 
-     * @param AudioVideoType 
+     * Set Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
+     * @param AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get  
-     * @return DrmSwitch 
+     * Get Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream. 
+     * @return DrmSwitch Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
      */
     public String getDrmSwitch() {
         return this.DrmSwitch;
     }
 
     /**
-     * Set 
-     * @param DrmSwitch 
+     * Set Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+     * @param DrmSwitch Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
      */
     public void setDrmSwitch(String DrmSwitch) {
         this.DrmSwitch = DrmSwitch;
     }
 
     /**
-     * Get  
-     * @return AdaptiveDynamicStreamingDefinition 
+     * Get Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`. 
+     * @return AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
      */
     public Long getAdaptiveDynamicStreamingDefinition() {
         return this.AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Set 
-     * @param AdaptiveDynamicStreamingDefinition 
+     * Set Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+     * @param AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
      */
     public void setAdaptiveDynamicStreamingDefinition(Long AdaptiveDynamicStreamingDefinition) {
         this.AdaptiveDynamicStreamingDefinition = AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Get  
-     * @return DrmStreamingsInfo 
+     * Get Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`. 
+     * @return DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
      */
     public DrmStreamingsInfo getDrmStreamingsInfo() {
         return this.DrmStreamingsInfo;
     }
 
     /**
-     * Set 
-     * @param DrmStreamingsInfo 
+     * Set Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+     * @param DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfo DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
     }
 
     /**
-     * Get  
-     * @return TranscodeDefinition 
+     * Get Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`. 
+     * @return TranscodeDefinition Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
      */
     public Long getTranscodeDefinition() {
         return this.TranscodeDefinition;
     }
 
     /**
-     * Set 
-     * @param TranscodeDefinition 
+     * Set Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
+     * @param TranscodeDefinition Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
      */
     public void setTranscodeDefinition(Long TranscodeDefinition) {
         this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
-     * Get  
-     * @return ImageSpriteDefinition 
+     * Get Allowed output sprite template ID. 
+     * @return ImageSpriteDefinition Allowed output sprite template ID.
      */
     public Long getImageSpriteDefinition() {
         return this.ImageSpriteDefinition;
     }
 
     /**
-     * Set 
-     * @param ImageSpriteDefinition 
+     * Set Allowed output sprite template ID.
+     * @param ImageSpriteDefinition Allowed output sprite template ID.
      */
     public void setImageSpriteDefinition(Long ImageSpriteDefinition) {
         this.ImageSpriteDefinition = ImageSpriteDefinition;
     }
 
     /**
-     * Get  
-     * @return ResolutionNames 
+     * Get Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li> 
+     * @return ResolutionNames Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
      */
     public ResolutionNameInfo [] getResolutionNames() {
         return this.ResolutionNames;
     }
 
     /**
-     * Set 
-     * @param ResolutionNames 
+     * Set Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
+     * @param ResolutionNames Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
      */
     public void setResolutionNames(ResolutionNameInfo [] ResolutionNames) {
         this.ResolutionNames = ResolutionNames;
     }
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. 
+     * @return Domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+     * @param Domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return Scheme 
+     * Get Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li> 
+     * @return Scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 
-     * @param Scheme 
+     * Set Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
+     * @param Scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

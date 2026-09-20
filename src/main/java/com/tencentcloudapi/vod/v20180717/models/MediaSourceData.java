@@ -24,115 +24,145 @@ import java.util.HashMap;
 public class MediaSourceData extends AbstractModel {
 
     /**
-    * 
+    * Media file source category:
+<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
+<li>TrtcRecord: comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 
+    * Field passed through when a user creates a file.
     */
     @SerializedName("SourceContext")
     @Expose
     private String SourceContext;
 
     /**
-    * 
+    * Live recording information is valid when the file source is Record.
     */
     @SerializedName("LiveRecordInfo")
     @Expose
     private LiveRecordInfo LiveRecordInfo;
 
     /**
-    * 
+    * TRTC Companion Recording Information. Valid when the file source is TrtcRecord.
     */
     @SerializedName("TrtcRecordInfo")
     @Expose
     private TrtcRecordInfo TrtcRecordInfo;
 
     /**
-    * 
+    * Panoramic recording information. Valid when the file source is WebPageRecord.
     */
     @SerializedName("WebPageRecordInfo")
     @Expose
     private WebPageRecordInfo WebPageRecordInfo;
 
     /**
-     * Get  
-     * @return SourceType 
+     * Get Media file source category:
+<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
+<li>TrtcRecord: comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li> 
+     * @return SourceType Media file source category:
+<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
+<li>TrtcRecord: comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 
-     * @param SourceType 
+     * Set Media file source category:
+<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
+<li>TrtcRecord: comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
+     * @param SourceType Media file source category:
+<li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+<li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
+<li>TrtcRecord: comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get  
-     * @return SourceContext 
+     * Get Field passed through when a user creates a file. 
+     * @return SourceContext Field passed through when a user creates a file.
      */
     public String getSourceContext() {
         return this.SourceContext;
     }
 
     /**
-     * Set 
-     * @param SourceContext 
+     * Set Field passed through when a user creates a file.
+     * @param SourceContext Field passed through when a user creates a file.
      */
     public void setSourceContext(String SourceContext) {
         this.SourceContext = SourceContext;
     }
 
     /**
-     * Get  
-     * @return LiveRecordInfo 
+     * Get Live recording information is valid when the file source is Record. 
+     * @return LiveRecordInfo Live recording information is valid when the file source is Record.
      */
     public LiveRecordInfo getLiveRecordInfo() {
         return this.LiveRecordInfo;
     }
 
     /**
-     * Set 
-     * @param LiveRecordInfo 
+     * Set Live recording information is valid when the file source is Record.
+     * @param LiveRecordInfo Live recording information is valid when the file source is Record.
      */
     public void setLiveRecordInfo(LiveRecordInfo LiveRecordInfo) {
         this.LiveRecordInfo = LiveRecordInfo;
     }
 
     /**
-     * Get  
-     * @return TrtcRecordInfo 
+     * Get TRTC Companion Recording Information. Valid when the file source is TrtcRecord. 
+     * @return TrtcRecordInfo TRTC Companion Recording Information. Valid when the file source is TrtcRecord.
      */
     public TrtcRecordInfo getTrtcRecordInfo() {
         return this.TrtcRecordInfo;
     }
 
     /**
-     * Set 
-     * @param TrtcRecordInfo 
+     * Set TRTC Companion Recording Information. Valid when the file source is TrtcRecord.
+     * @param TrtcRecordInfo TRTC Companion Recording Information. Valid when the file source is TrtcRecord.
      */
     public void setTrtcRecordInfo(TrtcRecordInfo TrtcRecordInfo) {
         this.TrtcRecordInfo = TrtcRecordInfo;
     }
 
     /**
-     * Get  
-     * @return WebPageRecordInfo 
+     * Get Panoramic recording information. Valid when the file source is WebPageRecord. 
+     * @return WebPageRecordInfo Panoramic recording information. Valid when the file source is WebPageRecord.
      */
     public WebPageRecordInfo getWebPageRecordInfo() {
         return this.WebPageRecordInfo;
     }
 
     /**
-     * Set 
-     * @param WebPageRecordInfo 
+     * Set Panoramic recording information. Valid when the file source is WebPageRecord.
+     * @param WebPageRecordInfo Panoramic recording information. Valid when the file source is WebPageRecord.
      */
     public void setWebPageRecordInfo(WebPageRecordInfo WebPageRecordInfo) {
         this.WebPageRecordInfo = WebPageRecordInfo;

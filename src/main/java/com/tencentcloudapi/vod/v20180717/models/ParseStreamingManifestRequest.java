@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ParseStreamingManifestRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Content of the index file to be parsed.</p>
     */
     @SerializedName("MediaManifestContent")
     @Expose
     private String MediaManifestContent;
 
     /**
-    * 
+    * <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
     */
     @SerializedName("ManifestType")
     @Expose
     private String ManifestType;
 
     /**
-     * Get  
-     * @return MediaManifestContent 
+     * Get <p>Content of the index file to be parsed.</p> 
+     * @return MediaManifestContent <p>Content of the index file to be parsed.</p>
      */
     public String getMediaManifestContent() {
         return this.MediaManifestContent;
     }
 
     /**
-     * Set 
-     * @param MediaManifestContent 
+     * Set <p>Content of the index file to be parsed.</p>
+     * @param MediaManifestContent <p>Content of the index file to be parsed.</p>
      */
     public void setMediaManifestContent(String MediaManifestContent) {
         this.MediaManifestContent = MediaManifestContent;
     }
 
     /**
-     * Get  
-     * @return ManifestType 
+     * Get <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li> 
+     * @return ManifestType <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
      */
     public String getManifestType() {
         return this.ManifestType;
     }
 
     /**
-     * Set 
-     * @param ManifestType 
+     * Set <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
+     * @param ManifestType <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
      */
     public void setManifestType(String ManifestType) {
         this.ManifestType = ManifestType;

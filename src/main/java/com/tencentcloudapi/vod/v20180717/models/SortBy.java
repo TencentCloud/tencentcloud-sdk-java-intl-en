@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SortBy extends AbstractModel {
 
     /**
-    * 
+    * Sorting field.
     */
     @SerializedName("Field")
     @Expose
     private String Field;
 
     /**
-    * 
+    * Sorting method. Available values: Asc (ascending), Desc (descending).
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get  
-     * @return Field 
+     * Get Sorting field. 
+     * @return Field Sorting field.
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 
-     * @param Field 
+     * Set Sorting field.
+     * @param Field Sorting field.
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get  
-     * @return Order 
+     * Get Sorting method. Available values: Asc (ascending), Desc (descending). 
+     * @return Order Sorting method. Available values: Asc (ascending), Desc (descending).
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 
-     * @param Order 
+     * Set Sorting method. Available values: Asc (ascending), Desc (descending).
+     * @param Order Sorting method. Available values: Asc (ascending), Desc (descending).
      */
     public void setOrder(String Order) {
         this.Order = Order;

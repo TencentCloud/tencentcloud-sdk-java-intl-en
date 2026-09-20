@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TerrorismConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Task control parameter for image recognition involving unsafe information.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * 
+    * Task control parameter for text recognition involving unsafe information.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get  
-     * @return ImgReviewInfo 
+     * Get Task control parameter for image recognition involving unsafe information. 
+     * @return ImgReviewInfo Task control parameter for image recognition involving unsafe information.
      */
     public TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set 
-     * @param ImgReviewInfo 
+     * Set Task control parameter for image recognition involving unsafe information.
+     * @param ImgReviewInfo Task control parameter for image recognition involving unsafe information.
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get  
-     * @return OcrReviewInfo 
+     * Get Task control parameter for text recognition involving unsafe information. 
+     * @return OcrReviewInfo Task control parameter for text recognition involving unsafe information.
      */
     public TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 
-     * @param OcrReviewInfo 
+     * Set Task control parameter for text recognition involving unsafe information.
+     * @param OcrReviewInfo Task control parameter for text recognition involving unsafe information.
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

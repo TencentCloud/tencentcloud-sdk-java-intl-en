@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * <p>Tag list in the time segment.</p>
     */
     @SerializedName("TagSet")
     @Expose
     private MediaAiAnalysisFrameTagItem [] TagSet;
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p> 
+     * @return StartTimeOffset <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+     * @param StartTimeOffset <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p> 
+     * @return EndTimeOffset <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
+     * @param EndTimeOffset <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return TagSet 
+     * Get <p>Tag list in the time segment.</p> 
+     * @return TagSet <p>Tag list in the time segment.</p>
      */
     public MediaAiAnalysisFrameTagItem [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 
-     * @param TagSet 
+     * Set <p>Tag list in the time segment.</p>
+     * @param TagSet <p>Tag list in the time segment.</p>
      */
     public void setTagSet(MediaAiAnalysisFrameTagItem [] TagSet) {
         this.TagSet = TagSet;

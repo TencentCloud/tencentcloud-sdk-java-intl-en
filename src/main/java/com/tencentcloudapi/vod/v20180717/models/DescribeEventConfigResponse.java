@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeEventConfigResponse extends AbstractModel {
 
     /**
-    * 
+    * Method of receiving event notifications. "PUSH" indicates normal callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), and "PULL" indicates reliable callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 
+    * Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
     */
     @SerializedName("NotificationUrl")
     @Expose
     private String NotificationUrl;
 
     /**
-    * 
+    * Whether to receive [video upload completed](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
     */
     @SerializedName("UploadMediaCompleteEventSwitch")
     @Expose
     private String UploadMediaCompleteEventSwitch;
 
     /**
-    * 
+    * Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
     */
     @SerializedName("DeleteMediaCompleteEventSwitch")
     @Expose
     private String DeleteMediaCompleteEventSwitch;
 
     /**
-    * 
+    * Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
     */
     @SerializedName("PersistenceCompleteEventSwitch")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeEventConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Mode 
+     * Get Method of receiving event notifications. "PUSH" indicates normal callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), and "PULL" indicates reliable callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83). 
+     * @return Mode Method of receiving event notifications. "PUSH" indicates normal callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), and "PULL" indicates reliable callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 
-     * @param Mode 
+     * Set Method of receiving event notifications. "PUSH" indicates normal callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), and "PULL" indicates reliable callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
+     * @param Mode Method of receiving event notifications. "PUSH" indicates normal callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), and "PULL" indicates reliable callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get  
-     * @return NotificationUrl 
+     * Get Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications. 
+     * @return NotificationUrl Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
      */
     public String getNotificationUrl() {
         return this.NotificationUrl;
     }
 
     /**
-     * Set 
-     * @param NotificationUrl 
+     * Set Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
+     * @param NotificationUrl Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
      */
     public void setNotificationUrl(String NotificationUrl) {
         this.NotificationUrl = NotificationUrl;
     }
 
     /**
-     * Get  
-     * @return UploadMediaCompleteEventSwitch 
+     * Get Whether to receive [video upload completed](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received. 
+     * @return UploadMediaCompleteEventSwitch Whether to receive [video upload completed](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
      */
     public String getUploadMediaCompleteEventSwitch() {
         return this.UploadMediaCompleteEventSwitch;
     }
 
     /**
-     * Set 
-     * @param UploadMediaCompleteEventSwitch 
+     * Set Whether to receive [video upload completed](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+     * @param UploadMediaCompleteEventSwitch Whether to receive [video upload completed](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
      */
     public void setUploadMediaCompleteEventSwitch(String UploadMediaCompleteEventSwitch) {
         this.UploadMediaCompleteEventSwitch = UploadMediaCompleteEventSwitch;
     }
 
     /**
-     * Get  
-     * @return DeleteMediaCompleteEventSwitch 
+     * Get Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received. 
+     * @return DeleteMediaCompleteEventSwitch Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
      */
     public String getDeleteMediaCompleteEventSwitch() {
         return this.DeleteMediaCompleteEventSwitch;
     }
 
     /**
-     * Set 
-     * @param DeleteMediaCompleteEventSwitch 
+     * Set Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+     * @param DeleteMediaCompleteEventSwitch Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
      */
     public void setDeleteMediaCompleteEventSwitch(String DeleteMediaCompleteEventSwitch) {
         this.DeleteMediaCompleteEventSwitch = DeleteMediaCompleteEventSwitch;
     }
 
     /**
-     * Get  
-     * @return PersistenceCompleteEventSwitch 
+     * Get Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received. 
+     * @return PersistenceCompleteEventSwitch Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
      */
     public String getPersistenceCompleteEventSwitch() {
         return this.PersistenceCompleteEventSwitch;
     }
 
     /**
-     * Set 
-     * @param PersistenceCompleteEventSwitch 
+     * Set Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+     * @param PersistenceCompleteEventSwitch Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
      */
     public void setPersistenceCompleteEventSwitch(String PersistenceCompleteEventSwitch) {
         this.PersistenceCompleteEventSwitch = PersistenceCompleteEventSwitch;
