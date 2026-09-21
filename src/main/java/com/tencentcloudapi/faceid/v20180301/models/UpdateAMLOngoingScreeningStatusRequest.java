@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class UpdateAMLOngoingScreeningStatusRequest extends AbstractModel {
 
     /**
-    * End user's unique identifier in the customer system, up to 256 characters.
+    * <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
     */
     @SerializedName("UniqueCustomerID")
     @Expose
     private String UniqueCustomerID;
 
     /**
-    * Whether continuous monitoring screening is enabled. 
-Default value: false.
+    * <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
     */
     @SerializedName("EnableOngoingScreening")
     @Expose
     private Boolean EnableOngoingScreening;
 
     /**
-     * Get End user's unique identifier in the customer system, up to 256 characters. 
-     * @return UniqueCustomerID End user's unique identifier in the customer system, up to 256 characters.
+     * Get <p>Unique identifier of the end user in the customer system, up to 256 characters.</p> 
+     * @return UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
      */
     public String getUniqueCustomerID() {
         return this.UniqueCustomerID;
     }
 
     /**
-     * Set End user's unique identifier in the customer system, up to 256 characters.
-     * @param UniqueCustomerID End user's unique identifier in the customer system, up to 256 characters.
+     * Set <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+     * @param UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
      */
     public void setUniqueCustomerID(String UniqueCustomerID) {
         this.UniqueCustomerID = UniqueCustomerID;
     }
 
     /**
-     * Get Whether continuous monitoring screening is enabled. 
-Default value: false. 
-     * @return EnableOngoingScreening Whether continuous monitoring screening is enabled. 
-Default value: false.
+     * Get <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p> 
+     * @return EnableOngoingScreening <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
      */
     public Boolean getEnableOngoingScreening() {
         return this.EnableOngoingScreening;
     }
 
     /**
-     * Set Whether continuous monitoring screening is enabled. 
-Default value: false.
-     * @param EnableOngoingScreening Whether continuous monitoring screening is enabled. 
-Default value: false.
+     * Set <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
+     * @param EnableOngoingScreening <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
      */
     public void setEnableOngoingScreening(Boolean EnableOngoingScreening) {
         this.EnableOngoingScreening = EnableOngoingScreening;
