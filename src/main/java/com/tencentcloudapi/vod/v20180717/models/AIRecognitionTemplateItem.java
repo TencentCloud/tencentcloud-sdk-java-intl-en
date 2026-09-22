@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
-    * Unique ID of a video content recognition template.
+    * Unique ID of the video content recognition template.
     */
     @SerializedName("Definition")
     @Expose
@@ -46,7 +46,7 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
     */
     @SerializedName("Type")
@@ -54,7 +54,7 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     private String Type;
 
     /**
-    * Head and tail recognition control parameter.
+    * Head and tail recognition control parameters.
     */
     @SerializedName("HeadTailConfigure")
     @Expose
@@ -75,7 +75,7 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     private FaceConfigureInfo FaceConfigure;
 
     /**
-    * Text Full-text Recognition Control Parameters.
+    * Text full-text recognition control parameters.
     */
     @SerializedName("OcrFullTextConfigure")
     @Expose
@@ -90,7 +90,7 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
     * Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
@@ -104,21 +104,21 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
-    * Voice translation recognition control parameters.
+    * Speech translation recognition control parameters.
     */
     @SerializedName("AsrTranslateConfigure")
     @Expose
     private AsrTranslateConfigureInfo AsrTranslateConfigure;
 
     /**
-    * Object recognition control parameter.
+    * Object recognition control parameters.
     */
     @SerializedName("ObjectConfigure")
     @Expose
     private ObjectConfigureInfo ObjectConfigure;
 
     /**
-    * Screenshot interval. Measurement unit: second.
+    * Screenshot time interval in seconds.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
@@ -139,16 +139,16 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     private String UpdateTime;
 
     /**
-     * Get Unique ID of a video content recognition template. 
-     * @return Definition Unique ID of a video content recognition template.
+     * Get Unique ID of the video content recognition template. 
+     * @return Definition Unique ID of the video content recognition template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a video content recognition template.
-     * @param Definition Unique ID of a video content recognition template.
+     * Set Unique ID of the video content recognition template.
+     * @param Definition Unique ID of the video content recognition template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -188,10 +188,10 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Get Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li> 
      * @return Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public String getType() {
@@ -200,10 +200,10 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      * @param Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public void setType(String Type) {
@@ -211,16 +211,16 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Head and tail recognition control parameter. 
-     * @return HeadTailConfigure Head and tail recognition control parameter.
+     * Get Head and tail recognition control parameters. 
+     * @return HeadTailConfigure Head and tail recognition control parameters.
      */
     public HeadTailConfigureInfo getHeadTailConfigure() {
         return this.HeadTailConfigure;
     }
 
     /**
-     * Set Head and tail recognition control parameter.
-     * @param HeadTailConfigure Head and tail recognition control parameter.
+     * Set Head and tail recognition control parameters.
+     * @param HeadTailConfigure Head and tail recognition control parameters.
      */
     public void setHeadTailConfigure(HeadTailConfigureInfo HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
@@ -259,16 +259,16 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Text Full-text Recognition Control Parameters. 
-     * @return OcrFullTextConfigure Text Full-text Recognition Control Parameters.
+     * Get Text full-text recognition control parameters. 
+     * @return OcrFullTextConfigure Text full-text recognition control parameters.
      */
     public OcrFullTextConfigureInfo getOcrFullTextConfigure() {
         return this.OcrFullTextConfigure;
     }
 
     /**
-     * Set Text Full-text Recognition Control Parameters.
-     * @param OcrFullTextConfigure Text Full-text Recognition Control Parameters.
+     * Set Text full-text recognition control parameters.
+     * @param OcrFullTextConfigure Text full-text recognition control parameters.
      */
     public void setOcrFullTextConfigure(OcrFullTextConfigureInfo OcrFullTextConfigure) {
         this.OcrFullTextConfigure = OcrFullTextConfigure;
@@ -292,9 +292,9 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Get Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font> 
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font> 
      * @return AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
@@ -302,9 +302,9 @@ public class AIRecognitionTemplateItem extends AbstractModel {
 
     /**
      * Set Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      * @param AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
@@ -327,48 +327,48 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Voice translation recognition control parameters. 
-     * @return AsrTranslateConfigure Voice translation recognition control parameters.
+     * Get Speech translation recognition control parameters. 
+     * @return AsrTranslateConfigure Speech translation recognition control parameters.
      */
     public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
         return this.AsrTranslateConfigure;
     }
 
     /**
-     * Set Voice translation recognition control parameters.
-     * @param AsrTranslateConfigure Voice translation recognition control parameters.
+     * Set Speech translation recognition control parameters.
+     * @param AsrTranslateConfigure Speech translation recognition control parameters.
      */
     public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
         this.AsrTranslateConfigure = AsrTranslateConfigure;
     }
 
     /**
-     * Get Object recognition control parameter. 
-     * @return ObjectConfigure Object recognition control parameter.
+     * Get Object recognition control parameters. 
+     * @return ObjectConfigure Object recognition control parameters.
      */
     public ObjectConfigureInfo getObjectConfigure() {
         return this.ObjectConfigure;
     }
 
     /**
-     * Set Object recognition control parameter.
-     * @param ObjectConfigure Object recognition control parameter.
+     * Set Object recognition control parameters.
+     * @param ObjectConfigure Object recognition control parameters.
      */
     public void setObjectConfigure(ObjectConfigureInfo ObjectConfigure) {
         this.ObjectConfigure = ObjectConfigure;
     }
 
     /**
-     * Get Screenshot interval. Measurement unit: second. 
-     * @return ScreenshotInterval Screenshot interval. Measurement unit: second.
+     * Get Screenshot time interval in seconds. 
+     * @return ScreenshotInterval Screenshot time interval in seconds.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Screenshot interval. Measurement unit: second.
-     * @param ScreenshotInterval Screenshot interval. Measurement unit: second.
+     * Set Screenshot time interval in seconds.
+     * @param ScreenshotInterval Screenshot time interval in seconds.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;

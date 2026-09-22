@@ -31,7 +31,7 @@ public class QualityInspectTimeSpotCheck extends AbstractModel {
     private Long CheckDuration;
 
     /**
-    * <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+    * <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
     */
     @SerializedName("CheckInterval")
     @Expose
@@ -68,16 +68,16 @@ public class QualityInspectTimeSpotCheck extends AbstractModel {
     }
 
     /**
-     * Get <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p> 
-     * @return CheckInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+     * Get <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p> 
+     * @return CheckInterval <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
      */
     public Long getCheckInterval() {
         return this.CheckInterval;
     }
 
     /**
-     * Set <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
-     * @param CheckInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+     * Set <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+     * @param CheckInterval <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
      */
     public void setCheckInterval(Long CheckInterval) {
         this.CheckInterval = CheckInterval;

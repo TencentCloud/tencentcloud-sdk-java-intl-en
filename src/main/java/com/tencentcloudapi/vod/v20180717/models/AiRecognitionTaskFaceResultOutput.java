@@ -32,14 +32,14 @@ public class AiRecognitionTaskFaceResultOutput extends AbstractModel {
     private AiRecognitionTaskFaceResultItem [] ResultSet;
 
     /**
-    * URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+    * URL of the intelligent face recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
     */
     @SerializedName("ResultSetFileUrl")
     @Expose
     private String ResultSetFileUrl;
 
     /**
-    * Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the intelligent face recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ResultSetFileUrlExpireTime")
     @Expose
@@ -66,32 +66,32 @@ public class AiRecognitionTaskFaceResultOutput extends AbstractModel {
     }
 
     /**
-     * Get URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.) 
-     * @return ResultSetFileUrl URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+     * Get URL of the intelligent face recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.) 
+     * @return ResultSetFileUrl URL of the intelligent face recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
      */
     public String getResultSetFileUrl() {
         return this.ResultSetFileUrl;
     }
 
     /**
-     * Set URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
-     * @param ResultSetFileUrl URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+     * Set URL of the intelligent face recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+     * @param ResultSetFileUrl URL of the intelligent face recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
      */
     public void setResultSetFileUrl(String ResultSetFileUrl) {
         this.ResultSetFileUrl = ResultSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ResultSetFileUrlExpireTime Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the intelligent face recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ResultSetFileUrlExpireTime Expiration time of the intelligent face recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getResultSetFileUrlExpireTime() {
         return this.ResultSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ResultSetFileUrlExpireTime Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the intelligent face recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ResultSetFileUrlExpireTime Expiration time of the intelligent face recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setResultSetFileUrlExpireTime(String ResultSetFileUrlExpireTime) {
         this.ResultSetFileUrlExpireTime = ResultSetFileUrlExpireTime;

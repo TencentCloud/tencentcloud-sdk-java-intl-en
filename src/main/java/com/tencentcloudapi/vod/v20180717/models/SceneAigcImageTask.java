@@ -38,7 +38,7 @@ public class SceneAigcImageTask extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+    * Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -119,16 +119,16 @@ public class SceneAigcImageTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task. 
-     * @return ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * Get Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task. 
+     * @return ErrCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
-     * @param ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * Set Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+     * @param ErrCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;

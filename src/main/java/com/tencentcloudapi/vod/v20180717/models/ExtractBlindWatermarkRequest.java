@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExtractBlindWatermarkRequest extends AbstractModel {
 
     /**
-    * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
+    * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -38,7 +38,7 @@ public class ExtractBlindWatermarkRequest extends AbstractModel {
     private ExtractBlindWatermarkInputInfo InputInfo;
 
     /**
-    * VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
+    * VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,14 +52,14 @@ public class ExtractBlindWatermarkRequest extends AbstractModel {
     private ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig;
 
     /**
-    * Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
+    * Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+    * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
@@ -73,16 +73,16 @@ public class ExtractBlindWatermarkRequest extends AbstractModel {
     private Long TasksPriority;
 
     /**
-     * Get Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li> 
-     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
+     * Get Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li> 
+     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
-     * @param Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable AB sequence watermark.</li>
+     * Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
+     * @param Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-trace: traceable ab sequence watermark.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -105,16 +105,16 @@ public class ExtractBlindWatermarkRequest extends AbstractModel {
     }
 
     /**
-     * Get VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark. 
-     * @return SubAppId VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
+     * Get VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark. 
+     * @return SubAppId VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
-     * @param SubAppId VOD application ID used for watermarking. Note that whether you pass in a FILEID or URL, it must match the SubAppId used for watermarking to extract the watermark.
+     * Set VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
+     * @param SubAppId VOD application ID used for watermarking. Note that whether a FILEID or URL is imported, it must be in line with the SubAppId used for watermarking to extract the watermark.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -137,32 +137,32 @@ public class ExtractBlindWatermarkRequest extends AbstractModel {
     }
 
     /**
-     * Get Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters. 
-     * @return SessionContext Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
+     * Get Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters. 
+     * @return SessionContext Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
-     * @param SessionContext Identifies source context, used to pass through user request information. This field value will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Up to 1000 characters.
+     * Set Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+     * @param SessionContext Source context identifier used to pass through user request information. This field will be returned in the ExtractBlindWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication. 
-     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+     * Get Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
-     * @param SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
+     * Set Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

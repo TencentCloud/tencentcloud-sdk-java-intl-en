@@ -40,7 +40,7 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     private SubtitleFormatsOperation SubtitleFormatsOperation;
 
     /**
-    * Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+    * Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -61,7 +61,7 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     private String SrcLanguage;
 
     /**
-    * Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+    * Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
     */
     @SerializedName("SubtitleName")
     @Expose
@@ -108,11 +108,11 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+     * Get Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font> 
-     * @return SubtitleFormat Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+     * @return SubtitleFormat Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -124,11 +124,11 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Set Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+     * Set Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
-     * @param SubtitleFormat Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+     * @param SubtitleFormat Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
 <li>vtt: Generate a WebVTT subtitle file;</li>
 <li>srt: Generate SRT subtitle file.</li>
 <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -172,16 +172,16 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get Specify subtitle name. Length limited to 64 characters. This value will be used for player display. 
-     * @return SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+     * Get Specify subtitle name. Length limit: 64 characters. This value will be used for player display. 
+     * @return SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
      */
     public String getSubtitleName() {
         return this.SubtitleName;
     }
 
     /**
-     * Set Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
-     * @param SubtitleName Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+     * Set Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+     * @param SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
      */
     public void setSubtitleName(String SubtitleName) {
         this.SubtitleName = SubtitleName;

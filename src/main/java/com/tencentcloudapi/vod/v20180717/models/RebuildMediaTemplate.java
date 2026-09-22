@@ -40,14 +40,14 @@ public class RebuildMediaTemplate extends AbstractModel {
     private String Type;
 
     /**
-    * Audio and video quality rebirth template name.
+    * Audio-visual quality rebirth template name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of the Audio and Video Quality Rebirth Template.
+    * Audio and video quality rebirth template description.
     */
     @SerializedName("Comment")
     @Expose
@@ -109,14 +109,14 @@ Default value: 0.
     private Long RemoveAudio;
 
     /**
-    * Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -163,32 +163,32 @@ Default value: 0.
     }
 
     /**
-     * Get Audio and video quality rebirth template name. 
-     * @return Name Audio and video quality rebirth template name.
+     * Get Audio-visual quality rebirth template name. 
+     * @return Name Audio-visual quality rebirth template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio and video quality rebirth template name.
-     * @param Name Audio and video quality rebirth template name.
+     * Set Audio-visual quality rebirth template name.
+     * @param Name Audio-visual quality rebirth template name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of the Audio and Video Quality Rebirth Template. 
-     * @return Comment Description of the Audio and Video Quality Rebirth Template.
+     * Get Audio and video quality rebirth template description. 
+     * @return Comment Audio and video quality rebirth template description.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of the Audio and Video Quality Rebirth Template.
-     * @param Comment Description of the Audio and Video Quality Rebirth Template.
+     * Set Audio and video quality rebirth template description.
+     * @param Comment Audio and video quality rebirth template description.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
@@ -331,32 +331,32 @@ Default value: 0.
     }
 
     /**
-     * Get Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

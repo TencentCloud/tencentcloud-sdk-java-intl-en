@@ -26,7 +26,7 @@ public class RefererAuthPolicy extends AbstractModel {
     /**
     * [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -34,7 +34,7 @@ public class RefererAuthPolicy extends AbstractModel {
 
     /**
     * Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
     */
@@ -43,7 +43,7 @@ When Status is Enabled, AuthType must be assigned a value.
     private String AuthType;
 
     /**
-    * List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+    * List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
     */
     @SerializedName("Referers")
     @Expose
@@ -52,7 +52,7 @@ When Status is Enabled, AuthType must be assigned a value.
     /**
     * Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
     */
     @SerializedName("BlankRefererAllowed")
@@ -62,10 +62,10 @@ When Status is Enabled, BlankRefererAllowed must be assigned a value.
     /**
      * Get [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li> 
+<li>Disabled: Disabled.</li> 
      * @return Status [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
      */
     public String getStatus() {
         return this.Status;
@@ -74,10 +74,10 @@ When Status is Enabled, BlankRefererAllowed must be assigned a value.
     /**
      * Set [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
      * @param Status [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
 <li>Enabled: enable;</li>
-<li>Disabled: disabled.</li>
+<li>Disabled: Disabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -85,11 +85,11 @@ When Status is Enabled, BlankRefererAllowed must be assigned a value.
 
     /**
      * Get Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value. 
      * @return AuthType Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
      */
@@ -99,11 +99,11 @@ When Status is Enabled, AuthType must be assigned a value.
 
     /**
      * Set Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
      * @param AuthType Referer verification type. Available values:
-<li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+<li>Black: blocklist method validation. An HTTP request carrying a certain Referer in the Referers list will be rejected.</li>
 <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
 When Status is Enabled, AuthType must be assigned a value.
      */
@@ -112,16 +112,16 @@ When Status is Enabled, AuthType must be assigned a value.
     }
 
     /**
-     * Get List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain. 
-     * @return Referers List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+     * Get List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format. 
+     * @return Referers List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
      */
     public String [] getReferers() {
         return this.Referers;
     }
 
     /**
-     * Set List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
-     * @param Referers List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
+     * Set List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
+     * @param Referers List of Referer fields used for verification. Supports up to 400 Referer fields. When Status is Enabled, Referers cannot be an empty array. The format of Referer follows the reference domain format.
      */
     public void setReferers(String [] Referers) {
         this.Referers = Referers;
@@ -130,11 +130,11 @@ When Status is Enabled, AuthType must be assigned a value.
     /**
      * Get Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value. 
      * @return BlankRefererAllowed Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
      */
     public String getBlankRefererAllowed() {
@@ -144,11 +144,11 @@ When Status is Enabled, BlankRefererAllowed must be assigned a value.
     /**
      * Set Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
      * @param BlankRefererAllowed Whether to allow access to this domain name with a null Referer. Available values:
 <li>Yes: yes.</li>
-<li>No: no</li>
+<li>No: no.</li>
 When Status is Enabled, BlankRefererAllowed must be assigned a value.
      */
     public void setBlankRefererAllowed(String BlankRefererAllowed) {

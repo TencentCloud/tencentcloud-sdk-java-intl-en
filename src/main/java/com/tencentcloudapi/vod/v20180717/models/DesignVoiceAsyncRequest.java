@@ -31,7 +31,7 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
     private String Prompt;
 
     /**
-    * <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+    * <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -59,14 +59,14 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
     private String ExtParam;
 
     /**
-    * <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+    * <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+    * <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
     */
     @SerializedName("SessionId")
     @Expose
@@ -89,16 +89,16 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p> 
-     * @return SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * Get <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p> 
+     * @return SubAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
      */
     public String getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
-     * @param SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * Set <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+     * @param SubAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
@@ -153,32 +153,32 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p> 
-     * @return SessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+     * Get <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
-     * @param SessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+     * Set <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p> 
-     * @return SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+     * Get <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p> 
+     * @return SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
-     * @param SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+     * Set <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
+     * @param SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

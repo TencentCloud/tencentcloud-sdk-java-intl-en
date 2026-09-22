@@ -31,7 +31,7 @@ public class ImportMediaKnowledgeTaskInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+    * <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
     */
     @SerializedName("KnowledgeBaseIds")
     @Expose
@@ -54,16 +54,16 @@ public class ImportMediaKnowledgeTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p> 
-     * @return KnowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+     * Get <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p> 
+     * @return KnowledgeBaseIds <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
      */
     public String [] getKnowledgeBaseIds() {
         return this.KnowledgeBaseIds;
     }
 
     /**
-     * Set <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
-     * @param KnowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+     * Set <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
+     * @param KnowledgeBaseIds <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
      */
     public void setKnowledgeBaseIds(String [] KnowledgeBaseIds) {
         this.KnowledgeBaseIds = KnowledgeBaseIds;

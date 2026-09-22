@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class DynamicRangeInfo extends AbstractModel {
 
     /**
-    * Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+    * Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li>
     */
     @SerializedName("Type")
@@ -33,7 +33,7 @@ public class DynamicRangeInfo extends AbstractModel {
     private String Type;
 
     /**
-    * High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+    * High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
     */
@@ -42,11 +42,11 @@ public class DynamicRangeInfo extends AbstractModel {
     private String HDRType;
 
     /**
-     * Get Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+     * Get Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li> 
-     * @return Type Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+     * @return Type Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li>
      */
     public String getType() {
@@ -54,11 +54,11 @@ public class DynamicRangeInfo extends AbstractModel {
     }
 
     /**
-     * Set Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+     * Set Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li>
-     * @param Type Dynamic range information of the frame. Valid values:
-<li>SDR: Standard Dynamic Range;</li>
+     * @param Type Dynamic range info of the frame. Valid values:
+<li>SDR: Standard Dynamic Range</li>
 <li>HDR: High Dynamic Range.</li>
      */
     public void setType(String Type) {
@@ -66,10 +66,10 @@ public class DynamicRangeInfo extends AbstractModel {
     }
 
     /**
-     * Get High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+     * Get High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li> 
-     * @return HDRType High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+     * @return HDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
      */
@@ -78,10 +78,10 @@ public class DynamicRangeInfo extends AbstractModel {
     }
 
     /**
-     * Set High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+     * Set High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
-     * @param HDRType High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
+     * @param HDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
      */

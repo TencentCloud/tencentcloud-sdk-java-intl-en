@@ -66,14 +66,14 @@ public class AiAnalysisTaskCoverResult extends AbstractModel {
     private AiAnalysisTaskCoverOutput Output;
 
     /**
-    * Progress of the intelligent cover task. Value range: 0-100.
+    * Intelligent Cover Task progress, value ranges from 0 to 100.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -183,32 +183,32 @@ public class AiAnalysisTaskCoverResult extends AbstractModel {
     }
 
     /**
-     * Get Progress of the intelligent cover task. Value range: 0-100. 
-     * @return Progress Progress of the intelligent cover task. Value range: 0-100.
+     * Get Intelligent Cover Task progress, value ranges from 0 to 100. 
+     * @return Progress Intelligent Cover Task progress, value ranges from 0 to 100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the intelligent cover task. Value range: 0-100.
-     * @param Progress Progress of the intelligent cover task. Value range: 0-100.
+     * Set Intelligent Cover Task progress, value ranges from 0 to 100.
+     * @param Progress Intelligent Cover Task progress, value ranges from 0 to 100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;

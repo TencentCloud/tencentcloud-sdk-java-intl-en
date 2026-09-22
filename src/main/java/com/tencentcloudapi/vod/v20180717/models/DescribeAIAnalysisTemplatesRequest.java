@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAIAnalysisTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+    * Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
     */
     @SerializedName("Definitions")
     @Expose
@@ -52,32 +52,32 @@ public class DescribeAIAnalysisTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers. 
-     * @return Definitions Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+     * Get Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers. 
+     * @return Definitions Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
-     * @param Definitions Filtering condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+     * Set Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
+     * @param Definitions Filter condition for the unique identifier of the audio and video content analysis template. The array can contain up to 100 unique identifiers.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

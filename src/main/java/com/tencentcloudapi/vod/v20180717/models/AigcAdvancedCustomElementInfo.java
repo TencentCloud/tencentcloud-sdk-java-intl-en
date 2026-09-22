@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcAdvancedCustomElementInfo extends AbstractModel {
 
     /**
-    * <p>Principal ID.</p>
+    * <p>Subject ID.</p>
     */
     @SerializedName("Id")
     @Expose
@@ -52,23 +52,23 @@ public class AigcAdvancedCustomElementInfo extends AbstractModel {
     private String Description;
 
     /**
-    * <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+    * <p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get <p>Principal ID.</p> 
-     * @return Id <p>Principal ID.</p>
+     * Get <p>Subject ID.</p> 
+     * @return Id <p>Subject ID.</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>Principal ID.</p>
-     * @param Id <p>Principal ID.</p>
+     * Set <p>Subject ID.</p>
+     * @param Id <p>Subject ID.</p>
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -123,16 +123,16 @@ public class AigcAdvancedCustomElementInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
-     * @return CreateTime <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * Get <p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
+     * @return CreateTime <p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param CreateTime <p>Creation time of the entity. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * Set <p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param CreateTime <p>Entity creation time. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

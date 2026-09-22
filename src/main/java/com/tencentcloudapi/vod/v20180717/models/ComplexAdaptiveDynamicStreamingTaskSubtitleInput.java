@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskSubtitleInput extends AbstractModel {
 
     /**
-    * Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+    * Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+    * Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
     */
@@ -40,26 +40,26 @@ public class ComplexAdaptiveDynamicStreamingTaskSubtitleInput extends AbstractMo
     private String Default;
 
     /**
-     * Get Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task. 
-     * @return Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+     * Get Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task. 
+     * @return Id Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
-     * @param Id Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
+     * Set Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
+     * @param Id Subtitle ID. This subtitle must belong to the input main media of the adaptive bitrate task.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+     * Get Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li> 
-     * @return Default Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+     * @return Default Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
      */
@@ -68,10 +68,10 @@ public class ComplexAdaptiveDynamicStreamingTaskSubtitleInput extends AbstractMo
     }
 
     /**
-     * Set Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+     * Set Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
-     * @param Default Whether to set as the default subtitle for adaptive bitrate. Parameter Value:
+     * @param Default Whether to set as the default subtitle for adaptive bitrate. Value:
 <li>YES: set as default subtitle;</li>
 <li>NO: not set as default subtitle (default value).</li>
      */

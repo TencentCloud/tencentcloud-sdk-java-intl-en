@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RoundPlayFilePlayInfo extends AbstractModel {
 
     /**
-    * Playlist program ID assigned by the system.
+    * Playlist item ID, assigned by the system.
     */
     @SerializedName("ItemId")
     @Expose
@@ -45,7 +45,7 @@ public class RoundPlayFilePlayInfo extends AbstractModel {
     private String StartPlayTime;
 
     /**
-    * Playback duration, in seconds.
+    * Playback duration in seconds.
     */
     @SerializedName("Duration")
     @Expose
@@ -59,16 +59,16 @@ public class RoundPlayFilePlayInfo extends AbstractModel {
     private Float Progress;
 
     /**
-     * Get Playlist program ID assigned by the system. 
-     * @return ItemId Playlist program ID assigned by the system.
+     * Get Playlist item ID, assigned by the system. 
+     * @return ItemId Playlist item ID, assigned by the system.
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set Playlist program ID assigned by the system.
-     * @param ItemId Playlist program ID assigned by the system.
+     * Set Playlist item ID, assigned by the system.
+     * @param ItemId Playlist item ID, assigned by the system.
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;
@@ -107,16 +107,16 @@ public class RoundPlayFilePlayInfo extends AbstractModel {
     }
 
     /**
-     * Get Playback duration, in seconds. 
-     * @return Duration Playback duration, in seconds.
+     * Get Playback duration in seconds. 
+     * @return Duration Playback duration in seconds.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Playback duration, in seconds.
-     * @param Duration Playback duration, in seconds.
+     * Set Playback duration in seconds.
+     * @param Duration Playback duration in seconds.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;

@@ -52,7 +52,7 @@ public class AiReviewTaskPornResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input of offensive content involved in audio/video moderation.
+    * Task input for offensive content involved in audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
@@ -137,16 +137,16 @@ public class AiReviewTaskPornResult extends AbstractModel {
     }
 
     /**
-     * Get Task input of offensive content involved in audio/video moderation. 
-     * @return Input Task input of offensive content involved in audio/video moderation.
+     * Get Task input for offensive content involved in audio/video moderation. 
+     * @return Input Task input for offensive content involved in audio/video moderation.
      */
     public AiReviewPornTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input of offensive content involved in audio/video moderation.
-     * @param Input Task input of offensive content involved in audio/video moderation.
+     * Set Task input for offensive content involved in audio/video moderation.
+     * @param Input Task input for offensive content involved in audio/video moderation.
      */
     public void setInput(AiReviewPornTaskInput Input) {
         this.Input = Input;

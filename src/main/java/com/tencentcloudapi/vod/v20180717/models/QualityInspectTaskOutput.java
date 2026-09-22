@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class QualityInspectTaskOutput extends AbstractModel {
 
     /**
-    * <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
+    * <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, no audio track.</li>
     */
     @SerializedName("NoAudio")
     @Expose
     private Long NoAudio;
 
     /**
-    * <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
+    * <p>Whether the media file has no video track. Value range:</p><li>0: No, meaning it has a video track;</li><li>1: Yes, meaning it has no video track.</li>
     */
     @SerializedName("NoVideo")
     @Expose
@@ -80,32 +80,32 @@ public class QualityInspectTaskOutput extends AbstractModel {
     private QualityInspectLLMDetectionReport LLMDetectionReport;
 
     /**
-     * Get <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li> 
-     * @return NoAudio <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
+     * Get <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, no audio track.</li> 
+     * @return NoAudio <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, no audio track.</li>
      */
     public Long getNoAudio() {
         return this.NoAudio;
     }
 
     /**
-     * Set <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
-     * @param NoAudio <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
+     * Set <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, no audio track.</li>
+     * @param NoAudio <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, no audio track.</li>
      */
     public void setNoAudio(Long NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li> 
-     * @return NoVideo <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
+     * Get <p>Whether the media file has no video track. Value range:</p><li>0: No, meaning it has a video track;</li><li>1: Yes, meaning it has no video track.</li> 
+     * @return NoVideo <p>Whether the media file has no video track. Value range:</p><li>0: No, meaning it has a video track;</li><li>1: Yes, meaning it has no video track.</li>
      */
     public Long getNoVideo() {
         return this.NoVideo;
     }
 
     /**
-     * Set <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
-     * @param NoVideo <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
+     * Set <p>Whether the media file has no video track. Value range:</p><li>0: No, meaning it has a video track;</li><li>1: Yes, meaning it has no video track.</li>
+     * @param NoVideo <p>Whether the media file has no video track. Value range:</p><li>0: No, meaning it has a video track;</li><li>1: Yes, meaning it has no video track.</li>
      */
     public void setNoVideo(Long NoVideo) {
         this.NoVideo = NoVideo;

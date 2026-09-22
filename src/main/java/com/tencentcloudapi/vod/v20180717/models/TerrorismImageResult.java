@@ -41,7 +41,7 @@ public class TerrorismImageResult extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Result tag for authentication involving unsafe information. Value range:
+    * Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -99,7 +99,7 @@ public class TerrorismImageResult extends AbstractModel {
     }
 
     /**
-     * Get Result tag for authentication involving unsafe information. Value range:
+     * Get Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -107,7 +107,7 @@ public class TerrorismImageResult extends AbstractModel {
 <li>banners: violent and terrorist flags;</li>
 <li>explosion: explosions and fires;</li>
 <li>scenario: Violent and terrorist visuals.</li> 
-     * @return Label Result tag for authentication involving unsafe information. Value range:
+     * @return Label Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -121,7 +121,7 @@ public class TerrorismImageResult extends AbstractModel {
     }
 
     /**
-     * Set Result tag for authentication involving unsafe information. Value range:
+     * Set Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>
@@ -129,7 +129,7 @@ public class TerrorismImageResult extends AbstractModel {
 <li>banners: violent and terrorist flags;</li>
 <li>explosion: explosions and fires;</li>
 <li>scenario: Violent and terrorist visuals.</li>
-     * @param Label Result tag for authentication involving unsafe information. Value range:
+     * @param Label Tag of the authentication result involving unsafe information. Value range:
 <li>guns: weapons and firearms;</li>
 <li>crowd: crowd gathering;</li>
 <li>police: police force;</li>

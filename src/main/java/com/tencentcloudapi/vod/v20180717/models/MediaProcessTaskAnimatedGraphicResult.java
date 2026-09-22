@@ -52,7 +52,7 @@ public class MediaProcessTaskAnimatedGraphicResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input of the animated image task.
+    * Input of the rotating image task.
     */
     @SerializedName("Input")
     @Expose
@@ -66,14 +66,14 @@ public class MediaProcessTaskAnimatedGraphicResult extends AbstractModel {
     private MediaAnimatedGraphicsItem Output;
 
     /**
-    * Progress of the rotating image task. Value range: 0-100.
+    * Rotating image task progress, value ranges from 0 to 100.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -151,16 +151,16 @@ public class MediaProcessTaskAnimatedGraphicResult extends AbstractModel {
     }
 
     /**
-     * Get Input of the animated image task. 
-     * @return Input Input of the animated image task.
+     * Get Input of the rotating image task. 
+     * @return Input Input of the rotating image task.
      */
     public AnimatedGraphicTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the animated image task.
-     * @param Input Input of the animated image task.
+     * Set Input of the rotating image task.
+     * @param Input Input of the rotating image task.
      */
     public void setInput(AnimatedGraphicTaskInput Input) {
         this.Input = Input;
@@ -183,32 +183,32 @@ public class MediaProcessTaskAnimatedGraphicResult extends AbstractModel {
     }
 
     /**
-     * Get Progress of the rotating image task. Value range: 0-100. 
-     * @return Progress Progress of the rotating image task. Value range: 0-100.
+     * Get Rotating image task progress, value ranges from 0 to 100. 
+     * @return Progress Rotating image task progress, value ranges from 0 to 100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the rotating image task. Value range: 0-100.
-     * @param Progress Progress of the rotating image task. Value range: 0-100.
+     * Set Rotating image task progress, value ranges from 0 to 100.
+     * @param Progress Rotating image task progress, value ranges from 0 to 100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;

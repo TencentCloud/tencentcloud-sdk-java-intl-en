@@ -26,7 +26,7 @@ public class JitterConfigureInfoForUpdate extends AbstractModel {
     /**
     * Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -35,10 +35,10 @@ public class JitterConfigureInfoForUpdate extends AbstractModel {
     /**
      * Get Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li> 
+<li>OFF: disabled</li> 
      * @return Switch Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -47,10 +47,10 @@ public class JitterConfigureInfoForUpdate extends AbstractModel {
     /**
      * Set Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      * @param Switch Video frame jitter and ghosting detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

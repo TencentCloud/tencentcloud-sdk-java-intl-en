@@ -25,15 +25,15 @@ public class AuthenticationTypeB extends AbstractModel {
 
     /**
     * Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * Signature expiration time settings;
-In seconds. Maximum settable value: 630720000.
+    * Signature expiration time setting;
+In seconds. The maximum settable value is 630720000.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -48,8 +48,8 @@ If it contains the character *, it means all files.
     private String [] FileExtensions;
 
     /**
-    * whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+    * whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
     */
     @SerializedName("FilterType")
     @Expose
@@ -57,7 +57,7 @@ blacklist: blocklist, which means authentication is only applicable to the types
 
     /**
     * Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
     */
     @SerializedName("BackupSecretKey")
     @Expose
@@ -65,9 +65,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
     /**
      * Get Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters. 
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters. 
      * @return SecretKey Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -75,29 +75,29 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
     /**
      * Set Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      * @param SecretKey Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get Signature expiration time settings;
-In seconds. Maximum settable value: 630720000. 
-     * @return ExpireTime Signature expiration time settings;
-In seconds. Maximum settable value: 630720000.
+     * Get Signature expiration time setting;
+In seconds. The maximum settable value is 630720000. 
+     * @return ExpireTime Signature expiration time setting;
+In seconds. The maximum settable value is 630720000.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Signature expiration time settings;
-In seconds. Maximum settable value: 630720000.
-     * @param ExpireTime Signature expiration time settings;
-In seconds. Maximum settable value: 630720000.
+     * Set Signature expiration time setting;
+In seconds. The maximum settable value is 630720000.
+     * @param ExpireTime Signature expiration time setting;
+In seconds. The maximum settable value is 630720000.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -124,20 +124,20 @@ If it contains the character *, it means all files.
     }
 
     /**
-     * Get whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions. 
-     * @return FilterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+     * Get whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions. 
+     * @return FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
-     * @param FilterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+     * Set whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
+     * @param FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
@@ -145,9 +145,9 @@ blacklist: blocklist, which means authentication is only applicable to the types
 
     /**
      * Get Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters. 
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters. 
      * @return BackupSecretKey Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      */
     public String getBackupSecretKey() {
         return this.BackupSecretKey;
@@ -155,9 +155,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
     /**
      * Set Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      * @param BackupSecretKey Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      */
     public void setBackupSecretKey(String BackupSecretKey) {
         this.BackupSecretKey = BackupSecretKey;

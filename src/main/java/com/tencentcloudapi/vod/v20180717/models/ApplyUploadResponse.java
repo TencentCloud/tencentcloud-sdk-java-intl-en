@@ -38,14 +38,14 @@ public class ApplyUploadResponse extends AbstractModel {
     private String StorageRegion;
 
     /**
-    * <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+    * <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
     */
     @SerializedName("VodSessionKey")
     @Expose
     private String VodSessionKey;
 
     /**
-    * <p>Media storage path, the object Key for storing media uploaded through the API.</p>
+    * <p>Media storage path, the object Key for uploading and storing media through the API.</p>
     */
     @SerializedName("MediaStoragePath")
     @Expose
@@ -105,32 +105,32 @@ public class ApplyUploadResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p> 
-     * @return VodSessionKey <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+     * Get <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p> 
+     * @return VodSessionKey <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
      */
     public String getVodSessionKey() {
         return this.VodSessionKey;
     }
 
     /**
-     * Set <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
-     * @param VodSessionKey <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+     * Set <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
+     * @param VodSessionKey <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
      */
     public void setVodSessionKey(String VodSessionKey) {
         this.VodSessionKey = VodSessionKey;
     }
 
     /**
-     * Get <p>Media storage path, the object Key for storing media uploaded through the API.</p> 
-     * @return MediaStoragePath <p>Media storage path, the object Key for storing media uploaded through the API.</p>
+     * Get <p>Media storage path, the object Key for uploading and storing media through the API.</p> 
+     * @return MediaStoragePath <p>Media storage path, the object Key for uploading and storing media through the API.</p>
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set <p>Media storage path, the object Key for storing media uploaded through the API.</p>
-     * @param MediaStoragePath <p>Media storage path, the object Key for storing media uploaded through the API.</p>
+     * Set <p>Media storage path, the object Key for uploading and storing media through the API.</p>
+     * @param MediaStoragePath <p>Media storage path, the object Key for uploading and storing media through the API.</p>
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;

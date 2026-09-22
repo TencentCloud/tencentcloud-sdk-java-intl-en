@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ParseStreamingManifestResponse extends AbstractModel {
 
     /**
-    * <p>Fragment file list.</p>
+    * <p>Shard file list.</p>
     */
     @SerializedName("MediaSegmentSet")
     @Expose
@@ -38,16 +38,16 @@ public class ParseStreamingManifestResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Fragment file list.</p> 
-     * @return MediaSegmentSet <p>Fragment file list.</p>
+     * Get <p>Shard file list.</p> 
+     * @return MediaSegmentSet <p>Shard file list.</p>
      */
     public String [] getMediaSegmentSet() {
         return this.MediaSegmentSet;
     }
 
     /**
-     * Set <p>Fragment file list.</p>
-     * @param MediaSegmentSet <p>Fragment file list.</p>
+     * Set <p>Shard file list.</p>
+     * @param MediaSegmentSet <p>Shard file list.</p>
      */
     public void setMediaSegmentSet(String [] MediaSegmentSet) {
         this.MediaSegmentSet = MediaSegmentSet;

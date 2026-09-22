@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CacheConfigNoCache extends AbstractModel {
 
     /**
-    * Path cache no cache configuration toggle, Value:
+    * Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -33,7 +33,7 @@ public class CacheConfigNoCache extends AbstractModel {
     private String Switch;
 
     /**
-    * Always validate against the origin server. Value:
+    * Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -42,10 +42,10 @@ public class CacheConfigNoCache extends AbstractModel {
     private String Revalidate;
 
     /**
-     * Get Path cache no cache configuration toggle, Value:
+     * Get Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Path cache no cache configuration toggle, Value:
+     * @return Switch Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -54,10 +54,10 @@ public class CacheConfigNoCache extends AbstractModel {
     }
 
     /**
-     * Set Path cache no cache configuration toggle, Value:
+     * Set Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Path cache no cache configuration toggle, Value:
+     * @param Switch Path cache no cache configuration configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -66,10 +66,10 @@ public class CacheConfigNoCache extends AbstractModel {
     }
 
     /**
-     * Get Always validate against the origin server. Value:
+     * Get Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Revalidate Always validate against the origin server. Value:
+     * @return Revalidate Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -78,10 +78,10 @@ public class CacheConfigNoCache extends AbstractModel {
     }
 
     /**
-     * Set Always validate against the origin server. Value:
+     * Set Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Revalidate Always validate against the origin server. Value:
+     * @param Revalidate Always validate with the origin server. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

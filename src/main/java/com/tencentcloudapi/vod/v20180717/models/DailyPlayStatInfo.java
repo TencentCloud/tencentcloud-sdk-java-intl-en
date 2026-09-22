@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DailyPlayStatInfo extends AbstractModel {
 
     /**
-    * <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("Date")
     @Expose
@@ -52,16 +52,16 @@ public class DailyPlayStatInfo extends AbstractModel {
     private Long Traffic;
 
     /**
-     * Get <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return Date <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return Date <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param Date <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param Date <p>Date of playing the media file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setDate(String Date) {
         this.Date = Date;

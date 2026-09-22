@@ -52,7 +52,7 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input of the image sprite task for videos.
+    * Input of the image sprite task for a video.
     */
     @SerializedName("Input")
     @Expose
@@ -66,7 +66,7 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     private MediaImageSpriteItem Output;
 
     /**
-    * Video image sprite task progress, in the range of [0,100].
+    * Progress of the image sprite task for videos. Value range: 0-100.
     */
     @SerializedName("Progress")
     @Expose
@@ -80,7 +80,7 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     private String BeginProcessTime;
 
     /**
-    * Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -151,16 +151,16 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     }
 
     /**
-     * Get Input of the image sprite task for videos. 
-     * @return Input Input of the image sprite task for videos.
+     * Get Input of the image sprite task for a video. 
+     * @return Input Input of the image sprite task for a video.
      */
     public ImageSpriteTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the image sprite task for videos.
-     * @param Input Input of the image sprite task for videos.
+     * Set Input of the image sprite task for a video.
+     * @param Input Input of the image sprite task for a video.
      */
     public void setInput(ImageSpriteTaskInput Input) {
         this.Input = Input;
@@ -183,16 +183,16 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     }
 
     /**
-     * Get Video image sprite task progress, in the range of [0,100]. 
-     * @return Progress Video image sprite task progress, in the range of [0,100].
+     * Get Progress of the image sprite task for videos. Value range: 0-100. 
+     * @return Progress Progress of the image sprite task for videos. Value range: 0-100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Video image sprite task progress, in the range of [0,100].
-     * @param Progress Video image sprite task progress, in the range of [0,100].
+     * Set Progress of the image sprite task for videos. Value range: 0-100.
+     * @param Progress Progress of the image sprite task for videos. Value range: 0-100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -215,16 +215,16 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     }
 
     /**
-     * Get Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

@@ -25,12 +25,12 @@ public class ContentReviewResult extends AbstractModel {
 
     /**
     * Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -44,14 +44,14 @@ public class ContentReviewResult extends AbstractModel {
     private PornImageResult PornImageResult;
 
     /**
-    * Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+    * Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
     */
     @SerializedName("TerrorismImageResult")
     @Expose
     private TerrorismImageResult TerrorismImageResult;
 
     /**
-    * Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+    * Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
     */
     @SerializedName("PoliticalImageResult")
     @Expose
@@ -72,7 +72,7 @@ public class ContentReviewResult extends AbstractModel {
     private ContentReviewOcrResult TerrorismOcrResult;
 
     /**
-    * The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+    * Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
     */
     @SerializedName("PoliticalOcrResult")
     @Expose
@@ -80,19 +80,19 @@ public class ContentReviewResult extends AbstractModel {
 
     /**
      * Get Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li> 
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li> 
      * @return Type Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
      */
     public String getType() {
         return this.Type;
@@ -100,19 +100,19 @@ public class ContentReviewResult extends AbstractModel {
 
     /**
      * Set Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
      * @param Type Result type. Valid values:
-<li>Porn.Image: authentication result of offensive content in the image;</li>
+<li>Porn.Image: Authentication result for offensive content in the image;</li>
 <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-<li>Political.Image: authentication result of inappropriate information in the image;</li>
-<li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+<li>Political.Image: authentication of inappropriate information results in images;</li>
+<li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
 <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-<li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+<li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -135,32 +135,32 @@ public class ContentReviewResult extends AbstractModel {
     }
 
     /**
-     * Get Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image. 
-     * @return TerrorismImageResult Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+     * Get Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image. 
+     * @return TerrorismImageResult Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
      */
     public TerrorismImageResult getTerrorismImageResult() {
         return this.TerrorismImageResult;
     }
 
     /**
-     * Set Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
-     * @param TerrorismImageResult Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+     * Set Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
+     * @param TerrorismImageResult Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
      */
     public void setTerrorismImageResult(TerrorismImageResult TerrorismImageResult) {
         this.TerrorismImageResult = TerrorismImageResult;
     }
 
     /**
-     * Get Authentication of inappropriate information results in the image. Valid when Type is Political.Image. 
-     * @return PoliticalImageResult Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+     * Get Authentication result for inappropriate information in the image. Valid when Type is Political.Image. 
+     * @return PoliticalImageResult Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
      */
     public PoliticalImageResult getPoliticalImageResult() {
         return this.PoliticalImageResult;
     }
 
     /**
-     * Set Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
-     * @param PoliticalImageResult Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+     * Set Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
+     * @param PoliticalImageResult Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
      */
     public void setPoliticalImageResult(PoliticalImageResult PoliticalImageResult) {
         this.PoliticalImageResult = PoliticalImageResult;
@@ -199,16 +199,16 @@ public class ContentReviewResult extends AbstractModel {
     }
 
     /**
-     * Get The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr. 
-     * @return PoliticalOcrResult The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+     * Get Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr. 
+     * @return PoliticalOcrResult Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
      */
     public ContentReviewOcrResult getPoliticalOcrResult() {
         return this.PoliticalOcrResult;
     }
 
     /**
-     * Set The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
-     * @param PoliticalOcrResult The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+     * Set Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
+     * @param PoliticalOcrResult Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
      */
     public void setPoliticalOcrResult(ContentReviewOcrResult PoliticalOcrResult) {
         this.PoliticalOcrResult = PoliticalOcrResult;

@@ -59,7 +59,7 @@ public class AiReviewTaskTerrorismResult extends AbstractModel {
     private AiReviewTerrorismTaskInput Input;
 
     /**
-    * Task output involving unsafe information in audio/video moderation.
+    * Task output of audio and video moderation involving unsafe information.
     */
     @SerializedName("Output")
     @Expose
@@ -153,16 +153,16 @@ public class AiReviewTaskTerrorismResult extends AbstractModel {
     }
 
     /**
-     * Get Task output involving unsafe information in audio/video moderation. 
-     * @return Output Task output involving unsafe information in audio/video moderation.
+     * Get Task output of audio and video moderation involving unsafe information. 
+     * @return Output Task output of audio and video moderation involving unsafe information.
      */
     public AiReviewTerrorismTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Task output involving unsafe information in audio/video moderation.
-     * @param Output Task output involving unsafe information in audio/video moderation.
+     * Set Task output of audio and video moderation involving unsafe information.
+     * @param Output Task output of audio and video moderation involving unsafe information.
      */
     public void setOutput(AiReviewTerrorismTaskOutput Output) {
         this.Output = Output;

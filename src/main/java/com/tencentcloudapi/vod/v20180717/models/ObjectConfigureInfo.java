@@ -35,9 +35,9 @@ public class ObjectConfigureInfo extends AbstractModel {
     /**
     * Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously.
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library.
     */
     @SerializedName("ObjectLibrary")
     @Expose
@@ -70,14 +70,14 @@ Default value: All. The default object library and user-defined object library a
     /**
      * Get Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously. 
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library. 
      * @return ObjectLibrary Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously.
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library.
      */
     public String getObjectLibrary() {
         return this.ObjectLibrary;
@@ -86,14 +86,14 @@ Default value: All. The default object library and user-defined object library a
     /**
      * Set Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously.
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library.
      * @param ObjectLibrary Object library selection. Valid values:
 <li>Default: use the default object library;</li>
-<li>UserDefine: Use the user-defined object library.</li>
-<li>All: Use both the default object library and the user-defined object library.</li>
-Default value: All. The default object library and user-defined object library are used simultaneously.
+<li>UserDefine: use the user-defined object library.</li>
+<li>All: use both the default object library and the user-defined object library.</li>
+Default value: All. Use both the default object library and the user-defined object library.
      */
     public void setObjectLibrary(String ObjectLibrary) {
         this.ObjectLibrary = ObjectLibrary;

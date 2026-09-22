@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiReviewPornAsrTaskInput extends AbstractModel {
 
     /**
-    * Template ID for authentication involving offensive content.
+    * Template ID for authenticating content that involves offensive information.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Template ID for authentication involving offensive content. 
-     * @return Definition Template ID for authentication involving offensive content.
+     * Get Template ID for authenticating content that involves offensive information. 
+     * @return Definition Template ID for authenticating content that involves offensive information.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Template ID for authentication involving offensive content.
-     * @param Definition Template ID for authentication involving offensive content.
+     * Set Template ID for authenticating content that involves offensive information.
+     * @param Definition Template ID for authenticating content that involves offensive information.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

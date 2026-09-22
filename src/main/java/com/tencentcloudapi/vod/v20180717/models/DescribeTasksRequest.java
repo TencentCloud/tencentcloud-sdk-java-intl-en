@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeTasksRequest extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Filter criteria: file ID.</p>
+    * <p>Filtering Conditions: file ID.</p>
     */
     @SerializedName("FileId")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeTasksRequest extends AbstractModel {
     private TimeRange FinishTime;
 
     /**
-    * <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+    * <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
     */
     @SerializedName("Sort")
     @Expose
@@ -80,16 +80,16 @@ public class DescribeTasksRequest extends AbstractModel {
     private String ScrollToken;
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -112,16 +112,16 @@ public class DescribeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filter criteria: file ID.</p> 
-     * @return FileId <p>Filter criteria: file ID.</p>
+     * Get <p>Filtering Conditions: file ID.</p> 
+     * @return FileId <p>Filtering Conditions: file ID.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>Filter criteria: file ID.</p>
-     * @param FileId <p>Filter criteria: file ID.</p>
+     * Set <p>Filtering Conditions: file ID.</p>
+     * @param FileId <p>Filtering Conditions: file ID.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -160,16 +160,16 @@ public class DescribeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li> 
-     * @return Sort <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+     * Get <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li> 
+     * @return Sort <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
      */
     public SortBy getSort() {
         return this.Sort;
     }
 
     /**
-     * Set <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
-     * @param Sort <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+     * Set <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+     * @param Sort <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
      */
     public void setSort(SortBy Sort) {
         this.Sort = Sort;

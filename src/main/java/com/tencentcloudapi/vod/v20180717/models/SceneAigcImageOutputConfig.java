@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class SceneAigcImageOutputConfig extends AbstractModel {
 
     /**
-    * <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+    * <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
+    * <p>Output filename, up to 64 characters. By default, the system specifies the generated filename.</p>
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+    * <p>Category ID, used to categorize and manage media. You can create a category via the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+    * <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
+    * <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, it adaptively adjusts based on the original image.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
     */
     @SerializedName("AspectRatio")
     @Expose
@@ -73,7 +73,7 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private Long ImageWidth;
 
     /**
-    * <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
+    * <p>Output image height. <strong>Only valid in AI image expansion scenarios</strong>.</p>
     */
     @SerializedName("ImageHeight")
     @Expose
@@ -87,80 +87,80 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private String Resolution;
 
     /**
-     * Get <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p> 
-     * @return StorageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+     * Get <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p> 
+     * @return StorageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
-     * @param StorageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+     * Set <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+     * @param StorageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p> 
-     * @return MediaName <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
+     * Get <p>Output filename, up to 64 characters. By default, the system specifies the generated filename.</p> 
+     * @return MediaName <p>Output filename, up to 64 characters. By default, the system specifies the generated filename.</p>
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
-     * @param MediaName <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
+     * Set <p>Output filename, up to 64 characters. By default, the system specifies the generated filename.</p>
+     * @param MediaName <p>Output filename, up to 64 characters. By default, the system specifies the generated filename.</p>
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li> 
-     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+     * Get <p>Category ID, used to categorize and manage media. You can create a category via the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li> 
+     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category via the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
-     * @param ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+     * Set <p>Category ID, used to categorize and manage media. You can create a category via the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+     * @param ClassId <p>Category ID, used to categorize and manage media. You can create a category via the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
-     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * Get <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
+     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * Set <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul> 
-     * @return AspectRatio <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
+     * Get <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, it adaptively adjusts based on the original image.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul> 
+     * @return AspectRatio <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, it adaptively adjusts based on the original image.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
-     * @param AspectRatio <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
+     * Set <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, it adaptively adjusts based on the original image.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
+     * @param AspectRatio <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, it adaptively adjusts based on the original image.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
@@ -199,16 +199,16 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p> 
-     * @return ImageHeight <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
+     * Get <p>Output image height. <strong>Only valid in AI image expansion scenarios</strong>.</p> 
+     * @return ImageHeight <p>Output image height. <strong>Only valid in AI image expansion scenarios</strong>.</p>
      */
     public Long getImageHeight() {
         return this.ImageHeight;
     }
 
     /**
-     * Set <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
-     * @param ImageHeight <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
+     * Set <p>Output image height. <strong>Only valid in AI image expansion scenarios</strong>.</p>
+     * @param ImageHeight <p>Output image height. <strong>Only valid in AI image expansion scenarios</strong>.</p>
      */
     public void setImageHeight(Long ImageHeight) {
         this.ImageHeight = ImageHeight;

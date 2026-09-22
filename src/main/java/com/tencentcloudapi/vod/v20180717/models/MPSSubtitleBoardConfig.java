@@ -31,7 +31,7 @@ public class MPSSubtitleBoardConfig extends AbstractModel {
     private Long SubtitleBoardConfigSwitch;
 
     /**
-    * <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+    * <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
     */
     @SerializedName("BoardX")
     @Expose
@@ -52,14 +52,14 @@ public class MPSSubtitleBoardConfig extends AbstractModel {
     private Long BoardY;
 
     /**
-    * <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+    * <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
     */
     @SerializedName("BoardYUnit")
     @Expose
     private Long BoardYUnit;
 
     /**
-    * <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+    * <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
     */
     @SerializedName("BoardWidth")
     @Expose
@@ -73,7 +73,7 @@ public class MPSSubtitleBoardConfig extends AbstractModel {
     private Long BoardWidthUnit;
 
     /**
-    * <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+    * <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
     */
     @SerializedName("BoardHeight")
     @Expose
@@ -94,7 +94,7 @@ public class MPSSubtitleBoardConfig extends AbstractModel {
     private String BoardColor;
 
     /**
-    * <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+    * <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
     */
     @SerializedName("BoardAlpha")
     @Expose
@@ -117,16 +117,16 @@ public class MPSSubtitleBoardConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p> 
-     * @return BoardX <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+     * Get <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p> 
+     * @return BoardX <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
      */
     public Long getBoardX() {
         return this.BoardX;
     }
 
     /**
-     * Set <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
-     * @param BoardX <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+     * Set <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+     * @param BoardX <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
      */
     public void setBoardX(Long BoardX) {
         this.BoardX = BoardX;
@@ -165,32 +165,32 @@ public class MPSSubtitleBoardConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p> 
-     * @return BoardYUnit <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * Get <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p> 
+     * @return BoardYUnit <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
      */
     public Long getBoardYUnit() {
         return this.BoardYUnit;
     }
 
     /**
-     * Set <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
-     * @param BoardYUnit <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+     * Set <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
+     * @param BoardYUnit <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
      */
     public void setBoardYUnit(Long BoardYUnit) {
         this.BoardYUnit = BoardYUnit;
     }
 
     /**
-     * Get <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p> 
-     * @return BoardWidth <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+     * Get <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p> 
+     * @return BoardWidth <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
      */
     public Long getBoardWidth() {
         return this.BoardWidth;
     }
 
     /**
-     * Set <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
-     * @param BoardWidth <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+     * Set <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+     * @param BoardWidth <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
      */
     public void setBoardWidth(Long BoardWidth) {
         this.BoardWidth = BoardWidth;
@@ -213,16 +213,16 @@ public class MPSSubtitleBoardConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p> 
-     * @return BoardHeight <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+     * Get <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p> 
+     * @return BoardHeight <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
      */
     public Long getBoardHeight() {
         return this.BoardHeight;
     }
 
     /**
-     * Set <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
-     * @param BoardHeight <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+     * Set <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+     * @param BoardHeight <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
      */
     public void setBoardHeight(Long BoardHeight) {
         this.BoardHeight = BoardHeight;
@@ -261,16 +261,16 @@ public class MPSSubtitleBoardConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p> 
-     * @return BoardAlpha <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+     * Get <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p> 
+     * @return BoardAlpha <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
      */
     public Float getBoardAlpha() {
         return this.BoardAlpha;
     }
 
     /**
-     * Set <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
-     * @param BoardAlpha <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+     * Set <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+     * @param BoardAlpha <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
      */
     public void setBoardAlpha(Float BoardAlpha) {
         this.BoardAlpha = BoardAlpha;

@@ -52,21 +52,21 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input for audio/video moderation where Ocr text involves unsafe information.
+    * Task input of Ocr text involving unsafe information in audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewTerrorismOcrTaskInput Input;
 
     /**
-    * Task output of audio/video moderation involving unsafe information in Ocr text.
+    * Task output of Ocr text involving unsafe information in video moderation.
     */
     @SerializedName("Output")
     @Expose
     private AiReviewTerrorismOcrTaskOutput Output;
 
     /**
-    * Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+    * Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
     */
     @SerializedName("Progress")
     @Expose
@@ -137,48 +137,48 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel {
     }
 
     /**
-     * Get Task input for audio/video moderation where Ocr text involves unsafe information. 
-     * @return Input Task input for audio/video moderation where Ocr text involves unsafe information.
+     * Get Task input of Ocr text involving unsafe information in audio/video moderation. 
+     * @return Input Task input of Ocr text involving unsafe information in audio/video moderation.
      */
     public AiReviewTerrorismOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input for audio/video moderation where Ocr text involves unsafe information.
-     * @param Input Task input for audio/video moderation where Ocr text involves unsafe information.
+     * Set Task input of Ocr text involving unsafe information in audio/video moderation.
+     * @param Input Task input of Ocr text involving unsafe information in audio/video moderation.
      */
     public void setInput(AiReviewTerrorismOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Task output of audio/video moderation involving unsafe information in Ocr text. 
-     * @return Output Task output of audio/video moderation involving unsafe information in Ocr text.
+     * Get Task output of Ocr text involving unsafe information in video moderation. 
+     * @return Output Task output of Ocr text involving unsafe information in video moderation.
      */
     public AiReviewTerrorismOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Task output of audio/video moderation involving unsafe information in Ocr text.
-     * @param Output Task output of audio/video moderation involving unsafe information in Ocr text.
+     * Set Task output of Ocr text involving unsafe information in video moderation.
+     * @param Output Task output of Ocr text involving unsafe information in video moderation.
      */
     public void setOutput(AiReviewTerrorismOcrTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100]. 
-     * @return Progress Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+     * Get Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100]. 
+     * @return Progress Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
-     * @param Progress Task progress of Ocr text involving unsafe information in audio/video moderation, in the range of [0,100].
+     * Set Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
+     * @param Progress Task progress of Ocr text, audio, and video moderation involving unsafe information, in the range of [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

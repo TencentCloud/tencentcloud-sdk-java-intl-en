@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Referer extends AbstractModel {
 
     /**
-    * Referrer blocklist/allowlist configuration switch. Value:
+    * Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -40,10 +40,10 @@ public class Referer extends AbstractModel {
     private RefererRule [] RefererRules;
 
     /**
-     * Get Referrer blocklist/allowlist configuration switch. Value:
+     * Get Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Referrer blocklist/allowlist configuration switch. Value:
+     * @return Switch Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -52,10 +52,10 @@ public class Referer extends AbstractModel {
     }
 
     /**
-     * Set Referrer blocklist/allowlist configuration switch. Value:
+     * Set Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Referrer blocklist/allowlist configuration switch. Value:
+     * @param Switch Referrer blocklist configuration switch. Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

@@ -45,21 +45,21 @@ public class CreateSubAppIdRequest extends AbstractModel {
     private String Type;
 
     /**
-    * <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+    * <p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+    * <p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * <p>tag that this application should be bound to</p>
+    * <p>tag that should be bound to this application</p>
     */
     @SerializedName("Tags")
     @Expose
@@ -114,48 +114,48 @@ public class CreateSubAppIdRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul> 
-     * @return Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+     * Get <p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul> 
+     * @return Mode <p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
-     * @param Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>Leave empty to use FileID mode only by default</li></ul>
+     * Set <p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
+     * @param Mode <p>Mode of this app. Available values are:</p><ul><li>fileid: FileID mode only</li><li>fileid+path: FileID &amp; Path mode<br>If left empty, FileID mode only is selected by default</li></ul>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p> 
-     * @return StorageRegion <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+     * Get <p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p> 
+     * @return StorageRegion <p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
-     * @param StorageRegion <p>When Mode is fileid only, it is used to set the default storage region. This is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+     * Set <p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
+     * @param StorageRegion <p>When Mode is fileid only, it is used to set the default storage region. This parameter is optional.<br>When Mode is fileid+path, it is used to specify the storage region. This parameter is required.</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">supported region list</a></p>
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get <p>tag that this application should be bound to</p> 
-     * @return Tags <p>tag that this application should be bound to</p>
+     * Get <p>tag that should be bound to this application</p> 
+     * @return Tags <p>tag that should be bound to this application</p>
      */
     public ResourceTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set <p>tag that this application should be bound to</p>
-     * @param Tags <p>tag that this application should be bound to</p>
+     * Set <p>tag that should be bound to this application</p>
+     * @param Tags <p>tag that should be bound to this application</p>
      */
     public void setTags(ResourceTag [] Tags) {
         this.Tags = Tags;

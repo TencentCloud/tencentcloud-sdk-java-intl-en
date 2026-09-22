@@ -31,7 +31,7 @@ public class DescribeCLSPushTargetsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Domain name push to CLS target list.
+    * Domain name push CLS target list.
     */
     @SerializedName("DomainCLSTargets")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeCLSPushTargetsResponse extends AbstractModel {
     }
 
     /**
-     * Get Domain name push to CLS target list. 
-     * @return DomainCLSTargets Domain name push to CLS target list.
+     * Get Domain name push CLS target list. 
+     * @return DomainCLSTargets Domain name push CLS target list.
      */
     public DomainCLSTargetInfo [] getDomainCLSTargets() {
         return this.DomainCLSTargets;
     }
 
     /**
-     * Set Domain name push to CLS target list.
-     * @param DomainCLSTargets Domain name push to CLS target list.
+     * Set Domain name push CLS target list.
+     * @param DomainCLSTargets Domain name push CLS target list.
      */
     public void setDomainCLSTargets(DomainCLSTargetInfo [] DomainCLSTargets) {
         this.DomainCLSTargets = DomainCLSTargets;

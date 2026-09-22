@@ -40,7 +40,7 @@ public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
     private ReduceMediaBitrateTranscodeResult TranscodeTask;
 
     /**
-    * Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+    * Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
@@ -87,16 +87,16 @@ public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
     }
 
     /**
-     * Get Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`. 
-     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+     * Get Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`. 
+     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
      */
     public ReduceMediaBitrateAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Set Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
-     * @param AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+     * Set Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+     * @param AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in a bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
      */
     public void setAdaptiveDynamicStreamingTask(ReduceMediaBitrateAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;

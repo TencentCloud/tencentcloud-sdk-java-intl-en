@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class QRCodeConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Video frame QR code detection switch. Available values:
+    * QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Video frame QR code detection switch. Available values:
+     * Get QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li> 
-     * @return Switch Video frame QR code detection switch. Available values:
+<li>OFF: disabled</li> 
+     * @return Switch QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Video frame QR code detection switch. Available values:
+     * Set QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-     * @param Switch Video frame QR code detection switch. Available values:
+<li>OFF: disabled</li>
+     * @param Switch QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

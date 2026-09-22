@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSceneAigcImageTaskRequest extends AbstractModel {
 
     /**
-    * **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+    * **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,9 +38,9 @@ public class CreateSceneAigcImageTaskRequest extends AbstractModel {
     private AigcImageSceneInfo SceneInfo;
 
     /**
-    * Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+    * Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
     */
     @SerializedName("FileInfos")
@@ -48,21 +48,21 @@ public class CreateSceneAigcImageTaskRequest extends AbstractModel {
     private SceneAigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * Output media file configuration for scenario-based image generation tasks.
+    * Configuration of the output media file for a scenario-based image generation task.
     */
     @SerializedName("OutputConfig")
     @Expose
     private SceneAigcImageOutputConfig OutputConfig;
 
     /**
-    * An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+    * Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+    * Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
@@ -83,16 +83,16 @@ public class CreateSceneAigcImageTaskRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
-     * Get **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).** 
-     * @return SubAppId **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+     * Get **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.** 
+     * @return SubAppId **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
-     * @param SubAppId **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+     * Set **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
+     * @param SubAppId **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -115,13 +115,13 @@ public class CreateSceneAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+     * Get Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles. 
-     * @return FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+     * @return FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
      */
     public SceneAigcImageTaskInputFileInfo [] getFileInfos() {
@@ -129,13 +129,13 @@ public class CreateSceneAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+     * Set Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
-     * @param FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+     * @param FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
 
-- AI outfit change scenario: Input Only 1 **model** image.
+- AI outfit changing scenario: Input Only 1 **model** image.
 - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
      */
     public void setFileInfos(SceneAigcImageTaskInputFileInfo [] FileInfos) {
@@ -143,48 +143,48 @@ public class CreateSceneAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Output media file configuration for scenario-based image generation tasks. 
-     * @return OutputConfig Output media file configuration for scenario-based image generation tasks.
+     * Get Configuration of the output media file for a scenario-based image generation task. 
+     * @return OutputConfig Configuration of the output media file for a scenario-based image generation task.
      */
     public SceneAigcImageOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Output media file configuration for scenario-based image generation tasks.
-     * @param OutputConfig Output media file configuration for scenario-based image generation tasks.
+     * Set Configuration of the output media file for a scenario-based image generation task.
+     * @param OutputConfig Configuration of the output media file for a scenario-based image generation task.
      */
     public void setOutputConfig(SceneAigcImageOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication. 
-     * @return SessionId An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
+     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-     * @param SessionId An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters. 
-     * @return SessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+     * Get Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters. 
+     * @return SessionContext Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
-     * @param SessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+     * Set Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
+     * @param SessionContext Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

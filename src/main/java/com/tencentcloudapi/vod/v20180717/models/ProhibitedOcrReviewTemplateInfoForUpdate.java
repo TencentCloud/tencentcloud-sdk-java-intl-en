@@ -33,14 +33,14 @@ public class ProhibitedOcrReviewTemplateInfoForUpdate extends AbstractModel {
     private String Switch;
 
     /**
-    * Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
+    * Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
+    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -71,32 +71,32 @@ public class ProhibitedOcrReviewTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
+     * Get Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
-     * @param BlockConfidence Threshold score for determining suspected violations. When the moderation score reaches or exceeds this value, the content is deemed a suspected violation. Default value: 100. Value range: 0–100.
+     * Set Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+     * @param BlockConfidence Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Default value: 100. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
+     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
+     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0-100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateRebuildMediaTemplateRequest extends AbstractModel {
 
     /**
-    * Output file container format. Available values: mp4, flv, hls.
+    * Output file container format. Available values: mp4, flv, and hls.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Audio and video quality rebirth template name.
+    * Audio-visual quality rebirth template name.
     */
     @SerializedName("Name")
     @Expose
@@ -59,7 +59,7 @@ public class CreateRebuildMediaTemplateRequest extends AbstractModel {
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * Audio-visual quality revival audio control control information.
+    * Audio-visual quality revival audio control information.
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
@@ -81,7 +81,7 @@ public class CreateRebuildMediaTemplateRequest extends AbstractModel {
 
     /**
     * Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
     */
@@ -91,7 +91,7 @@ Default value: 0.
 
     /**
     * Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
     */
@@ -100,48 +100,48 @@ Default value: 0.
     private String RemoveAudio;
 
     /**
-     * Get Output file container format. Available values: mp4, flv, hls. 
-     * @return Container Output file container format. Available values: mp4, flv, hls.
+     * Get Output file container format. Available values: mp4, flv, and hls. 
+     * @return Container Output file container format. Available values: mp4, flv, and hls.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Output file container format. Available values: mp4, flv, hls.
-     * @param Container Output file container format. Available values: mp4, flv, hls.
+     * Set Output file container format. Available values: mp4, flv, and hls.
+     * @param Container Output file container format. Available values: mp4, flv, and hls.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b> 
-     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
-     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Audio and video quality rebirth template name. 
-     * @return Name Audio and video quality rebirth template name.
+     * Get Audio-visual quality rebirth template name. 
+     * @return Name Audio-visual quality rebirth template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio and video quality rebirth template name.
-     * @param Name Audio and video quality rebirth template name.
+     * Set Audio-visual quality rebirth template name.
+     * @param Name Audio-visual quality rebirth template name.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -180,16 +180,16 @@ Default value: 0.
     }
 
     /**
-     * Get Audio-visual quality revival audio control control information. 
-     * @return RebuildAudioInfo Audio-visual quality revival audio control control information.
+     * Get Audio-visual quality revival audio control information. 
+     * @return RebuildAudioInfo Audio-visual quality revival audio control information.
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set Audio-visual quality revival audio control control information.
-     * @param RebuildAudioInfo Audio-visual quality revival audio control control information.
+     * Set Audio-visual quality revival audio control information.
+     * @param RebuildAudioInfo Audio-visual quality revival audio control information.
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;
@@ -229,11 +229,11 @@ Default value: 0.
 
     /**
      * Get Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0. 
      * @return RemoveVideo Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -243,11 +243,11 @@ Default value: 0.
 
     /**
      * Set Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
      * @param RemoveVideo Indicates whether to remove video data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -257,11 +257,11 @@ Default value: 0.
 
     /**
      * Get Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0. 
      * @return RemoveAudio Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -271,11 +271,11 @@ Default value: 0.
 
     /**
      * Set Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
      * @param RemoveAudio Indicates whether to remove audio data. Available values:
-<li>`0`: reserved</li>
+<li>`0`: retention</li>
 <li>1: Remove</li>
 Default value: 0.
      */

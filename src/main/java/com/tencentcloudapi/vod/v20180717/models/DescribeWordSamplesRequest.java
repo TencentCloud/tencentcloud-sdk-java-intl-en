@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeWordSamplesRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -32,14 +32,14 @@ public class DescribeWordSamplesRequest extends AbstractModel {
 
     /**
     * <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition.
     */
     @SerializedName("Usages")
     @Expose
@@ -74,16 +74,16 @@ Multiple selections allowed. The relationship between elements is "or", meaning 
     private Long Limit;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -91,23 +91,23 @@ Multiple selections allowed. The relationship between elements is "or", meaning 
 
     /**
      * Get <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition. 
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition. 
      * @return Usages <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition.
      */
     public String [] getUsages() {
         return this.Usages;
@@ -115,23 +115,23 @@ Multiple selections allowed. The relationship between elements is "or", meaning 
 
     /**
      * Set <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition.
      * @param Usages <b>Keyword application scenario filtering conditions. Available values:</b>
-1. Recognition.Ocr: Performs content recognition using OCR.
+1. Recognition.Ocr: perform content recognition through OCR.
 2. Recognition.Asr: Perform content recognition through audio recognition technology.
 3. Review.Ocr: Perform inappropriate content recognition through OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
-<b>Can be abbreviated as:</b>
+<b>Abbreviation merge:</b>
 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
-Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in this field collection are compliant with the condition.
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;

@@ -52,7 +52,7 @@ public class ProcedureTemplate extends AbstractModel {
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+    * <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -66,7 +66,7 @@ public class ProcedureTemplate extends AbstractModel {
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * <p>Parameters for the AI content detect-type task.</p>
+    * <p>Parameters for the AI content recognition task.</p>
     */
     @SerializedName("AiRecognitionTaskSet")
     @Expose
@@ -94,21 +94,21 @@ public class ProcedureTemplate extends AbstractModel {
     private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
-    * <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
+    * <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
     */
     @SerializedName("ImportMediaKnowledgeTaskSet")
     @Expose
     private ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet;
 
     /**
-    * <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -179,16 +179,16 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p> 
-     * @return AiContentReviewTask <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * Get <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p> 
+     * @return AiContentReviewTask <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
-     * @param AiContentReviewTask <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * Set <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * @param AiContentReviewTask <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
@@ -211,16 +211,16 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Parameters for the AI content detect-type task.</p> 
-     * @return AiRecognitionTaskSet <p>Parameters for the AI content detect-type task.</p>
+     * Get <p>Parameters for the AI content recognition task.</p> 
+     * @return AiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
      */
     public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
         return this.AiRecognitionTaskSet;
     }
 
     /**
-     * Set <p>Parameters for the AI content detect-type task.</p>
-     * @param AiRecognitionTaskSet <p>Parameters for the AI content detect-type task.</p>
+     * Set <p>Parameters for the AI content recognition task.</p>
+     * @param AiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
      */
     public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
         this.AiRecognitionTaskSet = AiRecognitionTaskSet;
@@ -279,48 +279,48 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Parameters for importing the Intelligent Media Assets knowledge base.</p> 
-     * @return ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
+     * Get <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p> 
+     * @return ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
      */
     public ImportMediaKnowledgeTaskInput [] getImportMediaKnowledgeTaskSet() {
         return this.ImportMediaKnowledgeTaskSet;
     }
 
     /**
-     * Set <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
-     * @param ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
+     * Set <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
+     * @param ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
      */
     public void setImportMediaKnowledgeTaskSet(ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet) {
         this.ImportMediaKnowledgeTaskSet = ImportMediaKnowledgeTaskSet;
     }
 
     /**
-     * Get <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return CreateTime <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param CreateTime <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param UpdateTime <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

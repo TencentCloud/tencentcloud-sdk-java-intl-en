@@ -52,7 +52,7 @@ public class ImportMediaKnowledgeTask extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Error code. 0 indicates success, and other values indicate failure.</p>
+    * <p>Error code. 0 indicates success, and other values indicate failure</p>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -130,16 +130,16 @@ public class ImportMediaKnowledgeTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Error code. 0 indicates success, and other values indicate failure.</p> 
-     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure.</p>
+     * Get <p>Error code. 0 indicates success, and other values indicate failure</p> 
+     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set <p>Error code. 0 indicates success, and other values indicate failure.</p>
-     * @param ErrCode <p>Error code. 0 indicates success, and other values indicate failure.</p>
+     * Set <p>Error code. 0 indicates success, and other values indicate failure</p>
+     * @param ErrCode <p>Error code. 0 indicates success, and other values indicate failure</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;

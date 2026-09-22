@@ -24,51 +24,51 @@ import java.util.HashMap;
 public class EditMediaTEHDConfig extends AbstractModel {
 
     /**
-    * Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
+    * Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+    * Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used. 
-     * @return Type Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
+     * Get Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used. 
+     * @return Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
-     * @param Type Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, OFF is used.
+     * Set Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
+     * @param Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, OFF is used.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically. 
-     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+     * Get Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap. 
+     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
-     * @param MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
-Leave it empty or set it to 0 to let VOD set the bitrate cap automatically.
+     * Set Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
+     * @param MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
+Leave it empty or set it to 0 to let VOD automatically set the bitrate cap.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * Template name. The length cannot exceed 64 characters.
+    * Template name. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -38,7 +38,7 @@ public class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel {
     private VideoConfigureInfo VideoConfigure;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -59,16 +59,16 @@ public class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-     * Get Template name. The length cannot exceed 64 characters. 
-     * @return Name Template name. The length cannot exceed 64 characters.
+     * Get Template name. Length limit: 64 characters. 
+     * @return Name Template name. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template name. The length cannot exceed 64 characters.
-     * @param Name Template name. The length cannot exceed 64 characters.
+     * Set Template name. Length limit: 64 characters.
+     * @param Name Template name. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -91,16 +91,16 @@ public class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

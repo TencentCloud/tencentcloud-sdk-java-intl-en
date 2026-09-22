@@ -38,7 +38,7 @@ public class ClipTask2017 extends AbstractModel {
     private String SrcFileId;
 
     /**
-    * File information of the video editing output.
+    * Video editing output file information.
     */
     @SerializedName("FileInfo")
     @Expose
@@ -77,16 +77,16 @@ public class ClipTask2017 extends AbstractModel {
     }
 
     /**
-     * Get File information of the video editing output. 
-     * @return FileInfo File information of the video editing output.
+     * Get Video editing output file information. 
+     * @return FileInfo Video editing output file information.
      */
     public ClipFileInfo2017 getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set File information of the video editing output.
-     * @param FileInfo File information of the video editing output.
+     * Set Video editing output file information.
+     * @param FileInfo Video editing output file information.
      */
     public void setFileInfo(ClipFileInfo2017 FileInfo) {
         this.FileInfo = FileInfo;

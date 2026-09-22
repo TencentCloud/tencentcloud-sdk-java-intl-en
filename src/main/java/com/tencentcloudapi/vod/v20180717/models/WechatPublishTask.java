@@ -43,7 +43,7 @@ FINISH: completed.
     /**
     * Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -57,7 +57,7 @@ FINISH: completed.
     private String Message;
 
     /**
-    * Video file ID for publishing.
+    * Video file ID to publish.
     */
     @SerializedName("FileId")
     @Expose
@@ -80,7 +80,7 @@ FINISH: completed.
     /**
     * WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
     */
@@ -149,10 +149,10 @@ FINISH: completed.
     /**
      * Get Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li> 
+<li>Other value: failure.</li> 
      * @return ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -161,10 +161,10 @@ FINISH: completed.
     /**
      * Set Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      * @param ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -187,16 +187,16 @@ FINISH: completed.
     }
 
     /**
-     * Get Video file ID for publishing. 
-     * @return FileId Video file ID for publishing.
+     * Get Video file ID to publish. 
+     * @return FileId Video file ID to publish.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Video file ID for publishing.
-     * @param FileId Video file ID for publishing.
+     * Set Video file ID to publish.
+     * @param FileId Video file ID to publish.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -237,12 +237,12 @@ FINISH: completed.
     /**
      * Get WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li> 
      * @return WechatStatus WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
      */
@@ -253,12 +253,12 @@ FINISH: completed.
     /**
      * Set WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
      * @param WechatStatus WeChat publishing status. Valid values:
 <li>FAIL: Failed;</li>
-<li>SUCCESS: successful;</li>
+<li>SUCCESS: Succeeded;</li>
 <li>AUDITNOTPASS: failed to pass moderation;</li>
 <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
      */

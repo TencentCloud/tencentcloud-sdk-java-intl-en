@@ -52,7 +52,7 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input for Asr text involving inappropriate information in audio/video moderation.
+    * Task input for inappropriate information involving Asr text in audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
@@ -66,7 +66,7 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel {
     private AiReviewPoliticalAsrTaskOutput Output;
 
     /**
-    * Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
+    * Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
     */
     @SerializedName("Progress")
     @Expose
@@ -137,16 +137,16 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel {
     }
 
     /**
-     * Get Task input for Asr text involving inappropriate information in audio/video moderation. 
-     * @return Input Task input for Asr text involving inappropriate information in audio/video moderation.
+     * Get Task input for inappropriate information involving Asr text in audio/video moderation. 
+     * @return Input Task input for inappropriate information involving Asr text in audio/video moderation.
      */
     public AiReviewPoliticalAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input for Asr text involving inappropriate information in audio/video moderation.
-     * @param Input Task input for Asr text involving inappropriate information in audio/video moderation.
+     * Set Task input for inappropriate information involving Asr text in audio/video moderation.
+     * @param Input Task input for inappropriate information involving Asr text in audio/video moderation.
      */
     public void setInput(AiReviewPoliticalAsrTaskInput Input) {
         this.Input = Input;
@@ -169,16 +169,16 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel {
     }
 
     /**
-     * Get Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100]. 
-     * @return Progress Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
+     * Get Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100. 
+     * @return Progress Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
-     * @param Progress Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
+     * Set Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
+     * @param Progress Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

@@ -31,7 +31,7 @@ public class DescribeEnhanceMediaTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Audio and video quality rebirth template detail list.
+    * List of audio and video quality rebirth template details.
     */
     @SerializedName("RebuildMediaTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeEnhanceMediaTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get Audio and video quality rebirth template detail list. 
-     * @return RebuildMediaTemplateSet Audio and video quality rebirth template detail list.
+     * Get List of audio and video quality rebirth template details. 
+     * @return RebuildMediaTemplateSet List of audio and video quality rebirth template details.
      */
     public RebuildMediaTemplate [] getRebuildMediaTemplateSet() {
         return this.RebuildMediaTemplateSet;
     }
 
     /**
-     * Set Audio and video quality rebirth template detail list.
-     * @param RebuildMediaTemplateSet Audio and video quality rebirth template detail list.
+     * Set List of audio and video quality rebirth template details.
+     * @param RebuildMediaTemplateSet List of audio and video quality rebirth template details.
      */
     public void setRebuildMediaTemplateSet(RebuildMediaTemplate [] RebuildMediaTemplateSet) {
         this.RebuildMediaTemplateSet = RebuildMediaTemplateSet;

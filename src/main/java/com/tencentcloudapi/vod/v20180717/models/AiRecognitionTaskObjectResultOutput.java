@@ -25,14 +25,14 @@ public class AiRecognitionTaskObjectResultOutput extends AbstractModel {
 
     /**
     * Intelligent object recognition result set.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
     */
     @SerializedName("ResultSet")
     @Expose
     private AiRecognitionTaskObjectResultItem [] ResultSet;
 
     /**
-    * URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
+    * Intelligent object recognition result set file URL. The content of the file is in JSON format, and the data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
     */
     @SerializedName("ResultSetFileUrl")
     @Expose
@@ -47,9 +47,9 @@ public class AiRecognitionTaskObjectResultOutput extends AbstractModel {
 
     /**
      * Get Intelligent object recognition result set.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl. 
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl. 
      * @return ResultSet Intelligent object recognition result set.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
      */
     public AiRecognitionTaskObjectResultItem [] getResultSet() {
         return this.ResultSet;
@@ -57,25 +57,25 @@ public class AiRecognitionTaskObjectResultOutput extends AbstractModel {
 
     /**
      * Set Intelligent object recognition result set.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
      * @param ResultSet Intelligent object recognition result set.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
      */
     public void setResultSet(AiRecognitionTaskObjectResultItem [] ResultSet) {
         this.ResultSet = ResultSet;
     }
 
     /**
-     * Get URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.) 
-     * @return ResultSetFileUrl URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
+     * Get Intelligent object recognition result set file URL. The content of the file is in JSON format, and the data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.) 
+     * @return ResultSetFileUrl Intelligent object recognition result set file URL. The content of the file is in JSON format, and the data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
      */
     public String getResultSetFileUrl() {
         return this.ResultSetFileUrl;
     }
 
     /**
-     * Set URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
-     * @param ResultSetFileUrl URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
+     * Set Intelligent object recognition result set file URL. The content of the file is in JSON format, and the data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+     * @param ResultSetFileUrl Intelligent object recognition result set file URL. The content of the file is in JSON format, and the data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
      */
     public void setResultSetFileUrl(String ResultSetFileUrl) {
         this.ResultSetFileUrl = ResultSetFileUrl;

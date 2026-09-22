@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ContentReviewOcrResult extends AbstractModel {
 
     /**
-    * <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+    * <p>Score of Ocr text identification result. Value range: 0-100.</p>
     */
     @SerializedName("Confidence")
     @Expose
@@ -45,23 +45,23 @@ public class ContentReviewOcrResult extends AbstractModel {
     private String [] KeywordSet;
 
     /**
-    * <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
+    * <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p> 
-     * @return Confidence <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+     * Get <p>Score of Ocr text identification result. Value range: 0-100.</p> 
+     * @return Confidence <p>Score of Ocr text identification result. Value range: 0-100.</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
-     * @param Confidence <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+     * Set <p>Score of Ocr text identification result. Value range: 0-100.</p>
+     * @param Confidence <p>Score of Ocr text identification result. Value range: 0-100.</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -100,16 +100,16 @@ public class ContentReviewOcrResult extends AbstractModel {
     }
 
     /**
-     * Get <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p> 
-     * @return AreaCoordSet <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
+     * Get <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p> 
+     * @return AreaCoordSet <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
-     * @param AreaCoordSet <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
+     * Set <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
+     * @param AreaCoordSet <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

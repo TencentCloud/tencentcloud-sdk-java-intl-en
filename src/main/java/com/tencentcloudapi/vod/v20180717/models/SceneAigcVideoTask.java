@@ -38,7 +38,7 @@ public class SceneAigcVideoTask extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+    * Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -52,28 +52,28 @@ public class SceneAigcVideoTask extends AbstractModel {
     private String Message;
 
     /**
-    * Task progress, value range: [0-100].
+    * Task progress, with a value range of [0-100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input information of the AIGC video generation task.
+    * Input information of an AIGC video task.
     */
     @SerializedName("Input")
     @Expose
     private SceneAigcVideoTaskInput Input;
 
     /**
-    * Output information of the AIGC video task.
+    * Output information of an AIGC video task.
     */
     @SerializedName("Output")
     @Expose
     private SceneAigcVideoTaskOutput Output;
 
     /**
-    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+    * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
     */
     @SerializedName("SessionId")
     @Expose
@@ -119,16 +119,16 @@ public class SceneAigcVideoTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task. 
-     * @return ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * Get Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task. 
+     * @return ErrCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
-     * @param ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * Set Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+     * @param ErrCode Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -151,64 +151,64 @@ public class SceneAigcVideoTask extends AbstractModel {
     }
 
     /**
-     * Get Task progress, value range: [0-100]. 
-     * @return Progress Task progress, value range: [0-100].
+     * Get Task progress, with a value range of [0-100]. 
+     * @return Progress Task progress, with a value range of [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress, value range: [0-100].
-     * @param Progress Task progress, value range: [0-100].
+     * Set Task progress, with a value range of [0-100].
+     * @param Progress Task progress, with a value range of [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input information of the AIGC video generation task. 
-     * @return Input Input information of the AIGC video generation task.
+     * Get Input information of an AIGC video task. 
+     * @return Input Input information of an AIGC video task.
      */
     public SceneAigcVideoTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input information of the AIGC video generation task.
-     * @param Input Input information of the AIGC video generation task.
+     * Set Input information of an AIGC video task.
+     * @param Input Input information of an AIGC video task.
      */
     public void setInput(SceneAigcVideoTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output information of the AIGC video task. 
-     * @return Output Output information of the AIGC video task.
+     * Get Output information of an AIGC video task. 
+     * @return Output Output information of an AIGC video task.
      */
     public SceneAigcVideoTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of the AIGC video task.
-     * @param Output Output information of the AIGC video task.
+     * Set Output information of an AIGC video task.
+     * @param Output Output information of an AIGC video task.
      */
     public void setOutput(SceneAigcVideoTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
-     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
+     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

@@ -52,7 +52,7 @@ public class ReduceMediaBitrateAdaptiveDynamicStreamingResult extends AbstractMo
     private AdaptiveDynamicStreamingTaskInput Input;
 
     /**
-    * Output of the video to adaptive streaming task.
+    * Output of a video to adaptive streaming task.
     */
     @SerializedName("Output")
     @Expose
@@ -123,16 +123,16 @@ public class ReduceMediaBitrateAdaptiveDynamicStreamingResult extends AbstractMo
     }
 
     /**
-     * Get Output of the video to adaptive streaming task. 
-     * @return Output Output of the video to adaptive streaming task.
+     * Get Output of a video to adaptive streaming task. 
+     * @return Output Output of a video to adaptive streaming task.
      */
     public AdaptiveDynamicStreamingInfoItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the video to adaptive streaming task.
-     * @param Output Output of the video to adaptive streaming task.
+     * Set Output of a video to adaptive streaming task.
+     * @param Output Output of a video to adaptive streaming task.
      */
     public void setOutput(AdaptiveDynamicStreamingInfoItem Output) {
         this.Output = Output;

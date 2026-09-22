@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PoliticalImageResult extends AbstractModel {
 
     /**
-    * Score for authentication involving inappropriate information. The score ranges from 0 to 100.
+    * Authentication involves scoring inappropriate information, with a score from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Result suggestions for authentication involving inappropriate information. Value range:
+    * Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
@@ -48,34 +48,34 @@ public class PoliticalImageResult extends AbstractModel {
     private String Name;
 
     /**
-    * Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+    * Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get Score for authentication involving inappropriate information. The score ranges from 0 to 100. 
-     * @return Confidence Score for authentication involving inappropriate information. The score ranges from 0 to 100.
+     * Get Authentication involves scoring inappropriate information, with a score from 0 to 100. 
+     * @return Confidence Authentication involves scoring inappropriate information, with a score from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score for authentication involving inappropriate information. The score ranges from 0 to 100.
-     * @param Confidence Score for authentication involving inappropriate information. The score ranges from 0 to 100.
+     * Set Authentication involves scoring inappropriate information, with a score from 0 to 100.
+     * @param Confidence Authentication involves scoring inappropriate information, with a score from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Result suggestions for authentication involving inappropriate information. Value range:
+     * Get Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li> 
-     * @return Suggestion Result suggestions for authentication involving inappropriate information. Value range:
+     * @return Suggestion Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
@@ -85,11 +85,11 @@ public class PoliticalImageResult extends AbstractModel {
     }
 
     /**
-     * Set Result suggestions for authentication involving inappropriate information. Value range:
+     * Set Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
-     * @param Suggestion Result suggestions for authentication involving inappropriate information. Value range:
+     * @param Suggestion Result suggestions for authentication involving inappropriate information, value ranges from...to...
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
@@ -115,16 +115,16 @@ public class PoliticalImageResult extends AbstractModel {
     }
 
     /**
-     * Get Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner. 
-     * @return AreaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * Get Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner. 
+     * @return AreaCoordSet Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
-     * @param AreaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * Set Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * @param AreaCoordSet Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

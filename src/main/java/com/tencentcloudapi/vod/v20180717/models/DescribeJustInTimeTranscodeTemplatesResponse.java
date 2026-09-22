@@ -31,7 +31,7 @@ public class DescribeJustInTimeTranscodeTemplatesResponse extends AbstractModel 
     private Long TotalCount;
 
     /**
-    * Template detail list.
+    * Template details list.
     */
     @SerializedName("JustInTimeTranscodeTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeJustInTimeTranscodeTemplatesResponse extends AbstractModel 
     }
 
     /**
-     * Get Template detail list. 
-     * @return JustInTimeTranscodeTemplateSet Template detail list.
+     * Get Template details list. 
+     * @return JustInTimeTranscodeTemplateSet Template details list.
      */
     public JustInTimeTranscodeTemplate [] getJustInTimeTranscodeTemplateSet() {
         return this.JustInTimeTranscodeTemplateSet;
     }
 
     /**
-     * Set Template detail list.
-     * @param JustInTimeTranscodeTemplateSet Template detail list.
+     * Set Template details list.
+     * @param JustInTimeTranscodeTemplateSet Template details list.
      */
     public void setJustInTimeTranscodeTemplateSet(JustInTimeTranscodeTemplate [] JustInTimeTranscodeTemplateSet) {
         this.JustInTimeTranscodeTemplateSet = JustInTimeTranscodeTemplateSet;

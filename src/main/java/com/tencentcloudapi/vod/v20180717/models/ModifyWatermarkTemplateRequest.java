@@ -38,7 +38,7 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * Watermark template name, with a length limit of 64 characters.
+    * Watermark template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -63,7 +63,7 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel {
     private String CoordinateOrigin;
 
     /**
-    * The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+    * Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
     */
@@ -134,16 +134,16 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Watermark template name, with a length limit of 64 characters. 
-     * @return Name Watermark template name, with a length limit of 64 characters.
+     * Get Watermark template name. The length cannot exceed 64 characters. 
+     * @return Name Watermark template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Watermark template name, with a length limit of 64 characters.
-     * @param Name Watermark template name, with a length limit of 64 characters.
+     * Set Watermark template name. The length cannot exceed 64 characters.
+     * @param Name Watermark template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -198,10 +198,10 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+     * Get Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li> 
-     * @return XPos The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+     * @return XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
      */
@@ -210,10 +210,10 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Set The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+     * Set Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
-     * @param XPos The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+     * @param XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
      */

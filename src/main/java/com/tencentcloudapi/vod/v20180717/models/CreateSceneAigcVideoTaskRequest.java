@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
 
     /**
-    * **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+    * **VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,7 +38,7 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
     private AigcVideoSceneInfo SceneInfo;
 
     /**
-    * Output media file configuration for scenario-based video tasks.
+    * Output media file configuration for a scenario-based video task.
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -54,21 +54,21 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
     private SceneAigcVideoTaskInputFileInfo [] FileInfos;
 
     /**
-    * An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+    * An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+    * Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+    * Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TasksPriority")
     @Expose
@@ -89,16 +89,16 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
     private String Prompt;
 
     /**
-     * Get **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).** 
-     * @return SubAppId **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+     * Get **VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).** 
+     * @return SubAppId **VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
-     * @param SubAppId **VOD application ID. Customers who activate on-demand services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+     * Set **VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
+     * @param SubAppId **VOD application ID. Customers who activate VOD services after December 25, 2023 must fill in this field with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).**
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -121,16 +121,16 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Output media file configuration for scenario-based video tasks. 
-     * @return OutputConfig Output media file configuration for scenario-based video tasks.
+     * Get Output media file configuration for a scenario-based video task. 
+     * @return OutputConfig Output media file configuration for a scenario-based video task.
      */
     public SceneAigcVideoOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Output media file configuration for scenario-based video tasks.
-     * @param OutputConfig Output media file configuration for scenario-based video tasks.
+     * Set Output media file configuration for a scenario-based video task.
+     * @param OutputConfig Output media file configuration for a scenario-based video task.
      */
     public void setOutputConfig(SceneAigcVideoOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
@@ -161,48 +161,48 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
-     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past three days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters. 
-     * @return SessionContext Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+     * Get Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters. 
+     * @return SessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
-     * @param SessionContext Source context used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+     * Set Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
+     * @param SessionContext Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Maximum length: 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
-     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * Get Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
-     * @param TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * Set Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;

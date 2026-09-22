@@ -32,7 +32,7 @@ public class WechatMiniProgramPublishTask extends AbstractModel {
 
     /**
     * Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
     */
@@ -43,7 +43,7 @@ FINISH: completed.
     /**
     * Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -57,14 +57,14 @@ FINISH: completed.
     private String Message;
 
     /**
-    * Video file ID for publishing.
+    * Publish the video file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Transcoding template ID for the published video. 0 represents the original video.
+    * Transcoding template ID of the published video. 0 represents the original video.
     */
     @SerializedName("SourceDefinition")
     @Expose
@@ -98,11 +98,11 @@ FINISH: completed.
 
     /**
      * Get Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed. 
      * @return Status Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
      */
@@ -112,11 +112,11 @@ FINISH: completed.
 
     /**
      * Set Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
      * @param Status Task status. Valid values:
-WAITING: waiting.
+WAITING
 PROCESSING: Processing;
 FINISH: completed.
      */
@@ -127,10 +127,10 @@ FINISH: completed.
     /**
      * Get Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li> 
+<li>Other value: failure.</li> 
      * @return ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -139,10 +139,10 @@ FINISH: completed.
     /**
      * Set Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      * @param ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -165,32 +165,32 @@ FINISH: completed.
     }
 
     /**
-     * Get Video file ID for publishing. 
-     * @return FileId Video file ID for publishing.
+     * Get Publish the video file ID. 
+     * @return FileId Publish the video file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Video file ID for publishing.
-     * @param FileId Video file ID for publishing.
+     * Set Publish the video file ID.
+     * @param FileId Publish the video file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Transcoding template ID for the published video. 0 represents the original video. 
-     * @return SourceDefinition Transcoding template ID for the published video. 0 represents the original video.
+     * Get Transcoding template ID of the published video. 0 represents the original video. 
+     * @return SourceDefinition Transcoding template ID of the published video. 0 represents the original video.
      */
     public Long getSourceDefinition() {
         return this.SourceDefinition;
     }
 
     /**
-     * Set Transcoding template ID for the published video. 0 represents the original video.
-     * @param SourceDefinition Transcoding template ID for the published video. 0 represents the original video.
+     * Set Transcoding template ID of the published video. 0 represents the original video.
+     * @param SourceDefinition Transcoding template ID of the published video. 0 represents the original video.
      */
     public void setSourceDefinition(Long SourceDefinition) {
         this.SourceDefinition = SourceDefinition;

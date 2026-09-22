@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RebuildMediaTaskOutput extends AbstractModel {
 
     /**
-    * File type, for example, mp4, flv.
+    * File type, for example, mp4 and flv.
     */
     @SerializedName("FileType")
     @Expose
@@ -45,7 +45,7 @@ public class RebuildMediaTaskOutput extends AbstractModel {
     private String FileId;
 
     /**
-    * Output filename, up to 64 characters. By default, the system assigns the generated filename.
+    * Output filename, up to 64 characters. By default, the system assigns a generated filename.
     */
     @SerializedName("MediaName")
     @Expose
@@ -67,16 +67,16 @@ public class RebuildMediaTaskOutput extends AbstractModel {
     private String ExpireTime;
 
     /**
-     * Get File type, for example, mp4, flv. 
-     * @return FileType File type, for example, mp4, flv.
+     * Get File type, for example, mp4 and flv. 
+     * @return FileType File type, for example, mp4 and flv.
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set File type, for example, mp4, flv.
-     * @param FileType File type, for example, mp4, flv.
+     * Set File type, for example, mp4 and flv.
+     * @param FileType File type, for example, mp4 and flv.
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -115,16 +115,16 @@ public class RebuildMediaTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Output filename, up to 64 characters. By default, the system assigns the generated filename. 
-     * @return MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
+     * Get Output filename, up to 64 characters. By default, the system assigns a generated filename. 
+     * @return MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output filename, up to 64 characters. By default, the system assigns the generated filename.
-     * @param MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
+     * Set Output filename, up to 64 characters. By default, the system assigns a generated filename.
+     * @param MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;

@@ -38,7 +38,7 @@ public class CreateAigcCustomVoiceInput extends AbstractModel {
     private String VoiceUrl;
 
     /**
-    * <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+    * <p>Historic work ID, which can provide audio material by referring to historic works.</p>
     */
     @SerializedName("VideoId")
     @Expose
@@ -77,16 +77,16 @@ public class CreateAigcCustomVoiceInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Historic works ID, which can provide audio material by referring to historic works.</p> 
-     * @return VideoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+     * Get <p>Historic work ID, which can provide audio material by referring to historic works.</p> 
+     * @return VideoId <p>Historic work ID, which can provide audio material by referring to historic works.</p>
      */
     public String getVideoId() {
         return this.VideoId;
     }
 
     /**
-     * Set <p>Historic works ID, which can provide audio material by referring to historic works.</p>
-     * @param VideoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+     * Set <p>Historic work ID, which can provide audio material by referring to historic works.</p>
+     * @param VideoId <p>Historic work ID, which can provide audio material by referring to historic works.</p>
      */
     public void setVideoId(String VideoId) {
         this.VideoId = VideoId;

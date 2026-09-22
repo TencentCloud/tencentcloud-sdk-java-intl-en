@@ -31,28 +31,28 @@ public class FileUploadTask extends AbstractModel {
     private String FileId;
 
     /**
-    * Basic information of the generated media file after upload completion.
+    * Basic information of the media file generated after upload completion.
     */
     @SerializedName("MediaBasicInfo")
     @Expose
     private MediaBasicInfo MediaBasicInfo;
 
     /**
-    * Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+    * Task ID for the task type `Procedure`. If A task (Procedure) is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, or `AiRecognitionTask`.
     */
     @SerializedName("ProcedureTaskId")
     @Expose
     private String ProcedureTaskId;
 
     /**
-    * Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+    * Task ID of the ReviewAudioVideo task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies ReviewAudioVideoTask.
     */
     @SerializedName("ReviewAudioVideoTaskId")
     @Expose
     private String ReviewAudioVideoTaskId;
 
     /**
-    * Meta information, including size, duration, video stream information, and audio stream information.
+    * Metadata, including size, duration, video stream information, and audio stream information.
     */
     @SerializedName("MetaData")
     @Expose
@@ -75,64 +75,64 @@ public class FileUploadTask extends AbstractModel {
     }
 
     /**
-     * Get Basic information of the generated media file after upload completion. 
-     * @return MediaBasicInfo Basic information of the generated media file after upload completion.
+     * Get Basic information of the media file generated after upload completion. 
+     * @return MediaBasicInfo Basic information of the media file generated after upload completion.
      */
     public MediaBasicInfo getMediaBasicInfo() {
         return this.MediaBasicInfo;
     }
 
     /**
-     * Set Basic information of the generated media file after upload completion.
-     * @param MediaBasicInfo Basic information of the generated media file after upload completion.
+     * Set Basic information of the media file generated after upload completion.
+     * @param MediaBasicInfo Basic information of the media file generated after upload completion.
      */
     public void setMediaBasicInfo(MediaBasicInfo MediaBasicInfo) {
         this.MediaBasicInfo = MediaBasicInfo;
     }
 
     /**
-     * Get Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`. 
-     * @return ProcedureTaskId Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+     * Get Task ID for the task type `Procedure`. If A task (Procedure) is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, or `AiRecognitionTask`. 
+     * @return ProcedureTaskId Task ID for the task type `Procedure`. If A task (Procedure) is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, or `AiRecognitionTask`.
      */
     public String getProcedureTaskId() {
         return this.ProcedureTaskId;
     }
 
     /**
-     * Set Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
-     * @param ProcedureTaskId Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+     * Set Task ID for the task type `Procedure`. If A task (Procedure) is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, or `AiRecognitionTask`.
+     * @param ProcedureTaskId Task ID for the task type `Procedure`. If A task (Procedure) is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, or `AiRecognitionTask`.
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;
     }
 
     /**
-     * Get Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`. 
-     * @return ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+     * Get Task ID of the ReviewAudioVideo task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies ReviewAudioVideoTask. 
+     * @return ReviewAudioVideoTaskId Task ID of the ReviewAudioVideo task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies ReviewAudioVideoTask.
      */
     public String getReviewAudioVideoTaskId() {
         return this.ReviewAudioVideoTaskId;
     }
 
     /**
-     * Set Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
-     * @param ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+     * Set Task ID of the ReviewAudioVideo task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies ReviewAudioVideoTask.
+     * @param ReviewAudioVideoTaskId Task ID of the ReviewAudioVideo task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies ReviewAudioVideoTask.
      */
     public void setReviewAudioVideoTaskId(String ReviewAudioVideoTaskId) {
         this.ReviewAudioVideoTaskId = ReviewAudioVideoTaskId;
     }
 
     /**
-     * Get Meta information, including size, duration, video stream information, and audio stream information. 
-     * @return MetaData Meta information, including size, duration, video stream information, and audio stream information.
+     * Get Metadata, including size, duration, video stream information, and audio stream information. 
+     * @return MetaData Metadata, including size, duration, video stream information, and audio stream information.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Meta information, including size, duration, video stream information, and audio stream information.
-     * @param MetaData Meta information, including size, duration, video stream information, and audio stream information.
+     * Set Metadata, including size, duration, video stream information, and audio stream information.
+     * @param MetaData Metadata, including size, duration, video stream information, and audio stream information.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

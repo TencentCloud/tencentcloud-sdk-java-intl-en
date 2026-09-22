@@ -66,14 +66,14 @@ public class AiRecognitionTaskAsrTranslateResult extends AbstractModel {
     private AiRecognitionTaskAsrTranslateResultOutput Output;
 
     /**
-    * Voice translation task progress, in the range of [0,100].
+    * Voice translation task progress, value ranges from 0 to 100.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -183,32 +183,32 @@ public class AiRecognitionTaskAsrTranslateResult extends AbstractModel {
     }
 
     /**
-     * Get Voice translation task progress, in the range of [0,100]. 
-     * @return Progress Voice translation task progress, in the range of [0,100].
+     * Get Voice translation task progress, value ranges from 0 to 100. 
+     * @return Progress Voice translation task progress, value ranges from 0 to 100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Voice translation task progress, in the range of [0,100].
-     * @param Progress Voice translation task progress, in the range of [0,100].
+     * Set Voice translation task progress, value ranges from 0 to 100.
+     * @param Progress Voice translation task progress, value ranges from 0 to 100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;

@@ -35,22 +35,22 @@ public class IpFilter extends AbstractModel {
     /**
     * IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+    * IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
 
     /**
-    * IP allowlist/blocklist path-specific configuration.
+    * IP blocklist/allowlist path-specific configuration.
     */
     @SerializedName("FilterRules")
     @Expose
@@ -83,10 +83,10 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
     /**
      * Get IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li> 
+<li>blocklist: Blocklist.</li> 
      * @return FilterType IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      */
     public String getFilterType() {
         return this.FilterType;
@@ -95,46 +95,46 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
     /**
      * Set IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      * @param FilterType IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries. 
-     * @return Filters IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+     * Get IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries. 
+     * @return Filters IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
-     * @param Filters IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+     * Set IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
+     * @param Filters IP blocklist and allowlist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get IP allowlist/blocklist path-specific configuration. 
-     * @return FilterRules IP allowlist/blocklist path-specific configuration.
+     * Get IP blocklist/allowlist path-specific configuration. 
+     * @return FilterRules IP blocklist/allowlist path-specific configuration.
      */
     public IpFilterPathRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set IP allowlist/blocklist path-specific configuration.
-     * @param FilterRules IP allowlist/blocklist path-specific configuration.
+     * Set IP blocklist/allowlist path-specific configuration.
+     * @param FilterRules IP blocklist/allowlist path-specific configuration.
      */
     public void setFilterRules(IpFilterPathRule [] FilterRules) {
         this.FilterRules = FilterRules;

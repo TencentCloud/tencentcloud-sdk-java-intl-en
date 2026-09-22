@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PornImageResult extends AbstractModel {
 
     /**
-    * Score of authentication involving offensive content. Value range: 0–100.
+    * Authentication involves scoring offensive content, with a score from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Result suggestions for authenticating offensive content. Value range:
+    * Result suggestions for identifying offensive content. Value range:
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
@@ -41,9 +41,9 @@ public class PornImageResult extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Result tag for authenticating offensive content. Value range:
+    * Authentication result tag for offensive content. Value range:
 <li>porn: pornography;</li>
-<li>sexy: sexy;</li>
+<li>sexy: sexiness;</li>
 <li>vulgar: Vulgar;</li>
 <li>intimacy: intimate behavior.</li>
     */
@@ -52,27 +52,27 @@ public class PornImageResult extends AbstractModel {
     private String Label;
 
     /**
-     * Get Score of authentication involving offensive content. Value range: 0–100. 
-     * @return Confidence Score of authentication involving offensive content. Value range: 0–100.
+     * Get Authentication involves scoring offensive content, with a score from 0 to 100. 
+     * @return Confidence Authentication involves scoring offensive content, with a score from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of authentication involving offensive content. Value range: 0–100.
-     * @param Confidence Score of authentication involving offensive content. Value range: 0–100.
+     * Set Authentication involves scoring offensive content, with a score from 0 to 100.
+     * @param Confidence Authentication involves scoring offensive content, with a score from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Result suggestions for authenticating offensive content. Value range:
+     * Get Result suggestions for identifying offensive content. Value range:
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li> 
-     * @return Suggestion Result suggestions for authenticating offensive content. Value range:
+     * @return Suggestion Result suggestions for identifying offensive content. Value range:
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ public class PornImageResult extends AbstractModel {
     }
 
     /**
-     * Set Result suggestions for authenticating offensive content. Value range:
+     * Set Result suggestions for identifying offensive content. Value range:
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
-     * @param Suggestion Result suggestions for authenticating offensive content. Value range:
+     * @param Suggestion Result suggestions for identifying offensive content. Value range:
 <li>pass;</li>
 <li>review;</li>
 <li>block.</li>
@@ -96,14 +96,14 @@ public class PornImageResult extends AbstractModel {
     }
 
     /**
-     * Get Result tag for authenticating offensive content. Value range:
+     * Get Authentication result tag for offensive content. Value range:
 <li>porn: pornography;</li>
-<li>sexy: sexy;</li>
+<li>sexy: sexiness;</li>
 <li>vulgar: Vulgar;</li>
 <li>intimacy: intimate behavior.</li> 
-     * @return Label Result tag for authenticating offensive content. Value range:
+     * @return Label Authentication result tag for offensive content. Value range:
 <li>porn: pornography;</li>
-<li>sexy: sexy;</li>
+<li>sexy: sexiness;</li>
 <li>vulgar: Vulgar;</li>
 <li>intimacy: intimate behavior.</li>
      */
@@ -112,14 +112,14 @@ public class PornImageResult extends AbstractModel {
     }
 
     /**
-     * Set Result tag for authenticating offensive content. Value range:
+     * Set Authentication result tag for offensive content. Value range:
 <li>porn: pornography;</li>
-<li>sexy: sexy;</li>
+<li>sexy: sexiness;</li>
 <li>vulgar: Vulgar;</li>
 <li>intimacy: intimate behavior.</li>
-     * @param Label Result tag for authenticating offensive content. Value range:
+     * @param Label Authentication result tag for offensive content. Value range:
 <li>porn: pornography;</li>
-<li>sexy: sexy;</li>
+<li>sexy: sexiness;</li>
 <li>vulgar: Vulgar;</li>
 <li>intimacy: intimate behavior.</li>
      */

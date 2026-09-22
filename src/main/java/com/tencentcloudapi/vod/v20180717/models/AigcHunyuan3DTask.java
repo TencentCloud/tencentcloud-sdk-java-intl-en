@@ -38,14 +38,14 @@ public class AigcHunyuan3DTask extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+    * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * <p>Extension error code.</p>
+    * <p>Expansion error code.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -126,32 +126,32 @@ public class AigcHunyuan3DTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p> 
-     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * Get <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p> 
+     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+     * @param ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get <p>Extension error code.</p> 
-     * @return ErrCodeExt <p>Extension error code.</p>
+     * Get <p>Expansion error code.</p> 
+     * @return ErrCodeExt <p>Expansion error code.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Extension error code.</p>
-     * @param ErrCodeExt <p>Extension error code.</p>
+     * Set <p>Expansion error code.</p>
+     * @param ErrCodeExt <p>Expansion error code.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;

@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class SplitMediaTaskConfig extends AbstractModel {
 
     /**
-    * Start time offset of video splitting, in seconds.
-<li>Leave it empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
+    * Start offset time of video splitting, in seconds.
+<li>Leave this parameter empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
 <li>When the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -37,7 +37,7 @@ public class SplitMediaTaskConfig extends AbstractModel {
     * End time offset of video splitting, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video ends n seconds before the original video ends.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -58,28 +58,28 @@ public class SplitMediaTaskConfig extends AbstractModel {
     private SplitMediaOutputConfig OutputConfig;
 
     /**
-     * Get Start time offset of video splitting, in seconds.
-<li>Leave it empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
+     * Get Start offset time of video splitting, in seconds.
+<li>Leave this parameter empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
 <li>When the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li> 
-     * @return StartTimeOffset Start time offset of video splitting, in seconds.
-<li>Leave it empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li> 
+     * @return StartTimeOffset Start offset time of video splitting, in seconds.
+<li>Leave this parameter empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
 <li>When the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of video splitting, in seconds.
-<li>Leave it empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
+     * Set Start offset time of video splitting, in seconds.
+<li>Leave this parameter empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
 <li>When the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
-     * @param StartTimeOffset Start time offset of video splitting, in seconds.
-<li>Leave it empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+     * @param StartTimeOffset Start offset time of video splitting, in seconds.
+<li>Leave this parameter empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
 <li>When the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
@@ -89,11 +89,11 @@ public class SplitMediaTaskConfig extends AbstractModel {
      * Get End time offset of video splitting, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video ends n seconds before the original video ends.</li> 
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li> 
      * @return EndTimeOffset End time offset of video splitting, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video ends n seconds before the original video ends.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
@@ -103,11 +103,11 @@ public class SplitMediaTaskConfig extends AbstractModel {
      * Set End time offset of video splitting, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video ends n seconds before the original video ends.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
      * @param EndTimeOffset End time offset of video splitting, in seconds.
 <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
 <li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
-<li>When the value is less than 0 (assuming -n), it means the transcoded video ends n seconds before the original video ends.</li>
+<li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

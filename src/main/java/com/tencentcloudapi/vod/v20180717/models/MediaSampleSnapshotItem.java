@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaSampleSnapshotItem extends AbstractModel {
 
     /**
-    * Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+    * Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
     */
     @SerializedName("Definition")
     @Expose
@@ -41,8 +41,8 @@ public class MediaSampleSnapshotItem extends AbstractModel {
 
     /**
     * Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
     */
     @SerializedName("Interval")
     @Expose
@@ -63,16 +63,16 @@ public class MediaSampleSnapshotItem extends AbstractModel {
     private Long [] WaterMarkDefinition;
 
     /**
-     * Get Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
-     * @return Definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Get Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
+     * @return Definition Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param Definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Set Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param Definition Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -104,11 +104,11 @@ public class MediaSampleSnapshotItem extends AbstractModel {
 
     /**
      * Get Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li> 
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li> 
      * @return Interval Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
      */
     public Long getInterval() {
         return this.Interval;
@@ -116,11 +116,11 @@ public class MediaSampleSnapshotItem extends AbstractModel {
 
     /**
      * Set Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
      * @param Interval Sampling interval
-<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates the percentage of images.</li>
+<li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

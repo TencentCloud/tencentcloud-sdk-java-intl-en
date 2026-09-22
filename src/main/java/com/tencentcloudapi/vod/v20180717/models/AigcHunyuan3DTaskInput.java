@@ -31,7 +31,7 @@ public class AigcHunyuan3DTaskInput extends AbstractModel {
     private AigcHunyuan3DReferenceImageInfo [] ImageInfos;
 
     /**
-    * <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+    * <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
     */
     @SerializedName("MultiViewImageInfos")
     @Expose
@@ -59,7 +59,7 @@ public class AigcHunyuan3DTaskInput extends AbstractModel {
     private AigcHunyuan3DMeshInfo [] MeshInfos;
 
     /**
-    * <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+    * <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
     */
     @SerializedName("EnablePBR")
     @Expose
@@ -73,7 +73,7 @@ public class AigcHunyuan3DTaskInput extends AbstractModel {
     private Long FaceCount;
 
     /**
-    * <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+    * <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
     */
     @SerializedName("KeepUV")
     @Expose
@@ -94,7 +94,7 @@ public class AigcHunyuan3DTaskInput extends AbstractModel {
     private Long Seed;
 
     /**
-    * <p>Style control words.</p>
+    * <p>Style control word.</p>
     */
     @SerializedName("Style")
     @Expose
@@ -124,16 +124,16 @@ public class AigcHunyuan3DTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p> 
-     * @return MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+     * Get <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p> 
+     * @return MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
      */
     public AigcHunyuan3DMultiViewImageInfo [] getMultiViewImageInfos() {
         return this.MultiViewImageInfos;
     }
 
     /**
-     * Set <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
-     * @param MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+     * Set <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
+     * @param MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
      */
     public void setMultiViewImageInfos(AigcHunyuan3DMultiViewImageInfo [] MultiViewImageInfos) {
         this.MultiViewImageInfos = MultiViewImageInfos;
@@ -188,16 +188,16 @@ public class AigcHunyuan3DTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul> 
-     * @return EnablePBR <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+     * Get <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul> 
+     * @return EnablePBR <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
      */
     public String getEnablePBR() {
         return this.EnablePBR;
     }
 
     /**
-     * Set <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
-     * @param EnablePBR <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+     * Set <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+     * @param EnablePBR <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
      */
     public void setEnablePBR(String EnablePBR) {
         this.EnablePBR = EnablePBR;
@@ -220,16 +220,16 @@ public class AigcHunyuan3DTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul> 
-     * @return KeepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+     * Get <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul> 
+     * @return KeepUV <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
      */
     public String getKeepUV() {
         return this.KeepUV;
     }
 
     /**
-     * Set <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
-     * @param KeepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+     * Set <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+     * @param KeepUV <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
      */
     public void setKeepUV(String KeepUV) {
         this.KeepUV = KeepUV;
@@ -268,16 +268,16 @@ public class AigcHunyuan3DTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Style control words.</p> 
-     * @return Style <p>Style control words.</p>
+     * Get <p>Style control word.</p> 
+     * @return Style <p>Style control word.</p>
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set <p>Style control words.</p>
-     * @param Style <p>Style control words.</p>
+     * Set <p>Style control word.</p>
+     * @param Style <p>Style control word.</p>
      */
     public void setStyle(String Style) {
         this.Style = Style;

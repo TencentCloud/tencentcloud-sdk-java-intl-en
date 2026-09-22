@@ -31,7 +31,7 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     private Long Definition;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -80,7 +80,7 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     private RebuildMediaTargetAudioStream TargetAudioInfo;
 
     /**
-    * Output file container format. Available values: mp4, flv, and hls.
+    * Output file container format. Available values: mp4, flv, hls.
     */
     @SerializedName("Container")
     @Expose
@@ -121,16 +121,16 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public String getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
@@ -233,16 +233,16 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Output file container format. Available values: mp4, flv, and hls. 
-     * @return Container Output file container format. Available values: mp4, flv, and hls.
+     * Get Output file container format. Available values: mp4, flv, hls. 
+     * @return Container Output file container format. Available values: mp4, flv, hls.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Output file container format. Available values: mp4, flv, and hls.
-     * @param Container Output file container format. Available values: mp4, flv, and hls.
+     * Set Output file container format. Available values: mp4, flv, hls.
+     * @param Container Output file container format. Available values: mp4, flv, hls.
      */
     public void setContainer(String Container) {
         this.Container = Container;

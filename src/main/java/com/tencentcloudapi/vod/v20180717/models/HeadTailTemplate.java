@@ -45,24 +45,24 @@ public class HeadTailTemplate extends AbstractModel {
     private String Comment;
 
     /**
-    * Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5.
+    * Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
     */
     @SerializedName("HeadCandidateSet")
     @Expose
     private String [] HeadCandidateSet;
 
     /**
-    * Ending candidate list. When used, the candidate with the resolution closest to the main content is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
+    * Ending candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
     */
     @SerializedName("TailCandidateSet")
     @Expose
     private String [] TailCandidateSet;
 
     /**
-    * Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+    * Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
 <li> black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: stretch.
     */
@@ -71,14 +71,14 @@ Default value: stretch.
     private String FillType;
 
     /**
-    * Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -133,48 +133,48 @@ Default value: stretch.
     }
 
     /**
-     * Get Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5. 
-     * @return HeadCandidateSet Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5.
+     * Get Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates. 
+     * @return HeadCandidateSet Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
      */
     public String [] getHeadCandidateSet() {
         return this.HeadCandidateSet;
     }
 
     /**
-     * Set Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5.
-     * @param HeadCandidateSet Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5.
+     * Set Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
+     * @param HeadCandidateSet Opening candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
      */
     public void setHeadCandidateSet(String [] HeadCandidateSet) {
         this.HeadCandidateSet = HeadCandidateSet;
     }
 
     /**
-     * Get Ending candidate list. When used, the candidate with the resolution closest to the main content is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates. 
-     * @return TailCandidateSet Ending candidate list. When used, the candidate with the resolution closest to the main content is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
+     * Get Ending candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates. 
+     * @return TailCandidateSet Ending candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
      */
     public String [] getTailCandidateSet() {
         return this.TailCandidateSet;
     }
 
     /**
-     * Set Ending candidate list. When used, the candidate with the resolution closest to the main content is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
-     * @param TailCandidateSet Ending candidate list. When used, the candidate with the resolution closest to the main content is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
+     * Set Ending candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
+     * @param TailCandidateSet Ending candidate list. When used, the one closest to the main content resolution is selected. If identical candidates exist, the first one is used. Supports up to 5 candidates.
      */
     public void setTailCandidateSet(String [] TailCandidateSet) {
         this.TailCandidateSet = TailCandidateSet;
     }
 
     /**
-     * Get Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+     * Get Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
 <li> black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: stretch. 
-     * @return FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+     * @return FillType Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
 <li> black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: stretch.
      */
@@ -183,16 +183,16 @@ Default value: stretch.
     }
 
     /**
-     * Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+     * Set Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
 <li> black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: stretch.
-     * @param FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
-<li> stretch: stretches each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+     * @param FillType Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
 <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-<li> white: Leave blank, maintain video aspect ratio, edge remainder filled with white;</li>
+<li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
 <li> black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: stretch.
      */
@@ -201,32 +201,32 @@ Default value: stretch.
     }
 
     /**
-     * Get Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

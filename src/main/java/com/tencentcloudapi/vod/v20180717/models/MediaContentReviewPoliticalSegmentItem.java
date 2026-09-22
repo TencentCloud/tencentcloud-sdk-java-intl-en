@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class MediaContentReviewPoliticalSegmentItem extends AbstractModel {
 
     /**
-    * Offset time of the start of the suspected segment. Unit: seconds.
+    * Time offset of the start of the suspected segment. Unit: second.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a suspected segment, in seconds.
+    * End time offset of the suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Score of the suspected segment.
+    * Suspected segment score.
     */
     @SerializedName("Confidence")
     @Expose
@@ -62,7 +62,7 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel {
     private String Name;
 
     /**
-    * Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+    * Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -80,19 +80,19 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
+<li>sensitive_military: relevant people involved in rule violation.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+    * Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
@@ -100,69 +100,69 @@ Images will be deleted after the PicUrlExpireTime time point).
     private String Url;
 
     /**
-    * Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+    * Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Deprecated. Please use `PicUrlExpireTime`.
+    * Deprecated. Please use PicUrlExpireTime.
     */
     @SerializedName("PicUrlExpireTimeStamp")
     @Expose
     private Long PicUrlExpireTimeStamp;
 
     /**
-    * URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get Offset time of the start of the suspected segment. Unit: seconds. 
-     * @return StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+     * Get Time offset of the start of the suspected segment. Unit: second. 
+     * @return StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Offset time of the start of the suspected segment. Unit: seconds.
-     * @param StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+     * Set Time offset of the start of the suspected segment. Unit: second.
+     * @param StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a suspected segment, in seconds. 
-     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
+     * Get End time offset of the suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a suspected segment, in seconds.
-     * @param EndTimeOffset End time offset of a suspected segment, in seconds.
+     * Set End time offset of the suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of the suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Score of the suspected segment. 
-     * @return Confidence Score of the suspected segment.
+     * Get Suspected segment score. 
+     * @return Confidence Suspected segment score.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of the suspected segment.
-     * @param Confidence Score of the suspected segment.
+     * Set Suspected segment score.
+     * @param Confidence Suspected segment score.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -213,7 +213,7 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+     * Get Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -231,13 +231,13 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li> 
-     * @return Label Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+<li>sensitive_military: relevant people involved in rule violation.</li> 
+     * @return Label Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -255,19 +255,19 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
+<li>sensitive_military: relevant people involved in rule violation.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+     * Set Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -285,13 +285,13 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
-     * @param Label Result tags of suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the [task control parameter for frames involving inappropriate information](https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+<li>sensitive_military: relevant people involved in rule violation.</li>
+     * @param Label Result tag for suspected segments involving inappropriate information. Mapping between the LabelSet parameter in the task control parameter for frames involving inappropriate information in the audio/video moderation template (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 politician:
@@ -309,21 +309,21 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: commercial figure involved in rule violation.</li>
 scholar:
-<li>sensitive_scholar: Educational scholar in rule violation.</li>
+<li>sensitive_scholar: Educational scholar with rule violation.</li>
 celebrity:
 <li>sensitive_celebrity: rule-violating celebrity;</li>
-<li>historical_celebrity: Historical celebrity.</li>
+<li>historical_celebrity: historic celebrity.</li>
 military:
-<li>sensitive_military: relevant people involved in rule violations.</li>
+<li>sensitive_military: relevant people involved in rule violation.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * Get Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point). 
-     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * @return Url Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
@@ -331,9 +331,9 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * Set Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
-     * @param Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * @param Url Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
@@ -341,24 +341,24 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner. 
-     * @return AreaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * Get Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner. 
+     * @return AreaCoordSet Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
-     * @param AreaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * Set Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * @param AreaCoordSet Coordinates of the area where inappropriate information or violation icons appear (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Deprecated. Please use `PicUrlExpireTime`. 
-     * @return PicUrlExpireTimeStamp Deprecated. Please use `PicUrlExpireTime`.
+     * Get Deprecated. Please use PicUrlExpireTime. 
+     * @return PicUrlExpireTimeStamp Deprecated. Please use PicUrlExpireTime.
      * @deprecated
      */
     @Deprecated
@@ -367,8 +367,8 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Set Deprecated. Please use `PicUrlExpireTime`.
-     * @param PicUrlExpireTimeStamp Deprecated. Please use `PicUrlExpireTime`.
+     * Set Deprecated. Please use PicUrlExpireTime.
+     * @param PicUrlExpireTimeStamp Deprecated. Please use PicUrlExpireTime.
      * @deprecated
      */
     @Deprecated
@@ -377,16 +377,16 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return PicUrlExpireTime URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param PicUrlExpireTime URL expiration time of the suspected image in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

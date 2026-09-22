@@ -25,14 +25,14 @@ public class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel {
 
     /**
     * Full text recognition result set.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskOcrFullTextSegmentItem [] SegmentSet;
 
     /**
-    * URL of the full text recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point.)
+    * URL of the text full recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
@@ -47,9 +47,9 @@ public class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel {
 
     /**
      * Get Full text recognition result set.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
      * @return SegmentSet Full text recognition result set.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public AiRecognitionTaskOcrFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -57,25 +57,25 @@ public class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel {
 
     /**
      * Set Full text recognition result set.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      * @param SegmentSet Full text recognition result set.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public void setSegmentSet(AiRecognitionTaskOcrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get URL of the full text recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point.) 
-     * @return SegmentSetFileUrl URL of the full text recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point.)
+     * Get URL of the text full recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.) 
+     * @return SegmentSetFileUrl URL of the text full recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL of the full text recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point.)
-     * @param SegmentSetFileUrl URL of the full text recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point.)
+     * Set URL of the text full recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @param SegmentSetFileUrl URL of the text full recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;

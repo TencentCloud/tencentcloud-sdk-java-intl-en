@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel {
 
     /**
-    * <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+    * <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -45,16 +45,16 @@ public class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel {
     private MediaAiAnalysisFrameTagItem [] TagSet;
 
     /**
-     * Get <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p> 
-     * @return StartTimeOffset <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+     * Get <p>Time offset of frame tagging start.</p><p>Unit: seconds</p> 
+     * @return StartTimeOffset <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
-     * @param StartTimeOffset <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+     * Set <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
+     * @param StartTimeOffset <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;

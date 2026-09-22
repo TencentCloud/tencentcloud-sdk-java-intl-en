@@ -25,7 +25,7 @@ public class FrameTagConfigureInfo extends AbstractModel {
 
     /**
     * Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
     */
     @SerializedName("Switch")
@@ -33,7 +33,7 @@ public class FrameTagConfigureInfo extends AbstractModel {
     private String Switch;
 
     /**
-    * Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+    * Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
@@ -41,10 +41,10 @@ public class FrameTagConfigureInfo extends AbstractModel {
 
     /**
      * Get Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li> 
      * @return Switch Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
      */
     public String getSwitch() {
@@ -53,10 +53,10 @@ public class FrameTagConfigureInfo extends AbstractModel {
 
     /**
      * Set Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
      * @param Switch Switch for the intelligent frame-specific tagging task. Available values:
-<li>ON: enable the intelligent frame-specific tagging task;</li>
+<li>ON: enable the intelligent frame tagging task;</li>
 <li>OFF: Disable the intelligent frame-specific tagging task.</li>
      */
     public void setSwitch(String Switch) {
@@ -64,16 +64,16 @@ public class FrameTagConfigureInfo extends AbstractModel {
     }
 
     /**
-     * Get Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds. 
-     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * Get Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds. 
+     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-     * @param ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
+     * @param ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;

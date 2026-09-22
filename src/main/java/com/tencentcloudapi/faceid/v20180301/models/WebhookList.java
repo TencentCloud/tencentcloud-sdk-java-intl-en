@@ -31,7 +31,7 @@ public class WebhookList extends AbstractModel {
     private Long WebhookId;
 
     /**
-    * <p>Callback URL name</p>
+    * <p>Callback address name</p>
     */
     @SerializedName("WebhookName")
     @Expose
@@ -66,14 +66,14 @@ public class WebhookList extends AbstractModel {
     private String ModTime;
 
     /**
-    * <p>Callback request key</p>
+    * <p>Callback signature key, up to 128 characters.</p>
     */
     @SerializedName("SignatureKey")
     @Expose
     private String SignatureKey;
 
     /**
-    * <p>Existence of callback API key</p>
+    * <p>Existence of callback signature key</p>
     */
     @SerializedName("HasSignatureKey")
     @Expose
@@ -96,16 +96,16 @@ public class WebhookList extends AbstractModel {
     }
 
     /**
-     * Get <p>Callback URL name</p> 
-     * @return WebhookName <p>Callback URL name</p>
+     * Get <p>Callback address name</p> 
+     * @return WebhookName <p>Callback address name</p>
      */
     public String getWebhookName() {
         return this.WebhookName;
     }
 
     /**
-     * Set <p>Callback URL name</p>
-     * @param WebhookName <p>Callback URL name</p>
+     * Set <p>Callback address name</p>
+     * @param WebhookName <p>Callback address name</p>
      */
     public void setWebhookName(String WebhookName) {
         this.WebhookName = WebhookName;
@@ -176,32 +176,32 @@ public class WebhookList extends AbstractModel {
     }
 
     /**
-     * Get <p>Callback request key</p> 
-     * @return SignatureKey <p>Callback request key</p>
+     * Get <p>Callback signature key, up to 128 characters.</p> 
+     * @return SignatureKey <p>Callback signature key, up to 128 characters.</p>
      */
     public String getSignatureKey() {
         return this.SignatureKey;
     }
 
     /**
-     * Set <p>Callback request key</p>
-     * @param SignatureKey <p>Callback request key</p>
+     * Set <p>Callback signature key, up to 128 characters.</p>
+     * @param SignatureKey <p>Callback signature key, up to 128 characters.</p>
      */
     public void setSignatureKey(String SignatureKey) {
         this.SignatureKey = SignatureKey;
     }
 
     /**
-     * Get <p>Existence of callback API key</p> 
-     * @return HasSignatureKey <p>Existence of callback API key</p>
+     * Get <p>Existence of callback signature key</p> 
+     * @return HasSignatureKey <p>Existence of callback signature key</p>
      */
     public Boolean getHasSignatureKey() {
         return this.HasSignatureKey;
     }
 
     /**
-     * Set <p>Existence of callback API key</p>
-     * @param HasSignatureKey <p>Existence of callback API key</p>
+     * Set <p>Existence of callback signature key</p>
+     * @param HasSignatureKey <p>Existence of callback signature key</p>
      */
     public void setHasSignatureKey(Boolean HasSignatureKey) {
         this.HasSignatureKey = HasSignatureKey;

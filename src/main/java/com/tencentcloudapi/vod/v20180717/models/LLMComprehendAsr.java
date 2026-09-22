@@ -26,7 +26,7 @@ public class LLMComprehendAsr extends AbstractModel {
     /**
     * Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
     */
     @SerializedName("Switch")
     @Expose
@@ -35,10 +35,10 @@ public class LLMComprehendAsr extends AbstractModel {
     /**
      * Get Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task. 
+-OFF: disables the transcription task. 
      * @return Switch Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
      */
     public String getSwitch() {
         return this.Switch;
@@ -47,10 +47,10 @@ public class LLMComprehendAsr extends AbstractModel {
     /**
      * Set Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
      * @param Switch Text transcription task switch. Available values:
 - ON: Enable the text transcription task.
-- OFF: disables the text transcription task.
+-OFF: disables the transcription task.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

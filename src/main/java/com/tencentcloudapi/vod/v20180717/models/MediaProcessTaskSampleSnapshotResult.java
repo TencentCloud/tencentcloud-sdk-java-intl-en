@@ -31,7 +31,7 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -52,7 +52,7 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input of the sampled screenshot task for videos.
+    * Input of the sampling screenshot task for a video.
     */
     @SerializedName("Input")
     @Expose
@@ -66,21 +66,21 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     private MediaSampleSnapshotItem Output;
 
     /**
-    * Progress of the sampling screenshot task for the video. Value range: 0–100.
+    * Progress of the sampling screenshot task for video, in the range of [0,100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Sampling screenshot task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Start execution time of the sampling screenshot task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Sampled screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Task completion time of sampling screenshot taking in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -103,16 +103,16 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     }
 
     /**
-     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list. 
+     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -151,16 +151,16 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     }
 
     /**
-     * Get Input of the sampled screenshot task for videos. 
-     * @return Input Input of the sampled screenshot task for videos.
+     * Get Input of the sampling screenshot task for a video. 
+     * @return Input Input of the sampling screenshot task for a video.
      */
     public SampleSnapshotTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the sampled screenshot task for videos.
-     * @param Input Input of the sampled screenshot task for videos.
+     * Set Input of the sampling screenshot task for a video.
+     * @param Input Input of the sampling screenshot task for a video.
      */
     public void setInput(SampleSnapshotTaskInput Input) {
         this.Input = Input;
@@ -183,48 +183,48 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     }
 
     /**
-     * Get Progress of the sampling screenshot task for the video. Value range: 0–100. 
-     * @return Progress Progress of the sampling screenshot task for the video. Value range: 0–100.
+     * Get Progress of the sampling screenshot task for video, in the range of [0,100]. 
+     * @return Progress Progress of the sampling screenshot task for video, in the range of [0,100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the sampling screenshot task for the video. Value range: 0–100.
-     * @param Progress Progress of the sampling screenshot task for the video. Value range: 0–100.
+     * Set Progress of the sampling screenshot task for video, in the range of [0,100].
+     * @param Progress Progress of the sampling screenshot task for video, in the range of [0,100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Sampling screenshot task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Sampling screenshot task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Start execution time of the sampling screenshot task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Start execution time of the sampling screenshot task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Sampling screenshot task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Sampling screenshot task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Start execution time of the sampling screenshot task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Start execution time of the sampling screenshot task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Sampled screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime Sampled screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Task completion time of sampling screenshot taking in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime Task completion time of sampling screenshot taking in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Sampled screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime Sampled screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Task completion time of sampling screenshot taking in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime Task completion time of sampling screenshot taking in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

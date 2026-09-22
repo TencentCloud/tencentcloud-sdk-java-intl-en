@@ -31,7 +31,7 @@ public class DescribeTasksResponse extends AbstractModel {
     private TaskSimpleInfo [] TaskSet;
 
     /**
-    * <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+    * <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
     */
     @SerializedName("ScrollToken")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeTasksResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p> 
-     * @return ScrollToken <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+     * Get <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p> 
+     * @return ScrollToken <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
-     * @param ScrollToken <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+     * Set <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+     * @param ScrollToken <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

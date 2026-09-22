@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FileDeleteTask extends AbstractModel {
 
     /**
-    * <p>List of IDs of files to delete.</p>
+    * <p>List of file IDs to delete.</p>
     */
     @SerializedName("FileIdSet")
     @Expose
@@ -38,16 +38,16 @@ public class FileDeleteTask extends AbstractModel {
     private FileDeleteResultItem [] FileDeleteResultInfo;
 
     /**
-     * Get <p>List of IDs of files to delete.</p> 
-     * @return FileIdSet <p>List of IDs of files to delete.</p>
+     * Get <p>List of file IDs to delete.</p> 
+     * @return FileIdSet <p>List of file IDs to delete.</p>
      */
     public String [] getFileIdSet() {
         return this.FileIdSet;
     }
 
     /**
-     * Set <p>List of IDs of files to delete.</p>
-     * @param FileIdSet <p>List of IDs of files to delete.</p>
+     * Set <p>List of file IDs to delete.</p>
+     * @param FileIdSet <p>List of file IDs to delete.</p>
      */
     public void setFileIdSet(String [] FileIdSet) {
         this.FileIdSet = FileIdSet;

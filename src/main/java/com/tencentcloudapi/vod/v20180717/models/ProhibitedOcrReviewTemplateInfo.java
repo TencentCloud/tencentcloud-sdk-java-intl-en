@@ -25,8 +25,8 @@ public class ProhibitedOcrReviewTemplateInfo extends AbstractModel {
 
     /**
     * Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -40,7 +40,7 @@ public class ProhibitedOcrReviewTemplateInfo extends AbstractModel {
     private Long BlockConfidence;
 
     /**
-    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -48,11 +48,11 @@ public class ProhibitedOcrReviewTemplateInfo extends AbstractModel {
 
     /**
      * Get Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li> 
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li> 
      * @return Switch Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -60,11 +60,11 @@ public class ProhibitedOcrReviewTemplateInfo extends AbstractModel {
 
     /**
      * Set Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
      * @param Switch Text prohibition task switch. Available values:
-<li>ON: enable text prohibition task;</li>
-<li>OFF: Disable the text prohibition task.</li>
+<li>ON: enable the text prohibition task;</li>
+<li>OFF: disables the text prohibition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -87,16 +87,16 @@ public class ProhibitedOcrReviewTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

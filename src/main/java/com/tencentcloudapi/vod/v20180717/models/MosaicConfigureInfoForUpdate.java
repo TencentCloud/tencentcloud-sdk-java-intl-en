@@ -26,7 +26,7 @@ public class MosaicConfigureInfoForUpdate extends AbstractModel {
     /**
     * Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -35,10 +35,10 @@ public class MosaicConfigureInfoForUpdate extends AbstractModel {
     /**
      * Get Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li> 
+<li>OFF: disables it.</li> 
      * @return Switch Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -47,10 +47,10 @@ public class MosaicConfigureInfoForUpdate extends AbstractModel {
     /**
      * Set Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
      * @param Switch Video frame mosaic detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disables it.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

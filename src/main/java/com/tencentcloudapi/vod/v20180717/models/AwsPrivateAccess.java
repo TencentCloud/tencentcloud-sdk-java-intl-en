@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AwsPrivateAccess extends AbstractModel {
 
     /**
-    * Switch for Aws S3 origin-pull authentication configuration. Valid values:
+    * Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -61,10 +61,10 @@ public class AwsPrivateAccess extends AbstractModel {
     private String Bucket;
 
     /**
-     * Get Switch for Aws S3 origin-pull authentication configuration. Valid values:
+     * Get Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Switch for Aws S3 origin-pull authentication configuration. Valid values:
+     * @return Switch Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -73,10 +73,10 @@ public class AwsPrivateAccess extends AbstractModel {
     }
 
     /**
-     * Set Switch for Aws S3 origin-pull authentication configuration. Valid values:
+     * Set Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Switch for Aws S3 origin-pull authentication configuration. Valid values:
+     * @param Switch Toggle for Aws S3 origin-pull authentication. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateAIAnalysisTemplateRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Audio and video content analysis template name. Length limit: 64 characters.
+    * Audio and video content analysis template name, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of the audio and video content analysis template, with a length limit of 256 characters.
+    * Audio and video content analysis template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
@@ -66,7 +66,7 @@ public class CreateAIAnalysisTemplateRequest extends AbstractModel {
     private CoverConfigureInfo CoverConfigure;
 
     /**
-    * Control parameter of the intelligent frame-specific tagging task.
+    * Control parameter for intelligent frame-specific tagging task.
     */
     @SerializedName("FrameTagConfigure")
     @Expose
@@ -80,48 +80,48 @@ public class CreateAIAnalysisTemplateRequest extends AbstractModel {
     private HighlightsConfigureInfo HighlightConfigure;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Audio and video content analysis template name. Length limit: 64 characters. 
-     * @return Name Audio and video content analysis template name. Length limit: 64 characters.
+     * Get Audio and video content analysis template name, with a length limit of 64 characters. 
+     * @return Name Audio and video content analysis template name, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio and video content analysis template name. Length limit: 64 characters.
-     * @param Name Audio and video content analysis template name. Length limit: 64 characters.
+     * Set Audio and video content analysis template name, with a length limit of 64 characters.
+     * @param Name Audio and video content analysis template name, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of the audio and video content analysis template, with a length limit of 256 characters. 
-     * @return Comment Description of the audio and video content analysis template, with a length limit of 256 characters.
+     * Get Audio and video content analysis template description, with a length limit of 256 characters. 
+     * @return Comment Audio and video content analysis template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of the audio and video content analysis template, with a length limit of 256 characters.
-     * @param Comment Description of the audio and video content analysis template, with a length limit of 256 characters.
+     * Set Audio and video content analysis template description, with a length limit of 256 characters.
+     * @param Comment Audio and video content analysis template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
@@ -176,16 +176,16 @@ public class CreateAIAnalysisTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Control parameter of the intelligent frame-specific tagging task. 
-     * @return FrameTagConfigure Control parameter of the intelligent frame-specific tagging task.
+     * Get Control parameter for intelligent frame-specific tagging task. 
+     * @return FrameTagConfigure Control parameter for intelligent frame-specific tagging task.
      */
     public FrameTagConfigureInfo getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set Control parameter of the intelligent frame-specific tagging task.
-     * @param FrameTagConfigure Control parameter of the intelligent frame-specific tagging task.
+     * Set Control parameter for intelligent frame-specific tagging task.
+     * @param FrameTagConfigure Control parameter for intelligent frame-specific tagging task.
      */
     public void setFrameTagConfigure(FrameTagConfigureInfo FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;

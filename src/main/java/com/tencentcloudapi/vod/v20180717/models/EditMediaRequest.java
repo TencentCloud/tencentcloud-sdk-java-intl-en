@@ -31,7 +31,7 @@ public class EditMediaRequest extends AbstractModel {
     private String InputType;
 
     /**
-    * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,7 +52,7 @@ public class EditMediaRequest extends AbstractModel {
     private EditMediaStreamInfo [] StreamInfos;
 
     /**
-    * Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+    * Edit template ID. Valid values: 10 and 20. Default value: 10.
 <li>10: During splicing, use the input with the highest resolution as the base;</li>
 <li>20: During splicing, use the input with the highest bitrate as the base.</li>
     */
@@ -75,21 +75,21 @@ public class EditMediaRequest extends AbstractModel {
     private EditMediaOutputConfig OutputConfig;
 
     /**
-    * Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+    * Identify source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+    * Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+    * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
     */
     @SerializedName("SessionId")
     @Expose
@@ -119,16 +119,16 @@ public class EditMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -167,10 +167,10 @@ public class EditMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+     * Get Edit template ID. Valid values: 10 and 20. Default value: 10.
 <li>10: During splicing, use the input with the highest resolution as the base;</li>
 <li>20: During splicing, use the input with the highest bitrate as the base.</li> 
-     * @return Definition Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+     * @return Definition Edit template ID. Valid values: 10 and 20. Default value: 10.
 <li>10: During splicing, use the input with the highest resolution as the base;</li>
 <li>20: During splicing, use the input with the highest bitrate as the base.</li>
      */
@@ -179,10 +179,10 @@ public class EditMediaRequest extends AbstractModel {
     }
 
     /**
-     * Set Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+     * Set Edit template ID. Valid values: 10 and 20. Default value: 10.
 <li>10: During splicing, use the input with the highest resolution as the base;</li>
 <li>20: During splicing, use the input with the highest bitrate as the base.</li>
-     * @param Definition Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+     * @param Definition Edit template ID. Valid values: 10 and 20. Default value: 10.
 <li>10: During splicing, use the input with the highest resolution as the base;</li>
 <li>20: During splicing, use the input with the highest bitrate as the base.</li>
      */
@@ -223,48 +223,48 @@ public class EditMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters. 
-     * @return SessionContext Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+     * Get Identify source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters. 
+     * @return SessionContext Identify source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
-     * @param SessionContext Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+     * Set Identify source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+     * @param SessionContext Identify source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
-     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * Get Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
-     * @param TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * Set Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TasksPriority Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
-     * @return SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Get Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication. 
+     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Set Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * @param SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

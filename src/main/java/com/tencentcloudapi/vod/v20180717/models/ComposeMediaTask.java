@@ -42,7 +42,7 @@ public class ComposeMediaTask extends AbstractModel {
     /**
     * Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -56,7 +56,7 @@ public class ComposeMediaTask extends AbstractModel {
     private String Message;
 
     /**
-    * Progress of the media file creation task, with a value range of [0-100].
+    * Progress of the media file creation task, in the range of [0,100].
     */
     @SerializedName("Progress")
     @Expose
@@ -77,7 +77,7 @@ public class ComposeMediaTask extends AbstractModel {
     private ComposeMediaTaskOutput Output;
 
     /**
-    * Meta information of the output video.
+    * Metadata of the output video.
     */
     @SerializedName("MetaData")
     @Expose
@@ -140,10 +140,10 @@ public class ComposeMediaTask extends AbstractModel {
     /**
      * Get Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li> 
+<li>Other value: failure.</li> 
      * @return ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -152,10 +152,10 @@ public class ComposeMediaTask extends AbstractModel {
     /**
      * Set Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      * @param ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: Failed.</li>
+<li>Other value: failure.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -178,16 +178,16 @@ public class ComposeMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Progress of the media file creation task, with a value range of [0-100]. 
-     * @return Progress Progress of the media file creation task, with a value range of [0-100].
+     * Get Progress of the media file creation task, in the range of [0,100]. 
+     * @return Progress Progress of the media file creation task, in the range of [0,100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the media file creation task, with a value range of [0-100].
-     * @param Progress Progress of the media file creation task, with a value range of [0-100].
+     * Set Progress of the media file creation task, in the range of [0,100].
+     * @param Progress Progress of the media file creation task, in the range of [0,100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -226,16 +226,16 @@ public class ComposeMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Meta information of the output video. 
-     * @return MetaData Meta information of the output video.
+     * Get Metadata of the output video. 
+     * @return MetaData Metadata of the output video.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Meta information of the output video.
-     * @param MetaData Meta information of the output video.
+     * Set Metadata of the output video.
+     * @param MetaData Metadata of the output video.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

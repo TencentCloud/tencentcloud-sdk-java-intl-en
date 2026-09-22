@@ -52,14 +52,14 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     private String Message;
 
     /**
-    * Progress of the adaptive bitrate streaming task. Value range: 0-100.
+    * Adaptive bitrate streaming task progress, value ranges from 0 to 100.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input of the video to adaptive streaming task.
+    * Input for a video to adaptive streaming task.
     */
     @SerializedName("Input")
     @Expose
@@ -73,7 +73,7 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     private AdaptiveDynamicStreamingInfoItem Output;
 
     /**
-    * Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -151,32 +151,32 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     }
 
     /**
-     * Get Progress of the adaptive bitrate streaming task. Value range: 0-100. 
-     * @return Progress Progress of the adaptive bitrate streaming task. Value range: 0-100.
+     * Get Adaptive bitrate streaming task progress, value ranges from 0 to 100. 
+     * @return Progress Adaptive bitrate streaming task progress, value ranges from 0 to 100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the adaptive bitrate streaming task. Value range: 0-100.
-     * @param Progress Progress of the adaptive bitrate streaming task. Value range: 0-100.
+     * Set Adaptive bitrate streaming task progress, value ranges from 0 to 100.
+     * @param Progress Adaptive bitrate streaming task progress, value ranges from 0 to 100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input of the video to adaptive streaming task. 
-     * @return Input Input of the video to adaptive streaming task.
+     * Get Input for a video to adaptive streaming task. 
+     * @return Input Input for a video to adaptive streaming task.
      */
     public AdaptiveDynamicStreamingTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the video to adaptive streaming task.
-     * @param Input Input of the video to adaptive streaming task.
+     * Set Input for a video to adaptive streaming task.
+     * @param Input Input for a video to adaptive streaming task.
      */
     public void setInput(AdaptiveDynamicStreamingTaskInput Input) {
         this.Input = Input;
@@ -199,16 +199,16 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     }
 
     /**
-     * Get Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Adaptive bitrate streaming task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Adaptive bitrate streaming task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
 
     /**
-    * Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+    * Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li>
 
     */
     @SerializedName("StorageMode")
@@ -39,7 +39,7 @@ public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
     private String MediaName;
 
     /**
-    * Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
 
     */
     @SerializedName("ClassId")
@@ -47,7 +47,7 @@ public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
     private Long ClassId;
 
     /**
-    * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -75,16 +75,16 @@ public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
     private String FileId;
 
     /**
-    * Meta information of the output video. Valid only when StorageMode is Permanent.
+    * Meta information of the output video. Valid when StorageMode is Permanent.
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-     * Get Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+     * Get Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li>
  
-     * @return StorageMode Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+     * @return StorageMode Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li>
 
      */
     public String getStorageMode() {
@@ -92,9 +92,9 @@ public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Set Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+     * Set Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li>
 
-     * @param StorageMode Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+     * @param StorageMode Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li>
 
      */
     public void setStorageMode(String StorageMode) {
@@ -118,9 +118,9 @@ public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
  
-     * @return ClassId Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
 
      */
     public Long getClassId() {
@@ -128,9 +128,9 @@ public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Set Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
 
-     * @param ClassId Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
 
      */
     public void setClassId(Long ClassId) {
@@ -138,16 +138,16 @@ public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -202,16 +202,16 @@ public class SceneAigcImageTaskOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get Meta information of the output video. Valid only when StorageMode is Permanent. 
-     * @return MetaData Meta information of the output video. Valid only when StorageMode is Permanent.
+     * Get Meta information of the output video. Valid when StorageMode is Permanent. 
+     * @return MetaData Meta information of the output video. Valid when StorageMode is Permanent.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Meta information of the output video. Valid only when StorageMode is Permanent.
-     * @param MetaData Meta information of the output video. Valid only when StorageMode is Permanent.
+     * Set Meta information of the output video. Valid when StorageMode is Permanent.
+     * @param MetaData Meta information of the output video. Valid when StorageMode is Permanent.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

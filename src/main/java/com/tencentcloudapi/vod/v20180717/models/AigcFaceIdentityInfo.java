@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcFaceIdentityInfo extends AbstractModel {
 
     /**
-    * Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+    * Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
     */
     @SerializedName("FaceId")
     @Expose
@@ -38,30 +38,30 @@ public class AigcFaceIdentityInfo extends AbstractModel {
     private String FaceImage;
 
     /**
-    * Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+    * Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+    * End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video. 
-     * @return FaceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+     * Get Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video. 
+     * @return FaceId Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
      */
     public String getFaceId() {
         return this.FaceId;
     }
 
     /**
-     * Set Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
-     * @param FaceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+     * Set Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
+     * @param FaceId Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
      */
     public void setFaceId(String FaceId) {
         this.FaceId = FaceId;
@@ -84,32 +84,32 @@ public class AigcFaceIdentityInfo extends AbstractModel {
     }
 
     /**
-     * Get Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms. 
-     * @return StartTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+     * Get Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms. 
+     * @return StartTime Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
-     * @param StartTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+     * Set Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
+     * @param StartTime Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms. 
-     * @return EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+     * Get End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms. 
+     * @return EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
-     * @param EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+     * Set End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
+     * @param EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

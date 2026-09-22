@@ -31,7 +31,7 @@ public class CreateEnhanceMediaTemplateRequest extends AbstractModel {
     private String Container;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -80,8 +80,8 @@ public class CreateEnhanceMediaTemplateRequest extends AbstractModel {
     private RebuildMediaTargetAudioStream TargetAudioInfo;
 
     /**
-    * Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+    * Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
     */
@@ -91,7 +91,7 @@ Default value: 0.
 
     /**
     * Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
     */
@@ -116,16 +116,16 @@ Default value: 0.
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -228,12 +228,12 @@ Default value: 0.
     }
 
     /**
-     * Get Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * Get Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0. 
-     * @return RemoveVideo Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * @return RemoveVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -242,12 +242,12 @@ Default value: 0.
     }
 
     /**
-     * Set Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * Set Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
-     * @param RemoveVideo Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * @param RemoveVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -257,11 +257,11 @@ Default value: 0.
 
     /**
      * Get Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0. 
      * @return RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -271,11 +271,11 @@ Default value: 0.
 
     /**
      * Set Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      * @param RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */

@@ -52,7 +52,7 @@ public class AiReviewTaskPoliticalResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input for tasks involving inappropriate information in audio/video moderation.
+    * Task input for inappropriate content involved in audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
@@ -137,16 +137,16 @@ public class AiReviewTaskPoliticalResult extends AbstractModel {
     }
 
     /**
-     * Get Task input for tasks involving inappropriate information in audio/video moderation. 
-     * @return Input Task input for tasks involving inappropriate information in audio/video moderation.
+     * Get Task input for inappropriate content involved in audio/video moderation. 
+     * @return Input Task input for inappropriate content involved in audio/video moderation.
      */
     public AiReviewPoliticalTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input for tasks involving inappropriate information in audio/video moderation.
-     * @param Input Task input for tasks involving inappropriate information in audio/video moderation.
+     * Set Task input for inappropriate content involved in audio/video moderation.
+     * @param Input Task input for inappropriate content involved in audio/video moderation.
      */
     public void setInput(AiReviewPoliticalTaskInput Input) {
         this.Input = Input;

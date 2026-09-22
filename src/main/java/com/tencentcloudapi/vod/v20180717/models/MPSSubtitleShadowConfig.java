@@ -45,7 +45,7 @@ public class MPSSubtitleShadowConfig extends AbstractModel {
     private Long ShadowWidthUnit;
 
     /**
-    * <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+    * <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
     */
     @SerializedName("ShadowColor")
     @Expose
@@ -107,16 +107,16 @@ public class MPSSubtitleShadowConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p> 
-     * @return ShadowColor <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+     * Get <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p> 
+     * @return ShadowColor <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
      */
     public String getShadowColor() {
         return this.ShadowColor;
     }
 
     /**
-     * Set <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
-     * @param ShadowColor <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+     * Set <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
+     * @param ShadowColor <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
      */
     public void setShadowColor(String ShadowColor) {
         this.ShadowColor = ShadowColor;

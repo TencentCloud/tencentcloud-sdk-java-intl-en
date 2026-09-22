@@ -48,7 +48,7 @@ Default value: 16000.
     /**
     * Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
     */
     @SerializedName("AudioChannel")
@@ -56,7 +56,7 @@ Default value: 2.
     private Long AudioChannel;
 
     /**
-    * Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+    * Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
     */
     @SerializedName("Bitrate")
@@ -130,11 +130,11 @@ Default value: 16000.
     /**
      * Get Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2. 
      * @return AudioChannel Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
      */
     public Long getAudioChannel() {
@@ -144,11 +144,11 @@ Default value: 2.
     /**
      * Set Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
      * @param AudioChannel Number of audio channels. Available values:
 <li>1: mono.</li>
-<li>2: stereo.</li>
+<li>2: stereo</li>
 Default value: 2.
      */
     public void setAudioChannel(Long AudioChannel) {
@@ -156,9 +156,9 @@ Default value: 2.
     }
 
     /**
-     * Get Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+     * Get Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically. 
-     * @return Bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+     * @return Bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
      */
     public Long getBitrate() {
@@ -166,9 +166,9 @@ When the value is 0, the audio bitrate is set automatically.
     }
 
     /**
-     * Set Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+     * Set Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
-     * @param Bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+     * @param Bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
 When the value is 0, the audio bitrate is set automatically.
      */
     public void setBitrate(Long Bitrate) {

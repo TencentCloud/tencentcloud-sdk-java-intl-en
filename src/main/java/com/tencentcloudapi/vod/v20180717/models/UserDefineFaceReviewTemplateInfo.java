@@ -24,16 +24,16 @@ import java.util.HashMap;
 public class UserDefineFaceReviewTemplateInfo extends AbstractModel {
 
     /**
-    * Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li>
+    * Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+    * User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
     */
     @SerializedName("LabelSet")
@@ -41,47 +41,47 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     private String [] LabelSet;
 
     /**
-    * Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100.
+    * Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100.
+    * Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li> 
-     * @return Switch Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li>
+     * Get Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li> 
+     * @return Switch Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li>
-     * @param Switch Switch for user-defined character audio/video moderation tasks. Available values:
-<li>ON: Enable the customized figure audio/video moderation task;</li>
-<li>OFF: Disable the customized figure audio/video moderation task.</li>
+     * Set Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li>
+     * @param Switch Switch for the user-defined character audio/video moderation task. Available values:
+<li>ON: enable the customized figure audio/video moderation task;</li>
+<li>OFF: Disable customized figure audio/video moderation task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+     * Get User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters. 
-     * @return LabelSet User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+     * @return LabelSet User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public String [] getLabelSet() {
@@ -89,9 +89,9 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Set User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+     * Set User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-     * @param LabelSet User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, you need to add corresponding character tags when adding a custom facial library.
+     * @param LabelSet User-defined character filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, add the corresponding character tag when adding a custom facial library.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public void setLabelSet(String [] LabelSet) {
@@ -99,32 +99,32 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Get Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100.
+     * Get Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100. 
+     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100.
-     * @param BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 97. Value range: 0–100.
+     * Set Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100.
+     * @param BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 97 points. Value range: 0-100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100.
+     * Get Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 95. Value range: 0–100.
+     * Set Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for violations that require manual review. If the review score reaches this threshold, manual review is required. Default value: 95. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

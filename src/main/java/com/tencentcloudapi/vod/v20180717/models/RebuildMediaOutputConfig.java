@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RebuildMediaOutputConfig extends AbstractModel {
 
     /**
-    * Output filename, up to 64 characters. By default, the system specifies the generated filename.
+    * Output filename, up to 64 characters. By default, the system assigns a generated filename.
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
     */
     @SerializedName("ClassId")
@@ -39,32 +39,32 @@ public class RebuildMediaOutputConfig extends AbstractModel {
     private Long ClassId;
 
     /**
-    * Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiry date of the output file. The file will be deleted after this time. Default value: permanent, no expiration. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get Output filename, up to 64 characters. By default, the system specifies the generated filename. 
-     * @return MediaName Output filename, up to 64 characters. By default, the system specifies the generated filename.
+     * Get Output filename, up to 64 characters. By default, the system assigns a generated filename. 
+     * @return MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output filename, up to 64 characters. By default, the system specifies the generated filename.
-     * @param MediaName Output filename, up to 64 characters. By default, the system specifies the generated filename.
+     * Set Output filename, up to 64 characters. By default, the system assigns a generated filename.
+     * @param MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li> 
-     * @return ClassId Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
      */
     public Long getClassId() {
@@ -72,9 +72,9 @@ public class RebuildMediaOutputConfig extends AbstractModel {
     }
 
     /**
-     * Set Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
-     * @param ClassId Category ID, used to categorize and manage media. You can create a category through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID.
+     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
 <li>Default value: 0, indicate other categories.</li>
      */
     public void setClassId(Long ClassId) {
@@ -82,16 +82,16 @@ public class RebuildMediaOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiry date of the output file. The file will be deleted after this time. Default value: permanent, no expiration. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. Default value: permanent, no expiration. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiry date of the output file. The file will be deleted after this time. Default value: permanent, no expiration. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. Default value: permanent, no expiration. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

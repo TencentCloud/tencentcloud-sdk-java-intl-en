@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class FastEditMediaRequest extends AbstractModel {
 
     /**
-    * Information of the input media files. You can pass in up to 100 media files.
+    * Input media file information. Supports up to 100 media inputs.
     */
     @SerializedName("FileInfos")
     @Expose
     private FastEditMediaFileInfo [] FileInfos;
 
     /**
-    * ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive.
+    * ClipMode indicates whether to include a TS shard when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard is included; when the end time point falls in the middle of a shard, the shard is not included.</li> If not specified, it defaults to StartInclusiveEndInclusive.
     */
     @SerializedName("ClipMode")
     @Expose
     private String ClipMode;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Information of the input media files. You can pass in up to 100 media files. 
-     * @return FileInfos Information of the input media files. You can pass in up to 100 media files.
+     * Get Input media file information. Supports up to 100 media inputs. 
+     * @return FileInfos Input media file information. Supports up to 100 media inputs.
      */
     public FastEditMediaFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set Information of the input media files. You can pass in up to 100 media files.
-     * @param FileInfos Information of the input media files. You can pass in up to 100 media files.
+     * Set Input media file information. Supports up to 100 media inputs.
+     * @param FileInfos Input media file information. Supports up to 100 media inputs.
      */
     public void setFileInfos(FastEditMediaFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive. 
-     * @return ClipMode ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive.
+     * Get ClipMode indicates whether to include a TS shard when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard is included; when the end time point falls in the middle of a shard, the shard is not included.</li> If not specified, it defaults to StartInclusiveEndInclusive. 
+     * @return ClipMode ClipMode indicates whether to include a TS shard when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard is included; when the end time point falls in the middle of a shard, the shard is not included.</li> If not specified, it defaults to StartInclusiveEndInclusive.
      */
     public String getClipMode() {
         return this.ClipMode;
     }
 
     /**
-     * Set ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive.
-     * @param ClipMode ClipMode indicates whether to include a TS segment when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a segment, the segment is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a segment, the segment is included; when the end time point falls in the middle of a segment, the segment is not included.</li> If not specified, the default is StartInclusiveEndInclusive.
+     * Set ClipMode indicates whether to include a TS shard when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard is included; when the end time point falls in the middle of a shard, the shard is not included.</li> If not specified, it defaults to StartInclusiveEndInclusive.
+     * @param ClipMode ClipMode indicates whether to include a TS shard when the editing time point falls in the middle of it. There are two values: <li>StartInclusiveEndInclusive: When both the start time point and end time point fall in the middle of a shard, the shard is included.</li> <li>StartInclusiveEndExclusive: When the start time point falls in the middle of a shard, the shard is included; when the end time point falls in the middle of a shard, the shard is not included.</li> If not specified, it defaults to StartInclusiveEndInclusive.
      */
     public void setClipMode(String ClipMode) {
         this.ClipMode = ClipMode;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

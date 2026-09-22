@@ -32,7 +32,7 @@ public class SnapshotByTimeOffsetTemplate extends AbstractModel {
 
     /**
     * Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
     */
     @SerializedName("Type")
@@ -79,8 +79,8 @@ Default value: 0.
 
     /**
     * Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
@@ -109,9 +109,9 @@ Default value: open.
     private String UpdateTime;
 
     /**
-    * Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+    * Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
@@ -138,10 +138,10 @@ Default value: black.
 
     /**
      * Get Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li> 
      * @return Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public String getType() {
@@ -150,10 +150,10 @@ Default value: black.
 
     /**
      * Set Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      * @param Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public void setType(String Type) {
@@ -266,12 +266,12 @@ Default value: 0.
 
     /**
      * Get Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open. 
      * @return ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
     public String getResolutionAdaptive() {
@@ -280,12 +280,12 @@ Default value: open.
 
     /**
      * Set Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      * @param ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: open. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
@@ -341,15 +341,15 @@ Default value: open.
     }
 
     /**
-     * Get Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+     * Get Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black. 
-     * @return FillType Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+     * @return FillType Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
@@ -359,15 +359,15 @@ Default value: black.
     }
 
     /**
-     * Set Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+     * Set Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.
-     * @param FillType Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+     * @param FillType Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling methods:
 <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
 <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
 <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
 Default value: black.

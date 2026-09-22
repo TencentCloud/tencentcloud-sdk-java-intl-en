@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class MPSUpdateSmartEraseWatermarkConfig extends AbstractModel {
 
     /**
-    * <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identify watermarks in the video through model A and generate a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on the specified region instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, input at least one specified region. - auto: auto removal - custom: specified area erasure</p>
+    * <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identifies watermarks in the video through model A and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, please import at least one specified area. - auto: auto removal - custom: specified area erasure</p>
     */
     @SerializedName("WatermarkEraseMethod")
     @Expose
     private String WatermarkEraseMethod;
 
     /**
-    * <p>Watermark removal model. Basic version: average effect, high cost performance, suitable for animation or videos with clean backgrounds. Advanced edition: better effectiveness, suitable for realistic-style videos such as mini-dramas. </p><ul><li>basic basic version </li><li>advanced advanced edition</li></ul>
+    * <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and applies to realistic-style videos such as mini-dramas. </p><ul><li>basic </li><li>advanced</li></ul>
     */
     @SerializedName("WatermarkModel")
     @Expose
     private String WatermarkModel;
 
     /**
-    * <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
+    * <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. To clear regions, input []. If not provided, the template region information remains unchanged.</p>
     */
     @SerializedName("AutoAreas")
     @Expose
     private MPSEraseArea [] AutoAreas;
 
     /**
-    * <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: To clear regions, import []. The template region information remains unchanged if not imported.</p>
+    * <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
     */
     @SerializedName("CustomAreas")
     @Expose
     private MPSEraseTimeArea [] CustomAreas;
 
     /**
-     * Get <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identify watermarks in the video through model A and generate a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on the specified region instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, input at least one specified region. - auto: auto removal - custom: specified area erasure</p> 
-     * @return WatermarkEraseMethod <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identify watermarks in the video through model A and generate a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on the specified region instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, input at least one specified region. - auto: auto removal - custom: specified area erasure</p>
+     * Get <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identifies watermarks in the video through model A and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, please import at least one specified area. - auto: auto removal - custom: specified area erasure</p> 
+     * @return WatermarkEraseMethod <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identifies watermarks in the video through model A and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, please import at least one specified area. - auto: auto removal - custom: specified area erasure</p>
      */
     public String getWatermarkEraseMethod() {
         return this.WatermarkEraseMethod;
     }
 
     /**
-     * Set <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identify watermarks in the video through model A and generate a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on the specified region instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, input at least one specified region. - auto: auto removal - custom: specified area erasure</p>
-     * @param WatermarkEraseMethod <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identify watermarks in the video through model A and generate a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on the specified region instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, input at least one specified region. - auto: auto removal - custom: specified area erasure</p>
+     * Set <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identifies watermarks in the video through model A and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, please import at least one specified area. - auto: auto removal - custom: specified area erasure</p>
+     * @param WatermarkEraseMethod <p>Watermark removal method.<br> <strong>Auto removal:</strong> Automatically identifies watermarks in the video through model A and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead.<br><strong>Specified area erasure:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the erasure area. When you choose specified area erasure, please import at least one specified area. - auto: auto removal - custom: specified area erasure</p>
      */
     public void setWatermarkEraseMethod(String WatermarkEraseMethod) {
         this.WatermarkEraseMethod = WatermarkEraseMethod;
     }
 
     /**
-     * Get <p>Watermark removal model. Basic version: average effect, high cost performance, suitable for animation or videos with clean backgrounds. Advanced edition: better effectiveness, suitable for realistic-style videos such as mini-dramas. </p><ul><li>basic basic version </li><li>advanced advanced edition</li></ul> 
-     * @return WatermarkModel <p>Watermark removal model. Basic version: average effect, high cost performance, suitable for animation or videos with clean backgrounds. Advanced edition: better effectiveness, suitable for realistic-style videos such as mini-dramas. </p><ul><li>basic basic version </li><li>advanced advanced edition</li></ul>
+     * Get <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and applies to realistic-style videos such as mini-dramas. </p><ul><li>basic </li><li>advanced</li></ul> 
+     * @return WatermarkModel <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and applies to realistic-style videos such as mini-dramas. </p><ul><li>basic </li><li>advanced</li></ul>
      */
     public String getWatermarkModel() {
         return this.WatermarkModel;
     }
 
     /**
-     * Set <p>Watermark removal model. Basic version: average effect, high cost performance, suitable for animation or videos with clean backgrounds. Advanced edition: better effectiveness, suitable for realistic-style videos such as mini-dramas. </p><ul><li>basic basic version </li><li>advanced advanced edition</li></ul>
-     * @param WatermarkModel <p>Watermark removal model. Basic version: average effect, high cost performance, suitable for animation or videos with clean backgrounds. Advanced edition: better effectiveness, suitable for realistic-style videos such as mini-dramas. </p><ul><li>basic basic version </li><li>advanced advanced edition</li></ul>
+     * Set <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and applies to realistic-style videos such as mini-dramas. </p><ul><li>basic </li><li>advanced</li></ul>
+     * @param WatermarkModel <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and applies to realistic-style videos such as mini-dramas. </p><ul><li>basic </li><li>advanced</li></ul>
      */
     public void setWatermarkModel(String WatermarkModel) {
         this.WatermarkModel = WatermarkModel;
     }
 
     /**
-     * Get <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p> 
-     * @return AutoAreas <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
+     * Get <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. To clear regions, input []. If not provided, the template region information remains unchanged.</p> 
+     * @return AutoAreas <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. To clear regions, input []. If not provided, the template region information remains unchanged.</p>
      */
     public MPSEraseArea [] getAutoAreas() {
         return this.AutoAreas;
     }
 
     /**
-     * Set <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
-     * @param AutoAreas <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
+     * Set <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. To clear regions, input []. If not provided, the template region information remains unchanged.</p>
+     * @param AutoAreas <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. To clear regions, input []. If not provided, the template region information remains unchanged.</p>
      */
     public void setAutoAreas(MPSEraseArea [] AutoAreas) {
         this.AutoAreas = AutoAreas;
     }
 
     /**
-     * Get <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: To clear regions, import []. The template region information remains unchanged if not imported.</p> 
-     * @return CustomAreas <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: To clear regions, import []. The template region information remains unchanged if not imported.</p>
+     * Get <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p> 
+     * @return CustomAreas <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
      */
     public MPSEraseTimeArea [] getCustomAreas() {
         return this.CustomAreas;
     }
 
     /**
-     * Set <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: To clear regions, import []. The template region information remains unchanged if not imported.</p>
-     * @param CustomAreas <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: To clear regions, import []. The template region information remains unchanged if not imported.</p>
+     * Set <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
+     * @param CustomAreas <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
      */
     public void setCustomAreas(MPSEraseTimeArea [] CustomAreas) {
         this.CustomAreas = CustomAreas;

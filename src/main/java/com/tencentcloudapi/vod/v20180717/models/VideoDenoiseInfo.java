@@ -25,15 +25,15 @@ public class VideoDenoiseInfo extends AbstractModel {
 
     /**
     * Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+    * Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.
@@ -44,11 +44,11 @@ Default value: weak.
 
     /**
      * Get Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li> 
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li> 
      * @return Switch Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -56,22 +56,22 @@ Default value: weak.
 
     /**
      * Set Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
      * @param Switch Video noise reduction control switch. Available values:
-<li>ON: turn on video noise reduction</li>
-<li>OFF: Turn off video noise reduction.</li>
+<li>ON: enable video noise reduction;</li>
+<li>OFF: disable video noise reduction.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+     * Get Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak. 
-     * @return Type Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+     * @return Type Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.
@@ -81,11 +81,11 @@ Default value: weak.
     }
 
     /**
-     * Set Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+     * Set Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.
-     * @param Type Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+     * @param Type Video noise reduction type. Valid only when the video noise reduction control switch is ON. Available values:
 <li>weak: light video noise reduction;</li>
 <li>strong: strong video noise reduction.</li>
 Default value: weak.

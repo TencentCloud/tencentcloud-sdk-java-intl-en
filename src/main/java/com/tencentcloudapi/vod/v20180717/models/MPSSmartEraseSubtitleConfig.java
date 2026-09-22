@@ -45,28 +45,28 @@ public class MPSSmartEraseSubtitleConfig extends AbstractModel {
     private String OcrSwitch;
 
     /**
-    * <p>Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported languages for recognition are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali, Gujarati, Kannada, Malayalam, Tamil, Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
+    * <p>Subtitle language, used to guide OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported recognition languages are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, India-Bengali, India-Gujarati, India-Kannada, India-Malayalam, India-Tamil, India-Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
     */
     @SerializedName("SubtitleLang")
     @Expose
     private String SubtitleLang;
 
     /**
-    * <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled, it can take an empty string, which means no subtitle file is output.</li></ul>
+    * <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled in, you can set this parameter to an empty string, which means no subtitle file will be output.</li></ul>
     */
     @SerializedName("SubtitleFormat")
     @Expose
     private String SubtitleFormat;
 
     /**
-    * <p>Whether to enable caption translation. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+    * <p>Whether caption translation is enabled. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: enable</li><li>OFF: disable</li></ul>
     */
     @SerializedName("TransSwitch")
     @Expose
     private String TransSwitch;
 
     /**
-    * <p>Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
+    * <p>Subtitle translation target language, default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
     */
     @SerializedName("TransDstLang")
     @Expose
@@ -156,64 +156,64 @@ public class MPSSmartEraseSubtitleConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported languages for recognition are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali, Gujarati, Kannada, Malayalam, Tamil, Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul> 
-     * @return SubtitleLang <p>Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported languages for recognition are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali, Gujarati, Kannada, Malayalam, Tamil, Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
+     * Get <p>Subtitle language, used to guide OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported recognition languages are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, India-Bengali, India-Gujarati, India-Kannada, India-Malayalam, India-Tamil, India-Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul> 
+     * @return SubtitleLang <p>Subtitle language, used to guide OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported recognition languages are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, India-Bengali, India-Gujarati, India-Kannada, India-Malayalam, India-Tamil, India-Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
      */
     public String getSubtitleLang() {
         return this.SubtitleLang;
     }
 
     /**
-     * Set <p>Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported languages for recognition are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali, Gujarati, Kannada, Malayalam, Tamil, Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
-     * @param SubtitleLang <p>Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported languages for recognition are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali, Gujarati, Kannada, Malayalam, Tamil, Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
+     * Set <p>Subtitle language, used to guide OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported recognition languages are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, India-Bengali, India-Gujarati, India-Kannada, India-Malayalam, India-Tamil, India-Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
+     * @param SubtitleLang <p>Subtitle language, used to guide OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported recognition languages are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, India-Bengali, India-Gujarati, India-Kannada, India-Malayalam, India-Tamil, India-Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
      */
     public void setSubtitleLang(String SubtitleLang) {
         this.SubtitleLang = SubtitleLang;
     }
 
     /**
-     * Get <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled, it can take an empty string, which means no subtitle file is output.</li></ul> 
-     * @return SubtitleFormat <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled, it can take an empty string, which means no subtitle file is output.</li></ul>
+     * Get <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled in, you can set this parameter to an empty string, which means no subtitle file will be output.</li></ul> 
+     * @return SubtitleFormat <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled in, you can set this parameter to an empty string, which means no subtitle file will be output.</li></ul>
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled, it can take an empty string, which means no subtitle file is output.</li></ul>
-     * @param SubtitleFormat <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled, it can take an empty string, which means no subtitle file is output.</li></ul>
+     * Set <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled in, you can set this parameter to an empty string, which means no subtitle file will be output.</li></ul>
+     * @param SubtitleFormat <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled in, you can set this parameter to an empty string, which means no subtitle file will be output.</li></ul>
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
     }
 
     /**
-     * Get <p>Whether to enable caption translation. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul> 
-     * @return TransSwitch <p>Whether to enable caption translation. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+     * Get <p>Whether caption translation is enabled. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: enable</li><li>OFF: disable</li></ul> 
+     * @return TransSwitch <p>Whether caption translation is enabled. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: enable</li><li>OFF: disable</li></ul>
      */
     public String getTransSwitch() {
         return this.TransSwitch;
     }
 
     /**
-     * Set <p>Whether to enable caption translation. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
-     * @param TransSwitch <p>Whether to enable caption translation. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+     * Set <p>Whether caption translation is enabled. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: enable</li><li>OFF: disable</li></ul>
+     * @param TransSwitch <p>Whether caption translation is enabled. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: enable</li><li>OFF: disable</li></ul>
      */
     public void setTransSwitch(String TransSwitch) {
         this.TransSwitch = TransSwitch;
     }
 
     /**
-     * Get <p>Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p> 
-     * @return TransDstLang <p>Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
+     * Get <p>Subtitle translation target language, default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p> 
+     * @return TransDstLang <p>Subtitle translation target language, default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
      */
     public String getTransDstLang() {
         return this.TransDstLang;
     }
 
     /**
-     * Set <p>Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
-     * @param TransDstLang <p>Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
+     * Set <p>Subtitle translation target language, default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
+     * @param TransDstLang <p>Subtitle translation target language, default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
      */
     public void setTransDstLang(String TransDstLang) {
         this.TransDstLang = TransDstLang;

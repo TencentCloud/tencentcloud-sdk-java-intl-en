@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PullEventsRequest extends AbstractModel {
 
     /**
-    * Reserved field, used for special purposes.
+    * Reserved field, used for special purpose.
     */
     @SerializedName("ExtInfo")
     @Expose
@@ -39,16 +39,16 @@ public class PullEventsRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-     * Get Reserved field, used for special purposes. 
-     * @return ExtInfo Reserved field, used for special purposes.
+     * Get Reserved field, used for special purpose. 
+     * @return ExtInfo Reserved field, used for special purpose.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved field, used for special purposes.
-     * @param ExtInfo Reserved field, used for special purposes.
+     * Set Reserved field, used for special purpose.
+     * @param ExtInfo Reserved field, used for special purpose.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

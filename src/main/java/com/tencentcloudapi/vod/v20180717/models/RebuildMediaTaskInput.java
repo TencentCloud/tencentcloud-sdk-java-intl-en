@@ -31,7 +31,7 @@ public class RebuildMediaTaskInput extends AbstractModel {
     private String FileId;
 
     /**
-    * Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+    * Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -159,16 +159,16 @@ public class RebuildMediaTaskInput extends AbstractModel {
     }
 
     /**
-     * Get Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video. 
-     * @return StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * Get Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video. 
+     * @return StartTimeOffset Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
-     * @param StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * Set Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
+     * @param StartTimeOffset Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;

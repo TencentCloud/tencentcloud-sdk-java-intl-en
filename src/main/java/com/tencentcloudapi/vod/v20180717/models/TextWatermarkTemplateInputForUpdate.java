@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
 
     /**
-    * Font type. Currently, two are supported:
+    * Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
     */
@@ -40,7 +40,7 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     private String FontSize;
 
     /**
-    * Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+    * Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
     */
     @SerializedName("FontColor")
     @Expose
@@ -56,10 +56,10 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     private Float FontAlpha;
 
     /**
-     * Get Font type. Currently, two are supported:
+     * Get Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li> 
-     * @return FontType Font type. Currently, two are supported:
+     * @return FontType Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      */
@@ -68,10 +68,10 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     }
 
     /**
-     * Set Font type. Currently, two are supported:
+     * Set Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
-     * @param FontType Font type. Currently, two are supported:
+     * @param FontType Font type. Currently two are supported:
 <li>simkai.ttf: support Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      */
@@ -96,16 +96,16 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     }
 
     /**
-     * Get Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white). 
-     * @return FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+     * Get Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white). 
+     * @return FontColor Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
      */
     public String getFontColor() {
         return this.FontColor;
     }
 
     /**
-     * Set Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-     * @param FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+     * Set Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+     * @param FontColor Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;

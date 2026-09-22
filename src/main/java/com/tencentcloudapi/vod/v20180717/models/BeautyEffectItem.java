@@ -45,7 +45,7 @@ public class BeautyEffectItem extends AbstractModel {
     private Long Value;
 
     /**
-    * <p>Extra resource path.</p>
+    * <p>Attach a resource path.</p>
     */
     @SerializedName("ResourcePath")
     @Expose
@@ -107,16 +107,16 @@ public class BeautyEffectItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Extra resource path.</p> 
-     * @return ResourcePath <p>Extra resource path.</p>
+     * Get <p>Attach a resource path.</p> 
+     * @return ResourcePath <p>Attach a resource path.</p>
      */
     public String getResourcePath() {
         return this.ResourcePath;
     }
 
     /**
-     * Set <p>Extra resource path.</p>
-     * @param ResourcePath <p>Extra resource path.</p>
+     * Set <p>Attach a resource path.</p>
+     * @param ResourcePath <p>Attach a resource path.</p>
      */
     public void setResourcePath(String ResourcePath) {
         this.ResourcePath = ResourcePath;

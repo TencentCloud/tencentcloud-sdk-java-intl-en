@@ -25,7 +25,7 @@ public class ImageCenterCut extends AbstractModel {
 
     /**
     * Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
     */
     @SerializedName("Type")
@@ -40,14 +40,14 @@ public class ImageCenterCut extends AbstractModel {
     private Long Width;
 
     /**
-    * Height of the output image in pixels. Valid when Type is Rectangle.
+    * Height of the output image. Unit: pixel. Valid when Type is Rectangle.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Radius of the output image in pixels. Valid when Type is Circle.
+    * Radius of the output image. Unit: pixel. Valid when Type is Circle.
     */
     @SerializedName("Radius")
     @Expose
@@ -55,10 +55,10 @@ public class ImageCenterCut extends AbstractModel {
 
     /**
      * Get Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li> 
      * @return Type Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
      */
     public String getType() {
@@ -67,10 +67,10 @@ public class ImageCenterCut extends AbstractModel {
 
     /**
      * Set Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
      * @param Type Image cropping type. Selectable values: Circle and Rectangle.
-<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
 <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
      */
     public void setType(String Type) {
@@ -94,32 +94,32 @@ public class ImageCenterCut extends AbstractModel {
     }
 
     /**
-     * Get Height of the output image in pixels. Valid when Type is Rectangle. 
-     * @return Height Height of the output image in pixels. Valid when Type is Rectangle.
+     * Get Height of the output image. Unit: pixel. Valid when Type is Rectangle. 
+     * @return Height Height of the output image. Unit: pixel. Valid when Type is Rectangle.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height of the output image in pixels. Valid when Type is Rectangle.
-     * @param Height Height of the output image in pixels. Valid when Type is Rectangle.
+     * Set Height of the output image. Unit: pixel. Valid when Type is Rectangle.
+     * @param Height Height of the output image. Unit: pixel. Valid when Type is Rectangle.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Radius of the output image in pixels. Valid when Type is Circle. 
-     * @return Radius Radius of the output image in pixels. Valid when Type is Circle.
+     * Get Radius of the output image. Unit: pixel. Valid when Type is Circle. 
+     * @return Radius Radius of the output image. Unit: pixel. Valid when Type is Circle.
      */
     public Long getRadius() {
         return this.Radius;
     }
 
     /**
-     * Set Radius of the output image in pixels. Valid when Type is Circle.
-     * @param Radius Radius of the output image in pixels. Valid when Type is Circle.
+     * Set Radius of the output image. Unit: pixel. Valid when Type is Circle.
+     * @param Radius Radius of the output image. Unit: pixel. Valid when Type is Circle.
      */
     public void setRadius(Long Radius) {
         this.Radius = Radius;

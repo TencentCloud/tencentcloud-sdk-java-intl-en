@@ -26,21 +26,21 @@ public class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
     * Task switch for text recognition involving inappropriate information. Available values:
 <li>ON: enable the task involving text recognition of inappropriate information;</li>
-<li>OFF: Disable the task involving inappropriate information in text recognition.</li>
+<li>OFF: disables the task involving inappropriate content in text recognition.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.
+    * Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+    * Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -49,10 +49,10 @@ public class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
      * Get Task switch for text recognition involving inappropriate information. Available values:
 <li>ON: enable the task involving text recognition of inappropriate information;</li>
-<li>OFF: Disable the task involving inappropriate information in text recognition.</li> 
+<li>OFF: disables the task involving inappropriate content in text recognition.</li> 
      * @return Switch Task switch for text recognition involving inappropriate information. Available values:
 <li>ON: enable the task involving text recognition of inappropriate information;</li>
-<li>OFF: Disable the task involving inappropriate information in text recognition.</li>
+<li>OFF: disables the task involving inappropriate content in text recognition.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -61,42 +61,42 @@ public class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
      * Set Task switch for text recognition involving inappropriate information. Available values:
 <li>ON: enable the task involving text recognition of inappropriate information;</li>
-<li>OFF: Disable the task involving inappropriate information in text recognition.</li>
+<li>OFF: disables the task involving inappropriate content in text recognition.</li>
      * @param Switch Task switch for text recognition involving inappropriate information. Available values:
 <li>ON: enable the task involving text recognition of inappropriate information;</li>
-<li>OFF: Disable the task involving inappropriate information in text recognition.</li>
+<li>OFF: disables the task involving inappropriate content in text recognition.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.
+     * Get Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.
-     * @param BlockConfidence Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.
+     * Set Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
+     * @param BlockConfidence Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+     * Get Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+     * Set Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

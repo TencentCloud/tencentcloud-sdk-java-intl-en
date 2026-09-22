@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EditMediaTaskInput extends AbstractModel {
 
     /**
-    * Source type of the input video. Valid values: File and Stream.
+    * Source type of the input video. Valid values: `File` and `Stream`.
     */
     @SerializedName("InputType")
     @Expose
@@ -38,23 +38,23 @@ public class EditMediaTaskInput extends AbstractModel {
     private EditMediaFileInfo [] FileInfoSet;
 
     /**
-    * Input stream information. This field has a value when InputType is Stream.
+    * Input stream information. This field has a value when `InputType` is `Stream`.
     */
     @SerializedName("StreamInfoSet")
     @Expose
     private EditMediaStreamInfo [] StreamInfoSet;
 
     /**
-     * Get Source type of the input video. Valid values: File and Stream. 
-     * @return InputType Source type of the input video. Valid values: File and Stream.
+     * Get Source type of the input video. Valid values: `File` and `Stream`. 
+     * @return InputType Source type of the input video. Valid values: `File` and `Stream`.
      */
     public String getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set Source type of the input video. Valid values: File and Stream.
-     * @param InputType Source type of the input video. Valid values: File and Stream.
+     * Set Source type of the input video. Valid values: `File` and `Stream`.
+     * @param InputType Source type of the input video. Valid values: `File` and `Stream`.
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;
@@ -77,16 +77,16 @@ public class EditMediaTaskInput extends AbstractModel {
     }
 
     /**
-     * Get Input stream information. This field has a value when InputType is Stream. 
-     * @return StreamInfoSet Input stream information. This field has a value when InputType is Stream.
+     * Get Input stream information. This field has a value when `InputType` is `Stream`. 
+     * @return StreamInfoSet Input stream information. This field has a value when `InputType` is `Stream`.
      */
     public EditMediaStreamInfo [] getStreamInfoSet() {
         return this.StreamInfoSet;
     }
 
     /**
-     * Set Input stream information. This field has a value when InputType is Stream.
-     * @param StreamInfoSet Input stream information. This field has a value when InputType is Stream.
+     * Set Input stream information. This field has a value when `InputType` is `Stream`.
+     * @param StreamInfoSet Input stream information. This field has a value when `InputType` is `Stream`.
      */
     public void setStreamInfoSet(EditMediaStreamInfo [] StreamInfoSet) {
         this.StreamInfoSet = StreamInfoSet;

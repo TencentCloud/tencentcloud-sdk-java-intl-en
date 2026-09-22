@@ -66,14 +66,14 @@ public class AiRecognitionTaskFaceResult extends AbstractModel {
     private AiRecognitionTaskFaceResultOutput Output;
 
     /**
-    * Progress of the face recognition task. Value range: 0-100.
+    * Face recognition task progress. Value range: [0-100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -183,32 +183,32 @@ public class AiRecognitionTaskFaceResult extends AbstractModel {
     }
 
     /**
-     * Get Progress of the face recognition task. Value range: 0-100. 
-     * @return Progress Progress of the face recognition task. Value range: 0-100.
+     * Get Face recognition task progress. Value range: [0-100]. 
+     * @return Progress Face recognition task progress. Value range: [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the face recognition task. Value range: 0-100.
-     * @param Progress Progress of the face recognition task. Value range: 0-100.
+     * Set Face recognition task progress. Value range: [0-100].
+     * @param Progress Face recognition task progress. Value range: [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Face recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Face recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;

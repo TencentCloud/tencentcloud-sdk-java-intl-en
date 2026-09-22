@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MediaImageSpriteInfo extends AbstractModel {
 
     /**
-    * Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+    * Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
     */
     @SerializedName("ImageSpriteSet")
     @Expose
     private MediaImageSpriteItem [] ImageSpriteSet;
 
     /**
-     * Get Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec. 
-     * @return ImageSpriteSet Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+     * Get Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec. 
+     * @return ImageSpriteSet Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
      */
     public MediaImageSpriteItem [] getImageSpriteSet() {
         return this.ImageSpriteSet;
     }
 
     /**
-     * Set Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
-     * @param ImageSpriteSet Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+     * Set Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
+     * @param ImageSpriteSet Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
      */
     public void setImageSpriteSet(MediaImageSpriteItem [] ImageSpriteSet) {
         this.ImageSpriteSet = ImageSpriteSet;

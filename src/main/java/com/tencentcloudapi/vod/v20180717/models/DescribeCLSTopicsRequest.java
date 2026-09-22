@@ -38,7 +38,7 @@ public class DescribeCLSTopicsRequest extends AbstractModel {
     private String LogsetId;
 
     /**
-    * List of log topic IDs. If left empty, it means query all log topics.
+    * List of log topic IDs. If left empty, it means to query all log topics.
     */
     @SerializedName("TopicIds")
     @Expose
@@ -91,16 +91,16 @@ public class DescribeCLSTopicsRequest extends AbstractModel {
     }
 
     /**
-     * Get List of log topic IDs. If left empty, it means query all log topics. 
-     * @return TopicIds List of log topic IDs. If left empty, it means query all log topics.
+     * Get List of log topic IDs. If left empty, it means to query all log topics. 
+     * @return TopicIds List of log topic IDs. If left empty, it means to query all log topics.
      */
     public String [] getTopicIds() {
         return this.TopicIds;
     }
 
     /**
-     * Set List of log topic IDs. If left empty, it means query all log topics.
-     * @param TopicIds List of log topic IDs. If left empty, it means query all log topics.
+     * Set List of log topic IDs. If left empty, it means to query all log topics.
+     * @param TopicIds List of log topic IDs. If left empty, it means to query all log topics.
      */
     public void setTopicIds(String [] TopicIds) {
         this.TopicIds = TopicIds;

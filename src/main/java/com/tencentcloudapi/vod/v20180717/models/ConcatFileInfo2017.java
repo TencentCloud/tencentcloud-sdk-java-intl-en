@@ -47,7 +47,7 @@ public class ConcatFileInfo2017 extends AbstractModel {
     private String FileId;
 
     /**
-    * Domain names or IP addresses of source files for video splicing.
+    * Addresses of the source files for video stitching.
     */
     @SerializedName("FileUrl")
     @Expose
@@ -117,16 +117,16 @@ public class ConcatFileInfo2017 extends AbstractModel {
     }
 
     /**
-     * Get Domain names or IP addresses of source files for video splicing. 
-     * @return FileUrl Domain names or IP addresses of source files for video splicing.
+     * Get Addresses of the source files for video stitching. 
+     * @return FileUrl Addresses of the source files for video stitching.
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set Domain names or IP addresses of source files for video splicing.
-     * @param FileUrl Domain names or IP addresses of source files for video splicing.
+     * Set Addresses of the source files for video stitching.
+     * @param FileUrl Addresses of the source files for video stitching.
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;

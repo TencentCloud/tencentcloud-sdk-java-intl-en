@@ -31,28 +31,28 @@ public class ModifyProcessImageAsyncTemplateRequest extends AbstractModel {
     private Long Definition;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Image asynchronous processing template name. The length cannot exceed 64 characters.
+    * Name of the image asynchronous processing template. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description information of the image asynchronous processing template. Length limit: 256 characters.
+    * Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Configuration for asynchronous image processing.
+    * Asynchronous image processing configuration.
     */
     @SerializedName("ProcessImageConfigure")
     @Expose
@@ -75,64 +75,64 @@ public class ModifyProcessImageAsyncTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Image asynchronous processing template name. The length cannot exceed 64 characters. 
-     * @return Name Image asynchronous processing template name. The length cannot exceed 64 characters.
+     * Get Name of the image asynchronous processing template. The length cannot exceed 64 characters. 
+     * @return Name Name of the image asynchronous processing template. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Image asynchronous processing template name. The length cannot exceed 64 characters.
-     * @param Name Image asynchronous processing template name. The length cannot exceed 64 characters.
+     * Set Name of the image asynchronous processing template. The length cannot exceed 64 characters.
+     * @param Name Name of the image asynchronous processing template. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description information of the image asynchronous processing template. Length limit: 256 characters. 
-     * @return Comment Description information of the image asynchronous processing template. Length limit: 256 characters.
+     * Get Description information of the image asynchronous processing template. The length cannot exceed 256 characters. 
+     * @return Comment Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description information of the image asynchronous processing template. Length limit: 256 characters.
-     * @param Comment Description information of the image asynchronous processing template. Length limit: 256 characters.
+     * Set Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
+     * @param Comment Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Configuration for asynchronous image processing. 
-     * @return ProcessImageConfigure Configuration for asynchronous image processing.
+     * Get Asynchronous image processing configuration. 
+     * @return ProcessImageConfigure Asynchronous image processing configuration.
      */
     public ProcessImageAsyncTask getProcessImageConfigure() {
         return this.ProcessImageConfigure;
     }
 
     /**
-     * Set Configuration for asynchronous image processing.
-     * @param ProcessImageConfigure Configuration for asynchronous image processing.
+     * Set Asynchronous image processing configuration.
+     * @param ProcessImageConfigure Asynchronous image processing configuration.
      */
     public void setProcessImageConfigure(ProcessImageAsyncTask ProcessImageConfigure) {
         this.ProcessImageConfigure = ProcessImageConfigure;

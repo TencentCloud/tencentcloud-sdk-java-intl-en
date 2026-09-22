@@ -31,7 +31,7 @@ public class RemoveWatermarkTask extends AbstractModel {
     private String TaskId;
 
     /**
-    * Task stream status. Valid values:
+    * Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
     */
@@ -40,7 +40,7 @@ public class RemoveWatermarkTask extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -49,7 +49,7 @@ public class RemoveWatermarkTask extends AbstractModel {
     /**
     * Error code. 0 indicates success, and other values indicate failure:
 <li>40000: invalid parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
     */
     @SerializedName("ErrCode")
@@ -64,7 +64,7 @@ public class RemoveWatermarkTask extends AbstractModel {
     private String Message;
 
     /**
-    * Input of the intelligent watermark removal task.
+    * Input for the intelligent watermark removal task.
     */
     @SerializedName("Input")
     @Expose
@@ -78,7 +78,7 @@ public class RemoveWatermarkTask extends AbstractModel {
     private RemoveWaterMarkTaskOutput Output;
 
     /**
-    * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
@@ -108,10 +108,10 @@ public class RemoveWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Task stream status. Valid values:
+     * Get Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li> 
-     * @return Status Task stream status. Valid values:
+     * @return Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -120,10 +120,10 @@ public class RemoveWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Set Task stream status. Valid values:
+     * Set Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param Status Task stream status. Valid values:
+     * @param Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -132,16 +132,16 @@ public class RemoveWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list. 
+     * @return ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * @param ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -150,11 +150,11 @@ public class RemoveWatermarkTask extends AbstractModel {
     /**
      * Get Error code. 0 indicates success, and other values indicate failure:
 <li>40000: invalid parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li> 
      * @return ErrCode Error code. 0 indicates success, and other values indicate failure:
 <li>40000: invalid parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public Long getErrCode() {
@@ -164,11 +164,11 @@ public class RemoveWatermarkTask extends AbstractModel {
     /**
      * Set Error code. 0 indicates success, and other values indicate failure:
 <li>40000: invalid parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      * @param ErrCode Error code. 0 indicates success, and other values indicate failure:
 <li>40000: invalid parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public void setErrCode(Long ErrCode) {
@@ -192,16 +192,16 @@ public class RemoveWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Input of the intelligent watermark removal task. 
-     * @return Input Input of the intelligent watermark removal task.
+     * Get Input for the intelligent watermark removal task. 
+     * @return Input Input for the intelligent watermark removal task.
      */
     public RemoveWaterMarkTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the intelligent watermark removal task.
-     * @param Input Input of the intelligent watermark removal task.
+     * Set Input for the intelligent watermark removal task.
+     * @param Input Input for the intelligent watermark removal task.
      */
     public void setInput(RemoveWaterMarkTaskInput Input) {
         this.Input = Input;
@@ -224,16 +224,16 @@ public class RemoveWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
-     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

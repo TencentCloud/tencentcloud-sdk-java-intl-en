@@ -25,7 +25,7 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
     * Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
     */
@@ -35,7 +35,7 @@ Default value: ON.
 
     /**
     * Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
     */
@@ -61,7 +61,7 @@ Default value: standard.
     private Float Percent;
 
     /**
-    * Target image width. It cannot exceed 4096.
+    * Target image width. Cannot exceed 4096.
     */
     @SerializedName("Width")
     @Expose
@@ -75,8 +75,8 @@ Default value: standard.
     private Long Height;
 
     /**
-    * Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+    * Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
     */
     @SerializedName("LongSide")
     @Expose
@@ -84,7 +84,7 @@ Note: This configuration is used when Mode is equal to aspect or fixed, and Widt
 
     /**
     * Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
     */
     @SerializedName("ShortSide")
     @Expose
@@ -92,11 +92,11 @@ Note: This configuration is used when Mode is equal to aspect or fixed, and Widt
 
     /**
      * Get Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON. 
      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
      */
@@ -106,11 +106,11 @@ Default value: ON.
 
     /**
      * Set Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
      * @param Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
+<li>ON: enabled</li>
 <li>OFF: disabled</li>
 Default value: ON.
      */
@@ -120,11 +120,11 @@ Default value: ON.
 
     /**
      * Get Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard. 
      * @return Type Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
      */
@@ -134,11 +134,11 @@ Default value: standard.
 
     /**
      * Set Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
      * @param Type Type. Valid values:
-<li>standard: common overclocking</li>
+<li>standard: common super resolution</li>
 <li>super: advanced super-resolution.</li>
 Default value: standard.
      */
@@ -191,16 +191,16 @@ Default value: standard.
     }
 
     /**
-     * Get Target image width. It cannot exceed 4096. 
-     * @return Width Target image width. It cannot exceed 4096.
+     * Get Target image width. Cannot exceed 4096. 
+     * @return Width Target image width. Cannot exceed 4096.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Target image width. It cannot exceed 4096.
-     * @param Width Target image width. It cannot exceed 4096.
+     * Set Target image width. Cannot exceed 4096.
+     * @param Width Target image width. Cannot exceed 4096.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -223,20 +223,20 @@ Default value: standard.
     }
 
     /**
-     * Get Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured. 
-     * @return LongSide Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+     * Get Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured. 
+     * @return LongSide Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     public Long getLongSide() {
         return this.LongSide;
     }
 
     /**
-     * Set Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
-     * @param LongSide Target image long edge length. Must not exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+     * Set Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
+     * @param LongSide Long side length of the target image. It cannot exceed 4096.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     public void setLongSide(Long LongSide) {
         this.LongSide = LongSide;
@@ -244,9 +244,9 @@ Note: This configuration is used when Mode is equal to aspect or fixed, and Widt
 
     /**
      * Get Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured. 
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured. 
      * @return ShortSide Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     public Long getShortSide() {
         return this.ShortSide;
@@ -254,9 +254,9 @@ Note: This configuration is used when Mode is equal to aspect or fixed, and Widt
 
     /**
      * Set Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      * @param ShortSide Short side length of the target image. It cannot exceed 4096.
-Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
      */
     public void setShortSide(Long ShortSide) {
         this.ShortSide = ShortSide;

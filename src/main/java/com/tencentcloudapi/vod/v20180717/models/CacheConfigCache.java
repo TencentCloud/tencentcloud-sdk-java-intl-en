@@ -40,7 +40,7 @@ public class CacheConfigCache extends AbstractModel {
     private Long CacheTime;
 
     /**
-    * Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the minimum value will be used for node cache. Valid values:
+    * Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -58,7 +58,7 @@ public class CacheConfigCache extends AbstractModel {
     private String IgnoreCacheControl;
 
     /**
-    * Whether to cache the Set-Cookie header and body on the node when the origin server returns the Set-Cookie header.
+    * Whether to cache the Set-Cookie header and body on the node when the origin server returns the header.
 <li>on: Enable. Do not cache the header or body;</li>
 <li>`off`: disabled, following user-defined node cache rules.</li>
     */
@@ -107,10 +107,10 @@ public class CacheConfigCache extends AbstractModel {
     }
 
     /**
-     * Get Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the minimum value will be used for node cache. Valid values:
+     * Get Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the minimum value will be used for node cache. Valid values:
+     * @return CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -119,10 +119,10 @@ public class CacheConfigCache extends AbstractModel {
     }
 
     /**
-     * Set Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the minimum value will be used for node cache. Valid values:
+     * Set Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the minimum value will be used for node cache. Valid values:
+     * @param CompareMaxAge Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -155,10 +155,10 @@ public class CacheConfigCache extends AbstractModel {
     }
 
     /**
-     * Get Whether to cache the Set-Cookie header and body on the node when the origin server returns the Set-Cookie header.
+     * Get Whether to cache the Set-Cookie header and body on the node when the origin server returns the header.
 <li>on: Enable. Do not cache the header or body;</li>
 <li>`off`: disabled, following user-defined node cache rules.</li> 
-     * @return IgnoreSetCookie Whether to cache the Set-Cookie header and body on the node when the origin server returns the Set-Cookie header.
+     * @return IgnoreSetCookie Whether to cache the Set-Cookie header and body on the node when the origin server returns the header.
 <li>on: Enable. Do not cache the header or body;</li>
 <li>`off`: disabled, following user-defined node cache rules.</li>
      */
@@ -167,10 +167,10 @@ public class CacheConfigCache extends AbstractModel {
     }
 
     /**
-     * Set Whether to cache the Set-Cookie header and body on the node when the origin server returns the Set-Cookie header.
+     * Set Whether to cache the Set-Cookie header and body on the node when the origin server returns the header.
 <li>on: Enable. Do not cache the header or body;</li>
 <li>`off`: disabled, following user-defined node cache rules.</li>
-     * @param IgnoreSetCookie Whether to cache the Set-Cookie header and body on the node when the origin server returns the Set-Cookie header.
+     * @param IgnoreSetCookie Whether to cache the Set-Cookie header and body on the node when the origin server returns the header.
 <li>on: Enable. Do not cache the header or body;</li>
 <li>`off`: disabled, following user-defined node cache rules.</li>
      */

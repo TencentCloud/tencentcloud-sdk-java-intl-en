@@ -32,7 +32,7 @@ public class AnimatedGraphicsTemplate extends AbstractModel {
 
     /**
     * Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
     */
     @SerializedName("Type")
@@ -79,7 +79,7 @@ Default value: 0.
 
     /**
     * Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
     */
@@ -140,10 +140,10 @@ Default value: open.
 
     /**
      * Get Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li> 
      * @return Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public String getType() {
@@ -152,10 +152,10 @@ Default value: open.
 
     /**
      * Set Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      * @param Type Template type. Valid values:
-<li>Preset: system preset template;</li>
+<li>Preset: system-preset template;</li>
 <li>Custom: custom template.</li>
      */
     public void setType(String Type) {
@@ -268,11 +268,11 @@ Default value: 0.
 
     /**
      * Get Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open. 
      * @return ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      */
@@ -282,11 +282,11 @@ Default value: open.
 
     /**
      * Set Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      * @param ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      */

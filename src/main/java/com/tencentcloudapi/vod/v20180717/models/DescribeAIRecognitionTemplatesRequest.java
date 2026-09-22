@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     private Long [] Definitions;
 
     /**
-    * Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+    * Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
     */
     @SerializedName("Type")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -91,16 +91,16 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type. 
-     * @return Type Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+     * Get Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type. 
+     * @return Type Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
-     * @param Type Filtering condition for the template type. Valid values: <li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave it blank by default, meaning no filtering on template type.
+     * Set Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
+     * @param Type Filtering condition for the template type. Available values: <li>Preset: preset template;</li><li>Custom: custom template.</li>Leave it blank by default, which means no filtering on template type.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -45,7 +45,7 @@ public class DescribeAigcFaceInfoAsyncTask extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+    * <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeAigcFaceInfoAsyncTask extends AbstractModel {
     private String Message;
 
     /**
-    * <p>Task progress. Value range: 0-100.</p>
+    * <p>Task progress, value ranges from 0 to 100.</p>
     */
     @SerializedName("Progress")
     @Expose
@@ -142,16 +142,16 @@ public class DescribeAigcFaceInfoAsyncTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul> 
-     * @return ErrCodeExt <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+     * Get <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul> 
+     * @return ErrCodeExt <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
-     * @param ErrCodeExt <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+     * Set <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
+     * @param ErrCodeExt <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -174,16 +174,16 @@ public class DescribeAigcFaceInfoAsyncTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Task progress. Value range: 0-100.</p> 
-     * @return Progress <p>Task progress. Value range: 0-100.</p>
+     * Get <p>Task progress, value ranges from 0 to 100.</p> 
+     * @return Progress <p>Task progress, value ranges from 0 to 100.</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set <p>Task progress. Value range: 0-100.</p>
-     * @param Progress <p>Task progress. Value range: 0-100.</p>
+     * Set <p>Task progress, value ranges from 0 to 100.</p>
+     * @param Progress <p>Task progress, value ranges from 0 to 100.</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

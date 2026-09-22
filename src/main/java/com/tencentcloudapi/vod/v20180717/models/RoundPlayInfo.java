@@ -52,7 +52,7 @@ public class RoundPlayInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Carousel playlist description, with a length limit of 256 characters.
+    * Carousel playlist description. Length limit: 256 characters.
     */
     @SerializedName("Desc")
     @Expose
@@ -60,7 +60,7 @@ public class RoundPlayInfo extends AbstractModel {
 
     /**
     * Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
     */
@@ -93,14 +93,14 @@ Default value: Loop.
     private String CreateTime;
 
     /**
-    * Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+    * Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+    * Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -171,16 +171,16 @@ Default value: Loop.
     }
 
     /**
-     * Get Carousel playlist description, with a length limit of 256 characters. 
-     * @return Desc Carousel playlist description, with a length limit of 256 characters.
+     * Get Carousel playlist description. Length limit: 256 characters. 
+     * @return Desc Carousel playlist description. Length limit: 256 characters.
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set Carousel playlist description, with a length limit of 256 characters.
-     * @param Desc Carousel playlist description, with a length limit of 256 characters.
+     * Set Carousel playlist description. Length limit: 256 characters.
+     * @param Desc Carousel playlist description. Length limit: 256 characters.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
@@ -188,11 +188,11 @@ Default value: Loop.
 
     /**
      * Get Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled. 
      * @return Status Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
      */
@@ -202,11 +202,11 @@ Default value: Enabled.
 
     /**
      * Set Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
      * @param Status Playback status. Available values:
-<li>Enabled: running state;</li>
+<li>Enabled: startup status;</li>
 <li>Disabled: stopped.</li>
 Default value: Enabled.
      */
@@ -275,32 +275,32 @@ Default value: Loop.
     }
 
     /**
-     * Get Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
-     * @return UpdateTime Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * Get Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return UpdateTime Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-     * @param UpdateTime Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * Set Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param UpdateTime Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires. 
-     * @return ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+     * Get Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires. 
+     * @return ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
-     * @param ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+     * Set Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+     * @param ExpiredTime Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

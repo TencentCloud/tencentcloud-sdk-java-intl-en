@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewPornOcrTaskOutput extends AbstractModel {
 
     /**
-    * Score of Ocr text for offensive content, with a score from 0 to 100.
+    * Score of Ocr text involving offensive content. Value range: 0–100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for Ocr text involving offensive content. Value range:
+    * Result suggestions for Ocr text involving offensive content. Value ranges from 0 to 100.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,7 +41,7 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * List of video segments where Ocr text is suspected of involving offensive content.
+    * List of video segments whose Ocr text is suspected of involving offensive content.
 <font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
     */
     @SerializedName("SegmentSet")
@@ -49,41 +49,41 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-    * URL of the video segment list file that contains Ocr text suspected of offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
+    * URL of the video segment list file whose Ocr text may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the file URL of the video segment list whose Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the file URL for the video segment list where the Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Score of Ocr text for offensive content, with a score from 0 to 100. 
-     * @return Confidence Score of Ocr text for offensive content, with a score from 0 to 100.
+     * Get Score of Ocr text involving offensive content. Value range: 0–100. 
+     * @return Confidence Score of Ocr text involving offensive content. Value range: 0–100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of Ocr text for offensive content, with a score from 0 to 100.
-     * @param Confidence Score of Ocr text for offensive content, with a score from 0 to 100.
+     * Set Score of Ocr text involving offensive content. Value range: 0–100.
+     * @param Confidence Score of Ocr text involving offensive content. Value range: 0–100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for Ocr text involving offensive content. Value range:
+     * Get Result suggestions for Ocr text involving offensive content. Value ranges from 0 to 100.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Suggestion for Ocr text involving offensive content. Value range:
+     * @return Suggestion Result suggestions for Ocr text involving offensive content. Value ranges from 0 to 100.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -93,11 +93,11 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Suggestion for Ocr text involving offensive content. Value range:
+     * Set Result suggestions for Ocr text involving offensive content. Value ranges from 0 to 100.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Suggestion for Ocr text involving offensive content. Value range:
+     * @param Suggestion Result suggestions for Ocr text involving offensive content. Value ranges from 0 to 100.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -107,9 +107,9 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get List of video segments where Ocr text is suspected of involving offensive content.
+     * Get List of video segments whose Ocr text is suspected of involving offensive content.
 <font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
-     * @return SegmentSet List of video segments where Ocr text is suspected of involving offensive content.
+     * @return SegmentSet List of video segments whose Ocr text is suspected of involving offensive content.
 <font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
@@ -117,9 +117,9 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set List of video segments where Ocr text is suspected of involving offensive content.
+     * Set List of video segments whose Ocr text is suspected of involving offensive content.
 <font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
-     * @param SegmentSet List of video segments where Ocr text is suspected of involving offensive content.
+     * @param SegmentSet List of video segments whose Ocr text is suspected of involving offensive content.
 <font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
@@ -127,32 +127,32 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get URL of the video segment list file that contains Ocr text suspected of offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.) 
-     * @return SegmentSetFileUrl URL of the video segment list file that contains Ocr text suspected of offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
+     * Get URL of the video segment list file whose Ocr text may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.) 
+     * @return SegmentSetFileUrl URL of the video segment list file whose Ocr text may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL of the video segment list file that contains Ocr text suspected of offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
-     * @param SegmentSetFileUrl URL of the video segment list file that contains Ocr text suspected of offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.)
+     * Set URL of the video segment list file whose Ocr text may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+     * @param SegmentSetFileUrl URL of the video segment list file whose Ocr text may involve offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the file URL of the video segment list whose Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the file URL of the video segment list whose Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the file URL for the video segment list where the Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the file URL for the video segment list where the Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the file URL of the video segment list whose Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param SegmentSetFileUrlExpireTime Expiration time of the file URL of the video segment list whose Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the file URL for the video segment list where the Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param SegmentSetFileUrlExpireTime Expiration time of the file URL for the video segment list where the Ocr text involves suspected offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchMediaBySemanticsRequest extends AbstractModel {
 
     /**
-    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,7 +38,7 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     private String Text;
 
     /**
-    * <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+    * <p>Knowledge base ID. If left empty, the default knowledge base will be used</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
@@ -59,14 +59,14 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     private String [] Categories;
 
     /**
-    * <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+    * <p>Tag set, match any element in the collection.</p><p>Input parameter limits: Single tag length limit: 32 characters. Array length limit: 16.</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+    * <p>Collection of people, matching recording clips where all input people appear</p><p>Input limit: array length limit: 16</p>
     */
     @SerializedName("Persons")
     @Expose
@@ -80,16 +80,16 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     private String [] TaskTypes;
 
     /**
-     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -112,16 +112,16 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p> 
-     * @return KnowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+     * Get <p>Knowledge base ID. If left empty, the default knowledge base will be used</p> 
+     * @return KnowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
-     * @param KnowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+     * Set <p>Knowledge base ID. If left empty, the default knowledge base will be used</p>
+     * @param KnowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;
@@ -160,32 +160,32 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p> 
-     * @return Tags <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+     * Get <p>Tag set, match any element in the collection.</p><p>Input parameter limits: Single tag length limit: 32 characters. Array length limit: 16.</p> 
+     * @return Tags <p>Tag set, match any element in the collection.</p><p>Input parameter limits: Single tag length limit: 32 characters. Array length limit: 16.</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
-     * @param Tags <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+     * Set <p>Tag set, match any element in the collection.</p><p>Input parameter limits: Single tag length limit: 32 characters. Array length limit: 16.</p>
+     * @param Tags <p>Tag set, match any element in the collection.</p><p>Input parameter limits: Single tag length limit: 32 characters. Array length limit: 16.</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p> 
-     * @return Persons <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+     * Get <p>Collection of people, matching recording clips where all input people appear</p><p>Input limit: array length limit: 16</p> 
+     * @return Persons <p>Collection of people, matching recording clips where all input people appear</p><p>Input limit: array length limit: 16</p>
      */
     public String [] getPersons() {
         return this.Persons;
     }
 
     /**
-     * Set <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
-     * @param Persons <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+     * Set <p>Collection of people, matching recording clips where all input people appear</p><p>Input limit: array length limit: 16</p>
+     * @param Persons <p>Collection of people, matching recording clips where all input people appear</p><p>Input limit: array length limit: 16</p>
      */
     public void setPersons(String [] Persons) {
         this.Persons = Persons;

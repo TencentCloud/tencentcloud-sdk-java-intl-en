@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ComposeMediaTaskInput extends AbstractModel {
 
     /**
-    * Input media track list, including multiple track information composed of materials such as video, audio, and images.
+    * Input media track list, including multiple track information composed of materials such as video, audio, and image.
     */
     @SerializedName("Tracks")
     @Expose
@@ -45,16 +45,16 @@ public class ComposeMediaTaskInput extends AbstractModel {
     private ComposeMediaOutput Output;
 
     /**
-     * Get Input media track list, including multiple track information composed of materials such as video, audio, and images. 
-     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
+     * Get Input media track list, including multiple track information composed of materials such as video, audio, and image. 
+     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and image.
      */
     public MediaTrack [] getTracks() {
         return this.Tracks;
     }
 
     /**
-     * Set Input media track list, including multiple track information composed of materials such as video, audio, and images.
-     * @param Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
+     * Set Input media track list, including multiple track information composed of materials such as video, audio, and image.
+     * @param Tracks Input media track list, including multiple track information composed of materials such as video, audio, and image.
      */
     public void setTracks(MediaTrack [] Tracks) {
         this.Tracks = Tracks;

@@ -26,7 +26,7 @@ public class BlackWhiteEdgeConfigureInfo extends AbstractModel {
     /**
     * Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -35,10 +35,10 @@ public class BlackWhiteEdgeConfigureInfo extends AbstractModel {
     /**
      * Get Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li> 
+<li>OFF: disabled.</li> 
      * @return Switch Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -47,10 +47,10 @@ public class BlackWhiteEdgeConfigureInfo extends AbstractModel {
     /**
      * Set Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      * @param Switch Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

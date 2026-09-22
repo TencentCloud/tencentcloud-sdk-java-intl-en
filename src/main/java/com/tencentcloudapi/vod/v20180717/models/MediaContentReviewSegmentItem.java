@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MediaContentReviewSegmentItem extends AbstractModel {
 
     /**
-    * Time offset of the start of the suspected segment. Unit: second.
+    * Start time offset of a suspected segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of the suspected segment, in seconds.
+    * End time offset of a suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -52,7 +52,7 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     private String Label;
 
     /**
-    * Result suggestions for identifying suspected segments involving offensive content. Value range:
+    * Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -62,7 +62,7 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+    * Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
@@ -70,46 +70,46 @@ Images will be deleted after the PicUrlExpireTime time point).
     private String Url;
 
     /**
-    * This field is deprecated. Please use PicUrlExpireTime.
+    * Deprecated. Please use PicUrlExpireTime.
     */
     @SerializedName("PicUrlExpireTimeStamp")
     @Expose
     private Long PicUrlExpireTimeStamp;
 
     /**
-    * Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get Time offset of the start of the suspected segment. Unit: second. 
-     * @return StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
+     * Get Start time offset of a suspected segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Time offset of the start of the suspected segment. Unit: second.
-     * @param StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
+     * Set Start time offset of a suspected segment, in seconds.
+     * @param StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of the suspected segment, in seconds. 
-     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
+     * Get End time offset of a suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of the suspected segment, in seconds.
-     * @param EndTimeOffset End time offset of the suspected segment, in seconds.
+     * Set End time offset of a suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
@@ -148,11 +148,11 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Result suggestions for identifying suspected segments involving offensive content. Value range:
+     * Get Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Result suggestions for identifying suspected segments involving offensive content. Value range:
+     * @return Suggestion Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -162,11 +162,11 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Set Result suggestions for identifying suspected segments involving offensive content. Value range:
+     * Set Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Result suggestions for identifying suspected segments involving offensive content. Value range:
+     * @param Suggestion Result suggestions for identifying offensive content in suspected segments. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -176,9 +176,9 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * Get Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point). 
-     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * @return Url Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
@@ -186,9 +186,9 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * Set Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
-     * @param Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * @param Url Suspected image URL (images are not retained permanently and will reach
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
@@ -196,8 +196,8 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get This field is deprecated. Please use PicUrlExpireTime. 
-     * @return PicUrlExpireTimeStamp This field is deprecated. Please use PicUrlExpireTime.
+     * Get Deprecated. Please use PicUrlExpireTime. 
+     * @return PicUrlExpireTimeStamp Deprecated. Please use PicUrlExpireTime.
      * @deprecated
      */
     @Deprecated
@@ -206,8 +206,8 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Set This field is deprecated. Please use PicUrlExpireTime.
-     * @param PicUrlExpireTimeStamp This field is deprecated. Please use PicUrlExpireTime.
+     * Set Deprecated. Please use PicUrlExpireTime.
+     * @param PicUrlExpireTimeStamp Deprecated. Please use PicUrlExpireTime.
      * @deprecated
      */
     @Deprecated
@@ -216,16 +216,16 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return PicUrlExpireTime Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param PicUrlExpireTime Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

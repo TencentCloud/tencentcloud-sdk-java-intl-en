@@ -54,7 +54,7 @@ public class ReviewTemplate extends AbstractModel {
     private String Type;
 
     /**
-    * List of violation labels that need to return.
+    * List of violation labels to return.
     */
     @SerializedName("Labels")
     @Expose
@@ -147,16 +147,16 @@ public class ReviewTemplate extends AbstractModel {
     }
 
     /**
-     * Get List of violation labels that need to return. 
-     * @return Labels List of violation labels that need to return.
+     * Get List of violation labels to return. 
+     * @return Labels List of violation labels to return.
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set List of violation labels that need to return.
-     * @param Labels List of violation labels that need to return.
+     * Set List of violation labels to return.
+     * @param Labels List of violation labels to return.
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;

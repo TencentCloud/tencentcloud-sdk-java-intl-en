@@ -25,9 +25,9 @@ public class VideoTrackItem extends AbstractModel {
 
     /**
     * Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
     */
     @SerializedName("SourceMedia")
     @Expose
@@ -41,7 +41,7 @@ Note: When using the download URL of another media file as the material source a
     private Float SourceMediaStartTime;
 
     /**
-    * Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+    * Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
     */
     @SerializedName("Duration")
     @Expose
@@ -50,7 +50,7 @@ Note: When using the download URL of another media file as the material source a
     /**
     * Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
     */
     @SerializedName("TargetDuration")
     @Expose
@@ -66,8 +66,8 @@ Default value: Center.
     private String CoordinateOrigin;
 
     /**
-    * Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+    * Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
     */
@@ -76,8 +76,8 @@ Default value: 0px.
     private String XPos;
 
     /**
-    * Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+    * Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
     */
@@ -117,7 +117,7 @@ Default value: 0px.
     private AudioTransform [] AudioOperations;
 
     /**
-    * Operation performed on the image, for example, image rotation.
+    * Operation performed on the image, such as image rotation.
     */
     @SerializedName("ImageOperations")
     @Expose
@@ -125,13 +125,13 @@ Default value: 0px.
 
     /**
      * Get Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature). 
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature). 
      * @return SourceMedia Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public String getSourceMedia() {
         return this.SourceMedia;
@@ -139,13 +139,13 @@ Note: When using the download URL of another media file as the material source a
 
     /**
      * Set Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      * @param SourceMedia Media material source of the video clip, which can be:
-<li>Media file ID for VOD;</li>
+<li>Media file ID of on-demand video;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public void setSourceMedia(String SourceMedia) {
         this.SourceMedia = SourceMedia;
@@ -168,16 +168,16 @@ Note: When using the download URL of another media file as the material source a
     }
 
     /**
-     * Get Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0. 
-     * @return Duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+     * Get Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0. 
+     * @return Duration Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
-     * @param Duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+     * Set Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+     * @param Duration Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
@@ -186,10 +186,10 @@ Note: When using the download URL of another media file as the material source a
     /**
      * Get Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li> 
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li> 
      * @return TargetDuration Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
      */
     public Float getTargetDuration() {
         return this.TargetDuration;
@@ -198,10 +198,10 @@ Note: When using the download URL of another media file as the material source a
     /**
      * Set Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
      * @param TargetDuration Target duration of the video clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
      */
     public void setTargetDuration(Float TargetDuration) {
         this.TargetDuration = TargetDuration;
@@ -232,12 +232,12 @@ Default value: Center.
     }
 
     /**
-     * Get Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+     * Get Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px. 
-     * @return XPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+     * @return XPos Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
      */
@@ -246,12 +246,12 @@ Default value: 0px.
     }
 
     /**
-     * Set Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+     * Set Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
-     * @param XPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+     * @param XPos Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+<li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
 <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
      */
@@ -260,12 +260,12 @@ Default value: 0px.
     }
 
     /**
-     * Get Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+     * Get Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px. 
-     * @return YPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+     * @return YPos Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
      */
@@ -274,12 +274,12 @@ Default value: 0px.
     }
 
     /**
-     * Set Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+     * Set Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
-     * @param YPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+     * @param YPos Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
 <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
      */
@@ -376,16 +376,16 @@ Default value: 0px.
     }
 
     /**
-     * Get Operation performed on the image, for example, image rotation. 
-     * @return ImageOperations Operation performed on the image, for example, image rotation.
+     * Get Operation performed on the image, such as image rotation. 
+     * @return ImageOperations Operation performed on the image, such as image rotation.
      */
     public ImageTransform [] getImageOperations() {
         return this.ImageOperations;
     }
 
     /**
-     * Set Operation performed on the image, for example, image rotation.
-     * @param ImageOperations Operation performed on the image, for example, image rotation.
+     * Set Operation performed on the image, such as image rotation.
+     * @param ImageOperations Operation performed on the image, such as image rotation.
      */
     public void setImageOperations(ImageTransform [] ImageOperations) {
         this.ImageOperations = ImageOperations;

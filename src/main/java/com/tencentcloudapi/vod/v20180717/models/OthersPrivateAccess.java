@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OthersPrivateAccess extends AbstractModel {
 
     /**
-    * Authentication configuration switch for origin-pull from other vendors. Valid values:
+    * Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -61,10 +61,10 @@ public class OthersPrivateAccess extends AbstractModel {
     private String Bucket;
 
     /**
-     * Get Authentication configuration switch for origin-pull from other vendors. Valid values:
+     * Get Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Authentication configuration switch for origin-pull from other vendors. Valid values:
+     * @return Switch Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -73,10 +73,10 @@ public class OthersPrivateAccess extends AbstractModel {
     }
 
     /**
-     * Set Authentication configuration switch for origin-pull from other vendors. Valid values:
+     * Set Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Authentication configuration switch for origin-pull from other vendors. Valid values:
+     * @param Switch Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

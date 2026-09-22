@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewTerrorismOcrTaskOutput extends AbstractModel {
 
     /**
-    * Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
+    * Score of unsafe information in Ocr text. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Ocr text contains result suggestions involving unsafe information. Value range:
+    * Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -49,41 +49,41 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel {
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-    * URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+    * URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Score of Ocr text involving unsafe information. The score ranges from 0 to 100. 
-     * @return Confidence Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
+     * Get Score of unsafe information in Ocr text. Value range: 0-100. 
+     * @return Confidence Score of unsafe information in Ocr text. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
-     * @param Confidence Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
+     * Set Score of unsafe information in Ocr text. Value range: 0-100.
+     * @param Confidence Score of unsafe information in Ocr text. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Ocr text contains result suggestions involving unsafe information. Value range:
+     * Get Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Ocr text contains result suggestions involving unsafe information. Value range:
+     * @return Suggestion Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -93,11 +93,11 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Ocr text contains result suggestions involving unsafe information. Value range:
+     * Set Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Ocr text contains result suggestions involving unsafe information. Value range:
+     * @param Suggestion Ocr text involves result suggestions for unsafe information. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -127,32 +127,32 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.) 
-     * @return SegmentSetFileUrl URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * Get URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.) 
+     * @return SegmentSetFileUrl URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
-     * @param SegmentSetFileUrl URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * Set URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
+     * @param SegmentSetFileUrl URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param SegmentSetFileUrlExpireTime Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param SegmentSetFileUrlExpireTime Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

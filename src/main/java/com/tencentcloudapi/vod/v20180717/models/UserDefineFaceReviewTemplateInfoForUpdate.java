@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class UserDefineFaceReviewTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
+    * Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -41,38 +41,38 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     private String [] LabelSet;
 
     /**
-    * Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+    * Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
+    * Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li> 
-     * @return Switch Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
+     * Get Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li> 
+     * @return Switch Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
-     * @param Switch Switch for the user-defined character audio/video moderation task. Available values:
-<li>ON: enable the customized figure audio/video moderation task;</li>
-<li>OFF: Turn off the customized figure audio/video moderation task.</li>
+     * Set Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
+     * @param Switch Switch for user-defined character audio/video moderation tasks. Available values:
+<li>ON: Turn on customized figure audio/video moderation tasks;</li>
+<li>OFF: disables the customized figure audio/video moderation task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -99,32 +99,32 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Get Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+     * Get Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
-     * @param BlockConfidence Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+     * Set Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+     * @param BlockConfidence Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
+     * Get Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
+     * Set Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

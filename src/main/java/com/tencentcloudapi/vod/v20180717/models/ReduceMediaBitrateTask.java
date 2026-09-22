@@ -47,7 +47,7 @@ public class ReduceMediaBitrateTask extends AbstractModel {
     private String FileId;
 
     /**
-    * Media filename.
+    * Media file name.
     */
     @SerializedName("FileName")
     @Expose
@@ -83,7 +83,7 @@ public class ReduceMediaBitrateTask extends AbstractModel {
 
     /**
     * Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
     */
     @SerializedName("TasksNotifyMode")
@@ -161,16 +161,16 @@ public class ReduceMediaBitrateTask extends AbstractModel {
     }
 
     /**
-     * Get Media filename. 
-     * @return FileName Media filename.
+     * Get Media file name. 
+     * @return FileName Media file name.
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Media filename.
-     * @param FileName Media filename.
+     * Set Media file name.
+     * @param FileName Media file name.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -242,10 +242,10 @@ public class ReduceMediaBitrateTask extends AbstractModel {
 
     /**
      * Get Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li> 
      * @return TasksNotifyMode Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
      */
     public String getTasksNotifyMode() {
@@ -254,10 +254,10 @@ public class ReduceMediaBitrateTask extends AbstractModel {
 
     /**
      * Set Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
      * @param TasksNotifyMode Task flow status change notification mode.
-<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
 <li>None: non-acceptance of the task flow callback.</li>
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {

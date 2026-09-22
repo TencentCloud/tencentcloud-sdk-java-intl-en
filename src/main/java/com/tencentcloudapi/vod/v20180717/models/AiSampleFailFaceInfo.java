@@ -33,7 +33,7 @@ public class AiSampleFailFaceInfo extends AbstractModel {
     /**
     * Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -65,10 +65,10 @@ public class AiSampleFailFaceInfo extends AbstractModel {
     /**
      * Get Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li> 
+<li>Other: failure.</li> 
      * @return ErrCode Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -77,10 +77,10 @@ public class AiSampleFailFaceInfo extends AbstractModel {
     /**
      * Set Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
      * @param ErrCode Error code. Value:
 <li>0: success;</li>
-<li>Other: Failed.</li>
+<li>Other: failure.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;

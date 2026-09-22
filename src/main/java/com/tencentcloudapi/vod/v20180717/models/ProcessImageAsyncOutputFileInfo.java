@@ -31,7 +31,7 @@ public class ProcessImageAsyncOutputFileInfo extends AbstractModel {
     private String MediaName;
 
     /**
-    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
 
     */
     @SerializedName("ClassId")
@@ -39,14 +39,14 @@ public class ProcessImageAsyncOutputFileInfo extends AbstractModel {
     private Long ClassId;
 
     /**
-    * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * File type, such as mp4 and flv.
+    * File type, for example, mp4, flv.
     */
     @SerializedName("FileType")
     @Expose
@@ -67,7 +67,7 @@ public class ProcessImageAsyncOutputFileInfo extends AbstractModel {
     private String FileId;
 
     /**
-    * Meta information of the output video. Valid only when StorageMode is Permanent.
+    * Meta information of the output video. Valid when StorageMode is Permanent.
     */
     @SerializedName("MetaData")
     @Expose
@@ -90,9 +90,9 @@ public class ProcessImageAsyncOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
  
-     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
 
      */
     public Long getClassId() {
@@ -100,9 +100,9 @@ public class ProcessImageAsyncOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
 
-     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
 
      */
     public void setClassId(Long ClassId) {
@@ -110,32 +110,32 @@ public class ProcessImageAsyncOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get File type, such as mp4 and flv. 
-     * @return FileType File type, such as mp4 and flv.
+     * Get File type, for example, mp4, flv. 
+     * @return FileType File type, for example, mp4, flv.
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set File type, such as mp4 and flv.
-     * @param FileType File type, such as mp4 and flv.
+     * Set File type, for example, mp4, flv.
+     * @param FileType File type, for example, mp4, flv.
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -174,16 +174,16 @@ public class ProcessImageAsyncOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get Meta information of the output video. Valid only when StorageMode is Permanent. 
-     * @return MetaData Meta information of the output video. Valid only when StorageMode is Permanent.
+     * Get Meta information of the output video. Valid when StorageMode is Permanent. 
+     * @return MetaData Meta information of the output video. Valid when StorageMode is Permanent.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Meta information of the output video. Valid only when StorageMode is Permanent.
-     * @param MetaData Meta information of the output video. Valid only when StorageMode is Permanent.
+     * Set Meta information of the output video. Valid when StorageMode is Permanent.
+     * @param MetaData Meta information of the output video. Valid when StorageMode is Permanent.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

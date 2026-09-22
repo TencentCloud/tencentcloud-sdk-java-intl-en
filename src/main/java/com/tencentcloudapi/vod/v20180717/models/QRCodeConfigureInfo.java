@@ -26,7 +26,7 @@ public class QRCodeConfigureInfo extends AbstractModel {
     /**
     * QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -35,10 +35,10 @@ public class QRCodeConfigureInfo extends AbstractModel {
     /**
      * Get QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li> 
+<li>OFF: disabled</li> 
      * @return Switch QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -47,10 +47,10 @@ public class QRCodeConfigureInfo extends AbstractModel {
     /**
      * Set QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>OFF: disabled</li>
      * @param Switch QR code detection switch for video frames. Available values:
 <li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

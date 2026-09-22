@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProcessImageAsyncTemplateItem extends AbstractModel {
 
     /**
-    * Unique identifier of the image asynchronous processing template.
+    * Template unique identifier for asynchronous image processing.
     */
     @SerializedName("Definition")
     @Expose
@@ -45,7 +45,7 @@ public class ProcessImageAsyncTemplateItem extends AbstractModel {
     private String Name;
 
     /**
-    * Description information of the async image processing template.
+    * Description information of the image async processing template.
     */
     @SerializedName("Comment")
     @Expose
@@ -73,16 +73,16 @@ public class ProcessImageAsyncTemplateItem extends AbstractModel {
     private ProcessImageAsyncTask ProcessImageConfigure;
 
     /**
-     * Get Unique identifier of the image asynchronous processing template. 
-     * @return Definition Unique identifier of the image asynchronous processing template.
+     * Get Template unique identifier for asynchronous image processing. 
+     * @return Definition Template unique identifier for asynchronous image processing.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the image asynchronous processing template.
-     * @param Definition Unique identifier of the image asynchronous processing template.
+     * Set Template unique identifier for asynchronous image processing.
+     * @param Definition Template unique identifier for asynchronous image processing.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -121,16 +121,16 @@ public class ProcessImageAsyncTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Description information of the async image processing template. 
-     * @return Comment Description information of the async image processing template.
+     * Get Description information of the image async processing template. 
+     * @return Comment Description information of the image async processing template.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description information of the async image processing template.
-     * @param Comment Description information of the async image processing template.
+     * Set Description information of the image async processing template.
+     * @param Comment Description information of the image async processing template.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

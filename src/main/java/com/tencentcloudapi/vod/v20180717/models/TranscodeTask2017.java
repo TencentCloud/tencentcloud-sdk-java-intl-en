@@ -33,7 +33,7 @@ public class TranscodeTask2017 extends AbstractModel {
     /**
     * Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -100,10 +100,10 @@ public class TranscodeTask2017 extends AbstractModel {
     /**
      * Get Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li> 
+<li>Other value: failure.</li> 
      * @return ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -112,10 +112,10 @@ public class TranscodeTask2017 extends AbstractModel {
     /**
      * Set Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      * @param ErrCode Error code.
 <li>0: success;</li>
-<li>Other value: unsuccessful.</li>
+<li>Other value: failure.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;

@@ -38,7 +38,7 @@ public class RestoreMediaTask extends AbstractModel {
     private String OriginalStorageClass;
 
     /**
-    * Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+    * Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
     */
     @SerializedName("TargetStorageClass")
     @Expose
@@ -108,16 +108,16 @@ public class RestoreMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class. 
-     * @return TargetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+     * Get Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class. 
+     * @return TargetStorageClass Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
      */
     public String getTargetStorageClass() {
         return this.TargetStorageClass;
     }
 
     /**
-     * Set Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
-     * @param TargetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+     * Set Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
+     * @param TargetStorageClass Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
      */
     public void setTargetStorageClass(String TargetStorageClass) {
         this.TargetStorageClass = TargetStorageClass;

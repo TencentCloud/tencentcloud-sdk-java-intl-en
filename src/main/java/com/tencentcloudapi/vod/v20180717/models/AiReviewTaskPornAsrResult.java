@@ -31,7 +31,7 @@ public class AiReviewTaskPornAsrResult extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -52,14 +52,14 @@ public class AiReviewTaskPornAsrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input for tasks involving offensive content in Asr text in audio/video moderation.
+    * Task input for offensive content involved in Asr text in audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPornAsrTaskInput Input;
 
     /**
-    * Task output for tasks involving offensive content in Asr text in audio/video moderation.
+    * Task output of Asr text involving offensive content in audio/video moderation.
     */
     @SerializedName("Output")
     @Expose
@@ -89,16 +89,16 @@ public class AiReviewTaskPornAsrResult extends AbstractModel {
     }
 
     /**
-     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -137,32 +137,32 @@ public class AiReviewTaskPornAsrResult extends AbstractModel {
     }
 
     /**
-     * Get Task input for tasks involving offensive content in Asr text in audio/video moderation. 
-     * @return Input Task input for tasks involving offensive content in Asr text in audio/video moderation.
+     * Get Task input for offensive content involved in Asr text in audio/video moderation. 
+     * @return Input Task input for offensive content involved in Asr text in audio/video moderation.
      */
     public AiReviewPornAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input for tasks involving offensive content in Asr text in audio/video moderation.
-     * @param Input Task input for tasks involving offensive content in Asr text in audio/video moderation.
+     * Set Task input for offensive content involved in Asr text in audio/video moderation.
+     * @param Input Task input for offensive content involved in Asr text in audio/video moderation.
      */
     public void setInput(AiReviewPornAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Task output for tasks involving offensive content in Asr text in audio/video moderation. 
-     * @return Output Task output for tasks involving offensive content in Asr text in audio/video moderation.
+     * Get Task output of Asr text involving offensive content in audio/video moderation. 
+     * @return Output Task output of Asr text involving offensive content in audio/video moderation.
      */
     public AiReviewPornAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Task output for tasks involving offensive content in Asr text in audio/video moderation.
-     * @param Output Task output for tasks involving offensive content in Asr text in audio/video moderation.
+     * Set Task output of Asr text involving offensive content in audio/video moderation.
+     * @param Output Task output of Asr text involving offensive content in audio/video moderation.
      */
     public void setOutput(AiReviewPornAsrTaskOutput Output) {
         this.Output = Output;

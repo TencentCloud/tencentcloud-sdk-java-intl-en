@@ -26,8 +26,8 @@ public class AiAnalysisResult extends AbstractModel {
     /**
     * Task type. Valid values:
 <li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tag.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tag</li>
 <li>FrameTag: intelligent frame-by-frame tagging.</li>
 <li>Highlight: intelligent highlights</li>
     */
@@ -36,21 +36,21 @@ public class AiAnalysisResult extends AbstractModel {
     private String Type;
 
     /**
-    * Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
+    * Query result of the video content analysis intelligent categorization task. Valid when the task type is `Classification`.
     */
     @SerializedName("ClassificationTask")
     @Expose
     private AiAnalysisTaskClassificationResult ClassificationTask;
 
     /**
-    * Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
+    * Query result of the video content analysis Intelligent Cover Task. Valid when the task type is `Cover`.
     */
     @SerializedName("CoverTask")
     @Expose
     private AiAnalysisTaskCoverResult CoverTask;
 
     /**
-    * Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
+    * Query result of the video content analysis intelligent tag task. Valid when the task type is `Tag`.
     */
     @SerializedName("TagTask")
     @Expose
@@ -64,7 +64,7 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskFrameTagResult FrameTagTask;
 
     /**
-    * Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
+    * Query result of the video content analysis intelligent highlight task. Valid when the task type is `Highlight`.
     */
     @SerializedName("HighlightTask")
     @Expose
@@ -73,14 +73,14 @@ public class AiAnalysisResult extends AbstractModel {
     /**
      * Get Task type. Valid values:
 <li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tag.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tag</li>
 <li>FrameTag: intelligent frame-by-frame tagging.</li>
 <li>Highlight: intelligent highlights</li> 
      * @return Type Task type. Valid values:
 <li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tag.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tag</li>
 <li>FrameTag: intelligent frame-by-frame tagging.</li>
 <li>Highlight: intelligent highlights</li>
      */
@@ -91,14 +91,14 @@ public class AiAnalysisResult extends AbstractModel {
     /**
      * Set Task type. Valid values:
 <li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tag.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tag</li>
 <li>FrameTag: intelligent frame-by-frame tagging.</li>
 <li>Highlight: intelligent highlights</li>
      * @param Type Task type. Valid values:
 <li>Classification: intelligent classification.</li>
-<li>Cover: intelligent thumbnail generating.</li>
-<li>Tag: intelligent tag.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tag</li>
 <li>FrameTag: intelligent frame-by-frame tagging.</li>
 <li>Highlight: intelligent highlights</li>
      */
@@ -107,48 +107,48 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Get Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification. 
-     * @return ClassificationTask Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
+     * Get Query result of the video content analysis intelligent categorization task. Valid when the task type is `Classification`. 
+     * @return ClassificationTask Query result of the video content analysis intelligent categorization task. Valid when the task type is `Classification`.
      */
     public AiAnalysisTaskClassificationResult getClassificationTask() {
         return this.ClassificationTask;
     }
 
     /**
-     * Set Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
-     * @param ClassificationTask Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
+     * Set Query result of the video content analysis intelligent categorization task. Valid when the task type is `Classification`.
+     * @param ClassificationTask Query result of the video content analysis intelligent categorization task. Valid when the task type is `Classification`.
      */
     public void setClassificationTask(AiAnalysisTaskClassificationResult ClassificationTask) {
         this.ClassificationTask = ClassificationTask;
     }
 
     /**
-     * Get Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`. 
-     * @return CoverTask Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
+     * Get Query result of the video content analysis Intelligent Cover Task. Valid when the task type is `Cover`. 
+     * @return CoverTask Query result of the video content analysis Intelligent Cover Task. Valid when the task type is `Cover`.
      */
     public AiAnalysisTaskCoverResult getCoverTask() {
         return this.CoverTask;
     }
 
     /**
-     * Set Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
-     * @param CoverTask Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
+     * Set Query result of the video content analysis Intelligent Cover Task. Valid when the task type is `Cover`.
+     * @param CoverTask Query result of the video content analysis Intelligent Cover Task. Valid when the task type is `Cover`.
      */
     public void setCoverTask(AiAnalysisTaskCoverResult CoverTask) {
         this.CoverTask = CoverTask;
     }
 
     /**
-     * Get Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag. 
-     * @return TagTask Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
+     * Get Query result of the video content analysis intelligent tag task. Valid when the task type is `Tag`. 
+     * @return TagTask Query result of the video content analysis intelligent tag task. Valid when the task type is `Tag`.
      */
     public AiAnalysisTaskTagResult getTagTask() {
         return this.TagTask;
     }
 
     /**
-     * Set Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
-     * @param TagTask Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
+     * Set Query result of the video content analysis intelligent tag task. Valid when the task type is `Tag`.
+     * @param TagTask Query result of the video content analysis intelligent tag task. Valid when the task type is `Tag`.
      */
     public void setTagTask(AiAnalysisTaskTagResult TagTask) {
         this.TagTask = TagTask;
@@ -171,16 +171,16 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Get Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight. 
-     * @return HighlightTask Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
+     * Get Query result of the video content analysis intelligent highlight task. Valid when the task type is `Highlight`. 
+     * @return HighlightTask Query result of the video content analysis intelligent highlight task. Valid when the task type is `Highlight`.
      */
     public AiAnalysisTaskHighlightResult getHighlightTask() {
         return this.HighlightTask;
     }
 
     /**
-     * Set Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
-     * @param HighlightTask Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
+     * Set Query result of the video content analysis intelligent highlight task. Valid when the task type is `Highlight`.
+     * @param HighlightTask Query result of the video content analysis intelligent highlight task. Valid when the task type is `Highlight`.
      */
     public void setHighlightTask(AiAnalysisTaskHighlightResult HighlightTask) {
         this.HighlightTask = HighlightTask;

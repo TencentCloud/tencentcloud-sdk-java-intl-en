@@ -38,7 +38,7 @@ public class VideoDubbingAsyncTask extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+    * <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -59,7 +59,7 @@ public class VideoDubbingAsyncTask extends AbstractModel {
     private String ErrCodeExt;
 
     /**
-    * <p>Input information for a video dubbing task.</p>
+    * <p>Video dubbing task input information.</p>
     */
     @SerializedName("Input")
     @Expose
@@ -126,16 +126,16 @@ public class VideoDubbingAsyncTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li> 
-     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * Get <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li> 
+     * @return ErrCode <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
-     * @param ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * Set <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * @param ErrCode <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -174,16 +174,16 @@ public class VideoDubbingAsyncTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Input information for a video dubbing task.</p> 
-     * @return Input <p>Input information for a video dubbing task.</p>
+     * Get <p>Video dubbing task input information.</p> 
+     * @return Input <p>Video dubbing task input information.</p>
      */
     public VideoDubbingAsyncInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set <p>Input information for a video dubbing task.</p>
-     * @param Input <p>Input information for a video dubbing task.</p>
+     * Set <p>Video dubbing task input information.</p>
+     * @param Input <p>Video dubbing task input information.</p>
      */
     public void setInput(VideoDubbingAsyncInput Input) {
         this.Input = Input;

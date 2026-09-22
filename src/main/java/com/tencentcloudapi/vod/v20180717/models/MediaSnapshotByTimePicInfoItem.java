@@ -38,7 +38,7 @@ public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
     private String Url;
 
     /**
-    * List of template IDs used for watermarking if the screenshot is watermarked.
+    * List of template IDs if the screenshot is watermarked.
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
@@ -77,16 +77,16 @@ public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
     }
 
     /**
-     * Get List of template IDs used for watermarking if the screenshot is watermarked. 
-     * @return WaterMarkDefinition List of template IDs used for watermarking if the screenshot is watermarked.
+     * Get List of template IDs if the screenshot is watermarked. 
+     * @return WaterMarkDefinition List of template IDs if the screenshot is watermarked.
      */
     public Long [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
     }
 
     /**
-     * Set List of template IDs used for watermarking if the screenshot is watermarked.
-     * @param WaterMarkDefinition List of template IDs used for watermarking if the screenshot is watermarked.
+     * Set List of template IDs if the screenshot is watermarked.
+     * @param WaterMarkDefinition List of template IDs if the screenshot is watermarked.
      */
     public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;

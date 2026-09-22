@@ -31,7 +31,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * Video content recognition template name. Length limit: 64 characters.
+    * Audio/Video content recognition template name, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -45,7 +45,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * Control parameters for video opening and closing recognition.
+    * Video opening and closing recognition control parameter.
     */
     @SerializedName("HeadTailConfigure")
     @Expose
@@ -59,7 +59,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     private SegmentConfigureInfo SegmentConfigure;
 
     /**
-    * Control parameters for face recognition.
+    * Face recognition control parameter.
     */
     @SerializedName("FaceConfigure")
     @Expose
@@ -81,7 +81,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
     * Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
@@ -95,21 +95,21 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
-    * Speech translation recognition control parameters.
+    * Voice translation recognition control parameters.
     */
     @SerializedName("AsrTranslateConfigure")
     @Expose
     private AsrTranslateConfigureInfo AsrTranslateConfigure;
 
     /**
-    * Control parameters for object recognition.
+    * Object recognition control parameter.
     */
     @SerializedName("ObjectConfigure")
     @Expose
     private ObjectConfigureInfo ObjectConfigure;
 
     /**
-    * Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+    * Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
@@ -132,16 +132,16 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Video content recognition template name. Length limit: 64 characters. 
-     * @return Name Video content recognition template name. Length limit: 64 characters.
+     * Get Audio/Video content recognition template name, with a length limit of 64 characters. 
+     * @return Name Audio/Video content recognition template name, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Video content recognition template name. Length limit: 64 characters.
-     * @param Name Video content recognition template name. Length limit: 64 characters.
+     * Set Audio/Video content recognition template name, with a length limit of 64 characters.
+     * @param Name Audio/Video content recognition template name, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -164,16 +164,16 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Control parameters for video opening and closing recognition. 
-     * @return HeadTailConfigure Control parameters for video opening and closing recognition.
+     * Get Video opening and closing recognition control parameter. 
+     * @return HeadTailConfigure Video opening and closing recognition control parameter.
      */
     public HeadTailConfigureInfo getHeadTailConfigure() {
         return this.HeadTailConfigure;
     }
 
     /**
-     * Set Control parameters for video opening and closing recognition.
-     * @param HeadTailConfigure Control parameters for video opening and closing recognition.
+     * Set Video opening and closing recognition control parameter.
+     * @param HeadTailConfigure Video opening and closing recognition control parameter.
      */
     public void setHeadTailConfigure(HeadTailConfigureInfo HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
@@ -196,16 +196,16 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Control parameters for face recognition. 
-     * @return FaceConfigure Control parameters for face recognition.
+     * Get Face recognition control parameter. 
+     * @return FaceConfigure Face recognition control parameter.
      */
     public FaceConfigureInfo getFaceConfigure() {
         return this.FaceConfigure;
     }
 
     /**
-     * Set Control parameters for face recognition.
-     * @param FaceConfigure Control parameters for face recognition.
+     * Set Face recognition control parameter.
+     * @param FaceConfigure Face recognition control parameter.
      */
     public void setFaceConfigure(FaceConfigureInfo FaceConfigure) {
         this.FaceConfigure = FaceConfigure;
@@ -245,9 +245,9 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
      * Get Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font> 
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font> 
      * @return AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
      */
     public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
@@ -255,9 +255,9 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
      * Set Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
      * @param AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
@@ -280,48 +280,48 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Speech translation recognition control parameters. 
-     * @return AsrTranslateConfigure Speech translation recognition control parameters.
+     * Get Voice translation recognition control parameters. 
+     * @return AsrTranslateConfigure Voice translation recognition control parameters.
      */
     public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
         return this.AsrTranslateConfigure;
     }
 
     /**
-     * Set Speech translation recognition control parameters.
-     * @param AsrTranslateConfigure Speech translation recognition control parameters.
+     * Set Voice translation recognition control parameters.
+     * @param AsrTranslateConfigure Voice translation recognition control parameters.
      */
     public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
         this.AsrTranslateConfigure = AsrTranslateConfigure;
     }
 
     /**
-     * Get Control parameters for object recognition. 
-     * @return ObjectConfigure Control parameters for object recognition.
+     * Get Object recognition control parameter. 
+     * @return ObjectConfigure Object recognition control parameter.
      */
     public ObjectConfigureInfo getObjectConfigure() {
         return this.ObjectConfigure;
     }
 
     /**
-     * Set Control parameters for object recognition.
-     * @param ObjectConfigure Control parameters for object recognition.
+     * Set Object recognition control parameter.
+     * @param ObjectConfigure Object recognition control parameter.
      */
     public void setObjectConfigure(ObjectConfigureInfo ObjectConfigure) {
         this.ObjectConfigure = ObjectConfigure;
     }
 
     /**
-     * Get Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds. 
-     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * Get Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds. 
+     * @return ScreenshotInterval Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-     * @param ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * Set Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * @param ScreenshotInterval Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;

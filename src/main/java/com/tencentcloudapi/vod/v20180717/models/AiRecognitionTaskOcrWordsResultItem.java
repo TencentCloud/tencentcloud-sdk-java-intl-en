@@ -31,7 +31,7 @@ public class AiRecognitionTaskOcrWordsResultItem extends AbstractModel {
     private String Word;
 
     /**
-    * List of segments where the text key appears.
+    * List of segments where the key text appears.
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -54,16 +54,16 @@ public class AiRecognitionTaskOcrWordsResultItem extends AbstractModel {
     }
 
     /**
-     * Get List of segments where the text key appears. 
-     * @return SegmentSet List of segments where the text key appears.
+     * Get List of segments where the key text appears. 
+     * @return SegmentSet List of segments where the key text appears.
      */
     public AiRecognitionTaskOcrWordsSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of segments where the text key appears.
-     * @param SegmentSet List of segments where the text key appears.
+     * Set List of segments where the key text appears.
+     * @param SegmentSet List of segments where the key text appears.
      */
     public void setSegmentSet(AiRecognitionTaskOcrWordsSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ComposeMediaRequest extends AbstractModel {
 
     /**
-    * Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+    * Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
     */
     @SerializedName("Tracks")
     @Expose
@@ -38,7 +38,7 @@ public class ComposeMediaRequest extends AbstractModel {
     private ComposeMediaOutput Output;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,30 +52,30 @@ public class ComposeMediaRequest extends AbstractModel {
     private Canvas Canvas;
 
     /**
-    * Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
+    * Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+    * Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li> 
-     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+     * Get Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li> 
+     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
      */
     public MediaTrack [] getTracks() {
         return this.Tracks;
     }
 
     /**
-     * Set Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
-     * @param Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images. Among them: <li>The input multiple tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline overlap. Image overlay of videos or images in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+     * Set Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+     * @param Tracks Input media track list, including multiple track information composed of materials such as video, audio, and image, where: <li>Multiple input tracks are aligned with the output media file timeline on the timeline;</li><li>Materials on different tracks at the same time point on the timeline are overlaid. Image overlay of videos or images is performed in track order, materials with higher track order are overlaid on top, and audio materials are mixed;</li><li>Each type of track supports up to 10 video, audio, and image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
      */
     public void setTracks(MediaTrack [] Tracks) {
         this.Tracks = Tracks;
@@ -98,16 +98,16 @@ public class ComposeMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -130,32 +130,32 @@ public class ComposeMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters. 
-     * @return SessionContext Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
+     * Get Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters. 
+     * @return SessionContext Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
-     * @param SessionContext Source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. It can contain up to 1000 characters.
+     * Set Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
+     * @param SessionContext Identify source context, used to pass through user request information. The value of this field will be returned in the ComposeMediaComplete callback. Maximum length: 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
-     * @return SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Get Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param SessionId Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Set Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

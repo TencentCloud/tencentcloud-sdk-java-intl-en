@@ -35,7 +35,7 @@ public class ForceRedirect extends AbstractModel {
     /**
     * Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
     */
     @SerializedName("RedirectType")
     @Expose
@@ -82,10 +82,10 @@ public class ForceRedirect extends AbstractModel {
     /**
      * Get Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li> 
+<li>`https`: Force HTTPS redirect</li> 
      * @return RedirectType Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
      */
     public String getRedirectType() {
         return this.RedirectType;
@@ -94,10 +94,10 @@ public class ForceRedirect extends AbstractModel {
     /**
      * Set Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
      * @param RedirectType Access forced redirect type:
 <li>http: Force HTTP redirection</li>
-<li>https: Force HTTPS redirection</li>
+<li>`https`: Force HTTPS redirect</li>
      */
     public void setRedirectType(String RedirectType) {
         this.RedirectType = RedirectType;

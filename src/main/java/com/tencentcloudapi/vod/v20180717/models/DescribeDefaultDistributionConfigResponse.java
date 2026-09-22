@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
 
     /**
-    * <p>Distribute the configured domain name (abandoned).</p>
+    * <p>Distribution configured domain name (abandoned).</p>
     */
     @SerializedName("DomainName")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     private String Scheme;
 
     /**
-    * <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
+    * <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p>
     */
     @SerializedName("PlayKey")
     @Expose
@@ -59,8 +59,8 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Distribute the configured domain name (abandoned).</p> 
-     * @return DomainName <p>Distribute the configured domain name (abandoned).</p>
+     * Get <p>Distribution configured domain name (abandoned).</p> 
+     * @return DomainName <p>Distribution configured domain name (abandoned).</p>
      * @deprecated
      */
     @Deprecated
@@ -69,8 +69,8 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set <p>Distribute the configured domain name (abandoned).</p>
-     * @param DomainName <p>Distribute the configured domain name (abandoned).</p>
+     * Set <p>Distribution configured domain name (abandoned).</p>
+     * @param DomainName <p>Distribution configured domain name (abandoned).</p>
      * @deprecated
      */
     @Deprecated
@@ -111,16 +111,16 @@ public class DescribeDefaultDistributionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p> 
-     * @return PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
+     * Get <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p> 
+     * @return PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p>
      */
     public String getPlayKey() {
         return this.PlayKey;
     }
 
     /**
-     * Set <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
-     * @param PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
+     * Set <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p>
+     * @param PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p>
      */
     public void setPlayKey(String PlayKey) {
         this.PlayKey = PlayKey;

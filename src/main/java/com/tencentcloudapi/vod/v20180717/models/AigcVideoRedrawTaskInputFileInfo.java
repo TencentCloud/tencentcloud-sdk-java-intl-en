@@ -31,14 +31,14 @@ public class AigcVideoRedrawTaskInputFileInfo extends AbstractModel {
     private String Type;
 
     /**
-    * <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
+    * <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended. 2. Image format values: jpeg, jpg, png.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
+    * <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10 MB are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
     */
     @SerializedName("Url")
     @Expose
@@ -61,32 +61,32 @@ public class AigcVideoRedrawTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p> 
-     * @return FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
+     * Get <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended. 2. Image format values: jpeg, jpg, png.</p> 
+     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended. 2. Image format values: jpeg, jpg, png.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
-     * @param FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
+     * Set <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended. 2. Image format values: jpeg, jpg, png.</p>
+     * @param FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended. 2. Image format values: jpeg, jpg, png.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p> 
-     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
+     * Get <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10 MB are recommended; 2. Supported image formats: jpeg, jpg, png.</p> 
+     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10 MB are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
-     * @param Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
+     * Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10 MB are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
+     * @param Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10 MB are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

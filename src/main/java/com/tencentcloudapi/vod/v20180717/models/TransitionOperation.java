@@ -40,32 +40,32 @@ public class TransitionOperation extends AbstractModel {
 <li>Cube: cube. </li>
 <li>DoomScreenTransition: curtain. </li>
 <li>Doorway: Porch. </li>
-<li>Dreamy: Wave. </li>
+<li>Dreamy: wave. </li>
 <li>DreamyZoom: horizontal gathering. </li>
-<li>FilmBurn: Burning clouds.</li>
+<li>FilmBurn: Burning clouds. </li>
 <li>GlitchMemories: Jitter. </li>
 <li>Heart: heart shape. </li>
-<li>InvertedPageCurl: page turning. </li>
+<li>InvertedPageCurl: Page turning. </li>
 <li>Luma: Corrode. </li>
 <li>Mosaic: nine-grid. </li>
 <li>Pinwheel: windmill. </li>
 <li>PolarFunction: elliptic diffusion. </li>
 <li>PolkaDotsCurtain: Arc diffusion. </li>
-<li>Radial: radar scanning </li>
+<li>Radial: radar scanning</li>
 <li>RotateScaleFade: up-down retraction. </li>
 <li>Squeeze: vertical gathering. </li>
-<li>Swap: zoom in and switch.</li>
+<li>Swap: enlarge and switch.</li>
 <li>Swirl: spiral. </li>
-<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>UndulatingBurnOutSwirl: Water flow spread. </li>
 <li>Windowblinds: window blind. </li>
 <li>WipeDown: collapse downward. </li>
-<li>WipeLeft: collapse to the left. </li>
-<li>WipeRight: Collapse to the right.</li>
+<li>WipeLeft: Collapse to the left. </li>
+<li>WipeRight: collapse rightward. </li>
 <li>WipeUp: collapse upward. </li>
 <li>ZoomInCircles: water ripple. </li>
 </ul>
 </li>
-<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<li>Audio transition operation, used for transition processing between two audio clips:
 <ul>
 <li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
 </ul>
@@ -93,32 +93,32 @@ public class TransitionOperation extends AbstractModel {
 <li>Cube: cube. </li>
 <li>DoomScreenTransition: curtain. </li>
 <li>Doorway: Porch. </li>
-<li>Dreamy: Wave. </li>
+<li>Dreamy: wave. </li>
 <li>DreamyZoom: horizontal gathering. </li>
-<li>FilmBurn: Burning clouds.</li>
+<li>FilmBurn: Burning clouds. </li>
 <li>GlitchMemories: Jitter. </li>
 <li>Heart: heart shape. </li>
-<li>InvertedPageCurl: page turning. </li>
+<li>InvertedPageCurl: Page turning. </li>
 <li>Luma: Corrode. </li>
 <li>Mosaic: nine-grid. </li>
 <li>Pinwheel: windmill. </li>
 <li>PolarFunction: elliptic diffusion. </li>
 <li>PolkaDotsCurtain: Arc diffusion. </li>
-<li>Radial: radar scanning </li>
+<li>Radial: radar scanning</li>
 <li>RotateScaleFade: up-down retraction. </li>
 <li>Squeeze: vertical gathering. </li>
-<li>Swap: zoom in and switch.</li>
+<li>Swap: enlarge and switch.</li>
 <li>Swirl: spiral. </li>
-<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>UndulatingBurnOutSwirl: Water flow spread. </li>
 <li>Windowblinds: window blind. </li>
 <li>WipeDown: collapse downward. </li>
-<li>WipeLeft: collapse to the left. </li>
-<li>WipeRight: Collapse to the right.</li>
+<li>WipeLeft: Collapse to the left. </li>
+<li>WipeRight: collapse rightward. </li>
 <li>WipeUp: collapse upward. </li>
 <li>ZoomInCircles: water ripple. </li>
 </ul>
 </li>
-<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<li>Audio transition operation, used for transition processing between two audio clips:
 <ul>
 <li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
 </ul>
@@ -140,32 +140,32 @@ public class TransitionOperation extends AbstractModel {
 <li>Cube: cube. </li>
 <li>DoomScreenTransition: curtain. </li>
 <li>Doorway: Porch. </li>
-<li>Dreamy: Wave. </li>
+<li>Dreamy: wave. </li>
 <li>DreamyZoom: horizontal gathering. </li>
-<li>FilmBurn: Burning clouds.</li>
+<li>FilmBurn: Burning clouds. </li>
 <li>GlitchMemories: Jitter. </li>
 <li>Heart: heart shape. </li>
-<li>InvertedPageCurl: page turning. </li>
+<li>InvertedPageCurl: Page turning. </li>
 <li>Luma: Corrode. </li>
 <li>Mosaic: nine-grid. </li>
 <li>Pinwheel: windmill. </li>
 <li>PolarFunction: elliptic diffusion. </li>
 <li>PolkaDotsCurtain: Arc diffusion. </li>
-<li>Radial: radar scanning </li>
+<li>Radial: radar scanning</li>
 <li>RotateScaleFade: up-down retraction. </li>
 <li>Squeeze: vertical gathering. </li>
-<li>Swap: zoom in and switch.</li>
+<li>Swap: enlarge and switch.</li>
 <li>Swirl: spiral. </li>
-<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>UndulatingBurnOutSwirl: Water flow spread. </li>
 <li>Windowblinds: window blind. </li>
 <li>WipeDown: collapse downward. </li>
-<li>WipeLeft: collapse to the left. </li>
-<li>WipeRight: Collapse to the right.</li>
+<li>WipeLeft: Collapse to the left. </li>
+<li>WipeRight: collapse rightward. </li>
 <li>WipeUp: collapse upward. </li>
 <li>ZoomInCircles: water ripple. </li>
 </ul>
 </li>
-<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<li>Audio transition operation, used for transition processing between two audio clips:
 <ul>
 <li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
 </ul>
@@ -193,32 +193,32 @@ public class TransitionOperation extends AbstractModel {
 <li>Cube: cube. </li>
 <li>DoomScreenTransition: curtain. </li>
 <li>Doorway: Porch. </li>
-<li>Dreamy: Wave. </li>
+<li>Dreamy: wave. </li>
 <li>DreamyZoom: horizontal gathering. </li>
-<li>FilmBurn: Burning clouds.</li>
+<li>FilmBurn: Burning clouds. </li>
 <li>GlitchMemories: Jitter. </li>
 <li>Heart: heart shape. </li>
-<li>InvertedPageCurl: page turning. </li>
+<li>InvertedPageCurl: Page turning. </li>
 <li>Luma: Corrode. </li>
 <li>Mosaic: nine-grid. </li>
 <li>Pinwheel: windmill. </li>
 <li>PolarFunction: elliptic diffusion. </li>
 <li>PolkaDotsCurtain: Arc diffusion. </li>
-<li>Radial: radar scanning </li>
+<li>Radial: radar scanning</li>
 <li>RotateScaleFade: up-down retraction. </li>
 <li>Squeeze: vertical gathering. </li>
-<li>Swap: zoom in and switch.</li>
+<li>Swap: enlarge and switch.</li>
 <li>Swirl: spiral. </li>
-<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>UndulatingBurnOutSwirl: Water flow spread. </li>
 <li>Windowblinds: window blind. </li>
 <li>WipeDown: collapse downward. </li>
-<li>WipeLeft: collapse to the left. </li>
-<li>WipeRight: Collapse to the right.</li>
+<li>WipeLeft: Collapse to the left. </li>
+<li>WipeRight: collapse rightward. </li>
 <li>WipeUp: collapse upward. </li>
 <li>ZoomInCircles: water ripple. </li>
 </ul>
 </li>
-<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<li>Audio transition operation, used for transition processing between two audio clips:
 <ul>
 <li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
 </ul>
@@ -240,32 +240,32 @@ public class TransitionOperation extends AbstractModel {
 <li>Cube: cube. </li>
 <li>DoomScreenTransition: curtain. </li>
 <li>Doorway: Porch. </li>
-<li>Dreamy: Wave. </li>
+<li>Dreamy: wave. </li>
 <li>DreamyZoom: horizontal gathering. </li>
-<li>FilmBurn: Burning clouds.</li>
+<li>FilmBurn: Burning clouds. </li>
 <li>GlitchMemories: Jitter. </li>
 <li>Heart: heart shape. </li>
-<li>InvertedPageCurl: page turning. </li>
+<li>InvertedPageCurl: Page turning. </li>
 <li>Luma: Corrode. </li>
 <li>Mosaic: nine-grid. </li>
 <li>Pinwheel: windmill. </li>
 <li>PolarFunction: elliptic diffusion. </li>
 <li>PolkaDotsCurtain: Arc diffusion. </li>
-<li>Radial: radar scanning </li>
+<li>Radial: radar scanning</li>
 <li>RotateScaleFade: up-down retraction. </li>
 <li>Squeeze: vertical gathering. </li>
-<li>Swap: zoom in and switch.</li>
+<li>Swap: enlarge and switch.</li>
 <li>Swirl: spiral. </li>
-<li>UndulatingBurnOutSwirl: Water spread. </li>
+<li>UndulatingBurnOutSwirl: Water flow spread. </li>
 <li>Windowblinds: window blind. </li>
 <li>WipeDown: collapse downward. </li>
-<li>WipeLeft: collapse to the left. </li>
-<li>WipeRight: Collapse to the right.</li>
+<li>WipeLeft: Collapse to the left. </li>
+<li>WipeRight: collapse rightward. </li>
 <li>WipeUp: collapse upward. </li>
 <li>ZoomInCircles: water ripple. </li>
 </ul>
 </li>
-<li>Audio transition operation, used for transition processing between two audio clips:</li>
+<li>Audio transition operation, used for transition processing between two audio clips:
 <ul>
 <li>AudioFadeInFadeOut: sound fade-in and fade-out.</li>
 </ul>

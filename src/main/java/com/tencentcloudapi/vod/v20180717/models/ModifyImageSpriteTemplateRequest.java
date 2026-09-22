@@ -31,7 +31,7 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel {
     private Long Definition;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -60,8 +60,8 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel {
 
     /**
     * Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
@@ -80,7 +80,7 @@ Default value: open.
     /**
     * Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
     */
     @SerializedName("SampleInterval")
     @Expose
@@ -101,7 +101,7 @@ Default value: open.
     private Long ColumnCount;
 
     /**
-    * Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+    * Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
     */
     @SerializedName("FillType")
     @Expose
@@ -115,7 +115,7 @@ Default value: open.
     private String Comment;
 
     /**
-    * Image format. Valid values:
+    * Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>
@@ -141,16 +141,16 @@ Default value: open.
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -206,12 +206,12 @@ Default value: open.
 
     /**
      * Get Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open. 
      * @return ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
     public String getResolutionAdaptive() {
@@ -220,12 +220,12 @@ Default value: open.
 
     /**
      * Set Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      * @param ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
@@ -259,10 +259,10 @@ Default value: open.
     /**
      * Get Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li> 
+<li>When SampleType is Time, specify the sampling interval in seconds.</li> 
      * @return SampleInterval Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public Long getSampleInterval() {
         return this.SampleInterval;
@@ -271,10 +271,10 @@ Default value: open.
     /**
      * Set Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      * @param SampleInterval Sampling interval.
 <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-<li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public void setSampleInterval(Long SampleInterval) {
         this.SampleInterval = SampleInterval;
@@ -313,16 +313,16 @@ Default value: open.
     }
 
     /**
-     * Get Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black. 
-     * @return FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+     * Get Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black. 
+     * @return FillType Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
-     * @param FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+     * Set Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+     * @param FillType Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
@@ -345,11 +345,11 @@ Default value: open.
     }
 
     /**
-     * Get Image format. Valid values:
+     * Get Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li> 
-     * @return Format Image format. Valid values:
+     * @return Format Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>
@@ -359,11 +359,11 @@ Default value: open.
     }
 
     /**
-     * Set Image format. Valid values:
+     * Set Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>
-     * @param Format Image format. Valid values:
+     * @param Format Image format. Value:
 <li> jpg: jpg format;</li>
 <li> png: PNG format;</li>
 <li> webp: webp format.</li>

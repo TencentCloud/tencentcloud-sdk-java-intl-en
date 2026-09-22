@@ -51,7 +51,7 @@ Default value: 0.
 
     /**
     * Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
@@ -61,8 +61,8 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
-    * Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+    * Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -150,12 +150,12 @@ Default value: 0.
 
     /**
      * Get Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open. 
      * @return ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
@@ -166,12 +166,12 @@ Default value: open.
 
     /**
      * Set Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
      * @param ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
 <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 
 Default value: open.
@@ -181,20 +181,20 @@ Default value: open.
     }
 
     /**
-     * Get Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate. 
-     * @return Bitrate Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+     * Get Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically. 
+     * @return Bitrate Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
-     * @param Bitrate Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-When the value is 0, VOD automatically sets the bitrate.
+     * Set Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
+     * @param Bitrate Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD sets the bitrate automatically.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

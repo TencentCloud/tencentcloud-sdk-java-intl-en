@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MPSAIAnalysisTemplate extends AbstractModel {
 
     /**
-    * <p>Video analysis template name, with a length limit of 64 characters.</p>
+    * <p>Video analysis template name. Length limit: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
@@ -45,7 +45,7 @@ public class MPSAIAnalysisTemplate extends AbstractModel {
     private MPSAIAnalysisConfigureInfo ClassificationConfigure;
 
     /**
-    * <p>Control parameter for the intelligent tag task.</p>
+    * <p>Control parameters for the intelligent tag task.</p>
     */
     @SerializedName("TagConfigure")
     @Expose
@@ -73,30 +73,30 @@ public class MPSAIAnalysisTemplate extends AbstractModel {
     private MPSAIAnalysisConfigureInfo SplitConfigure;
 
     /**
-    * <p>Control parameter for the intelligent highlights task.</p>
+    * <p>Control parameters for the intelligent highlights task.</p>
     */
     @SerializedName("HighlightConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo HighlightConfigure;
 
     /**
-    * <p>Intelligent opening and ending content task control parameters.</p>
+    * <p>Intelligent opening and closing credits task control parameters.</p>
     */
     @SerializedName("OpeningAndEndingConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure;
 
     /**
-     * Get <p>Video analysis template name, with a length limit of 64 characters.</p> 
-     * @return Name <p>Video analysis template name, with a length limit of 64 characters.</p>
+     * Get <p>Video analysis template name. Length limit: 64 characters.</p> 
+     * @return Name <p>Video analysis template name. Length limit: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Video analysis template name, with a length limit of 64 characters.</p>
-     * @param Name <p>Video analysis template name, with a length limit of 64 characters.</p>
+     * Set <p>Video analysis template name. Length limit: 64 characters.</p>
+     * @param Name <p>Video analysis template name. Length limit: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -135,16 +135,16 @@ public class MPSAIAnalysisTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Control parameter for the intelligent tag task.</p> 
-     * @return TagConfigure <p>Control parameter for the intelligent tag task.</p>
+     * Get <p>Control parameters for the intelligent tag task.</p> 
+     * @return TagConfigure <p>Control parameters for the intelligent tag task.</p>
      */
     public MPSAIAnalysisConfigureInfo getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set <p>Control parameter for the intelligent tag task.</p>
-     * @param TagConfigure <p>Control parameter for the intelligent tag task.</p>
+     * Set <p>Control parameters for the intelligent tag task.</p>
+     * @param TagConfigure <p>Control parameters for the intelligent tag task.</p>
      */
     public void setTagConfigure(MPSAIAnalysisConfigureInfo TagConfigure) {
         this.TagConfigure = TagConfigure;
@@ -199,32 +199,32 @@ public class MPSAIAnalysisTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Control parameter for the intelligent highlights task.</p> 
-     * @return HighlightConfigure <p>Control parameter for the intelligent highlights task.</p>
+     * Get <p>Control parameters for the intelligent highlights task.</p> 
+     * @return HighlightConfigure <p>Control parameters for the intelligent highlights task.</p>
      */
     public MPSAIAnalysisConfigureInfo getHighlightConfigure() {
         return this.HighlightConfigure;
     }
 
     /**
-     * Set <p>Control parameter for the intelligent highlights task.</p>
-     * @param HighlightConfigure <p>Control parameter for the intelligent highlights task.</p>
+     * Set <p>Control parameters for the intelligent highlights task.</p>
+     * @param HighlightConfigure <p>Control parameters for the intelligent highlights task.</p>
      */
     public void setHighlightConfigure(MPSAIAnalysisConfigureInfo HighlightConfigure) {
         this.HighlightConfigure = HighlightConfigure;
     }
 
     /**
-     * Get <p>Intelligent opening and ending content task control parameters.</p> 
-     * @return OpeningAndEndingConfigure <p>Intelligent opening and ending content task control parameters.</p>
+     * Get <p>Intelligent opening and closing credits task control parameters.</p> 
+     * @return OpeningAndEndingConfigure <p>Intelligent opening and closing credits task control parameters.</p>
      */
     public MPSAIAnalysisConfigureInfo getOpeningAndEndingConfigure() {
         return this.OpeningAndEndingConfigure;
     }
 
     /**
-     * Set <p>Intelligent opening and ending content task control parameters.</p>
-     * @param OpeningAndEndingConfigure <p>Intelligent opening and ending content task control parameters.</p>
+     * Set <p>Intelligent opening and closing credits task control parameters.</p>
+     * @param OpeningAndEndingConfigure <p>Intelligent opening and closing credits task control parameters.</p>
      */
     public void setOpeningAndEndingConfigure(MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure) {
         this.OpeningAndEndingConfigure = OpeningAndEndingConfigure;

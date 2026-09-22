@@ -25,15 +25,15 @@ public class QualityEvaluationConfigureInfo extends AbstractModel {
 
     /**
     * Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+    * Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60.
     */
     @SerializedName("Score")
     @Expose
@@ -41,11 +41,11 @@ public class QualityEvaluationConfigureInfo extends AbstractModel {
 
     /**
      * Get Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li> 
+<li>ON: enabled</li>
+<li>OFF: disabled</li> 
      * @return Switch Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -53,27 +53,27 @@ public class QualityEvaluationConfigureInfo extends AbstractModel {
 
     /**
      * Set Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      * @param Switch Video quality evaluation detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60. 
-     * @return Score Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+     * Get Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60. 
+     * @return Score Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60.
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
-     * @param Score Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+     * Set Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60.
+     * @param Score Video quality evaluation filter threshold. Only return time periods below this value. Default value: 60.
      */
     public void setScore(Long Score) {
         this.Score = Score;

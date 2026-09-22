@@ -38,7 +38,7 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
     private String TextContent;
 
     /**
-    * VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
+    * VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
     */
     @SerializedName("SubAppId")
     @Expose
@@ -91,16 +91,16 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application). 
-     * @return SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
+     * Get VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID. 
+     * @return SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
-     * @param SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
+     * Set VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
+     * @param SubAppId VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

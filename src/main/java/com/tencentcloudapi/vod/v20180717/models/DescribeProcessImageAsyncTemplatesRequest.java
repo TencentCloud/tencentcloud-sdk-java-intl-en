@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProcessImageAsyncTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Filtering condition for the unique identifier of the image asynchronous processing template. The maximum array length is 100.
+    * Filtering condition for the unique identifier of the image async processing template. The maximum array length is 100.
     */
     @SerializedName("Definitions")
     @Expose
@@ -52,32 +52,32 @@ public class DescribeProcessImageAsyncTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Filtering condition for the unique identifier of the image asynchronous processing template. The maximum array length is 100. 
-     * @return Definitions Filtering condition for the unique identifier of the image asynchronous processing template. The maximum array length is 100.
+     * Get Filtering condition for the unique identifier of the image async processing template. The maximum array length is 100. 
+     * @return Definitions Filtering condition for the unique identifier of the image async processing template. The maximum array length is 100.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Filtering condition for the unique identifier of the image asynchronous processing template. The maximum array length is 100.
-     * @param Definitions Filtering condition for the unique identifier of the image asynchronous processing template. The maximum array length is 100.
+     * Set Filtering condition for the unique identifier of the image async processing template. The maximum array length is 100.
+     * @param Definitions Filtering condition for the unique identifier of the image async processing template. The maximum array length is 100.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

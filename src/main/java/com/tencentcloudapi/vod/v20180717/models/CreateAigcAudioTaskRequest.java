@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskRequest extends AbstractModel {
 
     /**
-    * <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+    * <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -45,7 +45,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String ModelVersion;
 
     /**
-    * <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+    * <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
     */
     @SerializedName("SceneType")
     @Expose
@@ -59,7 +59,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String Prompt;
 
     /**
-    * <p>Video information for reference.</p>
+    * <p>Reference video information.</p>
     */
     @SerializedName("VideoInfos")
     @Expose
@@ -73,7 +73,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private AigcAudioReferenceAudioInfo [] AudioInfos;
 
     /**
-    * <p>Output parameter</p>
+    * <p>Output parameters</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -87,16 +87,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String AdditionalParameters;
 
     /**
-     * Get <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p> 
-     * @return SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * Get <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p> 
+     * @return SubAppId <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
-     * @param SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * Set <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
+     * @param SubAppId <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -135,16 +135,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p> 
-     * @return SceneType <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+     * Get <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p> 
+     * @return SceneType <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
-     * @param SceneType <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+     * Set <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
+     * @param SceneType <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
@@ -167,16 +167,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Video information for reference.</p> 
-     * @return VideoInfos <p>Video information for reference.</p>
+     * Get <p>Reference video information.</p> 
+     * @return VideoInfos <p>Reference video information.</p>
      */
     public AigcAudioReferenceVideoInfo [] getVideoInfos() {
         return this.VideoInfos;
     }
 
     /**
-     * Set <p>Video information for reference.</p>
-     * @param VideoInfos <p>Video information for reference.</p>
+     * Set <p>Reference video information.</p>
+     * @param VideoInfos <p>Reference video information.</p>
      */
     public void setVideoInfos(AigcAudioReferenceVideoInfo [] VideoInfos) {
         this.VideoInfos = VideoInfos;
@@ -199,16 +199,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Output parameter</p> 
-     * @return OutputConfig <p>Output parameter</p>
+     * Get <p>Output parameters</p> 
+     * @return OutputConfig <p>Output parameters</p>
      */
     public AigcAudioOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output parameter</p>
-     * @param OutputConfig <p>Output parameter</p>
+     * Set <p>Output parameters</p>
+     * @param OutputConfig <p>Output parameters</p>
      */
     public void setOutputConfig(AigcAudioOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

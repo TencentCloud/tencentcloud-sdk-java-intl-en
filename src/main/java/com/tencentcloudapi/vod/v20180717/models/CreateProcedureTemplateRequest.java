@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateProcedureTemplateRequest extends AbstractModel {
 
     /**
-    * <p>Task flow name (supports Chinese, up to 20 characters).</p>
+    * <p>Task flow name (support Chinese, up to 20 characters).</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+    * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,7 +52,7 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+    * <p>AI content moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -66,7 +66,7 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * <p>Parameters for the AI content recognition task.</p>
+    * <p>Parameters for the AI content recognition type task.</p>
     */
     @SerializedName("AiRecognitionTaskSet")
     @Expose
@@ -87,39 +87,39 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
-    * <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
+    * <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
     */
     @SerializedName("ImportMediaKnowledgeTaskSet")
     @Expose
     private ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet;
 
     /**
-     * Get <p>Task flow name (supports Chinese, up to 20 characters).</p> 
-     * @return Name <p>Task flow name (supports Chinese, up to 20 characters).</p>
+     * Get <p>Task flow name (support Chinese, up to 20 characters).</p> 
+     * @return Name <p>Task flow name (support Chinese, up to 20 characters).</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Task flow name (supports Chinese, up to 20 characters).</p>
-     * @param Name <p>Task flow name (supports Chinese, up to 20 characters).</p>
+     * Set <p>Task flow name (support Chinese, up to 20 characters).</p>
+     * @param Name <p>Task flow name (support Chinese, up to 20 characters).</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -158,16 +158,16 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p> 
-     * @return AiContentReviewTask <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * Get <p>AI content moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p> 
+     * @return AiContentReviewTask <p>AI content moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
-     * @param AiContentReviewTask <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * Set <p>AI content moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+     * @param AiContentReviewTask <p>AI content moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
@@ -190,16 +190,16 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Parameters for the AI content recognition task.</p> 
-     * @return AiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
+     * Get <p>Parameters for the AI content recognition type task.</p> 
+     * @return AiRecognitionTaskSet <p>Parameters for the AI content recognition type task.</p>
      */
     public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
         return this.AiRecognitionTaskSet;
     }
 
     /**
-     * Set <p>Parameters for the AI content recognition task.</p>
-     * @param AiRecognitionTaskSet <p>Parameters for the AI content recognition task.</p>
+     * Set <p>Parameters for the AI content recognition type task.</p>
+     * @param AiRecognitionTaskSet <p>Parameters for the AI content recognition type task.</p>
      */
     public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
         this.AiRecognitionTaskSet = AiRecognitionTaskSet;
@@ -242,16 +242,16 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Task parameter for importing Intelligent Media Assets knowledge base.</p> 
-     * @return ImportMediaKnowledgeTaskSet <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
+     * Get <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p> 
+     * @return ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
      */
     public ImportMediaKnowledgeTaskInput [] getImportMediaKnowledgeTaskSet() {
         return this.ImportMediaKnowledgeTaskSet;
     }
 
     /**
-     * Set <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
-     * @param ImportMediaKnowledgeTaskSet <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
+     * Set <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
+     * @param ImportMediaKnowledgeTaskSet <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
      */
     public void setImportMediaKnowledgeTaskSet(ImportMediaKnowledgeTaskInput [] ImportMediaKnowledgeTaskSet) {
         this.ImportMediaKnowledgeTaskSet = ImportMediaKnowledgeTaskSet;

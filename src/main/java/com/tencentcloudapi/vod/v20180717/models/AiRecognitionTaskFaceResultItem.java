@@ -31,7 +31,7 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     private String Id;
 
     /**
-    * Library type of the figure, which indicates which figure library the recognized figure comes from:
+    * Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
     */
@@ -70,10 +70,10 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     }
 
     /**
-     * Get Library type of the figure, which indicates which figure library the recognized figure comes from:
+     * Get Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li> 
-     * @return Type Library type of the figure, which indicates which figure library the recognized figure comes from:
+     * @return Type Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
      */
@@ -82,10 +82,10 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     }
 
     /**
-     * Set Library type of the figure, which indicates which figure library the recognized figure comes from:
+     * Set Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
-     * @param Type Library type of the figure, which indicates which figure library the recognized figure comes from:
+     * @param Type Library type, which indicates the figure library that the recognized figure comes from:
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
      */

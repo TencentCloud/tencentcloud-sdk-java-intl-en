@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class AbnormalLightingConfigureInfo extends AbstractModel {
 
     /**
-    * Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+    * Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li> 
-     * @return Switch Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+     * Get Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li> 
+     * @return Switch Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
-     * @param Switch Low-light and overexposure detection switch for video images. Available values:
-<li>ON: enabled</li>
-<li>OFF: disable.</li>
+     * Set Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
+     * @param Switch Video low-light and overexposure detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

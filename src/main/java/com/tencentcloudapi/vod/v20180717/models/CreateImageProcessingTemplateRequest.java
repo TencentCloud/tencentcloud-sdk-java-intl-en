@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateImageProcessingTemplateRequest extends AbstractModel {
 
     /**
-    * Array of image processing operations. Operations are performed in sequential order in the array.
+    * Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li>
     */
     @SerializedName("Operations")
@@ -32,14 +32,14 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel {
     private ImageOperation [] Operations;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Image processing template name. Length limit: 64 characters.
+    * Image processing template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -53,9 +53,9 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-     * Get Array of image processing operations. Operations are performed in sequential order in the array.
+     * Get Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li> 
-     * @return Operations Array of image processing operations. Operations are performed in sequential order in the array.
+     * @return Operations Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li>
      */
     public ImageOperation [] getOperations() {
@@ -63,9 +63,9 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Set Array of image processing operations. Operations are performed in sequential order in the array.
+     * Set Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li>
-     * @param Operations Array of image processing operations. Operations are performed in sequential order in the array.
+     * @param Operations Image processing operation array. Operations are performed in their sequential order in the array.
 <li>Length limit: 10.</li>
      */
     public void setOperations(ImageOperation [] Operations) {
@@ -73,32 +73,32 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Image processing template name. Length limit: 64 characters. 
-     * @return Name Image processing template name. Length limit: 64 characters.
+     * Get Image processing template name. The length cannot exceed 64 characters. 
+     * @return Name Image processing template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Image processing template name. Length limit: 64 characters.
-     * @param Name Image processing template name. Length limit: 64 characters.
+     * Set Image processing template name. The length cannot exceed 64 characters.
+     * @param Name Image processing template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;

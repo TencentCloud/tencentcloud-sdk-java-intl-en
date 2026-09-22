@@ -31,7 +31,7 @@ public class AiRecognitionTaskAsrWordsResultItem extends AbstractModel {
     private String Word;
 
     /**
-    * List of segments where the speech keyword appears.
+    * List of time segments where speech keywords appear.
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -54,16 +54,16 @@ public class AiRecognitionTaskAsrWordsResultItem extends AbstractModel {
     }
 
     /**
-     * Get List of segments where the speech keyword appears. 
-     * @return SegmentSet List of segments where the speech keyword appears.
+     * Get List of time segments where speech keywords appear. 
+     * @return SegmentSet List of time segments where speech keywords appear.
      */
     public AiRecognitionTaskAsrWordsSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of segments where the speech keyword appears.
-     * @param SegmentSet List of segments where the speech keyword appears.
+     * Set List of time segments where speech keywords appear.
+     * @param SegmentSet List of time segments where speech keywords appear.
      */
     public void setSegmentSet(AiRecognitionTaskAsrWordsSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

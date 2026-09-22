@@ -26,7 +26,7 @@ public class MediaTrack extends AbstractModel {
     /**
     * Track type. Valid values:
 <ul>
-<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Video: video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
 <li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>
@@ -45,13 +45,13 @@ public class MediaTrack extends AbstractModel {
     /**
      * Get Track type. Valid values:
 <ul>
-<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Video: video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
 <li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul> 
      * @return Type Track type. Valid values:
 <ul>
-<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Video: video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
 <li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>
@@ -63,13 +63,13 @@ public class MediaTrack extends AbstractModel {
     /**
      * Set Track type. Valid values:
 <ul>
-<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Video: video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
 <li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>
      * @param Type Track type. Valid values:
 <ul>
-<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Video: video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
 <li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>

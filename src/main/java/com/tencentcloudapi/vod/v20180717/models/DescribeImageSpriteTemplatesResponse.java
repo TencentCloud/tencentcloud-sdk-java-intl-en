@@ -31,7 +31,7 @@ public class DescribeImageSpriteTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Sprite template details list.
+    * Sprite sheet template details list.
     */
     @SerializedName("ImageSpriteTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeImageSpriteTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get Sprite template details list. 
-     * @return ImageSpriteTemplateSet Sprite template details list.
+     * Get Sprite sheet template details list. 
+     * @return ImageSpriteTemplateSet Sprite sheet template details list.
      */
     public ImageSpriteTemplate [] getImageSpriteTemplateSet() {
         return this.ImageSpriteTemplateSet;
     }
 
     /**
-     * Set Sprite template details list.
-     * @param ImageSpriteTemplateSet Sprite template details list.
+     * Set Sprite sheet template details list.
+     * @param ImageSpriteTemplateSet Sprite sheet template details list.
      */
     public void setImageSpriteTemplateSet(ImageSpriteTemplate [] ImageSpriteTemplateSet) {
         this.ImageSpriteTemplateSet = ImageSpriteTemplateSet;

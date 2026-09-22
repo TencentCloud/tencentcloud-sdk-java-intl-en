@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiReviewTerrorismOcrTaskInput extends AbstractModel {
 
     /**
-    * Template ID for authentication involving unsafe information.
+    * Template ID for authenticating content that involves unsafe information.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Template ID for authentication involving unsafe information. 
-     * @return Definition Template ID for authentication involving unsafe information.
+     * Get Template ID for authenticating content that involves unsafe information. 
+     * @return Definition Template ID for authenticating content that involves unsafe information.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Template ID for authentication involving unsafe information.
-     * @param Definition Template ID for authentication involving unsafe information.
+     * Set Template ID for authenticating content that involves unsafe information.
+     * @param Definition Template ID for authenticating content that involves unsafe information.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

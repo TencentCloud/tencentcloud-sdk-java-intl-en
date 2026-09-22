@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ProcessImageAsyncRequest extends AbstractModel {
 
     /**
-    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>FileId that needs image processing. It cannot be used with Url.</p>
+    * <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
+    * <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+    * <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
     */
     @SerializedName("Base64")
     @Expose
@@ -59,7 +59,7 @@ public class ProcessImageAsyncRequest extends AbstractModel {
     private ProcessImageAsyncTaskInput ImageTaskInput;
 
     /**
-    * <p>Output media file configuration for image processing tasks.</p>
+    * <p>Configuration of the output media file for an image processing task.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -80,78 +80,78 @@ public class ProcessImageAsyncRequest extends AbstractModel {
     private String SessionContext;
 
     /**
-    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+    * <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * <p>Reserved field, used for special purpose.</p>
+    * <p>Reserved field, used for special purposes.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>FileId that needs image processing. It cannot be used with Url.</p> 
-     * @return FileId <p>FileId that needs image processing. It cannot be used with Url.</p>
+     * Get <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p> 
+     * @return FileId <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>FileId that needs image processing. It cannot be used with Url.</p>
-     * @param FileId <p>FileId that needs image processing. It cannot be used with Url.</p>
+     * Set <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
+     * @param FileId <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p> 
-     * @return Url <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
+     * Get <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p> 
+     * @return Url <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
-     * @param Url <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
+     * Set <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
+     * @param Url <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p> 
-     * @return Base64 <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+     * Get <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p> 
+     * @return Base64 <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
      */
     public String getBase64() {
         return this.Base64;
     }
 
     /**
-     * Set <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
-     * @param Base64 <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+     * Set <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+     * @param Base64 <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
      */
     public void setBase64(String Base64) {
         this.Base64 = Base64;
@@ -174,16 +174,16 @@ public class ProcessImageAsyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Output media file configuration for image processing tasks.</p> 
-     * @return OutputConfig <p>Output media file configuration for image processing tasks.</p>
+     * Get <p>Configuration of the output media file for an image processing task.</p> 
+     * @return OutputConfig <p>Configuration of the output media file for an image processing task.</p>
      */
     public ProcessImageAsyncOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output media file configuration for image processing tasks.</p>
-     * @param OutputConfig <p>Output media file configuration for image processing tasks.</p>
+     * Set <p>Configuration of the output media file for an image processing task.</p>
+     * @param OutputConfig <p>Configuration of the output media file for an image processing task.</p>
      */
     public void setOutputConfig(ProcessImageAsyncOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
@@ -222,32 +222,32 @@ public class ProcessImageAsyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p> 
-     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * Get <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p> 
+     * @return TasksPriority <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
-     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * Set <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+     * @param TasksPriority <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get <p>Reserved field, used for special purpose.</p> 
-     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
+     * Get <p>Reserved field, used for special purposes.</p> 
+     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>Reserved field, used for special purpose.</p>
-     * @param ExtInfo <p>Reserved field, used for special purpose.</p>
+     * Set <p>Reserved field, used for special purposes.</p>
+     * @param ExtInfo <p>Reserved field, used for special purposes.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

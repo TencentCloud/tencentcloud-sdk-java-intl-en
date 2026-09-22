@@ -26,15 +26,15 @@ public class IpFilterPathRule extends AbstractModel {
     /**
     * IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+    * IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
     */
     @SerializedName("Filters")
     @Expose
@@ -42,9 +42,9 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
 
     /**
     * Rule type:
-<li>all: take effect for all files;</li>
+<li>all: All files take effect;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li>
     */
     @SerializedName("RuleType")
@@ -65,10 +65,10 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
     /**
      * Get IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li> 
+<li>blocklist: Blocklist.</li> 
      * @return FilterType IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      */
     public String getFilterType() {
         return this.FilterType;
@@ -77,30 +77,30 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
     /**
      * Set IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      * @param FilterType IP allowlist/blocklist type:
 <li>whitelist: allowlist;</li>
-<li>blacklist: blocklist.</li>
+<li>blocklist: Blocklist.</li>
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries. 
-     * @return Filters IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+     * Get IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries. 
+     * @return Filters IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
-     * @param Filters IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
-Fill up to 50 allowlist entries or 50 blocklist entries.
+     * Set IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
+     * @param Filters IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+You can fill up to 50 allowlist entries or 50 blocklist entries.
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
@@ -108,14 +108,14 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
 
     /**
      * Get Rule type:
-<li>all: take effect for all files;</li>
+<li>all: All files take effect;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li> 
      * @return RuleType Rule type:
-<li>all: take effect for all files;</li>
+<li>all: All files take effect;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li>
      */
     public String getRuleType() {
@@ -124,14 +124,14 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
 
     /**
      * Set Rule type:
-<li>all: take effect for all files;</li>
+<li>all: All files take effect;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li>
      * @param RuleType Rule type:
-<li>all: take effect for all files;</li>
+<li>all: All files take effect;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: specify the path to take effect;</li>
+<li>directory: The specified path takes effect;</li>
 <li>path: The absolute path takes effect.</li>
      */
     public void setRuleType(String RuleType) {

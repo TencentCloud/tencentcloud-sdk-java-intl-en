@@ -31,21 +31,21 @@ public class DescribeMediaPlayStatDetailsRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -53,9 +53,9 @@ public class DescribeMediaPlayStatDetailsRequest extends AbstractModel {
 
     /**
     * Statistical time granularity. Valid values:
-<li>Hour: in hours.</li>
+<li>Hour: Hourly.</li>
 <li>Day: By day.</li>
-The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
+The granularity is determined by the time span by default. If the time span is less than 1 day, the granularity is hour. If the time span is equal to or greater than 1 day, the granularity is day.
     */
     @SerializedName("Interval")
     @Expose
@@ -78,48 +78,48 @@ The granularity is determined by default based on the duration: less than 1 day 
     }
 
     /**
-     * Get Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return StartTime Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return StartTime Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param StartTime Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param StartTime Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return EndTime End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return EndTime End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param EndTime End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param EndTime End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -127,13 +127,13 @@ The granularity is determined by default based on the duration: less than 1 day 
 
     /**
      * Get Statistical time granularity. Valid values:
-<li>Hour: in hours.</li>
+<li>Hour: Hourly.</li>
 <li>Day: By day.</li>
-The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity. 
+The granularity is determined by the time span by default. If the time span is less than 1 day, the granularity is hour. If the time span is equal to or greater than 1 day, the granularity is day. 
      * @return Interval Statistical time granularity. Valid values:
-<li>Hour: in hours.</li>
+<li>Hour: Hourly.</li>
 <li>Day: By day.</li>
-The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
+The granularity is determined by the time span by default. If the time span is less than 1 day, the granularity is hour. If the time span is equal to or greater than 1 day, the granularity is day.
      */
     public String getInterval() {
         return this.Interval;
@@ -141,13 +141,13 @@ The granularity is determined by default based on the duration: less than 1 day 
 
     /**
      * Set Statistical time granularity. Valid values:
-<li>Hour: in hours.</li>
+<li>Hour: Hourly.</li>
 <li>Day: By day.</li>
-The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
+The granularity is determined by the time span by default. If the time span is less than 1 day, the granularity is hour. If the time span is equal to or greater than 1 day, the granularity is day.
      * @param Interval Statistical time granularity. Valid values:
-<li>Hour: in hours.</li>
+<li>Hour: Hourly.</li>
 <li>Day: By day.</li>
-The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
+The granularity is determined by the time span by default. If the time span is less than 1 day, the granularity is hour. If the time span is equal to or greater than 1 day, the granularity is day.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

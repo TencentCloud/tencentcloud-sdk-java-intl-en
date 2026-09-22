@@ -38,7 +38,7 @@ public class SnapshotByTimeOffsetTaskInput extends AbstractModel {
     private String [] ExtTimeOffsetSet;
 
     /**
-    * <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+    * <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
     */
     @SerializedName("TimeOffsetSet")
     @Expose
@@ -84,16 +84,16 @@ public class SnapshotByTimeOffsetTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p> 
-     * @return TimeOffsetSet <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+     * Get <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p> 
+     * @return TimeOffsetSet <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
      */
     public Float [] getTimeOffsetSet() {
         return this.TimeOffsetSet;
     }
 
     /**
-     * Set <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
-     * @param TimeOffsetSet <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+     * Set <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+     * @param TimeOffsetSet <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
      */
     public void setTimeOffsetSet(Float [] TimeOffsetSet) {
         this.TimeOffsetSet = TimeOffsetSet;

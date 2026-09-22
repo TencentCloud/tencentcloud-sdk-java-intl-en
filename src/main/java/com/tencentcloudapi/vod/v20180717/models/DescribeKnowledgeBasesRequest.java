@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeKnowledgeBasesRequest extends AbstractModel {
 
     /**
-    * <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+    * <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -45,23 +45,23 @@ public class DescribeKnowledgeBasesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+    * <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p> 
-     * @return SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+     * Get <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p> 
+     * @return SubAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
-     * @param SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+     * Set <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+     * @param SubAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -100,16 +100,16 @@ public class DescribeKnowledgeBasesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p> 
-     * @return Name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+     * Get <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p> 
+     * @return Name <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
-     * @param Name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+     * Set <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
+     * @param Name <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
      */
     public void setName(String Name) {
         this.Name = Name;

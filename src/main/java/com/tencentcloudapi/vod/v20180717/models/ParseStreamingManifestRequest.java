@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ParseStreamingManifestRequest extends AbstractModel {
 
     /**
-    * <p>Content of the index file to be parsed.</p>
+    * <p>Index file content to be parsed.</p>
     */
     @SerializedName("MediaManifestContent")
     @Expose
@@ -38,16 +38,16 @@ public class ParseStreamingManifestRequest extends AbstractModel {
     private String ManifestType;
 
     /**
-     * Get <p>Content of the index file to be parsed.</p> 
-     * @return MediaManifestContent <p>Content of the index file to be parsed.</p>
+     * Get <p>Index file content to be parsed.</p> 
+     * @return MediaManifestContent <p>Index file content to be parsed.</p>
      */
     public String getMediaManifestContent() {
         return this.MediaManifestContent;
     }
 
     /**
-     * Set <p>Content of the index file to be parsed.</p>
-     * @param MediaManifestContent <p>Content of the index file to be parsed.</p>
+     * Set <p>Index file content to be parsed.</p>
+     * @param MediaManifestContent <p>Index file content to be parsed.</p>
      */
     public void setMediaManifestContent(String MediaManifestContent) {
         this.MediaManifestContent = MediaManifestContent;

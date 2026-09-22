@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcQuotaRequest extends AbstractModel {
 
     /**
-    * <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</strong></p>
+    * <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,30 +38,30 @@ public class CreateAigcQuotaRequest extends AbstractModel {
     private String QuotaType;
 
     /**
-    * <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+    * <p>Number of task quotas.</p><p>Unit: images/seconds/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
     */
     @SerializedName("QuotaLimit")
     @Expose
     private Long QuotaLimit;
 
     /**
-    * <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+    * <p>Valid only when QuotaType is Text. It is used to select the ApiToken that needs a quota limit.</p>
     */
     @SerializedName("ApiToken")
     @Expose
     private String ApiToken;
 
     /**
-     * Get <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</strong></p> 
-     * @return SubAppId <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</strong></p>
+     * Get <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p> 
+     * @return SubAppId <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</strong></p>
-     * @param SubAppId <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</strong></p>
+     * Set <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
+     * @param SubAppId <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -84,32 +84,32 @@ public class CreateAigcQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul> 
-     * @return QuotaLimit <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+     * Get <p>Number of task quotas.</p><p>Unit: images/seconds/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul> 
+     * @return QuotaLimit <p>Number of task quotas.</p><p>Unit: images/seconds/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
      */
     public Long getQuotaLimit() {
         return this.QuotaLimit;
     }
 
     /**
-     * Set <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
-     * @param QuotaLimit <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+     * Set <p>Number of task quotas.</p><p>Unit: images/seconds/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+     * @param QuotaLimit <p>Number of task quotas.</p><p>Unit: images/seconds/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
      */
     public void setQuotaLimit(Long QuotaLimit) {
         this.QuotaLimit = QuotaLimit;
     }
 
     /**
-     * Get <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p> 
-     * @return ApiToken <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+     * Get <p>Valid only when QuotaType is Text. It is used to select the ApiToken that needs a quota limit.</p> 
+     * @return ApiToken <p>Valid only when QuotaType is Text. It is used to select the ApiToken that needs a quota limit.</p>
      */
     public String getApiToken() {
         return this.ApiToken;
     }
 
     /**
-     * Set <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
-     * @param ApiToken <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+     * Set <p>Valid only when QuotaType is Text. It is used to select the ApiToken that needs a quota limit.</p>
+     * @param ApiToken <p>Valid only when QuotaType is Text. It is used to select the ApiToken that needs a quota limit.</p>
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcVideoRedrawOutputConfig extends AbstractModel {
 
     /**
-    * <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
+    * <p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
     */
     @SerializedName("StorageMode")
     @Expose
@@ -38,30 +38,30 @@ public class AigcVideoRedrawOutputConfig extends AbstractModel {
     private String MediaName;
 
     /**
-    * <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+    * <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
+    * <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p> 
-     * @return StorageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
+     * Get <p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p> 
+     * @return StorageMode <p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
-     * @param StorageMode <p>Storage mode. Valid values: <li>Permanent: permanent storage. The generated video file will be stored in VOD, and FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated video file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>Default value: Temporary</p>
+     * Set <p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
+     * @param StorageMode <p>Storage mode. Valid values: <li>Permanent: The generated video file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: The generated video file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>Default value: Temporary</p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
@@ -84,32 +84,32 @@ public class AigcVideoRedrawOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p> 
-     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+     * Get <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p> 
+     * @return ClassId <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
-     * @param ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+     * Set <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
+     * @param ClassId <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to create a category and obtain the category ID.<li>Default value: 0, indicating other categories.</li></p>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p> 
-     * @return ExpireTime <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
+     * Get <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p> 
+     * @return ExpireTime <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
-     * @param ExpireTime <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z</p>
+     * Set <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
+     * @param ExpireTime <p>Expiry date of the output file. Files will be deleted after this time. By default, files never expire. Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p><p>Parameter format: 2025-12-28T00:35:00Z.</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

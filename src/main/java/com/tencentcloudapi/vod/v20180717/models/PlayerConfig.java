@@ -38,14 +38,14 @@ public class PlayerConfig extends AbstractModel {
     private String Type;
 
     /**
-    * <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+    * <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+    * <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
     */
     @SerializedName("DrmSwitch")
     @Expose
@@ -154,32 +154,32 @@ public class PlayerConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li> 
-     * @return AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+     * Get <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li> 
+     * @return AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
-     * @param AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+     * Set <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
+     * @param AudioVideoType <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li> 
-     * @return DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+     * Get <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li> 
+     * @return DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public String getDrmSwitch() {
         return this.DrmSwitch;
     }
 
     /**
-     * Set <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
-     * @param DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+     * Set <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
+     * @param DrmSwitch <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
      */
     public void setDrmSwitch(String DrmSwitch) {
         this.DrmSwitch = DrmSwitch;

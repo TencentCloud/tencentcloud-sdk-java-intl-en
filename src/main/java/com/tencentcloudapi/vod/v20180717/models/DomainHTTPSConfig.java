@@ -31,7 +31,7 @@ public class DomainHTTPSConfig extends AbstractModel {
     private String CertExpireTime;
 
     /**
-    * <p>Certificate ID in the Tencent Cloud SSL product.</p>
+    * <p>Certificate ID in Tencent Cloud SSL product.</p>
     */
     @SerializedName("CloudCertId")
     @Expose
@@ -54,16 +54,16 @@ public class DomainHTTPSConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Certificate ID in the Tencent Cloud SSL product.</p> 
-     * @return CloudCertId <p>Certificate ID in the Tencent Cloud SSL product.</p>
+     * Get <p>Certificate ID in Tencent Cloud SSL product.</p> 
+     * @return CloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
      */
     public String getCloudCertId() {
         return this.CloudCertId;
     }
 
     /**
-     * Set <p>Certificate ID in the Tencent Cloud SSL product.</p>
-     * @param CloudCertId <p>Certificate ID in the Tencent Cloud SSL product.</p>
+     * Set <p>Certificate ID in Tencent Cloud SSL product.</p>
+     * @param CloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
      */
     public void setCloudCertId(String CloudCertId) {
         this.CloudCertId = CloudCertId;

@@ -45,14 +45,14 @@ public class AigcImageTaskInput extends AbstractModel {
     private AigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+    * <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>Prompt to prevent the model from image generation.</p>
+    * <p>Prompt content to prevent the model from generating images.</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -149,32 +149,32 @@ public class AigcImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p> 
-     * @return Prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+     * Get <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p> 
+     * @return Prompt <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
-     * @param Prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+     * Set <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
+     * @param Prompt <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>Prompt to prevent the model from image generation.</p> 
-     * @return NegativePrompt <p>Prompt to prevent the model from image generation.</p>
+     * Get <p>Prompt content to prevent the model from generating images.</p> 
+     * @return NegativePrompt <p>Prompt content to prevent the model from generating images.</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set <p>Prompt to prevent the model from image generation.</p>
-     * @param NegativePrompt <p>Prompt to prevent the model from image generation.</p>
+     * Set <p>Prompt content to prevent the model from generating images.</p>
+     * @param NegativePrompt <p>Prompt content to prevent the model from generating images.</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;

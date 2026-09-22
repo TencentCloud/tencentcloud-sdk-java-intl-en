@@ -31,7 +31,7 @@ public class ExtractBlindWatermarkInputInfo extends AbstractModel {
     private String Type;
 
     /**
-    * Media asset file ID to be extracted
+    * Media asset file ID to extract
     */
     @SerializedName("FileId")
     @Expose
@@ -61,16 +61,16 @@ public class ExtractBlindWatermarkInputInfo extends AbstractModel {
     }
 
     /**
-     * Get Media asset file ID to be extracted 
-     * @return FileId Media asset file ID to be extracted
+     * Get Media asset file ID to extract 
+     * @return FileId Media asset file ID to extract
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media asset file ID to be extracted
-     * @param FileId Media asset file ID to be extracted
+     * Set Media asset file ID to extract
+     * @param FileId Media asset file ID to extract
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;

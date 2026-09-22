@@ -31,14 +31,14 @@ public class RebuildMediaRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+    * Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -136,14 +136,14 @@ public class RebuildMediaRequest extends AbstractModel {
     private ArtifactRepairInfo ArtifactRepairInfo;
 
     /**
-    * Output target parameters for audio-visual quality rebirth.
+    * Audio-visual quality rebirth output target parameters.
     */
     @SerializedName("TargetInfo")
     @Expose
     private RebuildMediaTargetInfo TargetInfo;
 
     /**
-    * An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+    * Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
     */
     @SerializedName("SessionId")
     @Expose
@@ -157,7 +157,7 @@ public class RebuildMediaRequest extends AbstractModel {
     private String SessionContext;
 
     /**
-    * Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+    * Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TasksPriority")
     @Expose
@@ -187,32 +187,32 @@ public class RebuildMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video. 
-     * @return StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * Get Start offset time, in seconds. Not filled indicates cutting from the beginning of the video. 
+     * @return StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
-     * @param StartTimeOffset Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+     * Set Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+     * @param StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
@@ -427,32 +427,32 @@ public class RebuildMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get Output target parameters for audio-visual quality rebirth. 
-     * @return TargetInfo Output target parameters for audio-visual quality rebirth.
+     * Get Audio-visual quality rebirth output target parameters. 
+     * @return TargetInfo Audio-visual quality rebirth output target parameters.
      */
     public RebuildMediaTargetInfo getTargetInfo() {
         return this.TargetInfo;
     }
 
     /**
-     * Set Output target parameters for audio-visual quality rebirth.
-     * @param TargetInfo Output target parameters for audio-visual quality rebirth.
+     * Set Audio-visual quality rebirth output target parameters.
+     * @param TargetInfo Audio-visual quality rebirth output target parameters.
      */
     public void setTargetInfo(RebuildMediaTargetInfo TargetInfo) {
         this.TargetInfo = TargetInfo;
     }
 
     /**
-     * Get An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
-     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
+     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
-     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
@@ -475,16 +475,16 @@ public class RebuildMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0. 
-     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+     * Get Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TasksPriority Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
-     * @param TasksPriority Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+     * Set Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TasksPriority Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;

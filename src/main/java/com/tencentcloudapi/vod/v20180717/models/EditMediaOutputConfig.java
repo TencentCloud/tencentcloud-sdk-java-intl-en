@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EditMediaOutputConfig extends AbstractModel {
 
     /**
-    * Output filename, up to 64 characters. By default, the system assigns a generated filename.
+    * Output filename, up to 64 characters. By default, the system generates the filename.
     */
     @SerializedName("MediaName")
     @Expose
@@ -46,7 +46,7 @@ public class EditMediaOutputConfig extends AbstractModel {
     private Long ClassId;
 
     /**
-    * Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -67,16 +67,16 @@ public class EditMediaOutputConfig extends AbstractModel {
     private EditMediaTEHDConfig TEHDConfig;
 
     /**
-     * Get Output filename, up to 64 characters. By default, the system assigns a generated filename. 
-     * @return MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
+     * Get Output filename, up to 64 characters. By default, the system generates the filename. 
+     * @return MediaName Output filename, up to 64 characters. By default, the system generates the filename.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output filename, up to 64 characters. By default, the system assigns a generated filename.
-     * @param MediaName Output filename, up to 64 characters. By default, the system assigns a generated filename.
+     * Set Output filename, up to 64 characters. By default, the system generates the filename.
+     * @param MediaName Output filename, up to 64 characters. By default, the system generates the filename.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
@@ -119,16 +119,16 @@ public class EditMediaOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

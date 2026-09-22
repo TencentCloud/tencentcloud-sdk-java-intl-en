@@ -31,8 +31,8 @@ public class TEHDConfig extends AbstractModel {
     private String Type;
 
     /**
-    * Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
+    * Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
@@ -55,20 +55,20 @@ Leave this parameter empty or set it to 0, and VOD automatically sets the bitrat
     }
 
     /**
-     * Get Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap. 
-     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
+     * Get Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap. 
+     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
-     * @param MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
-Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
+     * Set Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
+     * @param MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+If not specified or set to 0, VOD automatically sets the bitrate cap.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

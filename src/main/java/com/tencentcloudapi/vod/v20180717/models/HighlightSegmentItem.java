@@ -31,7 +31,7 @@ public class HighlightSegmentItem extends AbstractModel {
     private Float Confidence;
 
     /**
-    * <p>Segment start time offset.</p><p>Unit: seconds</p>
+    * <p>Start time offset of a segment.</p><p>Unit: seconds</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -61,16 +61,16 @@ public class HighlightSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Segment start time offset.</p><p>Unit: seconds</p> 
-     * @return StartTimeOffset <p>Segment start time offset.</p><p>Unit: seconds</p>
+     * Get <p>Start time offset of a segment.</p><p>Unit: seconds</p> 
+     * @return StartTimeOffset <p>Start time offset of a segment.</p><p>Unit: seconds</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set <p>Segment start time offset.</p><p>Unit: seconds</p>
-     * @param StartTimeOffset <p>Segment start time offset.</p><p>Unit: seconds</p>
+     * Set <p>Start time offset of a segment.</p><p>Unit: seconds</p>
+     * @param StartTimeOffset <p>Start time offset of a segment.</p><p>Unit: seconds</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;

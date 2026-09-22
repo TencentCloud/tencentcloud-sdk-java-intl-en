@@ -31,7 +31,7 @@ public class ProcedureTask extends AbstractModel {
     private String TaskId;
 
     /**
-    * Task stream status. Valid values:
+    * Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
     */
@@ -54,7 +54,7 @@ public class ProcedureTask extends AbstractModel {
     private String Message;
 
     /**
-    * Media file ID.
+    * Media file ID
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
     */
@@ -64,7 +64,7 @@ public class ProcedureTask extends AbstractModel {
 
     /**
     * Media file name
-<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
     */
     @SerializedName("FileName")
@@ -72,9 +72,9 @@ public class ProcedureTask extends AbstractModel {
     private String FileName;
 
     /**
-    * Media file address.
+    * Media file address
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
-<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Url of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
     */
     @SerializedName("FileUrl")
     @Expose
@@ -95,7 +95,7 @@ public class ProcedureTask extends AbstractModel {
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * Execution status and results of an audio/video moderation task.
+    * Execution status and results of a video moderation task.
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
@@ -125,7 +125,7 @@ public class ProcedureTask extends AbstractModel {
     /**
     * Task flow status change notification mode.
 <li>Finish: Initiate an event notification only when all task flows are completed;</li>
-<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>Change: As long as the state of each subtask in the task flow changes, an event notification will be sent;</li>
 <li>None: non-acceptance of the task flow callback.</li>
     */
     @SerializedName("TasksNotifyMode")
@@ -147,7 +147,7 @@ public class ProcedureTask extends AbstractModel {
     private String SessionId;
 
     /**
-    * Operator. Valid values:
+    * Operator. Value range:
 <li>System: indicates a system trigger.</li>
     */
     @SerializedName("Operator")
@@ -179,10 +179,10 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Get Task stream status. Valid values:
+     * Get Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li> 
-     * @return Status Task stream status. Valid values:
+     * @return Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -191,10 +191,10 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Set Task stream status. Valid values:
+     * Set Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param Status Task stream status. Valid values:
+     * @param Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -243,10 +243,10 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Get Media file ID.
+     * Get Media file ID
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li> 
-     * @return FileId Media file ID.
+     * @return FileId Media file ID
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
@@ -255,10 +255,10 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Set Media file ID.
+     * Set Media file ID
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
-     * @param FileId Media file ID.
+     * @param FileId Media file ID
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
@@ -268,10 +268,10 @@ public class ProcedureTask extends AbstractModel {
 
     /**
      * Get Media file name
-<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li> 
      * @return FileName Media file name
-<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public String getFileName() {
@@ -280,10 +280,10 @@ public class ProcedureTask extends AbstractModel {
 
     /**
      * Set Media file name
-<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      * @param FileName Media file name
-<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
 <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public void setFileName(String FileName) {
@@ -291,24 +291,24 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Get Media file address.
+     * Get Media file address
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
-<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li> 
-     * @return FileUrl Media file address.
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Url of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li> 
+     * @return FileUrl Media file address
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
-<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Url of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set Media file address.
+     * Set Media file address
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
-<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
-     * @param FileUrl Media file address.
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Url of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+     * @param FileUrl Media file address
 <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
-<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Url of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
@@ -347,16 +347,16 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Get Execution status and results of an audio/video moderation task. 
-     * @return AiContentReviewResultSet Execution status and results of an audio/video moderation task.
+     * Get Execution status and results of a video moderation task. 
+     * @return AiContentReviewResultSet Execution status and results of a video moderation task.
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set Execution status and results of an audio/video moderation task.
-     * @param AiContentReviewResultSet Execution status and results of an audio/video moderation task.
+     * Set Execution status and results of a video moderation task.
+     * @param AiContentReviewResultSet Execution status and results of a video moderation task.
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;
@@ -413,11 +413,11 @@ public class ProcedureTask extends AbstractModel {
     /**
      * Get Task flow status change notification mode.
 <li>Finish: Initiate an event notification only when all task flows are completed;</li>
-<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>Change: As long as the state of each subtask in the task flow changes, an event notification will be sent;</li>
 <li>None: non-acceptance of the task flow callback.</li> 
      * @return TasksNotifyMode Task flow status change notification mode.
 <li>Finish: Initiate an event notification only when all task flows are completed;</li>
-<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>Change: As long as the state of each subtask in the task flow changes, an event notification will be sent;</li>
 <li>None: non-acceptance of the task flow callback.</li>
      */
     public String getTasksNotifyMode() {
@@ -427,11 +427,11 @@ public class ProcedureTask extends AbstractModel {
     /**
      * Set Task flow status change notification mode.
 <li>Finish: Initiate an event notification only when all task flows are completed;</li>
-<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>Change: As long as the state of each subtask in the task flow changes, an event notification will be sent;</li>
 <li>None: non-acceptance of the task flow callback.</li>
      * @param TasksNotifyMode Task flow status change notification mode.
 <li>Finish: Initiate an event notification only when all task flows are completed;</li>
-<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>Change: As long as the state of each subtask in the task flow changes, an event notification will be sent;</li>
 <li>None: non-acceptance of the task flow callback.</li>
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
@@ -471,9 +471,9 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Get Operator. Valid values:
+     * Get Operator. Value range:
 <li>System: indicates a system trigger.</li> 
-     * @return Operator Operator. Valid values:
+     * @return Operator Operator. Value range:
 <li>System: indicates a system trigger.</li>
      */
     public String getOperator() {
@@ -481,9 +481,9 @@ public class ProcedureTask extends AbstractModel {
     }
 
     /**
-     * Set Operator. Valid values:
+     * Set Operator. Value range:
 <li>System: indicates a system trigger.</li>
-     * @param Operator Operator. Valid values:
+     * @param Operator Operator. Value range:
 <li>System: indicates a system trigger.</li>
      */
     public void setOperator(String Operator) {

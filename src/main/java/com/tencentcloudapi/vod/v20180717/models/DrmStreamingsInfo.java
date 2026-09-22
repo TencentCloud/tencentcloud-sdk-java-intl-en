@@ -38,7 +38,7 @@ public class DrmStreamingsInfo extends AbstractModel {
     private Long WidevineDefinition;
 
     /**
-    * Adaptive bitrate streaming template ID with FairPlay protection type.
+    * Adaptive bitstreaming template ID with FairPlay protection type.
     */
     @SerializedName("FairPlayDefinition")
     @Expose
@@ -77,16 +77,16 @@ public class DrmStreamingsInfo extends AbstractModel {
     }
 
     /**
-     * Get Adaptive bitrate streaming template ID with FairPlay protection type. 
-     * @return FairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
+     * Get Adaptive bitstreaming template ID with FairPlay protection type. 
+     * @return FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection type.
      */
     public Long getFairPlayDefinition() {
         return this.FairPlayDefinition;
     }
 
     /**
-     * Set Adaptive bitrate streaming template ID with FairPlay protection type.
-     * @param FairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
+     * Set Adaptive bitstreaming template ID with FairPlay protection type.
+     * @param FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection type.
      */
     public void setFairPlayDefinition(Long FairPlayDefinition) {
         this.FairPlayDefinition = FairPlayDefinition;

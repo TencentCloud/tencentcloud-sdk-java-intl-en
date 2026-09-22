@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChangeClothesConfig extends AbstractModel {
 
     /**
-    * <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+    * <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
     */
     @SerializedName("ClothesFileInfos")
     @Expose
@@ -38,16 +38,16 @@ public class ChangeClothesConfig extends AbstractModel {
     private String Prompt;
 
     /**
-     * Get <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul> 
-     * @return ClothesFileInfos <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * Get <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul> 
+     * @return ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
      */
     public SceneAigcImageTaskInputFileInfo [] getClothesFileInfos() {
         return this.ClothesFileInfos;
     }
 
     /**
-     * Set <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
-     * @param ClothesFileInfos <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * Set <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+     * @param ClothesFileInfos <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
      */
     public void setClothesFileInfos(SceneAigcImageTaskInputFileInfo [] ClothesFileInfos) {
         this.ClothesFileInfos = ClothesFileInfos;

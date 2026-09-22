@@ -32,7 +32,7 @@ public class MPSTemplate extends AbstractModel {
     private String TaskType;
 
     /**
-    * MPS task template detail content.
+    * Details of the MPS task template.
     */
     @SerializedName("MPSTemplateInfo")
     @Expose
@@ -59,16 +59,16 @@ public class MPSTemplate extends AbstractModel {
     }
 
     /**
-     * Get MPS task template detail content. 
-     * @return MPSTemplateInfo MPS task template detail content.
+     * Get Details of the MPS task template. 
+     * @return MPSTemplateInfo Details of the MPS task template.
      */
     public String getMPSTemplateInfo() {
         return this.MPSTemplateInfo;
     }
 
     /**
-     * Set MPS task template detail content.
-     * @param MPSTemplateInfo MPS task template detail content.
+     * Set Details of the MPS task template.
+     * @param MPSTemplateInfo Details of the MPS task template.
      */
     public void setMPSTemplateInfo(String MPSTemplateInfo) {
         this.MPSTemplateInfo = MPSTemplateInfo;

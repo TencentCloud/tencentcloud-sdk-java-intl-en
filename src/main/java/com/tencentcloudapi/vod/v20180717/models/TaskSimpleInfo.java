@@ -55,9 +55,9 @@ public class TaskSimpleInfo extends AbstractModel {
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
     */
     @SerializedName("TaskType")
@@ -65,7 +65,7 @@ Task types compatible with the 2017 version:
     private String TaskType;
 
     /**
-    * Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
@@ -86,7 +86,7 @@ Task types compatible with the 2017 version:
     private String FinishTime;
 
     /**
-    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+    * Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
     */
     @SerializedName("SessionId")
     @Expose
@@ -158,9 +158,9 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
  
      * @return TaskType Task type. Value:
 <li>Procedure: video processing task;</li>
@@ -172,9 +172,9 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
      */
     public String getTaskType() {
@@ -192,9 +192,9 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
      * @param TaskType Task type. Value:
 <li>Procedure: video processing task;</li>
@@ -206,9 +206,9 @@ Task types compatible with the 2017 version:
 Task types compatible with the 2017 version:
 <li>Transcode: video transcoding task;</li>
 <li>SnapshotByTimeOffset: video screencapturing task;</li>
-<li>Concat: video splicing task;</li>
+<li>Concat: video splicing job;</li>
 <li>Clip: video clipping task;</li>
-<li>ImageSprites: capture image sprite task.</li>
+<li>ImageSprites: capture CSS sprites task.</li>
 
      */
     public void setTaskType(String TaskType) {
@@ -216,16 +216,16 @@ Task types compatible with the 2017 version:
     }
 
     /**
-     * Get Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -264,16 +264,16 @@ Task types compatible with the 2017 version:
     }
 
     /**
-     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days. 
-     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+     * Get Identification code for deduplication, if there has been a request with the same identifier within the past seven days. 
+     * @return SessionId Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
-     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+     * Set Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
+     * @param SessionId Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

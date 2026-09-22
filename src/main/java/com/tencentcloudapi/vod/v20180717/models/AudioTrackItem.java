@@ -24,140 +24,140 @@ import java.util.HashMap;
 public class AudioTrackItem extends AbstractModel {
 
     /**
-    * Media material source of the audio clip, which can be:
+    * Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
     */
     @SerializedName("SourceMedia")
     @Expose
     private String SourceMedia;
 
     /**
-    * The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
+    * Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
     */
     @SerializedName("SourceMediaStartTime")
     @Expose
     private Float SourceMediaStartTime;
 
     /**
-    * Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
+    * Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * Target duration of the audio clip in seconds.
+    * Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
     */
     @SerializedName("TargetDuration")
     @Expose
     private Float TargetDuration;
 
     /**
-    * Operation performed on the audio clip, such as volume adjustment.
+    * Operation performed on the audio clip, for example, audio volume adjustment.
     */
     @SerializedName("AudioOperations")
     @Expose
     private AudioTransform [] AudioOperations;
 
     /**
-     * Get Media material source of the audio clip, which can be:
+     * Get Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature). 
-     * @return SourceMedia Media material source of the audio clip, which can be:
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature). 
+     * @return SourceMedia Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public String getSourceMedia() {
         return this.SourceMedia;
     }
 
     /**
-     * Set Media material source of the audio clip, which can be:
+     * Set Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
-     * @param SourceMedia Media material source of the audio clip, which can be:
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+     * @param SourceMedia Media material source of the audio recording clip, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public void setSourceMedia(String SourceMedia) {
         this.SourceMedia = SourceMedia;
     }
 
     /**
-     * Get The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0. 
-     * @return SourceMediaStartTime The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
+     * Get Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0. 
+     * @return SourceMediaStartTime Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
      */
     public Float getSourceMediaStartTime() {
         return this.SourceMediaStartTime;
     }
 
     /**
-     * Set The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
-     * @param SourceMediaStartTime The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
+     * Set Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
+     * @param SourceMediaStartTime Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
      */
     public void setSourceMediaStartTime(Float SourceMediaStartTime) {
         this.SourceMediaStartTime = SourceMediaStartTime;
     }
 
     /**
-     * Get Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured. 
-     * @return Duration Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
+     * Get Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured. 
+     * @return Duration Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
-     * @param Duration Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
+     * Set Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
+     * @param Duration Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Target duration of the audio clip in seconds.
+     * Get Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li> 
-     * @return TargetDuration Target duration of the audio clip in seconds.
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li> 
+     * @return TargetDuration Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
      */
     public Float getTargetDuration() {
         return this.TargetDuration;
     }
 
     /**
-     * Set Target duration of the audio clip in seconds.
+     * Set Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
-     * @param TargetDuration Target duration of the audio clip in seconds.
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
+     * @param TargetDuration Target duration of the audio clip, in seconds.
 <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
+<li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
      */
     public void setTargetDuration(Float TargetDuration) {
         this.TargetDuration = TargetDuration;
     }
 
     /**
-     * Get Operation performed on the audio clip, such as volume adjustment. 
-     * @return AudioOperations Operation performed on the audio clip, such as volume adjustment.
+     * Get Operation performed on the audio clip, for example, audio volume adjustment. 
+     * @return AudioOperations Operation performed on the audio clip, for example, audio volume adjustment.
      */
     public AudioTransform [] getAudioOperations() {
         return this.AudioOperations;
     }
 
     /**
-     * Set Operation performed on the audio clip, such as volume adjustment.
-     * @param AudioOperations Operation performed on the audio clip, such as volume adjustment.
+     * Set Operation performed on the audio clip, for example, audio volume adjustment.
+     * @param AudioOperations Operation performed on the audio clip, for example, audio volume adjustment.
      */
     public void setAudioOperations(AudioTransform [] AudioOperations) {
         this.AudioOperations = AudioOperations;

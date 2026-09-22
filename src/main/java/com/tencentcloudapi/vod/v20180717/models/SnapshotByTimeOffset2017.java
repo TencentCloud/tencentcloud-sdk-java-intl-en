@@ -33,7 +33,7 @@ public class SnapshotByTimeOffset2017 extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * Screenshot time, in milliseconds.
+    * Screenshot time, in ms.
     */
     @SerializedName("TimeOffset")
     @Expose
@@ -71,16 +71,16 @@ public class SnapshotByTimeOffset2017 extends AbstractModel {
     }
 
     /**
-     * Get Screenshot time, in milliseconds. 
-     * @return TimeOffset Screenshot time, in milliseconds.
+     * Get Screenshot time, in ms. 
+     * @return TimeOffset Screenshot time, in ms.
      */
     public Long getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set Screenshot time, in milliseconds.
-     * @param TimeOffset Screenshot time, in milliseconds.
+     * Set Screenshot time, in ms.
+     * @param TimeOffset Screenshot time, in ms.
      */
     public void setTimeOffset(Long TimeOffset) {
         this.TimeOffset = TimeOffset;

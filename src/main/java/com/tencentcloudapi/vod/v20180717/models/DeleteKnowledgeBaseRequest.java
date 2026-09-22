@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteKnowledgeBaseRequest extends AbstractModel {
 
     /**
-    * <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p>
+    * <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>ID of the knowledge base to be deleted.</p>
+    * <p>ID of the knowledge base to delete.</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
     private String KnowledgeBaseId;
 
     /**
-     * Get <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p> 
-     * @return SubAppId <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p>
+     * Get <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p> 
+     * @return SubAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p>
-     * @param SubAppId <p>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</p>
+     * Set <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
+     * @param SubAppId <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>ID of the knowledge base to be deleted.</p> 
-     * @return KnowledgeBaseId <p>ID of the knowledge base to be deleted.</p>
+     * Get <p>ID of the knowledge base to delete.</p> 
+     * @return KnowledgeBaseId <p>ID of the knowledge base to delete.</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set <p>ID of the knowledge base to be deleted.</p>
-     * @param KnowledgeBaseId <p>ID of the knowledge base to be deleted.</p>
+     * Set <p>ID of the knowledge base to delete.</p>
+     * @param KnowledgeBaseId <p>ID of the knowledge base to delete.</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;

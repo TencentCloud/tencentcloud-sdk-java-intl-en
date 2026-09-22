@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CloneVoiceSyncResponse extends AbstractModel {
 
     /**
-    * <p>Cloned timbre</p>
+    * <p>Cloned voice type</p>
     */
     @SerializedName("VoiceId")
     @Expose
@@ -52,16 +52,16 @@ public class CloneVoiceSyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Cloned timbre</p> 
-     * @return VoiceId <p>Cloned timbre</p>
+     * Get <p>Cloned voice type</p> 
+     * @return VoiceId <p>Cloned voice type</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Cloned timbre</p>
-     * @param VoiceId <p>Cloned timbre</p>
+     * Set <p>Cloned voice type</p>
+     * @param VoiceId <p>Cloned voice type</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;

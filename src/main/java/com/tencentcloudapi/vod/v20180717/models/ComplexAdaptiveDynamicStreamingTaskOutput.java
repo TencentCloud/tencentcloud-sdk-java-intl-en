@@ -31,7 +31,7 @@ public class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel {
     private Long Definition;
 
     /**
-    * Adaptive bitrate stream packaging format. Available values:
+    * Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
     */
@@ -74,10 +74,10 @@ public class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Adaptive bitrate stream packaging format. Available values:
+     * Get Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li> 
-     * @return Format Adaptive bitrate stream packaging format. Available values:
+     * @return Format Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
      */
@@ -86,10 +86,10 @@ public class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Adaptive bitrate stream packaging format. Available values:
+     * Set Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-     * @param Format Adaptive bitrate stream packaging format. Available values:
+     * @param Format Adaptive bitrate packaging format. Available values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
      */

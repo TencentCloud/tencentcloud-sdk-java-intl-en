@@ -33,9 +33,9 @@ public class SuperResolutionInfo extends AbstractModel {
     private String Switch;
 
     /**
-    * Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+    * Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq.
     */
     @SerializedName("Type")
@@ -75,13 +75,13 @@ Default value: 2.
     }
 
     /**
-     * Get Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+     * Get Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq. 
-     * @return Type Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+     * @return Type Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq.
      */
     public String getType() {
@@ -89,13 +89,13 @@ Default value: lq.
     }
 
     /**
-     * Set Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+     * Set Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq.
-     * @param Type Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+     * @param Type Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
 <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-<li>hq: For high resolution video super-resolution.</li>
+<li>hq: for high resolution video super-resolution.</li>
 Default value: lq.
      */
     public void setType(String Type) {

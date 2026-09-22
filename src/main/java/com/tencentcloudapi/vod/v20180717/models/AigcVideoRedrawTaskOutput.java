@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AigcVideoRedrawTaskOutput extends AbstractModel {
 
     /**
-    * <p>Output file information of the AIGC video conversion task.</p>
+    * <p>Output file information for the AIGC video conversion task.</p>
     */
     @SerializedName("FileInfo")
     @Expose
     private AigcVideoRedrawOutputFileInfo FileInfo;
 
     /**
-     * Get <p>Output file information of the AIGC video conversion task.</p> 
-     * @return FileInfo <p>Output file information of the AIGC video conversion task.</p>
+     * Get <p>Output file information for the AIGC video conversion task.</p> 
+     * @return FileInfo <p>Output file information for the AIGC video conversion task.</p>
      */
     public AigcVideoRedrawOutputFileInfo getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set <p>Output file information of the AIGC video conversion task.</p>
-     * @param FileInfo <p>Output file information of the AIGC video conversion task.</p>
+     * Set <p>Output file information for the AIGC video conversion task.</p>
+     * @param FileInfo <p>Output file information for the AIGC video conversion task.</p>
      */
     public void setFileInfo(AigcVideoRedrawOutputFileInfo FileInfo) {
         this.FileInfo = FileInfo;

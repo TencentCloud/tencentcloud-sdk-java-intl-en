@@ -31,7 +31,7 @@ public class DescribeSubAppIdsRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Tag information. Query the application list with a specified tag.
+    * Tag information. Query the application list of a specified tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeSubAppIdsRequest extends AbstractModel {
     }
 
     /**
-     * Get Tag information. Query the application list with a specified tag. 
-     * @return Tags Tag information. Query the application list with a specified tag.
+     * Get Tag information. Query the application list of a specified tag. 
+     * @return Tags Tag information. Query the application list of a specified tag.
      */
     public ResourceTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information. Query the application list with a specified tag.
-     * @param Tags Tag information. Query the application list with a specified tag.
+     * Set Tag information. Query the application list of a specified tag.
+     * @param Tags Tag information. Query the application list of a specified tag.
      */
     public void setTags(ResourceTag [] Tags) {
         this.Tags = Tags;

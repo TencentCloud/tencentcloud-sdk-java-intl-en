@@ -31,7 +31,7 @@ public class ThirdPartyDrmInfo extends AbstractModel {
     private String [] DrmTypes;
 
     /**
-    * <p>External DRM vendor information.</p>
+    * <p>Third-party DRM vendor information.</p>
     */
     @SerializedName("SPEKEDrm")
     @Expose
@@ -54,16 +54,16 @@ public class ThirdPartyDrmInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>External DRM vendor information.</p> 
-     * @return SPEKEDrm <p>External DRM vendor information.</p>
+     * Get <p>Third-party DRM vendor information.</p> 
+     * @return SPEKEDrm <p>Third-party DRM vendor information.</p>
      */
     public SPEKEDrm getSPEKEDrm() {
         return this.SPEKEDrm;
     }
 
     /**
-     * Set <p>External DRM vendor information.</p>
-     * @param SPEKEDrm <p>External DRM vendor information.</p>
+     * Set <p>Third-party DRM vendor information.</p>
+     * @param SPEKEDrm <p>Third-party DRM vendor information.</p>
      */
     public void setSPEKEDrm(SPEKEDrm SPEKEDrm) {
         this.SPEKEDrm = SPEKEDrm;

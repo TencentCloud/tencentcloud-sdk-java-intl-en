@@ -24,16 +24,16 @@ import java.util.HashMap;
 public class UserDefineAsrTextReviewTemplateInfoForUpdate extends AbstractModel {
 
     /**
-    * User custom speech audit task switch. Available values:
-<li>ON: Enable the custom voice moderation task;</li>
-<li>OFF: disables the custom voice moderation task.</li>
+    * User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: Disable the custom voice moderation task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+    * User-customized voice filter tags. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
     */
     @SerializedName("LabelSet")
@@ -48,40 +48,40 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     private Long BlockConfidence;
 
     /**
-    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get User custom speech audit task switch. Available values:
-<li>ON: Enable the custom voice moderation task;</li>
-<li>OFF: disables the custom voice moderation task.</li> 
-     * @return Switch User custom speech audit task switch. Available values:
-<li>ON: Enable the custom voice moderation task;</li>
-<li>OFF: disables the custom voice moderation task.</li>
+     * Get User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: Disable the custom voice moderation task.</li> 
+     * @return Switch User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: Disable the custom voice moderation task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set User custom speech audit task switch. Available values:
-<li>ON: Enable the custom voice moderation task;</li>
-<li>OFF: disables the custom voice moderation task.</li>
-     * @param Switch User custom speech audit task switch. Available values:
-<li>ON: Enable the custom voice moderation task;</li>
-<li>OFF: disables the custom voice moderation task.</li>
+     * Set User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: Disable the custom voice moderation task.</li>
+     * @param Switch User-defined speech audit task switch. Available values:
+<li>ON: enable custom voice moderation task;</li>
+<li>OFF: Disable the custom voice moderation task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+     * Get User-customized voice filter tags. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters. 
-     * @return LabelSet User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+     * @return LabelSet User-customized voice filter tags. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public String [] getLabelSet() {
@@ -89,9 +89,9 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Set User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+     * Set User-customized voice filter tags. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-     * @param LabelSet User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+     * @param LabelSet User-customized voice filter tags. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public void setLabelSet(String [] LabelSet) {
@@ -115,16 +115,16 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

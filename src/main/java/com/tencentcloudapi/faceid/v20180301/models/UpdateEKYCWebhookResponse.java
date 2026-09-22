@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpdateEKYCWebhookResponse extends AbstractModel {
 
     /**
-    * <p>ID of the updated Webhook configuration</p>
+    * <p>ID of the Webhook configuration to be updated</p>
     */
     @SerializedName("WebhookId")
     @Expose
     private Long WebhookId;
 
     /**
-    * <p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p>
+    * <p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p>
     */
     @SerializedName("ModTime")
     @Expose
@@ -52,32 +52,32 @@ public class UpdateEKYCWebhookResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>ID of the updated Webhook configuration</p> 
-     * @return WebhookId <p>ID of the updated Webhook configuration</p>
+     * Get <p>ID of the Webhook configuration to be updated</p> 
+     * @return WebhookId <p>ID of the Webhook configuration to be updated</p>
      */
     public Long getWebhookId() {
         return this.WebhookId;
     }
 
     /**
-     * Set <p>ID of the updated Webhook configuration</p>
-     * @param WebhookId <p>ID of the updated Webhook configuration</p>
+     * Set <p>ID of the Webhook configuration to be updated</p>
+     * @param WebhookId <p>ID of the Webhook configuration to be updated</p>
      */
     public void setWebhookId(Long WebhookId) {
         this.WebhookId = WebhookId;
     }
 
     /**
-     * Get <p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p> 
-     * @return ModTime <p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p>
+     * Get <p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p> 
+     * @return ModTime <p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p>
      */
     public String getModTime() {
         return this.ModTime;
     }
 
     /**
-     * Set <p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p>
-     * @param ModTime <p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p>
+     * Set <p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p>
+     * @param ModTime <p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p>
      */
     public void setModTime(String ModTime) {
         this.ModTime = ModTime;

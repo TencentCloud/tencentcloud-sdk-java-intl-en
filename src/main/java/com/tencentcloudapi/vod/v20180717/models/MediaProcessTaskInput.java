@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaProcessTaskInput extends AbstractModel {
 
     /**
-    * Video transcoding task list.
+    * List of video transcoding tasks.
     */
     @SerializedName("TranscodeTaskSet")
     @Expose
@@ -38,7 +38,7 @@ public class MediaProcessTaskInput extends AbstractModel {
     private AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet;
 
     /**
-    * List of time point screencapturing tasks for videos.
+    * List of time point screenshot tasks for videos.
     */
     @SerializedName("SnapshotByTimeOffsetTaskSet")
     @Expose
@@ -59,7 +59,7 @@ public class MediaProcessTaskInput extends AbstractModel {
     private ImageSpriteTaskInput [] ImageSpriteTaskSet;
 
     /**
-    * Task list of screencapturing for cover image tasks for videos.
+    * Task list of screencapturing for cover images from videos.
     */
     @SerializedName("CoverBySnapshotTaskSet")
     @Expose
@@ -73,16 +73,16 @@ public class MediaProcessTaskInput extends AbstractModel {
     private AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet;
 
     /**
-     * Get Video transcoding task list. 
-     * @return TranscodeTaskSet Video transcoding task list.
+     * Get List of video transcoding tasks. 
+     * @return TranscodeTaskSet List of video transcoding tasks.
      */
     public TranscodeTaskInput [] getTranscodeTaskSet() {
         return this.TranscodeTaskSet;
     }
 
     /**
-     * Set Video transcoding task list.
-     * @param TranscodeTaskSet Video transcoding task list.
+     * Set List of video transcoding tasks.
+     * @param TranscodeTaskSet List of video transcoding tasks.
      */
     public void setTranscodeTaskSet(TranscodeTaskInput [] TranscodeTaskSet) {
         this.TranscodeTaskSet = TranscodeTaskSet;
@@ -105,16 +105,16 @@ public class MediaProcessTaskInput extends AbstractModel {
     }
 
     /**
-     * Get List of time point screencapturing tasks for videos. 
-     * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
+     * Get List of time point screenshot tasks for videos. 
+     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
      */
     public SnapshotByTimeOffsetTaskInput [] getSnapshotByTimeOffsetTaskSet() {
         return this.SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Set List of time point screencapturing tasks for videos.
-     * @param SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
+     * Set List of time point screenshot tasks for videos.
+     * @param SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
      */
     public void setSnapshotByTimeOffsetTaskSet(SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet) {
         this.SnapshotByTimeOffsetTaskSet = SnapshotByTimeOffsetTaskSet;
@@ -153,16 +153,16 @@ public class MediaProcessTaskInput extends AbstractModel {
     }
 
     /**
-     * Get Task list of screencapturing for cover image tasks for videos. 
-     * @return CoverBySnapshotTaskSet Task list of screencapturing for cover image tasks for videos.
+     * Get Task list of screencapturing for cover images from videos. 
+     * @return CoverBySnapshotTaskSet Task list of screencapturing for cover images from videos.
      */
     public CoverBySnapshotTaskInput [] getCoverBySnapshotTaskSet() {
         return this.CoverBySnapshotTaskSet;
     }
 
     /**
-     * Set Task list of screencapturing for cover image tasks for videos.
-     * @param CoverBySnapshotTaskSet Task list of screencapturing for cover image tasks for videos.
+     * Set Task list of screencapturing for cover images from videos.
+     * @param CoverBySnapshotTaskSet Task list of screencapturing for cover images from videos.
      */
     public void setCoverBySnapshotTaskSet(CoverBySnapshotTaskInput [] CoverBySnapshotTaskSet) {
         this.CoverBySnapshotTaskSet = CoverBySnapshotTaskSet;

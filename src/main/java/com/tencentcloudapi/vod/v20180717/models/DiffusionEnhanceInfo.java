@@ -26,7 +26,7 @@ public class DiffusionEnhanceInfo extends AbstractModel {
     /**
     * Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -46,10 +46,10 @@ Default value: normal.
     /**
      * Get Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li> 
+<li>OFF: disabled.</li> 
      * @return Switch Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -58,10 +58,10 @@ Default value: normal.
     /**
      * Set Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      * @param Switch Large model enhancement switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -33,7 +33,7 @@ public class ImageTransform extends AbstractModel {
     private String Type;
 
     /**
-    * Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+    * Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
     */
     @SerializedName("RotateAngle")
     @Expose
@@ -41,8 +41,8 @@ public class ImageTransform extends AbstractModel {
 
     /**
     * Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
     */
     @SerializedName("Flip")
@@ -74,16 +74,16 @@ Valid when Type is set to Flip.
     }
 
     /**
-     * Get Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate. 
-     * @return RotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+     * Get Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate. 
+     * @return RotateAngle Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
      */
     public Float getRotateAngle() {
         return this.RotateAngle;
     }
 
     /**
-     * Set Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
-     * @param RotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+     * Set Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
+     * @param RotateAngle Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
      */
     public void setRotateAngle(Float RotateAngle) {
         this.RotateAngle = RotateAngle;
@@ -91,12 +91,12 @@ Valid when Type is set to Flip.
 
     /**
      * Get Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip. 
      * @return Flip Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
      */
     public String getFlip() {
@@ -105,12 +105,12 @@ Valid when Type is set to Flip.
 
     /**
      * Set Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
      * @param Flip Image flipping action. Valid values:
-<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+<li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, vertically mirrored.</li>
 Valid when Type is set to Flip.
      */
     public void setFlip(String Flip) {

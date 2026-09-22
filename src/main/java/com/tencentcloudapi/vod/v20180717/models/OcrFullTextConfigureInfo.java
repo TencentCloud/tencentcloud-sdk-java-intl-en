@@ -25,8 +25,8 @@ public class OcrFullTextConfigureInfo extends AbstractModel {
 
     /**
     * Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -34,11 +34,11 @@ public class OcrFullTextConfigureInfo extends AbstractModel {
 
     /**
      * Get Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li> 
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li> 
      * @return Switch Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -46,11 +46,11 @@ public class OcrFullTextConfigureInfo extends AbstractModel {
 
     /**
      * Set Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
      * @param Switch Switch for the full text recognition task. Available values:
-<li>ON: enables the intelligent full text recognition task;</li>
-<li>OFF: disables the intelligent full text recognition task.</li>
+<li>ON: Enable the intelligent full text recognition task;</li>
+<li>OFF: Disable the intelligent full text recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

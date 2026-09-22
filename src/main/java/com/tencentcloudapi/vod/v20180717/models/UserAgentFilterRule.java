@@ -31,7 +31,7 @@ public class UserAgentFilterRule extends AbstractModel {
     private String FilterType;
 
     /**
-    * User agent list.
+    * UserAgent list.
     */
     @SerializedName("UserAgents")
     @Expose
@@ -76,16 +76,16 @@ public class UserAgentFilterRule extends AbstractModel {
     }
 
     /**
-     * Get User agent list. 
-     * @return UserAgents User agent list.
+     * Get UserAgent list. 
+     * @return UserAgents UserAgent list.
      */
     public String [] getUserAgents() {
         return this.UserAgents;
     }
 
     /**
-     * Set User agent list.
-     * @param UserAgents User agent list.
+     * Set UserAgent list.
+     * @param UserAgents UserAgent list.
      */
     public void setUserAgents(String [] UserAgents) {
         this.UserAgents = UserAgents;

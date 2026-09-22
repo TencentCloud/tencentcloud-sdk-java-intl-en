@@ -52,14 +52,14 @@ public class MediaImageSpriteItem extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * <p>Domain names or IP addresses of each sprite sheet.</p>
+    * <p>Address of each sprite sheet.</p>
     */
     @SerializedName("ImageUrlSet")
     @Expose
     private String [] ImageUrlSet;
 
     /**
-    * <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+    * <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
     */
     @SerializedName("WebVttUrl")
     @Expose
@@ -130,32 +130,32 @@ public class MediaImageSpriteItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Domain names or IP addresses of each sprite sheet.</p> 
-     * @return ImageUrlSet <p>Domain names or IP addresses of each sprite sheet.</p>
+     * Get <p>Address of each sprite sheet.</p> 
+     * @return ImageUrlSet <p>Address of each sprite sheet.</p>
      */
     public String [] getImageUrlSet() {
         return this.ImageUrlSet;
     }
 
     /**
-     * Set <p>Domain names or IP addresses of each sprite sheet.</p>
-     * @param ImageUrlSet <p>Domain names or IP addresses of each sprite sheet.</p>
+     * Set <p>Address of each sprite sheet.</p>
+     * @param ImageUrlSet <p>Address of each sprite sheet.</p>
      */
     public void setImageUrlSet(String [] ImageUrlSet) {
         this.ImageUrlSet = ImageUrlSet;
     }
 
     /**
-     * Get <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p> 
-     * @return WebVttUrl <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+     * Get <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p> 
+     * @return WebVttUrl <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
      */
     public String getWebVttUrl() {
         return this.WebVttUrl;
     }
 
     /**
-     * Set <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
-     * @param WebVttUrl <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+     * Set <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
+     * @param WebVttUrl <p>Address of the WebVtt file that describes the positional and temporal relationship of sprite subimages. The WebVtt file indicates the time point corresponding to each sprite and its coordinates in the sprite sheet. It is generally used by the player to implement preview.</p>
      */
     public void setWebVttUrl(String WebVttUrl) {
         this.WebVttUrl = WebVttUrl;

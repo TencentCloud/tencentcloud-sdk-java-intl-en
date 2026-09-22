@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FaceRecognitionOutputFileInfo extends AbstractModel {
 
     /**
-    * <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+    * <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
     */
     @SerializedName("FileType")
     @Expose
@@ -38,16 +38,16 @@ public class FaceRecognitionOutputFileInfo extends AbstractModel {
     private String Url;
 
     /**
-     * Get <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul> 
-     * @return FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+     * Get <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul> 
+     * @return FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
-     * @param FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task and is generated in JSON format.</li></ul>
+     * Set <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
+     * @param FileType <p>Face recognition output file type</p><p>Enumeration values:</p><ul><li>Output: Result output of task generation. The file corresponds to the result returned by the face recognition task, generated in JSON format.</li></ul>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

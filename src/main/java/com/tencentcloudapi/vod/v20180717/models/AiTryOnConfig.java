@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiTryOnConfig extends AbstractModel {
 
     /**
-    * <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
+    * <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
     */
     @SerializedName("Model")
     @Expose
@@ -45,16 +45,16 @@ public class AiTryOnConfig extends AbstractModel {
     private String Prompt;
 
     /**
-     * Get <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul> 
-     * @return Model <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
+     * Get <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul> 
+     * @return Model <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
-     * @param Model <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
+     * Set <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
+     * @param Model <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;

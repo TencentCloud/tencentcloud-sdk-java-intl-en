@@ -25,15 +25,15 @@ public class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel 
 
     /**
     * Switch for custom text audio/video moderation tasks. Available values:
-<li>ON: enable custom text, audio, and video moderation tasks;</li>
-<li>OFF: Disable the custom text audio/video moderation task.</li>
+<li>ON: Enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom text keyword material.
+    * User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
     */
     @SerializedName("LabelSet")
@@ -41,14 +41,14 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     private String [] LabelSet;
 
     /**
-    * Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100.
+    * Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.
+    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -56,11 +56,11 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
 
     /**
      * Get Switch for custom text audio/video moderation tasks. Available values:
-<li>ON: enable custom text, audio, and video moderation tasks;</li>
-<li>OFF: Disable the custom text audio/video moderation task.</li> 
+<li>ON: Enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li> 
      * @return Switch Switch for custom text audio/video moderation tasks. Available values:
-<li>ON: enable custom text, audio, and video moderation tasks;</li>
-<li>OFF: Disable the custom text audio/video moderation task.</li>
+<li>ON: Enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -68,20 +68,20 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
 
     /**
      * Set Switch for custom text audio/video moderation tasks. Available values:
-<li>ON: enable custom text, audio, and video moderation tasks;</li>
-<li>OFF: Disable the custom text audio/video moderation task.</li>
+<li>ON: Enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li>
      * @param Switch Switch for custom text audio/video moderation tasks. Available values:
-<li>ON: enable custom text, audio, and video moderation tasks;</li>
-<li>OFF: Disable the custom text audio/video moderation task.</li>
+<li>ON: Enable custom text audio/video moderation tasks;</li>
+<li>OFF: disables the custom text audio/video moderation task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom text keyword material.
+     * Get User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters. 
-     * @return LabelSet User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom text keyword material.
+     * @return LabelSet User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public String [] getLabelSet() {
@@ -89,9 +89,9 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Set User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom text keyword material.
+     * Set User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-     * @param LabelSet User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom text keyword material.
+     * @param LabelSet User-customized text filter tags. The audio/video moderation results including the selected tags are returned. If the filter tag is empty, all audio/video moderation results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom text keyword material.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public void setLabelSet(String [] LabelSet) {
@@ -99,32 +99,32 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Get Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100.
+     * Get Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100.
-     * @param BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is deemed a suspected violation. Value range: 0–100.
+     * Set Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.
+     * @param BlockConfidence Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.
+     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.
+     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

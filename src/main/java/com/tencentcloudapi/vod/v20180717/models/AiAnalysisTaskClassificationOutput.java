@@ -25,14 +25,14 @@ public class AiAnalysisTaskClassificationOutput extends AbstractModel {
 
     /**
     * Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
     */
     @SerializedName("ClassificationSet")
     @Expose
     private MediaAiAnalysisClassificationItem [] ClassificationSet;
 
     /**
-    * URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+    * Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
     */
     @SerializedName("ClassificationSetFileUrl")
     @Expose
@@ -47,9 +47,9 @@ public class AiAnalysisTaskClassificationOutput extends AbstractModel {
 
     /**
      * Get Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl. 
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl. 
      * @return ClassificationSet Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
      */
     public MediaAiAnalysisClassificationItem [] getClassificationSet() {
         return this.ClassificationSet;
@@ -57,25 +57,25 @@ public class AiAnalysisTaskClassificationOutput extends AbstractModel {
 
     /**
      * Set Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
      * @param ClassificationSet Video intelligent classification list.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ClassificationSetFileUrl.
      */
     public void setClassificationSet(MediaAiAnalysisClassificationItem [] ClassificationSet) {
         this.ClassificationSet = ClassificationSet;
     }
 
     /**
-     * Get URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.) 
-     * @return ClassificationSetFileUrl URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+     * Get Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.) 
+     * @return ClassificationSetFileUrl Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
      */
     public String getClassificationSetFileUrl() {
         return this.ClassificationSetFileUrl;
     }
 
     /**
-     * Set URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
-     * @param ClassificationSetFileUrl URL of the video intelligent classification list file. The content of the file is in JSON format, and the data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+     * Set Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
+     * @param ClassificationSetFileUrl Video intelligent classification list file URL. The content of the file is in JSON format, and its data structure is consistent with the ClassificationSet fields. (The file is not retained permanently. It will be deleted after reaching the ClassificationSetFileUrlExpireTime time point.)
      */
     public void setClassificationSetFileUrl(String ClassificationSetFileUrl) {
         this.ClassificationSetFileUrl = ClassificationSetFileUrl;

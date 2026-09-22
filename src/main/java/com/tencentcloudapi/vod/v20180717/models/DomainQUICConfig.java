@@ -25,7 +25,7 @@ public class DomainQUICConfig extends AbstractModel {
 
     /**
     * QUIC configuration status. Available values:
-<li>Enabled: enabled;</li>
+<li>Enabled: enablement;</li>
 <li>Disabled: Disabled.</li>
     */
     @SerializedName("Status")
@@ -34,10 +34,10 @@ public class DomainQUICConfig extends AbstractModel {
 
     /**
      * Get QUIC configuration status. Available values:
-<li>Enabled: enabled;</li>
+<li>Enabled: enablement;</li>
 <li>Disabled: Disabled.</li> 
      * @return Status QUIC configuration status. Available values:
-<li>Enabled: enabled;</li>
+<li>Enabled: enablement;</li>
 <li>Disabled: Disabled.</li>
      */
     public String getStatus() {
@@ -46,10 +46,10 @@ public class DomainQUICConfig extends AbstractModel {
 
     /**
      * Set QUIC configuration status. Available values:
-<li>Enabled: enabled;</li>
+<li>Enabled: enablement;</li>
 <li>Disabled: Disabled.</li>
      * @param Status QUIC configuration status. Available values:
-<li>Enabled: enabled;</li>
+<li>Enabled: enablement;</li>
 <li>Disabled: Disabled.</li>
      */
     public void setStatus(String Status) {

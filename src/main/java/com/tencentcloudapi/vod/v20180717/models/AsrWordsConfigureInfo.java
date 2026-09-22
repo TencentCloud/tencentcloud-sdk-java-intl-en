@@ -33,7 +33,7 @@ public class AsrWordsConfigureInfo extends AbstractModel {
     private String Switch;
 
     /**
-    * Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+    * Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
     */
     @SerializedName("LabelSet")
@@ -65,9 +65,9 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Get Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+     * Get Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters. 
-     * @return LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+     * @return LabelSet Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public String [] getLabelSet() {
@@ -75,9 +75,9 @@ The number of tags can be up to 10, and each tag can contain up to 16 characters
     }
 
     /**
-     * Set Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+     * Set Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
-     * @param LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+     * @param LabelSet Tag for keyword-based filtering. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
 The number of tags can be up to 10, and each tag can contain up to 16 characters.
      */
     public void setLabelSet(String [] LabelSet) {

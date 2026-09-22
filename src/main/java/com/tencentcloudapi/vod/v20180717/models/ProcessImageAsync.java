@@ -38,7 +38,7 @@ public class ProcessImageAsync extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+    * Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -52,21 +52,21 @@ public class ProcessImageAsync extends AbstractModel {
     private String Message;
 
     /**
-    * Task progress, value range: [0-100].
+    * Task progress. Value range: [0-100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input information of async image processing tasks.
+    * Input information of the image asynchronous processing task.
     */
     @SerializedName("Input")
     @Expose
     private ProcessImageAsyncInput Input;
 
     /**
-    * Output information of the image asynchronous processing task.
+    * Output information of the image asynchronous task processing.
     */
     @SerializedName("Output")
     @Expose
@@ -119,16 +119,16 @@ public class ProcessImageAsync extends AbstractModel {
     }
 
     /**
-     * Get Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task. 
-     * @return ErrCode Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+     * Get Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task. 
+     * @return ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
-     * @param ErrCode Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+     * Set Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+     * @param ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -151,48 +151,48 @@ public class ProcessImageAsync extends AbstractModel {
     }
 
     /**
-     * Get Task progress, value range: [0-100]. 
-     * @return Progress Task progress, value range: [0-100].
+     * Get Task progress. Value range: [0-100]. 
+     * @return Progress Task progress. Value range: [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress, value range: [0-100].
-     * @param Progress Task progress, value range: [0-100].
+     * Set Task progress. Value range: [0-100].
+     * @param Progress Task progress. Value range: [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input information of async image processing tasks. 
-     * @return Input Input information of async image processing tasks.
+     * Get Input information of the image asynchronous processing task. 
+     * @return Input Input information of the image asynchronous processing task.
      */
     public ProcessImageAsyncInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input information of async image processing tasks.
-     * @param Input Input information of async image processing tasks.
+     * Set Input information of the image asynchronous processing task.
+     * @param Input Input information of the image asynchronous processing task.
      */
     public void setInput(ProcessImageAsyncInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output information of the image asynchronous processing task. 
-     * @return Output Output information of the image asynchronous processing task.
+     * Get Output information of the image asynchronous task processing. 
+     * @return Output Output information of the image asynchronous task processing.
      */
     public ProcessImageAsyncOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of the image asynchronous processing task.
-     * @param Output Output information of the image asynchronous processing task.
+     * Set Output information of the image asynchronous task processing.
+     * @param Output Output information of the image asynchronous task processing.
      */
     public void setOutput(ProcessImageAsyncOutput Output) {
         this.Output = Output;

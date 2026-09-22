@@ -39,8 +39,8 @@ public class AiRecognitionResult extends AbstractModel {
     private String Type;
 
     /**
-    * Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
+    * Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
     */
     @SerializedName("HeadTailTask")
     @Expose
@@ -48,7 +48,7 @@ Valid for HeadTailRecognition.
 
     /**
     * Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
     */
     @SerializedName("SegmentTask")
     @Expose
@@ -64,7 +64,7 @@ Valid for FaceRecognition.
 
     /**
     * Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
     */
     @SerializedName("AsrWordsTask")
     @Expose
@@ -72,7 +72,7 @@ Valid for AsrWordsRecognition.
 
     /**
     * Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
     */
     @SerializedName("AsrFullTextTask")
     @Expose
@@ -87,7 +87,7 @@ Valid when AsrFullTextRecognition is used.
 
     /**
     * Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
     */
     @SerializedName("OcrWordsTask")
     @Expose
@@ -95,7 +95,7 @@ Valid for OcrWordsRecognition.
 
     /**
     * Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
     */
     @SerializedName("OcrFullTextTask")
     @Expose
@@ -103,7 +103,7 @@ Valid when OcrFullTextRecognition is used.
 
     /**
     * Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
     */
     @SerializedName("ObjectTask")
     @Expose
@@ -158,20 +158,20 @@ Valid for ObjectRecognition.
     }
 
     /**
-     * Get Video start and end recognition result. When Type is
-Valid for HeadTailRecognition. 
-     * @return HeadTailTask Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
+     * Get Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used. 
+     * @return HeadTailTask Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
      */
     public AiRecognitionTaskHeadTailResult getHeadTailTask() {
         return this.HeadTailTask;
     }
 
     /**
-     * Set Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
-     * @param HeadTailTask Video start and end recognition result. When Type is
-Valid for HeadTailRecognition.
+     * Set Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
+     * @param HeadTailTask Video start and end recognition result when Type is
+Valid when HeadTailRecognition is used.
      */
     public void setHeadTailTask(AiRecognitionTaskHeadTailResult HeadTailTask) {
         this.HeadTailTask = HeadTailTask;
@@ -179,9 +179,9 @@ Valid for HeadTailRecognition.
 
     /**
      * Get Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition. 
+Valid when set to SegmentRecognition. 
      * @return SegmentTask Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
      */
     public AiRecognitionTaskSegmentResult getSegmentTask() {
         return this.SegmentTask;
@@ -189,9 +189,9 @@ Valid for SegmentRecognition.
 
     /**
      * Set Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
      * @param SegmentTask Video splitting recognition result, which is valid when Type is
-Valid for SegmentRecognition.
+Valid when set to SegmentRecognition.
      */
     public void setSegmentTask(AiRecognitionTaskSegmentResult SegmentTask) {
         this.SegmentTask = SegmentTask;
@@ -219,9 +219,9 @@ Valid for FaceRecognition.
 
     /**
      * Get Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition. 
+Valid when set to AsrWordsRecognition. 
      * @return AsrWordsTask Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
      */
     public AiRecognitionTaskAsrWordsResult getAsrWordsTask() {
         return this.AsrWordsTask;
@@ -229,9 +229,9 @@ Valid for AsrWordsRecognition.
 
     /**
      * Set Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
      * @param AsrWordsTask Speech keyword recognition result. When Type is
-Valid for AsrWordsRecognition.
+Valid when set to AsrWordsRecognition.
      */
     public void setAsrWordsTask(AiRecognitionTaskAsrWordsResult AsrWordsTask) {
         this.AsrWordsTask = AsrWordsTask;
@@ -239,9 +239,9 @@ Valid for AsrWordsRecognition.
 
     /**
      * Get Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used. 
+Valid when set to AsrFullTextRecognition. 
      * @return AsrFullTextTask Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
      */
     public AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() {
         return this.AsrFullTextTask;
@@ -249,9 +249,9 @@ Valid when AsrFullTextRecognition is used.
 
     /**
      * Set Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
      * @param AsrFullTextTask Full speech recognition result. When Type is
-Valid when AsrFullTextRecognition is used.
+Valid when set to AsrFullTextRecognition.
      */
     public void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult AsrFullTextTask) {
         this.AsrFullTextTask = AsrFullTextTask;
@@ -275,9 +275,9 @@ Valid when AsrFullTextRecognition is used.
 
     /**
      * Get Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition. 
+Valid when set to OcrWordsRecognition. 
      * @return OcrWordsTask Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
      */
     public AiRecognitionTaskOcrWordsResult getOcrWordsTask() {
         return this.OcrWordsTask;
@@ -285,9 +285,9 @@ Valid for OcrWordsRecognition.
 
     /**
      * Set Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
      * @param OcrWordsTask Text keyword recognition result. When Type is
-Valid for OcrWordsRecognition.
+Valid when set to OcrWordsRecognition.
      */
     public void setOcrWordsTask(AiRecognitionTaskOcrWordsResult OcrWordsTask) {
         this.OcrWordsTask = OcrWordsTask;
@@ -295,9 +295,9 @@ Valid for OcrWordsRecognition.
 
     /**
      * Get Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used. 
+Valid when set to OcrFullTextRecognition. 
      * @return OcrFullTextTask Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
      */
     public AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() {
         return this.OcrFullTextTask;
@@ -305,9 +305,9 @@ Valid when OcrFullTextRecognition is used.
 
     /**
      * Set Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
      * @param OcrFullTextTask Full text recognition result. When Type is
-Valid when OcrFullTextRecognition is used.
+Valid when set to OcrFullTextRecognition.
      */
     public void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult OcrFullTextTask) {
         this.OcrFullTextTask = OcrFullTextTask;
@@ -315,9 +315,9 @@ Valid when OcrFullTextRecognition is used.
 
     /**
      * Get Object recognition result, which is valid when Type is
-Valid for ObjectRecognition. 
+Valid when set to ObjectRecognition. 
      * @return ObjectTask Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
      */
     public AiRecognitionTaskObjectResult getObjectTask() {
         return this.ObjectTask;
@@ -325,9 +325,9 @@ Valid for ObjectRecognition.
 
     /**
      * Set Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
      * @param ObjectTask Object recognition result, which is valid when Type is
-Valid for ObjectRecognition.
+Valid when set to ObjectRecognition.
      */
     public void setObjectTask(AiRecognitionTaskObjectResult ObjectTask) {
         this.ObjectTask = ObjectTask;

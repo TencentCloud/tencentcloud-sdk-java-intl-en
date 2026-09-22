@@ -31,35 +31,35 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String Type;
 
     /**
-    * <p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+    * <p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
+    * <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+    * <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+    * <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
     */
     @SerializedName("Base64")
     @Expose
     private String Base64;
 
     /**
-    * <p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
+    * <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
     */
     @SerializedName("ReferenceType")
     @Expose
@@ -94,7 +94,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String Usage;
 
     /**
-    * <p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+    * <p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
     */
     @SerializedName("Text")
     @Expose
@@ -117,80 +117,80 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul> 
-     * @return Category <p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+     * Get <p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul> 
+     * @return Category <p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set <p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
-     * @param Category <p>File category. Value:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+     * Set <p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
+     * @param Category <p>File category. Valid values:</p><ul><li>Image: image;</li><li>Video: video;</li><li>Audio: audio;</li></ul>
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol> 
-     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
+     * Get <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol> 
+     * @return FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
-     * @param FileId <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
+     * Set <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+     * @param FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol> 
-     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+     * Get <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol> 
+     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
-     * @param Url <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+     * Set <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+     * @param Url <p>Accessible file URL. This parameter is valid when Type is Url.<br>Description:</p><ol><li>An image less than 10M is recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol> 
-     * @return Base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+     * Get <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol> 
+     * @return Base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
      */
     public String getBase64() {
         return this.Base64;
     }
 
     /**
-     * Set <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
-     * @param Base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+     * Set <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+     * @param Base64 <p>Accessible file Base64. This parameter is valid when Type is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
      */
     public void setBase64(String Base64) {
         this.Base64 = Base64;
     }
 
     /**
-     * Get <p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p> 
-     * @return ReferenceType <p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
+     * Get <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p> 
+     * @return ReferenceType <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
      */
     public String getReferenceType() {
         return this.ReferenceType;
     }
 
     /**
-     * Set <p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
-     * @param ReferenceType <p>Reference Type. Applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset means material, style means style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject means subject, background means background;</p>
+     * Set <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
+     * @param ReferenceType <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method. Available values: asset represents material, style represents style;<br>When using the Kling model and Category is Video, it can distinguish reference video types. feature represents a feature reference video, base represents the video to be edited;<br>When using the PixVerse model, it can be used for multi-image (subject) reference generation mode. Available values: subject represents subject, background represents background;</p>
      */
     public void setReferenceType(String ReferenceType) {
         this.ReferenceType = ReferenceType;
@@ -261,16 +261,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p> 
-     * @return Text <p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+     * Get <p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p> 
+     * @return Text <p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set <p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
-     * @param Text <p><strong>Only effective for the multi-image (subject) reference generation mode of the PixVerse model</strong>. Assign a name to the image for more precise effects. Usage: When the value of this field is "kitten", use @kitten in the Prompt to precisely describe the scenario. A space is required after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+     * Set <p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
+     * @param Text <p><strong>Only effective for the multi-image (subject) reference mode of the PixVerse model</strong>. Assign a name to the image for more precise results. Usage: When this field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be identical to this field.</p>
      */
     public void setText(String Text) {
         this.Text = Text;

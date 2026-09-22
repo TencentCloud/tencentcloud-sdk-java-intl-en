@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MediaVideoStreamItem extends AbstractModel {
 
     /**
-    * Bitrate of video stream, unit: bps.
+    * Bitrate of the video stream. Unit: bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Video stream height. Unit: px.
+    * Height of the video stream. Unit: px.
     */
     @SerializedName("Height")
     @Expose
@@ -45,7 +45,7 @@ public class MediaVideoStreamItem extends AbstractModel {
     private Long Width;
 
     /**
-    * Video stream encoding format, for example, h264.
+    * Video stream encoding format, for example h264.
     */
     @SerializedName("Codec")
     @Expose
@@ -59,7 +59,7 @@ public class MediaVideoStreamItem extends AbstractModel {
     private Long Fps;
 
     /**
-    * Encoding tag. It is valid only when Codec is hevc.
+    * Encoding tag, valid only when Codec is hevc.
     */
     @SerializedName("CodecTag")
     @Expose
@@ -67,39 +67,39 @@ public class MediaVideoStreamItem extends AbstractModel {
 
     /**
     * Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
     */
     @SerializedName("DynamicRangeInfo")
     @Expose
     private DynamicRangeInfo DynamicRangeInfo;
 
     /**
-     * Get Bitrate of video stream, unit: bps. 
-     * @return Bitrate Bitrate of video stream, unit: bps.
+     * Get Bitrate of the video stream. Unit: bps. 
+     * @return Bitrate Bitrate of the video stream. Unit: bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of video stream, unit: bps.
-     * @param Bitrate Bitrate of video stream, unit: bps.
+     * Set Bitrate of the video stream. Unit: bps.
+     * @param Bitrate Bitrate of the video stream. Unit: bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Video stream height. Unit: px. 
-     * @return Height Video stream height. Unit: px.
+     * Get Height of the video stream. Unit: px. 
+     * @return Height Height of the video stream. Unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Video stream height. Unit: px.
-     * @param Height Video stream height. Unit: px.
+     * Set Height of the video stream. Unit: px.
+     * @param Height Height of the video stream. Unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -122,16 +122,16 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get Video stream encoding format, for example, h264. 
-     * @return Codec Video stream encoding format, for example, h264.
+     * Get Video stream encoding format, for example h264. 
+     * @return Codec Video stream encoding format, for example h264.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Video stream encoding format, for example, h264.
-     * @param Codec Video stream encoding format, for example, h264.
+     * Set Video stream encoding format, for example h264.
+     * @param Codec Video stream encoding format, for example h264.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -154,16 +154,16 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get Encoding tag. It is valid only when Codec is hevc. 
-     * @return CodecTag Encoding tag. It is valid only when Codec is hevc.
+     * Get Encoding tag, valid only when Codec is hevc. 
+     * @return CodecTag Encoding tag, valid only when Codec is hevc.
      */
     public String getCodecTag() {
         return this.CodecTag;
     }
 
     /**
-     * Set Encoding tag. It is valid only when Codec is hevc.
-     * @param CodecTag Encoding tag. It is valid only when Codec is hevc.
+     * Set Encoding tag, valid only when Codec is hevc.
+     * @param CodecTag Encoding tag, valid only when Codec is hevc.
      */
     public void setCodecTag(String CodecTag) {
         this.CodecTag = CodecTag;
@@ -171,9 +171,9 @@ public class MediaVideoStreamItem extends AbstractModel {
 
     /**
      * Get Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li> 
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li> 
      * @return DynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public DynamicRangeInfo getDynamicRangeInfo() {
         return this.DynamicRangeInfo;
@@ -181,9 +181,9 @@ public class MediaVideoStreamItem extends AbstractModel {
 
     /**
      * Set Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      * @param DynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public void setDynamicRangeInfo(DynamicRangeInfo DynamicRangeInfo) {
         this.DynamicRangeInfo = DynamicRangeInfo;

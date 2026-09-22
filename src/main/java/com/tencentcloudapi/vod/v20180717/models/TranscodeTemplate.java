@@ -31,7 +31,7 @@ public class TranscodeTemplate extends AbstractModel {
     private String Definition;
 
     /**
-    * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+    * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
     */
     @SerializedName("Container")
     @Expose
@@ -52,14 +52,14 @@ public class TranscodeTemplate extends AbstractModel {
     private String Comment;
 
     /**
-    * <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+    * <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+    * <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
@@ -101,7 +101,7 @@ public class TranscodeTemplate extends AbstractModel {
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+    * <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
     */
     @SerializedName("ContainerType")
     @Expose
@@ -122,7 +122,7 @@ public class TranscodeTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * <p>Segment type. Valid only when Container is hls.</p>
+    * <p>Segment type. It is valid only when Container is hls.</p>
     */
     @SerializedName("SegmentType")
     @Expose
@@ -152,16 +152,16 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p> 
-     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+     * Get <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p> 
+     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
-     * @param Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+     * Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
+     * @param Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
@@ -200,32 +200,32 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li> 
-     * @return Type <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+     * Get <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li> 
+     * @return Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
-     * @param Type <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+     * Set <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+     * @param Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li> 
-     * @return RemoveVideo <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+     * Get <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li> 
+     * @return RemoveVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
-     * @param RemoveVideo <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+     * Set <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
+     * @param RemoveVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
@@ -312,16 +312,16 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li> 
-     * @return ContainerType <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+     * Get <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li> 
+     * @return ContainerType <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
      */
     public String getContainerType() {
         return this.ContainerType;
     }
 
     /**
-     * Set <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
-     * @param ContainerType <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+     * Set <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+     * @param ContainerType <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
      */
     public void setContainerType(String ContainerType) {
         this.ContainerType = ContainerType;
@@ -360,16 +360,16 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Segment type. Valid only when Container is hls.</p> 
-     * @return SegmentType <p>Segment type. Valid only when Container is hls.</p>
+     * Get <p>Segment type. It is valid only when Container is hls.</p> 
+     * @return SegmentType <p>Segment type. It is valid only when Container is hls.</p>
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set <p>Segment type. Valid only when Container is hls.</p>
-     * @param SegmentType <p>Segment type. Valid only when Container is hls.</p>
+     * Set <p>Segment type. It is valid only when Container is hls.</p>
+     * @param SegmentType <p>Segment type. It is valid only when Container is hls.</p>
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;

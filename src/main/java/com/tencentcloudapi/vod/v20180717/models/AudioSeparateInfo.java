@@ -26,7 +26,7 @@ public class AudioSeparateInfo extends AbstractModel {
     /**
     * Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -45,7 +45,7 @@ Default value: normal.
     /**
     * Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
     */
     @SerializedName("Track")
@@ -55,10 +55,10 @@ Default value: vocal.
     /**
      * Get Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li> 
+<li>OFF: disables audio separation</li> 
      * @return Switch Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -67,10 +67,10 @@ Default value: vocal.
     /**
      * Set Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
      * @param Switch Audio separation control switch. Available values:
 <li>ON: enable audio separation;</li>
-<li>OFF: Disable audio separation.</li>
+<li>OFF: disables audio separation</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -107,11 +107,11 @@ Default value: normal.
     /**
      * Get Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal. 
      * @return Track Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
      */
     public String getTrack() {
@@ -121,11 +121,11 @@ Default value: vocal.
     /**
      * Set Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
      * @param Track Output audio track. Available values:
 <li>vocal: output voice.</li>
-<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+<li>background: Output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
 Default value: vocal.
      */
     public void setTrack(String Track) {

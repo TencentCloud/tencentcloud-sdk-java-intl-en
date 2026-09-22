@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
 
     /**
-    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
     private Long [] Definitions;
 
     /**
-    * <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
+    * <p>Sorting method.<br>Sort.Field options: Definition, CreateTime, UpdateTime.</p>
     */
     @SerializedName("Sort")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -91,16 +91,16 @@ public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p> 
-     * @return Sort <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
+     * Get <p>Sorting method.<br>Sort.Field options: Definition, CreateTime, UpdateTime.</p> 
+     * @return Sort <p>Sorting method.<br>Sort.Field options: Definition, CreateTime, UpdateTime.</p>
      */
     public SortBy getSort() {
         return this.Sort;
     }
 
     /**
-     * Set <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
-     * @param Sort <p>Sorting method.<br>Sort.Field Option: Definition, CreateTime, UpdateTime.</p>
+     * Set <p>Sorting method.<br>Sort.Field options: Definition, CreateTime, UpdateTime.</p>
+     * @param Sort <p>Sorting method.<br>Sort.Field options: Definition, CreateTime, UpdateTime.</p>
      */
     public void setSort(SortBy Sort) {
         this.Sort = Sort;

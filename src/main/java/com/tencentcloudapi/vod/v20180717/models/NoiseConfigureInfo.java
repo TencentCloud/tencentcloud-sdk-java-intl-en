@@ -25,8 +25,8 @@ public class NoiseConfigureInfo extends AbstractModel {
 
     /**
     * Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -34,11 +34,11 @@ public class NoiseConfigureInfo extends AbstractModel {
 
     /**
      * Get Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li> 
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li> 
      * @return Switch Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -46,11 +46,11 @@ public class NoiseConfigureInfo extends AbstractModel {
 
     /**
      * Set Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      * @param Switch Video frame noise detection switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

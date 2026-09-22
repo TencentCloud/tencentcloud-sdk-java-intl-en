@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCurrentPlaylistRequest extends AbstractModel {
 
     /**
-    * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+    * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeCurrentPlaylistRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p> 
-     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * Get <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p> 
+     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
-     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+     * Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+     * @param SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

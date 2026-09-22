@@ -45,7 +45,7 @@ public class CreateAigcSubjectTask extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+    * <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -135,16 +135,16 @@ public class CreateAigcSubjectTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Extended error code. A null string indicates success, while other values indicate failure.</p> 
-     * @return ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+     * Get <p>Extended error code. An empty string indicates success, while other values indicate failure.</p> 
+     * @return ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
-     * @param ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+     * Set <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+     * @param ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;

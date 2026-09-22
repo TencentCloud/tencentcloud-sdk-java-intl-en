@@ -52,7 +52,7 @@ public class MediaProcessTaskCoverBySnapshotResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input of the screencapturing for cover image task for videos.
+    * Input of the screencapturing for cover image task.
     */
     @SerializedName("Input")
     @Expose
@@ -66,21 +66,21 @@ public class MediaProcessTaskCoverBySnapshotResult extends AbstractModel {
     private CoverBySnapshotTaskOutput Output;
 
     /**
-    * Task progress of screencapturing for video cover image, in the range of [0,100].
+    * Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -151,16 +151,16 @@ public class MediaProcessTaskCoverBySnapshotResult extends AbstractModel {
     }
 
     /**
-     * Get Input of the screencapturing for cover image task for videos. 
-     * @return Input Input of the screencapturing for cover image task for videos.
+     * Get Input of the screencapturing for cover image task. 
+     * @return Input Input of the screencapturing for cover image task.
      */
     public CoverBySnapshotTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the screencapturing for cover image task for videos.
-     * @param Input Input of the screencapturing for cover image task for videos.
+     * Set Input of the screencapturing for cover image task.
+     * @param Input Input of the screencapturing for cover image task.
      */
     public void setInput(CoverBySnapshotTaskInput Input) {
         this.Input = Input;
@@ -183,48 +183,48 @@ public class MediaProcessTaskCoverBySnapshotResult extends AbstractModel {
     }
 
     /**
-     * Get Task progress of screencapturing for video cover image, in the range of [0,100]. 
-     * @return Progress Task progress of screencapturing for video cover image, in the range of [0,100].
+     * Get Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100. 
+     * @return Progress Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress of screencapturing for video cover image, in the range of [0,100].
-     * @param Progress Task progress of screencapturing for video cover image, in the range of [0,100].
+     * Set Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
+     * @param Progress Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

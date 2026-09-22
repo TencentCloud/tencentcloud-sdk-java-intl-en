@@ -31,7 +31,7 @@ public class ProcessImageAsyncTaskInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * Extended parameters for async image processing.
+    * Extended parameters for asynchronous image processing.
     */
     @SerializedName("ExtendedParameter")
     @Expose
@@ -54,16 +54,16 @@ public class ProcessImageAsyncTaskInput extends AbstractModel {
     }
 
     /**
-     * Get Extended parameters for async image processing. 
-     * @return ExtendedParameter Extended parameters for async image processing.
+     * Get Extended parameters for asynchronous image processing. 
+     * @return ExtendedParameter Extended parameters for asynchronous image processing.
      */
     public ProcessImageAsyncInputExtendedParameter getExtendedParameter() {
         return this.ExtendedParameter;
     }
 
     /**
-     * Set Extended parameters for async image processing.
-     * @param ExtendedParameter Extended parameters for async image processing.
+     * Set Extended parameters for asynchronous image processing.
+     * @param ExtendedParameter Extended parameters for asynchronous image processing.
      */
     public void setExtendedParameter(ProcessImageAsyncInputExtendedParameter ExtendedParameter) {
         this.ExtendedParameter = ExtendedParameter;

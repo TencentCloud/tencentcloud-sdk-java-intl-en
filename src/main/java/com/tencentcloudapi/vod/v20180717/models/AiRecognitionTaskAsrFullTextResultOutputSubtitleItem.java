@@ -25,7 +25,7 @@ public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends Abstra
 
     /**
     * Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +33,7 @@ public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends Abstra
 
     /**
     * Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
     */
     @SerializedName("Name")
     @Expose
@@ -64,9 +64,9 @@ public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends Abstra
 
     /**
      * Get Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z. 
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid. 
      * @return Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      */
     public String getId() {
         return this.Id;
@@ -74,9 +74,9 @@ public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends Abstra
 
     /**
      * Set Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      * @param Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -84,9 +84,9 @@ public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends Abstra
 
     /**
      * Get Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z. 
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid. 
      * @return Name Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      */
     public String getName() {
         return this.Name;
@@ -94,9 +94,9 @@ public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends Abstra
 
     /**
      * Set Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      * @param Name Media asset subtitle name for player display. Valid only when Format is vtt.
-<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+<font color=red>Note:</font> For tasks earlier than 2024-11-01T10:00:00Z, this field is invalid.
      */
     public void setName(String Name) {
         this.Name = Name;

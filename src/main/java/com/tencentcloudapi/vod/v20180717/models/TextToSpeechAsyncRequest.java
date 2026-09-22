@@ -38,7 +38,7 @@ public class TextToSpeechAsyncRequest extends AbstractModel {
     private String VoiceId;
 
     /**
-    * <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+    * <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,21 +52,21 @@ public class TextToSpeechAsyncRequest extends AbstractModel {
     private String LanguageBoost;
 
     /**
-    * <p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
+    * <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, such as zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For async APIs, speaking rate, volume, pitch, and emotion are all under audio_setting, unlike the voice_setting of synchronous APIs. Optional fields:<ul><li>speed (float): Speaking rate. Range: [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume. Range: (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch. Range: [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-    * <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
+    * <p>Output parameters.</p><p>Specifies the output format, etc. The default output is an audio url.</p>
     */
     @SerializedName("Output")
     @Expose
     private TextToSpeechAsyncOutputOption Output;
 
     /**
-    * <p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+    * <p>Identifies the source context. This is used to pass through user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
@@ -112,16 +112,16 @@ public class TextToSpeechAsyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p> 
-     * @return SubAppId <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * Get <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p> 
+     * @return SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
      */
     public String getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
-     * @param SubAppId <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+     * Set <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+     * @param SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
@@ -144,48 +144,48 @@ public class TextToSpeechAsyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul> 
-     * @return ExtParam <p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
+     * Get <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, such as zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For async APIs, speaking rate, volume, pitch, and emotion are all under audio_setting, unlike the voice_setting of synchronous APIs. Optional fields:<ul><li>speed (float): Speaking rate. Range: [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume. Range: (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch. Range: [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul> 
+     * @return ExtParam <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, such as zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For async APIs, speaking rate, volume, pitch, and emotion are all under audio_setting, unlike the voice_setting of synchronous APIs. Optional fields:<ul><li>speed (float): Speaking rate. Range: [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume. Range: (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch. Range: [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set <p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
-     * @param ExtParam <p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
+     * Set <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, such as zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For async APIs, speaking rate, volume, pitch, and emotion are all under audio_setting, unlike the voice_setting of synchronous APIs. Optional fields:<ul><li>speed (float): Speaking rate. Range: [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume. Range: (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch. Range: [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
+     * @param ExtParam <p>Extended parameters for text-to-speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Options: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, such as zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For async APIs, speaking rate, volume, pitch, and emotion are all under audio_setting, unlike the voice_setting of synchronous APIs. Optional fields:<ul><li>speed (float): Speaking rate. Range: [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume. Range: (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch. Range: [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Options: happy, sad, angry, fearful, disgusted, surprised, calm, fluent, whisper.</li><li>sample_rate (int): Sampling rate. Options: 8000, 16000, 22050, 24000, 32000, 44100. Default: 16000.</li><li>format (string): Audio format. Options: mp3, wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;
     }
 
     /**
-     * Get <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p> 
-     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
+     * Get <p>Output parameters.</p><p>Specifies the output format, etc. The default output is an audio url.</p> 
+     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output is an audio url.</p>
      */
     public TextToSpeechAsyncOutputOption getOutput() {
         return this.Output;
     }
 
     /**
-     * Set <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
-     * @param Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
+     * Set <p>Output parameters.</p><p>Specifies the output format, etc. The default output is an audio url.</p>
+     * @param Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output is an audio url.</p>
      */
     public void setOutput(TextToSpeechAsyncOutputOption Output) {
         this.Output = Output;
     }
 
     /**
-     * Get <p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p> 
-     * @return SessionContext <p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+     * Get <p>Identifies the source context. This is used to pass through user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Identifies the source context. This is used to pass through user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set <p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
-     * @param SessionContext <p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+     * Set <p>Identifies the source context. This is used to pass through user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Identifies the source context. This is used to pass through user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

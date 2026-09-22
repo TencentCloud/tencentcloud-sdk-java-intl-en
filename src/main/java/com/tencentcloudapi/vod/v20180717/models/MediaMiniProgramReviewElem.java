@@ -26,8 +26,8 @@ public class MediaMiniProgramReviewElem extends AbstractModel {
     /**
     * Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
@@ -38,7 +38,7 @@ public class MediaMiniProgramReviewElem extends AbstractModel {
     private String Type;
 
     /**
-    * Audio and video review comments.
+    * Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>
@@ -57,16 +57,16 @@ public class MediaMiniProgramReviewElem extends AbstractModel {
     /**
      * Get Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
 <li>Political.Asr: The sound involves inappropriate information.</li> 
      * @return Type Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
@@ -79,16 +79,16 @@ public class MediaMiniProgramReviewElem extends AbstractModel {
     /**
      * Set Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
 <li>Political.Asr: The sound involves inappropriate information.</li>
      * @param Type Audio and video moderation type. 
 <li>Porn: The visual involves offensive content,</li>
-<li>Porn.Ocr: text involves offensive content,</li>
-<li>Porn.Asr: The sound involves offensive content,</li>
+<li>Porn.Ocr: The text involves offensive content,</li>
+<li>Porn.Asr: Sound involves offensive content,</li>
 <li>Terrorism: The visual involves unsafe information,</li>
 <li>Political: The visual involves inappropriate information,</li>
 <li>Political.Ocr: The text involves inappropriate information,</li>
@@ -99,11 +99,11 @@ public class MediaMiniProgramReviewElem extends AbstractModel {
     }
 
     /**
-     * Get Audio and video review comments.
+     * Get Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li> 
-     * @return Suggestion Audio and video review comments.
+     * @return Suggestion Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>
@@ -113,11 +113,11 @@ public class MediaMiniProgramReviewElem extends AbstractModel {
     }
 
     /**
-     * Set Audio and video review comments.
+     * Set Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>
-     * @param Suggestion Audio and video review comments.
+     * @param Suggestion Audio/video moderation feedback.
 <li>pass: confirm normal,</li>
 <li>block: confirmed violation,</li>
 <li>review: suspected violation.</li>

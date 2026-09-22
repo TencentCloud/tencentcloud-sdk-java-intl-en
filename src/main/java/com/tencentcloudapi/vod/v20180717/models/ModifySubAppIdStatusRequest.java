@@ -24,66 +24,66 @@ import java.util.HashMap;
 public class ModifySubAppIdStatusRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Application status. Valid values:
+    * App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Application status. Valid values:
+     * Get App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling. 
-     * @return Status Application status. Valid values:
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it. 
+     * @return Status App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Application status. Valid values:
+     * Set App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
-     * @param Status Application status. Valid values:
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
+     * @param Status App status. Valid values:
 <li>On: enabled.</li>
 <li>Off: disabled</li>
 <li>Destroyed: Terminated.</li>
-If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+If the current status is `Destoying`, the enable operation is not allowed. You have to wait until the destruction is completed before you can re-enable it.
      */
     public void setStatus(String Status) {
         this.Status = Status;

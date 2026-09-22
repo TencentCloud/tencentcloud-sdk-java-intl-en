@@ -31,7 +31,7 @@ public class ConcatTask2017 extends AbstractModel {
     private String TaskId;
 
     /**
-    * Video splicing source file information.
+    * Source file information for video splicing.
     */
     @SerializedName("FileInfoSet")
     @Expose
@@ -54,16 +54,16 @@ public class ConcatTask2017 extends AbstractModel {
     }
 
     /**
-     * Get Video splicing source file information. 
-     * @return FileInfoSet Video splicing source file information.
+     * Get Source file information for video splicing. 
+     * @return FileInfoSet Source file information for video splicing.
      */
     public ConcatFileInfo2017 [] getFileInfoSet() {
         return this.FileInfoSet;
     }
 
     /**
-     * Set Video splicing source file information.
-     * @param FileInfoSet Video splicing source file information.
+     * Set Source file information for video splicing.
+     * @param FileInfoSet Source file information for video splicing.
      */
     public void setFileInfoSet(ConcatFileInfo2017 [] FileInfoSet) {
         this.FileInfoSet = FileInfoSet;

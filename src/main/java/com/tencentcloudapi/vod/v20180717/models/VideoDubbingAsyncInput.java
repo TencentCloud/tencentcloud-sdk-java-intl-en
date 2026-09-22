@@ -45,7 +45,7 @@ public class VideoDubbingAsyncInput extends AbstractModel {
     private String SrcLanguage;
 
     /**
-    * <p>Target language of the video. Default: en.</p>
+    * <p>Target language of the video. Default: en</p>
     */
     @SerializedName("DstLanguage")
     @Expose
@@ -107,16 +107,16 @@ public class VideoDubbingAsyncInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Target language of the video. Default: en.</p> 
-     * @return DstLanguage <p>Target language of the video. Default: en.</p>
+     * Get <p>Target language of the video. Default: en</p> 
+     * @return DstLanguage <p>Target language of the video. Default: en</p>
      */
     public String getDstLanguage() {
         return this.DstLanguage;
     }
 
     /**
-     * Set <p>Target language of the video. Default: en.</p>
-     * @param DstLanguage <p>Target language of the video. Default: en.</p>
+     * Set <p>Target language of the video. Default: en</p>
+     * @param DstLanguage <p>Target language of the video. Default: en</p>
      */
     public void setDstLanguage(String DstLanguage) {
         this.DstLanguage = DstLanguage;

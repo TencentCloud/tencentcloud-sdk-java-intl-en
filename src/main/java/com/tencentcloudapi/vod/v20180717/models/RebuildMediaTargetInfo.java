@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RebuildMediaTargetInfo extends AbstractModel {
 
     /**
-    * Output filename, up to 64 characters. By default, the system specifies the generated file name.
+    * Output filename, up to 64 characters. By default, the system assigns the generated filename.
     */
     @SerializedName("MediaName")
     @Expose
@@ -46,14 +46,14 @@ public class RebuildMediaTargetInfo extends AbstractModel {
     private Long ClassId;
 
     /**
-    * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Output file container format. Available values: mp4, flv, hls. Default: mp4.
+    * Output file container format. Available values: mp4, flv, hls. Default value: mp4.
     */
     @SerializedName("Container")
     @Expose
@@ -67,15 +67,15 @@ public class RebuildMediaTargetInfo extends AbstractModel {
     private RebuildMediaTargetVideoStream VideoStream;
 
     /**
-    * Output audio information.
+    * Output audio content.
     */
     @SerializedName("AudioStream")
     @Expose
     private RebuildMediaTargetAudioStream AudioStream;
 
     /**
-    * Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+    * Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
@@ -86,7 +86,7 @@ Default value: 0.
 
     /**
     * Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
@@ -96,16 +96,16 @@ Default value: 0.
     private Long RemoveAudio;
 
     /**
-     * Get Output filename, up to 64 characters. By default, the system specifies the generated file name. 
-     * @return MediaName Output filename, up to 64 characters. By default, the system specifies the generated file name.
+     * Get Output filename, up to 64 characters. By default, the system assigns the generated filename. 
+     * @return MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output filename, up to 64 characters. By default, the system specifies the generated file name.
-     * @param MediaName Output filename, up to 64 characters. By default, the system specifies the generated file name.
+     * Set Output filename, up to 64 characters. By default, the system assigns the generated filename.
+     * @param MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
@@ -148,32 +148,32 @@ Default value: 0.
     }
 
     /**
-     * Get Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Output file container format. Available values: mp4, flv, hls. Default: mp4. 
-     * @return Container Output file container format. Available values: mp4, flv, hls. Default: mp4.
+     * Get Output file container format. Available values: mp4, flv, hls. Default value: mp4. 
+     * @return Container Output file container format. Available values: mp4, flv, hls. Default value: mp4.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Output file container format. Available values: mp4, flv, hls. Default: mp4.
-     * @param Container Output file container format. Available values: mp4, flv, hls. Default: mp4.
+     * Set Output file container format. Available values: mp4, flv, hls. Default value: mp4.
+     * @param Container Output file container format. Available values: mp4, flv, hls. Default value: mp4.
      */
     public void setContainer(String Container) {
         this.Container = Container;
@@ -196,29 +196,29 @@ Default value: 0.
     }
 
     /**
-     * Get Output audio information. 
-     * @return AudioStream Output audio information.
+     * Get Output audio content. 
+     * @return AudioStream Output audio content.
      */
     public RebuildMediaTargetAudioStream getAudioStream() {
         return this.AudioStream;
     }
 
     /**
-     * Set Output audio information.
-     * @param AudioStream Output audio information.
+     * Set Output audio content.
+     * @param AudioStream Output audio content.
      */
     public void setAudioStream(RebuildMediaTargetAudioStream AudioStream) {
         this.AudioStream = AudioStream;
     }
 
     /**
-     * Get Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * Get Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0. 
-     * @return RemoveVideo Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * @return RemoveVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
@@ -228,13 +228,13 @@ Default value: 0.
     }
 
     /**
-     * Set Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * Set Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
-     * @param RemoveVideo Indicates whether to remove video data. Valid values:
-<li>0: retention</li>
+     * @param RemoveVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
@@ -245,12 +245,12 @@ Default value: 0.
 
     /**
      * Get Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0. 
      * @return RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
@@ -261,12 +261,12 @@ Default value: 0.
 
     /**
      * Set Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.
      * @param RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>0: Reserved</li>
 <li>1: Remove</li>
 
 Default value: 0.

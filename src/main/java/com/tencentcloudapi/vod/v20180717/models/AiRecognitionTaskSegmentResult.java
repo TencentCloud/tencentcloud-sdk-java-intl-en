@@ -31,7 +31,7 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -52,7 +52,7 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input information of the video splitting task.
+    * Video splitting task input information.
     */
     @SerializedName("Input")
     @Expose
@@ -66,14 +66,14 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel {
     private AiRecognitionTaskSegmentResultOutput Output;
 
     /**
-    * Progress of the video splitting task. Value range: 0–100.
+    * Progress of the video splitting task, in the range of [0,100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -103,16 +103,16 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel {
     }
 
     /**
-     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list. 
+     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -151,16 +151,16 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel {
     }
 
     /**
-     * Get Input information of the video splitting task. 
-     * @return Input Input information of the video splitting task.
+     * Get Video splitting task input information. 
+     * @return Input Video splitting task input information.
      */
     public AiRecognitionTaskSegmentResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input information of the video splitting task.
-     * @param Input Input information of the video splitting task.
+     * Set Video splitting task input information.
+     * @param Input Video splitting task input information.
      */
     public void setInput(AiRecognitionTaskSegmentResultInput Input) {
         this.Input = Input;
@@ -183,32 +183,32 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel {
     }
 
     /**
-     * Get Progress of the video splitting task. Value range: 0–100. 
-     * @return Progress Progress of the video splitting task. Value range: 0–100.
+     * Get Progress of the video splitting task, in the range of [0,100]. 
+     * @return Progress Progress of the video splitting task, in the range of [0,100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the video splitting task. Value range: 0–100.
-     * @param Progress Progress of the video splitting task. Value range: 0–100.
+     * Set Progress of the video splitting task, in the range of [0,100].
+     * @param Progress Progress of the video splitting task, in the range of [0,100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Video splitting task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Start execution time of the video splitting task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;

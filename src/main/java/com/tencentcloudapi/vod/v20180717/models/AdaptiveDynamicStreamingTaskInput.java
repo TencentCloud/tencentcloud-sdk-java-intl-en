@@ -59,7 +59,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+    * <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
     */
     @SerializedName("SubtitleSet")
     @Expose
@@ -73,7 +73,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private SubtitleInfoInput [] SubtitleInfoSet;
 
     /**
-    * <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+    * <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -160,16 +160,16 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p> 
-     * @return SubtitleSet <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+     * Get <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p> 
+     * @return SubtitleSet <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
      */
     public String [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
-     * @param SubtitleSet <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+     * Set <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+     * @param SubtitleSet <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
      */
     public void setSubtitleSet(String [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;
@@ -192,16 +192,16 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p> 
-     * @return DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+     * Get <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p> 
+     * @return DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
      */
     public ThirdPartyDrmInfo getDrmInfo() {
         return this.DrmInfo;
     }
 
     /**
-     * Set <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
-     * @param DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+     * Set <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
+     * @param DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
      */
     public void setDrmInfo(ThirdPartyDrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;

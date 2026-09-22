@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ProductImageConfig extends AbstractModel {
 
     /**
-    * Prompt for image generation background. If this field is default, inspiration is generated automatically.
+    * Prompt for generating the image background. If this field is default, inspiration is generated automatically.
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * Prompt content used to prevent the model from generating images.
+    * Prompt used to prevent the model from image generation.
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -59,32 +59,32 @@ public class ProductImageConfig extends AbstractModel {
     private Long OutputImageCount;
 
     /**
-     * Get Prompt for image generation background. If this field is default, inspiration is generated automatically. 
-     * @return Prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
+     * Get Prompt for generating the image background. If this field is default, inspiration is generated automatically. 
+     * @return Prompt Prompt for generating the image background. If this field is default, inspiration is generated automatically.
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set Prompt for image generation background. If this field is default, inspiration is generated automatically.
-     * @param Prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
+     * Set Prompt for generating the image background. If this field is default, inspiration is generated automatically.
+     * @param Prompt Prompt for generating the image background. If this field is default, inspiration is generated automatically.
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get Prompt content used to prevent the model from generating images. 
-     * @return NegativePrompt Prompt content used to prevent the model from generating images.
+     * Get Prompt used to prevent the model from image generation. 
+     * @return NegativePrompt Prompt used to prevent the model from image generation.
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set Prompt content used to prevent the model from generating images.
-     * @param NegativePrompt Prompt content used to prevent the model from generating images.
+     * Set Prompt used to prevent the model from image generation.
+     * @param NegativePrompt Prompt used to prevent the model from image generation.
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;

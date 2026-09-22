@@ -25,7 +25,7 @@ public class UrlSignatureAuthPolicy extends AbstractModel {
 
     /**
     * [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
     */
     @SerializedName("Status")
@@ -42,10 +42,10 @@ The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisib
 
     /**
      * Get [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li> 
      * @return Status [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
      */
     public String getStatus() {
@@ -54,10 +54,10 @@ The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisib
 
     /**
      * Set [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
      * @param Status [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
-<li>Enabled: enabled.</li>
+<li>Enabled: enablement.</li>
 <li>Disabled: disabled.</li>
      */
     public void setStatus(String Status) {

@@ -38,7 +38,7 @@ public class SceneAigcVideoTaskInput extends AbstractModel {
     private SceneAigcVideoTaskInputFileInfo [] FileInfos;
 
     /**
-    * Configuration of the output media file for the scenario-based image generation task.
+    * Output media file configuration for scenario-based image generation tasks.
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -77,16 +77,16 @@ public class SceneAigcVideoTaskInput extends AbstractModel {
     }
 
     /**
-     * Get Configuration of the output media file for the scenario-based image generation task. 
-     * @return OutputConfig Configuration of the output media file for the scenario-based image generation task.
+     * Get Output media file configuration for scenario-based image generation tasks. 
+     * @return OutputConfig Output media file configuration for scenario-based image generation tasks.
      */
     public SceneAigcVideoOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Configuration of the output media file for the scenario-based image generation task.
-     * @param OutputConfig Configuration of the output media file for the scenario-based image generation task.
+     * Set Output media file configuration for scenario-based image generation tasks.
+     * @param OutputConfig Output media file configuration for scenario-based image generation tasks.
      */
     public void setOutputConfig(SceneAigcVideoOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

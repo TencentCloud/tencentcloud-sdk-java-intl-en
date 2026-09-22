@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAIAnalysisTemplateResponse extends AbstractModel {
 
     /**
-    * Audio and video content analysis template unique identifier.
+    * Unique ID of the audio and video content analysis template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAIAnalysisTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Audio and video content analysis template unique identifier. 
-     * @return Definition Audio and video content analysis template unique identifier.
+     * Get Unique ID of the audio and video content analysis template. 
+     * @return Definition Unique ID of the audio and video content analysis template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Audio and video content analysis template unique identifier.
-     * @param Definition Audio and video content analysis template unique identifier.
+     * Set Unique ID of the audio and video content analysis template.
+     * @param Definition Unique ID of the audio and video content analysis template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

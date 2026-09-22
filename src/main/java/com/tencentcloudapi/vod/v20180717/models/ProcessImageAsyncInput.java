@@ -45,7 +45,7 @@ public class ProcessImageAsyncInput extends AbstractModel {
     private ProcessImageAsyncTaskInput ImageTaskInput;
 
     /**
-    * <p>Output media file configuration for image processing tasks.</p>
+    * <p>Configuration of the output media file for an image processing task.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -100,16 +100,16 @@ public class ProcessImageAsyncInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Output media file configuration for image processing tasks.</p> 
-     * @return OutputConfig <p>Output media file configuration for image processing tasks.</p>
+     * Get <p>Configuration of the output media file for an image processing task.</p> 
+     * @return OutputConfig <p>Configuration of the output media file for an image processing task.</p>
      */
     public ProcessImageAsyncOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output media file configuration for image processing tasks.</p>
-     * @param OutputConfig <p>Output media file configuration for image processing tasks.</p>
+     * Set <p>Configuration of the output media file for an image processing task.</p>
+     * @param OutputConfig <p>Configuration of the output media file for an image processing task.</p>
      */
     public void setOutputConfig(ProcessImageAsyncOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

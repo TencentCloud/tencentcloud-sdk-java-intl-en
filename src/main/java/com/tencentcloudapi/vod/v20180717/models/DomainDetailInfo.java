@@ -38,7 +38,7 @@ public class DomainDetailInfo extends AbstractModel {
     private AccelerateAreaInfo [] AccelerateAreaInfos;
 
     /**
-    * <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
+    * <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
     */
     @SerializedName("DeployStatus")
     @Expose
@@ -73,7 +73,7 @@ public class DomainDetailInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * <p>Domain name QUIC configuration information.</p>
+    * <p>Domain name QUIC configuration message.</p>
     */
     @SerializedName("QUICConfig")
     @Expose
@@ -87,7 +87,7 @@ public class DomainDetailInfo extends AbstractModel {
     private IPFilterPolicy IPFilterPolicy;
 
     /**
-    * <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+    * <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
     */
     @SerializedName("Type")
     @Expose
@@ -126,16 +126,16 @@ public class DomainDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li> 
-     * @return DeployStatus <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
+     * Get <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li> 
+     * @return DeployStatus <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
      */
     public String getDeployStatus() {
         return this.DeployStatus;
     }
 
     /**
-     * Set <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
-     * @param DeployStatus <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
+     * Set <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
+     * @param DeployStatus <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
      */
     public void setDeployStatus(String DeployStatus) {
         this.DeployStatus = DeployStatus;
@@ -206,16 +206,16 @@ public class DomainDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Domain name QUIC configuration information.</p> 
-     * @return QUICConfig <p>Domain name QUIC configuration information.</p>
+     * Get <p>Domain name QUIC configuration message.</p> 
+     * @return QUICConfig <p>Domain name QUIC configuration message.</p>
      */
     public DomainQUICConfig getQUICConfig() {
         return this.QUICConfig;
     }
 
     /**
-     * Set <p>Domain name QUIC configuration information.</p>
-     * @param QUICConfig <p>Domain name QUIC configuration information.</p>
+     * Set <p>Domain name QUIC configuration message.</p>
+     * @param QUICConfig <p>Domain name QUIC configuration message.</p>
      */
     public void setQUICConfig(DomainQUICConfig QUICConfig) {
         this.QUICConfig = QUICConfig;
@@ -238,16 +238,16 @@ public class DomainDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p> 
-     * @return Type <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+     * Get <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p> 
+     * @return Type <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
-     * @param Type <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+     * Set <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+     * @param Type <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;

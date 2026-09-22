@@ -58,7 +58,7 @@ When the value is 0, it means VOD automatically sets the bitrate.
 
     /**
     * Sampling rate of the audio stream. Available values:
-<li>16000, selectable only when Codec is pcm16.</li>
+<li>16000. This is selectable only when Codec is pcm16.</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -72,7 +72,7 @@ Unit: Hz.
     * Audio channel. Valid values:
 <li>1: single channel.</li>
 <li>2: dual channel.</li>
-<li>6: Stereo.</li>
+<li>6: Stereo</li>
 <li>0: The number of audio channels remains the same as the original audio</li>
 When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
 Default value: 2.
@@ -191,13 +191,13 @@ When the value is 0, it means VOD automatically sets the bitrate.
 
     /**
      * Get Sampling rate of the audio stream. Available values:
-<li>16000, selectable only when Codec is pcm16.</li>
+<li>16000. This is selectable only when Codec is pcm16.</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
 Unit: Hz. 
      * @return SampleRate Sampling rate of the audio stream. Available values:
-<li>16000, selectable only when Codec is pcm16.</li>
+<li>16000. This is selectable only when Codec is pcm16.</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -209,13 +209,13 @@ Unit: Hz.
 
     /**
      * Set Sampling rate of the audio stream. Available values:
-<li>16000, selectable only when Codec is pcm16.</li>
+<li>16000. This is selectable only when Codec is pcm16.</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
 Unit: Hz.
      * @param SampleRate Sampling rate of the audio stream. Available values:
-<li>16000, selectable only when Codec is pcm16.</li>
+<li>16000. This is selectable only when Codec is pcm16.</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -229,14 +229,14 @@ Unit: Hz.
      * Get Audio channel. Valid values:
 <li>1: single channel.</li>
 <li>2: dual channel.</li>
-<li>6: Stereo.</li>
+<li>6: Stereo</li>
 <li>0: The number of audio channels remains the same as the original audio</li>
 When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
 Default value: 2. 
      * @return AudioChannel Audio channel. Valid values:
 <li>1: single channel.</li>
 <li>2: dual channel.</li>
-<li>6: Stereo.</li>
+<li>6: Stereo</li>
 <li>0: The number of audio channels remains the same as the original audio</li>
 When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
 Default value: 2.
@@ -249,14 +249,14 @@ Default value: 2.
      * Set Audio channel. Valid values:
 <li>1: single channel.</li>
 <li>2: dual channel.</li>
-<li>6: Stereo.</li>
+<li>6: Stereo</li>
 <li>0: The number of audio channels remains the same as the original audio</li>
 When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
 Default value: 2.
      * @param AudioChannel Audio channel. Valid values:
 <li>1: single channel.</li>
 <li>2: dual channel.</li>
-<li>6: Stereo.</li>
+<li>6: Stereo</li>
 <li>0: The number of audio channels remains the same as the original audio</li>
 When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
 Default value: 2.

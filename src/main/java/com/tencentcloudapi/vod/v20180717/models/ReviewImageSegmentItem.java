@@ -33,19 +33,19 @@ public class ReviewImageSegmentItem extends AbstractModel {
     /**
     * Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * Tag of the most likely rule violation in the suspected segment. Value range:
+    * Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
     */
     @SerializedName("Label")
@@ -53,23 +53,23 @@ public class ReviewImageSegmentItem extends AbstractModel {
     private String Label;
 
     /**
-    * Rule violation subtag.
+    * Rule-violating subtag.
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
+    * Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
     */
     @SerializedName("Form")
     @Expose
     private String Form;
 
     /**
-    * Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+    * Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
@@ -108,10 +108,10 @@ public class ReviewImageSegmentItem extends AbstractModel {
     /**
      * Get Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li> 
+<li>block: confirmed violation, suggest banning.</li> 
      * @return Suggestion Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -120,29 +120,29 @@ public class ReviewImageSegmentItem extends AbstractModel {
     /**
      * Set Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
      * @param Suggestion Result suggestions for identifying violations in suspected clips. Value range:
 <li>review: suspected violation, suggest re-examination;</li>
-<li>block: Confirmed violation. Suggest banning.</li>
+<li>block: confirmed violation, suggest banning.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Tag of the most likely rule violation in the suspected segment. Value range:
+     * Get Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li> 
-     * @return Label Tag of the most likely rule violation in the suspected segment. Value range:
+     * @return Label Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
      */
     public String getLabel() {
@@ -150,19 +150,19 @@ public class ReviewImageSegmentItem extends AbstractModel {
     }
 
     /**
-     * Set Tag of the most likely rule violation in the suspected segment. Value range:
+     * Set Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
-     * @param Label Tag of the most likely rule violation in the suspected segment. Value range:
+     * @param Label Tag of the most likely rule violation for the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal activities;</li>
+<li>Illegal: illegal;</li>
 <li>Abuse: abusive language.</li>
      */
     public void setLabel(String Label) {
@@ -170,56 +170,56 @@ public class ReviewImageSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get Rule violation subtag. 
-     * @return SubLabel Rule violation subtag.
+     * Get Rule-violating subtag. 
+     * @return SubLabel Rule-violating subtag.
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set Rule violation subtag.
-     * @param SubLabel Rule violation subtag.
+     * Set Rule-violating subtag.
+     * @param SubLabel Rule-violating subtag.
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li> 
-     * @return Form Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
+     * Get Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li> 
+     * @return Form Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
      */
     public String getForm() {
         return this.Form;
     }
 
     /**
-     * Set Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
-     * @param Form Suspected segment violation form. Value range:
-<li>Image: people or icons in the image;</li>
-<li>OCR: text on the screen.</li>
+     * Set Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
+     * @param Form Suspected segment violation type. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text in the image.</li>
      */
     public void setForm(String Form) {
         this.Form = Form;
     }
 
     /**
-     * Get Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner. 
-     * @return AreaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * Get Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner. 
+     * @return AreaCoordSet Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-     * @param AreaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * Set Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+     * @param AreaCoordSet Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

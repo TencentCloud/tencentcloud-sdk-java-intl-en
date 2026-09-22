@@ -31,7 +31,7 @@ public class QualityInspectStrategy extends AbstractModel {
     private String StrategyType;
 
     /**
-    * <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+    * <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
     */
     @SerializedName("TimeSpotCheck")
     @Expose
@@ -54,16 +54,16 @@ public class QualityInspectStrategy extends AbstractModel {
     }
 
     /**
-     * Get <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p> 
-     * @return TimeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+     * Get <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p> 
+     * @return TimeSpotCheck <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
      */
     public QualityInspectTimeSpotCheck getTimeSpotCheck() {
         return this.TimeSpotCheck;
     }
 
     /**
-     * Set <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
-     * @param TimeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+     * Set <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
+     * @param TimeSpotCheck <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
      */
     public void setTimeSpotCheck(QualityInspectTimeSpotCheck TimeSpotCheck) {
         this.TimeSpotCheck = TimeSpotCheck;

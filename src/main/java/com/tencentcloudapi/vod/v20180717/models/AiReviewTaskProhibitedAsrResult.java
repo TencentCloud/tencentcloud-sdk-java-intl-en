@@ -52,21 +52,21 @@ public class AiReviewTaskProhibitedAsrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input for Asr text moderation tasks in audio/video moderation.
+    * Task input for prohibited information recognition in Asr text during audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewProhibitedAsrTaskInput Input;
 
     /**
-    * Asr text moderation prohibited task output for audio/video moderation.
+    * Task output of prohibited information recognition in Asr text during audio/video moderation.
     */
     @SerializedName("Output")
     @Expose
     private AiReviewProhibitedAsrTaskOutput Output;
 
     /**
-    * Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+    * Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
     */
     @SerializedName("Progress")
     @Expose
@@ -137,48 +137,48 @@ public class AiReviewTaskProhibitedAsrResult extends AbstractModel {
     }
 
     /**
-     * Get Input for Asr text moderation tasks in audio/video moderation. 
-     * @return Input Input for Asr text moderation tasks in audio/video moderation.
+     * Get Task input for prohibited information recognition in Asr text during audio/video moderation. 
+     * @return Input Task input for prohibited information recognition in Asr text during audio/video moderation.
      */
     public AiReviewProhibitedAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for Asr text moderation tasks in audio/video moderation.
-     * @param Input Input for Asr text moderation tasks in audio/video moderation.
+     * Set Task input for prohibited information recognition in Asr text during audio/video moderation.
+     * @param Input Task input for prohibited information recognition in Asr text during audio/video moderation.
      */
     public void setInput(AiReviewProhibitedAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Asr text moderation prohibited task output for audio/video moderation. 
-     * @return Output Asr text moderation prohibited task output for audio/video moderation.
+     * Get Task output of prohibited information recognition in Asr text during audio/video moderation. 
+     * @return Output Task output of prohibited information recognition in Asr text during audio/video moderation.
      */
     public AiReviewProhibitedAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Asr text moderation prohibited task output for audio/video moderation.
-     * @param Output Asr text moderation prohibited task output for audio/video moderation.
+     * Set Task output of prohibited information recognition in Asr text during audio/video moderation.
+     * @param Output Task output of prohibited information recognition in Asr text during audio/video moderation.
      */
     public void setOutput(AiReviewProhibitedAsrTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100. 
-     * @return Progress Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+     * Get Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100. 
+     * @return Progress Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
-     * @param Progress Progress of the Asr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+     * Set Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
+     * @param Progress Progress of the Asr text prohibited task moderation for audio/video. Value range: 0-100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

@@ -25,7 +25,7 @@ public class AudioBeautifyInfo extends AbstractModel {
 
     /**
     * Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
     */
     @SerializedName("Switch")
@@ -44,10 +44,10 @@ Default value: declick.
 
     /**
      * Get Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li> 
      * @return Switch Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
      */
     public String getSwitch() {
@@ -56,10 +56,10 @@ Default value: declick.
 
     /**
      * Set Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
      * @param Switch Audio beautification control switch. Available values:
-<li>ON: enable audio beautification</li>
+<li>ON: enable audio beautification;</li>
 <li>OFF: disables audio beautification.</li>
      */
     public void setSwitch(String Switch) {

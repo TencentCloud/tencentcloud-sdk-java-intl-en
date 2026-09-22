@@ -31,7 +31,7 @@ public class AiSampleWordInfo extends AbstractModel {
     private String Keyword;
 
     /**
-    * <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+    * <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
     */
     @SerializedName("Tags")
     @Expose
@@ -54,16 +54,16 @@ public class AiSampleWordInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li> 
-     * @return Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+     * Get <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li> 
+     * @return Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
-     * @param Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+     * Set <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
+     * @param Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

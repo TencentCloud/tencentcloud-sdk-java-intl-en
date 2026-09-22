@@ -31,7 +31,7 @@ public class CreateDomainVerifyRecordResponse extends AbstractModel {
     private DNSVerifyInfo DNSVerifyInfo;
 
     /**
-    * File validation information
+    * File verification information
     */
     @SerializedName("FileVerifyInfo")
     @Expose
@@ -61,16 +61,16 @@ public class CreateDomainVerifyRecordResponse extends AbstractModel {
     }
 
     /**
-     * Get File validation information 
-     * @return FileVerifyInfo File validation information
+     * Get File verification information 
+     * @return FileVerifyInfo File verification information
      */
     public FileVerifyInfo getFileVerifyInfo() {
         return this.FileVerifyInfo;
     }
 
     /**
-     * Set File validation information
-     * @param FileVerifyInfo File validation information
+     * Set File verification information
+     * @param FileVerifyInfo File verification information
      */
     public void setFileVerifyInfo(FileVerifyInfo FileVerifyInfo) {
         this.FileVerifyInfo = FileVerifyInfo;

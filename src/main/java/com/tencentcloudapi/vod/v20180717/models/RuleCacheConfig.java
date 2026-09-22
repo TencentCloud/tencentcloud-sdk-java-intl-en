@@ -38,7 +38,7 @@ public class RuleCacheConfig extends AbstractModel {
     private CacheConfigNoCache NoCache;
 
     /**
-    * Follow the origin server configuration.
+    * Follow the origin site configuration.
     */
     @SerializedName("FollowOrigin")
     @Expose
@@ -77,16 +77,16 @@ public class RuleCacheConfig extends AbstractModel {
     }
 
     /**
-     * Get Follow the origin server configuration. 
-     * @return FollowOrigin Follow the origin server configuration.
+     * Get Follow the origin site configuration. 
+     * @return FollowOrigin Follow the origin site configuration.
      */
     public CacheConfigFollowOrigin getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set Follow the origin server configuration.
-     * @param FollowOrigin Follow the origin server configuration.
+     * Set Follow the origin site configuration.
+     * @param FollowOrigin Follow the origin site configuration.
      */
     public void setFollowOrigin(CacheConfigFollowOrigin FollowOrigin) {
         this.FollowOrigin = FollowOrigin;

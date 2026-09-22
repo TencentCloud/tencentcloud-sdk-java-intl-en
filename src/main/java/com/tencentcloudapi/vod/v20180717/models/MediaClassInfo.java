@@ -45,7 +45,7 @@ public class MediaClassInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+    * Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
     */
     @SerializedName("Level")
     @Expose
@@ -114,16 +114,16 @@ public class MediaClassInfo extends AbstractModel {
     }
 
     /**
-     * Get Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers. 
-     * @return Level Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+     * Get Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels. 
+     * @return Level Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
-     * @param Level Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+     * Set Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
+     * @param Level Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
      */
     public void setLevel(Long Level) {
         this.Level = Level;

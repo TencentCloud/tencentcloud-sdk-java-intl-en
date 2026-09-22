@@ -31,7 +31,7 @@ public class SubtitleInfoInput extends AbstractModel {
     private String Id;
 
     /**
-    * <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+    * <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates usage of the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing failed.</p>
     */
     @SerializedName("StreamIndex")
     @Expose
@@ -73,21 +73,21 @@ public class SubtitleInfoInput extends AbstractModel {
     private String YPos;
 
     /**
-    * <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+    * <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. See the following diagram:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
     */
     @SerializedName("BoardY")
     @Expose
     private String BoardY;
 
     /**
-    * <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+    * <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
     */
     @SerializedName("BoardWidth")
     @Expose
     private String BoardWidth;
 
     /**
-    * <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+    * <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
     */
     @SerializedName("BoardHeight")
     @Expose
@@ -108,14 +108,14 @@ public class SubtitleInfoInput extends AbstractModel {
     private Float BoardAlpha;
 
     /**
-    * <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+    * <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: Top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: Bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
     */
     @SerializedName("Alignment")
     @Expose
     private String Alignment;
 
     /**
-    * <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+    * <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>By default if left blank, it is 0.3% of the source video height.</p>
     */
     @SerializedName("OutlineWidth")
     @Expose
@@ -157,7 +157,7 @@ public class SubtitleInfoInput extends AbstractModel {
     private Float ShadowAlpha;
 
     /**
-    * <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
+    * <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 1000.</li><li>Percentage: N%, N value ranges from 0 to 100.</li></ul><p>Default value: 0</p>
     */
     @SerializedName("LineSpacing")
     @Expose
@@ -180,16 +180,16 @@ public class SubtitleInfoInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p> 
-     * @return StreamIndex <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+     * Get <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates usage of the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing failed.</p> 
+     * @return StreamIndex <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates usage of the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing failed.</p>
      */
     public Long getStreamIndex() {
         return this.StreamIndex;
     }
 
     /**
-     * Set <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
-     * @param StreamIndex <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+     * Set <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates usage of the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing failed.</p>
+     * @param StreamIndex <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates usage of the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing failed.</p>
      */
     public void setStreamIndex(Long StreamIndex) {
         this.StreamIndex = StreamIndex;
@@ -276,48 +276,48 @@ public class SubtitleInfoInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul> 
-     * @return BoardY <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+     * Get <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. See the following diagram:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul> 
+     * @return BoardY <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. See the following diagram:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
      */
     public String getBoardY() {
         return this.BoardY;
     }
 
     /**
-     * Set <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
-     * @param BoardY <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+     * Set <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. See the following diagram:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+     * @param BoardY <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. See the following diagram:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
      */
     public void setBoardY(String BoardY) {
         this.BoardY = BoardY;
     }
 
     /**
-     * Get <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul> 
-     * @return BoardWidth <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+     * Get <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul> 
+     * @return BoardWidth <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
      */
     public String getBoardWidth() {
         return this.BoardWidth;
     }
 
     /**
-     * Set <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
-     * @param BoardWidth <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+     * Set <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+     * @param BoardWidth <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
      */
     public void setBoardWidth(String BoardWidth) {
         this.BoardWidth = BoardWidth;
     }
 
     /**
-     * Get <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul> 
-     * @return BoardHeight <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+     * Get <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul> 
+     * @return BoardHeight <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
      */
     public String getBoardHeight() {
         return this.BoardHeight;
     }
 
     /**
-     * Set <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
-     * @param BoardHeight <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+     * Set <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+     * @param BoardHeight <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
      */
     public void setBoardHeight(String BoardHeight) {
         this.BoardHeight = BoardHeight;
@@ -356,32 +356,32 @@ public class SubtitleInfoInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p> 
-     * @return Alignment <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+     * Get <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: Top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: Bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p> 
+     * @return Alignment <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: Top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: Bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
      */
     public String getAlignment() {
         return this.Alignment;
     }
 
     /**
-     * Set <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
-     * @param Alignment <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+     * Set <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: Top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: Bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+     * @param Alignment <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: Top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: Bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
      */
     public void setAlignment(String Alignment) {
         this.Alignment = Alignment;
     }
 
     /**
-     * Get <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p> 
-     * @return OutlineWidth <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+     * Get <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>By default if left blank, it is 0.3% of the source video height.</p> 
+     * @return OutlineWidth <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>By default if left blank, it is 0.3% of the source video height.</p>
      */
     public String getOutlineWidth() {
         return this.OutlineWidth;
     }
 
     /**
-     * Set <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
-     * @param OutlineWidth <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+     * Set <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>By default if left blank, it is 0.3% of the source video height.</p>
+     * @param OutlineWidth <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>By default if left blank, it is 0.3% of the source video height.</p>
      */
     public void setOutlineWidth(String OutlineWidth) {
         this.OutlineWidth = OutlineWidth;
@@ -468,16 +468,16 @@ public class SubtitleInfoInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p> 
-     * @return LineSpacing <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
+     * Get <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 1000.</li><li>Percentage: N%, N value ranges from 0 to 100.</li></ul><p>Default value: 0</p> 
+     * @return LineSpacing <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 1000.</li><li>Percentage: N%, N value ranges from 0 to 100.</li></ul><p>Default value: 0</p>
      */
     public String getLineSpacing() {
         return this.LineSpacing;
     }
 
     /**
-     * Set <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
-     * @param LineSpacing <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
+     * Set <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 1000.</li><li>Percentage: N%, N value ranges from 0 to 100.</li></ul><p>Default value: 0</p>
+     * @param LineSpacing <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 1000.</li><li>Percentage: N%, N value ranges from 0 to 100.</li></ul><p>Default value: 0</p>
      */
     public void setLineSpacing(String LineSpacing) {
         this.LineSpacing = LineSpacing;

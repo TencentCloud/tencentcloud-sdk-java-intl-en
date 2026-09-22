@@ -31,21 +31,21 @@ public class LLMComprehendFaceRecognitionForUpdate extends AbstractModel {
     private String Switch;
 
     /**
-    * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
+    * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+    * <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
     */
     @SerializedName("DefaultLibraryLabelSet")
     @Expose
     private String [] DefaultLibraryLabelSet;
 
     /**
-    * <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
+    * <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
     */
     @SerializedName("UserDefineLibraryLabelSet")
     @Expose
@@ -75,48 +75,48 @@ public class LLMComprehendFaceRecognitionForUpdate extends AbstractModel {
     }
 
     /**
-     * Get <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p> 
-     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
+     * Get <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p> 
+     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
-     * @param Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
+     * Set <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
+     * @param Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul> 
-     * @return DefaultLibraryLabelSet <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+     * Get <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul> 
+     * @return DefaultLibraryLabelSet <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
      */
     public String [] getDefaultLibraryLabelSet() {
         return this.DefaultLibraryLabelSet;
     }
 
     /**
-     * Set <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
-     * @param DefaultLibraryLabelSet <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+     * Set <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+     * @param DefaultLibraryLabelSet <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
      */
     public void setDefaultLibraryLabelSet(String [] DefaultLibraryLabelSet) {
         this.DefaultLibraryLabelSet = DefaultLibraryLabelSet;
     }
 
     /**
-     * Get <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p> 
-     * @return UserDefineLibraryLabelSet <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
+     * Get <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p> 
+     * @return UserDefineLibraryLabelSet <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
      */
     public String [] getUserDefineLibraryLabelSet() {
         return this.UserDefineLibraryLabelSet;
     }
 
     /**
-     * Set <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
-     * @param UserDefineLibraryLabelSet <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
+     * Set <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+     * @param UserDefineLibraryLabelSet <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
      */
     public void setUserDefineLibraryLabelSet(String [] UserDefineLibraryLabelSet) {
         this.UserDefineLibraryLabelSet = UserDefineLibraryLabelSet;

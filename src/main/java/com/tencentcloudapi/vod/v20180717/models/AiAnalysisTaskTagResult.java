@@ -31,7 +31,7 @@ public class AiAnalysisTaskTagResult extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+    * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -52,7 +52,7 @@ public class AiAnalysisTaskTagResult extends AbstractModel {
     private String Message;
 
     /**
-    * Intelligent tag task input.
+    * Input for the intelligent tag task.
     */
     @SerializedName("Input")
     @Expose
@@ -66,21 +66,21 @@ public class AiAnalysisTaskTagResult extends AbstractModel {
     private AiAnalysisTaskTagOutput Output;
 
     /**
-    * Intelligent tag task progress, in the range of [0,100].
+    * Progress of the intelligent tag task, with a value range of [0-100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Start execution time of the intelligent tag task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Intelligent tag task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Intelligent tag task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Task completion time of the intelligent tag in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -103,16 +103,16 @@ public class AiAnalysisTaskTagResult extends AbstractModel {
     }
 
     /**
-     * Get Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list. 
-     * @return ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
-     * @param ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -151,16 +151,16 @@ public class AiAnalysisTaskTagResult extends AbstractModel {
     }
 
     /**
-     * Get Intelligent tag task input. 
-     * @return Input Intelligent tag task input.
+     * Get Input for the intelligent tag task. 
+     * @return Input Input for the intelligent tag task.
      */
     public AiAnalysisTaskTagInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Intelligent tag task input.
-     * @param Input Intelligent tag task input.
+     * Set Input for the intelligent tag task.
+     * @param Input Input for the intelligent tag task.
      */
     public void setInput(AiAnalysisTaskTagInput Input) {
         this.Input = Input;
@@ -183,48 +183,48 @@ public class AiAnalysisTaskTagResult extends AbstractModel {
     }
 
     /**
-     * Get Intelligent tag task progress, in the range of [0,100]. 
-     * @return Progress Intelligent tag task progress, in the range of [0,100].
+     * Get Progress of the intelligent tag task, with a value range of [0-100]. 
+     * @return Progress Progress of the intelligent tag task, with a value range of [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Intelligent tag task progress, in the range of [0,100].
-     * @param Progress Intelligent tag task progress, in the range of [0,100].
+     * Set Progress of the intelligent tag task, with a value range of [0-100].
+     * @param Progress Progress of the intelligent tag task, with a value range of [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Start execution time of the intelligent tag task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Start execution time of the intelligent tag task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Intelligent tag task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Intelligent tag task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Start execution time of the intelligent tag task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Start execution time of the intelligent tag task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Intelligent tag task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Intelligent tag task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Intelligent tag task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime Intelligent tag task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Task completion time of the intelligent tag in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime Task completion time of the intelligent tag in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Intelligent tag task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime Intelligent tag task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Task completion time of the intelligent tag in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime Task completion time of the intelligent tag in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

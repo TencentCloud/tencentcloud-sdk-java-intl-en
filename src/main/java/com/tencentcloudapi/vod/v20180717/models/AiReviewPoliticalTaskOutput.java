@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiReviewPoliticalTaskOutput extends AbstractModel {
 
     /**
-    * Score of a video involving inappropriate information. Value range: 0–100.
+    * Score of inappropriate information in the video. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -41,7 +41,7 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Result tag of videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+    * Result tag for videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
@@ -60,30 +60,30 @@ Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
     private MediaContentReviewPoliticalSegmentItem [] SegmentSet;
 
     /**
-    * URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+    * URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently. It will be deleted after the SegmentSetFileUrlExpireTime is reached.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the segment list file URL of videos suspected of involving inappropriate information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the URL of the Segment List File of the video suspected of involving inappropriate information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Score of a video involving inappropriate information. Value range: 0–100. 
-     * @return Confidence Score of a video involving inappropriate information. Value range: 0–100.
+     * Get Score of inappropriate information in the video. Value range: 0-100. 
+     * @return Confidence Score of inappropriate information in the video. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of a video involving inappropriate information. Value range: 0–100.
-     * @param Confidence Score of a video involving inappropriate information. Value range: 0–100.
+     * Set Score of inappropriate information in the video. Value range: 0-100.
+     * @param Confidence Score of inappropriate information in the video. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -118,12 +118,12 @@ Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
     }
 
     /**
-     * Get Result tag of videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+     * Get Result tag for videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: relevant people.</li> 
-     * @return Label Result tag of videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+     * @return Label Result tag for videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
@@ -134,12 +134,12 @@ Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
     }
 
     /**
-     * Set Result tag of videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+     * Set Result tag for videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: relevant people.</li>
-     * @param Label Result tag of videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+     * @param Label Result tag for videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: Violation icon.</li>
 Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
@@ -170,32 +170,32 @@ Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
     }
 
     /**
-     * Get URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.) 
-     * @return SegmentSetFileUrl URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+     * Get URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently. It will be deleted after the SegmentSetFileUrlExpireTime is reached.) 
+     * @return SegmentSetFileUrl URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently. It will be deleted after the SegmentSetFileUrlExpireTime is reached.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
-     * @param SegmentSetFileUrl URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+     * Set URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently. It will be deleted after the SegmentSetFileUrlExpireTime is reached.)
+     * @param SegmentSetFileUrl URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently. It will be deleted after the SegmentSetFileUrlExpireTime is reached.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the segment list file URL of videos suspected of involving inappropriate information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the segment list file URL of videos suspected of involving inappropriate information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the URL of the Segment List File of the video suspected of involving inappropriate information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the URL of the Segment List File of the video suspected of involving inappropriate information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the segment list file URL of videos suspected of involving inappropriate information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param SegmentSetFileUrlExpireTime Expiration time of the segment list file URL of videos suspected of involving inappropriate information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the URL of the Segment List File of the video suspected of involving inappropriate information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param SegmentSetFileUrlExpireTime Expiration time of the URL of the Segment List File of the video suspected of involving inappropriate information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

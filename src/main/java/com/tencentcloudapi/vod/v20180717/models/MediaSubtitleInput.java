@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaSubtitleInput extends AbstractModel {
 
     /**
-    * Subtitle name. The length cannot exceed 64 characters.
+    * Subtitle name. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -67,23 +67,23 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
     private String Content;
 
     /**
-    * Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+    * Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get Subtitle name. The length cannot exceed 64 characters. 
-     * @return Name Subtitle name. The length cannot exceed 64 characters.
+     * Get Subtitle name. Length limit: 64 characters. 
+     * @return Name Subtitle name. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Subtitle name. The length cannot exceed 64 characters.
-     * @param Name Subtitle name. The length cannot exceed 64 characters.
+     * Set Subtitle name. Length limit: 64 characters.
+     * @param Name Subtitle name. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -198,16 +198,16 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
     }
 
     /**
-     * Get Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file. 
-     * @return Id Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+     * Get Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file. 
+     * @return Id Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
-     * @param Id Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+     * Set Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+     * @param Id Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
      */
     public void setId(String Id) {
         this.Id = Id;

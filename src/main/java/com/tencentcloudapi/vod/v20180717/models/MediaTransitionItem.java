@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaTransitionItem extends AbstractModel {
 
     /**
-    * Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+    * Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
     */
     @SerializedName("Duration")
     @Expose
@@ -38,23 +38,23 @@ public class MediaTransitionItem extends AbstractModel {
     private TransitionOpertion [] Transitions;
 
     /**
-    * Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+    * Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
     */
     @SerializedName("MediaTransitions")
     @Expose
     private TransitionOperation [] MediaTransitions;
 
     /**
-     * Get Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration. 
-     * @return Duration Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+     * Get Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration. 
+     * @return Duration Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
-     * @param Duration Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+     * Set Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
+     * @param Duration Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
@@ -81,16 +81,16 @@ public class MediaTransitionItem extends AbstractModel {
     }
 
     /**
-     * Get Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively. 
-     * @return MediaTransitions Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+     * Get Transition operation list. A maximum of one image transition and one audio transition are supported respectively. 
+     * @return MediaTransitions Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
      */
     public TransitionOperation [] getMediaTransitions() {
         return this.MediaTransitions;
     }
 
     /**
-     * Set Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
-     * @param MediaTransitions Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+     * Set Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
+     * @param MediaTransitions Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
      */
     public void setMediaTransitions(TransitionOperation [] MediaTransitions) {
         this.MediaTransitions = MediaTransitions;

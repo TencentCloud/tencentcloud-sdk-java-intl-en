@@ -31,7 +31,7 @@ public class RebuildMediaTask extends AbstractModel {
     private String TaskId;
 
     /**
-    * Task stream status. Valid values:
+    * Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
     */
@@ -40,8 +40,8 @@ public class RebuildMediaTask extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+    * Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
     */
@@ -64,7 +64,7 @@ public class RebuildMediaTask extends AbstractModel {
     private String ErrCodeExt;
 
     /**
-    * Progress of the audio and video quality regeneration task. Value range: [0-100].
+    * Progress of the audio and video quality regeneration task, in the range of [0,100].
     */
     @SerializedName("Progress")
     @Expose
@@ -85,7 +85,7 @@ public class RebuildMediaTask extends AbstractModel {
     private RebuildMediaTaskOutput Output;
 
     /**
-    * Meta information of the output video after audio and video quality revival.
+    * Meta-information of the output video after audio and video quality revival.
     */
     @SerializedName("MetaData")
     @Expose
@@ -122,10 +122,10 @@ public class RebuildMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Task stream status. Valid values:
+     * Get Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li> 
-     * @return Status Task stream status. Valid values:
+     * @return Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -134,10 +134,10 @@ public class RebuildMediaTask extends AbstractModel {
     }
 
     /**
-     * Set Task stream status. Valid values:
+     * Set Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param Status Task stream status. Valid values:
+     * @param Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -146,12 +146,12 @@ public class RebuildMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+     * Get Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li> 
-     * @return ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+     * @return ErrCode Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
@@ -160,12 +160,12 @@ public class RebuildMediaTask extends AbstractModel {
     }
 
     /**
-     * Set Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+     * Set Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
-     * @param ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: invalid parameters. Check the input parameters;</li>
+     * @param ErrCode Error code. 0 indicates success, and additional values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
 <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
@@ -206,16 +206,16 @@ public class RebuildMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Progress of the audio and video quality regeneration task. Value range: [0-100]. 
-     * @return Progress Progress of the audio and video quality regeneration task. Value range: [0-100].
+     * Get Progress of the audio and video quality regeneration task, in the range of [0,100]. 
+     * @return Progress Progress of the audio and video quality regeneration task, in the range of [0,100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the audio and video quality regeneration task. Value range: [0-100].
-     * @param Progress Progress of the audio and video quality regeneration task. Value range: [0-100].
+     * Set Progress of the audio and video quality regeneration task, in the range of [0,100].
+     * @param Progress Progress of the audio and video quality regeneration task, in the range of [0,100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -254,16 +254,16 @@ public class RebuildMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Meta information of the output video after audio and video quality revival. 
-     * @return MetaData Meta information of the output video after audio and video quality revival.
+     * Get Meta-information of the output video after audio and video quality revival. 
+     * @return MetaData Meta-information of the output video after audio and video quality revival.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Meta information of the output video after audio and video quality revival.
-     * @param MetaData Meta information of the output video after audio and video quality revival.
+     * Set Meta-information of the output video after audio and video quality revival.
+     * @param MetaData Meta-information of the output video after audio and video quality revival.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

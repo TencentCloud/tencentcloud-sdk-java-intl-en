@@ -33,7 +33,7 @@ public class UserAgentFilter extends AbstractModel {
     private String Switch;
 
     /**
-    * List of effective rules for the UserAgent blocklist and allowlist.
+    * List of effective UserAgent blocklist/allowlist rules.
     */
     @SerializedName("FilterRules")
     @Expose
@@ -64,16 +64,16 @@ public class UserAgentFilter extends AbstractModel {
     }
 
     /**
-     * Get List of effective rules for the UserAgent blocklist and allowlist. 
-     * @return FilterRules List of effective rules for the UserAgent blocklist and allowlist.
+     * Get List of effective UserAgent blocklist/allowlist rules. 
+     * @return FilterRules List of effective UserAgent blocklist/allowlist rules.
      */
     public UserAgentFilterRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set List of effective rules for the UserAgent blocklist and allowlist.
-     * @param FilterRules List of effective rules for the UserAgent blocklist and allowlist.
+     * Set List of effective UserAgent blocklist/allowlist rules.
+     * @param FilterRules List of effective UserAgent blocklist/allowlist rules.
      */
     public void setFilterRules(UserAgentFilterRule [] FilterRules) {
         this.FilterRules = FilterRules;

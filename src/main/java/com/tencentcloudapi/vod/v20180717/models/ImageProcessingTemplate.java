@@ -54,7 +54,7 @@ public class ImageProcessingTemplate extends AbstractModel {
     private String Comment;
 
     /**
-    * Array of image processing operations. Operations are performed in array order.
+    * Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
     */
     @SerializedName("Operations")
@@ -141,9 +141,9 @@ public class ImageProcessingTemplate extends AbstractModel {
     }
 
     /**
-     * Get Array of image processing operations. Operations are performed in array order.
+     * Get Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li> 
-     * @return Operations Array of image processing operations. Operations are performed in array order.
+     * @return Operations Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
      */
     public ImageOperation [] getOperations() {
@@ -151,9 +151,9 @@ public class ImageProcessingTemplate extends AbstractModel {
     }
 
     /**
-     * Set Array of image processing operations. Operations are performed in array order.
+     * Set Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
-     * @param Operations Array of image processing operations. Operations are performed in array order.
+     * @param Operations Image processing operation array. Operations are performed in array order.
 <li>Length limit: 3.</li>
      */
     public void setOperations(ImageOperation [] Operations) {

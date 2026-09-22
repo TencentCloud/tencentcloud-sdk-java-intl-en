@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageSpriteTemplate extends AbstractModel {
 
     /**
-    * Unique identifier of the sprite template.
+    * Sprite template unique identifier.
     */
     @SerializedName("Definition")
     @Expose
@@ -47,7 +47,7 @@ public class ImageSpriteTemplate extends AbstractModel {
     private String Name;
 
     /**
-    * Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+    * Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -72,8 +72,8 @@ Default value: 0.
 
     /**
     * Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
@@ -109,23 +109,23 @@ Default value: open.
     private Long ColumnCount;
 
     /**
-    * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+    * Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black.
     */
     @SerializedName("FillType")
@@ -147,16 +147,16 @@ Default value: black.
     private String Format;
 
     /**
-     * Get Unique identifier of the sprite template. 
-     * @return Definition Unique identifier of the sprite template.
+     * Get Sprite template unique identifier. 
+     * @return Definition Sprite template unique identifier.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the sprite template.
-     * @param Definition Unique identifier of the sprite template.
+     * Set Sprite template unique identifier.
+     * @param Definition Sprite template unique identifier.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -203,13 +203,13 @@ Default value: black.
     }
 
     /**
-     * Get Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+     * Get Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0. 
-     * @return Width Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+     * @return Width Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -221,13 +221,13 @@ Default value: 0.
     }
 
     /**
-     * Set Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+     * Set Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
-     * @param Width Maximum width (or long side) of small images in the sprite image. Value range: 0 and [128, 4096]. Unit: px.
+     * @param Width Maximum width (or long side) of small images in sprite image. Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -276,12 +276,12 @@ Default value: 0.
 
     /**
      * Get Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open. 
      * @return ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
     public String getResolutionAdaptive() {
@@ -290,12 +290,12 @@ Default value: open.
 
     /**
      * Set Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      * @param ResolutionAdaptive Resolution adaptation. Available values:
-<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
+<li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side.</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
 Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
@@ -367,45 +367,45 @@ Default value: open.
     }
 
     /**
-     * Get Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Template last modified time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+     * Get Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black. 
-     * @return FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+     * @return FillType Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black.
      */
     public String getFillType() {
@@ -413,13 +413,13 @@ Default value: black.
     }
 
     /**
-     * Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+     * Set Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black.
-     * @param FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-<li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
-<li>black: black bars, maintain video aspect ratio, edges filled with black.</li>
+     * @param FillType Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
 Default value: black.
      */
     public void setFillType(String FillType) {

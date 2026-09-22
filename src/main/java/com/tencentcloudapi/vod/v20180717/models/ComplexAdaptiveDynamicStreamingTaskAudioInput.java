@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel {
 
     /**
-    * <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
+    * <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
     */
     @SerializedName("FileId")
     @Expose
@@ -45,30 +45,30 @@ public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
     private String Language;
 
     /**
-    * <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+    * <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
     */
     @SerializedName("Default")
     @Expose
     private String Default;
 
     /**
-    * <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
+    * <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
     */
     @SerializedName("AudioTrackIdx")
     @Expose
     private Long AudioTrackIdx;
 
     /**
-     * Get <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p> 
-     * @return FileId <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
+     * Get <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p> 
+     * @return FileId <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
-     * @param FileId <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
+     * Set <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
+     * @param FileId <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -107,32 +107,32 @@ public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
     }
 
     /**
-     * Get <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li> 
-     * @return Default <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+     * Get <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li> 
+     * @return Default <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
-     * @param Default <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+     * Set <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+     * @param Default <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
      */
     public void setDefault(String Default) {
         this.Default = Default;
     }
 
     /**
-     * Get <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p> 
-     * @return AudioTrackIdx <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
+     * Get <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p> 
+     * @return AudioTrackIdx <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
      */
     public Long getAudioTrackIdx() {
         return this.AudioTrackIdx;
     }
 
     /**
-     * Set <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
-     * @param AudioTrackIdx <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
+     * Set <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
+     * @param AudioTrackIdx <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
      */
     public void setAudioTrackIdx(Long AudioTrackIdx) {
         this.AudioTrackIdx = AudioTrackIdx;

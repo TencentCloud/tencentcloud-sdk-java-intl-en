@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel {
 
     /**
-    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+    * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Screenshot template name at specified time point. Length limit: 64 characters.</p>
+    * <p>Time point screenshot template name. Length limit: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
@@ -52,7 +52,7 @@ public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel {
     private Long Height;
 
     /**
-    * <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open.
+    * <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
@@ -73,39 +73,39 @@ public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+    * <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling methods:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Screenshot template name at specified time point. Length limit: 64 characters.</p> 
-     * @return Name <p>Screenshot template name at specified time point. Length limit: 64 characters.</p>
+     * Get <p>Time point screenshot template name. Length limit: 64 characters.</p> 
+     * @return Name <p>Time point screenshot template name. Length limit: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Screenshot template name at specified time point. Length limit: 64 characters.</p>
-     * @param Name <p>Screenshot template name at specified time point. Length limit: 64 characters.</p>
+     * Set <p>Time point screenshot template name. Length limit: 64 characters.</p>
+     * @param Name <p>Time point screenshot template name. Length limit: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -144,16 +144,16 @@ public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open. 
-     * @return ResolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open.
+     * Get <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open. 
+     * @return ResolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
     }
 
     /**
-     * Set <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open.
-     * @param ResolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height.</li>Default value: open.
+     * Set <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
+     * @param ResolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li><li>close: disable. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;
@@ -192,16 +192,16 @@ public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black. 
-     * @return FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+     * Get <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling methods:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black. 
+     * @return FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling methods:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
-     * @param FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+     * Set <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling methods:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+     * @param FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling methods:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;

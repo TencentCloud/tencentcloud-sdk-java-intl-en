@@ -25,7 +25,7 @@ public class TextWatermarkTemplateInput extends AbstractModel {
 
     /**
     * Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
     */
     @SerializedName("FontType")
@@ -58,10 +58,10 @@ Default value: 1.
 
     /**
      * Get Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li> 
      * @return FontType Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      */
     public String getFontType() {
@@ -70,10 +70,10 @@ Default value: 1.
 
     /**
      * Set Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      * @param FontType Font type. Currently, two are supported:
-<li>simkai.ttf: supports Chinese and English;</li>
+<li>simkai.ttf: Supports Chinese and English;</li>
 <li>arial.ttf: English only.</li>
      */
     public void setFontType(String FontType) {

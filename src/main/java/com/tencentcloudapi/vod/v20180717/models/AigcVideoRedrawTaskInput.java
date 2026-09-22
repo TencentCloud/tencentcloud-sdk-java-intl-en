@@ -31,7 +31,7 @@ public class AigcVideoRedrawTaskInput extends AbstractModel {
     private AigcVideoRedrawTaskInputFileInfo FileInfo;
 
     /**
-    * <p>AIGC video conversion task parameter information.</p>
+    * <p>AIGC video redrawing task parameter information.</p>
     */
     @SerializedName("TaskInfo")
     @Expose
@@ -61,16 +61,16 @@ public class AigcVideoRedrawTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>AIGC video conversion task parameter information.</p> 
-     * @return TaskInfo <p>AIGC video conversion task parameter information.</p>
+     * Get <p>AIGC video redrawing task parameter information.</p> 
+     * @return TaskInfo <p>AIGC video redrawing task parameter information.</p>
      */
     public AigcVideoRedrawTaskInfo getTaskInfo() {
         return this.TaskInfo;
     }
 
     /**
-     * Set <p>AIGC video conversion task parameter information.</p>
-     * @param TaskInfo <p>AIGC video conversion task parameter information.</p>
+     * Set <p>AIGC video redrawing task parameter information.</p>
+     * @param TaskInfo <p>AIGC video redrawing task parameter information.</p>
      */
     public void setTaskInfo(AigcVideoRedrawTaskInfo TaskInfo) {
         this.TaskInfo = TaskInfo;

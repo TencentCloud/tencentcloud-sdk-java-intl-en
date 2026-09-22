@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class CrashScreenConfigureInfo extends AbstractModel {
 
     /**
-    * Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+    * Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li> 
-     * @return Switch Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * Get Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li> 
+     * @return Switch Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
-     * @param Switch Detection switch for screen glitches in video footage. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * Set Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
+     * @param Switch Video image distortion detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

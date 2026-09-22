@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageWatermarkInputForUpdate extends AbstractModel {
 
     /**
-    * Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+    * Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
     */
     @SerializedName("ImageContent")
     @Expose
@@ -50,8 +50,8 @@ public class ImageWatermarkInputForUpdate extends AbstractModel {
 
     /**
     * Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
     */
     @SerializedName("RepeatType")
@@ -68,16 +68,16 @@ public class ImageWatermarkInputForUpdate extends AbstractModel {
     private Long Transparency;
 
     /**
-     * Get Base64-encoded string of the watermark image. Supports jpeg and png image formats. 
-     * @return ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+     * Get Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats. 
+     * @return ImageContent Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
      */
     public String getImageContent() {
         return this.ImageContent;
     }
 
     /**
-     * Set Base64-encoded string of the watermark image. Supports jpeg and png image formats.
-     * @param ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+     * Set Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
+     * @param ImageContent Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
      */
     public void setImageContent(String ImageContent) {
         this.ImageContent = ImageContent;
@@ -133,12 +133,12 @@ public class ImageWatermarkInputForUpdate extends AbstractModel {
 
     /**
      * Get Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li> 
      * @return RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
      */
     public String getRepeatType() {
@@ -147,12 +147,12 @@ public class ImageWatermarkInputForUpdate extends AbstractModel {
 
     /**
      * Set Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
      * @param RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
 <li>repeat: The watermark loops until the video ends.</li>
      */
     public void setRepeatType(String RepeatType) {

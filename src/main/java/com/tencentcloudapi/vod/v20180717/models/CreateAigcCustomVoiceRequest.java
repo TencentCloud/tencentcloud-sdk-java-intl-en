@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateAigcCustomVoiceRequest extends AbstractModel {
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+    * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Timbre name. The text content can be up to 20 characters in length.</p>
+    * <p>Timbre name. The text content can contain up to 20 characters.</p>
     */
     @SerializedName("VoiceName")
     @Expose
     private String VoiceName;
 
     /**
-    * <p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
+    * <p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
     */
     @SerializedName("VoiceUrl")
     @Expose
@@ -66,62 +66,62 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
     private String SessionId;
 
     /**
-    * <p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
+    * <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Timbre name. The text content can be up to 20 characters in length.</p> 
-     * @return VoiceName <p>Timbre name. The text content can be up to 20 characters in length.</p>
+     * Get <p>Timbre name. The text content can contain up to 20 characters.</p> 
+     * @return VoiceName <p>Timbre name. The text content can contain up to 20 characters.</p>
      */
     public String getVoiceName() {
         return this.VoiceName;
     }
 
     /**
-     * Set <p>Timbre name. The text content can be up to 20 characters in length.</p>
-     * @param VoiceName <p>Timbre name. The text content can be up to 20 characters in length.</p>
+     * Set <p>Timbre name. The text content can contain up to 20 characters.</p>
+     * @param VoiceName <p>Timbre name. The text content can contain up to 20 characters.</p>
      */
     public void setVoiceName(String VoiceName) {
         this.VoiceName = VoiceName;
     }
 
     /**
-     * Get <p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p> 
-     * @return VoiceUrl <p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
+     * Get <p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p> 
+     * @return VoiceUrl <p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
      */
     public String getVoiceUrl() {
         return this.VoiceUrl;
     }
 
     /**
-     * Set <p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
-     * @param VoiceUrl <p>Link to obtain the voice type data file. Audio/video files in .mp3 / .wav / .mp4 / .mov formats are supported. The voice in the audio must be clean and noiseless, with only one voice, and the duration must be no shorter than 5 seconds and no longer than 30 seconds.</p>
+     * Set <p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
+     * @param VoiceUrl <p>Access link for voice type data files, supporting audio/video files in .mp3 / .wav / .mp4 / .mov formats. The voice in the audio must be clean and noiseless, with only one voice, and a duration of no less than 5 seconds and no more than 30 seconds.</p>
      */
     public void setVoiceUrl(String VoiceUrl) {
         this.VoiceUrl = VoiceUrl;
@@ -176,32 +176,32 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p> 
-     * @return SessionContext <p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
+     * Get <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set <p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
-     * @param SessionContext <p>Source context. This is used to pass through user request information. The task complete callback will return the value of this field. Maximum length: 1000 characters.</p>
+     * Set <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p> 
-     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p> 
+     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
-     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;

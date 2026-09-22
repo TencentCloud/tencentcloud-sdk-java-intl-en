@@ -45,7 +45,7 @@ public class CreateAigcCustomVoiceTask extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+    * <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -59,14 +59,14 @@ public class CreateAigcCustomVoiceTask extends AbstractModel {
     private String Message;
 
     /**
-    * <p>Task progress. Value range: 0–100.</p>
+    * <p>Task progress, value ranges from 0 to 100.</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * <p>Input information for creating an AIGC custom voice type.</p>
+    * <p>Create AIGC custom voice type input information.</p>
     */
     @SerializedName("Input")
     @Expose
@@ -142,16 +142,16 @@ public class CreateAigcCustomVoiceTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Expansion error code. A null string indicates success, while other values indicate failure.</p> 
-     * @return ErrCodeExt <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+     * Get <p>Extended error code. A null string indicates success, while other values indicate failure.</p> 
+     * @return ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
-     * @param ErrCodeExt <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+     * Set <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+     * @param ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -174,32 +174,32 @@ public class CreateAigcCustomVoiceTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Task progress. Value range: 0–100.</p> 
-     * @return Progress <p>Task progress. Value range: 0–100.</p>
+     * Get <p>Task progress, value ranges from 0 to 100.</p> 
+     * @return Progress <p>Task progress, value ranges from 0 to 100.</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set <p>Task progress. Value range: 0–100.</p>
-     * @param Progress <p>Task progress. Value range: 0–100.</p>
+     * Set <p>Task progress, value ranges from 0 to 100.</p>
+     * @param Progress <p>Task progress, value ranges from 0 to 100.</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get <p>Input information for creating an AIGC custom voice type.</p> 
-     * @return Input <p>Input information for creating an AIGC custom voice type.</p>
+     * Get <p>Create AIGC custom voice type input information.</p> 
+     * @return Input <p>Create AIGC custom voice type input information.</p>
      */
     public CreateAigcCustomVoiceInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set <p>Input information for creating an AIGC custom voice type.</p>
-     * @param Input <p>Input information for creating an AIGC custom voice type.</p>
+     * Set <p>Create AIGC custom voice type input information.</p>
+     * @param Input <p>Create AIGC custom voice type input information.</p>
      */
     public void setInput(CreateAigcCustomVoiceInput Input) {
         this.Input = Input;

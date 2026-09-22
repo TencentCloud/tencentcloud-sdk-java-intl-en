@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MPSAIAnalysisTemplateForUpdate extends AbstractModel {
 
     /**
-    * <p>Unique identifier of the video analysis template.</p>
+    * <p>Unique identifier of the video content analysis template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p>Video analysis template name, with a length limit of 64 characters.</p>
+    * <p>Video analysis template name. Length limit: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
@@ -52,7 +52,7 @@ public class MPSAIAnalysisTemplateForUpdate extends AbstractModel {
     private MPSAIAnalysisConfigureInfo ClassificationConfigure;
 
     /**
-    * <p>Intelligent tag task control parameters.</p>
+    * <p>Control parameters for the intelligent tag task.</p>
     */
     @SerializedName("TagConfigure")
     @Expose
@@ -73,7 +73,7 @@ public class MPSAIAnalysisTemplateForUpdate extends AbstractModel {
     private MPSAIAnalysisConfigureInfo FrameTagConfigure;
 
     /**
-    * <p>Intelligent splitting task control parameters.</p>
+    * <p>Intelligent splitting task control parameter.</p>
     */
     @SerializedName("SplitConfigure")
     @Expose
@@ -87,39 +87,39 @@ public class MPSAIAnalysisTemplateForUpdate extends AbstractModel {
     private MPSAIAnalysisConfigureInfo HighlightConfigure;
 
     /**
-    * <p>Control parameter for the intelligent opening and closing credits task.</p>
+    * <p>Control parameters for the intelligent opening and ending sequences task.</p>
     */
     @SerializedName("OpeningAndEndingConfigure")
     @Expose
     private MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure;
 
     /**
-     * Get <p>Unique identifier of the video analysis template.</p> 
-     * @return Definition <p>Unique identifier of the video analysis template.</p>
+     * Get <p>Unique identifier of the video content analysis template.</p> 
+     * @return Definition <p>Unique identifier of the video content analysis template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Unique identifier of the video analysis template.</p>
-     * @param Definition <p>Unique identifier of the video analysis template.</p>
+     * Set <p>Unique identifier of the video content analysis template.</p>
+     * @param Definition <p>Unique identifier of the video content analysis template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p>Video analysis template name, with a length limit of 64 characters.</p> 
-     * @return Name <p>Video analysis template name, with a length limit of 64 characters.</p>
+     * Get <p>Video analysis template name. Length limit: 64 characters.</p> 
+     * @return Name <p>Video analysis template name. Length limit: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Video analysis template name, with a length limit of 64 characters.</p>
-     * @param Name <p>Video analysis template name, with a length limit of 64 characters.</p>
+     * Set <p>Video analysis template name. Length limit: 64 characters.</p>
+     * @param Name <p>Video analysis template name. Length limit: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -158,16 +158,16 @@ public class MPSAIAnalysisTemplateForUpdate extends AbstractModel {
     }
 
     /**
-     * Get <p>Intelligent tag task control parameters.</p> 
-     * @return TagConfigure <p>Intelligent tag task control parameters.</p>
+     * Get <p>Control parameters for the intelligent tag task.</p> 
+     * @return TagConfigure <p>Control parameters for the intelligent tag task.</p>
      */
     public MPSAIAnalysisConfigureInfo getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set <p>Intelligent tag task control parameters.</p>
-     * @param TagConfigure <p>Intelligent tag task control parameters.</p>
+     * Set <p>Control parameters for the intelligent tag task.</p>
+     * @param TagConfigure <p>Control parameters for the intelligent tag task.</p>
      */
     public void setTagConfigure(MPSAIAnalysisConfigureInfo TagConfigure) {
         this.TagConfigure = TagConfigure;
@@ -206,16 +206,16 @@ public class MPSAIAnalysisTemplateForUpdate extends AbstractModel {
     }
 
     /**
-     * Get <p>Intelligent splitting task control parameters.</p> 
-     * @return SplitConfigure <p>Intelligent splitting task control parameters.</p>
+     * Get <p>Intelligent splitting task control parameter.</p> 
+     * @return SplitConfigure <p>Intelligent splitting task control parameter.</p>
      */
     public MPSAIAnalysisConfigureInfo getSplitConfigure() {
         return this.SplitConfigure;
     }
 
     /**
-     * Set <p>Intelligent splitting task control parameters.</p>
-     * @param SplitConfigure <p>Intelligent splitting task control parameters.</p>
+     * Set <p>Intelligent splitting task control parameter.</p>
+     * @param SplitConfigure <p>Intelligent splitting task control parameter.</p>
      */
     public void setSplitConfigure(MPSAIAnalysisConfigureInfo SplitConfigure) {
         this.SplitConfigure = SplitConfigure;
@@ -238,16 +238,16 @@ public class MPSAIAnalysisTemplateForUpdate extends AbstractModel {
     }
 
     /**
-     * Get <p>Control parameter for the intelligent opening and closing credits task.</p> 
-     * @return OpeningAndEndingConfigure <p>Control parameter for the intelligent opening and closing credits task.</p>
+     * Get <p>Control parameters for the intelligent opening and ending sequences task.</p> 
+     * @return OpeningAndEndingConfigure <p>Control parameters for the intelligent opening and ending sequences task.</p>
      */
     public MPSAIAnalysisConfigureInfo getOpeningAndEndingConfigure() {
         return this.OpeningAndEndingConfigure;
     }
 
     /**
-     * Set <p>Control parameter for the intelligent opening and closing credits task.</p>
-     * @param OpeningAndEndingConfigure <p>Control parameter for the intelligent opening and closing credits task.</p>
+     * Set <p>Control parameters for the intelligent opening and ending sequences task.</p>
+     * @param OpeningAndEndingConfigure <p>Control parameters for the intelligent opening and ending sequences task.</p>
      */
     public void setOpeningAndEndingConfigure(MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure) {
         this.OpeningAndEndingConfigure = OpeningAndEndingConfigure;

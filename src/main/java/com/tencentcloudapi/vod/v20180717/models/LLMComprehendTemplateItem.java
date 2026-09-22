@@ -66,7 +66,7 @@ public class LLMComprehendTemplateItem extends AbstractModel {
     private LLMComprehendSummary Summary;
 
     /**
-    * <p>Text transcribing and parsing configuration</p>
+    * <p>Text transcription parsing configuration</p>
     */
     @SerializedName("Asr")
     @Expose
@@ -87,7 +87,7 @@ public class LLMComprehendTemplateItem extends AbstractModel {
     private String CreateTime;
 
     /**
-    * <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+    * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -190,16 +190,16 @@ public class LLMComprehendTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Text transcribing and parsing configuration</p> 
-     * @return Asr <p>Text transcribing and parsing configuration</p>
+     * Get <p>Text transcription parsing configuration</p> 
+     * @return Asr <p>Text transcription parsing configuration</p>
      */
     public LLMComprehendAsr getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set <p>Text transcribing and parsing configuration</p>
-     * @param Asr <p>Text transcribing and parsing configuration</p>
+     * Set <p>Text transcription parsing configuration</p>
+     * @param Asr <p>Text transcription parsing configuration</p>
      */
     public void setAsr(LLMComprehendAsr Asr) {
         this.Asr = Asr;
@@ -238,16 +238,16 @@ public class LLMComprehendTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
-     * @return UpdateTime <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Get <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-     * @param UpdateTime <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

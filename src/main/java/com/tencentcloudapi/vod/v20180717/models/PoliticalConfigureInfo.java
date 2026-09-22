@@ -31,7 +31,7 @@ public class PoliticalConfigureInfo extends AbstractModel {
     private PoliticalImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * Control parameters for ASR-based recognition involving inappropriate information.
+    * Control parameters for inappropriate information involved in ASR-based recognition.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
@@ -61,16 +61,16 @@ public class PoliticalConfigureInfo extends AbstractModel {
     }
 
     /**
-     * Get Control parameters for ASR-based recognition involving inappropriate information. 
-     * @return AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
+     * Get Control parameters for inappropriate information involved in ASR-based recognition. 
+     * @return AsrReviewInfo Control parameters for inappropriate information involved in ASR-based recognition.
      */
     public PoliticalAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameters for ASR-based recognition involving inappropriate information.
-     * @param AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
+     * Set Control parameters for inappropriate information involved in ASR-based recognition.
+     * @param AsrReviewInfo Control parameters for inappropriate information involved in ASR-based recognition.
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;

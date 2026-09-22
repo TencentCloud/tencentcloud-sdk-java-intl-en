@@ -31,7 +31,7 @@ public class TaskOutputMediaInfo extends AbstractModel {
     private String FileId;
 
     /**
-    * Basic information of the generated media file after pull conversion is completed.
+    * Basic information of the media file generated after pull conversion.
     */
     @SerializedName("MediaBasicInfo")
     @Expose
@@ -54,16 +54,16 @@ public class TaskOutputMediaInfo extends AbstractModel {
     }
 
     /**
-     * Get Basic information of the generated media file after pull conversion is completed. 
-     * @return MediaBasicInfo Basic information of the generated media file after pull conversion is completed.
+     * Get Basic information of the media file generated after pull conversion. 
+     * @return MediaBasicInfo Basic information of the media file generated after pull conversion.
      */
     public MediaBasicInfo getMediaBasicInfo() {
         return this.MediaBasicInfo;
     }
 
     /**
-     * Set Basic information of the generated media file after pull conversion is completed.
-     * @param MediaBasicInfo Basic information of the generated media file after pull conversion is completed.
+     * Set Basic information of the media file generated after pull conversion.
+     * @param MediaBasicInfo Basic information of the media file generated after pull conversion.
      */
     public void setMediaBasicInfo(MediaBasicInfo MediaBasicInfo) {
         this.MediaBasicInfo = MediaBasicInfo;

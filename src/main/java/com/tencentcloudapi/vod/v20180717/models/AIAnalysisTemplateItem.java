@@ -38,21 +38,21 @@ public class AIAnalysisTemplateItem extends AbstractModel {
     private String Name;
 
     /**
-    * Template description information for intelligent analysis.
+    * Description of the intelligent analysis template.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Intelligent classification task control parameters.
+    * Intelligent Classification Task Control Parameters.
     */
     @SerializedName("ClassificationConfigure")
     @Expose
     private ClassificationConfigureInfo ClassificationConfigure;
 
     /**
-    * Control parameter of the intelligent tag task.
+    * Intelligent tag task control parameter.
     */
     @SerializedName("TagConfigure")
     @Expose
@@ -66,7 +66,7 @@ public class AIAnalysisTemplateItem extends AbstractModel {
     private CoverConfigureInfo CoverConfigure;
 
     /**
-    * Control parameter for intelligent frame-specific tagging task.
+    * Intelligent frame tagging task control parameter.
     */
     @SerializedName("FrameTagConfigure")
     @Expose
@@ -80,14 +80,14 @@ public class AIAnalysisTemplateItem extends AbstractModel {
     private HighlightsConfigureInfo HighlightConfigure;
 
     /**
-    * Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -126,48 +126,48 @@ public class AIAnalysisTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Template description information for intelligent analysis. 
-     * @return Comment Template description information for intelligent analysis.
+     * Get Description of the intelligent analysis template. 
+     * @return Comment Description of the intelligent analysis template.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description information for intelligent analysis.
-     * @param Comment Template description information for intelligent analysis.
+     * Set Description of the intelligent analysis template.
+     * @param Comment Description of the intelligent analysis template.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Intelligent classification task control parameters. 
-     * @return ClassificationConfigure Intelligent classification task control parameters.
+     * Get Intelligent Classification Task Control Parameters. 
+     * @return ClassificationConfigure Intelligent Classification Task Control Parameters.
      */
     public ClassificationConfigureInfo getClassificationConfigure() {
         return this.ClassificationConfigure;
     }
 
     /**
-     * Set Intelligent classification task control parameters.
-     * @param ClassificationConfigure Intelligent classification task control parameters.
+     * Set Intelligent Classification Task Control Parameters.
+     * @param ClassificationConfigure Intelligent Classification Task Control Parameters.
      */
     public void setClassificationConfigure(ClassificationConfigureInfo ClassificationConfigure) {
         this.ClassificationConfigure = ClassificationConfigure;
     }
 
     /**
-     * Get Control parameter of the intelligent tag task. 
-     * @return TagConfigure Control parameter of the intelligent tag task.
+     * Get Intelligent tag task control parameter. 
+     * @return TagConfigure Intelligent tag task control parameter.
      */
     public TagConfigureInfo getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set Control parameter of the intelligent tag task.
-     * @param TagConfigure Control parameter of the intelligent tag task.
+     * Set Intelligent tag task control parameter.
+     * @param TagConfigure Intelligent tag task control parameter.
      */
     public void setTagConfigure(TagConfigureInfo TagConfigure) {
         this.TagConfigure = TagConfigure;
@@ -190,16 +190,16 @@ public class AIAnalysisTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Control parameter for intelligent frame-specific tagging task. 
-     * @return FrameTagConfigure Control parameter for intelligent frame-specific tagging task.
+     * Get Intelligent frame tagging task control parameter. 
+     * @return FrameTagConfigure Intelligent frame tagging task control parameter.
      */
     public FrameTagConfigureInfo getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set Control parameter for intelligent frame-specific tagging task.
-     * @param FrameTagConfigure Control parameter for intelligent frame-specific tagging task.
+     * Set Intelligent frame tagging task control parameter.
+     * @param FrameTagConfigure Intelligent frame tagging task control parameter.
      */
     public void setFrameTagConfigure(FrameTagConfigureInfo FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;
@@ -222,32 +222,32 @@ public class AIAnalysisTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

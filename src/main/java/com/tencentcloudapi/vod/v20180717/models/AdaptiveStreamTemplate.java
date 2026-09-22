@@ -38,7 +38,7 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private AudioTemplateInfo Audio;
 
     /**
-    * <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+    * <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
@@ -105,16 +105,16 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     }
 
     /**
-     * Get <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li> 
-     * @return RemoveAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+     * Get <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li> 
+     * @return RemoveAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
-     * @param RemoveAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+     * Set <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
+     * @param RemoveAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;

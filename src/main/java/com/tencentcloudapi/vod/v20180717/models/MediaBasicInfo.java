@@ -38,14 +38,14 @@ public class MediaBasicInfo extends AbstractModel {
     private String Description;
 
     /**
-    * Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -73,7 +73,7 @@ public class MediaBasicInfo extends AbstractModel {
     private String ClassName;
 
     /**
-    * Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+    * Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
     */
     @SerializedName("ClassPath")
     @Expose
@@ -87,7 +87,7 @@ public class MediaBasicInfo extends AbstractModel {
     private String CoverUrl;
 
     /**
-    * Muxing format of the media file, such as mp4 and flv.
+    * Muxing format of the media file, for example, mp4 and flv.
     */
     @SerializedName("Type")
     @Expose
@@ -108,7 +108,7 @@ public class MediaBasicInfo extends AbstractModel {
     private MediaSourceData SourceInfo;
 
     /**
-    * Storage region of media files, for example, ap-chongqing. See region list.
+    * Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
     */
     @SerializedName("StorageRegion")
     @Expose
@@ -122,7 +122,7 @@ public class MediaBasicInfo extends AbstractModel {
     private String StoragePath;
 
     /**
-    * Tag information of a media file.
+    * Tag information of the media file.
     */
     @SerializedName("TagSet")
     @Expose
@@ -157,7 +157,7 @@ public class MediaBasicInfo extends AbstractModel {
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
     */
     @SerializedName("StorageClass")
     @Expose
@@ -196,32 +196,32 @@ public class MediaBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -276,16 +276,16 @@ public class MediaBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category". 
-     * @return ClassPath Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+     * Get Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category". 
+     * @return ClassPath Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
      */
     public String getClassPath() {
         return this.ClassPath;
     }
 
     /**
-     * Set Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
-     * @param ClassPath Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+     * Set Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
+     * @param ClassPath Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
      */
     public void setClassPath(String ClassPath) {
         this.ClassPath = ClassPath;
@@ -308,16 +308,16 @@ public class MediaBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get Muxing format of the media file, such as mp4 and flv. 
-     * @return Type Muxing format of the media file, such as mp4 and flv.
+     * Get Muxing format of the media file, for example, mp4 and flv. 
+     * @return Type Muxing format of the media file, for example, mp4 and flv.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Muxing format of the media file, such as mp4 and flv.
-     * @param Type Muxing format of the media file, such as mp4 and flv.
+     * Set Muxing format of the media file, for example, mp4 and flv.
+     * @param Type Muxing format of the media file, for example, mp4 and flv.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -356,16 +356,16 @@ public class MediaBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get Storage region of media files, for example, ap-chongqing. See region list. 
-     * @return StorageRegion Storage region of media files, for example, ap-chongqing. See region list.
+     * Get Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8). 
+     * @return StorageRegion Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set Storage region of media files, for example, ap-chongqing. See region list.
-     * @param StorageRegion Storage region of media files, for example, ap-chongqing. See region list.
+     * Set Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * @param StorageRegion Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
@@ -388,16 +388,16 @@ public class MediaBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get Tag information of a media file. 
-     * @return TagSet Tag information of a media file.
+     * Get Tag information of the media file. 
+     * @return TagSet Tag information of the media file.
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Tag information of a media file.
-     * @param TagSet Tag information of a media file.
+     * Set Tag information of the media file.
+     * @param TagSet Tag information of the media file.
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
@@ -468,12 +468,12 @@ public class MediaBasicInfo extends AbstractModel {
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li> 
+<li> DEEP_ARCHIVE: deep archive storage.</li> 
      * @return StorageClass Storage class of a media file
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
      */
     public String getStorageClass() {
         return this.StorageClass;
@@ -484,12 +484,12 @@ public class MediaBasicInfo extends AbstractModel {
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
      * @param StorageClass Storage class of a media file
 <li> STANDARD: standard storage.</li>
 <li> STANDARD_IA: Infrequent storage.</li>
 <li> ARCHIVE: Archive storage.</li>
-<li> DEEP_ARCHIVE: Deep archive storage.</li>
+<li> DEEP_ARCHIVE: deep archive storage.</li>
      */
     public void setStorageClass(String StorageClass) {
         this.StorageClass = StorageClass;

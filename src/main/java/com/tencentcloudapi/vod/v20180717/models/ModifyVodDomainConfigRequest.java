@@ -31,21 +31,21 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
+    * <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> rule.</p>
     */
     @SerializedName("RefererAuthPolicy")
     @Expose
     private RefererAuthPolicy RefererAuthPolicy;
 
     /**
-    * <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
+    * <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> rule.</p>
     */
     @SerializedName("UrlSignatureAuthPolicy")
     @Expose
@@ -82,48 +82,48 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p> 
-     * @return RefererAuthPolicy <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
+     * Get <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> rule.</p> 
+     * @return RefererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> rule.</p>
      */
     public RefererAuthPolicy getRefererAuthPolicy() {
         return this.RefererAuthPolicy;
     }
 
     /**
-     * Set <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
-     * @param RefererAuthPolicy <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
+     * Set <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> rule.</p>
+     * @param RefererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> rule.</p>
      */
     public void setRefererAuthPolicy(RefererAuthPolicy RefererAuthPolicy) {
         this.RefererAuthPolicy = RefererAuthPolicy;
     }
 
     /**
-     * Get <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p> 
-     * @return UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
+     * Get <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> rule.</p> 
+     * @return UrlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> rule.</p>
      */
     public UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() {
         return this.UrlSignatureAuthPolicy;
     }
 
     /**
-     * Set <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
-     * @param UrlSignatureAuthPolicy <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
+     * Set <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> rule.</p>
+     * @param UrlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> rule.</p>
      */
     public void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy UrlSignatureAuthPolicy) {
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;

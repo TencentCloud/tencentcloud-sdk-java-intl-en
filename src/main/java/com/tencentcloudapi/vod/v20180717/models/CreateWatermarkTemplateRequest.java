@@ -34,7 +34,7 @@ public class CreateWatermarkTemplateRequest extends AbstractModel {
     private String Type;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -87,7 +87,7 @@ Default value: 0px.
     private String YPos;
 
     /**
-    * Image watermark template. This field is required when Type is image and invalid when Type is text.
+    * Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
     */
     @SerializedName("ImageTemplate")
     @Expose
@@ -136,16 +136,16 @@ Default value: 0px.
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -276,16 +276,16 @@ Default value: 0px.
     }
 
     /**
-     * Get Image watermark template. This field is required when Type is image and invalid when Type is text. 
-     * @return ImageTemplate Image watermark template. This field is required when Type is image and invalid when Type is text.
+     * Get Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid. 
+     * @return ImageTemplate Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
      */
     public ImageWatermarkInput getImageTemplate() {
         return this.ImageTemplate;
     }
 
     /**
-     * Set Image watermark template. This field is required when Type is image and invalid when Type is text.
-     * @param ImageTemplate Image watermark template. This field is required when Type is image and invalid when Type is text.
+     * Set Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
+     * @param ImageTemplate Image watermark template. If `Type` is `image`, this field is required. If `Type` is `text`, this field is invalid.
      */
     public void setImageTemplate(ImageWatermarkInput ImageTemplate) {
         this.ImageTemplate = ImageTemplate;

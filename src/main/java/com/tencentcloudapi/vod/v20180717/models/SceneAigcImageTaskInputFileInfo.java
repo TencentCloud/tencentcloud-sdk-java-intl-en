@@ -31,9 +31,9 @@ public class SceneAigcImageTaskInputFileInfo extends AbstractModel {
     private String Type;
 
     /**
-    * Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
-Note:
-1. An image less than 7 MB is recommended;
+    * Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
     */
     @SerializedName("FileId")
@@ -42,8 +42,8 @@ Note:
 
     /**
     * Accessible file URL. This parameter is valid when Type is Url.
-Note:
-1. An image less than 7 MB is recommended;
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
     */
     @SerializedName("Url")
@@ -67,13 +67,13 @@ Note:
     }
 
     /**
-     * Get Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
-Note:
-1. An image less than 7 MB is recommended;
+     * Get Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp. 
-     * @return FileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
-Note:
-1. An image less than 7 MB is recommended;
+     * @return FileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
      */
     public String getFileId() {
@@ -81,13 +81,13 @@ Note:
     }
 
     /**
-     * Set Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
-Note:
-1. An image less than 7 MB is recommended;
+     * Set Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
-     * @param FileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
-Note:
-1. An image less than 7 MB is recommended;
+     * @param FileId Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). This parameter is valid when Type is File.
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
      */
     public void setFileId(String FileId) {
@@ -96,12 +96,12 @@ Note:
 
     /**
      * Get Accessible file URL. This parameter is valid when Type is Url.
-Note:
-1. An image less than 7 MB is recommended;
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp. 
      * @return Url Accessible file URL. This parameter is valid when Type is Url.
-Note:
-1. An image less than 7 MB is recommended;
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
      */
     public String getUrl() {
@@ -110,12 +110,12 @@ Note:
 
     /**
      * Set Accessible file URL. This parameter is valid when Type is Url.
-Note:
-1. An image less than 7 MB is recommended;
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
      * @param Url Accessible file URL. This parameter is valid when Type is Url.
-Note:
-1. An image less than 7 MB is recommended;
+Description:
+1. An image less than 7 MB is recommended.
 2. Image format. Valid values: jpeg, jpg, png, and webp.
      */
     public void setUrl(String Url) {

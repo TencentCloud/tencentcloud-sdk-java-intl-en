@@ -31,14 +31,14 @@ public class FileContent extends AbstractModel {
     private String Key;
 
     /**
-    * Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+    * Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
     */
     @SerializedName("LastModified")
     @Expose
     private String LastModified;
 
     /**
-    * Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+    * Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
     */
     @SerializedName("ETag")
     @Expose
@@ -76,9 +76,9 @@ public class FileContent extends AbstractModel {
     * Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
@@ -119,32 +119,32 @@ Value only when FileType is SubtitleFiles.
     }
 
     /**
-     * Get Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z. 
-     * @return LastModified Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+     * Get Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z. 
+     * @return LastModified Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
      */
     public String getLastModified() {
         return this.LastModified;
     }
 
     /**
-     * Set Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
-     * @param LastModified Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+     * Set Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+     * @param LastModified Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
      */
     public void setLastModified(String LastModified) {
         this.LastModified = LastModified;
     }
 
     /**
-     * Get Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed. 
-     * @return ETag Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+     * Get Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed. 
+     * @return ETag Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
      */
     public String getETag() {
         return this.ETag;
     }
 
     /**
-     * Set Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
-     * @param ETag Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+     * Set Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
+     * @param ETag Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
      */
     public void setETag(String ETag) {
         this.ETag = ETag;
@@ -218,18 +218,18 @@ Value only when FileType is SubtitleFiles.
      * Get Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
  
      * @return FileType Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
@@ -242,18 +242,18 @@ Value only when FileType is SubtitleFiles.
      * Set Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 
      * @param FileType Optional values:
 -OriginalFiles: source file
 - TranscodeFiles: transcoded file
--AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-- SubtitleFiles: subtitle files.
-- SampleSnapshotFiles: sampled screenshot files.
+-AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+- SubtitleFiles: subtitle file.
+- SampleSnapshotFiles: sampled screenshot files
 - ImageSpriteFiles: image sprite screenshot files
 - SnapshotByTimeOffsetFiles: time point screenshot files.
 

@@ -25,15 +25,15 @@ public class PoliticalAsrReviewTemplateInfo extends AbstractModel {
 
     /**
     * Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li>
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+    * Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -48,11 +48,11 @@ public class PoliticalAsrReviewTemplateInfo extends AbstractModel {
 
     /**
      * Get Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li> 
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li> 
      * @return Switch Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li>
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -60,27 +60,27 @@ public class PoliticalAsrReviewTemplateInfo extends AbstractModel {
 
     /**
      * Set Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li>
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li>
      * @param Switch Task switch for ASR-based recognition involving inappropriate information. Available values:
-<li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
-<li>OFF: Disable the ASR-based recognition task involving inappropriate information.</li>
+<li>ON: enable the ASR-based recognition task involving inappropriate information;</li>
+<li>OFF: Disable the task involving ASR-based recognition of inappropriate information.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+     * Get Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+     * Set Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

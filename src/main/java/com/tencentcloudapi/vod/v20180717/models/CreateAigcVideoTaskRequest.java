@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateAigcVideoTaskRequest extends AbstractModel {
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
+    * <p>Model name. Parameter Value:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
+    * <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max; <br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene; <br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync; <br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni; <br>When ModelName is OS, available values are 2.0; <br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0; <br>When ModelName is Mingmou, available values are 1.0; <br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * <p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
+    * <p>Used to describe the resource file to be used by the model when generating a video, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be passed in separately, but the last frame cannot be passed in separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: Single or multiple images/videos/sounds can be passed in as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, the display aspect ratio of the generated video can be adjusted</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. Images can also be passed in along with the input video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10M.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request the document from us or refer to the original vendor's document information.</li></ol>
     */
     @SerializedName("FileInfos")
     @Expose
@@ -59,21 +59,21 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private AigcVideoTaskInputSubjectInfo [] SubjectInfos;
 
     /**
-    * <p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
+    * <p>Media file ID used as the last frame to generate a video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
     */
     @SerializedName("LastFrameFileId")
     @Expose
     private String LastFrameFileId;
 
     /**
-    * <p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
+    * <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>When you specify this parameter, specify the first frame via FileInfos at the same time.</li><li>Image size must be less than 5M.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
     */
     @SerializedName("LastFrameUrl")
     @Expose
     private String LastFrameUrl;
 
     /**
-    * <p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
+    * <p>Prompt for video generation.<br>When no reference file is passed in, no scenario type is used, ExtInfo is not empty, Prompt is required.</p>
     */
     @SerializedName("Prompt")
     @Expose
@@ -94,7 +94,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private String EnhancePrompt;
 
     /**
-    * <p>Output media file configuration for a video task.</p>
+    * <p>Configuration of the output media file for the video task.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -136,7 +136,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private String SessionId;
 
     /**
-    * <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+    * <p>Source context. This is used to pass user request information. The audio and video quality revival completion callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
@@ -157,64 +157,64 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p> 
-     * @return ModelName <p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
+     * Get <p>Model name. Parameter Value:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p> 
+     * @return ModelName <p>Model name. Parameter Value:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
-     * @param ModelName <p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
+     * Set <p>Model name. Parameter Value:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
+     * @param ModelName <p>Model name. Parameter Value:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p> 
-     * @return ModelVersion <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
+     * Get <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max; <br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene; <br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync; <br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni; <br>When ModelName is OS, available values are 2.0; <br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0; <br>When ModelName is Mingmou, available values are 1.0; <br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p> 
+     * @return ModelVersion <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max; <br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene; <br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync; <br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni; <br>When ModelName is OS, available values are 2.0; <br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0; <br>When ModelName is Mingmou, available values are 1.0; <br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
-     * @param ModelVersion <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
+     * Set <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max; <br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene; <br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync; <br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni; <br>When ModelName is OS, available values are 2.0; <br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0; <br>When ModelName is Mingmou, available values are 1.0; <br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
+     * @param ModelVersion <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max; <br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene; <br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync; <br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni; <br>When ModelName is OS, available values are 2.0; <br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0; <br>When ModelName is Mingmou, available values are 1.0; <br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get <p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol> 
-     * @return FileInfos <p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
+     * Get <p>Used to describe the resource file to be used by the model when generating a video, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be passed in separately, but the last frame cannot be passed in separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: Single or multiple images/videos/sounds can be passed in as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, the display aspect ratio of the generated video can be adjusted</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. Images can also be passed in along with the input video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10M.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request the document from us or refer to the original vendor's document information.</li></ol> 
+     * @return FileInfos <p>Used to describe the resource file to be used by the model when generating a video, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be passed in separately, but the last frame cannot be passed in separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: Single or multiple images/videos/sounds can be passed in as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, the display aspect ratio of the generated video can be adjusted</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. Images can also be passed in along with the input video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10M.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request the document from us or refer to the original vendor's document information.</li></ol>
      */
     public AigcVideoTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set <p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
-     * @param FileInfos <p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
+     * Set <p>Used to describe the resource file to be used by the model when generating a video, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be passed in separately, but the last frame cannot be passed in separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: Single or multiple images/videos/sounds can be passed in as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, the display aspect ratio of the generated video can be adjusted</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. Images can also be passed in along with the input video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10M.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request the document from us or refer to the original vendor's document information.</li></ol>
+     * @param FileInfos <p>Used to describe the resource file to be used by the model when generating a video, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be passed in separately, but the last frame cannot be passed in separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: Single or multiple images/videos/sounds can be passed in as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, the display aspect ratio of the generated video can be adjusted</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. Images can also be passed in along with the input video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10M.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request the document from us or refer to the original vendor's document information.</li></ol>
      */
     public void setFileInfos(AigcVideoTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
@@ -237,48 +237,48 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol> 
-     * @return LastFrameFileId <p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
+     * Get <p>Media file ID used as the last frame to generate a video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol> 
+     * @return LastFrameFileId <p>Media file ID used as the last frame to generate a video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
      */
     public String getLastFrameFileId() {
         return this.LastFrameFileId;
     }
 
     /**
-     * Set <p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
-     * @param LastFrameFileId <p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
+     * Set <p>Media file ID used as the last frame to generate a video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
+     * @param LastFrameFileId <p>Media file ID used as the last frame to generate a video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
      */
     public void setLastFrameFileId(String LastFrameFileId) {
         this.LastFrameFileId = LastFrameFileId;
     }
 
     /**
-     * Get <p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol> 
-     * @return LastFrameUrl <p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
+     * Get <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>When you specify this parameter, specify the first frame via FileInfos at the same time.</li><li>Image size must be less than 5M.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol> 
+     * @return LastFrameUrl <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>When you specify this parameter, specify the first frame via FileInfos at the same time.</li><li>Image size must be less than 5M.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
      */
     public String getLastFrameUrl() {
         return this.LastFrameUrl;
     }
 
     /**
-     * Set <p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
-     * @param LastFrameUrl <p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
+     * Set <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>When you specify this parameter, specify the first frame via FileInfos at the same time.</li><li>Image size must be less than 5M.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
+     * @param LastFrameUrl <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>When you specify this parameter, specify the first frame via FileInfos at the same time.</li><li>Image size must be less than 5M.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
      */
     public void setLastFrameUrl(String LastFrameUrl) {
         this.LastFrameUrl = LastFrameUrl;
     }
 
     /**
-     * Get <p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p> 
-     * @return Prompt <p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
+     * Get <p>Prompt for video generation.<br>When no reference file is passed in, no scenario type is used, ExtInfo is not empty, Prompt is required.</p> 
+     * @return Prompt <p>Prompt for video generation.<br>When no reference file is passed in, no scenario type is used, ExtInfo is not empty, Prompt is required.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
-     * @param Prompt <p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
+     * Set <p>Prompt for video generation.<br>When no reference file is passed in, no scenario type is used, ExtInfo is not empty, Prompt is required.</p>
+     * @param Prompt <p>Prompt for video generation.<br>When no reference file is passed in, no scenario type is used, ExtInfo is not empty, Prompt is required.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
@@ -317,16 +317,16 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Output media file configuration for a video task.</p> 
-     * @return OutputConfig <p>Output media file configuration for a video task.</p>
+     * Get <p>Configuration of the output media file for the video task.</p> 
+     * @return OutputConfig <p>Configuration of the output media file for the video task.</p>
      */
     public AigcVideoOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output media file configuration for a video task.</p>
-     * @param OutputConfig <p>Output media file configuration for a video task.</p>
+     * Set <p>Configuration of the output media file for the video task.</p>
+     * @param OutputConfig <p>Configuration of the output media file for the video task.</p>
      */
     public void setOutputConfig(AigcVideoOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
@@ -413,16 +413,16 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p> 
-     * @return SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Get <p>Source context. This is used to pass user request information. The audio and video quality revival completion callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival completion callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Set <p>Source context. This is used to pass user request information. The audio and video quality revival completion callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival completion callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
 
     /**
-    * Offset time of the start of the suspected segment. Unit: seconds.
+    * Start time offset of a suspected segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -45,7 +45,7 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     private Float Confidence;
 
     /**
-    * Result suggestion for video moderation of the suspected segment. Value range:
+    * Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -62,16 +62,16 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     private String [] KeywordSet;
 
     /**
-     * Get Offset time of the start of the suspected segment. Unit: seconds. 
-     * @return StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+     * Get Start time offset of a suspected segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Offset time of the start of the suspected segment. Unit: seconds.
-     * @param StartTimeOffset Offset time of the start of the suspected segment. Unit: seconds.
+     * Set Start time offset of a suspected segment, in seconds.
+     * @param StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
@@ -110,11 +110,11 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get Result suggestion for video moderation of the suspected segment. Value range:
+     * Get Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Result suggestion for video moderation of the suspected segment. Value range:
+     * @return Suggestion Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -124,11 +124,11 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Set Result suggestion for video moderation of the suspected segment. Value range:
+     * Set Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Result suggestion for video moderation of the suspected segment. Value range:
+     * @param Suggestion Result suggestion for moderation of suspected audio and video segments. Permissible range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>

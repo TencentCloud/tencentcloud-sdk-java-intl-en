@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDefaultDistributionConfigRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+    * Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification.
     */
     @SerializedName("Domain")
     @Expose
@@ -52,32 +52,32 @@ public class ModifyDefaultDistributionConfigRequest extends AbstractModel {
     private String PlayKey;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification. 
-     * @return Domain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+     * Get Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification. 
+     * @return Domain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
-     * @param Domain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in the blank to indicate no domain name modification.
+     * Set Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification.
+     * @param Domain Distribution domain name. The value is a domain name in the VOD domain name list. Leave it empty or fill in a blank to indicate no domain name modification.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

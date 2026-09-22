@@ -31,7 +31,7 @@ public class ModifyPersonSampleRequest extends AbstractModel {
     private String PersonId;
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -53,9 +53,9 @@ public class ModifyPersonSampleRequest extends AbstractModel {
 
     /**
     * Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
     */
     @SerializedName("Usages")
     @Expose
@@ -92,16 +92,16 @@ public class ModifyPersonSampleRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -141,13 +141,13 @@ public class ModifyPersonSampleRequest extends AbstractModel {
 
     /**
      * Get Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2. 
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2. 
      * @return Usages Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
      */
     public String [] getUsages() {
         return this.Usages;
@@ -155,13 +155,13 @@ public class ModifyPersonSampleRequest extends AbstractModel {
 
     /**
      * Set Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
      * @param Usages Material application scenario. Available values:
-1. Recognition: used for content recognition, equivalent to Recognition.Face.
-2. Review: used for inappropriate content recognition, equivalent to Review.Face.
-3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
+1. Recognition: for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: used for content recognition and inappropriate content recognition, equivalent to 1+2.
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;

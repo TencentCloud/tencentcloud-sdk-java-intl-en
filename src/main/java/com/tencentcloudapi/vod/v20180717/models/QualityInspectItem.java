@@ -38,7 +38,7 @@ public class QualityInspectItem extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+    * Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
@@ -95,14 +95,14 @@ public class QualityInspectItem extends AbstractModel {
     }
 
     /**
-     * Get Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+     * Get Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
 <li>QRCode: QR code;</li>
 <li>AppletCode: mini program code;</li>
 <li>BarCode: barcode.</li> 
-     * @return AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+     * @return AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
@@ -115,14 +115,14 @@ public class QualityInspectItem extends AbstractModel {
     }
 
     /**
-     * Set Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+     * Set Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>
 <li>QRCode: QR code;</li>
 <li>AppletCode: mini program code;</li>
 <li>BarCode: barcode.</li>
-     * @param AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+     * @param AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
 <font color=red>Note:</font> This field is valid only when Type is one of the following values:
 <li>BlackWhiteEdge: black and white edges;</li>
 <li>Mosaic: mosaic;</li>

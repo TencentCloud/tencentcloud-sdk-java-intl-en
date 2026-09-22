@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel {
 
     /**
-    * Recognition confidence of the opening scene. Value range: 0-100.
+    * Confidence of opening scene recognition. Value range: 0-100.
     */
     @SerializedName("HeadConfidence")
     @Expose
@@ -45,23 +45,23 @@ public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel {
     private Float TailConfidence;
 
     /**
-    * Start time point of the video ending, in seconds.
+    * Start time point of the video ending scene. Unit: seconds.
     */
     @SerializedName("TailTimeOffset")
     @Expose
     private Float TailTimeOffset;
 
     /**
-     * Get Recognition confidence of the opening scene. Value range: 0-100. 
-     * @return HeadConfidence Recognition confidence of the opening scene. Value range: 0-100.
+     * Get Confidence of opening scene recognition. Value range: 0-100. 
+     * @return HeadConfidence Confidence of opening scene recognition. Value range: 0-100.
      */
     public Float getHeadConfidence() {
         return this.HeadConfidence;
     }
 
     /**
-     * Set Recognition confidence of the opening scene. Value range: 0-100.
-     * @param HeadConfidence Recognition confidence of the opening scene. Value range: 0-100.
+     * Set Confidence of opening scene recognition. Value range: 0-100.
+     * @param HeadConfidence Confidence of opening scene recognition. Value range: 0-100.
      */
     public void setHeadConfidence(Float HeadConfidence) {
         this.HeadConfidence = HeadConfidence;
@@ -100,16 +100,16 @@ public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel {
     }
 
     /**
-     * Get Start time point of the video ending, in seconds. 
-     * @return TailTimeOffset Start time point of the video ending, in seconds.
+     * Get Start time point of the video ending scene. Unit: seconds. 
+     * @return TailTimeOffset Start time point of the video ending scene. Unit: seconds.
      */
     public Float getTailTimeOffset() {
         return this.TailTimeOffset;
     }
 
     /**
-     * Set Start time point of the video ending, in seconds.
-     * @param TailTimeOffset Start time point of the video ending, in seconds.
+     * Set Start time point of the video ending scene. Unit: seconds.
+     * @param TailTimeOffset Start time point of the video ending scene. Unit: seconds.
      */
     public void setTailTimeOffset(Float TailTimeOffset) {
         this.TailTimeOffset = TailTimeOffset;

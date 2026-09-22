@@ -59,7 +59,7 @@ public class TranscodeTaskInput extends AbstractModel {
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * <p>Mosaic list. Up to 10 mosaics are supported.</p>
+    * <p>Mosaic list. Up to 10 images are supported.</p>
     */
     @SerializedName("MosaicSet")
     @Expose
@@ -181,16 +181,16 @@ public class TranscodeTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Mosaic list. Up to 10 mosaics are supported.</p> 
-     * @return MosaicSet <p>Mosaic list. Up to 10 mosaics are supported.</p>
+     * Get <p>Mosaic list. Up to 10 images are supported.</p> 
+     * @return MosaicSet <p>Mosaic list. Up to 10 images are supported.</p>
      */
     public MosaicInput [] getMosaicSet() {
         return this.MosaicSet;
     }
 
     /**
-     * Set <p>Mosaic list. Up to 10 mosaics are supported.</p>
-     * @param MosaicSet <p>Mosaic list. Up to 10 mosaics are supported.</p>
+     * Set <p>Mosaic list. Up to 10 images are supported.</p>
+     * @param MosaicSet <p>Mosaic list. Up to 10 images are supported.</p>
      */
     public void setMosaicSet(MosaicInput [] MosaicSet) {
         this.MosaicSet = MosaicSet;

@@ -31,7 +31,7 @@ public class DescribeAigcUsageDataResponse extends AbstractModel {
     private AigcUsageDataItem [] AigcUsageDataSet;
 
     /**
-    * <p>Text generation detailed log</p>
+    * <p>Detailed log for text generation</p>
     */
     @SerializedName("AigcTextDetails")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAigcUsageDataResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Text generation detailed log</p> 
-     * @return AigcTextDetails <p>Text generation detailed log</p>
+     * Get <p>Detailed log for text generation</p> 
+     * @return AigcTextDetails <p>Detailed log for text generation</p>
      */
     public AigcTextDetail getAigcTextDetails() {
         return this.AigcTextDetails;
     }
 
     /**
-     * Set <p>Text generation detailed log</p>
-     * @param AigcTextDetails <p>Text generation detailed log</p>
+     * Set <p>Detailed log for text generation</p>
+     * @param AigcTextDetails <p>Detailed log for text generation</p>
      */
     public void setAigcTextDetails(AigcTextDetail AigcTextDetails) {
         this.AigcTextDetails = AigcTextDetails;

@@ -45,7 +45,7 @@ public class DescribeStorageDataResponse extends AbstractModel {
     private Long StandardStorage;
 
     /**
-    * Current infrequent access storage capacity in bytes.
+    * Current infrequent access storage capacity, in bytes.
     */
     @SerializedName("InfrequentStorage")
     @Expose
@@ -128,16 +128,16 @@ public class DescribeStorageDataResponse extends AbstractModel {
     }
 
     /**
-     * Get Current infrequent access storage capacity in bytes. 
-     * @return InfrequentStorage Current infrequent access storage capacity in bytes.
+     * Get Current infrequent access storage capacity, in bytes. 
+     * @return InfrequentStorage Current infrequent access storage capacity, in bytes.
      */
     public Long getInfrequentStorage() {
         return this.InfrequentStorage;
     }
 
     /**
-     * Set Current infrequent access storage capacity in bytes.
-     * @param InfrequentStorage Current infrequent access storage capacity in bytes.
+     * Set Current infrequent access storage capacity, in bytes.
+     * @param InfrequentStorage Current infrequent access storage capacity, in bytes.
      */
     public void setInfrequentStorage(Long InfrequentStorage) {
         this.InfrequentStorage = InfrequentStorage;

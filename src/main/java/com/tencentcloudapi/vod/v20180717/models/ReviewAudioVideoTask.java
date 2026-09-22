@@ -75,7 +75,7 @@ public class ReviewAudioVideoTask extends AbstractModel {
     private String SessionId;
 
     /**
-    * Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+    * Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
@@ -202,16 +202,16 @@ public class ReviewAudioVideoTask extends AbstractModel {
     }
 
     /**
-     * Get Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters. 
-     * @return SessionContext Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+     * Get Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters. 
+     * @return SessionContext Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
-     * @param SessionContext Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+     * Set Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
+     * @param SessionContext Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

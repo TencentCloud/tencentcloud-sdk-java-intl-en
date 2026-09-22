@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateAigcApiTokenRequest extends AbstractModel {
 
     /**
-    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+    * <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,30 +38,30 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
     private String ApiToken;
 
     /**
-    * <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
+    * <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * <p>Extended information of the token.</p>
+    * <p>Extended information of the token</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Get <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * Set <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -84,32 +84,32 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p> 
-     * @return ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
+     * Get <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p> 
+     * @return ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
-     * @param ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
+     * Set <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+     * @param ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get <p>Extended information of the token.</p> 
-     * @return ExtInfo <p>Extended information of the token.</p>
+     * Get <p>Extended information of the token</p> 
+     * @return ExtInfo <p>Extended information of the token</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>Extended information of the token.</p>
-     * @param ExtInfo <p>Extended information of the token.</p>
+     * Set <p>Extended information of the token</p>
+     * @param ExtInfo <p>Extended information of the token</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

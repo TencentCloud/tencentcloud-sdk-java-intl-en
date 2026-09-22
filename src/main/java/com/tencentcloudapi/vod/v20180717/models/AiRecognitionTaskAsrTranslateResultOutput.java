@@ -25,21 +25,21 @@ public class AiRecognitionTaskAsrTranslateResultOutput extends AbstractModel {
 
     /**
     * Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskAsrTranslateSegmentItem [] SegmentSet;
 
     /**
-    * URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+    * URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
@@ -54,9 +54,9 @@ public class AiRecognitionTaskAsrTranslateResultOutput extends AbstractModel {
 
     /**
      * Get Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
      * @return SegmentSet Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public AiRecognitionTaskAsrTranslateSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -64,41 +64,41 @@ public class AiRecognitionTaskAsrTranslateResultOutput extends AbstractModel {
 
     /**
      * Set Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      * @param SegmentSet Voice translation clip list.
-<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public void setSegmentSet(AiRecognitionTaskAsrTranslateSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.) 
-     * @return SegmentSetFileUrl URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * Get URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.) 
+     * @return SegmentSetFileUrl URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
-     * @param SegmentSetFileUrl URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * Set URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+     * @param SegmentSetFileUrl URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param SegmentSetFileUrlExpireTime Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param SegmentSetFileUrlExpireTime Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

@@ -31,7 +31,7 @@ public class CloneVoiceAsyncInput extends AbstractModel {
     private String AudioUrl;
 
     /**
-    * <p>Input audio fileId</p>
+    * <p>fileId of the input audio</p>
     */
     @SerializedName("AudioFileId")
     @Expose
@@ -68,16 +68,16 @@ public class CloneVoiceAsyncInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Input audio fileId</p> 
-     * @return AudioFileId <p>Input audio fileId</p>
+     * Get <p>fileId of the input audio</p> 
+     * @return AudioFileId <p>fileId of the input audio</p>
      */
     public String getAudioFileId() {
         return this.AudioFileId;
     }
 
     /**
-     * Set <p>Input audio fileId</p>
-     * @param AudioFileId <p>Input audio fileId</p>
+     * Set <p>fileId of the input audio</p>
+     * @param AudioFileId <p>fileId of the input audio</p>
      */
     public void setAudioFileId(String AudioFileId) {
         this.AudioFileId = AudioFileId;

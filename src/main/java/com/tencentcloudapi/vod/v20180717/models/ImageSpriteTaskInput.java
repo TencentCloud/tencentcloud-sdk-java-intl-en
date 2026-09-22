@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ImageSpriteTaskInput extends AbstractModel {
 
     /**
-    * Sprite screenshot template ID.
+    * Image sprite template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Sprite screenshot template ID. 
-     * @return Definition Sprite screenshot template ID.
+     * Get Image sprite template ID. 
+     * @return Definition Image sprite template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Sprite screenshot template ID.
-     * @param Definition Sprite screenshot template ID.
+     * Set Image sprite template ID.
+     * @param Definition Image sprite template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

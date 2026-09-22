@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MediaSampleSnapshotInfo extends AbstractModel {
 
     /**
-    * A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+    * A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
     */
     @SerializedName("SampleSnapshotSet")
     @Expose
     private MediaSampleSnapshotItem [] SampleSnapshotSet;
 
     /**
-     * Get A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec. 
-     * @return SampleSnapshotSet A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+     * Get A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec. 
+     * @return SampleSnapshotSet A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
      */
     public MediaSampleSnapshotItem [] getSampleSnapshotSet() {
         return this.SampleSnapshotSet;
     }
 
     /**
-     * Set A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
-     * @param SampleSnapshotSet A collection of sampling screenshot information for a specific spec. Each element represents a set of sampling screenshots with the same spec.
+     * Set A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
+     * @param SampleSnapshotSet A collection of sampling screenshot information for a specific specification, where each element represents a set of sampled screenshots of the same spec.
      */
     public void setSampleSnapshotSet(MediaSampleSnapshotItem [] SampleSnapshotSet) {
         this.SampleSnapshotSet = SampleSnapshotSet;

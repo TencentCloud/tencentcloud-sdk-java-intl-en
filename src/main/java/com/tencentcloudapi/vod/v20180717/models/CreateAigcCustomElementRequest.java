@@ -33,7 +33,7 @@ public class CreateAigcCustomElementRequest extends AbstractModel {
     /**
     * Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
     */
     @SerializedName("ElementDescription")
     @Expose
@@ -41,7 +41,7 @@ Up to 100 characters.
 
     /**
     * Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
     */
@@ -75,10 +75,10 @@ The image file size must not exceed 10 MB. The image width and height must not b
     /**
      * Get Subject description.
 
-Up to 100 characters. 
+Cannot exceed 100 characters. 
      * @return ElementDescription Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
      */
     public String getElementDescription() {
         return this.ElementDescription;
@@ -87,10 +87,10 @@ Up to 100 characters.
     /**
      * Set Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
      * @param ElementDescription Subject description.
 
-Up to 100 characters.
+Cannot exceed 100 characters.
      */
     public void setElementDescription(String ElementDescription) {
         this.ElementDescription = ElementDescription;
@@ -98,11 +98,11 @@ Up to 100 characters.
 
     /**
      * Get Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1. 
      * @return ElementFrontalImage Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
      */
@@ -112,11 +112,11 @@ The image file size must not exceed 10 MB. The image width and height must not b
 
     /**
      * Set Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
      * @param ElementFrontalImage Front reference image of the subject.
-Supports passing an image URL (ensure it is accessible).
+Support input image URL (underwrite accessibility)
 Image format: .jpg, .jpeg, and .png are supported.
 The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
      */

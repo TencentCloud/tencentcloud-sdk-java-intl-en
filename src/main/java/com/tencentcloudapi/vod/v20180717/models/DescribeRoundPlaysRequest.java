@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeRoundPlaysRequest extends AbstractModel {
 
     /**
-    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+    * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+    * <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
     */
     @SerializedName("RoundPlayIds")
     @Expose
     private String [] RoundPlayIds;
 
     /**
-    * <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+    * <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
     */
     @SerializedName("Status")
     @Expose
@@ -80,48 +80,48 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p> 
-     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * Get <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
-     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p> 
-     * @return RoundPlayIds <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+     * Get <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p> 
+     * @return RoundPlayIds <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
      */
     public String [] getRoundPlayIds() {
         return this.RoundPlayIds;
     }
 
     /**
-     * Set <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
-     * @param RoundPlayIds <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+     * Set <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
+     * @param RoundPlayIds <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
      */
     public void setRoundPlayIds(String [] RoundPlayIds) {
         this.RoundPlayIds = RoundPlayIds;
     }
 
     /**
-     * Get <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p> 
-     * @return Status <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+     * Get <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p> 
+     * @return Status <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
-     * @param Status <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+     * Set <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
+     * @param Status <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

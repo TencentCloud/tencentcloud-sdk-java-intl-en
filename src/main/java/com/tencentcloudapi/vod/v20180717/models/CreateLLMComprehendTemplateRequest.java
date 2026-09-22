@@ -31,7 +31,7 @@ public class CreateLLMComprehendTemplateRequest extends AbstractModel {
     private String Level;
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+    * <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,14 +52,14 @@ public class CreateLLMComprehendTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+    * <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummary Summary;
 
     /**
-    * <p>Text transcribing and parsing configuration</p>
+    * <p>Text transcription parsing configuration</p>
     */
     @SerializedName("Asr")
     @Expose
@@ -89,16 +89,16 @@ public class CreateLLMComprehendTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+     * Get <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+     * Set <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -137,32 +137,32 @@ public class CreateLLMComprehendTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p> 
-     * @return Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+     * Get <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p> 
+     * @return Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
      */
     public LLMComprehendSummary getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
-     * @param Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+     * Set <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
+     * @param Summary <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
      */
     public void setSummary(LLMComprehendSummary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get <p>Text transcribing and parsing configuration</p> 
-     * @return Asr <p>Text transcribing and parsing configuration</p>
+     * Get <p>Text transcription parsing configuration</p> 
+     * @return Asr <p>Text transcription parsing configuration</p>
      */
     public LLMComprehendAsr getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set <p>Text transcribing and parsing configuration</p>
-     * @param Asr <p>Text transcribing and parsing configuration</p>
+     * Set <p>Text transcription parsing configuration</p>
+     * @param Asr <p>Text transcription parsing configuration</p>
      */
     public void setAsr(LLMComprehendAsr Asr) {
         this.Asr = Asr;

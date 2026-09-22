@@ -32,14 +32,14 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel {
     private MediaAiAnalysisHighlightItem [] HighlightSet;
 
     /**
-    * URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+    * URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
     */
     @SerializedName("HighlightSetFileUrl")
     @Expose
     private String HighlightSetFileUrl;
 
     /**
-    * Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("HighlightSetFileUrlExpireTime")
     @Expose
@@ -66,32 +66,32 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel {
     }
 
     /**
-     * Get URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached. 
-     * @return HighlightSetFileUrl URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+     * Get URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.) 
+     * @return HighlightSetFileUrl URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
      */
     public String getHighlightSetFileUrl() {
         return this.HighlightSetFileUrl;
     }
 
     /**
-     * Set URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
-     * @param HighlightSetFileUrl URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+     * Set URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
+     * @param HighlightSetFileUrl URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
      */
     public void setHighlightSetFileUrl(String HighlightSetFileUrl) {
         this.HighlightSetFileUrl = HighlightSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return HighlightSetFileUrlExpireTime Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return HighlightSetFileUrlExpireTime Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getHighlightSetFileUrlExpireTime() {
         return this.HighlightSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param HighlightSetFileUrlExpireTime Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param HighlightSetFileUrlExpireTime Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setHighlightSetFileUrlExpireTime(String HighlightSetFileUrlExpireTime) {
         this.HighlightSetFileUrlExpireTime = HighlightSetFileUrlExpireTime;

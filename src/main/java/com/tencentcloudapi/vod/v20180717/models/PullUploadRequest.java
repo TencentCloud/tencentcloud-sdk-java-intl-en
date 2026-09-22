@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class PullUploadRequest extends AbstractModel {
 
     /**
-    * <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
+    * <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
     */
     @SerializedName("MediaUrl")
     @Expose
     private String MediaUrl;
 
     /**
-    * <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+    * <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
     */
     @SerializedName("MediaType")
     @Expose
     private String MediaType;
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -66,21 +66,21 @@ public class PullUploadRequest extends AbstractModel {
     private String Procedure;
 
     /**
-    * <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+    * <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+    * <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
+    * <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
     */
     @SerializedName("ClassId")
     @Expose
@@ -94,7 +94,7 @@ public class PullUploadRequest extends AbstractModel {
     private Long TasksPriority;
 
     /**
-    * <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+    * <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
@@ -108,14 +108,14 @@ public class PullUploadRequest extends AbstractModel {
     private String SessionId;
 
     /**
-    * <p>Reserved field, used for special purposes.</p>
+    * <p>Reserved field, used for special purpose.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-    * <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+    * <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
     */
     @SerializedName("SourceContext")
     @Expose
@@ -129,48 +129,48 @@ public class PullUploadRequest extends AbstractModel {
     private String MediaStoragePath;
 
     /**
-     * Get <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p> 
-     * @return MediaUrl <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
+     * Get <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p> 
+     * @return MediaUrl <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
-     * @param MediaUrl <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
+     * Set <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
+     * @param MediaUrl <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
     }
 
     /**
-     * Get <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p> 
-     * @return MediaType <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+     * Get <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p> 
+     * @return MediaType <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
      */
     public String getMediaType() {
         return this.MediaType;
     }
 
     /**
-     * Set <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
-     * @param MediaType <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+     * Set <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+     * @param MediaType <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
      */
     public void setMediaType(String MediaType) {
         this.MediaType = MediaType;
     }
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -225,48 +225,48 @@ public class PullUploadRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
-     * @return ExpireTime <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * Get <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
+     * @return ExpireTime <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param ExpireTime <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * Set <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param ExpireTime <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li> 
-     * @return StorageRegion <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+     * Get <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li> 
+     * @return StorageRegion <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
-     * @param StorageRegion <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+     * Set <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+     * @param StorageRegion <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p> 
-     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
+     * Get <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p> 
+     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
-     * @param ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
+     * Set <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
+     * @param ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
@@ -289,16 +289,16 @@ public class PullUploadRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p> 
-     * @return SessionContext <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Get <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
-     * @param SessionContext <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * Set <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
@@ -321,32 +321,32 @@ public class PullUploadRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Reserved field, used for special purposes.</p> 
-     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
+     * Get <p>Reserved field, used for special purpose.</p> 
+     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>Reserved field, used for special purposes.</p>
-     * @param ExtInfo <p>Reserved field, used for special purposes.</p>
+     * Set <p>Reserved field, used for special purpose.</p>
+     * @param ExtInfo <p>Reserved field, used for special purpose.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
     }
 
     /**
-     * Get <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p> 
-     * @return SourceContext <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+     * Get <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p> 
+     * @return SourceContext <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
      */
     public String getSourceContext() {
         return this.SourceContext;
     }
 
     /**
-     * Set <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
-     * @param SourceContext <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+     * Set <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+     * @param SourceContext <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
      */
     public void setSourceContext(String SourceContext) {
         this.SourceContext = SourceContext;

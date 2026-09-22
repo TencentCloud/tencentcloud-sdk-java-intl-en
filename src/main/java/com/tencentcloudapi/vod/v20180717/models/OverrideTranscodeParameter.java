@@ -59,7 +59,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * <p>TSC transcoding configuration parameters.</p>
+    * <p>Top Speed Codec transcoding configuration parameters.</p>
     */
     @SerializedName("TEHDConfig")
     @Expose
@@ -153,16 +153,16 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Get <p>TSC transcoding configuration parameters.</p> 
-     * @return TEHDConfig <p>TSC transcoding configuration parameters.</p>
+     * Get <p>Top Speed Codec transcoding configuration parameters.</p> 
+     * @return TEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set <p>TSC transcoding configuration parameters.</p>
-     * @param TEHDConfig <p>TSC transcoding configuration parameters.</p>
+     * Set <p>Top Speed Codec transcoding configuration parameters.</p>
+     * @param TEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;

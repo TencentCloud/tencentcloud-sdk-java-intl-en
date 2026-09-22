@@ -31,7 +31,7 @@ public class AiSampleFaceInfo extends AbstractModel {
     private String FaceId;
 
     /**
-    * Human face image address.
+    * Face image address.
     */
     @SerializedName("Url")
     @Expose
@@ -54,16 +54,16 @@ public class AiSampleFaceInfo extends AbstractModel {
     }
 
     /**
-     * Get Human face image address. 
-     * @return Url Human face image address.
+     * Get Face image address. 
+     * @return Url Face image address.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Human face image address.
-     * @param Url Human face image address.
+     * Set Face image address.
+     * @param Url Face image address.
      */
     public void setUrl(String Url) {
         this.Url = Url;

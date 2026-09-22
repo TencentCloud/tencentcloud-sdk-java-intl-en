@@ -26,7 +26,7 @@ public class ImageDenoiseConfig extends AbstractModel {
     /**
     * Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -46,11 +46,11 @@ Default value: weak.
     /**
      * Get Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON. 
      * @return Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -60,11 +60,11 @@ Default value: ON.
     /**
      * Set Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      * @param Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {

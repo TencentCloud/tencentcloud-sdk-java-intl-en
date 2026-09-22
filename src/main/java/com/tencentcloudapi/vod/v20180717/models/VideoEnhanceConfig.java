@@ -30,7 +30,7 @@ public class VideoEnhanceConfig extends AbstractModel {
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
 <li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effects. Targeting the demand for UHD video in broadcasting and OTT, it generates Ultra-High-Definition Standard Video at 4K 60fps HDR, supporting broadcasting scenario format standards.</li>
+<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effect, targeting the demand for UHD video in broadcasting/OTT, and generates Ultra-High-Definition Standard Video at 4K 60fps HDR. It supports broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
@@ -61,7 +61,7 @@ public class VideoEnhanceConfig extends AbstractModel {
     private VideoDenoiseInfo Denoise;
 
     /**
-    * Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
+    * Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
     */
     @SerializedName("ImageQualityEnhance")
     @Expose
@@ -82,7 +82,7 @@ public class VideoEnhanceConfig extends AbstractModel {
     private LowLightEnhanceInfo LowLightEnhance;
 
     /**
-    * Remove scratch configuration.
+    * Scratch configuration.
     */
     @SerializedName("ScratchRepair")
     @Expose
@@ -96,14 +96,14 @@ public class VideoEnhanceConfig extends AbstractModel {
     private ArtifactRepairInfo ArtifactRepair;
 
     /**
-    * Large model enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured. It cannot be enabled simultaneously with super resolution and noise reduction.
+    * LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super resolution or noise reduction.
     */
     @SerializedName("DiffusionEnhance")
     @Expose
     private DiffusionEnhanceInfo DiffusionEnhance;
 
     /**
-    * Frame interpolation frame rate configuration. Supports fractions. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
+    * Frame interpolation frame rate configuration. Fractions are supported. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
     */
     @SerializedName("FrameRateWithDen")
     @Expose
@@ -116,7 +116,7 @@ public class VideoEnhanceConfig extends AbstractModel {
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
 <li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effects. Targeting the demand for UHD video in broadcasting and OTT, it generates Ultra-High-Definition Standard Video at 4K 60fps HDR, supporting broadcasting scenario format standards.</li>
+<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effect, targeting the demand for UHD video in broadcasting/OTT, and generates Ultra-High-Definition Standard Video at 4K 60fps HDR. It supports broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li> 
@@ -126,7 +126,7 @@ public class VideoEnhanceConfig extends AbstractModel {
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
 <li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effects. Targeting the demand for UHD video in broadcasting and OTT, it generates Ultra-High-Definition Standard Video at 4K 60fps HDR, supporting broadcasting scenario format standards.</li>
+<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effect, targeting the demand for UHD video in broadcasting/OTT, and generates Ultra-High-Definition Standard Video at 4K 60fps HDR. It supports broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
@@ -142,7 +142,7 @@ public class VideoEnhanceConfig extends AbstractModel {
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
 <li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effects. Targeting the demand for UHD video in broadcasting and OTT, it generates Ultra-High-Definition Standard Video at 4K 60fps HDR, supporting broadcasting scenario format standards.</li>
+<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effect, targeting the demand for UHD video in broadcasting/OTT, and generates Ultra-High-Definition Standard Video at 4K 60fps HDR. It supports broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
@@ -152,7 +152,7 @@ public class VideoEnhanceConfig extends AbstractModel {
 <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
 <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
 <li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
-<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effects. Targeting the demand for UHD video in broadcasting and OTT, it generates Ultra-High-Definition Standard Video at 4K 60fps HDR, supporting broadcasting scenario format standards.</li>
+<li>HD_movie_series (UHD TV shows and movies) obtains smooth UHD effect, targeting the demand for UHD video in broadcasting/OTT, and generates Ultra-High-Definition Standard Video at 4K 60fps HDR. It supports broadcasting scenario format standards.</li>
 <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
 <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
 <li>Input of a null string indicates that the enhancement scenario is not used.</li>
@@ -210,16 +210,16 @@ public class VideoEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Get Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured. 
-     * @return ImageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
+     * Get Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. 
+     * @return ImageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
      */
     public ImageQualityEnhanceInfo getImageQualityEnhance() {
         return this.ImageQualityEnhance;
     }
 
     /**
-     * Set Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
-     * @param ImageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured.
+     * Set Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
+     * @param ImageQualityEnhance Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.
      */
     public void setImageQualityEnhance(ImageQualityEnhanceInfo ImageQualityEnhance) {
         this.ImageQualityEnhance = ImageQualityEnhance;
@@ -258,16 +258,16 @@ public class VideoEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Get Remove scratch configuration. 
-     * @return ScratchRepair Remove scratch configuration.
+     * Get Scratch configuration. 
+     * @return ScratchRepair Scratch configuration.
      */
     public ScratchRepairInfo getScratchRepair() {
         return this.ScratchRepair;
     }
 
     /**
-     * Set Remove scratch configuration.
-     * @param ScratchRepair Remove scratch configuration.
+     * Set Scratch configuration.
+     * @param ScratchRepair Scratch configuration.
      */
     public void setScratchRepair(ScratchRepairInfo ScratchRepair) {
         this.ScratchRepair = ScratchRepair;
@@ -290,32 +290,32 @@ public class VideoEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Get Large model enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured. It cannot be enabled simultaneously with super resolution and noise reduction. 
-     * @return DiffusionEnhance Large model enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured. It cannot be enabled simultaneously with super resolution and noise reduction.
+     * Get LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super resolution or noise reduction. 
+     * @return DiffusionEnhance LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super resolution or noise reduction.
      */
     public DiffusionEnhanceInfo getDiffusionEnhance() {
         return this.DiffusionEnhance;
     }
 
     /**
-     * Set Large model enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured. It cannot be enabled simultaneously with super resolution and noise reduction.
-     * @param DiffusionEnhance Large model enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and jitter removal, can be configured. It cannot be enabled simultaneously with super resolution and noise reduction.
+     * Set LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super resolution or noise reduction.
+     * @param DiffusionEnhance LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super resolution or noise reduction.
      */
     public void setDiffusionEnhance(DiffusionEnhanceInfo DiffusionEnhance) {
         this.DiffusionEnhance = DiffusionEnhance;
     }
 
     /**
-     * Get Frame interpolation frame rate configuration. Supports fractions. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate. 
-     * @return FrameRateWithDen Frame interpolation frame rate configuration. Supports fractions. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
+     * Get Frame interpolation frame rate configuration. Fractions are supported. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate. 
+     * @return FrameRateWithDen Frame interpolation frame rate configuration. Fractions are supported. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
      */
     public FrameRateWithDenInfo getFrameRateWithDen() {
         return this.FrameRateWithDen;
     }
 
     /**
-     * Set Frame interpolation frame rate configuration. Supports fractions. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
-     * @param FrameRateWithDen Frame interpolation frame rate configuration. Supports fractions. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
+     * Set Frame interpolation frame rate configuration. Fractions are supported. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
+     * @param FrameRateWithDen Frame interpolation frame rate configuration. Fractions are supported. Note that you can only specify either this parameter or FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.
      */
     public void setFrameRateWithDen(FrameRateWithDenInfo FrameRateWithDen) {
         this.FrameRateWithDen = FrameRateWithDen;

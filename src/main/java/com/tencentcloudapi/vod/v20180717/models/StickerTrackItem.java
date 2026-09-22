@@ -27,14 +27,14 @@ public class StickerTrackItem extends AbstractModel {
     * Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
     */
     @SerializedName("SourceMedia")
     @Expose
     private String SourceMedia;
 
     /**
-    * Duration of the sticker in seconds.
+    * Duration of the sticker, in seconds.
     */
     @SerializedName("Duration")
     @Expose
@@ -49,7 +49,7 @@ Note: When using the download URL of another media file as the material source a
 
     /**
     * Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
     */
     @SerializedName("CoordinateOrigin")
@@ -58,7 +58,7 @@ Default: Center.
 
     /**
     * Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
     */
     @SerializedName("XPos")
@@ -67,7 +67,7 @@ Default value: 0px.
 
     /**
     * Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
     */
@@ -100,7 +100,7 @@ Default value: 0px.
     private String Height;
 
     /**
-    * Operation performed on the sticker, such as image rotation.
+    * Operation performed on the texture, such as image rotation.
     */
     @SerializedName("ImageOperations")
     @Expose
@@ -110,11 +110,11 @@ Default value: 0px.
      * Get Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature). 
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature). 
      * @return SourceMedia Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public String getSourceMedia() {
         return this.SourceMedia;
@@ -124,27 +124,27 @@ Note: When using the download URL of another media file as the material source a
      * Set Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      * @param SourceMedia Media material source of the texture segment, which can be:
 <li>Media file ID for VOD;</li>
 <li>Download URL of other media files.</li>
-Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
      */
     public void setSourceMedia(String SourceMedia) {
         this.SourceMedia = SourceMedia;
     }
 
     /**
-     * Get Duration of the sticker in seconds. 
-     * @return Duration Duration of the sticker in seconds.
+     * Get Duration of the sticker, in seconds. 
+     * @return Duration Duration of the sticker, in seconds.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Duration of the sticker in seconds.
-     * @param Duration Duration of the sticker in seconds.
+     * Set Duration of the sticker, in seconds.
+     * @param Duration Duration of the sticker, in seconds.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
@@ -168,10 +168,10 @@ Note: When using the download URL of another media file as the material source a
 
     /**
      * Get Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center. 
      * @return CoordinateOrigin Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
      */
     public String getCoordinateOrigin() {
@@ -180,10 +180,10 @@ Default: Center.
 
     /**
      * Set Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
      * @param CoordinateOrigin Origin position. Valid values:
-<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+<li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
 Default: Center.
      */
     public void setCoordinateOrigin(String CoordinateOrigin) {
@@ -192,10 +192,10 @@ Default: Center.
 
     /**
      * Get Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px. 
      * @return XPos Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
      */
     public String getXPos() {
@@ -204,10 +204,10 @@ Default value: 0px.
 
     /**
      * Set Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
      * @param XPos Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-<li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+<li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
 Default value: 0px.
      */
     public void setXPos(String XPos) {
@@ -216,11 +216,11 @@ Default value: 0px.
 
     /**
      * Get Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px. 
      * @return YPos Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
      */
@@ -230,11 +230,11 @@ Default value: 0px.
 
     /**
      * Set Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
      * @param YPos Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-<li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+<li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
 <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
 Default value: 0px.
      */
@@ -315,16 +315,16 @@ Default value: 0px.
     }
 
     /**
-     * Get Operation performed on the sticker, such as image rotation. 
-     * @return ImageOperations Operation performed on the sticker, such as image rotation.
+     * Get Operation performed on the texture, such as image rotation. 
+     * @return ImageOperations Operation performed on the texture, such as image rotation.
      */
     public ImageTransform [] getImageOperations() {
         return this.ImageOperations;
     }
 
     /**
-     * Set Operation performed on the sticker, such as image rotation.
-     * @param ImageOperations Operation performed on the sticker, such as image rotation.
+     * Set Operation performed on the texture, such as image rotation.
+     * @param ImageOperations Operation performed on the texture, such as image rotation.
      */
     public void setImageOperations(ImageTransform [] ImageOperations) {
         this.ImageOperations = ImageOperations;

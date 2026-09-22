@@ -40,9 +40,9 @@ public class QualityEnhanceTask extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+    * Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
     */
     @SerializedName("ErrCode")
@@ -64,7 +64,7 @@ public class QualityEnhanceTask extends AbstractModel {
     private String ErrCodeExt;
 
     /**
-    * Progress of the audio and video quality regeneration task. Value range: [0-100].
+    * Audio and video quality regeneration task progress. Value range: [0-100].
     */
     @SerializedName("Progress")
     @Expose
@@ -85,7 +85,7 @@ public class QualityEnhanceTask extends AbstractModel {
     private QualityEnhanceTaskOutput Output;
 
     /**
-    * Meta information of the output video after audio and video quality revival.
+    * Meta-information of the output video after audio and video quality revival.
     */
     @SerializedName("MetaData")
     @Expose
@@ -146,13 +146,13 @@ public class QualityEnhanceTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * Get Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li> 
-     * @return ErrCode Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * @return ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public Long getErrCode() {
@@ -160,13 +160,13 @@ public class QualityEnhanceTask extends AbstractModel {
     }
 
     /**
-     * Set Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * Set Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
-     * @param ErrCode Error code. 0 indicates success. Additional values indicate failure:
-<li>40000: Invalid input parameter. Check the input parameter;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * @param ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public void setErrCode(Long ErrCode) {
@@ -206,16 +206,16 @@ public class QualityEnhanceTask extends AbstractModel {
     }
 
     /**
-     * Get Progress of the audio and video quality regeneration task. Value range: [0-100]. 
-     * @return Progress Progress of the audio and video quality regeneration task. Value range: [0-100].
+     * Get Audio and video quality regeneration task progress. Value range: [0-100]. 
+     * @return Progress Audio and video quality regeneration task progress. Value range: [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the audio and video quality regeneration task. Value range: [0-100].
-     * @param Progress Progress of the audio and video quality regeneration task. Value range: [0-100].
+     * Set Audio and video quality regeneration task progress. Value range: [0-100].
+     * @param Progress Audio and video quality regeneration task progress. Value range: [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -254,16 +254,16 @@ public class QualityEnhanceTask extends AbstractModel {
     }
 
     /**
-     * Get Meta information of the output video after audio and video quality revival. 
-     * @return MetaData Meta information of the output video after audio and video quality revival.
+     * Get Meta-information of the output video after audio and video quality revival. 
+     * @return MetaData Meta-information of the output video after audio and video quality revival.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Meta information of the output video after audio and video quality revival.
-     * @param MetaData Meta information of the output video after audio and video quality revival.
+     * Set Meta-information of the output video after audio and video quality revival.
+     * @param MetaData Meta-information of the output video after audio and video quality revival.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

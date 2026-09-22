@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
 
     /**
-    * Player's ID in hexadecimal, 6 digits.
+    * Player's ID, represented in hexadecimal, 6 digits in total.
     */
     @SerializedName("Uv")
     @Expose
@@ -38,16 +38,16 @@ public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
     private String Uid;
 
     /**
-     * Get Player's ID in hexadecimal, 6 digits. 
-     * @return Uv Player's ID in hexadecimal, 6 digits.
+     * Get Player's ID, represented in hexadecimal, 6 digits in total. 
+     * @return Uv Player's ID, represented in hexadecimal, 6 digits in total.
      */
     public String getUv() {
         return this.Uv;
     }
 
     /**
-     * Set Player's ID in hexadecimal, 6 digits.
-     * @param Uv Player's ID in hexadecimal, 6 digits.
+     * Set Player's ID, represented in hexadecimal, 6 digits in total.
+     * @param Uv Player's ID, represented in hexadecimal, 6 digits in total.
      */
     public void setUv(String Uv) {
         this.Uv = Uv;

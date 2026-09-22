@@ -31,7 +31,7 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     private Long Definition;
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -80,7 +80,7 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     private JitterConfigureInfoForUpdate JitterConfigure;
 
     /**
-    * <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+    * <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
     */
     @SerializedName("BlurConfigure")
     @Expose
@@ -101,7 +101,7 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     private CrashScreenConfigureInfoForUpdate CrashScreenConfigure;
 
     /**
-    * <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+    * <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
     */
     @SerializedName("BlackWhiteEdgeConfigure")
     @Expose
@@ -115,7 +115,7 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     private NoiseConfigureInfoForUpdate NoiseConfigure;
 
     /**
-    * <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+    * <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
     */
     @SerializedName("MosaicConfigure")
     @Expose
@@ -129,7 +129,7 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     private QRCodeConfigureInfoForUpdate QRCodeConfigure;
 
     /**
-    * <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+    * <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
     */
     @SerializedName("VoiceConfigure")
     @Expose
@@ -159,16 +159,16 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -271,16 +271,16 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p> 
-     * @return BlurConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+     * Get <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p> 
+     * @return BlurConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
      */
     public BlurConfigureInfoForUpdate getBlurConfigure() {
         return this.BlurConfigure;
     }
 
     /**
-     * Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
-     * @param BlurConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+     * Set <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
+     * @param BlurConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
      */
     public void setBlurConfigure(BlurConfigureInfoForUpdate BlurConfigure) {
         this.BlurConfigure = BlurConfigure;
@@ -319,16 +319,16 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p> 
-     * @return BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+     * Get <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p> 
+     * @return BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
      */
     public BlackWhiteEdgeConfigureInfoForUpdate getBlackWhiteEdgeConfigure() {
         return this.BlackWhiteEdgeConfigure;
     }
 
     /**
-     * Set <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
-     * @param BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+     * Set <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
+     * @param BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
      */
     public void setBlackWhiteEdgeConfigure(BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure) {
         this.BlackWhiteEdgeConfigure = BlackWhiteEdgeConfigure;
@@ -351,16 +351,16 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p> 
-     * @return MosaicConfigure <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+     * Get <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p> 
+     * @return MosaicConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
      */
     public MosaicConfigureInfoForUpdate getMosaicConfigure() {
         return this.MosaicConfigure;
     }
 
     /**
-     * Set <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
-     * @param MosaicConfigure <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+     * Set <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
+     * @param MosaicConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
      */
     public void setMosaicConfigure(MosaicConfigureInfoForUpdate MosaicConfigure) {
         this.MosaicConfigure = MosaicConfigure;
@@ -383,16 +383,16 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p> 
-     * @return VoiceConfigure <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+     * Get <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p> 
+     * @return VoiceConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
      */
     public VoiceConfigureInfoForUpdate getVoiceConfigure() {
         return this.VoiceConfigure;
     }
 
     /**
-     * Set <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
-     * @param VoiceConfigure <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+     * Set <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+     * @param VoiceConfigure <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
      */
     public void setVoiceConfigure(VoiceConfigureInfoForUpdate VoiceConfigure) {
         this.VoiceConfigure = VoiceConfigure;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SearchMediaRequest extends AbstractModel {
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+    * <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
     */
     @SerializedName("FileIds")
     @Expose
@@ -45,28 +45,28 @@ public class SearchMediaRequest extends AbstractModel {
     private String [] Names;
 
     /**
-    * <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+    * <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
     */
     @SerializedName("NamePrefixes")
     @Expose
     private String [] NamePrefixes;
 
     /**
-    * <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+    * <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
     */
     @SerializedName("Descriptions")
     @Expose
     private String [] Descriptions;
 
     /**
-    * <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+    * <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
     */
     @SerializedName("ClassIds")
     @Expose
     private Long [] ClassIds;
 
     /**
-    * <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+    * <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
     */
     @SerializedName("Tags")
     @Expose
@@ -80,7 +80,7 @@ public class SearchMediaRequest extends AbstractModel {
     private String [] Categories;
 
     /**
-    * <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+    * <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
     */
     @SerializedName("SourceTypes")
     @Expose
@@ -108,7 +108,7 @@ public class SearchMediaRequest extends AbstractModel {
     private TimeRange ExpireTime;
 
     /**
-    * <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+    * <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
     */
     @SerializedName("StorageRegions")
     @Expose
@@ -122,14 +122,14 @@ public class SearchMediaRequest extends AbstractModel {
     private String [] StorageClasses;
 
     /**
-    * <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+    * <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
     */
     @SerializedName("MediaTypes")
     @Expose
     private String [] MediaTypes;
 
     /**
-    * <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+    * <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -164,14 +164,14 @@ public class SearchMediaRequest extends AbstractModel {
     private String [] Filters;
 
     /**
-    * <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
+    * <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
     */
     @SerializedName("Sort")
     @Expose
     private SortBy Sort;
 
     /**
-    * <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+    * <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
     */
     @SerializedName("Offset")
     @Expose
@@ -185,14 +185,14 @@ public class SearchMediaRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
+    * <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+    * <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
     */
     @SerializedName("SourceType")
     @Expose
@@ -206,14 +206,14 @@ public class SearchMediaRequest extends AbstractModel {
     private String StreamId;
 
     /**
-    * <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+    * <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+    * <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
     */
     @SerializedName("EndTime")
     @Expose
@@ -234,7 +234,7 @@ public class SearchMediaRequest extends AbstractModel {
     private String Vid;
 
     /**
-    * <p>Live push Domain, valid when the media asset source is live recording.</p>
+    * <p>Live push Domain, valid when the media asset source is live stream recording.</p>
     */
     @SerializedName("StreamDomains")
     @Expose
@@ -255,32 +255,32 @@ public class SearchMediaRequest extends AbstractModel {
     private String [] KnowledgeBases;
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li> 
-     * @return FileIds <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+     * Get <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li> 
+     * @return FileIds <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
-     * @param FileIds <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+     * Set <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+     * @param FileIds <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
@@ -303,64 +303,64 @@ public class SearchMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li> 
-     * @return NamePrefixes <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * Get <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li> 
+     * @return NamePrefixes <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
      */
     public String [] getNamePrefixes() {
         return this.NamePrefixes;
     }
 
     /**
-     * Set <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
-     * @param NamePrefixes <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * Set <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * @param NamePrefixes <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
      */
     public void setNamePrefixes(String [] NamePrefixes) {
         this.NamePrefixes = NamePrefixes;
     }
 
     /**
-     * Get <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li> 
-     * @return Descriptions <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * Get <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li> 
+     * @return Descriptions <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
      */
     public String [] getDescriptions() {
         return this.Descriptions;
     }
 
     /**
-     * Set <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
-     * @param Descriptions <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * Set <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+     * @param Descriptions <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
      */
     public void setDescriptions(String [] Descriptions) {
         this.Descriptions = Descriptions;
     }
 
     /**
-     * Get <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li> 
-     * @return ClassIds <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+     * Get <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li> 
+     * @return ClassIds <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
      */
     public Long [] getClassIds() {
         return this.ClassIds;
     }
 
     /**
-     * Set <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
-     * @param ClassIds <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+     * Set <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+     * @param ClassIds <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
      */
     public void setClassIds(Long [] ClassIds) {
         this.ClassIds = ClassIds;
     }
 
     /**
-     * Get <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li> 
-     * @return Tags <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+     * Get <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li> 
+     * @return Tags <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
-     * @param Tags <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+     * Set <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+     * @param Tags <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
@@ -383,16 +383,16 @@ public class SearchMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li> 
-     * @return SourceTypes <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+     * Get <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li> 
+     * @return SourceTypes <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
      */
     public String [] getSourceTypes() {
         return this.SourceTypes;
     }
 
     /**
-     * Set <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
-     * @param SourceTypes <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+     * Set <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+     * @param SourceTypes <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
      */
     public void setSourceTypes(String [] SourceTypes) {
         this.SourceTypes = SourceTypes;
@@ -447,16 +447,16 @@ public class SearchMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li> 
-     * @return StorageRegions <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+     * Get <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li> 
+     * @return StorageRegions <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
      */
     public String [] getStorageRegions() {
         return this.StorageRegions;
     }
 
     /**
-     * Set <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
-     * @param StorageRegions <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+     * Set <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+     * @param StorageRegions <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
      */
     public void setStorageRegions(String [] StorageRegions) {
         this.StorageRegions = StorageRegions;
@@ -479,32 +479,32 @@ public class SearchMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li> 
-     * @return MediaTypes <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+     * Get <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li> 
+     * @return MediaTypes <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
      */
     public String [] getMediaTypes() {
         return this.MediaTypes;
     }
 
     /**
-     * Set <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
-     * @param MediaTypes <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+     * Set <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
+     * @param MediaTypes <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
      */
     public void setMediaTypes(String [] MediaTypes) {
         this.MediaTypes = MediaTypes;
     }
 
     /**
-     * Get <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li> 
-     * @return Status <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+     * Get <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li> 
+     * @return Status <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
-     * @param Status <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+     * Set <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
+     * @param Status <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
@@ -575,32 +575,32 @@ public class SearchMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li> 
-     * @return Sort <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
+     * Get <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li> 
+     * @return Sort <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
      */
     public SortBy getSort() {
         return this.Sort;
     }
 
     /**
-     * Set <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
-     * @param Sort <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
+     * Set <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
+     * @param Sort <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
      */
     public void setSort(SortBy Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div> 
-     * @return Offset <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+     * Get <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div> 
+     * @return Offset <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
-     * @param Offset <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+     * Set <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+     * @param Offset <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -623,32 +623,32 @@ public class SearchMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p> 
-     * @return Text <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
+     * Get <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p> 
+     * @return Text <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
-     * @param Text <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
+     * Set <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
+     * @param Text <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p> 
-     * @return SourceType <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+     * Get <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p> 
+     * @return SourceType <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
-     * @param SourceType <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+     * Set <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+     * @param SourceType <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
@@ -671,32 +671,32 @@ public class SearchMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
-     * @return StartTime <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Get <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
+     * @return StartTime <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-     * @param StartTime <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Set <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param StartTime <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
-     * @return EndTime <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Get <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
+     * @return EndTime <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-     * @param EndTime <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Set <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param EndTime <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -735,16 +735,16 @@ public class SearchMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Live push Domain, valid when the media asset source is live recording.</p> 
-     * @return StreamDomains <p>Live push Domain, valid when the media asset source is live recording.</p>
+     * Get <p>Live push Domain, valid when the media asset source is live stream recording.</p> 
+     * @return StreamDomains <p>Live push Domain, valid when the media asset source is live stream recording.</p>
      */
     public String [] getStreamDomains() {
         return this.StreamDomains;
     }
 
     /**
-     * Set <p>Live push Domain, valid when the media asset source is live recording.</p>
-     * @param StreamDomains <p>Live push Domain, valid when the media asset source is live recording.</p>
+     * Set <p>Live push Domain, valid when the media asset source is live stream recording.</p>
+     * @param StreamDomains <p>Live push Domain, valid when the media asset source is live stream recording.</p>
      */
     public void setStreamDomains(String [] StreamDomains) {
         this.StreamDomains = StreamDomains;

@@ -31,7 +31,7 @@ public class WatermarkInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+    * Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
     */
     @SerializedName("TextContent")
@@ -39,8 +39,8 @@ Text watermarks do not support watermarking screenshots.
     private String TextContent;
 
     /**
-    * SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+    * SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
     */
     @SerializedName("SvgContent")
     @Expose
@@ -83,9 +83,9 @@ SVG watermark does not support screenshot watermarking.
     }
 
     /**
-     * Get Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+     * Get Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots. 
-     * @return TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+     * @return TextContent Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
      */
     public String getTextContent() {
@@ -93,9 +93,9 @@ Text watermarks do not support watermarking screenshots.
     }
 
     /**
-     * Set Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+     * Set Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
-     * @param TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+     * @param TextContent Text content, up to 100 characters. This field is required only when the watermark type is text.
 Text watermarks do not support watermarking screenshots.
      */
     public void setTextContent(String TextContent) {
@@ -103,20 +103,20 @@ Text watermarks do not support watermarking screenshots.
     }
 
     /**
-     * Get SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking. 
-     * @return SvgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+     * Get SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots. 
+     * @return SvgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
      */
     public String getSvgContent() {
         return this.SvgContent;
     }
 
     /**
-     * Set SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
-     * @param SvgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support screenshot watermarking.
+     * Set SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
+     * @param SvgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support watermarking screenshots.
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;

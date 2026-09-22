@@ -31,7 +31,7 @@ public class ListFilesRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+    * Object key prefix matching, limited to object keys with the specified prefix in response.
     */
     @SerializedName("Prefix")
     @Expose
@@ -82,16 +82,16 @@ public class ListFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get Object key prefix matching, limited to object keys whose names contain the specified prefix in response. 
-     * @return Prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+     * Get Object key prefix matching, limited to object keys with the specified prefix in response. 
+     * @return Prefix Object key prefix matching, limited to object keys with the specified prefix in response.
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
-     * @param Prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+     * Set Object key prefix matching, limited to object keys with the specified prefix in response.
+     * @param Prefix Object key prefix matching, limited to object keys with the specified prefix in response.
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;

@@ -30,7 +30,7 @@ When Height is not 0px, it means the width of the watermark is proportionally sc
 <li>If a string ends with W%, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10W%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Width` of a watermark is a percentage of a video's height. For example, `10H%` means that `Width` is 10% of a video's height.</li>
 <li>If a string ends with S%, it indicates that the `Width` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Width` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Width` is 10% of the long side of a video.</li>
+<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Width` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as W%.</li>
 Default value: 10W%.
     */
@@ -41,11 +41,11 @@ Default value: 10W%.
     /**
     * Height of a watermark, supporting six formats: px, W%, H%, S%, and L%.
 <li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video short side. For example, `10S%` means that `Height` is 10% of the video short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Height` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
     */
@@ -60,7 +60,7 @@ When Height is not 0px, it means the width of the watermark is proportionally sc
 <li>If a string ends with W%, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10W%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Width` of a watermark is a percentage of a video's height. For example, `10H%` means that `Width` is 10% of a video's height.</li>
 <li>If a string ends with S%, it indicates that the `Width` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Width` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Width` is 10% of the long side of a video.</li>
+<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Width` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as W%.</li>
 Default value: 10W%. 
      * @return Width Width of a watermark, supporting six formats: px, %, W%, H%, S%, and L%.
@@ -69,7 +69,7 @@ When Height is not 0px, it means the width of the watermark is proportionally sc
 <li>If a string ends with W%, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10W%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Width` of a watermark is a percentage of a video's height. For example, `10H%` means that `Width` is 10% of a video's height.</li>
 <li>If a string ends with S%, it indicates that the `Width` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Width` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Width` is 10% of the long side of a video.</li>
+<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Width` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as W%.</li>
 Default value: 10W%.
      */
@@ -84,7 +84,7 @@ When Height is not 0px, it means the width of the watermark is proportionally sc
 <li>If a string ends with W%, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10W%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Width` of a watermark is a percentage of a video's height. For example, `10H%` means that `Width` is 10% of a video's height.</li>
 <li>If a string ends with S%, it indicates that the `Width` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Width` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Width` is 10% of the long side of a video.</li>
+<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Width` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as W%.</li>
 Default value: 10W%.
      * @param Width Width of a watermark, supporting six formats: px, %, W%, H%, S%, and L%.
@@ -93,7 +93,7 @@ When Height is not 0px, it means the width of the watermark is proportionally sc
 <li>If a string ends with W%, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10W%` means that `Width` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Width` of a watermark is a percentage of a video's height. For example, `10H%` means that `Width` is 10% of a video's height.</li>
 <li>If a string ends with S%, it indicates that the `Width` of a watermark is a percentage of a video's short side. For example, `10S%` means that `Width` is 10% of a video's short side.</li>
-<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Width` is 10% of the long side of a video.</li>
+<li>If a string ends with L%, it indicates that the `Width` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Width` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as W%.</li>
 Default value: 10W%.
      */
@@ -104,20 +104,20 @@ Default value: 10W%.
     /**
      * Get Height of a watermark, supporting six formats: px, W%, H%, S%, and L%.
 <li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video short side. For example, `10S%` means that `Height` is 10% of the video short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Height` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px. 
      * @return Height Height of a watermark, supporting six formats: px, W%, H%, S%, and L%.
 <li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video short side. For example, `10S%` means that `Height` is 10% of the video short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Height` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
      */
@@ -128,20 +128,20 @@ Default value: 0px.
     /**
      * Set Height of a watermark, supporting six formats: px, W%, H%, S%, and L%.
 <li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video short side. For example, `10S%` means that `Height` is 10% of the video short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Height` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
      * @param Height Height of a watermark, supporting six formats: px, W%, H%, S%, and L%.
 <li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels. If 0px is entered and
-When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are 0px, it means the height of the watermark is the height of the original SVG image.</li>
+When Width is not 0px, it means the height of the watermark is proportionally scaled based on the original SVG image. When both Width and Height are set to 0px, it means the height of the watermark is the height of the original SVG image.</li>
 <li>If a string ends with W%, it indicates that the `Height` of a watermark is a percentage of a video's width. For example, `10W%` means that `Height` is 10% of a video's width.</li>
 <li>If a string ends with H%, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10H%` means that `Height` is 10% of a video's height.</li>
-<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video short side. For example, `10S%` means that `Height` is 10% of the video short side.</li>
-<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of a video. For example, `10L%` means that `Height` is 10% of the long side of a video.</li>
+<li>If a string ends with S%, it indicates that the `Height` of a watermark is a percentage of the video's short side. For example, `10S%` means that `Height` is 10% of the video's short side.</li>
+<li>If a string ends with L%, it indicates that the `Height` of a watermark is a percentage of the long side of the video. For example, `10L%` means that `Height` is 10% of the long side of the video.</li>
 <li>When the string ends with %, it has the same meaning as H%.</li>
 Default value: 0px.
      */

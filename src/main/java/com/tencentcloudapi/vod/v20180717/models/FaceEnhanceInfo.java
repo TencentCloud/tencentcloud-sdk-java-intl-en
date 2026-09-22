@@ -25,16 +25,16 @@ public class FaceEnhanceInfo extends AbstractModel {
 
     /**
     * Face enhancement control switch. Available values:
-<li>ON: enable face enhancement</li>
-<li>OFF: disables face enhancement</li>
+<li>ON: enable face enhancement;</li>
+<li>OFF: disables face enhancement.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
-Default: 0.0.
+    * Face enhancement strength. Valid only when the face enhancement control switch is ON. Value range: 0.0-1.0.
+Default value: 0.0.
     */
     @SerializedName("Intensity")
     @Expose
@@ -42,11 +42,11 @@ Default: 0.0.
 
     /**
      * Get Face enhancement control switch. Available values:
-<li>ON: enable face enhancement</li>
-<li>OFF: disables face enhancement</li> 
+<li>ON: enable face enhancement;</li>
+<li>OFF: disables face enhancement.</li> 
      * @return Switch Face enhancement control switch. Available values:
-<li>ON: enable face enhancement</li>
-<li>OFF: disables face enhancement</li>
+<li>ON: enable face enhancement;</li>
+<li>OFF: disables face enhancement.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -54,31 +54,31 @@ Default: 0.0.
 
     /**
      * Set Face enhancement control switch. Available values:
-<li>ON: enable face enhancement</li>
-<li>OFF: disables face enhancement</li>
+<li>ON: enable face enhancement;</li>
+<li>OFF: disables face enhancement.</li>
      * @param Switch Face enhancement control switch. Available values:
-<li>ON: enable face enhancement</li>
-<li>OFF: disables face enhancement</li>
+<li>ON: enable face enhancement;</li>
+<li>OFF: disables face enhancement.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
-Default: 0.0. 
-     * @return Intensity Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
-Default: 0.0.
+     * Get Face enhancement strength. Valid only when the face enhancement control switch is ON. Value range: 0.0-1.0.
+Default value: 0.0. 
+     * @return Intensity Face enhancement strength. Valid only when the face enhancement control switch is ON. Value range: 0.0-1.0.
+Default value: 0.0.
      */
     public Float getIntensity() {
         return this.Intensity;
     }
 
     /**
-     * Set Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
-Default: 0.0.
-     * @param Intensity Face enhancement strength. Valid only when the face enhancement control switch is ON. Value ranges from 0.0 to 1.0.
-Default: 0.0.
+     * Set Face enhancement strength. Valid only when the face enhancement control switch is ON. Value range: 0.0-1.0.
+Default value: 0.0.
+     * @param Intensity Face enhancement strength. Valid only when the face enhancement control switch is ON. Value range: 0.0-1.0.
+Default value: 0.0.
      */
     public void setIntensity(Float Intensity) {
         this.Intensity = Intensity;

@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class FrameRateWithDenInfo extends AbstractModel {
 
     /**
-    * Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+    * Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -47,24 +47,24 @@ public class FrameRateWithDenInfo extends AbstractModel {
     private Long FpsDen;
 
     /**
-     * Get Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li> 
-     * @return Switch Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * Get Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li> 
+     * @return Switch Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-     * @param Switch Control switch for frame interpolation frame rate configuration. Available values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+     * Set Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+     * @param Switch Frame interpolation frame rate configuration control switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

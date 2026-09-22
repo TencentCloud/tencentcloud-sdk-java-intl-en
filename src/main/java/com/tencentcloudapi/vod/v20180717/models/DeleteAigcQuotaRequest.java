@@ -31,14 +31,14 @@ public class DeleteAigcQuotaRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+    * <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
     */
     @SerializedName("QuotaType")
     @Expose
     private String QuotaType;
 
     /**
-    * <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
+    * <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
     */
     @SerializedName("ApiToken")
     @Expose
@@ -61,32 +61,32 @@ public class DeleteAigcQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul> 
-     * @return QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+     * Get <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul> 
+     * @return QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
      */
     public String getQuotaType() {
         return this.QuotaType;
     }
 
     /**
-     * Set <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
-     * @param QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+     * Set <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
+     * @param QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
      */
     public void setQuotaType(String QuotaType) {
         this.QuotaType = QuotaType;
     }
 
     /**
-     * Get <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p> 
-     * @return ApiToken <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
+     * Get <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p> 
+     * @return ApiToken <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
      */
     public String getApiToken() {
         return this.ApiToken;
     }
 
     /**
-     * Set <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
-     * @param ApiToken <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
+     * Set <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
+     * @param ApiToken <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;

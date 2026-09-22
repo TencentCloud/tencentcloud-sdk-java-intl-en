@@ -52,21 +52,21 @@ public class AiReviewTaskProhibitedOcrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input for Ocr text moderation tasks in audio/video moderation.
+    * Input for prohibited task of Ocr text in audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewProhibitedOcrTaskInput Input;
 
     /**
-    * Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+    * Output of the Ocr text moderation prohibited task in audio/video moderation.
     */
     @SerializedName("Output")
     @Expose
     private AiReviewProhibitedOcrTaskOutput Output;
 
     /**
-    * Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+    * Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
     */
     @SerializedName("Progress")
     @Expose
@@ -137,48 +137,48 @@ public class AiReviewTaskProhibitedOcrResult extends AbstractModel {
     }
 
     /**
-     * Get Input for Ocr text moderation tasks in audio/video moderation. 
-     * @return Input Input for Ocr text moderation tasks in audio/video moderation.
+     * Get Input for prohibited task of Ocr text in audio/video moderation. 
+     * @return Input Input for prohibited task of Ocr text in audio/video moderation.
      */
     public AiReviewProhibitedOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for Ocr text moderation tasks in audio/video moderation.
-     * @param Input Input for Ocr text moderation tasks in audio/video moderation.
+     * Set Input for prohibited task of Ocr text in audio/video moderation.
+     * @param Input Input for prohibited task of Ocr text in audio/video moderation.
      */
     public void setInput(AiReviewProhibitedOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of Ocr text moderation for prohibited tasks in audio/video moderation. 
-     * @return Output Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+     * Get Output of the Ocr text moderation prohibited task in audio/video moderation. 
+     * @return Output Output of the Ocr text moderation prohibited task in audio/video moderation.
      */
     public AiReviewProhibitedOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of Ocr text moderation for prohibited tasks in audio/video moderation.
-     * @param Output Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+     * Set Output of the Ocr text moderation prohibited task in audio/video moderation.
+     * @param Output Output of the Ocr text moderation prohibited task in audio/video moderation.
      */
     public void setOutput(AiReviewProhibitedOcrTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100. 
-     * @return Progress Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+     * Get Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100. 
+     * @return Progress Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
-     * @param Progress Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+     * Set Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
+     * @param Progress Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

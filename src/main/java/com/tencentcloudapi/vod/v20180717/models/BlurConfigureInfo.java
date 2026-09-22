@@ -26,7 +26,7 @@ public class BlurConfigureInfo extends AbstractModel {
     /**
     * Video frame blur detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -35,10 +35,10 @@ public class BlurConfigureInfo extends AbstractModel {
     /**
      * Get Video frame blur detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li> 
+<li>OFF: disabled.</li> 
      * @return Switch Video frame blur detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -47,10 +47,10 @@ public class BlurConfigureInfo extends AbstractModel {
     /**
      * Set Video frame blur detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      * @param Switch Video frame blur detection switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

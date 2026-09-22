@@ -24,22 +24,22 @@ import java.util.HashMap;
 public class SceneAigcVideoOutputConfig extends AbstractModel {
 
     /**
-    * Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
-Default value: Temporary.
+    * Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>
+Default value: Temporary
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * Output filename, up to 64 characters. By default, the system generates the filename.
+    * Output filename. It can contain up to 64 characters. By default, the system specifies the filename.
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, indicate other categories.</li>
     */
     @SerializedName("ClassId")
@@ -47,7 +47,7 @@ Default value: Temporary.
     private Long ClassId;
 
     /**
-    * Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -61,52 +61,52 @@ Default value: Temporary.
     private String AspectRatio;
 
     /**
-    * Video generation duration. Available values: 4, 6, 8 seconds.
+    * Duration of the generated video. Available values: 4, 6, 8 seconds.
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-     * Get Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
-Default value: Temporary. 
-     * @return StorageMode Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
-Default value: Temporary.
+     * Get Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>
+Default value: Temporary 
+     * @return StorageMode Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>
+Default value: Temporary
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
-Default value: Temporary.
-     * @param StorageMode Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained in the event notification;</li>
-Default value: Temporary.
+     * Set Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>
+Default value: Temporary
+     * @param StorageMode Storage mode. Valid values: <li>Permanent: retained permanently. The generated image file will be stored in VOD, and the FileId can be obtained from the event notification;</li> <li>Temporary: temporary storage. The generated image file will not be stored in VOD, and a temporary access URL can be obtained from the event notification;</li>
+Default value: Temporary
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get Output filename, up to 64 characters. By default, the system generates the filename. 
-     * @return MediaName Output filename, up to 64 characters. By default, the system generates the filename.
+     * Get Output filename. It can contain up to 64 characters. By default, the system specifies the filename. 
+     * @return MediaName Output filename. It can contain up to 64 characters. By default, the system specifies the filename.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output filename, up to 64 characters. By default, the system generates the filename.
-     * @param MediaName Output filename, up to 64 characters. By default, the system generates the filename.
+     * Set Output filename. It can contain up to 64 characters. By default, the system specifies the filename.
+     * @param MediaName Output filename. It can contain up to 64 characters. By default, the system specifies the filename.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, indicate other categories.</li> 
-     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, indicate other categories.</li>
      */
     public Long getClassId() {
@@ -114,9 +114,9 @@ Default value: Temporary.
     }
 
     /**
-     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, indicate other categories.</li>
-     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, indicate other categories.</li>
      */
     public void setClassId(Long ClassId) {
@@ -124,16 +124,16 @@ Default value: Temporary.
     }
 
     /**
-     * Get Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime Expiry date of the output file. Files will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -156,16 +156,16 @@ Default value: Temporary.
     }
 
     /**
-     * Get Video generation duration. Available values: 4, 6, 8 seconds. 
-     * @return Duration Video generation duration. Available values: 4, 6, 8 seconds.
+     * Get Duration of the generated video. Available values: 4, 6, 8 seconds. 
+     * @return Duration Duration of the generated video. Available values: 4, 6, 8 seconds.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video generation duration. Available values: 4, 6, 8 seconds.
-     * @param Duration Video generation duration. Available values: 4, 6, 8 seconds.
+     * Set Duration of the generated video. Available values: 4, 6, 8 seconds.
+     * @param Duration Duration of the generated video. Available values: 4, 6, 8 seconds.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;

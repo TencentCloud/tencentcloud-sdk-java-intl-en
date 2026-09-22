@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateProcessImageAsyncTemplateRequest extends AbstractModel {
 
     /**
-    * Configuration of async image processing tasks.
+    * Image asynchronous processing task configuration.
     */
     @SerializedName("ProcessImageConfigure")
     @Expose
     private ProcessImageAsyncTask ProcessImageConfigure;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Image asynchronous processing template name. Length limit: 64 characters.
+    * Name of the image async processing template. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -52,48 +52,48 @@ public class CreateProcessImageAsyncTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-     * Get Configuration of async image processing tasks. 
-     * @return ProcessImageConfigure Configuration of async image processing tasks.
+     * Get Image asynchronous processing task configuration. 
+     * @return ProcessImageConfigure Image asynchronous processing task configuration.
      */
     public ProcessImageAsyncTask getProcessImageConfigure() {
         return this.ProcessImageConfigure;
     }
 
     /**
-     * Set Configuration of async image processing tasks.
-     * @param ProcessImageConfigure Configuration of async image processing tasks.
+     * Set Image asynchronous processing task configuration.
+     * @param ProcessImageConfigure Image asynchronous processing task configuration.
      */
     public void setProcessImageConfigure(ProcessImageAsyncTask ProcessImageConfigure) {
         this.ProcessImageConfigure = ProcessImageConfigure;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Image asynchronous processing template name. Length limit: 64 characters. 
-     * @return Name Image asynchronous processing template name. Length limit: 64 characters.
+     * Get Name of the image async processing template. The length cannot exceed 64 characters. 
+     * @return Name Name of the image async processing template. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Image asynchronous processing template name. Length limit: 64 characters.
-     * @param Name Image asynchronous processing template name. Length limit: 64 characters.
+     * Set Name of the image async processing template. The length cannot exceed 64 characters.
+     * @param Name Name of the image async processing template. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;

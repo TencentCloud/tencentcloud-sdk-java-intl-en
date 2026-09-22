@@ -26,7 +26,7 @@ public class QualityEvaluationConfigureInfoForUpdate extends AbstractModel {
     /**
     * Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -42,10 +42,10 @@ public class QualityEvaluationConfigureInfoForUpdate extends AbstractModel {
     /**
      * Get Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li> 
+<li>OFF: disabled</li> 
      * @return Switch Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -54,10 +54,10 @@ public class QualityEvaluationConfigureInfoForUpdate extends AbstractModel {
     /**
      * Set Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      * @param Switch Video quality evaluation switch. Available values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

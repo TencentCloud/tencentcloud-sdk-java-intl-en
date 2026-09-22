@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class HighlightsConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Intelligent highlight task switch. Available values:
+    * Intelligent highlight task switch. Value range:
 <li>ON: enable the intelligent highlight task;</li>
-<li>OFF: Disable the intelligent highlight task.</li>
+<li>OFF: disables the intelligent highlight task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Intelligent highlight task switch. Available values:
+     * Get Intelligent highlight task switch. Value range:
 <li>ON: enable the intelligent highlight task;</li>
-<li>OFF: Disable the intelligent highlight task.</li> 
-     * @return Switch Intelligent highlight task switch. Available values:
+<li>OFF: disables the intelligent highlight task.</li> 
+     * @return Switch Intelligent highlight task switch. Value range:
 <li>ON: enable the intelligent highlight task;</li>
-<li>OFF: Disable the intelligent highlight task.</li>
+<li>OFF: disables the intelligent highlight task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Intelligent highlight task switch. Available values:
+     * Set Intelligent highlight task switch. Value range:
 <li>ON: enable the intelligent highlight task;</li>
-<li>OFF: Disable the intelligent highlight task.</li>
-     * @param Switch Intelligent highlight task switch. Available values:
+<li>OFF: disables the intelligent highlight task.</li>
+     * @param Switch Intelligent highlight task switch. Value range:
 <li>ON: enable the intelligent highlight task;</li>
-<li>OFF: Disable the intelligent highlight task.</li>
+<li>OFF: disables the intelligent highlight task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -26,14 +26,14 @@ public class PornOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
     * Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+    * Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
@@ -49,10 +49,10 @@ public class PornOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
      * Get Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li> 
+<li>OFF: disables the task involving offensive content in text recognition.</li> 
      * @return Switch Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -61,26 +61,26 @@ public class PornOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
      * Set Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
      * @param Switch Task switch for text recognition involving offensive content. Available values:
 <li>ON: enable the task involving text recognition of offensive content;</li>
-<li>OFF: Disable the task of text recognition involving offensive content.</li>
+<li>OFF: disables the task involving offensive content in text recognition.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+     * Get Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
-     * @param BlockConfidence Threshold score for determining suspected violations. When the intelligent review score reaches this threshold, the content is considered a suspected violation. Value range: 0–100.
+     * Set Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
+     * @param BlockConfidence Threshold score for suspected violations. If the intelligent review score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;

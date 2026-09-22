@@ -52,21 +52,21 @@ public class AiReviewTaskPoliticalOcrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input for audio/video moderation where Ocr text involves inappropriate information.
+    * Task input for tasks involving inappropriate information in Ocr text in audio/video moderation.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalOcrTaskInput Input;
 
     /**
-    * Task output of audio/video moderation Ocr text that involves inappropriate information.
+    * Task output of audio/video moderation involving inappropriate information in Ocr text.
     */
     @SerializedName("Output")
     @Expose
     private AiReviewPoliticalOcrTaskOutput Output;
 
     /**
-    * Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
+    * Progress of the Ocr text task involving inappropriate information in audio/video moderation. Value range: 0-100.
     */
     @SerializedName("Progress")
     @Expose
@@ -137,48 +137,48 @@ public class AiReviewTaskPoliticalOcrResult extends AbstractModel {
     }
 
     /**
-     * Get Task input for audio/video moderation where Ocr text involves inappropriate information. 
-     * @return Input Task input for audio/video moderation where Ocr text involves inappropriate information.
+     * Get Task input for tasks involving inappropriate information in Ocr text in audio/video moderation. 
+     * @return Input Task input for tasks involving inappropriate information in Ocr text in audio/video moderation.
      */
     public AiReviewPoliticalOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input for audio/video moderation where Ocr text involves inappropriate information.
-     * @param Input Task input for audio/video moderation where Ocr text involves inappropriate information.
+     * Set Task input for tasks involving inappropriate information in Ocr text in audio/video moderation.
+     * @param Input Task input for tasks involving inappropriate information in Ocr text in audio/video moderation.
      */
     public void setInput(AiReviewPoliticalOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Task output of audio/video moderation Ocr text that involves inappropriate information. 
-     * @return Output Task output of audio/video moderation Ocr text that involves inappropriate information.
+     * Get Task output of audio/video moderation involving inappropriate information in Ocr text. 
+     * @return Output Task output of audio/video moderation involving inappropriate information in Ocr text.
      */
     public AiReviewPoliticalOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Task output of audio/video moderation Ocr text that involves inappropriate information.
-     * @param Output Task output of audio/video moderation Ocr text that involves inappropriate information.
+     * Set Task output of audio/video moderation involving inappropriate information in Ocr text.
+     * @param Output Task output of audio/video moderation involving inappropriate information in Ocr text.
      */
     public void setOutput(AiReviewPoliticalOcrTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100. 
-     * @return Progress Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
+     * Get Progress of the Ocr text task involving inappropriate information in audio/video moderation. Value range: 0-100. 
+     * @return Progress Progress of the Ocr text task involving inappropriate information in audio/video moderation. Value range: 0-100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
-     * @param Progress Task progress of Ocr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
+     * Set Progress of the Ocr text task involving inappropriate information in audio/video moderation. Value range: 0-100.
+     * @param Progress Progress of the Ocr text task involving inappropriate information in audio/video moderation. Value range: 0-100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UserDefineConfigureInfo extends AbstractModel {
 
     /**
-    * Control parameter for user-defined character audio/video moderation.
+    * Control parameter for video moderation of user-defined characters.
     */
     @SerializedName("FaceReviewInfo")
     @Expose
     private UserDefineFaceReviewTemplateInfo FaceReviewInfo;
 
     /**
-    * User-customized voice audio and video review control parameter.
+    * User-customized control parameters for voice audio and video moderation.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private UserDefineAsrTextReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * User-customized text, audio, and video moderation control parameters.
+    * User custom text audio/video moderation control parameter.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private UserDefineOcrTextReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Control parameter for user-defined character audio/video moderation. 
-     * @return FaceReviewInfo Control parameter for user-defined character audio/video moderation.
+     * Get Control parameter for video moderation of user-defined characters. 
+     * @return FaceReviewInfo Control parameter for video moderation of user-defined characters.
      */
     public UserDefineFaceReviewTemplateInfo getFaceReviewInfo() {
         return this.FaceReviewInfo;
     }
 
     /**
-     * Set Control parameter for user-defined character audio/video moderation.
-     * @param FaceReviewInfo Control parameter for user-defined character audio/video moderation.
+     * Set Control parameter for video moderation of user-defined characters.
+     * @param FaceReviewInfo Control parameter for video moderation of user-defined characters.
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo FaceReviewInfo) {
         this.FaceReviewInfo = FaceReviewInfo;
     }
 
     /**
-     * Get User-customized voice audio and video review control parameter. 
-     * @return AsrReviewInfo User-customized voice audio and video review control parameter.
+     * Get User-customized control parameters for voice audio and video moderation. 
+     * @return AsrReviewInfo User-customized control parameters for voice audio and video moderation.
      */
     public UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set User-customized voice audio and video review control parameter.
-     * @param AsrReviewInfo User-customized voice audio and video review control parameter.
+     * Set User-customized control parameters for voice audio and video moderation.
+     * @param AsrReviewInfo User-customized control parameters for voice audio and video moderation.
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get User-customized text, audio, and video moderation control parameters. 
-     * @return OcrReviewInfo User-customized text, audio, and video moderation control parameters.
+     * Get User custom text audio/video moderation control parameter. 
+     * @return OcrReviewInfo User custom text audio/video moderation control parameter.
      */
     public UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set User-customized text, audio, and video moderation control parameters.
-     * @param OcrReviewInfo User-customized text, audio, and video moderation control parameters.
+     * Set User custom text audio/video moderation control parameter.
+     * @param OcrReviewInfo User custom text audio/video moderation control parameter.
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

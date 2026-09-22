@@ -31,7 +31,7 @@ public class DescribeContentReviewTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Content review template detail list.
+    * Content moderation template details list.
     */
     @SerializedName("ContentReviewTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeContentReviewTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get Content review template detail list. 
-     * @return ContentReviewTemplateSet Content review template detail list.
+     * Get Content moderation template details list. 
+     * @return ContentReviewTemplateSet Content moderation template details list.
      */
     public ContentReviewTemplateItem [] getContentReviewTemplateSet() {
         return this.ContentReviewTemplateSet;
     }
 
     /**
-     * Set Content review template detail list.
-     * @param ContentReviewTemplateSet Content review template detail list.
+     * Set Content moderation template details list.
+     * @param ContentReviewTemplateSet Content moderation template details list.
      */
     public void setContentReviewTemplateSet(ContentReviewTemplateItem [] ContentReviewTemplateSet) {
         this.ContentReviewTemplateSet = ContentReviewTemplateSet;

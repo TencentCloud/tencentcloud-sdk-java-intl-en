@@ -26,7 +26,7 @@ public class MediaTrackItem extends AbstractModel {
     /**
     * Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
@@ -43,7 +43,7 @@ public class MediaTrackItem extends AbstractModel {
     private VideoTrackItem VideoItem;
 
     /**
-    * Audio clip. Valid when Type = Audio.
+    * Audio clip. Valid when Type is Audio.
     */
     @SerializedName("AudioItem")
     @Expose
@@ -64,8 +64,8 @@ public class MediaTrackItem extends AbstractModel {
     private MediaTransitionItem TransitionItem;
 
     /**
-    * Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+    * Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
     */
     @SerializedName("EmptyItem")
     @Expose
@@ -74,13 +74,13 @@ public class MediaTrackItem extends AbstractModel {
     /**
      * Get Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li> 
      * @return Type Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
@@ -92,13 +92,13 @@ public class MediaTrackItem extends AbstractModel {
     /**
      * Set Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
      * @param Type Fragment type. Valid values:
 <li>Video: video clip.</li>
-<li>Audio: audio clip.</li>
+<li>Audio: audio recording clip.</li>
 <li>Sticker: texture segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
@@ -124,16 +124,16 @@ public class MediaTrackItem extends AbstractModel {
     }
 
     /**
-     * Get Audio clip. Valid when Type = Audio. 
-     * @return AudioItem Audio clip. Valid when Type = Audio.
+     * Get Audio clip. Valid when Type is Audio. 
+     * @return AudioItem Audio clip. Valid when Type is Audio.
      */
     public AudioTrackItem getAudioItem() {
         return this.AudioItem;
     }
 
     /**
-     * Set Audio clip. Valid when Type = Audio.
-     * @param AudioItem Audio clip. Valid when Type = Audio.
+     * Set Audio clip. Valid when Type is Audio.
+     * @param AudioItem Audio clip. Valid when Type is Audio.
      */
     public void setAudioItem(AudioTrackItem AudioItem) {
         this.AudioItem = AudioItem;
@@ -172,20 +172,20 @@ public class MediaTrackItem extends AbstractModel {
     }
 
     /**
-     * Get Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li> 
-     * @return EmptyItem Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+     * Get Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li> 
+     * @return EmptyItem Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
      */
     public EmptyTrackItem getEmptyItem() {
         return this.EmptyItem;
     }
 
     /**
-     * Set Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
-     * @param EmptyItem Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
-<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+     * Set Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
+     * @param EmptyItem Empty segment. Valid when Type = Empty. The empty segment is used as a placeholder on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate a certain Item.</li>
      */
     public void setEmptyItem(EmptyTrackItem EmptyItem) {
         this.EmptyItem = EmptyItem;

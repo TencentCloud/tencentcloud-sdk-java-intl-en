@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcAudioCloneInput extends AbstractModel {
 
     /**
-    * <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
+    * <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p>
     */
     @SerializedName("AudioFileInfo")
     @Expose
@@ -38,7 +38,7 @@ public class CreateAigcAudioCloneInput extends AbstractModel {
     private String VoiceId;
 
     /**
-    * <p>Clone audition parameter.</p>
+    * <p>Clone the audition parameter.</p>
     */
     @SerializedName("Text")
     @Expose
@@ -66,16 +66,16 @@ public class CreateAigcAudioCloneInput extends AbstractModel {
     private String Payload;
 
     /**
-     * Get <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p> 
-     * @return AudioFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
+     * Get <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p> 
+     * @return AudioFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p>
      */
     public AigcAudioCloneInputFileInfo getAudioFileInfo() {
         return this.AudioFileInfo;
     }
 
     /**
-     * Set <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
-     * @param AudioFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to clone the timbre.</p>
+     * Set <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p>
+     * @param AudioFileInfo <p>Original audio file. The model will use the voice type of the audio passed in this parameter as an example to replicate the timbre.</p>
      */
     public void setAudioFileInfo(AigcAudioCloneInputFileInfo AudioFileInfo) {
         this.AudioFileInfo = AudioFileInfo;
@@ -98,16 +98,16 @@ public class CreateAigcAudioCloneInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Clone audition parameter.</p> 
-     * @return Text <p>Clone audition parameter.</p>
+     * Get <p>Clone the audition parameter.</p> 
+     * @return Text <p>Clone the audition parameter.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set <p>Clone audition parameter.</p>
-     * @param Text <p>Clone audition parameter.</p>
+     * Set <p>Clone the audition parameter.</p>
+     * @param Text <p>Clone the audition parameter.</p>
      */
     public void setText(String Text) {
         this.Text = Text;

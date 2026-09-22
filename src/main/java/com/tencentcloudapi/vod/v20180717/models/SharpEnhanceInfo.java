@@ -25,8 +25,8 @@ public class SharpEnhanceInfo extends AbstractModel {
 
     /**
     * Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -42,11 +42,11 @@ Default: 0.0.
 
     /**
      * Get Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li> 
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li> 
      * @return Switch Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -54,11 +54,11 @@ Default: 0.0.
 
     /**
      * Set Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
      * @param Switch Detail enhancement control switch. Valid values:
-<li>ON: enable detail enhancement</li>
-<li>OFF: disable detail enhancement</li>
+<li>ON: enable detail enhancement;</li>
+<li>OFF: disables detail enhancement</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

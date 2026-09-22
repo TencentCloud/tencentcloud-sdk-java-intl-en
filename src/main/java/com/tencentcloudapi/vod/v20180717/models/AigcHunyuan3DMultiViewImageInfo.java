@@ -31,21 +31,21 @@ public class AigcHunyuan3DMultiViewImageInfo extends AbstractModel {
     private String Type;
 
     /**
-    * <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+    * <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p>
+    * <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
+    * <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
     */
     @SerializedName("ViewType")
     @Expose
@@ -68,48 +68,48 @@ public class AigcHunyuan3DMultiViewImageInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p> 
-     * @return FileId <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * Get <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p> 
+     * @return FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
-     * @param FileId <p>File ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * Set <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * @param FileId <p>File ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Description: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p> 
-     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p>
+     * Get <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p> 
+     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p>
-     * @param Url <p>Accessible file URL. This parameter is valid when Type is Url. Description: image format values: support jpg, jpeg, png, bmp, webp.</p>
+     * Set <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
+     * @param Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: Supported image formats: jpg, jpeg, png, bmp, webp.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul> 
-     * @return ViewType <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
+     * Get <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul> 
+     * @return ViewType <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
      */
     public String getViewType() {
         return this.ViewType;
     }
 
     /**
-     * Set <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
-     * @param ViewType <p>Viewing angle image type.</p><p>Enumeration values:</p><ul><li><p>front: Front view (required)</p></li><li><p>back: Back view</p></li><li><p>left: Left view</p></li><li><p>right: Right view</p></li><li><p>top: Top view</p></li><li><p>bottom: Bottom view</p></li><li><p>left_front: Left front 45°</p></li><li><p>right_front: Right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
+     * Set <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
+     * @param ViewType <p>View image type.</p><p>Enumeration values:</p><ul><li><p>front: front view (required)</p></li><li><p>back: back view</p></li><li><p>left: left view</p></li><li><p>right: right view</p></li><li><p>top: top view</p></li><li><p>bottom: bottom view</p></li><li><p>left_front: left front 45°</p></li><li><p>right_front: right front 45°</p></li><li><p>Must contain the front view;</p></li><li><p>The same ViewType cannot be duplicated.</p></li></ul>
      */
     public void setViewType(String ViewType) {
         this.ViewType = ViewType;

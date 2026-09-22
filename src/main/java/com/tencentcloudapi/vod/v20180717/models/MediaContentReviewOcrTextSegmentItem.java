@@ -31,7 +31,7 @@ public class MediaContentReviewOcrTextSegmentItem extends AbstractModel {
     private Float StartTimeOffset;
 
     /**
-    * End time offset of the suspected segment, in seconds.
+    * End time offset of a suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -55,21 +55,21 @@ public class MediaContentReviewOcrTextSegmentItem extends AbstractModel {
     private String Suggestion;
 
     /**
-    * List of suspicious keywords.
+    * List of suspect keywords.
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-    * Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+    * Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+    * Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
@@ -100,16 +100,16 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get End time offset of the suspected segment, in seconds. 
-     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
+     * Get End time offset of a suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of the suspected segment, in seconds.
-     * @param EndTimeOffset End time offset of the suspected segment, in seconds.
+     * Set End time offset of a suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
@@ -160,41 +160,41 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get List of suspicious keywords. 
-     * @return KeywordSet List of suspicious keywords.
+     * Get List of suspect keywords. 
+     * @return KeywordSet List of suspect keywords.
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set List of suspicious keywords.
-     * @param KeywordSet List of suspicious keywords.
+     * Set List of suspect keywords.
+     * @param KeywordSet List of suspect keywords.
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;
     }
 
     /**
-     * Get Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner. 
-     * @return AreaCoordSet Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * Get Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner. 
+     * @return AreaCoordSet Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-     * @param AreaCoordSet Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * Set Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+     * @param AreaCoordSet Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * Get Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point). 
-     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * @return Url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
@@ -202,9 +202,9 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * Set Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
-     * @param Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+     * @param Url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {

@@ -26,7 +26,7 @@ public class TerrorismOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
     * Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -40,7 +40,7 @@ public class TerrorismOcrReviewTemplateInfoForUpdate extends AbstractModel {
     private Long BlockConfidence;
 
     /**
-    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
+    * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -49,10 +49,10 @@ public class TerrorismOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
      * Get Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li> 
+<li>OFF: disables tasks involving unsafe information in text recognition.</li> 
      * @return Switch Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -61,10 +61,10 @@ public class TerrorismOcrReviewTemplateInfoForUpdate extends AbstractModel {
     /**
      * Set Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
      * @param Switch Task switch for text recognition involving unsafe information. Available values:
 <li>ON: enable the task involving text recognition of unsafe information;</li>
-<li>OFF: Disable the task involving unsafe information in text recognition.</li>
+<li>OFF: disables tasks involving unsafe information in text recognition.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -87,16 +87,16 @@ public class TerrorismOcrReviewTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
+     * Get Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Default value: 75. Value range: 0–100.
+     * Set Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. If not specified, the default is 75. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RebuildMediaResponse extends AbstractModel {
 
     /**
-    * Task ID for Audio and Video Quality Regeneration. You can query the status of the audio and video quality regeneration task through this ID.
+    * Task ID for Audio and Video Quality Regeneration, which can be used to query the status of the audio and video quality regeneration task.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class RebuildMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID for Audio and Video Quality Regeneration. You can query the status of the audio and video quality regeneration task through this ID. 
-     * @return TaskId Task ID for Audio and Video Quality Regeneration. You can query the status of the audio and video quality regeneration task through this ID.
+     * Get Task ID for Audio and Video Quality Regeneration, which can be used to query the status of the audio and video quality regeneration task. 
+     * @return TaskId Task ID for Audio and Video Quality Regeneration, which can be used to query the status of the audio and video quality regeneration task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID for Audio and Video Quality Regeneration. You can query the status of the audio and video quality regeneration task through this ID.
-     * @param TaskId Task ID for Audio and Video Quality Regeneration. You can query the status of the audio and video quality regeneration task through this ID.
+     * Set Task ID for Audio and Video Quality Regeneration, which can be used to query the status of the audio and video quality regeneration task.
+     * @param TaskId Task ID for Audio and Video Quality Regeneration, which can be used to query the status of the audio and video quality regeneration task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ComposeMediaOutput extends AbstractModel {
 
     /**
-    * Filename, which contains up to 64 characters.
+    * Filename, up to 64 characters.
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Description. Up to 128 characters.
+    * Description. The maximum length is 128 characters.
     */
     @SerializedName("Description")
     @Expose
@@ -75,7 +75,7 @@ public class ComposeMediaOutput extends AbstractModel {
 
     /**
     * Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
     */
@@ -85,7 +85,7 @@ Default value: 0.
 
     /**
     * Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
     */
@@ -94,32 +94,32 @@ Default value: 0.
     private Long RemoveAudio;
 
     /**
-     * Get Filename, which contains up to 64 characters. 
-     * @return FileName Filename, which contains up to 64 characters.
+     * Get Filename, up to 64 characters. 
+     * @return FileName Filename, up to 64 characters.
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename, which contains up to 64 characters.
-     * @param FileName Filename, which contains up to 64 characters.
+     * Set Filename, up to 64 characters.
+     * @param FileName Filename, up to 64 characters.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Description. Up to 128 characters. 
-     * @return Description Description. Up to 128 characters.
+     * Get Description. The maximum length is 128 characters. 
+     * @return Description Description. The maximum length is 128 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description. Up to 128 characters.
-     * @param Description Description. Up to 128 characters.
+     * Set Description. The maximum length is 128 characters.
+     * @param Description Description. The maximum length is 128 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -211,11 +211,11 @@ Default value: 0.
 
     /**
      * Get Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0. 
      * @return RemoveVideo Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -225,11 +225,11 @@ Default value: 0.
 
     /**
      * Set Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      * @param RemoveVideo Indicates whether to remove video data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -239,11 +239,11 @@ Default value: 0.
 
     /**
      * Get Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0. 
      * @return RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */
@@ -253,11 +253,11 @@ Default value: 0.
 
     /**
      * Set Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      * @param RemoveAudio Indicates whether to remove audio data. Available values:
-<li>0: retention</li>
+<li>`0`: reserved</li>
 <li>1: Remove</li>
 Default value: 0.
      */

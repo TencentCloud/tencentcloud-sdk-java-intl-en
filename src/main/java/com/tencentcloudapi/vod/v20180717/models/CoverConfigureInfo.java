@@ -26,7 +26,7 @@ public class CoverConfigureInfo extends AbstractModel {
     /**
     * Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -35,10 +35,10 @@ public class CoverConfigureInfo extends AbstractModel {
     /**
      * Get Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li> 
+<li>OFF: disables the intelligent thumbnail generation task.</li> 
      * @return Switch Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -47,10 +47,10 @@ public class CoverConfigureInfo extends AbstractModel {
     /**
      * Set Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
      * @param Switch Intelligent cover task switch. Available values:
 <li>ON: enable intelligent thumbnail generation;</li>
-<li>OFF: Disable the intelligent thumbnail generation task.</li>
+<li>OFF: disables the intelligent thumbnail generation task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

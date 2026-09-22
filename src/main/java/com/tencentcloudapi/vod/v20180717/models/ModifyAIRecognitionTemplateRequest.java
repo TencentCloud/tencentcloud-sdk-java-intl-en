@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
-    * Audio and video content recognition template unique identifier.
+    * Unique ID of the audio/video content recognition template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Video content recognition template name. Length limit: 64 characters.
+    * Audio/Video content recognition template name, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -52,7 +52,7 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * Control parameters for video opening and closing recognition.
+    * Video opening and closing recognition control parameter.
     */
     @SerializedName("HeadTailConfigure")
     @Expose
@@ -66,7 +66,7 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
     private SegmentConfigureInfoForUpdate SegmentConfigure;
 
     /**
-    * Control parameters for face recognition.
+    * Face recognition control parameter.
     */
     @SerializedName("FaceConfigure")
     @Expose
@@ -88,7 +88,7 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
     * Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
@@ -116,55 +116,55 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
     private ObjectConfigureInfoForUpdate ObjectConfigure;
 
     /**
-    * Frame interception interval in seconds. Minimum value: 0.5 seconds.
+    * Frame interval in seconds, with a minimum value of 0.5 seconds.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-     * Get Audio and video content recognition template unique identifier. 
-     * @return Definition Audio and video content recognition template unique identifier.
+     * Get Unique ID of the audio/video content recognition template. 
+     * @return Definition Unique ID of the audio/video content recognition template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Audio and video content recognition template unique identifier.
-     * @param Definition Audio and video content recognition template unique identifier.
+     * Set Unique ID of the audio/video content recognition template.
+     * @param Definition Unique ID of the audio/video content recognition template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Video content recognition template name. Length limit: 64 characters. 
-     * @return Name Video content recognition template name. Length limit: 64 characters.
+     * Get Audio/Video content recognition template name, with a length limit of 64 characters. 
+     * @return Name Audio/Video content recognition template name, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Video content recognition template name. Length limit: 64 characters.
-     * @param Name Video content recognition template name. Length limit: 64 characters.
+     * Set Audio/Video content recognition template name, with a length limit of 64 characters.
+     * @param Name Audio/Video content recognition template name, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -187,16 +187,16 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Control parameters for video opening and closing recognition. 
-     * @return HeadTailConfigure Control parameters for video opening and closing recognition.
+     * Get Video opening and closing recognition control parameter. 
+     * @return HeadTailConfigure Video opening and closing recognition control parameter.
      */
     public HeadTailConfigureInfoForUpdate getHeadTailConfigure() {
         return this.HeadTailConfigure;
     }
 
     /**
-     * Set Control parameters for video opening and closing recognition.
-     * @param HeadTailConfigure Control parameters for video opening and closing recognition.
+     * Set Video opening and closing recognition control parameter.
+     * @param HeadTailConfigure Video opening and closing recognition control parameter.
      */
     public void setHeadTailConfigure(HeadTailConfigureInfoForUpdate HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
@@ -219,16 +219,16 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Control parameters for face recognition. 
-     * @return FaceConfigure Control parameters for face recognition.
+     * Get Face recognition control parameter. 
+     * @return FaceConfigure Face recognition control parameter.
      */
     public FaceConfigureInfoForUpdate getFaceConfigure() {
         return this.FaceConfigure;
     }
 
     /**
-     * Set Control parameters for face recognition.
-     * @param FaceConfigure Control parameters for face recognition.
+     * Set Face recognition control parameter.
+     * @param FaceConfigure Face recognition control parameter.
      */
     public void setFaceConfigure(FaceConfigureInfoForUpdate FaceConfigure) {
         this.FaceConfigure = FaceConfigure;
@@ -268,9 +268,9 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
      * Get Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font> 
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font> 
      * @return AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
      */
     public AsrFullTextConfigureInfoForUpdate getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
@@ -278,9 +278,9 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
      * Set Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
      * @param AsrFullTextConfigure Voice full-text recognition control parameters.
-<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+<font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate voice translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfoForUpdate AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
@@ -335,16 +335,16 @@ public class ModifyAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Frame interception interval in seconds. Minimum value: 0.5 seconds. 
-     * @return ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
+     * Get Frame interval in seconds, with a minimum value of 0.5 seconds. 
+     * @return ScreenshotInterval Frame interval in seconds, with a minimum value of 0.5 seconds.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame interception interval in seconds. Minimum value: 0.5 seconds.
-     * @param ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
+     * Set Frame interval in seconds, with a minimum value of 0.5 seconds.
+     * @param ScreenshotInterval Frame interval in seconds, with a minimum value of 0.5 seconds.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;

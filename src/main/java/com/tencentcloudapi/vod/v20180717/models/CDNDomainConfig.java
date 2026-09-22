@@ -146,7 +146,7 @@ public class CDNDomainConfig extends AbstractModel {
     private OssPrivateAccess OssPrivateAccess;
 
     /**
-    * Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+    * Huawei Cloud object storage origin-pull authentication configuration.
     */
     @SerializedName("HwPrivateAccess")
     @Expose
@@ -444,16 +444,16 @@ public class CDNDomainConfig extends AbstractModel {
     }
 
     /**
-     * Get Authentication configuration for origin-pull from Huawei Cloud Object Storage. 
-     * @return HwPrivateAccess Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+     * Get Huawei Cloud object storage origin-pull authentication configuration. 
+     * @return HwPrivateAccess Huawei Cloud object storage origin-pull authentication configuration.
      */
     public HwPrivateAccess getHwPrivateAccess() {
         return this.HwPrivateAccess;
     }
 
     /**
-     * Set Authentication configuration for origin-pull from Huawei Cloud Object Storage.
-     * @param HwPrivateAccess Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+     * Set Huawei Cloud object storage origin-pull authentication configuration.
+     * @param HwPrivateAccess Huawei Cloud object storage origin-pull authentication configuration.
      */
     public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
         this.HwPrivateAccess = HwPrivateAccess;

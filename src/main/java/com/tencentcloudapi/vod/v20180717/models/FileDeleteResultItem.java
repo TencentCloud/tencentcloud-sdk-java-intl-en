@@ -31,7 +31,7 @@ public class FileDeleteResultItem extends AbstractModel {
     private String FileId;
 
     /**
-    * Files deleted this time.
+    * Part of the files deleted this time.
     */
     @SerializedName("DeleteParts")
     @Expose
@@ -54,16 +54,16 @@ public class FileDeleteResultItem extends AbstractModel {
     }
 
     /**
-     * Get Files deleted this time. 
-     * @return DeleteParts Files deleted this time.
+     * Get Part of the files deleted this time. 
+     * @return DeleteParts Part of the files deleted this time.
      */
     public MediaDeleteItem [] getDeleteParts() {
         return this.DeleteParts;
     }
 
     /**
-     * Set Files deleted this time.
-     * @param DeleteParts Files deleted this time.
+     * Set Part of the files deleted this time.
+     * @param DeleteParts Part of the files deleted this time.
      */
     public void setDeleteParts(MediaDeleteItem [] DeleteParts) {
         this.DeleteParts = DeleteParts;

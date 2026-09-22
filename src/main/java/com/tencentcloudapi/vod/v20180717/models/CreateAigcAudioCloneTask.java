@@ -38,14 +38,14 @@ public class CreateAigcAudioCloneTask extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+    * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+    * <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -73,7 +73,7 @@ public class CreateAigcAudioCloneTask extends AbstractModel {
     private CreateAigcAudioCloneInput Input;
 
     /**
-    * <p>Output message of the AIGC audio clone task.</p>
+    * <p>Output information of the AIGC audio clone task.</p>
     */
     @SerializedName("Output")
     @Expose
@@ -126,32 +126,32 @@ public class CreateAigcAudioCloneTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p> 
-     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * Get <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p> 
+     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+     * @param ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get <p>Extended error code. An empty string indicates success, while other values indicate failure.</p> 
-     * @return ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+     * Get <p>Extended error code. A null string indicates success, while other values indicate failure.</p> 
+     * @return ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
-     * @param ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+     * Set <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+     * @param ErrCodeExt <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -206,16 +206,16 @@ public class CreateAigcAudioCloneTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Output message of the AIGC audio clone task.</p> 
-     * @return Output <p>Output message of the AIGC audio clone task.</p>
+     * Get <p>Output information of the AIGC audio clone task.</p> 
+     * @return Output <p>Output information of the AIGC audio clone task.</p>
      */
     public CreateAigcAudioCloneOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set <p>Output message of the AIGC audio clone task.</p>
-     * @param Output <p>Output message of the AIGC audio clone task.</p>
+     * Set <p>Output information of the AIGC audio clone task.</p>
+     * @param Output <p>Output information of the AIGC audio clone task.</p>
      */
     public void setOutput(CreateAigcAudioCloneOutput Output) {
         this.Output = Output;

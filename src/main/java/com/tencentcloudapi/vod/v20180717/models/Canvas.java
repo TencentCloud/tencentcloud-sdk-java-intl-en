@@ -34,7 +34,7 @@ Default value: Black.
     private String Color;
 
     /**
-    * Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+    * Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
     */
     @SerializedName("Width")
@@ -78,9 +78,9 @@ Default value: Black.
     }
 
     /**
-     * Get Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+     * Get Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track. 
-     * @return Width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+     * @return Width Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
      */
     public Long getWidth() {
@@ -88,9 +88,9 @@ Default value: 0, which means the video width is the same as that of the first v
     }
 
     /**
-     * Set Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+     * Set Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
-     * @param Width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+     * @param Width Canvas width, i.e., the output video width. Value range: 0–3840. Unit: px.
 Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
      */
     public void setWidth(Long Width) {

@@ -31,7 +31,7 @@ public class LLMComprehendFaceRecognition extends AbstractModel {
     private String Switch;
 
     /**
-    * <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+    * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
     */
     @SerializedName("Score")
     @Expose
@@ -45,7 +45,7 @@ public class LLMComprehendFaceRecognition extends AbstractModel {
     private String [] DefaultLibraryLabelSet;
 
     /**
-    * <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+    * <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
     */
     @SerializedName("UserDefineLibraryLabelSet")
     @Expose
@@ -75,16 +75,16 @@ public class LLMComprehendFaceRecognition extends AbstractModel {
     }
 
     /**
-     * Get <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p> 
-     * @return Score <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+     * Get <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p> 
+     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
-     * @param Score <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+     * Set <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+     * @param Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
      */
     public void setScore(Float Score) {
         this.Score = Score;
@@ -107,16 +107,16 @@ public class LLMComprehendFaceRecognition extends AbstractModel {
     }
 
     /**
-     * Get <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p> 
-     * @return UserDefineLibraryLabelSet <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+     * Get <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p> 
+     * @return UserDefineLibraryLabelSet <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
      */
     public String [] getUserDefineLibraryLabelSet() {
         return this.UserDefineLibraryLabelSet;
     }
 
     /**
-     * Set <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
-     * @param UserDefineLibraryLabelSet <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+     * Set <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
+     * @param UserDefineLibraryLabelSet <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
      */
     public void setUserDefineLibraryLabelSet(String [] UserDefineLibraryLabelSet) {
         this.UserDefineLibraryLabelSet = UserDefineLibraryLabelSet;

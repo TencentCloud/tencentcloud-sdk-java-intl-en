@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class HeadTailConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Video start and end recognition task switch. Available values:
+    * Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
+<li>OFF: Disable the intelligent video start and end recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Video start and end recognition task switch. Available values:
+     * Get Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li> 
-     * @return Switch Video start and end recognition task switch. Available values:
+<li>OFF: Disable the intelligent video start and end recognition task.</li> 
+     * @return Switch Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
+<li>OFF: Disable the intelligent video start and end recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Video start and end recognition task switch. Available values:
+     * Set Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
-     * @param Switch Video start and end recognition task switch. Available values:
+<li>OFF: Disable the intelligent video start and end recognition task.</li>
+     * @param Switch Video opening and closing credits recognition task switch. Available values:
 <li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
-<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
+<li>OFF: Disable the intelligent video start and end recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

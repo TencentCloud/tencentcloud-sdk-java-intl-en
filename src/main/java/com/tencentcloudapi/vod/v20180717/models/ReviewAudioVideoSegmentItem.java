@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ReviewAudioVideoSegmentItem extends AbstractModel {
 
     /**
-    * Time offset of the start of the suspected segment. Unit: second.
+    * Start time offset of a suspected segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of the suspected segment, in seconds.
+    * End time offset of a suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -54,13 +54,13 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Label of the most likely rule violation in the suspected segment. Value range:
+    * Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
     */
     @SerializedName("Label")
@@ -76,7 +76,7 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel {
 
     /**
     * Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
@@ -86,14 +86,14 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel {
     private String Form;
 
     /**
-    * Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+    * Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+    * Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
     */
     @SerializedName("Text")
     @Expose
@@ -107,7 +107,7 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel {
     private String [] KeywordSet;
 
     /**
-    * Suspected image URL (images are not retained permanently and will reach
+    * Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
@@ -115,39 +115,39 @@ Images will be deleted after the PicUrlExpireTime time point).
     private String Url;
 
     /**
-    * Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get Time offset of the start of the suspected segment. Unit: second. 
-     * @return StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
+     * Get Start time offset of a suspected segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Time offset of the start of the suspected segment. Unit: second.
-     * @param StartTimeOffset Time offset of the start of the suspected segment. Unit: second.
+     * Set Start time offset of a suspected segment, in seconds.
+     * @param StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of the suspected segment, in seconds. 
-     * @return EndTimeOffset End time offset of the suspected segment, in seconds.
+     * Get End time offset of a suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of the suspected segment, in seconds.
-     * @param EndTimeOffset End time offset of the suspected segment, in seconds.
+     * Set End time offset of a suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
@@ -194,21 +194,21 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Label of the most likely rule violation in the suspected segment. Value range:
+     * Get Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li> 
-     * @return Label Label of the most likely rule violation in the suspected segment. Value range:
+     * @return Label Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
      */
     public String getLabel() {
@@ -216,21 +216,21 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Set Label of the most likely rule violation in the suspected segment. Value range:
+     * Set Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
-     * @param Label Label of the most likely rule violation in the suspected segment. Value range:
+     * @param Label Most likely rule violation tag of the suspected segment. Value range:
 <li>Porn: Pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
 <li>Ad: advertisement;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Moan: panting.</li>
      */
     public void setLabel(String Label) {
@@ -255,12 +255,12 @@ Images will be deleted after the PicUrlExpireTime time point).
 
     /**
      * Get Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li> 
      * @return Form Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
@@ -271,12 +271,12 @@ Images will be deleted after the PicUrlExpireTime time point).
 
     /**
      * Set Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
      * @param Form Suspected segment violation type. Value range:
-<li>Image: People or icons in the image;</li>
+<li>Image: people or icons on the screen;</li>
 <li>OCR: text on the screen;</li>
 <li>ASR: text in speech.</li>
 <li>Voice: sound.</li>
@@ -286,32 +286,32 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner. 
-     * @return AreaCoordSet Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+     * Get Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner. 
+     * @return AreaCoordSet Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
-     * @param AreaCoordSet Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+     * Set Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
+     * @param AreaCoordSet Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content. 
-     * @return Text Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+     * Get Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content. 
+     * @return Text Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
-     * @param Text Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+     * Set Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
+     * @param Text Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
      */
     public void setText(String Text) {
         this.Text = Text;
@@ -334,9 +334,9 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Suspected image URL (images are not retained permanently and will reach
+     * Get Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point). 
-     * @return Url Suspected image URL (images are not retained permanently and will reach
+     * @return Url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
@@ -344,9 +344,9 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Set Suspected image URL (images are not retained permanently and will reach
+     * Set Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
-     * @param Url Suspected image URL (images are not retained permanently and will reach
+     * @param Url Suspected image URL (images are not retained permanently and will be deleted after reaching
 Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
@@ -354,16 +354,16 @@ Images will be deleted after the PicUrlExpireTime time point).
     }
 
     /**
-     * Get Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param PicUrlExpireTime Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

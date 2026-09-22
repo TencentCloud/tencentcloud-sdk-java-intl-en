@@ -31,7 +31,7 @@ public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel {
     private Long Fps;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -50,7 +50,7 @@ Default value: 0.
     private Long Width;
 
     /**
-    * Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+    * Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -72,14 +72,14 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
-    * Animated image file format. Valid values: gif and webp. Default value: gif.
+    * Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Image quality. Value range: [1, 100]. Default value: 75.
+    * Image quality. Valid range: [1, 100]. Default value: 75.
     */
     @SerializedName("Quality")
     @Expose
@@ -116,16 +116,16 @@ Default value: open.
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -168,13 +168,13 @@ Default value: 0.
     }
 
     /**
-     * Get Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+     * Get Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0. 
-     * @return Height Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+     * @return Height Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -186,13 +186,13 @@ Default value: 0.
     }
 
     /**
-     * Set Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+     * Set Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
 <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
 Default value: 0.
-     * @param Height Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+     * @param Height Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
 <li>If both Width and Height are 0, the resolution is the same as the source.</li>
 <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
 <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -232,32 +232,32 @@ Default value: open.
     }
 
     /**
-     * Get Animated image file format. Valid values: gif and webp. Default value: gif. 
-     * @return Format Animated image file format. Valid values: gif and webp. Default value: gif.
+     * Get Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`. 
+     * @return Format Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Animated image file format. Valid values: gif and webp. Default value: gif.
-     * @param Format Animated image file format. Valid values: gif and webp. Default value: gif.
+     * Set Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
+     * @param Format Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Image quality. Value range: [1, 100]. Default value: 75. 
-     * @return Quality Image quality. Value range: [1, 100]. Default value: 75.
+     * Get Image quality. Valid range: [1, 100]. Default value: 75. 
+     * @return Quality Image quality. Valid range: [1, 100]. Default value: 75.
      */
     public Float getQuality() {
         return this.Quality;
     }
 
     /**
-     * Set Image quality. Value range: [1, 100]. Default value: 75.
-     * @param Quality Image quality. Value range: [1, 100]. Default value: 75.
+     * Set Image quality. Valid range: [1, 100]. Default value: 75.
+     * @param Quality Image quality. Valid range: [1, 100]. Default value: 75.
      */
     public void setQuality(Float Quality) {
         this.Quality = Quality;

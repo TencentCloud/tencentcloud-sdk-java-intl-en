@@ -25,16 +25,16 @@ public class HttpHeaderPathRule extends AbstractModel {
 
     /**
     * http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li>
     */
     @SerializedName("HeaderMode")
     @Expose
     private String HeaderMode;
 
     /**
-    * http header name, up to 100 characters.
+    * http header name, with a maximum of 100 characters.
     */
     @SerializedName("HeaderName")
     @Expose
@@ -42,7 +42,7 @@ public class HttpHeaderPathRule extends AbstractModel {
 
     /**
     * http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set.
     */
     @SerializedName("HeaderValue")
@@ -73,13 +73,13 @@ Required if Mode is add/set.
 
     /**
      * Get http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li> 
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li> 
      * @return HeaderMode http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li>
      */
     public String getHeaderMode() {
         return this.HeaderMode;
@@ -87,29 +87,29 @@ Required if Mode is add/set.
 
     /**
      * Set http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li>
      * @param HeaderMode http header setting method:
-<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
-<li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the header does not exist, it will be added; if there are multiple duplicate header parameters, all of them will be updated and merged into one header;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Duplicate addition may affect browser response. Please prioritize the set operation).</li>
      */
     public void setHeaderMode(String HeaderMode) {
         this.HeaderMode = HeaderMode;
     }
 
     /**
-     * Get http header name, up to 100 characters. 
-     * @return HeaderName http header name, up to 100 characters.
+     * Get http header name, with a maximum of 100 characters. 
+     * @return HeaderName http header name, with a maximum of 100 characters.
      */
     public String getHeaderName() {
         return this.HeaderName;
     }
 
     /**
-     * Set http header name, up to 100 characters.
-     * @param HeaderName http header name, up to 100 characters.
+     * Set http header name, with a maximum of 100 characters.
+     * @param HeaderName http header name, with a maximum of 100 characters.
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;
@@ -117,10 +117,10 @@ Required if Mode is add/set.
 
     /**
      * Get http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set. 
      * @return HeaderValue http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set.
      */
     public String getHeaderValue() {
@@ -129,10 +129,10 @@ Required if Mode is add/set.
 
     /**
      * Set http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set.
      * @param HeaderValue http header value, up to 1000 characters;
-Optional when `Mode` is `del`.
+Optional when Mode is del.
 Required if Mode is add/set.
      */
     public void setHeaderValue(String HeaderValue) {

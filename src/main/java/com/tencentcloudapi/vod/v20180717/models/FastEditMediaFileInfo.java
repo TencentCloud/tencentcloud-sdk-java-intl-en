@@ -41,14 +41,14 @@ Note: The audio and video to operate must be in HLS format.
     private String AudioVideoType;
 
     /**
-    * Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+    * Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
     */
     @SerializedName("TranscodeDefinition")
     @Expose
     private Long TranscodeDefinition;
 
     /**
-    * Media editing start offset time in seconds.
+    * Media editing start offset time, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -106,32 +106,32 @@ Note: The audio and video to operate must be in HLS format.
     }
 
     /**
-     * Get Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation. 
-     * @return TranscodeDefinition Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+     * Get Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation. 
+     * @return TranscodeDefinition Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
      */
     public Long getTranscodeDefinition() {
         return this.TranscodeDefinition;
     }
 
     /**
-     * Set Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
-     * @param TranscodeDefinition Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+     * Set Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
+     * @param TranscodeDefinition Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
      */
     public void setTranscodeDefinition(Long TranscodeDefinition) {
         this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
-     * Get Media editing start offset time in seconds. 
-     * @return StartTimeOffset Media editing start offset time in seconds.
+     * Get Media editing start offset time, in seconds. 
+     * @return StartTimeOffset Media editing start offset time, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Media editing start offset time in seconds.
-     * @param StartTimeOffset Media editing start offset time in seconds.
+     * Set Media editing start offset time, in seconds.
+     * @param StartTimeOffset Media editing start offset time, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;

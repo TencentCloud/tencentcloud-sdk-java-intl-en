@@ -45,7 +45,7 @@ public class EditMediaTaskOutput extends AbstractModel {
     private String FileId;
 
     /**
-    * Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
+    * Output filename, up to 64 characters. By default, the system generates a filename.
     */
     @SerializedName("MediaName")
     @Expose
@@ -115,16 +115,16 @@ public class EditMediaTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation. 
-     * @return MediaName Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
+     * Get Output filename, up to 64 characters. By default, the system generates a filename. 
+     * @return MediaName Output filename, up to 64 characters. By default, the system generates a filename.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
-     * @param MediaName Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
+     * Set Output filename, up to 64 characters. By default, the system generates a filename.
+     * @param MediaName Output filename, up to 64 characters. By default, the system generates a filename.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;

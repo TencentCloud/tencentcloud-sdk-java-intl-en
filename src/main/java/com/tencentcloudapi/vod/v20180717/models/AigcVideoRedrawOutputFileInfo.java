@@ -31,28 +31,28 @@ public class AigcVideoRedrawOutputFileInfo extends AbstractModel {
     private String StorageMode;
 
     /**
-    * <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
+    * <p>Output filename, up to 64 characters. By default, the system specifies the generated filename. Valid when StorageMode is Permanent.</p>
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * <p>Category ID, used to categorize and manage media. You can call the <a href="/document/product/266/7812">create category</a> API to create a category and obtain the category ID. Valid when StorageMode is Permanent.</p>
+    * <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+    * <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * <p>File type, such as mp4 or flv.</p>
+    * <p>File type, for example, mp4 and flv.</p>
     */
     @SerializedName("FileType")
     @Expose
@@ -96,64 +96,64 @@ public class AigcVideoRedrawOutputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p> 
-     * @return MediaName <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
+     * Get <p>Output filename, up to 64 characters. By default, the system specifies the generated filename. Valid when StorageMode is Permanent.</p> 
+     * @return MediaName <p>Output filename, up to 64 characters. By default, the system specifies the generated filename. Valid when StorageMode is Permanent.</p>
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
-     * @param MediaName <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
+     * Set <p>Output filename, up to 64 characters. By default, the system specifies the generated filename. Valid when StorageMode is Permanent.</p>
+     * @param MediaName <p>Output filename, up to 64 characters. By default, the system specifies the generated filename. Valid when StorageMode is Permanent.</p>
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get <p>Category ID, used to categorize and manage media. You can call the <a href="/document/product/266/7812">create category</a> API to create a category and obtain the category ID. Valid when StorageMode is Permanent.</p> 
-     * @return ClassId <p>Category ID, used to categorize and manage media. You can call the <a href="/document/product/266/7812">create category</a> API to create a category and obtain the category ID. Valid when StorageMode is Permanent.</p>
+     * Get <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p> 
+     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set <p>Category ID, used to categorize and manage media. You can call the <a href="/document/product/266/7812">create category</a> API to create a category and obtain the category ID. Valid when StorageMode is Permanent.</p>
-     * @param ClassId <p>Category ID, used to categorize and manage media. You can call the <a href="/document/product/266/7812">create category</a> API to create a category and obtain the category ID. Valid when StorageMode is Permanent.</p>
+     * Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+     * @param ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
-     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * Get <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
+     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-     * @param ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * Set <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get <p>File type, such as mp4 or flv.</p> 
-     * @return FileType <p>File type, such as mp4 or flv.</p>
+     * Get <p>File type, for example, mp4 and flv.</p> 
+     * @return FileType <p>File type, for example, mp4 and flv.</p>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set <p>File type, such as mp4 or flv.</p>
-     * @param FileType <p>File type, such as mp4 or flv.</p>
+     * Set <p>File type, for example, mp4 and flv.</p>
+     * @param FileType <p>File type, for example, mp4 and flv.</p>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

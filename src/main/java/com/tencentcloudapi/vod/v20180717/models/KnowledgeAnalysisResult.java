@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KnowledgeAnalysisResult extends AbstractModel {
 
     /**
-    * <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+    * <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
@@ -38,16 +38,16 @@ public class KnowledgeAnalysisResult extends AbstractModel {
     private MPSOutputFileInfo File;
 
     /**
-     * Get <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul> 
-     * @return TaskType <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+     * Get <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul> 
+     * @return TaskType <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
-     * @param TaskType <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+     * Set <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+     * @param TaskType <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

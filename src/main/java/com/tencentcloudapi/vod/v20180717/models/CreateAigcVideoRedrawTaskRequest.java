@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
 
     /**
-    * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
+    * <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
     */
     @SerializedName("FileInfo")
     @Expose
     private AigcVideoRedrawTaskInputFileInfo FileInfo;
 
     /**
-    * <p>Task parameter information for AIGC video conversion.</p>
+    * <p>AIGC video redrawing task parameter information.</p>
     */
     @SerializedName("TaskInfo")
     @Expose
     private AigcVideoRedrawTaskInfo TaskInfo;
 
     /**
-    * <p>Output media file configuration for an AIGC video conversion task.</p>
+    * <p>Configuration of the output media file for an AIGC video conversion task.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -66,78 +66,78 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     private String SessionContext;
 
     /**
-    * <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+    * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * <p>Reserved field, used for special purposes.</p>
+    * <p>Reserved field, used for special purpose.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
-     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
-     * @param SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p> 
-     * @return FileInfo <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
+     * Get <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p> 
+     * @return FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
      */
     public AigcVideoRedrawTaskInputFileInfo getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
-     * @param FileInfo <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
+     * Set <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
+     * @param FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;
     }
 
     /**
-     * Get <p>Task parameter information for AIGC video conversion.</p> 
-     * @return TaskInfo <p>Task parameter information for AIGC video conversion.</p>
+     * Get <p>AIGC video redrawing task parameter information.</p> 
+     * @return TaskInfo <p>AIGC video redrawing task parameter information.</p>
      */
     public AigcVideoRedrawTaskInfo getTaskInfo() {
         return this.TaskInfo;
     }
 
     /**
-     * Set <p>Task parameter information for AIGC video conversion.</p>
-     * @param TaskInfo <p>Task parameter information for AIGC video conversion.</p>
+     * Set <p>AIGC video redrawing task parameter information.</p>
+     * @param TaskInfo <p>AIGC video redrawing task parameter information.</p>
      */
     public void setTaskInfo(AigcVideoRedrawTaskInfo TaskInfo) {
         this.TaskInfo = TaskInfo;
     }
 
     /**
-     * Get <p>Output media file configuration for an AIGC video conversion task.</p> 
-     * @return OutputConfig <p>Output media file configuration for an AIGC video conversion task.</p>
+     * Get <p>Configuration of the output media file for an AIGC video conversion task.</p> 
+     * @return OutputConfig <p>Configuration of the output media file for an AIGC video conversion task.</p>
      */
     public AigcVideoRedrawOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output media file configuration for an AIGC video conversion task.</p>
-     * @param OutputConfig <p>Output media file configuration for an AIGC video conversion task.</p>
+     * Set <p>Configuration of the output media file for an AIGC video conversion task.</p>
+     * @param OutputConfig <p>Configuration of the output media file for an AIGC video conversion task.</p>
      */
     public void setOutputConfig(AigcVideoRedrawOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
@@ -176,32 +176,32 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p> 
-     * @return TasksPriority <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+     * Get <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p> 
+     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
-     * @param TasksPriority <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+     * Set <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+     * @param TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get <p>Reserved field, used for special purposes.</p> 
-     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
+     * Get <p>Reserved field, used for special purpose.</p> 
+     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>Reserved field, used for special purposes.</p>
-     * @param ExtInfo <p>Reserved field, used for special purposes.</p>
+     * Set <p>Reserved field, used for special purpose.</p>
+     * @param ExtInfo <p>Reserved field, used for special purpose.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

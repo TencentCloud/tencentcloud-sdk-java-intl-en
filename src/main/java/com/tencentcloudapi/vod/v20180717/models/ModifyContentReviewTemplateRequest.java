@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyContentReviewTemplateRequest extends AbstractModel {
 
     /**
-    * Unique identifier of the content review template.
+    * Unique identifier of a content review template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Content review template name, with a length limit of 64 characters.
+    * Content review template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -73,7 +73,7 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel {
     private PoliticalConfigureInfoForUpdate PoliticalConfigure;
 
     /**
-    * Prohibited control parameters. Restricted content includes:
+    * Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
     */
@@ -98,55 +98,55 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel {
     /**
     * Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
     private String ReviewWallSwitch;
 
     /**
-     * Get Unique identifier of the content review template. 
-     * @return Definition Unique identifier of the content review template.
+     * Get Unique identifier of a content review template. 
+     * @return Definition Unique identifier of a content review template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the content review template.
-     * @param Definition Unique identifier of the content review template.
+     * Set Unique identifier of a content review template.
+     * @param Definition Unique identifier of a content review template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Content review template name, with a length limit of 64 characters. 
-     * @return Name Content review template name, with a length limit of 64 characters.
+     * Get Content review template name. The length cannot exceed 64 characters. 
+     * @return Name Content review template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Content review template name, with a length limit of 64 characters.
-     * @param Name Content review template name, with a length limit of 64 characters.
+     * Set Content review template name. The length cannot exceed 64 characters.
+     * @param Name Content review template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -217,10 +217,10 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Prohibited control parameters. Restricted content includes:
+     * Get Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li> 
-     * @return ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
      */
@@ -229,10 +229,10 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Set Prohibited control parameters. Restricted content includes:
+     * Set Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
-     * @param ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+     * @param ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
 <li>Abusive language;</li>
 <li>Drug-related violation.</li>
      */
@@ -275,10 +275,10 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel {
     /**
      * Get Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li> 
+<li>OFF: No.</li> 
      * @return ReviewWallSwitch Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
@@ -287,10 +287,10 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel {
     /**
      * Set Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
      * @param ReviewWallSwitch Whether the review result enters the review wall (for manual recognition of the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;

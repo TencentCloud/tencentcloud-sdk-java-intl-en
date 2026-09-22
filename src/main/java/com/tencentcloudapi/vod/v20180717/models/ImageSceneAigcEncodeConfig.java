@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageSceneAigcEncodeConfig extends AbstractModel {
 
     /**
-    * Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+    * Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
     */
     @SerializedName("Format")
     @Expose
@@ -38,16 +38,16 @@ public class ImageSceneAigcEncodeConfig extends AbstractModel {
     private Long Quality;
 
     /**
-     * Get Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported. 
-     * @return Format Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+     * Get Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported. 
+     * @return Format Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
-     * @param Format Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+     * Set Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
+     * @param Format Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
      */
     public void setFormat(String Format) {
         this.Format = Format;

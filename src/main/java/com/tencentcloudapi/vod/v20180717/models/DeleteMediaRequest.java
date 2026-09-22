@@ -31,14 +31,14 @@ public class DeleteMediaRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
+    * Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files.
     */
     @SerializedName("DeleteParts")
     @Expose
@@ -61,32 +61,32 @@ public class DeleteMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files. 
-     * @return DeleteParts Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
+     * Get Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files. 
+     * @return DeleteParts Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files.
      */
     public MediaDeleteItem [] getDeleteParts() {
         return this.DeleteParts;
     }
 
     /**
-     * Set Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
-     * @param DeleteParts Specify the parts to delete this time. Default value: "[]", which means to delete the media and all its corresponding video processing files.
+     * Set Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files.
+     * @param DeleteParts Specify the part to delete this time. Default value: "[]", which means to delete the media and all its video processing files.
      */
     public void setDeleteParts(MediaDeleteItem [] DeleteParts) {
         this.DeleteParts = DeleteParts;

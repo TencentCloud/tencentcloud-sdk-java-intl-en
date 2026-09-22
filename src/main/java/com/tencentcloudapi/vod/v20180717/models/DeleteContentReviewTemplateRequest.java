@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteContentReviewTemplateRequest extends AbstractModel {
 
     /**
-    * Content review template unique identifier.
+    * Unique identifier of a content review template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteContentReviewTemplateRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-     * Get Content review template unique identifier. 
-     * @return Definition Content review template unique identifier.
+     * Get Unique identifier of a content review template. 
+     * @return Definition Unique identifier of a content review template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Content review template unique identifier.
-     * @param Definition Content review template unique identifier.
+     * Set Unique identifier of a content review template.
+     * @param Definition Unique identifier of a content review template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

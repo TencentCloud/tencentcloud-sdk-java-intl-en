@@ -25,8 +25,8 @@ public class VoiceConfigureInfo extends AbstractModel {
 
     /**
     * Audio (mute, bass, pop) detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -34,11 +34,11 @@ public class VoiceConfigureInfo extends AbstractModel {
 
     /**
      * Get Audio (mute, bass, pop) detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disable.</li> 
+<li>ON: enabled</li>
+<li>OFF: disabled</li> 
      * @return Switch Audio (mute, bass, pop) detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -46,11 +46,11 @@ public class VoiceConfigureInfo extends AbstractModel {
 
     /**
      * Set Audio (mute, bass, pop) detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      * @param Switch Audio (mute, bass, pop) detection switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disable.</li>
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

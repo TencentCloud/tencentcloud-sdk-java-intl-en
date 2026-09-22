@@ -38,7 +38,7 @@ public class AigcTextDetail extends AbstractModel {
     private String ScrollToken;
 
     /**
-    * <p>Text generation details</p>
+    * <p>Detailed data for text generation</p>
     */
     @SerializedName("Data")
     @Expose
@@ -77,16 +77,16 @@ public class AigcTextDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Text generation details</p> 
-     * @return Data <p>Text generation details</p>
+     * Get <p>Detailed data for text generation</p> 
+     * @return Data <p>Detailed data for text generation</p>
      */
     public AigcTextDetailData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>Text generation details</p>
-     * @param Data <p>Text generation details</p>
+     * Set <p>Detailed data for text generation</p>
+     * @param Data <p>Detailed data for text generation</p>
      */
     public void setData(AigcTextDetailData [] Data) {
         this.Data = Data;

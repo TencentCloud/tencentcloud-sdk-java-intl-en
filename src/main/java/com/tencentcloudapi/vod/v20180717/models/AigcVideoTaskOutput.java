@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AigcVideoTaskOutput extends AbstractModel {
 
     /**
-    * <p>Output file information for an AIGC video generation task.</p>
+    * <p>Output file information of the AIGC video generation task.</p>
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcVideoTaskOutputFileInfo [] FileInfos;
 
     /**
-    * <p>Task ID of a task whose type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
+    * <p>Task ID of the task whose task type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
     */
     @SerializedName("ProcedureTaskIds")
     @Expose
@@ -45,32 +45,32 @@ public class AigcVideoTaskOutput extends AbstractModel {
     private AigcVideoTaskUsage Usage;
 
     /**
-     * Get <p>Output file information for an AIGC video generation task.</p> 
-     * @return FileInfos <p>Output file information for an AIGC video generation task.</p>
+     * Get <p>Output file information of the AIGC video generation task.</p> 
+     * @return FileInfos <p>Output file information of the AIGC video generation task.</p>
      */
     public AigcVideoTaskOutputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set <p>Output file information for an AIGC video generation task.</p>
-     * @param FileInfos <p>Output file information for an AIGC video generation task.</p>
+     * Set <p>Output file information of the AIGC video generation task.</p>
+     * @param FileInfos <p>Output file information of the AIGC video generation task.</p>
      */
     public void setFileInfos(AigcVideoTaskOutputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get <p>Task ID of a task whose type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p> 
-     * @return ProcedureTaskIds <p>Task ID of a task whose type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
+     * Get <p>Task ID of the task whose task type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p> 
+     * @return ProcedureTaskIds <p>Task ID of the task whose task type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
      */
     public String [] getProcedureTaskIds() {
         return this.ProcedureTaskIds;
     }
 
     /**
-     * Set <p>Task ID of a task whose type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
-     * @param ProcedureTaskIds <p>Task ID of a task whose type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
+     * Set <p>Task ID of the task whose task type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
+     * @param ProcedureTaskIds <p>Task ID of the task whose task type is Procedure. If a task flow template (Procedure) is specified when initiating an <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video generation task</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
      */
     public void setProcedureTaskIds(String [] ProcedureTaskIds) {
         this.ProcedureTaskIds = ProcedureTaskIds;

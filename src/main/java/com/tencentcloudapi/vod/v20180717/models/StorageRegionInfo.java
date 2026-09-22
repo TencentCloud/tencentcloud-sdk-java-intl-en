@@ -40,7 +40,7 @@ public class StorageRegionInfo extends AbstractModel {
     /**
     * Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -97,10 +97,10 @@ public class StorageRegionInfo extends AbstractModel {
     /**
      * Get Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li> 
+<li>unopened: Not activated.</li> 
      * @return Status Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
      */
     public String getStatus() {
         return this.Status;
@@ -109,10 +109,10 @@ public class StorageRegionInfo extends AbstractModel {
     /**
      * Set Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
      * @param Status Status. Whether it is enabled. Valid values:
 <li>opened: enabled.</li>
-<li>unopened: not activated.</li>
+<li>unopened: Not activated.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

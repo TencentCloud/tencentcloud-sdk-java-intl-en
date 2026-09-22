@@ -40,9 +40,9 @@ public class ExtractCopyRightWatermarkTask extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+    * Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid input parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
     */
     @SerializedName("ErrCode")
@@ -57,7 +57,7 @@ public class ExtractCopyRightWatermarkTask extends AbstractModel {
     private String Message;
 
     /**
-    * Error code. An empty string indicates success, and any other value indicates failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+    * Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -78,7 +78,7 @@ public class ExtractCopyRightWatermarkTask extends AbstractModel {
     private ExtractCopyRightWatermarkTaskOutput Output;
 
     /**
-    * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
@@ -132,13 +132,13 @@ public class ExtractCopyRightWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+     * Get Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid input parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li> 
-     * @return ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+     * @return ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid input parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public Long getErrCode() {
@@ -146,13 +146,13 @@ public class ExtractCopyRightWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Set Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+     * Set Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid input parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
-     * @param ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+     * @param ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: invalid input parameters. Check the input parameters;</li>
+<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public void setErrCode(Long ErrCode) {
@@ -176,16 +176,16 @@ public class ExtractCopyRightWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. An empty string indicates success, and any other value indicates failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list. 
-     * @return ErrCodeExt Error code. An empty string indicates success, and any other value indicates failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * Get Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates success, and any other value indicates failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
-     * @param ErrCodeExt Error code. An empty string indicates success, and any other value indicates failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
+     * Set Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrCodeExt Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -224,16 +224,16 @@ public class ExtractCopyRightWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
-     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

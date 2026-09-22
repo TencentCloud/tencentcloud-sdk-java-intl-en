@@ -31,7 +31,7 @@ public class TranscodePlayInfo2017 extends AbstractModel {
     private String Url;
 
     /**
-    * Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+    * Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
     */
     @SerializedName("Definition")
     @Expose
@@ -52,7 +52,7 @@ public class TranscodePlayInfo2017 extends AbstractModel {
     private Long Height;
 
     /**
-    * Maximum value of the video stream width in px.
+    * Maximum video stream width in px.
     */
     @SerializedName("Width")
     @Expose
@@ -75,16 +75,16 @@ public class TranscodePlayInfo2017 extends AbstractModel {
     }
 
     /**
-     * Get Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1). 
-     * @return Definition Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+     * Get Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1). 
+     * @return Definition Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
-     * @param Definition Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+     * Set Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+     * @param Definition Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -123,16 +123,16 @@ public class TranscodePlayInfo2017 extends AbstractModel {
     }
 
     /**
-     * Get Maximum value of the video stream width in px. 
-     * @return Width Maximum value of the video stream width in px.
+     * Get Maximum video stream width in px. 
+     * @return Width Maximum video stream width in px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the video stream width in px.
-     * @param Width Maximum value of the video stream width in px.
+     * Set Maximum video stream width in px.
+     * @param Width Maximum video stream width in px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;

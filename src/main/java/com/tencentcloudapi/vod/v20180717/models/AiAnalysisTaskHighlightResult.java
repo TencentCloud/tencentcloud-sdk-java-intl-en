@@ -59,28 +59,28 @@ public class AiAnalysisTaskHighlightResult extends AbstractModel {
     private AiAnalysisTaskHighlightInput Input;
 
     /**
-    * Task output of intelligent highlight.
+    * Task output of the intelligent highlight.
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskHighlightOutput Output;
 
     /**
-    * Progress of the intelligent highlight task. Value range: 0-100.
+    * Intelligent highlight task progress. Value range: [0-100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -167,64 +167,64 @@ public class AiAnalysisTaskHighlightResult extends AbstractModel {
     }
 
     /**
-     * Get Task output of intelligent highlight. 
-     * @return Output Task output of intelligent highlight.
+     * Get Task output of the intelligent highlight. 
+     * @return Output Task output of the intelligent highlight.
      */
     public AiAnalysisTaskHighlightOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Task output of intelligent highlight.
-     * @param Output Task output of intelligent highlight.
+     * Set Task output of the intelligent highlight.
+     * @param Output Task output of the intelligent highlight.
      */
     public void setOutput(AiAnalysisTaskHighlightOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Progress of the intelligent highlight task. Value range: 0-100. 
-     * @return Progress Progress of the intelligent highlight task. Value range: 0-100.
+     * Get Intelligent highlight task progress. Value range: [0-100]. 
+     * @return Progress Intelligent highlight task progress. Value range: [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the intelligent highlight task. Value range: 0-100.
-     * @param Progress Progress of the intelligent highlight task. Value range: 0-100.
+     * Set Intelligent highlight task progress. Value range: [0-100].
+     * @param Progress Intelligent highlight task progress. Value range: [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

@@ -31,14 +31,14 @@ public class AigcQuotaItem extends AbstractModel {
     private String QuotaType;
 
     /**
-    * <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+    * <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
     */
     @SerializedName("ApiToken")
     @Expose
     private String ApiToken;
 
     /**
-    * <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+    * <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
     */
     @SerializedName("QuotaLimit")
     @Expose
@@ -68,32 +68,32 @@ public class AigcQuotaItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p> 
-     * @return ApiToken <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+     * Get <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p> 
+     * @return ApiToken <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
      */
     public String getApiToken() {
         return this.ApiToken;
     }
 
     /**
-     * Set <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
-     * @param ApiToken <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+     * Set <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
+     * @param ApiToken <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;
     }
 
     /**
-     * Get <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul> 
-     * @return QuotaLimit <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+     * Get <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul> 
+     * @return QuotaLimit <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
      */
     public Long getQuotaLimit() {
         return this.QuotaLimit;
     }
 
     /**
-     * Set <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
-     * @param QuotaLimit <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+     * Set <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
+     * @param QuotaLimit <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
      */
     public void setQuotaLimit(Long QuotaLimit) {
         this.QuotaLimit = QuotaLimit;

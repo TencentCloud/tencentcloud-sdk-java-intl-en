@@ -31,7 +31,7 @@ public class DescribeAIRecognitionTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of audio/video content recognition template details.
+    * Audio/video content recognition template detail list.
     */
     @SerializedName("AIRecognitionTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAIRecognitionTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get List of audio/video content recognition template details. 
-     * @return AIRecognitionTemplateSet List of audio/video content recognition template details.
+     * Get Audio/video content recognition template detail list. 
+     * @return AIRecognitionTemplateSet Audio/video content recognition template detail list.
      */
     public AIRecognitionTemplateItem [] getAIRecognitionTemplateSet() {
         return this.AIRecognitionTemplateSet;
     }
 
     /**
-     * Set List of audio/video content recognition template details.
-     * @param AIRecognitionTemplateSet List of audio/video content recognition template details.
+     * Set Audio/video content recognition template detail list.
+     * @param AIRecognitionTemplateSet Audio/video content recognition template detail list.
      */
     public void setAIRecognitionTemplateSet(AIRecognitionTemplateItem [] AIRecognitionTemplateSet) {
         this.AIRecognitionTemplateSet = AIRecognitionTemplateSet;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InspectMediaQualityRequest extends AbstractModel {
 
     /**
-    * Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+    * Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
     */
     @SerializedName("FileId")
     @Expose
@@ -38,7 +38,7 @@ public class InspectMediaQualityRequest extends AbstractModel {
     private Long Definition;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,7 +52,7 @@ public class InspectMediaQualityRequest extends AbstractModel {
     private Long TasksPriority;
 
     /**
-    * Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
+    * Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
@@ -73,16 +73,16 @@ public class InspectMediaQualityRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
-     * Get Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). 
-     * @return FileId Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+     * Get Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media). 
+     * @return FileId Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
-     * @param FileId Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after a successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+     * Set Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
+     * @param FileId Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can get this field in the video upload completion event notification (https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or the VOD console (https://console.cloud.tencent.com/vod/media).
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -105,16 +105,16 @@ public class InspectMediaQualityRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -137,16 +137,16 @@ public class InspectMediaQualityRequest extends AbstractModel {
     }
 
     /**
-     * Get Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters. 
-     * @return SessionContext Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
+     * Get Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters. 
+     * @return SessionContext Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
-     * @param SessionContext Source context, used to pass through user request information. The audio and video quality detection completion callback will return the value of this field. Maximum length: 1000 characters.
+     * Set Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters.
+     * @param SessionContext Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality detection completion callback. The maximum length is 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

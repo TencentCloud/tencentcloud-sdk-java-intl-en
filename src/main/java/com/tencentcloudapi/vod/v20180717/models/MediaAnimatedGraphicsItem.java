@@ -52,14 +52,14 @@ public class MediaAnimatedGraphicsItem extends AbstractModel {
     private Long Height;
 
     /**
-    * Width of the animated image in px.
+    * Width of the animated image. Unit: px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Animated image bitrate. Measurement unit: bps.
+    * Animated image bitrate in bps.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -87,7 +87,7 @@ public class MediaAnimatedGraphicsItem extends AbstractModel {
     private Float StartTimeOffset;
 
     /**
-    * End time offset of the GIF in the video, in seconds.
+    * End time offset of an animated image in the video, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -158,32 +158,32 @@ public class MediaAnimatedGraphicsItem extends AbstractModel {
     }
 
     /**
-     * Get Width of the animated image in px. 
-     * @return Width Width of the animated image in px.
+     * Get Width of the animated image. Unit: px. 
+     * @return Width Width of the animated image. Unit: px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width of the animated image in px.
-     * @param Width Width of the animated image in px.
+     * Set Width of the animated image. Unit: px.
+     * @param Width Width of the animated image. Unit: px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Animated image bitrate. Measurement unit: bps. 
-     * @return Bitrate Animated image bitrate. Measurement unit: bps.
+     * Get Animated image bitrate in bps. 
+     * @return Bitrate Animated image bitrate in bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Animated image bitrate. Measurement unit: bps.
-     * @param Bitrate Animated image bitrate. Measurement unit: bps.
+     * Set Animated image bitrate in bps.
+     * @param Bitrate Animated image bitrate in bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
@@ -238,16 +238,16 @@ public class MediaAnimatedGraphicsItem extends AbstractModel {
     }
 
     /**
-     * Get End time offset of the GIF in the video, in seconds. 
-     * @return EndTimeOffset End time offset of the GIF in the video, in seconds.
+     * Get End time offset of an animated image in the video, in seconds. 
+     * @return EndTimeOffset End time offset of an animated image in the video, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of the GIF in the video, in seconds.
-     * @param EndTimeOffset End time offset of the GIF in the video, in seconds.
+     * Set End time offset of an animated image in the video, in seconds.
+     * @param EndTimeOffset End time offset of an animated image in the video, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

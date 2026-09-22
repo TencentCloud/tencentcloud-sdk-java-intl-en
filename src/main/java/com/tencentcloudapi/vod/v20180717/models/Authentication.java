@@ -34,7 +34,7 @@ public class Authentication extends AbstractModel {
     private String Switch;
 
     /**
-    * Configuration of timestamp hotlink protection mode A.
+    * Timestamp hotlink protection mode A configuration.
     */
     @SerializedName("TypeA")
     @Expose
@@ -90,16 +90,16 @@ public class Authentication extends AbstractModel {
     }
 
     /**
-     * Get Configuration of timestamp hotlink protection mode A. 
-     * @return TypeA Configuration of timestamp hotlink protection mode A.
+     * Get Timestamp hotlink protection mode A configuration. 
+     * @return TypeA Timestamp hotlink protection mode A configuration.
      */
     public AuthenticationTypeA getTypeA() {
         return this.TypeA;
     }
 
     /**
-     * Set Configuration of timestamp hotlink protection mode A.
-     * @param TypeA Configuration of timestamp hotlink protection mode A.
+     * Set Timestamp hotlink protection mode A configuration.
+     * @param TypeA Timestamp hotlink protection mode A configuration.
      */
     public void setTypeA(AuthenticationTypeA TypeA) {
         this.TypeA = TypeA;

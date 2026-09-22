@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VideoTemplateInfo extends AbstractModel {
 
     /**
-    * <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
+    * <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> av1 and H.266 encoding containers currently only support mp4;</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
     */
     @SerializedName("Codec")
     @Expose
@@ -66,14 +66,14 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long Height;
 
     /**
-    * <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
+    * <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, with edges filled with black.</li><li>white: Keep the video aspect ratio unchanged, with edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-    * <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+    * <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect);</li><li>When the encoding format of the specified video stream is H.266, this field is required. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
     */
     @SerializedName("Vcrf")
     @Expose
@@ -87,14 +87,14 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long Gop;
 
     /**
-    * <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
+    * <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: Indicates the number of frames.</li><li>second: Indicates the number of seconds.</li></ul><p>Default value: frame</p>
     */
     @SerializedName("GopUnit")
     @Expose
     private String GopUnit;
 
     /**
-    * <p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
+    * <p>Whether the transcoding output remains HDR when the raw video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output remains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
     */
     @SerializedName("PreserveHDRSwitch")
     @Expose
@@ -108,44 +108,44 @@ public class VideoTemplateInfo extends AbstractModel {
     private String CodecTag;
 
     /**
-    * <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
+    * <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where you need to minimize the overall bitrate while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of changes in image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * <p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
+    * <p>Number of B-frames between reference frames. The default is auto.</p><p>Value range: [0, 16]</p>
     */
     @SerializedName("Bframes")
     @Expose
     private Long Bframes;
 
     /**
-    * <p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
+    * <p>Average shard duration. 0 or empty means auto, and an appropriate shard duration will be automatically selected based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate templates are not currently supported.</p>
     */
     @SerializedName("HlsTime")
     @Expose
     private Long HlsTime;
 
     /**
-    * <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+    * <p>A predefined group of encoding tools or features allowed in the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/P frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream profile, provides I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adds 8X8 prediction on top of the Main Profile and supports custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>Default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
     */
     @SerializedName("VideoProfile")
     @Expose
     private String VideoProfile;
 
     /**
-     * Get <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li> 
-     * @return Codec <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
+     * Get <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> av1 and H.266 encoding containers currently only support mp4;</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li> 
+     * @return Codec <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> av1 and H.266 encoding containers currently only support mp4;</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
-     * @param Codec <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
+     * Set <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> av1 and H.266 encoding containers currently only support mp4;</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
+     * @param Codec <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> av1 and H.266 encoding containers currently only support mp4;</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -232,32 +232,32 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black. 
-     * @return FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
+     * Get <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, with edges filled with black.</li><li>white: Keep the video aspect ratio unchanged, with edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with Gaussian blur filling for the rest of the edges.</li>Default value: black. 
+     * @return FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, with edges filled with black.</li><li>white: Keep the video aspect ratio unchanged, with edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
-     * @param FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
+     * Set <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, with edges filled with black.</li><li>white: Keep the video aspect ratio unchanged, with edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
+     * @param FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged, with edges filled with black.</li><li>white: Keep the video aspect ratio unchanged, with edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
     }
 
     /**
-     * Get <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li> 
-     * @return Vcrf <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+     * Get <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect);</li><li>When the encoding format of the specified video stream is H.266, this field is required. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li> 
+     * @return Vcrf <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect);</li><li>When the encoding format of the specified video stream is H.266, this field is required. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
      */
     public Long getVcrf() {
         return this.Vcrf;
     }
 
     /**
-     * Set <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
-     * @param Vcrf <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+     * Set <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect);</li><li>When the encoding format of the specified video stream is H.266, this field is required. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+     * @param Vcrf <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect);</li><li>When the encoding format of the specified video stream is H.266, this field is required. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
      */
     public void setVcrf(Long Vcrf) {
         this.Vcrf = Vcrf;
@@ -280,32 +280,32 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p> 
-     * @return GopUnit <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
+     * Get <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: Indicates the number of frames.</li><li>second: Indicates the number of seconds.</li></ul><p>Default value: frame</p> 
+     * @return GopUnit <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: Indicates the number of frames.</li><li>second: Indicates the number of seconds.</li></ul><p>Default value: frame</p>
      */
     public String getGopUnit() {
         return this.GopUnit;
     }
 
     /**
-     * Set <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
-     * @param GopUnit <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
+     * Set <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: Indicates the number of frames.</li><li>second: Indicates the number of seconds.</li></ul><p>Default value: frame</p>
+     * @param GopUnit <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: Indicates the number of frames.</li><li>second: Indicates the number of seconds.</li></ul><p>Default value: frame</p>
      */
     public void setGopUnit(String GopUnit) {
         this.GopUnit = GopUnit;
     }
 
     /**
-     * Get <p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF. 
-     * @return PreserveHDRSwitch <p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
+     * Get <p>Whether the transcoding output remains HDR when the raw video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output remains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF. 
+     * @return PreserveHDRSwitch <p>Whether the transcoding output remains HDR when the raw video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output remains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
      */
     public String getPreserveHDRSwitch() {
         return this.PreserveHDRSwitch;
     }
 
     /**
-     * Set <p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
-     * @param PreserveHDRSwitch <p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
+     * Set <p>Whether the transcoding output remains HDR when the raw video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output remains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
+     * @param PreserveHDRSwitch <p>Whether the transcoding output remains HDR when the raw video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output remains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
      */
     public void setPreserveHDRSwitch(String PreserveHDRSwitch) {
         this.PreserveHDRSwitch = PreserveHDRSwitch;
@@ -328,64 +328,64 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p> 
-     * @return Mode <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
+     * Get <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where you need to minimize the overall bitrate while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of changes in image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p> 
+     * @return Mode <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where you need to minimize the overall bitrate while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of changes in image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
-     * @param Mode <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
+     * Set <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where you need to minimize the overall bitrate while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of changes in image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
+     * @param Mode <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where you need to minimize the overall bitrate while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of changes in image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get <p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p> 
-     * @return Bframes <p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
+     * Get <p>Number of B-frames between reference frames. The default is auto.</p><p>Value range: [0, 16]</p> 
+     * @return Bframes <p>Number of B-frames between reference frames. The default is auto.</p><p>Value range: [0, 16]</p>
      */
     public Long getBframes() {
         return this.Bframes;
     }
 
     /**
-     * Set <p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
-     * @param Bframes <p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
+     * Set <p>Number of B-frames between reference frames. The default is auto.</p><p>Value range: [0, 16]</p>
+     * @param Bframes <p>Number of B-frames between reference frames. The default is auto.</p><p>Value range: [0, 16]</p>
      */
     public void setBframes(Long Bframes) {
         this.Bframes = Bframes;
     }
 
     /**
-     * Get <p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p> 
-     * @return HlsTime <p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
+     * Get <p>Average shard duration. 0 or empty means auto, and an appropriate shard duration will be automatically selected based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate templates are not currently supported.</p> 
+     * @return HlsTime <p>Average shard duration. 0 or empty means auto, and an appropriate shard duration will be automatically selected based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate templates are not currently supported.</p>
      */
     public Long getHlsTime() {
         return this.HlsTime;
     }
 
     /**
-     * Set <p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
-     * @param HlsTime <p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
+     * Set <p>Average shard duration. 0 or empty means auto, and an appropriate shard duration will be automatically selected based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate templates are not currently supported.</p>
+     * @param HlsTime <p>Average shard duration. 0 or empty means auto, and an appropriate shard duration will be automatically selected based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate templates are not currently supported.</p>
      */
     public void setHlsTime(Long HlsTime) {
         this.HlsTime = HlsTime;
     }
 
     /**
-     * Get <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p> 
-     * @return VideoProfile <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+     * Get <p>A predefined group of encoding tools or features allowed in the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/P frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream profile, provides I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adds 8X8 prediction on top of the Main Profile and supports custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>Default value: default</p><p>This configuration item is valid only when Codec is libx264.</p> 
+     * @return VideoProfile <p>A predefined group of encoding tools or features allowed in the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/P frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream profile, provides I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adds 8X8 prediction on top of the Main Profile and supports custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>Default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
      */
     public String getVideoProfile() {
         return this.VideoProfile;
     }
 
     /**
-     * Set <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
-     * @param VideoProfile <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+     * Set <p>A predefined group of encoding tools or features allowed in the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/P frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream profile, provides I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adds 8X8 prediction on top of the Main Profile and supports custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>Default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+     * @param VideoProfile <p>A predefined group of encoding tools or features allowed in the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/P frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream profile, provides I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adds 8X8 prediction on top of the Main Profile and supports custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>Default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
      */
     public void setVideoProfile(String VideoProfile) {
         this.VideoProfile = VideoProfile;

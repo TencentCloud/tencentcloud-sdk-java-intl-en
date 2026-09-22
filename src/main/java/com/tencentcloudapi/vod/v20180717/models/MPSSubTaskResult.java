@@ -34,14 +34,14 @@ public class MPSSubTaskResult extends AbstractModel {
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -51,7 +51,7 @@ public class MPSSubTaskResult extends AbstractModel {
     private String TaskType;
 
     /**
-    * Task status. It can be PROCESSING, SUCCESS, or FAIL.
+    * Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
@@ -72,14 +72,14 @@ public class MPSSubTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
+    * Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * Output of MPS video processing task.
+    * Output of the MPS video processing task.
     */
     @SerializedName("Output")
     @Expose
@@ -96,14 +96,14 @@ public class MPSSubTaskResult extends AbstractModel {
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
  
@@ -117,14 +117,14 @@ public class MPSSubTaskResult extends AbstractModel {
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -144,14 +144,14 @@ public class MPSSubTaskResult extends AbstractModel {
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -165,14 +165,14 @@ public class MPSSubTaskResult extends AbstractModel {
 <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
 <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
 <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+<li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
 <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
 <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
 <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
 <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
 <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
 <li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+<li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
 <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
 <li>SmartErase: intelligent erasure task.</li>
 
@@ -182,16 +182,16 @@ public class MPSSubTaskResult extends AbstractModel {
     }
 
     /**
-     * Get Task status. It can be PROCESSING, SUCCESS, or FAIL. 
-     * @return Status Task status. It can be PROCESSING, SUCCESS, or FAIL.
+     * Get Task status. It has three values: PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. It can be PROCESSING, SUCCESS, or FAIL.
-     * @param Status Task status. It can be PROCESSING, SUCCESS, or FAIL.
+     * Set Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -230,32 +230,32 @@ public class MPSSubTaskResult extends AbstractModel {
     }
 
     /**
-     * Get MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format. 
-     * @return Input MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
+     * Get Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format. 
+     * @return Input Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
-     * @param Input MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
+     * Set Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
+     * @param Input Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of MPS video processing task. 
-     * @return Output Output of MPS video processing task.
+     * Get Output of the MPS video processing task. 
+     * @return Output Output of the MPS video processing task.
      */
     public MPSTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of MPS video processing task.
-     * @param Output Output of MPS video processing task.
+     * Set Output of the MPS video processing task.
+     * @param Output Output of the MPS video processing task.
      */
     public void setOutput(MPSTaskOutput Output) {
         this.Output = Output;

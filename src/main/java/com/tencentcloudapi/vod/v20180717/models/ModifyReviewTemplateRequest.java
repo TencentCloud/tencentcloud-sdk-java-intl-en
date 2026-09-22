@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyReviewTemplateRequest extends AbstractModel {
 
     /**
-    * Unique identifier of the review template.
+    * Review template unique identifier.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,12 +52,12 @@ public class ModifyReviewTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+    * List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 
@@ -68,32 +68,32 @@ Note: Leaving it blank means it does not update.
     private String [] Labels;
 
     /**
-     * Get Unique identifier of the review template. 
-     * @return Definition Unique identifier of the review template.
+     * Get Review template unique identifier. 
+     * @return Definition Review template unique identifier.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the review template.
-     * @param Definition Unique identifier of the review template.
+     * Set Review template unique identifier.
+     * @param Definition Review template unique identifier.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -132,22 +132,22 @@ Note: Leaving it blank means it does not update.
     }
 
     /**
-     * Get List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+     * Get List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 
 Note: Leaving it blank means it does not update. 
-     * @return Labels List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+     * @return Labels List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 
@@ -158,22 +158,22 @@ Note: Leaving it blank means it does not update.
     }
 
     /**
-     * Set List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+     * Set List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 
 Note: Leaving it blank means it does not update.
-     * @param Labels List of violation labels to return. Optional values:
-<li>Porn: Pornography;</li>
+     * @param Labels List of rule violation tags to return. Optional values:
+<li>Porn: pornography;</li>
 <li>Terror: violence.</li>
 <li>Polity: inappropriate information;</li>
-<li>Illegal: illegal;</li>
-<li>Abuse: verbal abuse;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language;</li>
 <li>Ad: advertisement;</li>
 <li>Moan: panting.</li>
 

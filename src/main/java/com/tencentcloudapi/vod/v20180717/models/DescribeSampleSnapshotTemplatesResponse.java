@@ -31,7 +31,7 @@ public class DescribeSampleSnapshotTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Sampling screenshot template detail list.
+    * List of sampled screenshot template details.
     */
     @SerializedName("SampleSnapshotTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeSampleSnapshotTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get Sampling screenshot template detail list. 
-     * @return SampleSnapshotTemplateSet Sampling screenshot template detail list.
+     * Get List of sampled screenshot template details. 
+     * @return SampleSnapshotTemplateSet List of sampled screenshot template details.
      */
     public SampleSnapshotTemplate [] getSampleSnapshotTemplateSet() {
         return this.SampleSnapshotTemplateSet;
     }
 
     /**
-     * Set Sampling screenshot template detail list.
-     * @param SampleSnapshotTemplateSet Sampling screenshot template detail list.
+     * Set List of sampled screenshot template details.
+     * @param SampleSnapshotTemplateSet List of sampled screenshot template details.
      */
     public void setSampleSnapshotTemplateSet(SampleSnapshotTemplate [] SampleSnapshotTemplateSet) {
         this.SampleSnapshotTemplateSet = SampleSnapshotTemplateSet;

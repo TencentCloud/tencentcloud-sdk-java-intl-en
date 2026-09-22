@@ -31,7 +31,7 @@ public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * <p>Large model parsing template detail list.</p>
+    * <p>Large model parsing template details list.</p>
     */
     @SerializedName("LLMComprehendTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Large model parsing template detail list.</p> 
-     * @return LLMComprehendTemplateSet <p>Large model parsing template detail list.</p>
+     * Get <p>Large model parsing template details list.</p> 
+     * @return LLMComprehendTemplateSet <p>Large model parsing template details list.</p>
      */
     public LLMComprehendTemplateItem [] getLLMComprehendTemplateSet() {
         return this.LLMComprehendTemplateSet;
     }
 
     /**
-     * Set <p>Large model parsing template detail list.</p>
-     * @param LLMComprehendTemplateSet <p>Large model parsing template detail list.</p>
+     * Set <p>Large model parsing template details list.</p>
+     * @param LLMComprehendTemplateSet <p>Large model parsing template details list.</p>
      */
     public void setLLMComprehendTemplateSet(LLMComprehendTemplateItem [] LLMComprehendTemplateSet) {
         this.LLMComprehendTemplateSet = LLMComprehendTemplateSet;

@@ -45,7 +45,7 @@ public class TrtcRecordInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * List of user IDs participating in recording.
+    * User ID list of the recording participants.
     */
     @SerializedName("UserIds")
     @Expose
@@ -100,16 +100,16 @@ public class TrtcRecordInfo extends AbstractModel {
     }
 
     /**
-     * Get List of user IDs participating in recording. 
-     * @return UserIds List of user IDs participating in recording.
+     * Get User ID list of the recording participants. 
+     * @return UserIds User ID list of the recording participants.
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set List of user IDs participating in recording.
-     * @param UserIds List of user IDs participating in recording.
+     * Set User ID list of the recording participants.
+     * @param UserIds User ID list of the recording participants.
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;

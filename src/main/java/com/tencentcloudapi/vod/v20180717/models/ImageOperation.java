@@ -41,7 +41,7 @@ public class ImageOperation extends AbstractModel {
     private ImageScale Scale;
 
     /**
-    * Image cropping. Valid only when Type is CenterCut.
+    * Image crop processing. Valid only when Type is CenterCut.
     */
     @SerializedName("CenterCut")
     @Expose
@@ -99,16 +99,16 @@ public class ImageOperation extends AbstractModel {
     }
 
     /**
-     * Get Image cropping. Valid only when Type is CenterCut. 
-     * @return CenterCut Image cropping. Valid only when Type is CenterCut.
+     * Get Image crop processing. Valid only when Type is CenterCut. 
+     * @return CenterCut Image crop processing. Valid only when Type is CenterCut.
      */
     public ImageCenterCut getCenterCut() {
         return this.CenterCut;
     }
 
     /**
-     * Set Image cropping. Valid only when Type is CenterCut.
-     * @param CenterCut Image cropping. Valid only when Type is CenterCut.
+     * Set Image crop processing. Valid only when Type is CenterCut.
+     * @param CenterCut Image crop processing. Valid only when Type is CenterCut.
      */
     public void setCenterCut(ImageCenterCut CenterCut) {
         this.CenterCut = CenterCut;

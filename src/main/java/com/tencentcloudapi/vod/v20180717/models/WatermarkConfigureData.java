@@ -56,14 +56,14 @@ public class WatermarkConfigureData extends AbstractModel {
     private String Height;
 
     /**
-    * Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.
+    * Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
     */
     @SerializedName("XPos")
     @Expose
     private String XPos;
 
     /**
-    * Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+    * Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
     */
     @SerializedName("YPos")
     @Expose
@@ -150,32 +150,32 @@ public class WatermarkConfigureData extends AbstractModel {
     }
 
     /**
-     * Get Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width. 
-     * @return XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.
+     * Get Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width. 
+     * @return XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
      */
     public String getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.
-     * @param XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.
+     * Set Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+     * @param XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
      */
     public void setXPos(String XPos) {
         this.XPos = XPos;
     }
 
     /**
-     * Get Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height. 
-     * @return YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+     * Get Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height. 
+     * @return YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
      */
     public String getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
-     * @param YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+     * Set Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+     * @param YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
      */
     public void setYPos(String YPos) {
         this.YPos = YPos;

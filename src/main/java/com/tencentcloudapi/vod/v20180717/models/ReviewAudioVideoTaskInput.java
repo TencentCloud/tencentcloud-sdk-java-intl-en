@@ -31,7 +31,7 @@ public class ReviewAudioVideoTaskInput extends AbstractModel {
     private String FileId;
 
     /**
-    * Audio/video moderation template ID.
+    * Audio/Video moderation template ID.
     */
     @SerializedName("Definition")
     @Expose
@@ -63,16 +63,16 @@ public class ReviewAudioVideoTaskInput extends AbstractModel {
     }
 
     /**
-     * Get Audio/video moderation template ID. 
-     * @return Definition Audio/video moderation template ID.
+     * Get Audio/Video moderation template ID. 
+     * @return Definition Audio/Video moderation template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Audio/video moderation template ID.
-     * @param Definition Audio/video moderation template ID.
+     * Set Audio/Video moderation template ID.
+     * @param Definition Audio/Video moderation template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

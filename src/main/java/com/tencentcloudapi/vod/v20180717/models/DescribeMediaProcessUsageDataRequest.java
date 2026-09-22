@@ -38,7 +38,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -47,32 +47,32 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
     /**
     * Query video processing task type. Currently supported task types include:
 <li> Transcoding: standard transcoding.</li>
-<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Transcoding-TESHD: TSC transcoding.</li>
 <li> Editing: video editing</li>
 <li> Editing-TESHD: extremely fast high-definition video editing</li>
 <li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
-<li> ContentAudit: content review</li>
-<li> ContentRecognition: content recognition.</li>
+<li> ContentAudit: content moderation.</li>
+<li>ContentRecognition: content recognition.</li>
 <li> RemoveWatermark: remove watermark</li>
-<li> ExtractTraceWatermark: extract watermark.</li>
+<li> ExtractTraceWatermark: extract watermark</li>
 <li> AddTraceWatermark: Add watermark</li>
 <li> RebuildMedia: audio and video quality revival</li>
 <li> QualityInspect: audio and video quality inspection</li>
 <li> VideoHighlight: video intelligent highlights</li>
-<li> VideoTag: video intelligent tag.</li>
-<li> VideoClassification: video intelligent classification.</li>
+<li> VideoTag: video intelligent tag</li>
+<li> VideoClassification: video intelligent classification</li>
 <li> VideoCover: video intelligent cover.</li>
 <li> VideoSegment: video intelligent splitting.</li>
 <li> VideoProduce: video production</li>
 <li> MediaCast: media forwarding.</li>
-<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommend)</li>
 <li>VoiceTranslation: speech translation</li>
 <li>JITTranscoding: JIT transcoding</li>
 <li>VideoSnapshot: video screenshot.</li>
-<li>JITEncryption: Instant encryption</li>
+<li>JITEncryption: real-time encryption</li>
 <li>MediaEnhancement: audio and video enhancement</li>
 <li>ImageCompression: image compression</li>
-<li>ImageEnhancement: image enhancement</li>
+<li>ImageEnhancement: image enhancement.</li>
 <li>ImageSuperResolution: image super resolution.</li>
 <li>ImageAdvanceCompression: image advanced compression.</li>
 <li>ImageUnderstanding: image understanding.</li>
@@ -121,16 +121,16 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -139,32 +139,32 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
     /**
      * Get Query video processing task type. Currently supported task types include:
 <li> Transcoding: standard transcoding.</li>
-<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Transcoding-TESHD: TSC transcoding.</li>
 <li> Editing: video editing</li>
 <li> Editing-TESHD: extremely fast high-definition video editing</li>
 <li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
-<li> ContentAudit: content review</li>
-<li> ContentRecognition: content recognition.</li>
+<li> ContentAudit: content moderation.</li>
+<li>ContentRecognition: content recognition.</li>
 <li> RemoveWatermark: remove watermark</li>
-<li> ExtractTraceWatermark: extract watermark.</li>
+<li> ExtractTraceWatermark: extract watermark</li>
 <li> AddTraceWatermark: Add watermark</li>
 <li> RebuildMedia: audio and video quality revival</li>
 <li> QualityInspect: audio and video quality inspection</li>
 <li> VideoHighlight: video intelligent highlights</li>
-<li> VideoTag: video intelligent tag.</li>
-<li> VideoClassification: video intelligent classification.</li>
+<li> VideoTag: video intelligent tag</li>
+<li> VideoClassification: video intelligent classification</li>
 <li> VideoCover: video intelligent cover.</li>
 <li> VideoSegment: video intelligent splitting.</li>
 <li> VideoProduce: video production</li>
 <li> MediaCast: media forwarding.</li>
-<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommend)</li>
 <li>VoiceTranslation: speech translation</li>
 <li>JITTranscoding: JIT transcoding</li>
 <li>VideoSnapshot: video screenshot.</li>
-<li>JITEncryption: Instant encryption</li>
+<li>JITEncryption: real-time encryption</li>
 <li>MediaEnhancement: audio and video enhancement</li>
 <li>ImageCompression: image compression</li>
-<li>ImageEnhancement: image enhancement</li>
+<li>ImageEnhancement: image enhancement.</li>
 <li>ImageSuperResolution: image super resolution.</li>
 <li>ImageAdvanceCompression: image advanced compression.</li>
 <li>ImageUnderstanding: image understanding.</li>
@@ -177,32 +177,32 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
  
      * @return Type Query video processing task type. Currently supported task types include:
 <li> Transcoding: standard transcoding.</li>
-<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Transcoding-TESHD: TSC transcoding.</li>
 <li> Editing: video editing</li>
 <li> Editing-TESHD: extremely fast high-definition video editing</li>
 <li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
-<li> ContentAudit: content review</li>
-<li> ContentRecognition: content recognition.</li>
+<li> ContentAudit: content moderation.</li>
+<li>ContentRecognition: content recognition.</li>
 <li> RemoveWatermark: remove watermark</li>
-<li> ExtractTraceWatermark: extract watermark.</li>
+<li> ExtractTraceWatermark: extract watermark</li>
 <li> AddTraceWatermark: Add watermark</li>
 <li> RebuildMedia: audio and video quality revival</li>
 <li> QualityInspect: audio and video quality inspection</li>
 <li> VideoHighlight: video intelligent highlights</li>
-<li> VideoTag: video intelligent tag.</li>
-<li> VideoClassification: video intelligent classification.</li>
+<li> VideoTag: video intelligent tag</li>
+<li> VideoClassification: video intelligent classification</li>
 <li> VideoCover: video intelligent cover.</li>
 <li> VideoSegment: video intelligent splitting.</li>
 <li> VideoProduce: video production</li>
 <li> MediaCast: media forwarding.</li>
-<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommend)</li>
 <li>VoiceTranslation: speech translation</li>
 <li>JITTranscoding: JIT transcoding</li>
 <li>VideoSnapshot: video screenshot.</li>
-<li>JITEncryption: Instant encryption</li>
+<li>JITEncryption: real-time encryption</li>
 <li>MediaEnhancement: audio and video enhancement</li>
 <li>ImageCompression: image compression</li>
-<li>ImageEnhancement: image enhancement</li>
+<li>ImageEnhancement: image enhancement.</li>
 <li>ImageSuperResolution: image super resolution.</li>
 <li>ImageAdvanceCompression: image advanced compression.</li>
 <li>ImageUnderstanding: image understanding.</li>
@@ -221,32 +221,32 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
     /**
      * Set Query video processing task type. Currently supported task types include:
 <li> Transcoding: standard transcoding.</li>
-<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Transcoding-TESHD: TSC transcoding.</li>
 <li> Editing: video editing</li>
 <li> Editing-TESHD: extremely fast high-definition video editing</li>
 <li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
-<li> ContentAudit: content review</li>
-<li> ContentRecognition: content recognition.</li>
+<li> ContentAudit: content moderation.</li>
+<li>ContentRecognition: content recognition.</li>
 <li> RemoveWatermark: remove watermark</li>
-<li> ExtractTraceWatermark: extract watermark.</li>
+<li> ExtractTraceWatermark: extract watermark</li>
 <li> AddTraceWatermark: Add watermark</li>
 <li> RebuildMedia: audio and video quality revival</li>
 <li> QualityInspect: audio and video quality inspection</li>
 <li> VideoHighlight: video intelligent highlights</li>
-<li> VideoTag: video intelligent tag.</li>
-<li> VideoClassification: video intelligent classification.</li>
+<li> VideoTag: video intelligent tag</li>
+<li> VideoClassification: video intelligent classification</li>
 <li> VideoCover: video intelligent cover.</li>
 <li> VideoSegment: video intelligent splitting.</li>
 <li> VideoProduce: video production</li>
 <li> MediaCast: media forwarding.</li>
-<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommend)</li>
 <li>VoiceTranslation: speech translation</li>
 <li>JITTranscoding: JIT transcoding</li>
 <li>VideoSnapshot: video screenshot.</li>
-<li>JITEncryption: Instant encryption</li>
+<li>JITEncryption: real-time encryption</li>
 <li>MediaEnhancement: audio and video enhancement</li>
 <li>ImageCompression: image compression</li>
-<li>ImageEnhancement: image enhancement</li>
+<li>ImageEnhancement: image enhancement.</li>
 <li>ImageSuperResolution: image super resolution.</li>
 <li>ImageAdvanceCompression: image advanced compression.</li>
 <li>ImageUnderstanding: image understanding.</li>
@@ -259,32 +259,32 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
 
      * @param Type Query video processing task type. Currently supported task types include:
 <li> Transcoding: standard transcoding.</li>
-<li>Transcoding-TESHD: TSC transcoding.</li>
+<li> Transcoding-TESHD: TSC transcoding.</li>
 <li> Editing: video editing</li>
 <li> Editing-TESHD: extremely fast high-definition video editing</li>
 <li> AdaptiveBitrateStreaming: adaptive bitrate streaming.</li>
-<li> ContentAudit: content review</li>
-<li> ContentRecognition: content recognition.</li>
+<li> ContentAudit: content moderation.</li>
+<li>ContentRecognition: content recognition.</li>
 <li> RemoveWatermark: remove watermark</li>
-<li> ExtractTraceWatermark: extract watermark.</li>
+<li> ExtractTraceWatermark: extract watermark</li>
 <li> AddTraceWatermark: Add watermark</li>
 <li> RebuildMedia: audio and video quality revival</li>
 <li> QualityInspect: audio and video quality inspection</li>
 <li> VideoHighlight: video intelligent highlights</li>
-<li> VideoTag: video intelligent tag.</li>
-<li> VideoClassification: video intelligent classification.</li>
+<li> VideoTag: video intelligent tag</li>
+<li> VideoClassification: video intelligent classification</li>
 <li> VideoCover: video intelligent cover.</li>
 <li> VideoSegment: video intelligent splitting.</li>
 <li> VideoProduce: video production</li>
 <li> MediaCast: media forwarding.</li>
-<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+<li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommend)</li>
 <li>VoiceTranslation: speech translation</li>
 <li>JITTranscoding: JIT transcoding</li>
 <li>VideoSnapshot: video screenshot.</li>
-<li>JITEncryption: Instant encryption</li>
+<li>JITEncryption: real-time encryption</li>
 <li>MediaEnhancement: audio and video enhancement</li>
 <li>ImageCompression: image compression</li>
-<li>ImageEnhancement: image enhancement</li>
+<li>ImageEnhancement: image enhancement.</li>
 <li>ImageSuperResolution: image super resolution.</li>
 <li>ImageAdvanceCompression: image advanced compression.</li>
 <li>ImageUnderstanding: image understanding.</li>

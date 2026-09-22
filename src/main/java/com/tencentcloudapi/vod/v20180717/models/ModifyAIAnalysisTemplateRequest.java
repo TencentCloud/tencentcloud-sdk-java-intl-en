@@ -31,7 +31,7 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel {
     private Long Definition;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -59,7 +59,7 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel {
     private ClassificationConfigureInfoForUpdate ClassificationConfigure;
 
     /**
-    * Intelligent tag task control parameter.
+    * Control parameter of an intelligent tag task.
     */
     @SerializedName("TagConfigure")
     @Expose
@@ -73,14 +73,14 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel {
     private CoverConfigureInfoForUpdate CoverConfigure;
 
     /**
-    * Control parameter for the intelligent frame-specific tagging task.
+    * Task control parameter for intelligent frame tagging.
     */
     @SerializedName("FrameTagConfigure")
     @Expose
     private FrameTagConfigureInfoForUpdate FrameTagConfigure;
 
     /**
-    * Intelligent Highlights Compilation Task Control Parameters.
+    * Control parameters for the intelligent highlights compilation task.
     */
     @SerializedName("HighlightConfigure")
     @Expose
@@ -103,16 +103,16 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -167,16 +167,16 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Intelligent tag task control parameter. 
-     * @return TagConfigure Intelligent tag task control parameter.
+     * Get Control parameter of an intelligent tag task. 
+     * @return TagConfigure Control parameter of an intelligent tag task.
      */
     public TagConfigureInfoForUpdate getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set Intelligent tag task control parameter.
-     * @param TagConfigure Intelligent tag task control parameter.
+     * Set Control parameter of an intelligent tag task.
+     * @param TagConfigure Control parameter of an intelligent tag task.
      */
     public void setTagConfigure(TagConfigureInfoForUpdate TagConfigure) {
         this.TagConfigure = TagConfigure;
@@ -199,32 +199,32 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Control parameter for the intelligent frame-specific tagging task. 
-     * @return FrameTagConfigure Control parameter for the intelligent frame-specific tagging task.
+     * Get Task control parameter for intelligent frame tagging. 
+     * @return FrameTagConfigure Task control parameter for intelligent frame tagging.
      */
     public FrameTagConfigureInfoForUpdate getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set Control parameter for the intelligent frame-specific tagging task.
-     * @param FrameTagConfigure Control parameter for the intelligent frame-specific tagging task.
+     * Set Task control parameter for intelligent frame tagging.
+     * @param FrameTagConfigure Task control parameter for intelligent frame tagging.
      */
     public void setFrameTagConfigure(FrameTagConfigureInfoForUpdate FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;
     }
 
     /**
-     * Get Intelligent Highlights Compilation Task Control Parameters. 
-     * @return HighlightConfigure Intelligent Highlights Compilation Task Control Parameters.
+     * Get Control parameters for the intelligent highlights compilation task. 
+     * @return HighlightConfigure Control parameters for the intelligent highlights compilation task.
      */
     public HighlightsConfigureInfoForUpdate getHighlightConfigure() {
         return this.HighlightConfigure;
     }
 
     /**
-     * Set Intelligent Highlights Compilation Task Control Parameters.
-     * @param HighlightConfigure Intelligent Highlights Compilation Task Control Parameters.
+     * Set Control parameters for the intelligent highlights compilation task.
+     * @param HighlightConfigure Control parameters for the intelligent highlights compilation task.
      */
     public void setHighlightConfigure(HighlightsConfigureInfoForUpdate HighlightConfigure) {
         this.HighlightConfigure = HighlightConfigure;

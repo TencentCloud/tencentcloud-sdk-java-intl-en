@@ -26,14 +26,14 @@ public class ScratchRepairInfo extends AbstractModel {
     /**
     * Scratch control switch. Available values:
 <li>ON: turn on scratch removal;</li>
-<li>OFF: disables scratch removal.</li>
+<li>OFF: Turn off scratch removal.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+    * Scratch removal strength. Valid only when the scratch control switch is ON. Value range: 0.0–1.0.
 Default: 0.0.
     */
     @SerializedName("Intensity")
@@ -41,7 +41,7 @@ Default: 0.0.
     private Float Intensity;
 
     /**
-    * Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+    * Scratch removal type. Valid only when the scratch control switch is ON. Available values:
 <li>normal: normal scratch removal;</li>
 Default value: normal.
     */
@@ -52,10 +52,10 @@ Default value: normal.
     /**
      * Get Scratch control switch. Available values:
 <li>ON: turn on scratch removal;</li>
-<li>OFF: disables scratch removal.</li> 
+<li>OFF: Turn off scratch removal.</li> 
      * @return Switch Scratch control switch. Available values:
 <li>ON: turn on scratch removal;</li>
-<li>OFF: disables scratch removal.</li>
+<li>OFF: Turn off scratch removal.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -64,19 +64,19 @@ Default value: normal.
     /**
      * Set Scratch control switch. Available values:
 <li>ON: turn on scratch removal;</li>
-<li>OFF: disables scratch removal.</li>
+<li>OFF: Turn off scratch removal.</li>
      * @param Switch Scratch control switch. Available values:
 <li>ON: turn on scratch removal;</li>
-<li>OFF: disables scratch removal.</li>
+<li>OFF: Turn off scratch removal.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+     * Get Scratch removal strength. Valid only when the scratch control switch is ON. Value range: 0.0–1.0.
 Default: 0.0. 
-     * @return Intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+     * @return Intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value range: 0.0–1.0.
 Default: 0.0.
      */
     public Float getIntensity() {
@@ -84,9 +84,9 @@ Default: 0.0.
     }
 
     /**
-     * Set Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+     * Set Scratch removal strength. Valid only when the scratch control switch is ON. Value range: 0.0–1.0.
 Default: 0.0.
-     * @param Intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+     * @param Intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value range: 0.0–1.0.
 Default: 0.0.
      */
     public void setIntensity(Float Intensity) {
@@ -94,10 +94,10 @@ Default: 0.0.
     }
 
     /**
-     * Get Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+     * Get Scratch removal type. Valid only when the scratch control switch is ON. Available values:
 <li>normal: normal scratch removal;</li>
 Default value: normal. 
-     * @return Type Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+     * @return Type Scratch removal type. Valid only when the scratch control switch is ON. Available values:
 <li>normal: normal scratch removal;</li>
 Default value: normal.
      */
@@ -106,10 +106,10 @@ Default value: normal.
     }
 
     /**
-     * Set Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+     * Set Scratch removal type. Valid only when the scratch control switch is ON. Available values:
 <li>normal: normal scratch removal;</li>
 Default value: normal.
-     * @param Type Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+     * @param Type Scratch removal type. Valid only when the scratch control switch is ON. Available values:
 <li>normal: normal scratch removal;</li>
 Default value: normal.
      */

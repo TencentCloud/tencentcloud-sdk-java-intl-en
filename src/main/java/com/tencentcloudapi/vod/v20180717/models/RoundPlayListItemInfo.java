@@ -41,7 +41,7 @@ The format of Type must be HLS format.
     private String AudioVideoType;
 
     /**
-    * Program ID assigned by the system.
+    * Play program ID, assigned by the system.
     */
     @SerializedName("ItemId")
     @Expose
@@ -99,16 +99,16 @@ The format of Type must be HLS format.
     }
 
     /**
-     * Get Program ID assigned by the system. 
-     * @return ItemId Program ID assigned by the system.
+     * Get Play program ID, assigned by the system. 
+     * @return ItemId Play program ID, assigned by the system.
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set Program ID assigned by the system.
-     * @param ItemId Program ID assigned by the system.
+     * Set Play program ID, assigned by the system.
+     * @param ItemId Play program ID, assigned by the system.
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;

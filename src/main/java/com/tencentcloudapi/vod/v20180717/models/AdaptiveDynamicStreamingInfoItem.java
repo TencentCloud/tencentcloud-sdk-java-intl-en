@@ -59,14 +59,14 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     private Long Size;
 
     /**
-    * <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+    * <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
     private String DigitalWatermarkType;
 
     /**
-    * <p>Subflow information list.</p>
+    * <p>List of substream info.</p>
     */
     @SerializedName("SubStreamSet")
     @Expose
@@ -188,32 +188,32 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li> 
-     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+     * Get <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li> 
+     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
      */
     public String getDigitalWatermarkType() {
         return this.DigitalWatermarkType;
     }
 
     /**
-     * Set <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
-     * @param DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+     * Set <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
+     * @param DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
     /**
-     * Get <p>Subflow information list.</p> 
-     * @return SubStreamSet <p>Subflow information list.</p>
+     * Get <p>List of substream info.</p> 
+     * @return SubStreamSet <p>List of substream info.</p>
      */
     public MediaSubStreamInfoItem [] getSubStreamSet() {
         return this.SubStreamSet;
     }
 
     /**
-     * Set <p>Subflow information list.</p>
-     * @param SubStreamSet <p>Subflow information list.</p>
+     * Set <p>List of substream info.</p>
+     * @param SubStreamSet <p>List of substream info.</p>
      */
     public void setSubStreamSet(MediaSubStreamInfoItem [] SubStreamSet) {
         this.SubStreamSet = SubStreamSet;

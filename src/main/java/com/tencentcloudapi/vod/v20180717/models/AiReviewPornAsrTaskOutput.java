@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiReviewPornAsrTaskOutput extends AbstractModel {
 
     /**
-    * Score of Asr text involving offensive content. Value range: 0–100.
+    * Score of offensive content in the Asr text. Value range: 0–100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -42,37 +42,37 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel {
 
     /**
     * List of video segments whose Asr text is suspected of involving offensive content.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-    * URL of the video segment list file where the Asr text is suspected of involving offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+    * URL of the segment list file for videos where the Asr text is suspected of containing offensive content. The content of the file is in JSON format, and the data structure is consistent with the fields in SegmentSet. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the Segment List File URL for videos whose Asr text may involve offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiration time of the URL of the segment list file for videos suspected of involving offensive content in Asr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Score of Asr text involving offensive content. Value range: 0–100. 
-     * @return Confidence Score of Asr text involving offensive content. Value range: 0–100.
+     * Get Score of offensive content in the Asr text. Value range: 0–100. 
+     * @return Confidence Score of offensive content in the Asr text. Value range: 0–100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of Asr text involving offensive content. Value range: 0–100.
-     * @param Confidence Score of Asr text involving offensive content. Value range: 0–100.
+     * Set Score of offensive content in the Asr text. Value range: 0–100.
+     * @param Confidence Score of offensive content in the Asr text. Value range: 0–100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -108,9 +108,9 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel {
 
     /**
      * Get List of video segments whose Asr text is suspected of involving offensive content.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl. 
      * @return SegmentSet List of video segments whose Asr text is suspected of involving offensive content.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -118,41 +118,41 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel {
 
     /**
      * Set List of video segments whose Asr text is suspected of involving offensive content.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      * @param SegmentSet List of video segments whose Asr text is suspected of involving offensive content.
-<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+<font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get URL of the video segment list file where the Asr text is suspected of involving offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.) 
-     * @return SegmentSetFileUrl URL of the video segment list file where the Asr text is suspected of involving offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * Get URL of the segment list file for videos where the Asr text is suspected of containing offensive content. The content of the file is in JSON format, and the data structure is consistent with the fields in SegmentSet. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.) 
+     * @return SegmentSetFileUrl URL of the segment list file for videos where the Asr text is suspected of containing offensive content. The content of the file is in JSON format, and the data structure is consistent with the fields in SegmentSet. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL of the video segment list file where the Asr text is suspected of involving offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
-     * @param SegmentSetFileUrl URL of the video segment list file where the Asr text is suspected of involving offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * Set URL of the segment list file for videos where the Asr text is suspected of containing offensive content. The content of the file is in JSON format, and the data structure is consistent with the fields in SegmentSet. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+     * @param SegmentSetFileUrl URL of the segment list file for videos where the Asr text is suspected of containing offensive content. The content of the file is in JSON format, and the data structure is consistent with the fields in SegmentSet. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the Segment List File URL for videos whose Asr text may involve offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the Segment List File URL for videos whose Asr text may involve offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiration time of the URL of the segment list file for videos suspected of involving offensive content in Asr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the URL of the segment list file for videos suspected of involving offensive content in Asr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the Segment List File URL for videos whose Asr text may involve offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param SegmentSetFileUrlExpireTime Expiration time of the Segment List File URL for videos whose Asr text may involve offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiration time of the URL of the segment list file for videos suspected of involving offensive content in Asr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param SegmentSetFileUrlExpireTime Expiration time of the URL of the segment list file for videos suspected of involving offensive content in Asr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

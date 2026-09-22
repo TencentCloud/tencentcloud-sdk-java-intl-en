@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcVideoTaskUsage extends AbstractModel {
 
     /**
-    * <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
+    * <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
     */
     @SerializedName("InputTokens")
     @Expose
@@ -38,7 +38,7 @@ public class AigcVideoTaskUsage extends AbstractModel {
     private Long ThoughtTokens;
 
     /**
-    * <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
+    * <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
     */
     @SerializedName("InputImageCount")
     @Expose
@@ -59,23 +59,23 @@ public class AigcVideoTaskUsage extends AbstractModel {
     private Long OutputSeconds;
 
     /**
-    * <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
+    * <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
     */
     @SerializedName("TotalSeconds")
     @Expose
     private Long TotalSeconds;
 
     /**
-     * Get <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p> 
-     * @return InputTokens <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
+     * Get <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p> 
+     * @return InputTokens <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
      */
     public Long getInputTokens() {
         return this.InputTokens;
     }
 
     /**
-     * Set <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
-     * @param InputTokens <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
+     * Set <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
+     * @param InputTokens <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
      */
     public void setInputTokens(Long InputTokens) {
         this.InputTokens = InputTokens;
@@ -98,16 +98,16 @@ public class AigcVideoTaskUsage extends AbstractModel {
     }
 
     /**
-     * Get <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p> 
-     * @return InputImageCount <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
+     * Get <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p> 
+     * @return InputImageCount <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
      */
     public Long getInputImageCount() {
         return this.InputImageCount;
     }
 
     /**
-     * Set <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
-     * @param InputImageCount <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
+     * Set <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
+     * @param InputImageCount <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
      */
     public void setInputImageCount(Long InputImageCount) {
         this.InputImageCount = InputImageCount;
@@ -146,16 +146,16 @@ public class AigcVideoTaskUsage extends AbstractModel {
     }
 
     /**
-     * Get <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p> 
-     * @return TotalSeconds <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
+     * Get <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p> 
+     * @return TotalSeconds <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
      */
     public Long getTotalSeconds() {
         return this.TotalSeconds;
     }
 
     /**
-     * Set <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
-     * @param TotalSeconds <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
+     * Set <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
+     * @param TotalSeconds <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
      */
     public void setTotalSeconds(Long TotalSeconds) {
         this.TotalSeconds = TotalSeconds;

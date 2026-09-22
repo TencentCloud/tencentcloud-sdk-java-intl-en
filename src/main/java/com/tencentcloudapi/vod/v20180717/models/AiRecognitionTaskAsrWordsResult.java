@@ -66,7 +66,7 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
     private AiRecognitionTaskAsrWordsResultOutput Output;
 
     /**
-    * Speech keyword recognition task progress. Value range: [0-100].
+    * Speech keyword recognition task progress, in the range of [0,100].
     */
     @SerializedName("Progress")
     @Expose
@@ -80,7 +80,7 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
     private String BeginProcessTime;
 
     /**
-    * Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -183,16 +183,16 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
     }
 
     /**
-     * Get Speech keyword recognition task progress. Value range: [0-100]. 
-     * @return Progress Speech keyword recognition task progress. Value range: [0-100].
+     * Get Speech keyword recognition task progress, in the range of [0,100]. 
+     * @return Progress Speech keyword recognition task progress, in the range of [0,100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Speech keyword recognition task progress. Value range: [0-100].
-     * @param Progress Speech keyword recognition task progress. Value range: [0-100].
+     * Set Speech keyword recognition task progress, in the range of [0,100].
+     * @param Progress Speech keyword recognition task progress, in the range of [0,100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -215,16 +215,16 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
     }
 
     /**
-     * Get Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime Speech keyword recognition task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime Completion time of the speech keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

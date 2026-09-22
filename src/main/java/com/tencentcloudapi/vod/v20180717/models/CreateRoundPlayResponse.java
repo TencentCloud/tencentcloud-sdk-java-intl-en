@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRoundPlayResponse extends AbstractModel {
 
     /**
-    * Unique identifier of the carousel playlist.
+    * Carousel playlist unique identifier.
     */
     @SerializedName("RoundPlayId")
     @Expose
@@ -45,16 +45,16 @@ public class CreateRoundPlayResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique identifier of the carousel playlist. 
-     * @return RoundPlayId Unique identifier of the carousel playlist.
+     * Get Carousel playlist unique identifier. 
+     * @return RoundPlayId Carousel playlist unique identifier.
      */
     public String getRoundPlayId() {
         return this.RoundPlayId;
     }
 
     /**
-     * Set Unique identifier of the carousel playlist.
-     * @param RoundPlayId Unique identifier of the carousel playlist.
+     * Set Carousel playlist unique identifier.
+     * @param RoundPlayId Carousel playlist unique identifier.
      */
     public void setRoundPlayId(String RoundPlayId) {
         this.RoundPlayId = RoundPlayId;

@@ -31,7 +31,7 @@ public class AigcTextDetailData extends AbstractModel {
     private String Timestamp;
 
     /**
-    * <p>Gateway layer request ID</p>
+    * <p>Gateway layer request ID.</p>
     */
     @SerializedName("ReqId")
     @Expose
@@ -45,7 +45,7 @@ public class AigcTextDetailData extends AbstractModel {
     private String ChatId;
 
     /**
-    * <p>HTTP status code returned to client</p>
+    * <p>HTTP status code returned to the client</p>
     */
     @SerializedName("StatusCode")
     @Expose
@@ -94,7 +94,7 @@ public class AigcTextDetailData extends AbstractModel {
     private Long OutputTokens;
 
     /**
-    * <p>Number of tokens that hit the prompt cache</p>
+    * <p>Number of tokens for cache hits in prompt cache</p>
     */
     @SerializedName("CacheInputTokens")
     @Expose
@@ -108,14 +108,14 @@ public class AigcTextDetailData extends AbstractModel {
     private Long TotalTokens;
 
     /**
-    * <p>tokens/second in the generation stage</p>
+    * <p>tokens per second in the generation stage</p>
     */
     @SerializedName("TPS")
     @Expose
     private Float TPS;
 
     /**
-    * <p>Time To First Token</p><p>Unit: seconds</p>
+    * <p>Time To First Token</p><p>Unit: second</p>
     */
     @SerializedName("TTFT")
     @Expose
@@ -152,16 +152,16 @@ public class AigcTextDetailData extends AbstractModel {
     }
 
     /**
-     * Get <p>Gateway layer request ID</p> 
-     * @return ReqId <p>Gateway layer request ID</p>
+     * Get <p>Gateway layer request ID.</p> 
+     * @return ReqId <p>Gateway layer request ID.</p>
      */
     public String getReqId() {
         return this.ReqId;
     }
 
     /**
-     * Set <p>Gateway layer request ID</p>
-     * @param ReqId <p>Gateway layer request ID</p>
+     * Set <p>Gateway layer request ID.</p>
+     * @param ReqId <p>Gateway layer request ID.</p>
      */
     public void setReqId(String ReqId) {
         this.ReqId = ReqId;
@@ -184,16 +184,16 @@ public class AigcTextDetailData extends AbstractModel {
     }
 
     /**
-     * Get <p>HTTP status code returned to client</p> 
-     * @return StatusCode <p>HTTP status code returned to client</p>
+     * Get <p>HTTP status code returned to the client</p> 
+     * @return StatusCode <p>HTTP status code returned to the client</p>
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set <p>HTTP status code returned to client</p>
-     * @param StatusCode <p>HTTP status code returned to client</p>
+     * Set <p>HTTP status code returned to the client</p>
+     * @param StatusCode <p>HTTP status code returned to the client</p>
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
@@ -296,16 +296,16 @@ public class AigcTextDetailData extends AbstractModel {
     }
 
     /**
-     * Get <p>Number of tokens that hit the prompt cache</p> 
-     * @return CacheInputTokens <p>Number of tokens that hit the prompt cache</p>
+     * Get <p>Number of tokens for cache hits in prompt cache</p> 
+     * @return CacheInputTokens <p>Number of tokens for cache hits in prompt cache</p>
      */
     public Long getCacheInputTokens() {
         return this.CacheInputTokens;
     }
 
     /**
-     * Set <p>Number of tokens that hit the prompt cache</p>
-     * @param CacheInputTokens <p>Number of tokens that hit the prompt cache</p>
+     * Set <p>Number of tokens for cache hits in prompt cache</p>
+     * @param CacheInputTokens <p>Number of tokens for cache hits in prompt cache</p>
      */
     public void setCacheInputTokens(Long CacheInputTokens) {
         this.CacheInputTokens = CacheInputTokens;
@@ -328,32 +328,32 @@ public class AigcTextDetailData extends AbstractModel {
     }
 
     /**
-     * Get <p>tokens/second in the generation stage</p> 
-     * @return TPS <p>tokens/second in the generation stage</p>
+     * Get <p>tokens per second in the generation stage</p> 
+     * @return TPS <p>tokens per second in the generation stage</p>
      */
     public Float getTPS() {
         return this.TPS;
     }
 
     /**
-     * Set <p>tokens/second in the generation stage</p>
-     * @param TPS <p>tokens/second in the generation stage</p>
+     * Set <p>tokens per second in the generation stage</p>
+     * @param TPS <p>tokens per second in the generation stage</p>
      */
     public void setTPS(Float TPS) {
         this.TPS = TPS;
     }
 
     /**
-     * Get <p>Time To First Token</p><p>Unit: seconds</p> 
-     * @return TTFT <p>Time To First Token</p><p>Unit: seconds</p>
+     * Get <p>Time To First Token</p><p>Unit: second</p> 
+     * @return TTFT <p>Time To First Token</p><p>Unit: second</p>
      */
     public Float getTTFT() {
         return this.TTFT;
     }
 
     /**
-     * Set <p>Time To First Token</p><p>Unit: seconds</p>
-     * @param TTFT <p>Time To First Token</p><p>Unit: seconds</p>
+     * Set <p>Time To First Token</p><p>Unit: second</p>
+     * @param TTFT <p>Time To First Token</p><p>Unit: second</p>
      */
     public void setTTFT(Float TTFT) {
         this.TTFT = TTFT;

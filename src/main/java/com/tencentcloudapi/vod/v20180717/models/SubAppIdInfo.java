@@ -63,7 +63,7 @@ public class SubAppIdInfo extends AbstractModel {
     private String Status;
 
     /**
-    * Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+    * Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
     */
     @SerializedName("Name")
     @Expose
@@ -73,7 +73,7 @@ public class SubAppIdInfo extends AbstractModel {
     * Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
     */
     @SerializedName("Mode")
     @Expose
@@ -190,16 +190,16 @@ Leave empty to select the FileID-only mode by default.
     }
 
     /**
-     * Get Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead). 
-     * @return Name Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+     * Get Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead). 
+     * @return Name Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
-     * @param Name Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+     * Set Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
+     * @param Name Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -209,11 +209,11 @@ Leave empty to select the FileID-only mode by default.
      * Get Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default. 
+Leave empty to select FileID-only mode by default. 
      * @return Mode Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
      */
     public String getMode() {
         return this.Mode;
@@ -223,11 +223,11 @@ Leave empty to select the FileID-only mode by default.
      * Set Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
      * @param Mode Application mode. Valid values:
 - fileid: FileID mode only
 - - fileid+path: FileID & Path mode
-Leave empty to select the FileID-only mode by default.
+Leave empty to select FileID-only mode by default.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;

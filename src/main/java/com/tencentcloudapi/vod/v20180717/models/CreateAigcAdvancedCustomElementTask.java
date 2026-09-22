@@ -45,7 +45,7 @@ public class CreateAigcAdvancedCustomElementTask extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+    * <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -59,14 +59,14 @@ public class CreateAigcAdvancedCustomElementTask extends AbstractModel {
     private String Message;
 
     /**
-    * <p>Task progress. Value range: 0–100.</p>
+    * <p>Task progress, in the range of [0,100].</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * <p>Create input information for the AIGC custom subject task.</p>
+    * <p>Input information for creating a custom AIGC subject task.</p>
     */
     @SerializedName("Input")
     @Expose
@@ -142,16 +142,16 @@ public class CreateAigcAdvancedCustomElementTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Expansion error code. A null string indicates success, while other values indicate failure.</p> 
-     * @return ErrCodeExt <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+     * Get <p>Extended error code. An empty string indicates success, while other values indicate failure.</p> 
+     * @return ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
-     * @param ErrCodeExt <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+     * Set <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+     * @param ErrCodeExt <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -174,32 +174,32 @@ public class CreateAigcAdvancedCustomElementTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Task progress. Value range: 0–100.</p> 
-     * @return Progress <p>Task progress. Value range: 0–100.</p>
+     * Get <p>Task progress, in the range of [0,100].</p> 
+     * @return Progress <p>Task progress, in the range of [0,100].</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set <p>Task progress. Value range: 0–100.</p>
-     * @param Progress <p>Task progress. Value range: 0–100.</p>
+     * Set <p>Task progress, in the range of [0,100].</p>
+     * @param Progress <p>Task progress, in the range of [0,100].</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get <p>Create input information for the AIGC custom subject task.</p> 
-     * @return Input <p>Create input information for the AIGC custom subject task.</p>
+     * Get <p>Input information for creating a custom AIGC subject task.</p> 
+     * @return Input <p>Input information for creating a custom AIGC subject task.</p>
      */
     public CreateAigcAdvancedCustomElementInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set <p>Create input information for the AIGC custom subject task.</p>
-     * @param Input <p>Create input information for the AIGC custom subject task.</p>
+     * Set <p>Input information for creating a custom AIGC subject task.</p>
+     * @param Input <p>Input information for creating a custom AIGC subject task.</p>
      */
     public void setInput(CreateAigcAdvancedCustomElementInput Input) {
         this.Input = Input;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TEHDConfigForUpdate extends AbstractModel {
 
     /**
-    * Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+    * Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
     */
     @SerializedName("Type")
     @Expose
@@ -38,16 +38,16 @@ public class TEHDConfigForUpdate extends AbstractModel {
     private Long MaxVideoBitrate;
 
     /**
-     * Get Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made. 
-     * @return Type Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+     * Get Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made. 
+     * @return Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
-     * @param Type Top speed codec type. Available values: <li>TEHD-100: top speed codec-100;</li> <li>OFF: disables top speed codec.</li> If not specified, no modification is made.
+     * Set Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
+     * @param Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class CreateContentReviewTemplateRequest extends AbstractModel {
 
     /**
-    * Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+    * Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
     */
     @SerializedName("ReviewWallSwitch")
@@ -33,14 +33,14 @@ public class CreateContentReviewTemplateRequest extends AbstractModel {
     private String ReviewWallSwitch;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+    * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Content review template name. Length limit: 64 characters.
+    * Content review template name, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -91,18 +91,18 @@ public class CreateContentReviewTemplateRequest extends AbstractModel {
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-    * Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+    * Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-     * Get Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+     * Get Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li> 
-     * @return ReviewWallSwitch Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+     * @return ReviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
      */
     public String getReviewWallSwitch() {
@@ -110,11 +110,11 @@ public class CreateContentReviewTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Set Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+     * Set Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
-     * @param ReviewWallSwitch Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-<li>ON: yes</li>
+     * @param ReviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+<li>ON: yes;</li>
 <li>OFF: No.</li>
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
@@ -122,32 +122,32 @@ public class CreateContentReviewTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * Get <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b> 
+     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * Set <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
+     * @param SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Content review template name. Length limit: 64 characters. 
-     * @return Name Content review template name. Length limit: 64 characters.
+     * Get Content review template name, with a length limit of 64 characters. 
+     * @return Name Content review template name, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Content review template name. Length limit: 64 characters.
-     * @param Name Content review template name. Length limit: 64 characters.
+     * Set Content review template name, with a length limit of 64 characters.
+     * @param Name Content review template name, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -258,16 +258,16 @@ public class CreateContentReviewTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds. 
-     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * Get Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds. 
+     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
-     * @param ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+     * Set Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
+     * @param ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;

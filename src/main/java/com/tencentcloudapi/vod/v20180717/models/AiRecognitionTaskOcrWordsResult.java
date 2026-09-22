@@ -52,7 +52,7 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
     private String Message;
 
     /**
-    * Text keyword recognition task input information.
+    * Text keyword recognition task input.
     */
     @SerializedName("Input")
     @Expose
@@ -66,14 +66,14 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
     private AiRecognitionTaskOcrWordsResultOutput Output;
 
     /**
-    * Progress of the text keyword recognition task. Value range: 0-100.
+    * Progress of the text keyword recognition task. Value range: [0-100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -151,16 +151,16 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
     }
 
     /**
-     * Get Text keyword recognition task input information. 
-     * @return Input Text keyword recognition task input information.
+     * Get Text keyword recognition task input. 
+     * @return Input Text keyword recognition task input.
      */
     public AiRecognitionTaskOcrWordsResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Text keyword recognition task input information.
-     * @param Input Text keyword recognition task input information.
+     * Set Text keyword recognition task input.
+     * @param Input Text keyword recognition task input.
      */
     public void setInput(AiRecognitionTaskOcrWordsResultInput Input) {
         this.Input = Input;
@@ -183,32 +183,32 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
     }
 
     /**
-     * Get Progress of the text keyword recognition task. Value range: 0-100. 
-     * @return Progress Progress of the text keyword recognition task. Value range: 0-100.
+     * Get Progress of the text keyword recognition task. Value range: [0-100]. 
+     * @return Progress Progress of the text keyword recognition task. Value range: [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of the text keyword recognition task. Value range: 0-100.
-     * @param Progress Progress of the text keyword recognition task. Value range: 0-100.
+     * Set Progress of the text keyword recognition task. Value range: [0-100].
+     * @param Progress Progress of the text keyword recognition task. Value range: [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Text keyword recognition task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Start execution time of the text keyword recognition task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;

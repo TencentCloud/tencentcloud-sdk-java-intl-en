@@ -38,14 +38,14 @@ public class CreateEKYCWebhookResponse extends AbstractModel {
     private Long WebhookId;
 
     /**
-    * Whether to add a secret key. Default value: false.
+    * <p>Whether to add a callback signature key</p><p>Default value: false</p>
     */
     @SerializedName("HasSignatureKey")
     @Expose
     private Boolean HasSignatureKey;
 
     /**
-    * <p>Callback secret key</p>
+    * <p>Callback signature key</p>
     */
     @SerializedName("SignatureKey")
     @Expose
@@ -91,32 +91,32 @@ public class CreateEKYCWebhookResponse extends AbstractModel {
     }
 
     /**
-     * Get Whether to add a secret key. Default value: false. 
-     * @return HasSignatureKey Whether to add a secret key. Default value: false.
+     * Get <p>Whether to add a callback signature key</p><p>Default value: false</p> 
+     * @return HasSignatureKey <p>Whether to add a callback signature key</p><p>Default value: false</p>
      */
     public Boolean getHasSignatureKey() {
         return this.HasSignatureKey;
     }
 
     /**
-     * Set Whether to add a secret key. Default value: false.
-     * @param HasSignatureKey Whether to add a secret key. Default value: false.
+     * Set <p>Whether to add a callback signature key</p><p>Default value: false</p>
+     * @param HasSignatureKey <p>Whether to add a callback signature key</p><p>Default value: false</p>
      */
     public void setHasSignatureKey(Boolean HasSignatureKey) {
         this.HasSignatureKey = HasSignatureKey;
     }
 
     /**
-     * Get <p>Callback secret key</p> 
-     * @return SignatureKey <p>Callback secret key</p>
+     * Get <p>Callback signature key</p> 
+     * @return SignatureKey <p>Callback signature key</p>
      */
     public String getSignatureKey() {
         return this.SignatureKey;
     }
 
     /**
-     * Set <p>Callback secret key</p>
-     * @param SignatureKey <p>Callback secret key</p>
+     * Set <p>Callback signature key</p>
+     * @param SignatureKey <p>Callback signature key</p>
      */
     public void setSignatureKey(String SignatureKey) {
         this.SignatureKey = SignatureKey;

@@ -41,7 +41,7 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. `0` indicates success. Other values indicate failure.
+    * Error code. `0`: Success. Other values: Failure.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -55,21 +55,21 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     private String Message;
 
     /**
-    * Input information of the file for digital watermark extraction.
+    * File input information for digital watermark extraction.
     */
     @SerializedName("InputInfo")
     @Expose
     private ExtractBlindWatermarkInputInfo InputInfo;
 
     /**
-    * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+    * Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+    * Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
     */
     @SerializedName("IsDetected")
     @Expose
@@ -83,7 +83,7 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     private String Result;
 
     /**
-    * Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+    * Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
     */
     @SerializedName("ResultUV")
     @Expose
@@ -155,16 +155,16 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. `0` indicates success. Other values indicate failure. 
-     * @return ErrCode Error code. `0` indicates success. Other values indicate failure.
+     * Get Error code. `0`: Success. Other values: Failure. 
+     * @return ErrCode Error code. `0`: Success. Other values: Failure.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. `0` indicates success. Other values indicate failure.
-     * @param ErrCode Error code. `0` indicates success. Other values indicate failure.
+     * Set Error code. `0`: Success. Other values: Failure.
+     * @param ErrCode Error code. `0`: Success. Other values: Failure.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -187,48 +187,48 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Input information of the file for digital watermark extraction. 
-     * @return InputInfo Input information of the file for digital watermark extraction.
+     * Get File input information for digital watermark extraction. 
+     * @return InputInfo File input information for digital watermark extraction.
      */
     public ExtractBlindWatermarkInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Input information of the file for digital watermark extraction.
-     * @param InputInfo Input information of the file for digital watermark extraction.
+     * Set File input information for digital watermark extraction.
+     * @param InputInfo File input information for digital watermark extraction.
      */
     public void setInputInfo(ExtractBlindWatermarkInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li> 
-     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+     * Get Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li> 
+     * @return Type Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
-     * @param Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+     * Set Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+     * @param Type Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return. 
-     * @return IsDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+     * Get Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned. 
+     * @return IsDetected Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
      */
     public Boolean getIsDetected() {
         return this.IsDetected;
     }
 
     /**
-     * Set Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
-     * @param IsDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+     * Set Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
+     * @param IsDetected Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
      */
     public void setIsDetected(Boolean IsDetected) {
         this.IsDetected = IsDetected;
@@ -251,16 +251,16 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total. 
-     * @return ResultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+     * Get Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total. 
+     * @return ResultUV Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
      */
     public String getResultUV() {
         return this.ResultUV;
     }
 
     /**
-     * Set Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
-     * @param ResultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+     * Set Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
+     * @param ResultUV Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
      */
     public void setResultUV(String ResultUV) {
         this.ResultUV = ResultUV;

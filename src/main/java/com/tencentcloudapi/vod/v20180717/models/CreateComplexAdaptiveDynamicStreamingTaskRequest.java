@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateComplexAdaptiveDynamicStreamingTaskRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,7 +52,7 @@ public class CreateComplexAdaptiveDynamicStreamingTaskRequest extends AbstractMo
     private HeadTailTaskInput [] HeadTailSet;
 
     /**
-    * Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+    * Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
     */
     @SerializedName("AudioSet")
     @Expose
@@ -66,16 +66,16 @@ public class CreateComplexAdaptiveDynamicStreamingTaskRequest extends AbstractMo
     private ComplexAdaptiveDynamicStreamingTaskSubtitleInput [] SubtitleSet;
 
     /**
-     * Get <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
-     * @param SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -130,16 +130,16 @@ public class CreateComplexAdaptiveDynamicStreamingTaskRequest extends AbstractMo
     }
 
     /**
-     * Get Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored. 
-     * @return AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+     * Get Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored. 
+     * @return AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
      */
     public ComplexAdaptiveDynamicStreamingTaskAudioInput [] getAudioSet() {
         return this.AudioSet;
     }
 
     /**
-     * Set Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
-     * @param AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+     * Set Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+     * @param AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. To add an audio stream from the main media file to the output adaptive bitrate stream, specify it here. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
      */
     public void setAudioSet(ComplexAdaptiveDynamicStreamingTaskAudioInput [] AudioSet) {
         this.AudioSet = AudioSet;

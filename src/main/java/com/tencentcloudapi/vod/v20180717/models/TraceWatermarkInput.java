@@ -25,8 +25,8 @@ public class TraceWatermarkInput extends AbstractModel {
 
     /**
     * Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -41,11 +41,11 @@ public class TraceWatermarkInput extends AbstractModel {
 
     /**
      * Get Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li> 
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li> 
      * @return Switch Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -53,11 +53,11 @@ public class TraceWatermarkInput extends AbstractModel {
 
     /**
      * Set Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
      * @param Switch Traceability watermark task switch. Required. Available values:
-<li>ON: enable traceability watermark;</li>
-<li>OFF: disable traceability watermark.</li>
+<li>ON: enable traceability watermark</li>
+<li>OFF: disables traceability watermark.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

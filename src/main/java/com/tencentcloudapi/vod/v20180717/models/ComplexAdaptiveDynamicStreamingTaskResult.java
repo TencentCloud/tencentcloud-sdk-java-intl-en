@@ -26,8 +26,8 @@ public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
     /**
     * Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -55,7 +55,7 @@ public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
     private Long Progress;
 
     /**
-    * Input of an adaptive bitrate streaming task.
+    * Input of an adaptive bitrate task.
     */
     @SerializedName("Input")
     @Expose
@@ -71,12 +71,12 @@ public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
     /**
      * Get Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li> 
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li> 
      * @return Status Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
      */
     public String getStatus() {
         return this.Status;
@@ -85,12 +85,12 @@ public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
     /**
      * Set Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
      * @param Status Task status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>SUCCESS: completed;</li>
-<li>FAIL: Failed.</li>
+<li>SUCCESS: Completed;</li>
+<li>FAIL: failure.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -145,16 +145,16 @@ public class ComplexAdaptiveDynamicStreamingTaskResult extends AbstractModel {
     }
 
     /**
-     * Get Input of an adaptive bitrate streaming task. 
-     * @return Input Input of an adaptive bitrate streaming task.
+     * Get Input of an adaptive bitrate task. 
+     * @return Input Input of an adaptive bitrate task.
      */
     public ComplexAdaptiveDynamicStreamingTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of an adaptive bitrate streaming task.
-     * @param Input Input of an adaptive bitrate streaming task.
+     * Set Input of an adaptive bitrate task.
+     * @param Input Input of an adaptive bitrate task.
      */
     public void setInput(ComplexAdaptiveDynamicStreamingTaskInput Input) {
         this.Input = Input;

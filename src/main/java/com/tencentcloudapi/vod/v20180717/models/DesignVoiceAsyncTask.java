@@ -38,7 +38,7 @@ public class DesignVoiceAsyncTask extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+    * <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -52,7 +52,7 @@ public class DesignVoiceAsyncTask extends AbstractModel {
     private String Message;
 
     /**
-    * <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error code</a> list.</p>
+    * <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">Video Processing Error Codes</a>.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -87,7 +87,7 @@ public class DesignVoiceAsyncTask extends AbstractModel {
     private String SessionContext;
 
     /**
-    * <p>Pull upload progress, in the range of [0,100].</p>
+    * <p>Pull upload progress. Value range: [0-100].</p>
     */
     @SerializedName("Progress")
     @Expose
@@ -126,16 +126,16 @@ public class DesignVoiceAsyncTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li> 
-     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * Get <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li> 
+     * @return ErrCode <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
-     * @param ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * Set <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * @param ErrCode <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -158,16 +158,16 @@ public class DesignVoiceAsyncTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error code</a> list.</p> 
-     * @return ErrCodeExt <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error code</a> list.</p>
+     * Get <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">Video Processing Error Codes</a>.</p> 
+     * @return ErrCodeExt <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">Video Processing Error Codes</a>.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error code</a> list.</p>
-     * @param ErrCodeExt <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error code</a> list.</p>
+     * Set <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">Video Processing Error Codes</a>.</p>
+     * @param ErrCodeExt <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">Video Processing Error Codes</a>.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -238,16 +238,16 @@ public class DesignVoiceAsyncTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Pull upload progress, in the range of [0,100].</p> 
-     * @return Progress <p>Pull upload progress, in the range of [0,100].</p>
+     * Get <p>Pull upload progress. Value range: [0-100].</p> 
+     * @return Progress <p>Pull upload progress. Value range: [0-100].</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set <p>Pull upload progress, in the range of [0,100].</p>
-     * @param Progress <p>Pull upload progress, in the range of [0,100].</p>
+     * Set <p>Pull upload progress. Value range: [0-100].</p>
+     * @param Progress <p>Pull upload progress. Value range: [0-100].</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

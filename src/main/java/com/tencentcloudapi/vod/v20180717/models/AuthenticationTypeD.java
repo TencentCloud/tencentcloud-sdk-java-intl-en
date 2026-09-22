@@ -25,7 +25,7 @@ public class AuthenticationTypeD extends AbstractModel {
 
     /**
     * Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
     */
     @SerializedName("SecretKey")
     @Expose
@@ -41,23 +41,23 @@ In seconds. Maximum settable value: 630720000.
 
     /**
     * List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
     */
     @SerializedName("FileExtensions")
     @Expose
     private String [] FileExtensions;
 
     /**
-    * whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+    * whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+    * Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
     */
     @SerializedName("SignParam")
     @Expose
@@ -65,7 +65,7 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
     /**
     * Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
     */
     @SerializedName("TimeParam")
     @Expose
@@ -82,7 +82,7 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
     /**
     * Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
     */
     @SerializedName("BackupSecretKey")
     @Expose
@@ -90,9 +90,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
     /**
      * Get Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters. 
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters. 
      * @return SecretKey Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -100,9 +100,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
     /**
      * Set Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      * @param SecretKey Key used for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
@@ -130,9 +130,9 @@ In seconds. Maximum settable value: 630720000.
 
     /**
      * Get List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files. 
+If it contains the character *, it indicates all files. 
      * @return FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
      */
     public String [] getFileExtensions() {
         return this.FileExtensions;
@@ -140,49 +140,49 @@ If it contains the character *, it means all files.
 
     /**
      * Set List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
      * @param FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it means all files.
+If it contains the character *, it indicates all files.
      */
     public void setFileExtensions(String [] FileExtensions) {
         this.FileExtensions = FileExtensions;
     }
 
     /**
-     * Get whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions. 
-     * @return FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+     * Get whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions. 
+     * @return FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
-     * @param FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+     * Set whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
+     * @param FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit. 
-     * @return SignParam Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+     * Get Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit. 
+     * @return SignParam Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
      */
     public String getSignParam() {
         return this.SignParam;
     }
 
     /**
-     * Set Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
-     * @param SignParam Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+     * Set Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
+     * @param SignParam Signature parameter name settings;
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
      */
     public void setSignParam(String SignParam) {
         this.SignParam = SignParam;
@@ -190,9 +190,9 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
     /**
      * Get Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit. 
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit. 
      * @return TimeParam Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
      */
     public String getTimeParam() {
         return this.TimeParam;
@@ -200,9 +200,9 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
     /**
      * Set Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
      * @param TimeParam Timestamp parameter name settings;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
      */
     public void setTimeParam(String TimeParam) {
         this.TimeParam = TimeParam;
@@ -234,9 +234,9 @@ Only allow upper- and lower-case letters, digits, or underscores, with a length 
 
     /**
      * Get Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters. 
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters. 
      * @return BackupSecretKey Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      */
     public String getBackupSecretKey() {
         return this.BackupSecretKey;
@@ -244,9 +244,9 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
     /**
      * Set Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      * @param BackupSecretKey Secondary key for signature calculation.
-Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
      */
     public void setBackupSecretKey(String BackupSecretKey) {
         this.BackupSecretKey = BackupSecretKey;

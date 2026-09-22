@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateSuperPlayerConfigRequest extends AbstractModel {
 
     /**
-    * Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+    * Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -53,7 +53,7 @@ AdaptiveDynamicStream by default.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
     */
     @SerializedName("DrmSwitch")
     @Expose
@@ -108,14 +108,14 @@ Required if `AudioVideoType` is `Transcode`.
     private ResolutionNameInfo [] ResolutionNames;
 
     /**
-    * Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+    * Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+    * Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
     */
@@ -131,32 +131,32 @@ Required if `AudioVideoType` is `Transcode`.
     private String Comment;
 
     /**
-     * Get Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user. 
-     * @return Name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+     * Get Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user. 
+     * @return Name Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
-     * @param Name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+     * Set Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
+     * @param Name Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -199,12 +199,12 @@ AdaptiveDynamicStream by default.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream. 
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`. 
      * @return DrmSwitch Switch for playing DRM-protected adaptive bitstream:
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
      */
     public String getDrmSwitch() {
         return this.DrmSwitch;
@@ -215,12 +215,12 @@ This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
      * @param DrmSwitch Switch for playing DRM-protected adaptive bitstream:
 <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
 <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
 Default value: OFF.
-This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
      */
     public void setDrmSwitch(String DrmSwitch) {
         this.DrmSwitch = DrmSwitch;
@@ -359,26 +359,26 @@ Required if `AudioVideoType` is `Transcode`.
     }
 
     /**
-     * Get Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. 
-     * @return Domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+     * Get Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). 
+     * @return Domain Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
-     * @param Domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+     * Set Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+     * @param Domain Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+     * Get Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li> 
-     * @return Scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+     * @return Scheme Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
      */
@@ -387,10 +387,10 @@ Required if `AudioVideoType` is `Transcode`.
     }
 
     /**
-     * Set Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+     * Set Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
-     * @param Scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+     * @param Scheme Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
      */

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateImageSpriteTask2017 extends AbstractModel {
 
     /**
-    * <p>Screenshot sprite task ID.</p>
+    * <p>Screenshot image sprite task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,14 +45,14 @@ public class CreateImageSpriteTask2017 extends AbstractModel {
     private String Message;
 
     /**
-    * <p>Capture the CSS sprite file ID.</p>
+    * <p>Capture the file ID of CSS sprites.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+    * <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -66,7 +66,7 @@ public class CreateImageSpriteTask2017 extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * <p>Addresses for capturing CSS sprites output.</p>
+    * <p>Capture the domain names or IP addresses output by CSS sprites.</p>
     */
     @SerializedName("ImageSpriteUrlSet")
     @Expose
@@ -80,16 +80,16 @@ public class CreateImageSpriteTask2017 extends AbstractModel {
     private String WebVttUrl;
 
     /**
-     * Get <p>Screenshot sprite task ID.</p> 
-     * @return TaskId <p>Screenshot sprite task ID.</p>
+     * Get <p>Screenshot image sprite task ID.</p> 
+     * @return TaskId <p>Screenshot image sprite task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Screenshot sprite task ID.</p>
-     * @param TaskId <p>Screenshot sprite task ID.</p>
+     * Set <p>Screenshot image sprite task ID.</p>
+     * @param TaskId <p>Screenshot image sprite task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -128,32 +128,32 @@ public class CreateImageSpriteTask2017 extends AbstractModel {
     }
 
     /**
-     * Get <p>Capture the CSS sprite file ID.</p> 
-     * @return FileId <p>Capture the CSS sprite file ID.</p>
+     * Get <p>Capture the file ID of CSS sprites.</p> 
+     * @return FileId <p>Capture the file ID of CSS sprites.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set <p>Capture the CSS sprite file ID.</p>
-     * @param FileId <p>Capture the CSS sprite file ID.</p>
+     * Set <p>Capture the file ID of CSS sprites.</p>
+     * @param FileId <p>Capture the file ID of CSS sprites.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p> 
-     * @return Definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+     * Get <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p> 
+     * @return Definition <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
-     * @param Definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+     * Set <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+     * @param Definition <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -176,16 +176,16 @@ public class CreateImageSpriteTask2017 extends AbstractModel {
     }
 
     /**
-     * Get <p>Addresses for capturing CSS sprites output.</p> 
-     * @return ImageSpriteUrlSet <p>Addresses for capturing CSS sprites output.</p>
+     * Get <p>Capture the domain names or IP addresses output by CSS sprites.</p> 
+     * @return ImageSpriteUrlSet <p>Capture the domain names or IP addresses output by CSS sprites.</p>
      */
     public String [] getImageSpriteUrlSet() {
         return this.ImageSpriteUrlSet;
     }
 
     /**
-     * Set <p>Addresses for capturing CSS sprites output.</p>
-     * @param ImageSpriteUrlSet <p>Addresses for capturing CSS sprites output.</p>
+     * Set <p>Capture the domain names or IP addresses output by CSS sprites.</p>
+     * @param ImageSpriteUrlSet <p>Capture the domain names or IP addresses output by CSS sprites.</p>
      */
     public void setImageSpriteUrlSet(String [] ImageSpriteUrlSet) {
         this.ImageSpriteUrlSet = ImageSpriteUrlSet;

@@ -26,7 +26,7 @@ public class RepairInfo extends AbstractModel {
     /**
     * Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -46,10 +46,10 @@ Default value: weak.
     /**
      * Get Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li> 
+<li>OFF: disables image quality restoration.</li> 
      * @return Switch Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -58,10 +58,10 @@ Default value: weak.
     /**
      * Set Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
      * @param Switch Image quality restoration control switch. Available values:
 <li>ON: Enable image quality restoration;</li>
-<li>OFF: Disable image quality restoration.</li>
+<li>OFF: disables image quality restoration.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

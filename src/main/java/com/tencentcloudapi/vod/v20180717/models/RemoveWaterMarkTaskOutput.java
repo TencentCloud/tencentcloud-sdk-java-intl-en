@@ -31,7 +31,7 @@ public class RemoveWaterMarkTaskOutput extends AbstractModel {
     private String FileId;
 
     /**
-    * File type, for example, mp4 or mp3.
+    * File type, such as mp4 and mp3.
     */
     @SerializedName("FileType")
     @Expose
@@ -45,7 +45,7 @@ public class RemoveWaterMarkTaskOutput extends AbstractModel {
     private String FileUrl;
 
     /**
-    * Filename, which contains up to 64 characters.
+    * Filename. It can contain up to 64 characters.
     */
     @SerializedName("MediaName")
     @Expose
@@ -75,16 +75,16 @@ public class RemoveWaterMarkTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get File type, for example, mp4 or mp3. 
-     * @return FileType File type, for example, mp4 or mp3.
+     * Get File type, such as mp4 and mp3. 
+     * @return FileType File type, such as mp4 and mp3.
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set File type, for example, mp4 or mp3.
-     * @param FileType File type, for example, mp4 or mp3.
+     * Set File type, such as mp4 and mp3.
+     * @param FileType File type, such as mp4 and mp3.
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -107,16 +107,16 @@ public class RemoveWaterMarkTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Filename, which contains up to 64 characters. 
-     * @return MediaName Filename, which contains up to 64 characters.
+     * Get Filename. It can contain up to 64 characters. 
+     * @return MediaName Filename. It can contain up to 64 characters.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Filename, which contains up to 64 characters.
-     * @param MediaName Filename, which contains up to 64 characters.
+     * Set Filename. It can contain up to 64 characters.
+     * @param MediaName Filename. It can contain up to 64 characters.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;

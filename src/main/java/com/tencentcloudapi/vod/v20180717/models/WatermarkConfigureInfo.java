@@ -33,7 +33,7 @@ public class WatermarkConfigureInfo extends AbstractModel {
     private String Switch;
 
     /**
-    * Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+    * Base64-encoded string of the watermark image. Supports jpeg and png formats.
     */
     @SerializedName("ImageContent")
     @Expose
@@ -63,7 +63,7 @@ public class WatermarkConfigureInfo extends AbstractModel {
     private String XPos;
 
     /**
-    * Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+    * Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
     */
     @SerializedName("YPos")
     @Expose
@@ -94,16 +94,16 @@ public class WatermarkConfigureInfo extends AbstractModel {
     }
 
     /**
-     * Get Base64-encoded string of the watermark image. Supports jpeg and png image formats. 
-     * @return ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+     * Get Base64-encoded string of the watermark image. Supports jpeg and png formats. 
+     * @return ImageContent Base64-encoded string of the watermark image. Supports jpeg and png formats.
      */
     public String getImageContent() {
         return this.ImageContent;
     }
 
     /**
-     * Set Base64-encoded string of the watermark image. Supports jpeg and png image formats.
-     * @param ImageContent Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+     * Set Base64-encoded string of the watermark image. Supports jpeg and png formats.
+     * @param ImageContent Base64-encoded string of the watermark image. Supports jpeg and png formats.
      */
     public void setImageContent(String ImageContent) {
         this.ImageContent = ImageContent;
@@ -166,16 +166,16 @@ public class WatermarkConfigureInfo extends AbstractModel {
     }
 
     /**
-     * Get Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height. 
-     * @return YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+     * Get Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height. 
+     * @return YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
      */
     public String getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
-     * @param YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+     * Set Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+     * @param YPos Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
      */
     public void setYPos(String YPos) {
         this.YPos = YPos;

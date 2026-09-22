@@ -32,14 +32,14 @@ public class ImageBlur extends AbstractModel {
     private String Type;
 
     /**
-    * Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
+    * Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
     */
     @SerializedName("Radius")
     @Expose
     private Long Radius;
 
     /**
-    * Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+    * Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
     */
     @SerializedName("Sigma")
     @Expose
@@ -66,32 +66,32 @@ public class ImageBlur extends AbstractModel {
     }
 
     /**
-     * Get Blur radius. Value range: 1–50. This field is valid when Type is Gaussian. 
-     * @return Radius Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
+     * Get Blur radius. Value range: 1-50. This field is valid when Type is Gaussian. 
+     * @return Radius Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
      */
     public Long getRadius() {
         return this.Radius;
     }
 
     /**
-     * Set Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
-     * @param Radius Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
+     * Set Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
+     * @param Radius Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
      */
     public void setRadius(Long Radius) {
         this.Radius = Radius;
     }
 
     /**
-     * Get Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian. 
-     * @return Sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+     * Get Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian. 
+     * @return Sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
      */
     public Long getSigma() {
         return this.Sigma;
     }
 
     /**
-     * Set Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
-     * @param Sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+     * Set Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
+     * @param Sigma Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
      */
     public void setSigma(Long Sigma) {
         this.Sigma = Sigma;

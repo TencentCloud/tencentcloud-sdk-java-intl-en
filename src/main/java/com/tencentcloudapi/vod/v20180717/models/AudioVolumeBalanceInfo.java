@@ -25,8 +25,8 @@ public class AudioVolumeBalanceInfo extends AbstractModel {
 
     /**
     * Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -44,11 +44,11 @@ Default value: loudNorm.
 
     /**
      * Get Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li> 
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li> 
      * @return Switch Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -56,11 +56,11 @@ Default value: loudNorm.
 
     /**
      * Set Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
      * @param Switch Volume equalization control switch. Available values:
-<li>ON: enable volume equalization</li>
-<li>OFF: Disable volume equalization.</li>
+<li>ON: enable volume equalization;</li>
+<li>OFF: disables volume equalization</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

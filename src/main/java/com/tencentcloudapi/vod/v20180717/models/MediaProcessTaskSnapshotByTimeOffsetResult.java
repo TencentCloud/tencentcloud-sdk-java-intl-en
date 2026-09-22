@@ -52,7 +52,7 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input of the time point screenshot task for videos.
+    * Task input of screenshot taking at specified time points in a video.
     */
     @SerializedName("Input")
     @Expose
@@ -66,21 +66,21 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     private MediaSnapshotByTimeOffsetItem Output;
 
     /**
-    * Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+    * Progress of the screenshot taking task at specified time points, in the range of [0,100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -151,16 +151,16 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     }
 
     /**
-     * Get Task input of the time point screenshot task for videos. 
-     * @return Input Task input of the time point screenshot task for videos.
+     * Get Task input of screenshot taking at specified time points in a video. 
+     * @return Input Task input of screenshot taking at specified time points in a video.
      */
     public SnapshotByTimeOffsetTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input of the time point screenshot task for videos.
-     * @param Input Task input of the time point screenshot task for videos.
+     * Set Task input of screenshot taking at specified time points in a video.
+     * @param Input Task input of screenshot taking at specified time points in a video.
      */
     public void setInput(SnapshotByTimeOffsetTaskInput Input) {
         this.Input = Input;
@@ -183,48 +183,48 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     }
 
     /**
-     * Get Task progress of screenshot taking at specified time points for video, in the range of [0,100]. 
-     * @return Progress Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+     * Get Progress of the screenshot taking task at specified time points, in the range of [0,100]. 
+     * @return Progress Progress of the screenshot taking task at specified time points, in the range of [0,100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress of screenshot taking at specified time points for video, in the range of [0,100].
-     * @param Progress Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+     * Set Progress of the screenshot taking task at specified time points, in the range of [0,100].
+     * @param Progress Progress of the screenshot taking task at specified time points, in the range of [0,100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

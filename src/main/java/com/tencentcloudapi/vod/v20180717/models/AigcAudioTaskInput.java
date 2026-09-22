@@ -38,35 +38,35 @@ public class AigcAudioTaskInput extends AbstractModel {
     private String ModelVersion;
 
     /**
-    * <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+    * <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-    * <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+    * <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+    * <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * <p>Audio content for reference.</p>
+    * <p>Reference audio content</p>
     */
     @SerializedName("AudioInfos")
     @Expose
     private AigcAudioReferenceAudioInfo [] AudioInfos;
 
     /**
-    * <p>Reference video info.</p>
+    * <p>Reference video info</p>
     */
     @SerializedName("VideoInfos")
     @Expose
@@ -126,80 +126,80 @@ public class AigcAudioTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p> 
-     * @return SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+     * Get <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p> 
+     * @return SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
-     * @param SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+     * Set <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
+     * @param SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p> 
-     * @return Prompt <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * Get <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p> 
+     * @return Prompt <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
-     * @param Prompt <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * Set <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+     * @param Prompt <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p> 
-     * @return NegativePrompt <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+     * Get <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p> 
+     * @return NegativePrompt <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
-     * @param NegativePrompt <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+     * Set <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
+     * @param NegativePrompt <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get <p>Audio content for reference.</p> 
-     * @return AudioInfos <p>Audio content for reference.</p>
+     * Get <p>Reference audio content</p> 
+     * @return AudioInfos <p>Reference audio content</p>
      */
     public AigcAudioReferenceAudioInfo [] getAudioInfos() {
         return this.AudioInfos;
     }
 
     /**
-     * Set <p>Audio content for reference.</p>
-     * @param AudioInfos <p>Audio content for reference.</p>
+     * Set <p>Reference audio content</p>
+     * @param AudioInfos <p>Reference audio content</p>
      */
     public void setAudioInfos(AigcAudioReferenceAudioInfo [] AudioInfos) {
         this.AudioInfos = AudioInfos;
     }
 
     /**
-     * Get <p>Reference video info.</p> 
-     * @return VideoInfos <p>Reference video info.</p>
+     * Get <p>Reference video info</p> 
+     * @return VideoInfos <p>Reference video info</p>
      */
     public AigcAudioReferenceVideoInfo [] getVideoInfos() {
         return this.VideoInfos;
     }
 
     /**
-     * Set <p>Reference video info.</p>
-     * @param VideoInfos <p>Reference video info.</p>
+     * Set <p>Reference video info</p>
+     * @param VideoInfos <p>Reference video info</p>
      */
     public void setVideoInfos(AigcAudioReferenceVideoInfo [] VideoInfos) {
         this.VideoInfos = VideoInfos;

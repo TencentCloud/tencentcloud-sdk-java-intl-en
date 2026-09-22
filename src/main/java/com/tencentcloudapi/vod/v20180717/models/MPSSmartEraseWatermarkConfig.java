@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MPSSmartEraseWatermarkConfig extends AbstractModel {
 
     /**
-    * <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
+    * <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically recognizes watermarks in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead. <strong>Specified area removal:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the removal area. When you choose specified area removal, at least one specified area must be provided. - auto: auto removal - custom: specified area removal</p>
     */
     @SerializedName("WatermarkEraseMethod")
     @Expose
     private String WatermarkEraseMethod;
 
     /**
-    * <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
+    * <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and is suitable for realistic-style videos such as mini-dramas. - basic edition - advanced edition</p>
     */
     @SerializedName("WatermarkModel")
     @Expose
@@ -52,32 +52,32 @@ public class MPSSmartEraseWatermarkConfig extends AbstractModel {
     private MPSEraseTimeArea [] CustomAreas;
 
     /**
-     * Get <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p> 
-     * @return WatermarkEraseMethod <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
+     * Get <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically recognizes watermarks in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead. <strong>Specified area removal:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the removal area. When you choose specified area removal, at least one specified area must be provided. - auto: auto removal - custom: specified area removal</p> 
+     * @return WatermarkEraseMethod <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically recognizes watermarks in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead. <strong>Specified area removal:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the removal area. When you choose specified area removal, at least one specified area must be provided. - auto: auto removal - custom: specified area removal</p>
      */
     public String getWatermarkEraseMethod() {
         return this.WatermarkEraseMethod;
     }
 
     /**
-     * Set <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
-     * @param WatermarkEraseMethod <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
+     * Set <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically recognizes watermarks in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead. <strong>Specified area removal:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the removal area. When you choose specified area removal, at least one specified area must be provided. - auto: auto removal - custom: specified area removal</p>
+     * @param WatermarkEraseMethod <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically recognizes watermarks in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal will be performed on the full screen of the video; if AutoAreas is specified, auto removal will be performed on your specified areas instead. <strong>Specified area removal:</strong> For static watermarks with relatively fixed positions, it is recommended to directly specify the removal area. When you choose specified area removal, at least one specified area must be provided. - auto: auto removal - custom: specified area removal</p>
      */
     public void setWatermarkEraseMethod(String WatermarkEraseMethod) {
         this.WatermarkEraseMethod = WatermarkEraseMethod;
     }
 
     /**
-     * Get <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p> 
-     * @return WatermarkModel <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
+     * Get <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and is suitable for realistic-style videos such as mini-dramas. - basic edition - advanced edition</p> 
+     * @return WatermarkModel <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and is suitable for realistic-style videos such as mini-dramas. - basic edition - advanced edition</p>
      */
     public String getWatermarkModel() {
         return this.WatermarkModel;
     }
 
     /**
-     * Set <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
-     * @param WatermarkModel <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
+     * Set <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and is suitable for realistic-style videos such as mini-dramas. - basic edition - advanced edition</p>
+     * @param WatermarkModel <p>Watermark removal model. Basic Edition: provides average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provides better effectiveness and is suitable for realistic-style videos such as mini-dramas. - basic edition - advanced edition</p>
      */
     public void setWatermarkModel(String WatermarkModel) {
         this.WatermarkModel = WatermarkModel;

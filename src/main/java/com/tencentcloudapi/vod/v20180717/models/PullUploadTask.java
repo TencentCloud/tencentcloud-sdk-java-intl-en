@@ -38,7 +38,7 @@ public class PullUploadTask extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
+    * <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -66,7 +66,7 @@ public class PullUploadTask extends AbstractModel {
     private MediaBasicInfo MediaBasicInfo;
 
     /**
-    * <p>Meta-information of the output video.</p>
+    * <p>Meta information of the output video.</p>
     */
     @SerializedName("MetaData")
     @Expose
@@ -108,7 +108,7 @@ public class PullUploadTask extends AbstractModel {
     private String SessionId;
 
     /**
-    * <p>Pull the upload progress, with a value range of [0-100].</p>
+    * <p>Pull upload progress, in the range of [0,100].</p>
     */
     @SerializedName("Progress")
     @Expose
@@ -147,16 +147,16 @@ public class PullUploadTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li> 
-     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
+     * Get <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li> 
+     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
-     * @param ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
+     * Set <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+     * @param ErrCode <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -211,16 +211,16 @@ public class PullUploadTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Meta-information of the output video.</p> 
-     * @return MetaData <p>Meta-information of the output video.</p>
+     * Get <p>Meta information of the output video.</p> 
+     * @return MetaData <p>Meta information of the output video.</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set <p>Meta-information of the output video.</p>
-     * @param MetaData <p>Meta-information of the output video.</p>
+     * Set <p>Meta information of the output video.</p>
+     * @param MetaData <p>Meta information of the output video.</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
@@ -307,16 +307,16 @@ public class PullUploadTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Pull the upload progress, with a value range of [0-100].</p> 
-     * @return Progress <p>Pull the upload progress, with a value range of [0-100].</p>
+     * Get <p>Pull upload progress, in the range of [0,100].</p> 
+     * @return Progress <p>Pull upload progress, in the range of [0,100].</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set <p>Pull the upload progress, with a value range of [0-100].</p>
-     * @param Progress <p>Pull the upload progress, with a value range of [0-100].</p>
+     * Set <p>Pull upload progress, in the range of [0,100].</p>
+     * @param Progress <p>Pull upload progress, in the range of [0,100].</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

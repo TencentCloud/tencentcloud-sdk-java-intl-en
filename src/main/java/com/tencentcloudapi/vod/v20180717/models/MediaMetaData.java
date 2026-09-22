@@ -38,7 +38,7 @@ public class MediaMetaData extends AbstractModel {
     private String Container;
 
     /**
-    * Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+    * Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -59,7 +59,7 @@ public class MediaMetaData extends AbstractModel {
     private Long Width;
 
     /**
-    * Video duration, unit: seconds.
+    * Video duration, in seconds.
     */
     @SerializedName("Duration")
     @Expose
@@ -87,7 +87,7 @@ public class MediaMetaData extends AbstractModel {
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
-    * Video duration, unit: seconds.
+    * Video duration, in seconds.
     */
     @SerializedName("VideoDuration")
     @Expose
@@ -141,16 +141,16 @@ public class MediaMetaData extends AbstractModel {
     }
 
     /**
-     * Get Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps. 
-     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+     * Get Sum of the mean video stream bitrate and mean audio stream bitrate, in bps. 
+     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
-     * @param Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+     * Set Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+     * @param Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
@@ -189,16 +189,16 @@ public class MediaMetaData extends AbstractModel {
     }
 
     /**
-     * Get Video duration, unit: seconds. 
-     * @return Duration Video duration, unit: seconds.
+     * Get Video duration, in seconds. 
+     * @return Duration Video duration, in seconds.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video duration, unit: seconds.
-     * @param Duration Video duration, unit: seconds.
+     * Set Video duration, in seconds.
+     * @param Duration Video duration, in seconds.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
@@ -253,16 +253,16 @@ public class MediaMetaData extends AbstractModel {
     }
 
     /**
-     * Get Video duration, unit: seconds. 
-     * @return VideoDuration Video duration, unit: seconds.
+     * Get Video duration, in seconds. 
+     * @return VideoDuration Video duration, in seconds.
      */
     public Float getVideoDuration() {
         return this.VideoDuration;
     }
 
     /**
-     * Set Video duration, unit: seconds.
-     * @param VideoDuration Video duration, unit: seconds.
+     * Set Video duration, in seconds.
+     * @param VideoDuration Video duration, in seconds.
      */
     public void setVideoDuration(Float VideoDuration) {
         this.VideoDuration = VideoDuration;

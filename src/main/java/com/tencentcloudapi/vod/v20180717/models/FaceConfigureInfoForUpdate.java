@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class FaceConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
+    * <p>Face recognition task switch. Available values:</p><li>ON: enable intelligent face recognition task;</li><li>OFF: disable intelligent face recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned. Value ranges from 0 to 100.</p>
+    * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Value range: 0-100.</p>
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+    * <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
     */
     @SerializedName("DefaultLibraryLabelSet")
     @Expose
     private String [] DefaultLibraryLabelSet;
 
     /**
-    * <p>User-defined character filter tags. Specify the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>Up to 100 tags, each up to 16 characters in length.</p>
+    * <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
     */
     @SerializedName("UserDefineLibraryLabelSet")
     @Expose
     private String [] UserDefineLibraryLabelSet;
 
     /**
-    * <p>Character library selection. Available values:</p><li>Default: use the default character library;</li><li>UserDefine: use a user-defined character library.</li><li>All: use both the default and user-defined character libraries.</li>
+    * <p>Figure library selection. Available values:</p><li>Default: use default figure library;</li><li>UserDefine: use user-defined figure library.</li><li>All: use default and user-defined figure libraries at the same time.</li>
     */
     @SerializedName("FaceLibrary")
     @Expose
     private String FaceLibrary;
 
     /**
-     * Get <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li> 
-     * @return Switch <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
+     * Get <p>Face recognition task switch. Available values:</p><li>ON: enable intelligent face recognition task;</li><li>OFF: disable intelligent face recognition task.</li> 
+     * @return Switch <p>Face recognition task switch. Available values:</p><li>ON: enable intelligent face recognition task;</li><li>OFF: disable intelligent face recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
-     * @param Switch <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
+     * Set <p>Face recognition task switch. Available values:</p><li>ON: enable intelligent face recognition task;</li><li>OFF: disable intelligent face recognition task.</li>
+     * @param Switch <p>Face recognition task switch. Available values:</p><li>ON: enable intelligent face recognition task;</li><li>OFF: disable intelligent face recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned. Value ranges from 0 to 100.</p> 
-     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned. Value ranges from 0 to 100.</p>
+     * Get <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Value range: 0-100.</p> 
+     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Value range: 0-100.</p>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned. Value ranges from 0 to 100.</p>
-     * @param Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned. Value ranges from 0 to 100.</p>
+     * Set <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Value range: 0-100.</p>
+     * @param Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Value range: 0-100.</p>
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li> 
-     * @return DefaultLibraryLabelSet <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+     * Get <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li> 
+     * @return DefaultLibraryLabelSet <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
      */
     public String [] getDefaultLibraryLabelSet() {
         return this.DefaultLibraryLabelSet;
     }
 
     /**
-     * Set <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
-     * @param DefaultLibraryLabelSet <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+     * Set <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+     * @param DefaultLibraryLabelSet <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
      */
     public void setDefaultLibraryLabelSet(String [] DefaultLibraryLabelSet) {
         this.DefaultLibraryLabelSet = DefaultLibraryLabelSet;
     }
 
     /**
-     * Get <p>User-defined character filter tags. Specify the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>Up to 100 tags, each up to 16 characters in length.</p> 
-     * @return UserDefineLibraryLabelSet <p>User-defined character filter tags. Specify the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>Up to 100 tags, each up to 16 characters in length.</p>
+     * Get <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p> 
+     * @return UserDefineLibraryLabelSet <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
      */
     public String [] getUserDefineLibraryLabelSet() {
         return this.UserDefineLibraryLabelSet;
     }
 
     /**
-     * Set <p>User-defined character filter tags. Specify the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>Up to 100 tags, each up to 16 characters in length.</p>
-     * @param UserDefineLibraryLabelSet <p>User-defined character filter tags. Specify the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>Up to 100 tags, each up to 16 characters in length.</p>
+     * Set <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
+     * @param UserDefineLibraryLabelSet <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
      */
     public void setUserDefineLibraryLabelSet(String [] UserDefineLibraryLabelSet) {
         this.UserDefineLibraryLabelSet = UserDefineLibraryLabelSet;
     }
 
     /**
-     * Get <p>Character library selection. Available values:</p><li>Default: use the default character library;</li><li>UserDefine: use a user-defined character library.</li><li>All: use both the default and user-defined character libraries.</li> 
-     * @return FaceLibrary <p>Character library selection. Available values:</p><li>Default: use the default character library;</li><li>UserDefine: use a user-defined character library.</li><li>All: use both the default and user-defined character libraries.</li>
+     * Get <p>Figure library selection. Available values:</p><li>Default: use default figure library;</li><li>UserDefine: use user-defined figure library.</li><li>All: use default and user-defined figure libraries at the same time.</li> 
+     * @return FaceLibrary <p>Figure library selection. Available values:</p><li>Default: use default figure library;</li><li>UserDefine: use user-defined figure library.</li><li>All: use default and user-defined figure libraries at the same time.</li>
      */
     public String getFaceLibrary() {
         return this.FaceLibrary;
     }
 
     /**
-     * Set <p>Character library selection. Available values:</p><li>Default: use the default character library;</li><li>UserDefine: use a user-defined character library.</li><li>All: use both the default and user-defined character libraries.</li>
-     * @param FaceLibrary <p>Character library selection. Available values:</p><li>Default: use the default character library;</li><li>UserDefine: use a user-defined character library.</li><li>All: use both the default and user-defined character libraries.</li>
+     * Set <p>Figure library selection. Available values:</p><li>Default: use default figure library;</li><li>UserDefine: use user-defined figure library.</li><li>All: use default and user-defined figure libraries at the same time.</li>
+     * @param FaceLibrary <p>Figure library selection. Available values:</p><li>Default: use default figure library;</li><li>UserDefine: use user-defined figure library.</li><li>All: use default and user-defined figure libraries at the same time.</li>
      */
     public void setFaceLibrary(String FaceLibrary) {
         this.FaceLibrary = FaceLibrary;

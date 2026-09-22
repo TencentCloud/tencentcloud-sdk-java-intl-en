@@ -40,14 +40,14 @@ public class MediaSubStreamInfoItem extends AbstractModel {
     private Long Width;
 
     /**
-    * Substream video screen height in px.
+    * Video image height when the substream is a video stream. Measurement unit: px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Substream media file size in bytes.
+    * Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
     */
     @SerializedName("Size")
@@ -95,25 +95,25 @@ public class MediaSubStreamInfoItem extends AbstractModel {
     }
 
     /**
-     * Get Substream video screen height in px. 
-     * @return Height Substream video screen height in px.
+     * Get Video image height when the substream is a video stream. Measurement unit: px. 
+     * @return Height Video image height when the substream is a video stream. Measurement unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Substream video screen height in px.
-     * @param Height Substream video screen height in px.
+     * Set Video image height when the substream is a video stream. Measurement unit: px.
+     * @param Height Video image height when the substream is a video stream. Measurement unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Substream media file size in bytes.
+     * Get Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z. 
-     * @return Size Substream media file size in bytes.
+     * @return Size Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
      */
     public Long getSize() {
@@ -121,9 +121,9 @@ public class MediaSubStreamInfoItem extends AbstractModel {
     }
 
     /**
-     * Set Substream media file size in bytes.
+     * Set Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
-     * @param Size Substream media file size in bytes.
+     * @param Size Substream media file size. Measurement unit: Byte.
 <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
      */
     public void setSize(Long Size) {

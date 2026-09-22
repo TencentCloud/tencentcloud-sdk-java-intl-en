@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
 
     /**
-    * <p>Unique identifier of the Large Model Understanding template.</p>
+    * <p>Unique identifier of the Large Model Understanding template</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,7 +52,7 @@ public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-    * <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+    * <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
     */
     @SerializedName("Model")
     @Expose
@@ -73,39 +73,39 @@ public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
     private LLMComprehendAsrForUpdate Asr;
 
     /**
-    * <p>Facial recognition configuration</p>
+    * <p>Face recognition configuration</p>
     */
     @SerializedName("FaceRecognition")
     @Expose
     private LLMComprehendFaceRecognitionForUpdate FaceRecognition;
 
     /**
-     * Get <p>Unique identifier of the Large Model Understanding template.</p> 
-     * @return Definition <p>Unique identifier of the Large Model Understanding template.</p>
+     * Get <p>Unique identifier of the Large Model Understanding template</p> 
+     * @return Definition <p>Unique identifier of the Large Model Understanding template</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>Unique identifier of the Large Model Understanding template.</p>
-     * @param Definition <p>Unique identifier of the Large Model Understanding template.</p>
+     * Set <p>Unique identifier of the Large Model Understanding template</p>
+     * @param Definition <p>Unique identifier of the Large Model Understanding template</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
-     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
-     * @param SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -144,16 +144,16 @@ public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul> 
-     * @return Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+     * Get <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul> 
+     * @return Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
-     * @param Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+     * Set <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
+     * @param Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: optimization model</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;
@@ -192,16 +192,16 @@ public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Facial recognition configuration</p> 
-     * @return FaceRecognition <p>Facial recognition configuration</p>
+     * Get <p>Face recognition configuration</p> 
+     * @return FaceRecognition <p>Face recognition configuration</p>
      */
     public LLMComprehendFaceRecognitionForUpdate getFaceRecognition() {
         return this.FaceRecognition;
     }
 
     /**
-     * Set <p>Facial recognition configuration</p>
-     * @param FaceRecognition <p>Facial recognition configuration</p>
+     * Set <p>Face recognition configuration</p>
+     * @param FaceRecognition <p>Face recognition configuration</p>
      */
     public void setFaceRecognition(LLMComprehendFaceRecognitionForUpdate FaceRecognition) {
         this.FaceRecognition = FaceRecognition;

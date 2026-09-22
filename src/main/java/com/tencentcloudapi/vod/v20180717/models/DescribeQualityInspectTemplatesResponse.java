@@ -31,7 +31,7 @@ public class DescribeQualityInspectTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Audio and video quality detection template detail list.
+    * Audio and video quality detection template details list.
     */
     @SerializedName("QualityInspectTemplateSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeQualityInspectTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get Audio and video quality detection template detail list. 
-     * @return QualityInspectTemplateSet Audio and video quality detection template detail list.
+     * Get Audio and video quality detection template details list. 
+     * @return QualityInspectTemplateSet Audio and video quality detection template details list.
      */
     public QualityInspectTemplateItem [] getQualityInspectTemplateSet() {
         return this.QualityInspectTemplateSet;
     }
 
     /**
-     * Set Audio and video quality detection template detail list.
-     * @param QualityInspectTemplateSet Audio and video quality detection template detail list.
+     * Set Audio and video quality detection template details list.
+     * @param QualityInspectTemplateSet Audio and video quality detection template details list.
      */
     public void setQualityInspectTemplateSet(QualityInspectTemplateItem [] QualityInspectTemplateSet) {
         this.QualityInspectTemplateSet = QualityInspectTemplateSet;

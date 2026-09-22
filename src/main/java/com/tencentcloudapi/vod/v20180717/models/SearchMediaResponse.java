@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchMediaResponse extends AbstractModel {
 
     /**
-    * <p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
+    * <p>Total number of records that meet search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class SearchMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li> 
-     * @return TotalCount <p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
+     * Get <p>Total number of records that meet search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li> 
+     * @return TotalCount <p>Total number of records that meet search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
-     * @param TotalCount <p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
+     * Set <p>Total number of records that meet search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
+     * @param TotalCount <p>Total number of records that meet search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

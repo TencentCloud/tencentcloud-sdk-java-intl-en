@@ -31,7 +31,7 @@ public class ModifyWordSampleRequest extends AbstractModel {
     private String Keyword;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -39,7 +39,7 @@ public class ModifyWordSampleRequest extends AbstractModel {
 
     /**
     * <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -76,16 +76,16 @@ public class ModifyWordSampleRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -93,7 +93,7 @@ public class ModifyWordSampleRequest extends AbstractModel {
 
     /**
      * Get <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -102,7 +102,7 @@ public class ModifyWordSampleRequest extends AbstractModel {
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
 7. All: include all of the above, equivalent to 1+2+3+4. 
      * @return Usages <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -117,7 +117,7 @@ public class ModifyWordSampleRequest extends AbstractModel {
 
     /**
      * Set <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
@@ -126,7 +126,7 @@ public class ModifyWordSampleRequest extends AbstractModel {
 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
 7. All: include all of the above, equivalent to 1+2+3+4.
      * @param Usages <b>Keyword application scenario. Available values:</b>
-1. Recognition.Ocr: Performs content recognition through OCR.
+1. Recognition.Ocr: Perform content recognition through OCR.
 2. Recognition.Asr: perform content recognition through audio recognition technology;
 3. Review.Ocr: Perform inappropriate content recognition using OCR.
 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.

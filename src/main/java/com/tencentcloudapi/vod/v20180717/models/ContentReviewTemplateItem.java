@@ -45,21 +45,21 @@ public class ContentReviewTemplateItem extends AbstractModel {
     private String Comment;
 
     /**
-    * Authentication involves control parameters for offensive information.
+    * Control parameters for authentication involving offensive information.
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfo PornConfigure;
 
     /**
-    * Control parameters for authentication involving unsafe information.
+    * Authentication involves control parameters for unsafe information.
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * Control parameters for identifying inappropriate information.
+    * Control parameters for authentication involving inappropriate information.
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -75,7 +75,7 @@ public class ContentReviewTemplateItem extends AbstractModel {
     private ProhibitedConfigureInfo ProhibitedConfigure;
 
     /**
-    * User-customized control parameters for audio/video moderation.
+    * Control parameters of custom audio/video moderation.
     */
     @SerializedName("UserDefineConfigure")
     @Expose
@@ -84,7 +84,7 @@ public class ContentReviewTemplateItem extends AbstractModel {
     /**
     * Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
 <li>ON: Yes;</li>
-<li>OFF: No.</li>
+<li>OFF: no</li>
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
@@ -98,7 +98,7 @@ public class ContentReviewTemplateItem extends AbstractModel {
     private Float ScreenshotInterval;
 
     /**
-    * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
@@ -160,48 +160,48 @@ public class ContentReviewTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Authentication involves control parameters for offensive information. 
-     * @return PornConfigure Authentication involves control parameters for offensive information.
+     * Get Control parameters for authentication involving offensive information. 
+     * @return PornConfigure Control parameters for authentication involving offensive information.
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Authentication involves control parameters for offensive information.
-     * @param PornConfigure Authentication involves control parameters for offensive information.
+     * Set Control parameters for authentication involving offensive information.
+     * @param PornConfigure Control parameters for authentication involving offensive information.
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Control parameters for authentication involving unsafe information. 
-     * @return TerrorismConfigure Control parameters for authentication involving unsafe information.
+     * Get Authentication involves control parameters for unsafe information. 
+     * @return TerrorismConfigure Authentication involves control parameters for unsafe information.
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Control parameters for authentication involving unsafe information.
-     * @param TerrorismConfigure Control parameters for authentication involving unsafe information.
+     * Set Authentication involves control parameters for unsafe information.
+     * @param TerrorismConfigure Authentication involves control parameters for unsafe information.
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Control parameters for identifying inappropriate information. 
-     * @return PoliticalConfigure Control parameters for identifying inappropriate information.
+     * Get Control parameters for authentication involving inappropriate information. 
+     * @return PoliticalConfigure Control parameters for authentication involving inappropriate information.
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Control parameters for identifying inappropriate information.
-     * @param PoliticalConfigure Control parameters for identifying inappropriate information.
+     * Set Control parameters for authentication involving inappropriate information.
+     * @param PoliticalConfigure Control parameters for authentication involving inappropriate information.
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
@@ -232,16 +232,16 @@ public class ContentReviewTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get User-customized control parameters for audio/video moderation. 
-     * @return UserDefineConfigure User-customized control parameters for audio/video moderation.
+     * Get Control parameters of custom audio/video moderation. 
+     * @return UserDefineConfigure Control parameters of custom audio/video moderation.
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set User-customized control parameters for audio/video moderation.
-     * @param UserDefineConfigure User-customized control parameters for audio/video moderation.
+     * Set Control parameters of custom audio/video moderation.
+     * @param UserDefineConfigure Control parameters of custom audio/video moderation.
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
@@ -250,10 +250,10 @@ public class ContentReviewTemplateItem extends AbstractModel {
     /**
      * Get Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
 <li>ON: Yes;</li>
-<li>OFF: No.</li> 
+<li>OFF: no</li> 
      * @return ReviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
 <li>ON: Yes;</li>
-<li>OFF: No.</li>
+<li>OFF: no</li>
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
@@ -262,10 +262,10 @@ public class ContentReviewTemplateItem extends AbstractModel {
     /**
      * Set Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
 <li>ON: Yes;</li>
-<li>OFF: No.</li>
+<li>OFF: no</li>
      * @param ReviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
 <li>ON: Yes;</li>
-<li>OFF: No.</li>
+<li>OFF: no</li>
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;
@@ -288,16 +288,16 @@ public class ContentReviewTemplateItem extends AbstractModel {
     }
 
     /**
-     * Get Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -66,7 +66,7 @@ public class AiReviewTaskPornOcrResult extends AbstractModel {
     private AiReviewPornOcrTaskOutput Output;
 
     /**
-    * Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+    * Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
     */
     @SerializedName("Progress")
     @Expose
@@ -169,16 +169,16 @@ public class AiReviewTaskPornOcrResult extends AbstractModel {
     }
 
     /**
-     * Get Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100]. 
-     * @return Progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+     * Get Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100]. 
+     * @return Progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
-     * @param Progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+     * Set Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
+     * @param Progress Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

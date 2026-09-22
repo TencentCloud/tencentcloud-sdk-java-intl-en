@@ -40,9 +40,9 @@ public class ExtractTraceWatermarkTask extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+    * Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
     */
     @SerializedName("ErrCode")
@@ -78,7 +78,7 @@ public class ExtractTraceWatermarkTask extends AbstractModel {
     private ExtractTraceWatermarkTaskOutput Output;
 
     /**
-    * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
@@ -132,13 +132,13 @@ public class ExtractTraceWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * Get Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li> 
-     * @return ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * @return ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public Long getErrCode() {
@@ -146,13 +146,13 @@ public class ExtractTraceWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Set Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * Set Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
-     * @param ErrCode Error code. 0 indicates success. Other values indicate failure:
-<li>40000: Invalid input parameters. Check the input parameters;</li>
-<li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+     * @param ErrCode Error code. 0 indicates success, and other values indicate failure:
+<li>40000: Invalid input parameter. Check the input parameter;</li>
+<li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
 <li>70000: internal service error. Retry is recommended.</li>
      */
     public void setErrCode(Long ErrCode) {
@@ -224,16 +224,16 @@ public class ExtractTraceWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
-     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

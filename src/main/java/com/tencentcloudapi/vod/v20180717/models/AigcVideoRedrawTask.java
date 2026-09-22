@@ -38,14 +38,14 @@ public class AigcVideoRedrawTask extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+    * <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * <p>Extension error code.</p>
+    * <p>Expansion error code.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -59,14 +59,14 @@ public class AigcVideoRedrawTask extends AbstractModel {
     private String Message;
 
     /**
-    * <p>Task progress. Value ranges from 0 to 100.</p>
+    * <p>Task progress. Value range: [0-100].</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * <p>Input information of the AIGC video redrawing task.</p>
+    * <p>Input information of the AIGC video conversion task.</p>
     */
     @SerializedName("Input")
     @Expose
@@ -126,32 +126,32 @@ public class AigcVideoRedrawTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p> 
-     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * Get <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p> 
+     * @return ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
-     * @param ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * Set <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
+     * @param ErrCode <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get <p>Extension error code.</p> 
-     * @return ErrCodeExt <p>Extension error code.</p>
+     * Get <p>Expansion error code.</p> 
+     * @return ErrCodeExt <p>Expansion error code.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set <p>Extension error code.</p>
-     * @param ErrCodeExt <p>Extension error code.</p>
+     * Set <p>Expansion error code.</p>
+     * @param ErrCodeExt <p>Expansion error code.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -174,32 +174,32 @@ public class AigcVideoRedrawTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Task progress. Value ranges from 0 to 100.</p> 
-     * @return Progress <p>Task progress. Value ranges from 0 to 100.</p>
+     * Get <p>Task progress. Value range: [0-100].</p> 
+     * @return Progress <p>Task progress. Value range: [0-100].</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set <p>Task progress. Value ranges from 0 to 100.</p>
-     * @param Progress <p>Task progress. Value ranges from 0 to 100.</p>
+     * Set <p>Task progress. Value range: [0-100].</p>
+     * @param Progress <p>Task progress. Value range: [0-100].</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get <p>Input information of the AIGC video redrawing task.</p> 
-     * @return Input <p>Input information of the AIGC video redrawing task.</p>
+     * Get <p>Input information of the AIGC video conversion task.</p> 
+     * @return Input <p>Input information of the AIGC video conversion task.</p>
      */
     public AigcVideoRedrawTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set <p>Input information of the AIGC video redrawing task.</p>
-     * @param Input <p>Input information of the AIGC video redrawing task.</p>
+     * Set <p>Input information of the AIGC video conversion task.</p>
+     * @param Input <p>Input information of the AIGC video conversion task.</p>
      */
     public void setInput(AigcVideoRedrawTaskInput Input) {
         this.Input = Input;

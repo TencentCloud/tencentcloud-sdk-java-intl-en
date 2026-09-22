@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FollowRedirect extends AbstractModel {
 
     /**
-    * Follow origin-pull configuration switch. Valid values:
+    * Follow origin configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
     */
@@ -33,10 +33,10 @@ public class FollowRedirect extends AbstractModel {
     private String Switch;
 
     /**
-     * Get Follow origin-pull configuration switch. Valid values:
+     * Get Follow origin configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li> 
-     * @return Switch Follow origin-pull configuration switch. Valid values:
+     * @return Switch Follow origin configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */
@@ -45,10 +45,10 @@ public class FollowRedirect extends AbstractModel {
     }
 
     /**
-     * Set Follow origin-pull configuration switch. Valid values:
+     * Set Follow origin configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-     * @param Switch Follow origin-pull configuration switch. Valid values:
+     * @param Switch Follow origin configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
      */

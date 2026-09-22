@@ -38,14 +38,14 @@ public class RestoreMediaRequest extends AbstractModel {
     private Long RestoreDay;
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Thawing mode. If the current storage type of the media file is archive storage, valid values:
+    * Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>
@@ -90,30 +90,30 @@ When the storage type of a media file is DEEP_ARCHIVE, the parameter values are 
     }
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Thawing mode. If the current storage type of the media file is archive storage, valid values:
+     * Get Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>
 When the storage type of a media file is DEEP_ARCHIVE, the parameter values are as follows:
 <li>Standard mode: Standard. The unfreeze task is completed after 24 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li> 
-     * @return RestoreTier Thawing mode. If the current storage type of the media file is archive storage, valid values:
+     * @return RestoreTier Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>
@@ -126,14 +126,14 @@ When the storage type of a media file is DEEP_ARCHIVE, the parameter values are 
     }
 
     /**
-     * Set Thawing mode. If the current storage type of the media file is archive storage, valid values:
+     * Set Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>
 When the storage type of a media file is DEEP_ARCHIVE, the parameter values are as follows:
 <li>Standard mode: Standard. The unfreeze task is completed after 24 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
-     * @param RestoreTier Thawing mode. If the current storage type of the media file is archive storage, valid values:
+     * @param RestoreTier Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
 <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
 <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
 <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>

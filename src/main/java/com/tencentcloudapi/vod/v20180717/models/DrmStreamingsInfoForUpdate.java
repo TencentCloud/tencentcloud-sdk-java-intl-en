@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DrmStreamingsInfoForUpdate extends AbstractModel {
 
     /**
-    * Adaptive bitrate streaming template ID with SimpleAES protection type.
+    * Adaptive bitstreaming template ID with SimpleAES protection type.
     */
     @SerializedName("SimpleAesDefinition")
     @Expose
@@ -38,23 +38,23 @@ public class DrmStreamingsInfoForUpdate extends AbstractModel {
     private Long WidevineDefinition;
 
     /**
-    * Adaptive bitstreaming template ID with FairPlay protection.
+    * Adaptive bitrate streaming template ID with FairPlay protection type.
     */
     @SerializedName("FairPlayDefinition")
     @Expose
     private Long FairPlayDefinition;
 
     /**
-     * Get Adaptive bitrate streaming template ID with SimpleAES protection type. 
-     * @return SimpleAesDefinition Adaptive bitrate streaming template ID with SimpleAES protection type.
+     * Get Adaptive bitstreaming template ID with SimpleAES protection type. 
+     * @return SimpleAesDefinition Adaptive bitstreaming template ID with SimpleAES protection type.
      */
     public Long getSimpleAesDefinition() {
         return this.SimpleAesDefinition;
     }
 
     /**
-     * Set Adaptive bitrate streaming template ID with SimpleAES protection type.
-     * @param SimpleAesDefinition Adaptive bitrate streaming template ID with SimpleAES protection type.
+     * Set Adaptive bitstreaming template ID with SimpleAES protection type.
+     * @param SimpleAesDefinition Adaptive bitstreaming template ID with SimpleAES protection type.
      */
     public void setSimpleAesDefinition(Long SimpleAesDefinition) {
         this.SimpleAesDefinition = SimpleAesDefinition;
@@ -77,16 +77,16 @@ public class DrmStreamingsInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get Adaptive bitstreaming template ID with FairPlay protection. 
-     * @return FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection.
+     * Get Adaptive bitrate streaming template ID with FairPlay protection type. 
+     * @return FairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
      */
     public Long getFairPlayDefinition() {
         return this.FairPlayDefinition;
     }
 
     /**
-     * Set Adaptive bitstreaming template ID with FairPlay protection.
-     * @param FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection.
+     * Set Adaptive bitrate streaming template ID with FairPlay protection type.
+     * @param FairPlayDefinition Adaptive bitrate streaming template ID with FairPlay protection type.
      */
     public void setFairPlayDefinition(Long FairPlayDefinition) {
         this.FairPlayDefinition = FairPlayDefinition;

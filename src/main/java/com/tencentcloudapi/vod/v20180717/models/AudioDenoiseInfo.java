@@ -25,8 +25,8 @@ public class AudioDenoiseInfo extends AbstractModel {
 
     /**
     * Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -43,11 +43,11 @@ Default value: normal.
 
     /**
      * Get Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li> 
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li> 
      * @return Switch Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -55,11 +55,11 @@ Default value: normal.
 
     /**
      * Set Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
      * @param Switch Audio noise reduction control switch. Available values:
-<li>ON: enable audio noise reduction;</li>
-<li>OFF: Turn off audio noise reduction.</li>
+<li>ON: turn on audio noise reduction;</li>
+<li>OFF: disable audio noise reduction.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

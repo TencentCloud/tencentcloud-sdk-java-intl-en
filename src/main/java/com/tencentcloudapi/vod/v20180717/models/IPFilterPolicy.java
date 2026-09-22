@@ -26,15 +26,15 @@ public class IPFilterPolicy extends AbstractModel {
     /**
     * IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+    * IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
     */
     @SerializedName("FilterType")
     @Expose
@@ -50,10 +50,10 @@ public class IPFilterPolicy extends AbstractModel {
     /**
      * Get IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li> 
+<li>Disabled: Disabled.</li> 
      * @return Status IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
      */
     public String getStatus() {
         return this.Status;
@@ -62,30 +62,30 @@ public class IPFilterPolicy extends AbstractModel {
     /**
      * Set IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
      * @param Status IP access restriction status. Available values:
 <li>Enabled: enabled;</li>
-<li>Disabled: Disable.</li>
+<li>Disabled: Disabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value. 
-     * @return FilterType IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+     * Get IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value. 
+     * @return FilterType IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
-     * @param FilterType IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-<li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+     * Set IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+     * @param FilterType IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+<li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;

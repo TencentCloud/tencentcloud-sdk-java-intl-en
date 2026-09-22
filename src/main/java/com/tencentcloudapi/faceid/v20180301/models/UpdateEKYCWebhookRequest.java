@@ -38,11 +38,18 @@ public class UpdateEKYCWebhookRequest extends AbstractModel {
     private String WebhookName;
 
     /**
-    * New callback URL, which must use the HTTPS protocol.
+    * <p>New callback URL, must be HTTPS protocol</p>
     */
     @SerializedName("WebhookURL")
     @Expose
     private String WebhookURL;
+
+    /**
+    * <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+    */
+    @SerializedName("SignatureKey")
+    @Expose
+    private String SignatureKey;
 
     /**
      * Get <p>ID of the Webhook configuration to be updated</p> 
@@ -77,19 +84,35 @@ public class UpdateEKYCWebhookRequest extends AbstractModel {
     }
 
     /**
-     * Get New callback URL, which must use the HTTPS protocol. 
-     * @return WebhookURL New callback URL, which must use the HTTPS protocol.
+     * Get <p>New callback URL, must be HTTPS protocol</p> 
+     * @return WebhookURL <p>New callback URL, must be HTTPS protocol</p>
      */
     public String getWebhookURL() {
         return this.WebhookURL;
     }
 
     /**
-     * Set New callback URL, which must use the HTTPS protocol.
-     * @param WebhookURL New callback URL, which must use the HTTPS protocol.
+     * Set <p>New callback URL, must be HTTPS protocol</p>
+     * @param WebhookURL <p>New callback URL, must be HTTPS protocol</p>
      */
     public void setWebhookURL(String WebhookURL) {
         this.WebhookURL = WebhookURL;
+    }
+
+    /**
+     * Get <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote> 
+     * @return SignatureKey <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+     */
+    public String getSignatureKey() {
+        return this.SignatureKey;
+    }
+
+    /**
+     * Set <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+     * @param SignatureKey <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not provided, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32    </p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate the HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature following the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+     */
+    public void setSignatureKey(String SignatureKey) {
+        this.SignatureKey = SignatureKey;
     }
 
     public UpdateEKYCWebhookRequest() {
@@ -109,6 +132,9 @@ public class UpdateEKYCWebhookRequest extends AbstractModel {
         if (source.WebhookURL != null) {
             this.WebhookURL = new String(source.WebhookURL);
         }
+        if (source.SignatureKey != null) {
+            this.SignatureKey = new String(source.SignatureKey);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class UpdateEKYCWebhookRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WebhookId", this.WebhookId);
         this.setParamSimple(map, prefix + "WebhookName", this.WebhookName);
         this.setParamSimple(map, prefix + "WebhookURL", this.WebhookURL);
+        this.setParamSimple(map, prefix + "SignatureKey", this.SignatureKey);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ComposeMediaResponse extends AbstractModel {
 
     /**
-    * Task ID for media file production, which can be used to query the status of the production task (task type: MakeMedia).
+    * Task ID for media file production. You can use this ID to query the status of the production task (task type: MakeMedia).
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ComposeMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID for media file production, which can be used to query the status of the production task (task type: MakeMedia). 
-     * @return TaskId Task ID for media file production, which can be used to query the status of the production task (task type: MakeMedia).
+     * Get Task ID for media file production. You can use this ID to query the status of the production task (task type: MakeMedia). 
+     * @return TaskId Task ID for media file production. You can use this ID to query the status of the production task (task type: MakeMedia).
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID for media file production, which can be used to query the status of the production task (task type: MakeMedia).
-     * @param TaskId Task ID for media file production, which can be used to query the status of the production task (task type: MakeMedia).
+     * Set Task ID for media file production. You can use this ID to query the status of the production task (task type: MakeMedia).
+     * @param TaskId Task ID for media file production. You can use this ID to query the status of the production task (task type: MakeMedia).
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

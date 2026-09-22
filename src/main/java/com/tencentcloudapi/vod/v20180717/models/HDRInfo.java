@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class HDRInfo extends AbstractModel {
 
     /**
-    * High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+    * HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -46,24 +46,24 @@ Note:
     private String Type;
 
     /**
-     * Get High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li> 
-     * @return Switch High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+     * Get HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li> 
+     * @return Switch HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
-     * @param Switch High dynamic range type control switch. Available values:
-<li>ON: enable high dynamic range type switch;</li>
-<li>OFF: disables high dynamic range type conversion.</li>
+     * Set HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
+     * @param Switch HDR type control switch. Available values:
+<li>ON: enable high dynamic range type conversion;</li>
+<li>OFF: Disable high dynamic range type switch.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

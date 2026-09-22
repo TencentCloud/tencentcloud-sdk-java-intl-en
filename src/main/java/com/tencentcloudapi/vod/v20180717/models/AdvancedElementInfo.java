@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AdvancedElementInfo extends AbstractModel {
 
     /**
-    * <p>Entity ID.</p>
+    * <p>Principal ID.</p>
     */
     @SerializedName("ElementId")
     @Expose
@@ -38,16 +38,16 @@ public class AdvancedElementInfo extends AbstractModel {
     private String ElementInfo;
 
     /**
-     * Get <p>Entity ID.</p> 
-     * @return ElementId <p>Entity ID.</p>
+     * Get <p>Principal ID.</p> 
+     * @return ElementId <p>Principal ID.</p>
      */
     public String getElementId() {
         return this.ElementId;
     }
 
     /**
-     * Set <p>Entity ID.</p>
-     * @param ElementId <p>Entity ID.</p>
+     * Set <p>Principal ID.</p>
+     * @param ElementId <p>Principal ID.</p>
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;

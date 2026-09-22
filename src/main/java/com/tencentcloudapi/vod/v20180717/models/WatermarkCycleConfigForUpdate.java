@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class WatermarkCycleConfigForUpdate extends AbstractModel {
 
     /**
-    * Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+    * Playback time point when the watermark first appears in the video. Unit: second.
     */
     @SerializedName("StartTime")
     @Expose
     private Float StartTime;
 
     /**
-    * Duration of watermark display in a watermark cycle, in seconds.
+    * Duration of watermark display within a watermark cycle, in seconds.
     */
     @SerializedName("DisplayDuration")
     @Expose
@@ -39,39 +39,39 @@ public class WatermarkCycleConfigForUpdate extends AbstractModel {
 
     /**
     * Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
     */
     @SerializedName("CycleDuration")
     @Expose
     private Float CycleDuration;
 
     /**
-     * Get Playback time point of the first occurrence of the watermark in the video. Measurement unit: second. 
-     * @return StartTime Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+     * Get Playback time point when the watermark first appears in the video. Unit: second. 
+     * @return StartTime Playback time point when the watermark first appears in the video. Unit: second.
      */
     public Float getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
-     * @param StartTime Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+     * Set Playback time point when the watermark first appears in the video. Unit: second.
+     * @param StartTime Playback time point when the watermark first appears in the video. Unit: second.
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Duration of watermark display in a watermark cycle, in seconds. 
-     * @return DisplayDuration Duration of watermark display in a watermark cycle, in seconds.
+     * Get Duration of watermark display within a watermark cycle, in seconds. 
+     * @return DisplayDuration Duration of watermark display within a watermark cycle, in seconds.
      */
     public Float getDisplayDuration() {
         return this.DisplayDuration;
     }
 
     /**
-     * Set Duration of watermark display in a watermark cycle, in seconds.
-     * @param DisplayDuration Duration of watermark display in a watermark cycle, in seconds.
+     * Set Duration of watermark display within a watermark cycle, in seconds.
+     * @param DisplayDuration Duration of watermark display within a watermark cycle, in seconds.
      */
     public void setDisplayDuration(Float DisplayDuration) {
         this.DisplayDuration = DisplayDuration;
@@ -79,9 +79,9 @@ Set to 0, a watermark will last only one watermark cycle (displayed for DisplayD
 
     /**
      * Get Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video). 
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video). 
      * @return CycleDuration Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      */
     public Float getCycleDuration() {
         return this.CycleDuration;
@@ -89,9 +89,9 @@ Set to 0, a watermark will last only one watermark cycle (displayed for DisplayD
 
     /**
      * Set Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      * @param CycleDuration Duration of a watermark cycle, in seconds.
-Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+0 means a watermark lasts only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
      */
     public void setCycleDuration(Float CycleDuration) {
         this.CycleDuration = CycleDuration;

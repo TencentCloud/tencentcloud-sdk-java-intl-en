@@ -45,28 +45,28 @@ public class AigcVideoTaskInput extends AbstractModel {
     private AigcVideoTaskInputFileInfo [] FileInfos;
 
     /**
-    * <p>Fixed subject input information for AIGC tasks.</p>
+    * <p>Fixed subject input information for the AIGC task.</p>
     */
     @SerializedName("SubjectInfos")
     @Expose
     private AigcVideoTaskInputSubjectInfo [] SubjectInfos;
 
     /**
-    * <p>Media file ID used as the tail frame to generate video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+    * <p>Media file ID used as the tail frame to generate a video. This globally unique identifier of the file in VOD is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
     */
     @SerializedName("LastFrameFileId")
     @Expose
     private String LastFrameFileId;
 
     /**
-    * <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only models GV, Kling, and Vidu are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format values: jpeg, jpg, png, webp.</li></ol></li></ol>
+    * <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only GV, Kling, and Vidu models are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and the output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>The image size must be less than 5M.</li><li><ol start="3"><li>The value of the image format is: jpeg, jpg, png, webp.</li></ol></li></ol>
     */
     @SerializedName("LastFrameUrl")
     @Expose
     private String LastFrameUrl;
 
     /**
-    * <p>Prompt for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+    * <p>Prompt for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
     */
     @SerializedName("Prompt")
     @Expose
@@ -80,7 +80,7 @@ public class AigcVideoTaskInput extends AbstractModel {
     private String NegativePrompt;
 
     /**
-    * <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+    * <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
     */
     @SerializedName("EnhancePrompt")
     @Expose
@@ -94,7 +94,7 @@ public class AigcVideoTaskInput extends AbstractModel {
     private String GenerationMode;
 
     /**
-    * <p>Output result file for AIGC image generation.</p>
+    * <p>Output result file output for AIGC image generation.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -108,7 +108,7 @@ public class AigcVideoTaskInput extends AbstractModel {
     private String InputRegion;
 
     /**
-    * <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control indicates action control;</li><li>Other ModelName values are not currently supported.</li></p>
+    * <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
     */
     @SerializedName("SceneType")
     @Expose
@@ -177,64 +177,64 @@ public class AigcVideoTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Fixed subject input information for AIGC tasks.</p> 
-     * @return SubjectInfos <p>Fixed subject input information for AIGC tasks.</p>
+     * Get <p>Fixed subject input information for the AIGC task.</p> 
+     * @return SubjectInfos <p>Fixed subject input information for the AIGC task.</p>
      */
     public AigcVideoTaskInputSubjectInfo [] getSubjectInfos() {
         return this.SubjectInfos;
     }
 
     /**
-     * Set <p>Fixed subject input information for AIGC tasks.</p>
-     * @param SubjectInfos <p>Fixed subject input information for AIGC tasks.</p>
+     * Set <p>Fixed subject input information for the AIGC task.</p>
+     * @param SubjectInfos <p>Fixed subject input information for the AIGC task.</p>
      */
     public void setSubjectInfos(AigcVideoTaskInputSubjectInfo [] SubjectInfos) {
         this.SubjectInfos = SubjectInfos;
     }
 
     /**
-     * Get <p>Media file ID used as the tail frame to generate video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p> 
-     * @return LastFrameFileId <p>Media file ID used as the tail frame to generate video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * Get <p>Media file ID used as the tail frame to generate a video. This globally unique identifier of the file in VOD is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p> 
+     * @return LastFrameFileId <p>Media file ID used as the tail frame to generate a video. This globally unique identifier of the file in VOD is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public String getLastFrameFileId() {
         return this.LastFrameFileId;
     }
 
     /**
-     * Set <p>Media file ID used as the tail frame to generate video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
-     * @param LastFrameFileId <p>Media file ID used as the tail frame to generate video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * Set <p>Media file ID used as the tail frame to generate a video. This globally unique identifier of the file in VOD is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+     * @param LastFrameFileId <p>Media file ID used as the tail frame to generate a video. This globally unique identifier of the file in VOD is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
      */
     public void setLastFrameFileId(String LastFrameFileId) {
         this.LastFrameFileId = LastFrameFileId;
     }
 
     /**
-     * Get <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only models GV, Kling, and Vidu are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format values: jpeg, jpg, png, webp.</li></ol></li></ol> 
-     * @return LastFrameUrl <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only models GV, Kling, and Vidu are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format values: jpeg, jpg, png, webp.</li></ol></li></ol>
+     * Get <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only GV, Kling, and Vidu models are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and the output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>The image size must be less than 5M.</li><li><ol start="3"><li>The value of the image format is: jpeg, jpg, png, webp.</li></ol></li></ol> 
+     * @return LastFrameUrl <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only GV, Kling, and Vidu models are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and the output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>The image size must be less than 5M.</li><li><ol start="3"><li>The value of the image format is: jpeg, jpg, png, webp.</li></ol></li></ol>
      */
     public String getLastFrameUrl() {
         return this.LastFrameUrl;
     }
 
     /**
-     * Set <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only models GV, Kling, and Vidu are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format values: jpeg, jpg, png, webp.</li></ol></li></ol>
-     * @param LastFrameUrl <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only models GV, Kling, and Vidu are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format values: jpeg, jpg, png, webp.</li></ol></li></ol>
+     * Set <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only GV, Kling, and Vidu models are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and the output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>The image size must be less than 5M.</li><li><ol start="3"><li>The value of the image format is: jpeg, jpg, png, webp.</li></ol></li></ol>
+     * @param LastFrameUrl <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only GV, Kling, and Vidu models are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and the output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>The image size must be less than 5M.</li><li><ol start="3"><li>The value of the image format is: jpeg, jpg, png, webp.</li></ol></li></ol>
      */
     public void setLastFrameUrl(String LastFrameUrl) {
         this.LastFrameUrl = LastFrameUrl;
     }
 
     /**
-     * Get <p>Prompt for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p> 
-     * @return Prompt <p>Prompt for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+     * Get <p>Prompt for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p> 
+     * @return Prompt <p>Prompt for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Prompt for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
-     * @param Prompt <p>Prompt for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
+     * Set <p>Prompt for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * @param Prompt <p>Prompt for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
@@ -257,16 +257,16 @@ public class AigcVideoTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p> 
-     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+     * Get <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p> 
+     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
      */
     public String getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
-     * @param EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+     * Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+     * @param EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
      */
     public void setEnhancePrompt(String EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
@@ -289,16 +289,16 @@ public class AigcVideoTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Output result file for AIGC image generation.</p> 
-     * @return OutputConfig <p>Output result file for AIGC image generation.</p>
+     * Get <p>Output result file output for AIGC image generation.</p> 
+     * @return OutputConfig <p>Output result file output for AIGC image generation.</p>
      */
     public AigcVideoOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output result file for AIGC image generation.</p>
-     * @param OutputConfig <p>Output result file for AIGC image generation.</p>
+     * Set <p>Output result file output for AIGC image generation.</p>
+     * @param OutputConfig <p>Output result file output for AIGC image generation.</p>
      */
     public void setOutputConfig(AigcVideoOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
@@ -321,16 +321,16 @@ public class AigcVideoTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control indicates action control;</li><li>Other ModelName values are not currently supported.</li></p> 
-     * @return SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control indicates action control;</li><li>Other ModelName values are not currently supported.</li></p>
+     * Get <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p> 
+     * @return SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control indicates action control;</li><li>Other ModelName values are not currently supported.</li></p>
-     * @param SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control indicates action control;</li><li>Other ModelName values are not currently supported.</li></p>
+     * Set <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
+     * @param SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;

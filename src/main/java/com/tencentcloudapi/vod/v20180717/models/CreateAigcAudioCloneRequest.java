@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class CreateAigcAudioCloneRequest extends AbstractModel {
 
     /**
-    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+    * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
+    * <p>Original audio file (ensure it is accessible). The model will use the voice type of the audio passed in this parameter as an example to clone the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be at least 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 mb; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
     */
     @SerializedName("AudioFileInfo")
     @Expose
     private AigcAudioCloneInputFileInfo AudioFileInfo;
 
     /**
-    * <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
+    * <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will occur.</li></ul>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
+    * <p>Replicate audition parameters.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will be charged based on the number of characters for text to speech.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
+    * <p>Sample audio for voice replication. Providing this parameter will help in enhancing the voice similarity and stability of text to speech. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input limitations: Note 1: Audio formats supported: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be less than 8 seconds; Note 3: The uploaded audio file size should be no more than 20 mb.</p>
     */
     @SerializedName("PromptAudioFileInfo")
     @Expose
     private AigcAudioCloneInputFileInfo PromptAudioFileInfo;
 
     /**
-    * <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
+    * <p>The text content corresponding to the sample audio must match the audio content, and punctuation is required at the end of each sentence.</p>
     */
     @SerializedName("PromptText")
     @Expose
     private String PromptText;
 
     /**
-    * <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
+    * <p>Pass-through parameter. Input parameter limit: without any processing, only data transmission. Note: up to 1048576 characters</p>
     */
     @SerializedName("Payload")
     @Expose
@@ -101,112 +101,112 @@ public class CreateAigcAudioCloneRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
-     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p> 
-     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * Get <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
-     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+     * Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p> 
-     * @return AudioFileInfo <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
+     * Get <p>Original audio file (ensure it is accessible). The model will use the voice type of the audio passed in this parameter as an example to clone the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be at least 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 mb; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p> 
+     * @return AudioFileInfo <p>Original audio file (ensure it is accessible). The model will use the voice type of the audio passed in this parameter as an example to clone the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be at least 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 mb; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
      */
     public AigcAudioCloneInputFileInfo getAudioFileInfo() {
         return this.AudioFileInfo;
     }
 
     /**
-     * Set <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
-     * @param AudioFileInfo <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
+     * Set <p>Original audio file (ensure it is accessible). The model will use the voice type of the audio passed in this parameter as an example to clone the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be at least 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 mb; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
+     * @param AudioFileInfo <p>Original audio file (ensure it is accessible). The model will use the voice type of the audio passed in this parameter as an example to clone the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be at least 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 mb; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
      */
     public void setAudioFileInfo(AigcAudioCloneInputFileInfo AudioFileInfo) {
         this.AudioFileInfo = AudioFileInfo;
     }
 
     /**
-     * Get <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul> 
-     * @return VoiceId <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
+     * Get <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will occur.</li></ul> 
+     * @return VoiceId <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will occur.</li></ul>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
-     * @param VoiceId <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
+     * Set <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will occur.</li></ul>
+     * @param VoiceId <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will occur.</li></ul>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p> 
-     * @return Text <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
+     * Get <p>Replicate audition parameters.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will be charged based on the number of characters for text to speech.</p> 
+     * @return Text <p>Replicate audition parameters.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will be charged based on the number of characters for text to speech.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
-     * @param Text <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
+     * Set <p>Replicate audition parameters.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will be charged based on the number of characters for text to speech.</p>
+     * @param Text <p>Replicate audition parameters.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will be charged based on the number of characters for text to speech.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p> 
-     * @return PromptAudioFileInfo <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
+     * Get <p>Sample audio for voice replication. Providing this parameter will help in enhancing the voice similarity and stability of text to speech. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input limitations: Note 1: Audio formats supported: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be less than 8 seconds; Note 3: The uploaded audio file size should be no more than 20 mb.</p> 
+     * @return PromptAudioFileInfo <p>Sample audio for voice replication. Providing this parameter will help in enhancing the voice similarity and stability of text to speech. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input limitations: Note 1: Audio formats supported: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be less than 8 seconds; Note 3: The uploaded audio file size should be no more than 20 mb.</p>
      */
     public AigcAudioCloneInputFileInfo getPromptAudioFileInfo() {
         return this.PromptAudioFileInfo;
     }
 
     /**
-     * Set <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
-     * @param PromptAudioFileInfo <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
+     * Set <p>Sample audio for voice replication. Providing this parameter will help in enhancing the voice similarity and stability of text to speech. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input limitations: Note 1: Audio formats supported: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be less than 8 seconds; Note 3: The uploaded audio file size should be no more than 20 mb.</p>
+     * @param PromptAudioFileInfo <p>Sample audio for voice replication. Providing this parameter will help in enhancing the voice similarity and stability of text to speech. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input limitations: Note 1: Audio formats supported: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be less than 8 seconds; Note 3: The uploaded audio file size should be no more than 20 mb.</p>
      */
     public void setPromptAudioFileInfo(AigcAudioCloneInputFileInfo PromptAudioFileInfo) {
         this.PromptAudioFileInfo = PromptAudioFileInfo;
     }
 
     /**
-     * Get <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p> 
-     * @return PromptText <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
+     * Get <p>The text content corresponding to the sample audio must match the audio content, and punctuation is required at the end of each sentence.</p> 
+     * @return PromptText <p>The text content corresponding to the sample audio must match the audio content, and punctuation is required at the end of each sentence.</p>
      */
     public String getPromptText() {
         return this.PromptText;
     }
 
     /**
-     * Set <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
-     * @param PromptText <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
+     * Set <p>The text content corresponding to the sample audio must match the audio content, and punctuation is required at the end of each sentence.</p>
+     * @param PromptText <p>The text content corresponding to the sample audio must match the audio content, and punctuation is required at the end of each sentence.</p>
      */
     public void setPromptText(String PromptText) {
         this.PromptText = PromptText;
     }
 
     /**
-     * Get <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p> 
-     * @return Payload <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
+     * Get <p>Pass-through parameter. Input parameter limit: without any processing, only data transmission. Note: up to 1048576 characters</p> 
+     * @return Payload <p>Pass-through parameter. Input parameter limit: without any processing, only data transmission. Note: up to 1048576 characters</p>
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
-     * @param Payload <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
+     * Set <p>Pass-through parameter. Input parameter limit: without any processing, only data transmission. Note: up to 1048576 characters</p>
+     * @param Payload <p>Pass-through parameter. Input parameter limit: without any processing, only data transmission. Note: up to 1048576 characters</p>
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;

@@ -41,7 +41,7 @@ public class ComplexAdaptiveDynamicStreamingTask extends AbstractModel {
     private String Status;
 
     /**
-    * Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
+    * Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
     */
     @SerializedName("ComplexAdaptiveDynamicStreamingTaskResultSet")
     @Expose
@@ -92,16 +92,16 @@ public class ComplexAdaptiveDynamicStreamingTask extends AbstractModel {
     }
 
     /**
-     * Get Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template. 
-     * @return ComplexAdaptiveDynamicStreamingTaskResultSet Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
+     * Get Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template. 
+     * @return ComplexAdaptiveDynamicStreamingTaskResultSet Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
      */
     public ComplexAdaptiveDynamicStreamingTaskResult [] getComplexAdaptiveDynamicStreamingTaskResultSet() {
         return this.ComplexAdaptiveDynamicStreamingTaskResultSet;
     }
 
     /**
-     * Set Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
-     * @param ComplexAdaptiveDynamicStreamingTaskResultSet Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
+     * Set Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
+     * @param ComplexAdaptiveDynamicStreamingTaskResultSet Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
      */
     public void setComplexAdaptiveDynamicStreamingTaskResultSet(ComplexAdaptiveDynamicStreamingTaskResult [] ComplexAdaptiveDynamicStreamingTaskResultSet) {
         this.ComplexAdaptiveDynamicStreamingTaskResultSet = ComplexAdaptiveDynamicStreamingTaskResultSet;

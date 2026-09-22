@@ -52,7 +52,7 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input information for the video start and end recognition task.
+    * Input information of the video opening and closing credits recognition task.
     */
     @SerializedName("Input")
     @Expose
@@ -66,7 +66,7 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
     private AiRecognitionTaskHeadTailResultOutput Output;
 
     /**
-    * Video start and end recognition task progress, in the range of [0,100].
+    * Video opening and closing credits recognition task progress, value ranges from 0 to 100.
     */
     @SerializedName("Progress")
     @Expose
@@ -80,7 +80,7 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
     private String BeginProcessTime;
 
     /**
-    * Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -151,16 +151,16 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
     }
 
     /**
-     * Get Input information for the video start and end recognition task. 
-     * @return Input Input information for the video start and end recognition task.
+     * Get Input information of the video opening and closing credits recognition task. 
+     * @return Input Input information of the video opening and closing credits recognition task.
      */
     public AiRecognitionTaskHeadTailResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input information for the video start and end recognition task.
-     * @param Input Input information for the video start and end recognition task.
+     * Set Input information of the video opening and closing credits recognition task.
+     * @param Input Input information of the video opening and closing credits recognition task.
      */
     public void setInput(AiRecognitionTaskHeadTailResultInput Input) {
         this.Input = Input;
@@ -183,16 +183,16 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
     }
 
     /**
-     * Get Video start and end recognition task progress, in the range of [0,100]. 
-     * @return Progress Video start and end recognition task progress, in the range of [0,100].
+     * Get Video opening and closing credits recognition task progress, value ranges from 0 to 100. 
+     * @return Progress Video opening and closing credits recognition task progress, value ranges from 0 to 100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Video start and end recognition task progress, in the range of [0,100].
-     * @param Progress Video start and end recognition task progress, in the range of [0,100].
+     * Set Video opening and closing credits recognition task progress, value ranges from 0 to 100.
+     * @param Progress Video opening and closing credits recognition task progress, value ranges from 0 to 100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -215,16 +215,16 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
     }
 
     /**
-     * Get Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
