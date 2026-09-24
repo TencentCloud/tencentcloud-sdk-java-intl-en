@@ -38,14 +38,14 @@ public class UpdateAMLCustomerProfileResponse extends AbstractModel {
     private String Result;
 
     /**
-    * <p>Description of results returned</p>
+    * <p>Return result description</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Whether continuous monitoring screening is enabled
+    * <p>Whether continuous monitoring and screening is enabled</p>
     */
     @SerializedName("EnableOngoingScreening")
     @Expose
@@ -91,32 +91,32 @@ public class UpdateAMLCustomerProfileResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Description of results returned</p> 
-     * @return Description <p>Description of results returned</p>
+     * Get <p>Return result description</p> 
+     * @return Description <p>Return result description</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Description of results returned</p>
-     * @param Description <p>Description of results returned</p>
+     * Set <p>Return result description</p>
+     * @param Description <p>Return result description</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Whether continuous monitoring screening is enabled 
-     * @return EnableOngoingScreening Whether continuous monitoring screening is enabled
+     * Get <p>Whether continuous monitoring and screening is enabled</p> 
+     * @return EnableOngoingScreening <p>Whether continuous monitoring and screening is enabled</p>
      */
     public Boolean getEnableOngoingScreening() {
         return this.EnableOngoingScreening;
     }
 
     /**
-     * Set Whether continuous monitoring screening is enabled
-     * @param EnableOngoingScreening Whether continuous monitoring screening is enabled
+     * Set <p>Whether continuous monitoring and screening is enabled</p>
+     * @param EnableOngoingScreening <p>Whether continuous monitoring and screening is enabled</p>
      */
     public void setEnableOngoingScreening(Boolean EnableOngoingScreening) {
         this.EnableOngoingScreening = EnableOngoingScreening;

@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class UpdateAMLCustomerProfileRequest extends AbstractModel {
 
     /**
-    * End user's unique identifier in the customer system, up to 256 characters.
+    * <p>User's unique identifier in the customer system, up to 256 characters.</p>
     */
     @SerializedName("UniqueCustomerID")
     @Expose
     private String UniqueCustomerID;
 
     /**
-    * Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+    * <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
     */
     @SerializedName("EntityType")
     @Expose
     private String EntityType;
 
     /**
-    * Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+    * <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p>
     */
     @SerializedName("Person")
     @Expose
     private Person Person;
 
     /**
-    * Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY.
+    * <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
     */
     @SerializedName("Company")
     @Expose
     private Company Company;
 
     /**
-     * Get End user's unique identifier in the customer system, up to 256 characters. 
-     * @return UniqueCustomerID End user's unique identifier in the customer system, up to 256 characters.
+     * Get <p>User's unique identifier in the customer system, up to 256 characters.</p> 
+     * @return UniqueCustomerID <p>User's unique identifier in the customer system, up to 256 characters.</p>
      */
     public String getUniqueCustomerID() {
         return this.UniqueCustomerID;
     }
 
     /**
-     * Set End user's unique identifier in the customer system, up to 256 characters.
-     * @param UniqueCustomerID End user's unique identifier in the customer system, up to 256 characters.
+     * Set <p>User's unique identifier in the customer system, up to 256 characters.</p>
+     * @param UniqueCustomerID <p>User's unique identifier in the customer system, up to 256 characters.</p>
      */
     public void setUniqueCustomerID(String UniqueCustomerID) {
         this.UniqueCustomerID = UniqueCustomerID;
     }
 
     /**
-     * Get Entity type. Enumeration values: PERSON (individual) / COMPANY (company). 
-     * @return EntityType Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+     * Get <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul> 
+     * @return EntityType <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
      */
     public String getEntityType() {
         return this.EntityType;
     }
 
     /**
-     * Set Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
-     * @param EntityType Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+     * Set <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+     * @param EntityType <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
      */
     public void setEntityType(String EntityType) {
         this.EntityType = EntityType;
     }
 
     /**
-     * Get Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON. 
-     * @return Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+     * Get <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p> 
+     * @return Person <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p>
      */
     public Person getPerson() {
         return this.Person;
     }
 
     /**
-     * Set Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
-     * @param Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+     * Set <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p>
+     * @param Person <p>Personal information, required when EntityType=PERSON</p><p>Input limit: EntityType=PERSON</p>
      */
     public void setPerson(Person Person) {
         this.Person = Person;
     }
 
     /**
-     * Get Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY. 
-     * @return Company Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY.
+     * Get <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p> 
+     * @return Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
      */
     public Company getCompany() {
         return this.Company;
     }
 
     /**
-     * Set Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY.
-     * @param Company Enterprise information, required when EntityType=COMPANY. Input restriction: EntityType=COMPANY.
+     * Set <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
+     * @param Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
      */
     public void setCompany(Company Company) {
         this.Company = Company;

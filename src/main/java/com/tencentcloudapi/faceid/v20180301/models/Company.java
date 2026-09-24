@@ -38,7 +38,7 @@ public class Company extends AbstractModel {
     private String CompanyCertNumber;
 
     /**
-    * <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+    * <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
     */
     @SerializedName("CompanyCountry")
     @Expose
@@ -84,16 +84,16 @@ public class Company extends AbstractModel {
     }
 
     /**
-     * Get <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p> 
-     * @return CompanyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+     * Get <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p> 
+     * @return CompanyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
      */
     public String getCompanyCountry() {
         return this.CompanyCountry;
     }
 
     /**
-     * Set <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
-     * @param CompanyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+     * Set <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
+     * @param CompanyCountry <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
      */
     public void setCompanyCountry(String CompanyCountry) {
         this.CompanyCountry = CompanyCountry;

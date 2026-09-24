@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplyUploadResponse extends AbstractModel {
 
     /**
-    * <p>Bucket, used as the bucket_name for uploading API URL.</p>
+    * <p>Bucket, the bucket_name for uploading API URL.</p>
     */
     @SerializedName("StorageBucket")
     @Expose
@@ -38,14 +38,14 @@ public class ApplyUploadResponse extends AbstractModel {
     private String StorageRegion;
 
     /**
-    * <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
+    * <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
     */
     @SerializedName("VodSessionKey")
     @Expose
     private String VodSessionKey;
 
     /**
-    * <p>Media storage path, the object Key for uploading and storing media through the API.</p>
+    * <p>Media storage path, the object Key for uploading and storing media via the API.</p>
     */
     @SerializedName("MediaStoragePath")
     @Expose
@@ -73,16 +73,16 @@ public class ApplyUploadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Bucket, used as the bucket_name for uploading API URL.</p> 
-     * @return StorageBucket <p>Bucket, used as the bucket_name for uploading API URL.</p>
+     * Get <p>Bucket, the bucket_name for uploading API URL.</p> 
+     * @return StorageBucket <p>Bucket, the bucket_name for uploading API URL.</p>
      */
     public String getStorageBucket() {
         return this.StorageBucket;
     }
 
     /**
-     * Set <p>Bucket, used as the bucket_name for uploading API URL.</p>
-     * @param StorageBucket <p>Bucket, used as the bucket_name for uploading API URL.</p>
+     * Set <p>Bucket, the bucket_name for uploading API URL.</p>
+     * @param StorageBucket <p>Bucket, the bucket_name for uploading API URL.</p>
      */
     public void setStorageBucket(String StorageBucket) {
         this.StorageBucket = StorageBucket;
@@ -105,32 +105,32 @@ public class ApplyUploadResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p> 
-     * @return VodSessionKey <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
+     * Get <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p> 
+     * @return VodSessionKey <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
      */
     public String getVodSessionKey() {
         return this.VodSessionKey;
     }
 
     /**
-     * Set <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
-     * @param VodSessionKey <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
+     * Set <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+     * @param VodSessionKey <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
      */
     public void setVodSessionKey(String VodSessionKey) {
         this.VodSessionKey = VodSessionKey;
     }
 
     /**
-     * Get <p>Media storage path, the object Key for uploading and storing media through the API.</p> 
-     * @return MediaStoragePath <p>Media storage path, the object Key for uploading and storing media through the API.</p>
+     * Get <p>Media storage path, the object Key for uploading and storing media via the API.</p> 
+     * @return MediaStoragePath <p>Media storage path, the object Key for uploading and storing media via the API.</p>
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set <p>Media storage path, the object Key for uploading and storing media through the API.</p>
-     * @param MediaStoragePath <p>Media storage path, the object Key for uploading and storing media through the API.</p>
+     * Set <p>Media storage path, the object Key for uploading and storing media via the API.</p>
+     * @param MediaStoragePath <p>Media storage path, the object Key for uploading and storing media via the API.</p>
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;

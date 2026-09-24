@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LiveRealTimeClipMediaSegmentInfo extends AbstractModel {
 
     /**
-    * Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format.
     */
     @SerializedName("StartTime")
     @Expose
@@ -38,16 +38,16 @@ public class LiveRealTimeClipMediaSegmentInfo extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return StartTime Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format. 
+     * @return StartTime Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param StartTime Segment start time. For the format, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format.
+     * @param StartTime Segment start time. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I) for the format.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

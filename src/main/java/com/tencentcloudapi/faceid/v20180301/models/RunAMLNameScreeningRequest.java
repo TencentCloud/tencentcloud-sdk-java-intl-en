@@ -31,30 +31,28 @@ public class RunAMLNameScreeningRequest extends AbstractModel {
     private String UniqueCustomerID;
 
     /**
-    * Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+    * <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
     */
     @SerializedName("EntityType")
     @Expose
     private String EntityType;
 
     /**
-    * Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+    * <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
     */
     @SerializedName("Person")
     @Expose
     private Person Person;
 
     /**
-    * Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
+    * <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
     */
     @SerializedName("Company")
     @Expose
     private Company Company;
 
     /**
-    * Whether continuous monitoring screening is enabled. Default value: false.
+    * <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
     */
     @SerializedName("EnableOngoingScreening")
     @Expose
@@ -77,72 +75,64 @@ Input restriction: EntityType=COMPANY.
     }
 
     /**
-     * Get Entity type. Enumeration values: PERSON (individual) / COMPANY (company). 
-     * @return EntityType Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+     * Get <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul> 
+     * @return EntityType <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
      */
     public String getEntityType() {
         return this.EntityType;
     }
 
     /**
-     * Set Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
-     * @param EntityType Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+     * Set <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
+     * @param EntityType <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
      */
     public void setEntityType(String EntityType) {
         this.EntityType = EntityType;
     }
 
     /**
-     * Get Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON. 
-     * @return Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+     * Get <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p> 
+     * @return Person <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
      */
     public Person getPerson() {
         return this.Person;
     }
 
     /**
-     * Set Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
-     * @param Person Personal information, required when EntityType=PERSON. 
-Input restriction: EntityType=PERSON.
+     * Set <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
+     * @param Person <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
      */
     public void setPerson(Person Person) {
         this.Person = Person;
     }
 
     /**
-     * Get Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY. 
-     * @return Company Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
+     * Get <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p> 
+     * @return Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
      */
     public Company getCompany() {
         return this.Company;
     }
 
     /**
-     * Set Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
-     * @param Company Enterprise information, required when EntityType=COMPANY. 
-Input restriction: EntityType=COMPANY.
+     * Set <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
+     * @param Company <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
      */
     public void setCompany(Company Company) {
         this.Company = Company;
     }
 
     /**
-     * Get Whether continuous monitoring screening is enabled. Default value: false. 
-     * @return EnableOngoingScreening Whether continuous monitoring screening is enabled. Default value: false.
+     * Get <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p> 
+     * @return EnableOngoingScreening <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
      */
     public Boolean getEnableOngoingScreening() {
         return this.EnableOngoingScreening;
     }
 
     /**
-     * Set Whether continuous monitoring screening is enabled. Default value: false.
-     * @param EnableOngoingScreening Whether continuous monitoring screening is enabled. Default value: false.
+     * Set <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
+     * @param EnableOngoingScreening <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
      */
     public void setEnableOngoingScreening(Boolean EnableOngoingScreening) {
         this.EnableOngoingScreening = EnableOngoingScreening;

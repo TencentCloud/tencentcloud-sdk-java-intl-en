@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class Person extends AbstractModel {
 
     /**
-    * <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
+    * <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * <p>name (Either this field or FullName is required)</p>
+    * <p>name (either this or FullName is required)</p>
     */
     @SerializedName("LastName")
     @Expose
     private String LastName;
 
     /**
-    * <p>First name (Option)</p>
+    * <p>First name (optional)</p>
     */
     @SerializedName("FirstName")
     @Expose
     private String FirstName;
 
     /**
-    * <p>Middle name (Option)</p>
+    * <p>Middle name (optional)</p>
     */
     @SerializedName("MiddleName")
     @Expose
@@ -94,64 +94,64 @@ public class Person extends AbstractModel {
     private String Country;
 
     /**
-     * Get <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p> 
-     * @return FullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
+     * Get <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p> 
+     * @return FullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
-     * @param FullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
+     * Set <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
+     * @param FullName <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get <p>name (Either this field or FullName is required)</p> 
-     * @return LastName <p>name (Either this field or FullName is required)</p>
+     * Get <p>name (either this or FullName is required)</p> 
+     * @return LastName <p>name (either this or FullName is required)</p>
      */
     public String getLastName() {
         return this.LastName;
     }
 
     /**
-     * Set <p>name (Either this field or FullName is required)</p>
-     * @param LastName <p>name (Either this field or FullName is required)</p>
+     * Set <p>name (either this or FullName is required)</p>
+     * @param LastName <p>name (either this or FullName is required)</p>
      */
     public void setLastName(String LastName) {
         this.LastName = LastName;
     }
 
     /**
-     * Get <p>First name (Option)</p> 
-     * @return FirstName <p>First name (Option)</p>
+     * Get <p>First name (optional)</p> 
+     * @return FirstName <p>First name (optional)</p>
      */
     public String getFirstName() {
         return this.FirstName;
     }
 
     /**
-     * Set <p>First name (Option)</p>
-     * @param FirstName <p>First name (Option)</p>
+     * Set <p>First name (optional)</p>
+     * @param FirstName <p>First name (optional)</p>
      */
     public void setFirstName(String FirstName) {
         this.FirstName = FirstName;
     }
 
     /**
-     * Get <p>Middle name (Option)</p> 
-     * @return MiddleName <p>Middle name (Option)</p>
+     * Get <p>Middle name (optional)</p> 
+     * @return MiddleName <p>Middle name (optional)</p>
      */
     public String getMiddleName() {
         return this.MiddleName;
     }
 
     /**
-     * Set <p>Middle name (Option)</p>
-     * @param MiddleName <p>Middle name (Option)</p>
+     * Set <p>Middle name (optional)</p>
+     * @param MiddleName <p>Middle name (optional)</p>
      */
     public void setMiddleName(String MiddleName) {
         this.MiddleName = MiddleName;

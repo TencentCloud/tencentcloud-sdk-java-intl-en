@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MediaAudioStreamItem extends AbstractModel {
 
     /**
-    * <p>Bitrate of the audio stream. Unit: bps.</p>
+    * <p>Audio stream bitrate, in bps.</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * <p>Sampling rate of the audio stream. Unit: hz.</p>
+    * <p>Sampling rate of the audio stream, unit: hz.</p>
     */
     @SerializedName("SamplingRate")
     @Expose
@@ -45,32 +45,32 @@ public class MediaAudioStreamItem extends AbstractModel {
     private String Codec;
 
     /**
-     * Get <p>Bitrate of the audio stream. Unit: bps.</p> 
-     * @return Bitrate <p>Bitrate of the audio stream. Unit: bps.</p>
+     * Get <p>Audio stream bitrate, in bps.</p> 
+     * @return Bitrate <p>Audio stream bitrate, in bps.</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set <p>Bitrate of the audio stream. Unit: bps.</p>
-     * @param Bitrate <p>Bitrate of the audio stream. Unit: bps.</p>
+     * Set <p>Audio stream bitrate, in bps.</p>
+     * @param Bitrate <p>Audio stream bitrate, in bps.</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get <p>Sampling rate of the audio stream. Unit: hz.</p> 
-     * @return SamplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
+     * Get <p>Sampling rate of the audio stream, unit: hz.</p> 
+     * @return SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
      */
     public Long getSamplingRate() {
         return this.SamplingRate;
     }
 
     /**
-     * Set <p>Sampling rate of the audio stream. Unit: hz.</p>
-     * @param SamplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
+     * Set <p>Sampling rate of the audio stream, unit: hz.</p>
+     * @param SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
      */
     public void setSamplingRate(Long SamplingRate) {
         this.SamplingRate = SamplingRate;

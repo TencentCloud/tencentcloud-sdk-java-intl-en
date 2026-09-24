@@ -31,21 +31,21 @@ public class MediaVideoStreamItem extends AbstractModel {
     private Long Bitrate;
 
     /**
-    * Height of the video stream. Unit: px.
+    * Height of the video stream in px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Video stream width. Unit: px.
+    * Video stream width in px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Video stream encoding format, for example h264.
+    * Video stream encoding format, for example, h264.
     */
     @SerializedName("Codec")
     @Expose
@@ -59,14 +59,14 @@ public class MediaVideoStreamItem extends AbstractModel {
     private Long Fps;
 
     /**
-    * Encoding tag, valid only when Codec is hevc.
+    * Encoding tag. Valid only when Codec is hevc.
     */
     @SerializedName("CodecTag")
     @Expose
     private String CodecTag;
 
     /**
-    * Dynamic range information of the frame.
+    * Visual dynamic range information.
 <li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
     */
     @SerializedName("DynamicRangeInfo")
@@ -90,48 +90,48 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get Height of the video stream. Unit: px. 
-     * @return Height Height of the video stream. Unit: px.
+     * Get Height of the video stream in px. 
+     * @return Height Height of the video stream in px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height of the video stream. Unit: px.
-     * @param Height Height of the video stream. Unit: px.
+     * Set Height of the video stream in px.
+     * @param Height Height of the video stream in px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Video stream width. Unit: px. 
-     * @return Width Video stream width. Unit: px.
+     * Get Video stream width in px. 
+     * @return Width Video stream width in px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Video stream width. Unit: px.
-     * @param Width Video stream width. Unit: px.
+     * Set Video stream width in px.
+     * @param Width Video stream width in px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Video stream encoding format, for example h264. 
-     * @return Codec Video stream encoding format, for example h264.
+     * Get Video stream encoding format, for example, h264. 
+     * @return Codec Video stream encoding format, for example, h264.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Video stream encoding format, for example h264.
-     * @param Codec Video stream encoding format, for example h264.
+     * Set Video stream encoding format, for example, h264.
+     * @param Codec Video stream encoding format, for example, h264.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -154,25 +154,25 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get Encoding tag, valid only when Codec is hevc. 
-     * @return CodecTag Encoding tag, valid only when Codec is hevc.
+     * Get Encoding tag. Valid only when Codec is hevc. 
+     * @return CodecTag Encoding tag. Valid only when Codec is hevc.
      */
     public String getCodecTag() {
         return this.CodecTag;
     }
 
     /**
-     * Set Encoding tag, valid only when Codec is hevc.
-     * @param CodecTag Encoding tag, valid only when Codec is hevc.
+     * Set Encoding tag. Valid only when Codec is hevc.
+     * @param CodecTag Encoding tag. Valid only when Codec is hevc.
      */
     public void setCodecTag(String CodecTag) {
         this.CodecTag = CodecTag;
     }
 
     /**
-     * Get Dynamic range information of the frame.
+     * Get Visual dynamic range information.
 <li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li> 
-     * @return DynamicRangeInfo Dynamic range information of the frame.
+     * @return DynamicRangeInfo Visual dynamic range information.
 <li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public DynamicRangeInfo getDynamicRangeInfo() {
@@ -180,9 +180,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Set Dynamic range information of the frame.
+     * Set Visual dynamic range information.
 <li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
-     * @param DynamicRangeInfo Dynamic range information of the frame.
+     * @param DynamicRangeInfo Visual dynamic range information.
 <li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
      */
     public void setDynamicRangeInfo(DynamicRangeInfo DynamicRangeInfo) {

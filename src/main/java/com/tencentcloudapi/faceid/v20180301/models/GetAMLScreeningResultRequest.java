@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetAMLScreeningResultRequest extends AbstractModel {
 
     /**
-    * <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+    * <p>User's unique identifier in the customer system, up to 256 characters.</p>
     */
     @SerializedName("UniqueCustomerID")
     @Expose
     private String UniqueCustomerID;
 
     /**
-     * Get <p>Unique identifier of the end user in the customer system, up to 256 characters.</p> 
-     * @return UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+     * Get <p>User's unique identifier in the customer system, up to 256 characters.</p> 
+     * @return UniqueCustomerID <p>User's unique identifier in the customer system, up to 256 characters.</p>
      */
     public String getUniqueCustomerID() {
         return this.UniqueCustomerID;
     }
 
     /**
-     * Set <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
-     * @param UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+     * Set <p>User's unique identifier in the customer system, up to 256 characters.</p>
+     * @param UniqueCustomerID <p>User's unique identifier in the customer system, up to 256 characters.</p>
      */
     public void setUniqueCustomerID(String UniqueCustomerID) {
         this.UniqueCustomerID = UniqueCustomerID;

@@ -218,7 +218,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     }
 
     /**
-     *Queries the AML name list screening result.
+     *Status change of continuous name list screening
      * @param req GetAMLScreeningResultRequest
      * @return GetAMLScreeningResultResponse
      * @throws TencentCloudSDKException
@@ -404,7 +404,7 @@ This API on the legacy version will continue to serve existing users but will be
     }
 
     /**
-     *AML name list screening
+     *AML list screening
      * @param req RunAMLNameScreeningRequest
      * @return RunAMLNameScreeningResponse
      * @throws TencentCloudSDKException
@@ -415,7 +415,7 @@ This API on the legacy version will continue to serve existing users but will be
     }
 
     /**
-     *AML name list screening
+     *AML list screening
      * @param req UpdateAMLCustomerProfileRequest
      * @return UpdateAMLCustomerProfileResponse
      * @throws TencentCloudSDKException
