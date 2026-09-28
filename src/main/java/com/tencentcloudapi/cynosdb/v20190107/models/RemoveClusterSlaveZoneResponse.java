@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoveClusterSlaveZoneResponse extends AbstractModel {
 
     /**
-    * Async FlowId
+    * <p>Async FlowId</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class RemoveClusterSlaveZoneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async FlowId 
-     * @return FlowId Async FlowId
+     * Get <p>Async FlowId</p> 
+     * @return FlowId <p>Async FlowId</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Async FlowId
-     * @param FlowId Async FlowId
+     * Set <p>Async FlowId</p>
+     * @param FlowId <p>Async FlowId</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

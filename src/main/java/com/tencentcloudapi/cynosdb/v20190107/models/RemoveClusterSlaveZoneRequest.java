@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RemoveClusterSlaveZoneRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Replica AZ
+    * <p>Secondary AZ</p>
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Replica AZ 
-     * @return SlaveZone Replica AZ
+     * Get <p>Secondary AZ</p> 
+     * @return SlaveZone <p>Secondary AZ</p>
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set Replica AZ
-     * @param SlaveZone Replica AZ
+     * Set <p>Secondary AZ</p>
+     * @param SlaveZone <p>Secondary AZ</p>
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;

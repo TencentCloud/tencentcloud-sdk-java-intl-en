@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyClusterSlaveZoneRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster Id.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Old replica AZ
+    * <p>Old secondary AZ</p>
     */
     @SerializedName("OldSlaveZone")
     @Expose
     private String OldSlaveZone;
 
     /**
-    * New replica AZ
+    * <p>New secondary AZ</p>
     */
     @SerializedName("NewSlaveZone")
     @Expose
     private String NewSlaveZone;
 
     /**
-    * Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+    * <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
     */
     @SerializedName("BinlogSyncWay")
     @Expose
     private String BinlogSyncWay;
 
     /**
-    * Semi-sync timeout in ms. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, supporting up to 4294967295 ms, with a default of 10000 ms.
+    * <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary AZ cluster exceeds this timeout period while waiting for the standby AZ cluster to confirm a transaction, the replication method degrades to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default: 10000 ms.</p>
     */
     @SerializedName("SemiSyncTimeout")
     @Expose
     private Long SemiSyncTimeout;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster Id.</p> 
+     * @return ClusterId <p>Cluster Id.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster Id.</p>
+     * @param ClusterId <p>Cluster Id.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Old replica AZ 
-     * @return OldSlaveZone Old replica AZ
+     * Get <p>Old secondary AZ</p> 
+     * @return OldSlaveZone <p>Old secondary AZ</p>
      */
     public String getOldSlaveZone() {
         return this.OldSlaveZone;
     }
 
     /**
-     * Set Old replica AZ
-     * @param OldSlaveZone Old replica AZ
+     * Set <p>Old secondary AZ</p>
+     * @param OldSlaveZone <p>Old secondary AZ</p>
      */
     public void setOldSlaveZone(String OldSlaveZone) {
         this.OldSlaveZone = OldSlaveZone;
     }
 
     /**
-     * Get New replica AZ 
-     * @return NewSlaveZone New replica AZ
+     * Get <p>New secondary AZ</p> 
+     * @return NewSlaveZone <p>New secondary AZ</p>
      */
     public String getNewSlaveZone() {
         return this.NewSlaveZone;
     }
 
     /**
-     * Set New replica AZ
-     * @param NewSlaveZone New replica AZ
+     * Set <p>New secondary AZ</p>
+     * @param NewSlaveZone <p>New secondary AZ</p>
      */
     public void setNewSlaveZone(String NewSlaveZone) {
         this.NewSlaveZone = NewSlaveZone;
     }
 
     /**
-     * Get Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async. 
-     * @return BinlogSyncWay Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+     * Get <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p> 
+     * @return BinlogSyncWay <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
      */
     public String getBinlogSyncWay() {
         return this.BinlogSyncWay;
     }
 
     /**
-     * Set Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
-     * @param BinlogSyncWay Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+     * Set <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
+     * @param BinlogSyncWay <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
      */
     public void setBinlogSyncWay(String BinlogSyncWay) {
         this.BinlogSyncWay = BinlogSyncWay;
     }
 
     /**
-     * Get Semi-sync timeout in ms. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, supporting up to 4294967295 ms, with a default of 10000 ms. 
-     * @return SemiSyncTimeout Semi-sync timeout in ms. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, supporting up to 4294967295 ms, with a default of 10000 ms.
+     * Get <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary AZ cluster exceeds this timeout period while waiting for the standby AZ cluster to confirm a transaction, the replication method degrades to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default: 10000 ms.</p> 
+     * @return SemiSyncTimeout <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary AZ cluster exceeds this timeout period while waiting for the standby AZ cluster to confirm a transaction, the replication method degrades to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default: 10000 ms.</p>
      */
     public Long getSemiSyncTimeout() {
         return this.SemiSyncTimeout;
     }
 
     /**
-     * Set Semi-sync timeout in ms. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, supporting up to 4294967295 ms, with a default of 10000 ms.
-     * @param SemiSyncTimeout Semi-sync timeout in ms. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, supporting up to 4294967295 ms, with a default of 10000 ms.
+     * Set <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary AZ cluster exceeds this timeout period while waiting for the standby AZ cluster to confirm a transaction, the replication method degrades to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default: 10000 ms.</p>
+     * @param SemiSyncTimeout <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary AZ cluster exceeds this timeout period while waiting for the standby AZ cluster to confirm a transaction, the replication method degrades to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default: 10000 ms.</p>
      */
     public void setSemiSyncTimeout(Long SemiSyncTimeout) {
         this.SemiSyncTimeout = SemiSyncTimeout;

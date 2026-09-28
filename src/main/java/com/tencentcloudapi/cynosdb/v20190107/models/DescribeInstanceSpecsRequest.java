@@ -52,6 +52,13 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
     private String ClusterLevel;
 
     /**
+    * <p>AZ.</p>
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get <p>Database type, value ranges from...to... </p><li> MYSQL </li> 
      * @return DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
      */
@@ -115,6 +122,22 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         this.ClusterLevel = ClusterLevel;
     }
 
+    /**
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public DescribeInstanceSpecsRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         if (source.ClusterLevel != null) {
             this.ClusterLevel = new String(source.ClusterLevel);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

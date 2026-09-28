@@ -61,7 +61,7 @@ public class RceClient extends AbstractClient{
     }
 
     /**
-     *Environment Risk Assessment
+     *Performs risk identification based on the client IP provided as input. Provides environmental risk assessment (including risk level and risk labels), along with IP geolocation and network information.
      * @param req AssessEnvironmentRiskRequest
      * @return AssessEnvironmentRiskResponse
      * @throws TencentCloudSDKException

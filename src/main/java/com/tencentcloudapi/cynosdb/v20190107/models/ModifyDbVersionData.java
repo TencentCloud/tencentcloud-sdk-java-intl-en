@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyDbVersionData extends AbstractModel {
 
     /**
-    * Version before modification.
+    * <p>Version before modification</p>
     */
     @SerializedName("OldVersion")
     @Expose
     private String OldVersion;
 
     /**
-    * Version after modification.
+    * <p>Modified version</p>
     */
     @SerializedName("NewVersion")
     @Expose
     private String NewVersion;
 
     /**
-    * Upgrade method.
+    * <p>Upgrade method</p>
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-     * Get Version before modification. 
-     * @return OldVersion Version before modification.
+     * Get <p>Version before modification</p> 
+     * @return OldVersion <p>Version before modification</p>
      */
     public String getOldVersion() {
         return this.OldVersion;
     }
 
     /**
-     * Set Version before modification.
-     * @param OldVersion Version before modification.
+     * Set <p>Version before modification</p>
+     * @param OldVersion <p>Version before modification</p>
      */
     public void setOldVersion(String OldVersion) {
         this.OldVersion = OldVersion;
     }
 
     /**
-     * Get Version after modification. 
-     * @return NewVersion Version after modification.
+     * Get <p>Modified version</p> 
+     * @return NewVersion <p>Modified version</p>
      */
     public String getNewVersion() {
         return this.NewVersion;
     }
 
     /**
-     * Set Version after modification.
-     * @param NewVersion Version after modification.
+     * Set <p>Modified version</p>
+     * @param NewVersion <p>Modified version</p>
      */
     public void setNewVersion(String NewVersion) {
         this.NewVersion = NewVersion;
     }
 
     /**
-     * Get Upgrade method. 
-     * @return UpgradeType Upgrade method.
+     * Get <p>Upgrade method</p> 
+     * @return UpgradeType <p>Upgrade method</p>
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set Upgrade method.
-     * @param UpgradeType Upgrade method.
+     * Set <p>Upgrade method</p>
+     * @param UpgradeType <p>Upgrade method</p>
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

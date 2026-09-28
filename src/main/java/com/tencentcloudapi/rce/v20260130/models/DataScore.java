@@ -38,7 +38,7 @@ public class DataScore extends AbstractModel {
     private RiskLabel [] RiskLabels;
 
     /**
-    * <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+    * <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
     */
     @SerializedName("RiskScore")
     @Expose
@@ -77,16 +77,16 @@ public class DataScore extends AbstractModel {
     }
 
     /**
-     * Get <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p> 
-     * @return RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+     * Get <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p> 
+     * @return RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
      */
     public Long getRiskScore() {
         return this.RiskScore;
     }
 
     /**
-     * Set <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
-     * @param RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+     * Set <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
+     * @param RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
      */
     public void setRiskScore(Long RiskScore) {
         this.RiskScore = RiskScore;

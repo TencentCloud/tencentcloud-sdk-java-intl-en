@@ -276,6 +276,27 @@ public class CynosdbInstanceDetail extends AbstractModel {
     private String MasterZone;
 
     /**
+    * <p>Actual availability zone of the instance</p>
+    */
+    @SerializedName("RealZone")
+    @Expose
+    private String RealZone;
+
+    /**
+    * <p>List of standby availability zones</p>
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private String [] SlaveZones;
+
+    /**
+    * <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+    */
+    @SerializedName("StorageVersion")
+    @Expose
+    private String StorageVersion;
+
+    /**
      * Get <p>User Uin</p> 
      * @return Uin <p>User Uin</p>
      */
@@ -851,6 +872,54 @@ public class CynosdbInstanceDetail extends AbstractModel {
         this.MasterZone = MasterZone;
     }
 
+    /**
+     * Get <p>Actual availability zone of the instance</p> 
+     * @return RealZone <p>Actual availability zone of the instance</p>
+     */
+    public String getRealZone() {
+        return this.RealZone;
+    }
+
+    /**
+     * Set <p>Actual availability zone of the instance</p>
+     * @param RealZone <p>Actual availability zone of the instance</p>
+     */
+    public void setRealZone(String RealZone) {
+        this.RealZone = RealZone;
+    }
+
+    /**
+     * Get <p>List of standby availability zones</p> 
+     * @return SlaveZones <p>List of standby availability zones</p>
+     */
+    public String [] getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set <p>List of standby availability zones</p>
+     * @param SlaveZones <p>List of standby availability zones</p>
+     */
+    public void setSlaveZones(String [] SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
+    /**
+     * Get <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul> 
+     * @return StorageVersion <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+     */
+    public String getStorageVersion() {
+        return this.StorageVersion;
+    }
+
+    /**
+     * Set <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+     * @param StorageVersion <p>Storage edition</p><p>Enumeration values:</p><ul><li>1.0: 1.0 storage</li><li>2.0: 2.0 storage</li></ul>
+     */
+    public void setStorageVersion(String StorageVersion) {
+        this.StorageVersion = StorageVersion;
+    }
+
     public CynosdbInstanceDetail() {
     }
 
@@ -967,6 +1036,18 @@ public class CynosdbInstanceDetail extends AbstractModel {
         if (source.MasterZone != null) {
             this.MasterZone = new String(source.MasterZone);
         }
+        if (source.RealZone != null) {
+            this.RealZone = new String(source.RealZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new String[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new String(source.SlaveZones[i]);
+            }
+        }
+        if (source.StorageVersion != null) {
+            this.StorageVersion = new String(source.StorageVersion);
+        }
     }
 
 
@@ -1010,6 +1091,9 @@ public class CynosdbInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamSimple(map, prefix + "RealZone", this.RealZone);
+        this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
 
     }
 }

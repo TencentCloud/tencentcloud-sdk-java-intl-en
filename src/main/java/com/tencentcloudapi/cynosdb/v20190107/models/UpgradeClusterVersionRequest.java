@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UpgradeClusterVersionRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Kernel version
+    * <p>Kernel version</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+    * <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Kernel version 
-     * @return CynosVersion Kernel version
+     * Get <p>Kernel version</p> 
+     * @return CynosVersion <p>Kernel version</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set Kernel version
-     * @param CynosVersion Kernel version
+     * Set <p>Kernel version</p>
+     * @param CynosVersion <p>Kernel version</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`. 
-     * @return UpgradeType Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+     * Get <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p> 
+     * @return UpgradeType <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
-     * @param UpgradeType Upgrade time type. Valid values: `upgradeImmediate`, `upgradeInMaintain`.
+     * Set <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
+     * @param UpgradeType <p>Upgrade time type. Options: upgradeImmediate, upgradeInMaintain</p>
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
