@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PrometheusRuleKV extends AbstractModel {
 
     /**
-    * Key
+    * <p>Key</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Value
+    * <p>Value.</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Key 
-     * @return Key Key
+     * Get <p>Key</p> 
+     * @return Key <p>Key</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key
-     * @param Key Key
+     * Set <p>Key</p>
+     * @param Key <p>Key</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Value 
-     * @return Value Value
+     * Get <p>Value.</p> 
+     * @return Value <p>Value.</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Value
-     * @param Value Value
+     * Set <p>Value.</p>
+     * @param Value <p>Value.</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

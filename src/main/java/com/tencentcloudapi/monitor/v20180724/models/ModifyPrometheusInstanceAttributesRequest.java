@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyPrometheusInstanceAttributesRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+    * <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p>
     */
     @SerializedName("DataRetentionTime")
     @Expose
     private Long DataRetentionTime;
 
     /**
-    * 
+    * <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
     */
     @SerializedName("InstanceAttributes")
     @Expose
     private PrometheusRuleKV [] InstanceAttributes;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance ID</p> 
+     * @return InstanceId <p>Instance ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID</p>
+     * @param InstanceId <p>Instance ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances. 
-     * @return DataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+     * Get <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p> 
+     * @return DataRetentionTime <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p>
      */
     public Long getDataRetentionTime() {
         return this.DataRetentionTime;
     }
 
     /**
-     * Set Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
-     * @param DataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+     * Set <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p>
+     * @param DataRetentionTime <p>Data retention period (in days). The limit value is one of 15, 30, 45, 90, 180, 365, 730</p>
      */
     public void setDataRetentionTime(Long DataRetentionTime) {
         this.DataRetentionTime = DataRetentionTime;
     }
 
     /**
-     * Get  
-     * @return InstanceAttributes 
+     * Get <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p> 
+     * @return InstanceAttributes <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
      */
     public PrometheusRuleKV [] getInstanceAttributes() {
         return this.InstanceAttributes;
     }
 
     /**
-     * Set 
-     * @param InstanceAttributes 
+     * Set <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+     * @param InstanceAttributes <p>Flag for special attributes of a prom instance</p><p>Archive storage duration (days):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
      */
     public void setInstanceAttributes(PrometheusRuleKV [] InstanceAttributes) {
         this.InstanceAttributes = InstanceAttributes;

@@ -61,17 +61,6 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *This API is used to determine whether the user is new to TMP, that is, whether the user has never created a TMP instance in any region.
-     * @param req CheckIsPrometheusNewUserRequest
-     * @return CheckIsPrometheusNewUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckIsPrometheusNewUserResponse CheckIsPrometheusNewUser(CheckIsPrometheusNewUserRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CheckIsPrometheusNewUser", CheckIsPrometheusNewUserResponse.class);
-    }
-
-    /**
      *This API is used to forcibly terminate a Grafana instance.
      * @param req CleanGrafanaInstanceRequest
      * @return CleanGrafanaInstanceResponse
@@ -316,19 +305,6 @@ This API is used to enable individually creating enabled/disabled alert rules un
     public CreateSSOAccountResponse CreateSSOAccount(CreateSSOAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSSOAccount", CreateSSOAccountResponse.class);
-    }
-
-    /**
-     *This API is used to create a Prometheus scrape configuration in TKE.
-<p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
-<a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
-     * @param req CreateServiceDiscoveryRequest
-     * @return CreateServiceDiscoveryResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateServiceDiscoveryResponse CreateServiceDiscovery(CreateServiceDiscoveryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateServiceDiscovery", CreateServiceDiscoveryResponse.class);
     }
 
     /**
@@ -1064,17 +1040,6 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
-     *This API is used to get the YAML list of Prometheus recording rules.
-     * @param req DescribePrometheusRecordRuleYamlRequest
-     * @return DescribePrometheusRecordRuleYamlResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYaml(DescribePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribePrometheusRecordRuleYaml", DescribePrometheusRecordRuleYamlResponse.class);
-    }
-
-    /**
      *This API is used to get the list of recording rules, including those created by CRD resources in the associated cluster.
      * @param req DescribePrometheusRecordRulesRequest
      * @return DescribePrometheusRecordRulesResponse
@@ -1160,19 +1125,6 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeSSOAccountResponse DescribeSSOAccount(DescribeSSOAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSSOAccount", DescribeSSOAccountResponse.class);
-    }
-
-    /**
-     *This API is used to list Prometheus scrape configurations in TKE.
-<p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
-<a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
-     * @param req DescribeServiceDiscoveryRequest
-     * @return DescribeServiceDiscoveryResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeServiceDiscoveryResponse DescribeServiceDiscovery(DescribeServiceDiscoveryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeServiceDiscovery", DescribeServiceDiscoveryResponse.class);
     }
 
     /**
@@ -1515,17 +1467,6 @@ It is recommended to use the ExportPrometheusReadOnlyDynamicAPI call for Read AP
     public RunPrometheusInstanceResponse RunPrometheusInstance(RunPrometheusInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RunPrometheusInstance", RunPrometheusInstanceResponse.class);
-    }
-
-    /**
-     *This API is used to send a custom alarm notification.
-     * @param req SendCustomAlarmMsgRequest
-     * @return SendCustomAlarmMsgResponse
-     * @throws TencentCloudSDKException
-     */
-    public SendCustomAlarmMsgResponse SendCustomAlarmMsg(SendCustomAlarmMsgRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SendCustomAlarmMsg", SendCustomAlarmMsgResponse.class);
     }
 
     /**
