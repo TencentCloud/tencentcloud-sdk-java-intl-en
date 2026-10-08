@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcVideoReferenceSubjectInfo extends AbstractModel {
 
     /**
-    * <p>ID of the reference subject.</p>
+    * <p>ID of the referenced entity.</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,7 +38,7 @@ public class AigcVideoReferenceSubjectInfo extends AbstractModel {
     private String Name;
 
     /**
-    * <p>Main voice ID.</p>
+    * <p>Main voice type ID.</p>
     */
     @SerializedName("VoiceId")
     @Expose
@@ -59,16 +59,16 @@ public class AigcVideoReferenceSubjectInfo extends AbstractModel {
     private String [] VideoUrls;
 
     /**
-     * Get <p>ID of the reference subject.</p> 
-     * @return Id <p>ID of the reference subject.</p>
+     * Get <p>ID of the referenced entity.</p> 
+     * @return Id <p>ID of the referenced entity.</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>ID of the reference subject.</p>
-     * @param Id <p>ID of the reference subject.</p>
+     * Set <p>ID of the referenced entity.</p>
+     * @param Id <p>ID of the referenced entity.</p>
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -91,16 +91,16 @@ public class AigcVideoReferenceSubjectInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Main voice ID.</p> 
-     * @return VoiceId <p>Main voice ID.</p>
+     * Get <p>Main voice type ID.</p> 
+     * @return VoiceId <p>Main voice type ID.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Main voice ID.</p>
-     * @param VoiceId <p>Main voice ID.</p>
+     * Set <p>Main voice type ID.</p>
+     * @param VoiceId <p>Main voice type ID.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;

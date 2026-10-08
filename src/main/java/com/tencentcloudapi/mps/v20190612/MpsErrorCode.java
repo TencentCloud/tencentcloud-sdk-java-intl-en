@@ -72,7 +72,7 @@ public enum MpsErrorCode {
      /* JSON parsing failure; `Uin` / `SubAccountUin` / `Message` missing */
      INVALIDPARAMETER_VALUE("InvalidParameter.Value"),
      
-     /*  */
+     /* Review blocklist for user-submitted input. */
      INVALIDPARAMETER_VIOLATIONCONTENT("InvalidParameter.ViolationContent"),
      
      /* Parameter value error. */
@@ -114,16 +114,16 @@ public enum MpsErrorCode {
      /* Invalid audio/video bitrate. */
      INVALIDPARAMETERVALUE_BITRATE("InvalidParameterValue.Bitrate"),
      
-     /* Incorrect parameter value: the value of the `BlockConfidence` parameter is invalid. */
+     /* Parameter value error: the BlockConfidence parameter value is invalid. */
      INVALIDPARAMETERVALUE_BLOCKCONFIDENCE("InvalidParameterValue.BlockConfidence"),
      
      /* Parameter value error: Intelligent classification control field parameter error. */
      INVALIDPARAMETERVALUE_CLASSIFCATIONCONFIGURE("InvalidParameterValue.ClassifcationConfigure"),
      
-     /* Invalid audio/video codec. */
+     /* Invalid audio/video encoding format. */
      INVALIDPARAMETERVALUE_CODEC("InvalidParameterValue.Codec"),
      
-     /* Incorrect parameter value: ColumnCount. */
+     /* Parameter value error: ColumnCount. */
      INVALIDPARAMETERVALUE_COLUMNCOUNT("InvalidParameterValue.ColumnCount"),
      
      /* Parameter error: template description. */
@@ -132,7 +132,7 @@ public enum MpsErrorCode {
      /* Invalid parameter: muxing format. */
      INVALIDPARAMETERVALUE_CONTAINER("InvalidParameterValue.Container"),
      
-     /* Incorrect parameter value: ContainerType. */
+     /* Parameter value error: ContainerType. */
      INVALIDPARAMETERVALUE_CONTAINERTYPE("InvalidParameterValue.ContainerType"),
      
      /* Incorrect parameter value: CoordinateOrigin. */
@@ -159,10 +159,10 @@ public enum MpsErrorCode {
      /* A DestinationLanguage parameter error occurs. */
      INVALIDPARAMETERVALUE_DESTINATIONLANGUAGE("InvalidParameterValue.DestinationLanguage"),
      
-     /* Invalid switch value used to prohibit transcoding from low bitrate to high bitrate. */
+     /* Invalid forbidden bitrate low-to-high switch value. */
      INVALIDPARAMETERVALUE_DISABLEHIGHERVIDEOBITRATE("InvalidParameterValue.DisableHigherVideoBitrate"),
      
-     /* Invalid switch value used to prohibit transcoding from low resolution to high resolution. */
+     /* Invalid forbidden resolution low-to-high switch value. */
      INVALIDPARAMETERVALUE_DISABLEHIGHERVIDEORESOLUTION("InvalidParameterValue.DisableHigherVideoResolution"),
      
      /* Duplicated watermark text. */
@@ -201,10 +201,10 @@ public enum MpsErrorCode {
      /* Incorrect parameter value: Format. */
      INVALIDPARAMETERVALUE_FORMAT("InvalidParameterValue.Format"),
      
-     /* Incorrect parameter value: `Format` is `webp`, but both `Width` and `Height` are empty. */
+     /* Parameter value error: When Format is webp, Width and Height are empty. */
      INVALIDPARAMETERVALUE_FORMATWEBPLACKWIDTHANDHEIGHT("InvalidParameterValue.FormatWebpLackWidthAndHeight"),
      
-     /* Incorrect parameter value: when `Format` is `webp`, `Width` and `Height` cannot be both 0. */
+     /* Parameter value error: When Format is webp, Width and Height cannot both be 0. */
      INVALIDPARAMETERVALUE_FORMATWEBPWIDTHANDHEIGHTBOTHZERO("InvalidParameterValue.FormatWebpWidthAndHeightBothZero"),
      
      /* Parameter error: video frame rate. */
@@ -219,7 +219,7 @@ public enum MpsErrorCode {
      /* Parameter value error: FunctionName. */
      INVALIDPARAMETERVALUE_FUNCTIONNAME("InvalidParameterValue.FunctionName"),
      
-     /* Invalid GOP value. */
+     /* Invalid Gop value. */
      INVALIDPARAMETERVALUE_GOP("InvalidParameterValue.Gop"),
      
      /* Parameter error: height. */
@@ -258,7 +258,7 @@ public enum MpsErrorCode {
      /* Incorrect parameter value: `Name` exceeds the length limit. */
      INVALIDPARAMETERVALUE_NAME("InvalidParameterValue.Name"),
      
-     /* Tasks not in processing status are not supported. */
+     /* Processing tasks not supported. */
      INVALIDPARAMETERVALUE_NOTPROCESSINGTASK("InvalidParameterValue.NotProcessingTask"),
      
      /* Parameter value error: the object library parameter is invalid. */
@@ -285,7 +285,7 @@ public enum MpsErrorCode {
      /* The episode project does not exist. */
      INVALIDPARAMETERVALUE_PROJECTNOTFOUND("InvalidParameterValue.ProjectNotFound"),
      
-     /* Incorrect parameter value: Quality. */
+     /* Parameter value error: Quality. */
      INVALIDPARAMETERVALUE_QUALITY("InvalidParameterValue.Quality"),
      
      /* Parameter value error: RemoveAudio. */
@@ -303,19 +303,19 @@ public enum MpsErrorCode {
      /* Invalid ResolutionAdaptive. */
      INVALIDPARAMETERVALUE_RESOLUTIONADAPTIVE("InvalidParameterValue.ResolutionAdaptive"),
      
-     /* Incorrect parameter value: The value of the `ReviewConfidence` parameter is invalid. */
+     /* Parameter value error: the ReviewConfidence parameter value is invalid. */
      INVALIDPARAMETERVALUE_REVIEWCONFIDENCE("InvalidParameterValue.ReviewConfidence"),
      
-     /* Incorrect parameter value: RowCount. */
+     /* Parameter value error: RowCount. */
      INVALIDPARAMETERVALUE_ROWCOUNT("InvalidParameterValue.RowCount"),
      
-     /* Incorrect parameter value: SampleInterval. */
+     /* Parameter value error: SampleInterval. */
      INVALIDPARAMETERVALUE_SAMPLEINTERVAL("InvalidParameterValue.SampleInterval"),
      
      /* Invalid audio sample rate. */
      INVALIDPARAMETERVALUE_SAMPLERATE("InvalidParameterValue.SampleRate"),
      
-     /* Incorrect parameter value: SampleType. */
+     /* Parameter value error: SampleType. */
      INVALIDPARAMETERVALUE_SAMPLETYPE("InvalidParameterValue.SampleType"),
      
      /* A service parameter value error occurs. */
@@ -330,7 +330,7 @@ public enum MpsErrorCode {
      /*  */
      INVALIDPARAMETERVALUE_SESSIONIDTOOLONG("InvalidParameterValue.SessionIdTooLong"),
      
-     /* Invalid parameter: incorrect audio channel system. */
+     /* Parameter error: audio channel mode. */
      INVALIDPARAMETERVALUE_SOUNDSYSTEM("InvalidParameterValue.SoundSystem"),
      
      /* A SourceLanguage parameter error occurs. */
@@ -378,7 +378,7 @@ public enum MpsErrorCode {
      /* Parameter value error: Intelligent tag control field parameter error. */
      INVALIDPARAMETERVALUE_TAGCONFIGURE("InvalidParameterValue.TagConfigure"),
      
-     /* The task ID does not exist. */
+     /* Task ID not found. */
      INVALIDPARAMETERVALUE_TASKID("InvalidParameterValue.TaskId"),
      
      /* Parameter error: text transparency. */
@@ -468,7 +468,7 @@ public enum MpsErrorCode {
      /* Download failed. */
      RESOURCENOTFOUND_DOWNLOADERROR("ResourceNotFound.DownloadError"),
      
-     /* The resource does not exist: figure. */
+     /* Resource not found: person. */
      RESOURCENOTFOUND_PERSON("ResourceNotFound.Person"),
      
      /*  */
@@ -480,7 +480,7 @@ public enum MpsErrorCode {
      /* The user is not registered. */
      RESOURCENOTFOUND_USERUNREGISTER("ResourceNotFound.UserUnregister"),
      
-     /* The resource does not exist: Keyword. */
+     /* Resource does not exist: keyword. */
      RESOURCENOTFOUND_WORD("ResourceNotFound.Word"),
      
      /* Unauthorized operation. */

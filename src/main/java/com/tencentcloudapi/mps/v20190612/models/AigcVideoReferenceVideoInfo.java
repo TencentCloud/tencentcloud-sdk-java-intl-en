@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcVideoReferenceVideoInfo extends AbstractModel {
 
     /**
-    * <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+    * <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
     */
     @SerializedName("VideoUrl")
     @Expose
@@ -45,16 +45,16 @@ public class AigcVideoReferenceVideoInfo extends AbstractModel {
     private String KeepOriginalSound;
 
     /**
-     * Get <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p> 
-     * @return VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+     * Get <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p> 
+     * @return VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
      */
     public String getVideoUrl() {
         return this.VideoUrl;
     }
 
     /**
-     * Set <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
-     * @param VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+     * Set <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+     * @param VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing, with the default being a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
