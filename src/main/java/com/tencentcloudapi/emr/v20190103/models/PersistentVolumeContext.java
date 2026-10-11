@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PersistentVolumeContext extends AbstractModel {
 
     /**
-    * Disk size in GB.
+    * Disk size (GB).
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+    * Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
     */
     @SerializedName("DiskType")
     @Expose
@@ -45,39 +45,39 @@ public class PersistentVolumeContext extends AbstractModel {
     private Long DiskNum;
 
     /**
-    * Additional performance of cloud disks.
+    * Cloud disk additional performance.
     */
     @SerializedName("ExtraPerformance")
     @Expose
     private Long ExtraPerformance;
 
     /**
-     * Get Disk size in GB. 
-     * @return DiskSize Disk size in GB.
+     * Get Disk size (GB). 
+     * @return DiskSize Disk size (GB).
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Disk size in GB.
-     * @param DiskSize Disk size in GB.
+     * Set Disk size (GB).
+     * @param DiskSize Disk size (GB).
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Disk type, CLOUD_PREMIUM or CLOUD_SSD. 
-     * @return DiskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+     * Get Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD. 
+     * @return DiskType Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Disk type, CLOUD_PREMIUM or CLOUD_SSD.
-     * @param DiskType Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+     * Set Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
+     * @param DiskType Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -100,16 +100,16 @@ public class PersistentVolumeContext extends AbstractModel {
     }
 
     /**
-     * Get Additional performance of cloud disks. 
-     * @return ExtraPerformance Additional performance of cloud disks.
+     * Get Cloud disk additional performance. 
+     * @return ExtraPerformance Cloud disk additional performance.
      */
     public Long getExtraPerformance() {
         return this.ExtraPerformance;
     }
 
     /**
-     * Set Additional performance of cloud disks.
-     * @param ExtraPerformance Additional performance of cloud disks.
+     * Set Cloud disk additional performance.
+     * @param ExtraPerformance Cloud disk additional performance.
      */
     public void setExtraPerformance(Long ExtraPerformance) {
         this.ExtraPerformance = ExtraPerformance;

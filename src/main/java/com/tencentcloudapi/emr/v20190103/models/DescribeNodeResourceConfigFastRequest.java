@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeNodeResourceConfigFastRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID.
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Node type, CORE, TASK, ROUTER or ALL.
+    * Node type. Valid values: CORE, TASK, ROUTER, and ALL.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -45,14 +45,14 @@ public class DescribeNodeResourceConfigFastRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * Availability zone ID.
+    * AZ ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+    * Type. Valid values: ComputeResource and EMR. Default value: EMR.
     */
     @SerializedName("ResourceBaseType")
     @Expose
@@ -73,32 +73,32 @@ public class DescribeNodeResourceConfigFastRequest extends AbstractModel {
     private String HardwareResourceType;
 
     /**
-     * Get Cluster instance ID. 
-     * @return InstanceId Cluster instance ID.
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID.
-     * @param InstanceId Cluster instance ID.
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Node type, CORE, TASK, ROUTER or ALL. 
-     * @return ResourceType Node type, CORE, TASK, ROUTER or ALL.
+     * Get Node type. Valid values: CORE, TASK, ROUTER, and ALL. 
+     * @return ResourceType Node type. Valid values: CORE, TASK, ROUTER, and ALL.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Node type, CORE, TASK, ROUTER or ALL.
-     * @param ResourceType Node type, CORE, TASK, ROUTER or ALL.
+     * Set Node type. Valid values: CORE, TASK, ROUTER, and ALL.
+     * @param ResourceType Node type. Valid values: CORE, TASK, ROUTER, and ALL.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -121,32 +121,32 @@ public class DescribeNodeResourceConfigFastRequest extends AbstractModel {
     }
 
     /**
-     * Get Availability zone ID. 
-     * @return ZoneId Availability zone ID.
+     * Get AZ ID. 
+     * @return ZoneId AZ ID.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Availability zone ID.
-     * @param ZoneId Availability zone ID.
+     * Set AZ ID.
+     * @param ZoneId AZ ID.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The type can be ComputeResource, EMR, or a default value. The default value is EMR. 
-     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * Get Type. Valid values: ComputeResource and EMR. Default value: EMR. 
+     * @return ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
      */
     public String getResourceBaseType() {
         return this.ResourceBaseType;
     }
 
     /**
-     * Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-     * @param ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * Set Type. Valid values: ComputeResource and EMR. Default value: EMR.
+     * @param ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
      */
     public void setResourceBaseType(String ResourceBaseType) {
         this.ResourceBaseType = ResourceBaseType;

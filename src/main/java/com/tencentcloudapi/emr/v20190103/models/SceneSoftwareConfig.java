@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class SceneSoftwareConfig extends AbstractModel {
 
     /**
-    * The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`.
+    * List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink.
     */
     @SerializedName("Software")
     @Expose
     private String [] Software;
 
     /**
-    * The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+    * Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
@@ -44,33 +44,33 @@ Hadoop-Default
     private String SceneName;
 
     /**
-     * Get The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`. 
-     * @return Software The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`.
+     * Get List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink. 
+     * @return Software List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink.
      */
     public String [] getSoftware() {
         return this.Software;
     }
 
     /**
-     * Set The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`.
-     * @param Software The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-The instance type, `hive` or `flink`.
+     * Set List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink.
+     * @param Software List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+Example values: hive and flink.
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
     }
 
     /**
-     * Get The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+     * Get Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
 Hadoop-Default 
-     * @return SceneName The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+     * @return SceneName Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
@@ -82,13 +82,13 @@ Hadoop-Default
     }
 
     /**
-     * Set The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+     * Set Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
 Hadoop-Default
-     * @param SceneName The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+     * @param SceneName Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto

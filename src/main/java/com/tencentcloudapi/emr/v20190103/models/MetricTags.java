@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MetricTags extends AbstractModel {
 
     /**
-    * Metric Unit.
+    * Metric unit.
     */
     @SerializedName("Unit")
     @Expose
@@ -38,16 +38,16 @@ public class MetricTags extends AbstractModel {
     private String Type;
 
     /**
-     * Get Metric Unit. 
-     * @return Unit Metric Unit.
+     * Get Metric unit. 
+     * @return Unit Metric unit.
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Metric Unit.
-     * @param Unit Metric Unit.
+     * Set Metric unit.
+     * @param Unit Metric unit.
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

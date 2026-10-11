@@ -38,14 +38,14 @@ public class HiveQuery extends AbstractModel {
     private String Duration;
 
     /**
-    * Start time in milliseconds.
+    * Start time (ms).
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time in milliseconds.
+    * End time (ms).
     */
     @SerializedName("EndTime")
     @Expose
@@ -66,8 +66,7 @@ public class HiveQuery extends AbstractModel {
     private String User;
 
     /**
-    * AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+    * APPID list.
     */
     @SerializedName("JobIds")
     @Expose
@@ -120,32 +119,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Start time in milliseconds. 
-     * @return StartTime Start time in milliseconds.
+     * Get Start time (ms). 
+     * @return StartTime Start time (ms).
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time in milliseconds.
-     * @param StartTime Start time in milliseconds.
+     * Set Start time (ms).
+     * @param StartTime Start time (ms).
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time in milliseconds. 
-     * @return EndTime End time in milliseconds.
+     * Get End time (ms). 
+     * @return EndTime End time (ms).
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time in milliseconds.
-     * @param EndTime End time in milliseconds.
+     * Set End time (ms).
+     * @param EndTime End time (ms).
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -184,20 +183,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get AppId List
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobIds AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get APPID list. 
+     * @return JobIds APPID list.
      */
     public String [] getJobIds() {
         return this.JobIds;
     }
 
     /**
-     * Set AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobIds AppId List
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set APPID list.
+     * @param JobIds APPID list.
      */
     public void setJobIds(String [] JobIds) {
         this.JobIds = JobIds;

@@ -25,7 +25,6 @@ public class DescribeAutoScaleGroupGlobalConfResponse extends AbstractModel {
 
     /**
     * Global information of all scaling groups in the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupGlobalConfs")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Global information of all scaling groups in the cluster.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Global information of all scaling groups in the cluster. 
      * @return GroupGlobalConfs Global information of all scaling groups in the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public GroupGlobalConfs [] getGroupGlobalConfs() {
         return this.GroupGlobalConfs;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Global information of all scaling groups in the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param GroupGlobalConfs Global information of all scaling groups in the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupGlobalConfs(GroupGlobalConfs [] GroupGlobalConfs) {
         this.GroupGlobalConfs = GroupGlobalConfs;

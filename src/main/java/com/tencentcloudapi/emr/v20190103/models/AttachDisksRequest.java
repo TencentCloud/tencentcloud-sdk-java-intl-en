@@ -24,30 +24,30 @@ import java.util.HashMap;
 public class AttachDisksRequest extends AbstractModel {
 
     /**
-    * ID of the EMR cluster instance.
+    * ID of the EMR cluster.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Cloud disk ID required for mounting.
+    * ID of the cloud disk to be mounted.
     */
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
 
     /**
-    * Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
+    * Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
     */
     @SerializedName("AlignType")
     @Expose
     private String AlignType;
 
     /**
-    * List of CVM node IDs requiring mounting.
+    * ID list of the CVM instances to which disks are to be mounted.
     */
     @SerializedName("CvmInstanceIds")
     @Expose
@@ -68,7 +68,7 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
     private NodeSpecDiskV2 DiskSpec;
 
     /**
-    * Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+    * Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
     */
     @SerializedName("DeleteWithInstance")
     @Expose
@@ -82,86 +82,86 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
     private String [] SelectiveConfServices;
 
     /**
-    * Disk billing type (1: monthly subscription, 3: committed use).
+    * Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
     */
     @SerializedName("ChargeType")
     @Expose
     private Long ChargeType;
 
     /**
-    * Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+    * Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
     */
     @SerializedName("UnderWriteDuration")
     @Expose
     private Long UnderWriteDuration;
 
     /**
-     * Get ID of the EMR cluster instance. 
-     * @return InstanceId ID of the EMR cluster instance.
+     * Get ID of the EMR cluster. 
+     * @return InstanceId ID of the EMR cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the EMR cluster instance.
-     * @param InstanceId ID of the EMR cluster instance.
+     * Set ID of the EMR cluster.
+     * @param InstanceId ID of the EMR cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Cloud disk ID required for mounting. 
-     * @return DiskIds Cloud disk ID required for mounting.
+     * Get ID of the cloud disk to be mounted. 
+     * @return DiskIds ID of the cloud disk to be mounted.
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set Cloud disk ID required for mounting.
-     * @param DiskIds Cloud disk ID required for mounting.
+     * Set ID of the cloud disk to be mounted.
+     * @param DiskIds ID of the cloud disk to be mounted.
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;
     }
 
     /**
-     * Get Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline. 
-     * @return AlignType Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
+     * Get Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time 
+     * @return AlignType Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
      */
     public String getAlignType() {
         return this.AlignType;
     }
 
     /**
-     * Set Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
-     * @param AlignType Mount mode. Valid values.
-AUTO_RENEW: auto-renewal.
-ALIGN_DEADLINE: automatic alignment with the deadline.
+     * Set Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
+     * @param AlignType Mounting mode. Valid values:
+AUTO_RENEW: auto-renewal
+ALIGN_DEADLINE: automatic alignment with the expiration time
      */
     public void setAlignType(String AlignType) {
         this.AlignType = AlignType;
     }
 
     /**
-     * Get List of CVM node IDs requiring mounting. 
-     * @return CvmInstanceIds List of CVM node IDs requiring mounting.
+     * Get ID list of the CVM instances to which disks are to be mounted. 
+     * @return CvmInstanceIds ID list of the CVM instances to which disks are to be mounted.
      */
     public String [] getCvmInstanceIds() {
         return this.CvmInstanceIds;
     }
 
     /**
-     * Set List of CVM node IDs requiring mounting.
-     * @param CvmInstanceIds List of CVM node IDs requiring mounting.
+     * Set ID list of the CVM instances to which disks are to be mounted.
+     * @param CvmInstanceIds ID list of the CVM instances to which disks are to be mounted.
      */
     public void setCvmInstanceIds(String [] CvmInstanceIds) {
         this.CvmInstanceIds = CvmInstanceIds;
@@ -200,16 +200,16 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
     }
 
     /**
-     * Get Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk. 
-     * @return DeleteWithInstance Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+     * Get Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks. 
+     * @return DeleteWithInstance Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
     }
 
     /**
-     * Set Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
-     * @param DeleteWithInstance Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+     * Set Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
+     * @param DeleteWithInstance Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
@@ -232,32 +232,32 @@ ALIGN_DEADLINE: automatic alignment with the deadline.
     }
 
     /**
-     * Get Disk billing type (1: monthly subscription, 3: committed use). 
-     * @return ChargeType Disk billing type (1: monthly subscription, 3: committed use).
+     * Get Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use). 
+     * @return ChargeType Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Disk billing type (1: monthly subscription, 3: committed use).
-     * @param ChargeType Disk billing type (1: monthly subscription, 3: committed use).
+     * Set Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
+     * @param ChargeType Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60). 
-     * @return UnderWriteDuration Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+     * Get Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60. 
+     * @return UnderWriteDuration Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
      */
     public Long getUnderWriteDuration() {
         return this.UnderWriteDuration;
     }
 
     /**
-     * Set Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
-     * @param UnderWriteDuration Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+     * Set Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
+     * @param UnderWriteDuration Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
      */
     public void setUnderWriteDuration(Long UnderWriteDuration) {
         this.UnderWriteDuration = UnderWriteDuration;

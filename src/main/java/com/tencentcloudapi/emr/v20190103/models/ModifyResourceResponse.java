@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyResourceResponse extends AbstractModel {
 
     /**
-    * Process traceId.
+    * Flow trace ID.
     */
     @SerializedName("TraceId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Process traceId. 
-     * @return TraceId Process traceId.
+     * Get Flow trace ID. 
+     * @return TraceId Flow trace ID.
      */
     public String getTraceId() {
         return this.TraceId;
     }
 
     /**
-     * Set Process traceId.
-     * @param TraceId Process traceId.
+     * Set Flow trace ID.
+     * @param TraceId Flow trace ID.
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;

@@ -31,8 +31,8 @@ public class ScaleOutServiceConfGroupsInfo extends AbstractModel {
     private String ServiceComponentName;
 
     /**
-    * Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+    * Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
     */
     @SerializedName("ConfGroupName")
     @Expose
@@ -55,20 +55,20 @@ public class ScaleOutServiceConfGroupsInfo extends AbstractModel {
     }
 
     /**
-     * Get Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used. 
-     * @return ConfGroupName Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+     * Get Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used. 
+     * @return ConfGroupName Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
      */
     public String getConfGroupName() {
         return this.ConfGroupName;
     }
 
     /**
-     * Set Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
-     * @param ConfGroupName Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-                                                             If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+     * Set Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
+     * @param ConfGroupName Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+                                                             If the ConfGroupName parameter is not passed, the cluster dimension is used.
      */
     public void setConfGroupName(String ConfGroupName) {
         this.ConfGroupName = ConfGroupName;

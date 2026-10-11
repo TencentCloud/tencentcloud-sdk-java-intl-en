@@ -31,16 +31,14 @@ public class CapacityGlobalConfig extends AbstractModel {
     private Boolean EnableLabel;
 
     /**
-    * Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Path where the label information is stored if label-based scheduling is enabled.
     */
     @SerializedName("LabelDir")
     @Expose
     private String LabelDir;
 
     /**
-    * Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to overwrite the user-specified queue. true indicates overwriting.
     */
     @SerializedName("QueueMappingOverride")
     @Expose
@@ -48,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DefaultSettings")
     @Expose
@@ -71,50 +68,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LabelDir Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Path where the label information is stored if label-based scheduling is enabled. 
+     * @return LabelDir Path where the label information is stored if label-based scheduling is enabled.
      */
     public String getLabelDir() {
         return this.LabelDir;
     }
 
     /**
-     * Set Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LabelDir Path for tag information storage if label-based scheduling is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Path where the label information is stored if label-based scheduling is enabled.
+     * @param LabelDir Path where the label information is stored if label-based scheduling is enabled.
      */
     public void setLabelDir(String LabelDir) {
         this.LabelDir = LabelDir;
     }
 
     /**
-     * Get Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QueueMappingOverride Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to overwrite the user-specified queue. true indicates overwriting. 
+     * @return QueueMappingOverride Whether to overwrite the user-specified queue. true indicates overwriting.
      */
     public Boolean getQueueMappingOverride() {
         return this.QueueMappingOverride;
     }
 
     /**
-     * Set Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QueueMappingOverride Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to overwrite the user-specified queue. true indicates overwriting.
+     * @param QueueMappingOverride Whether to overwrite the user-specified queue. true indicates overwriting.
      */
     public void setQueueMappingOverride(Boolean QueueMappingOverride) {
         this.QueueMappingOverride = QueueMappingOverride;
     }
 
     /**
-     * Get Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Advanced settings. 
      * @return DefaultSettings Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DefaultSetting [] getDefaultSettings() {
         return this.DefaultSettings;
@@ -122,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DefaultSettings Advanced settings.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefaultSettings(DefaultSetting [] DefaultSettings) {
         this.DefaultSettings = DefaultSettings;

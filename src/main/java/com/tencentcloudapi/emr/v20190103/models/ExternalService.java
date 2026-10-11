@@ -24,95 +24,95 @@ import java.util.HashMap;
 public class ExternalService extends AbstractModel {
 
     /**
-    * Shared component type, which can be EMR or CUSTOM
+    * Shared component type. Valid values: EMR and CUSTOM.
     */
     @SerializedName("ShareType")
     @Expose
     private String ShareType;
 
     /**
-    * Custom parameters
-    */
-    @SerializedName("CustomServiceDefineList")
-    @Expose
-    private CustomServiceDefine [] CustomServiceDefineList;
-
-    /**
-    * Shared component name
+    * Shared component name.
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * Shared component cluster
+    * Shared component cluster.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Shared component type, which can be EMR or CUSTOM 
-     * @return ShareType Shared component type, which can be EMR or CUSTOM
+    * Custom parameter collection.
+    */
+    @SerializedName("CustomServiceDefineList")
+    @Expose
+    private CustomServiceDefine [] CustomServiceDefineList;
+
+    /**
+     * Get Shared component type. Valid values: EMR and CUSTOM. 
+     * @return ShareType Shared component type. Valid values: EMR and CUSTOM.
      */
     public String getShareType() {
         return this.ShareType;
     }
 
     /**
-     * Set Shared component type, which can be EMR or CUSTOM
-     * @param ShareType Shared component type, which can be EMR or CUSTOM
+     * Set Shared component type. Valid values: EMR and CUSTOM.
+     * @param ShareType Shared component type. Valid values: EMR and CUSTOM.
      */
     public void setShareType(String ShareType) {
         this.ShareType = ShareType;
     }
 
     /**
-     * Get Custom parameters 
-     * @return CustomServiceDefineList Custom parameters
-     */
-    public CustomServiceDefine [] getCustomServiceDefineList() {
-        return this.CustomServiceDefineList;
-    }
-
-    /**
-     * Set Custom parameters
-     * @param CustomServiceDefineList Custom parameters
-     */
-    public void setCustomServiceDefineList(CustomServiceDefine [] CustomServiceDefineList) {
-        this.CustomServiceDefineList = CustomServiceDefineList;
-    }
-
-    /**
-     * Get Shared component name 
-     * @return Service Shared component name
+     * Get Shared component name. 
+     * @return Service Shared component name.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Shared component name
-     * @param Service Shared component name
+     * Set Shared component name.
+     * @param Service Shared component name.
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get Shared component cluster 
-     * @return InstanceId Shared component cluster
+     * Get Shared component cluster. 
+     * @return InstanceId Shared component cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Shared component cluster
-     * @param InstanceId Shared component cluster
+     * Set Shared component cluster.
+     * @param InstanceId Shared component cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Custom parameter collection. 
+     * @return CustomServiceDefineList Custom parameter collection.
+     */
+    public CustomServiceDefine [] getCustomServiceDefineList() {
+        return this.CustomServiceDefineList;
+    }
+
+    /**
+     * Set Custom parameter collection.
+     * @param CustomServiceDefineList Custom parameter collection.
+     */
+    public void setCustomServiceDefineList(CustomServiceDefine [] CustomServiceDefineList) {
+        this.CustomServiceDefineList = CustomServiceDefineList;
     }
 
     public ExternalService() {
@@ -126,17 +126,17 @@ public class ExternalService extends AbstractModel {
         if (source.ShareType != null) {
             this.ShareType = new String(source.ShareType);
         }
-        if (source.CustomServiceDefineList != null) {
-            this.CustomServiceDefineList = new CustomServiceDefine[source.CustomServiceDefineList.length];
-            for (int i = 0; i < source.CustomServiceDefineList.length; i++) {
-                this.CustomServiceDefineList[i] = new CustomServiceDefine(source.CustomServiceDefineList[i]);
-            }
-        }
         if (source.Service != null) {
             this.Service = new String(source.Service);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CustomServiceDefineList != null) {
+            this.CustomServiceDefineList = new CustomServiceDefine[source.CustomServiceDefineList.length];
+            for (int i = 0; i < source.CustomServiceDefineList.length; i++) {
+                this.CustomServiceDefineList[i] = new CustomServiceDefine(source.CustomServiceDefineList[i]);
+            }
         }
     }
 
@@ -146,9 +146,9 @@ public class ExternalService extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ShareType", this.ShareType);
-        this.setParamArrayObj(map, prefix + "CustomServiceDefineList.", this.CustomServiceDefineList);
         this.setParamSimple(map, prefix + "Service", this.Service);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "CustomServiceDefineList.", this.CustomServiceDefineList);
 
     }
 }

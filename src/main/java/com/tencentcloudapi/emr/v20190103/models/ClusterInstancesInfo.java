@@ -24,406 +24,383 @@ import java.util.HashMap;
 public class ClusterInstancesInfo extends AbstractModel {
 
     /**
-    * ID.
+    * <p>ID.</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Cluster ID.
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Title
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Title.</p>
     */
     @SerializedName("Ftitle")
     @Expose
     private String Ftitle;
 
     /**
-    * Cluster name.
+    * <p>Cluster name.</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Region ID.
+    * <p>Region ID.</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * Region ID.
+    * <p>Region ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * User AppID.
+    * <p>User APPID.</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * User UIN.
+    * <p>User UIN.</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Project ID.
+    * <p>Project ID.</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Cluster VPCID.
+    * <p>Cluster VPC ID.</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * Subnet ID.
+    * <p>Subnet ID.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li>
+    * <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Adding time.
+    * <p>Addition time.</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * Runtime.
+    * <p>Execution duration.</p>
     */
     @SerializedName("RunTime")
     @Expose
     private String RunTime;
 
     /**
-    * Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Cluster product configuration information.</p>
     */
     @SerializedName("Config")
     @Expose
     private EmrProductConfigOutter Config;
 
     /**
-    * Public network IP address of the primary node.
+    * <p>Public IP address of the Master node.</p>
     */
     @SerializedName("MasterIp")
     @Expose
     private String MasterIp;
 
     /**
-    * EMR version.
+    * <p>EMR version.</p>
     */
     @SerializedName("EmrVersion")
     @Expose
     private String EmrVersion;
 
     /**
-    * Charge type.
+    * <p>Billing mode.</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private Long ChargeType;
 
     /**
-    * Transaction version.
+    * <p>Transaction version.</p>
     */
     @SerializedName("TradeVersion")
     @Expose
     private Long TradeVersion;
 
     /**
-    * Resource order ID.
+    * <p>Resource order ID.</p>
     */
     @SerializedName("ResourceOrderId")
     @Expose
     private Long ResourceOrderId;
 
     /**
-    * Whether it is a billing cluster.
+    * <p>Whether it is a billable cluster.</p>
     */
     @SerializedName("IsTradeCluster")
     @Expose
     private Long IsTradeCluster;
 
     /**
-    * Alarm information of cluster error status.
+    * <p>Cluster error status alarm information.</p>
     */
     @SerializedName("AlarmInfo")
     @Expose
     private String AlarmInfo;
 
     /**
-    * Whether to adopt new architecture.
+    * <p>Whether a new architecture is used.</p>
     */
     @SerializedName("IsWoodpeckerCluster")
     @Expose
     private Long IsWoodpeckerCluster;
 
     /**
-    * Metadatabase information.
+    * <p>Meta database information.</p>
     */
     @SerializedName("MetaDb")
     @Expose
     private String MetaDb;
 
     /**
-    * Tag information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Tag information.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Hive metadata information.
+    * <p>Hive metadata information.</p>
     */
     @SerializedName("HiveMetaDb")
     @Expose
     private String HiveMetaDb;
 
     /**
-    * Cluster type: EMR,CLICKHOUSE,DRUID.
+    * <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
     */
     @SerializedName("ServiceClass")
     @Expose
     private String ServiceClass;
 
     /**
-    * Alias serialization of all nodes in the cluster.
+    * <p>Serialization of the aliases of all nodes in the cluster.</p>
     */
     @SerializedName("AliasInfo")
     @Expose
     private String AliasInfo;
 
     /**
-    * Cluster version ID.
+    * <p>Cluster version ID.</p>
     */
     @SerializedName("ProductId")
     @Expose
     private Long ProductId;
 
     /**
-    * Region ID.
+    * <p>Region ID.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Scenario name.
+    * <p>Scenario name.</p>
     */
     @SerializedName("SceneName")
     @Expose
     private String SceneName;
 
     /**
-    * Scenario-based cluster type.
+    * <p>Scenario-based cluster type.</p>
     */
     @SerializedName("SceneServiceClass")
     @Expose
     private String SceneServiceClass;
 
     /**
-    * Scenario-based EMR version.
+    * <p>Scenario-based EMR version.</p>
     */
     @SerializedName("SceneEmrVersion")
     @Expose
     private String SceneEmrVersion;
 
     /**
-    * Scenario-based cluster type.
+    * <p>Scenario-based cluster type.</p>
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * vpc name
+    * <p>vpc name</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * subnet name
+    * <p>subnet name</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Cluster dependency.</p>
     */
     @SerializedName("ClusterExternalServiceInfo")
     @Expose
     private ClusterExternalServiceInfo [] ClusterExternalServiceInfo;
 
     /**
-    * Cluster vpcid string type.
+    * <p>Cluster VPC ID, string type.</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Subnet ID string type.
+    * <p>Subnet ID, string type.</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <p>Node information.</p>
     */
     @SerializedName("TopologyInfoList")
     @Expose
     private TopologyInfo [] TopologyInfoList;
 
     /**
-    * Whether it is a cross-AZ cluster.
+    * <p>Whether it is a cross-AZ cluster.</p>
     */
     @SerializedName("IsMultiZoneCluster")
     @Expose
     private Boolean IsMultiZoneCluster;
 
     /**
-    * Whether to enable automatic compensation for abnormal nodes.
+    * <p>Whether automatic compensation for abnormal nodes is enabled.</p>
     */
     @SerializedName("IsCvmReplace")
     @Expose
     private Boolean IsCvmReplace;
 
     /**
-    * Title.
+    * <p>Title.</p>
     */
     @SerializedName("ClusterTitle")
     @Expose
     private String ClusterTitle;
 
     /**
-    * Cluster product configuration information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cluster product configuration information.</p>
     */
     @SerializedName("ConfigDetail")
     @Expose
     private EmrProductConfigDetail ConfigDetail;
 
     /**
-    * Number of file systems bound to a cluster.
+    * <p>Number of file systems bound to the cluster.</p>
     */
     @SerializedName("BindFileSystemNum")
     @Expose
     private Long BindFileSystemNum;
 
     /**
-    * Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Binding list of the RSS cluster.</p>
     */
     @SerializedName("ClusterRelationInfoList")
     @Expose
     private ClusterRelationMeta [] ClusterRelationInfoList;
 
     /**
-    * Redis information.
+    * <p>Redis information.</p>
     */
     @SerializedName("RedisId")
     @Expose
     private String RedisId;
 
     /**
-     * Get ID. 
-     * @return Id ID.
+    * <p>Whether IO fault self-healing is enabled.</p>
+    */
+    @SerializedName("IsIOHungSelfRecovery")
+    @Expose
+    private Boolean IsIOHungSelfRecovery;
+
+    /**
+    * <p>Metadata information.</p>
+    */
+    @SerializedName("MetaDBGroupInfo")
+    @Expose
+    private CustomMetaDBInfo [] MetaDBGroupInfo;
+
+    /**
+     * Get <p>ID.</p> 
+     * @return Id <p>ID.</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set ID.
-     * @param Id ID.
+     * Set <p>ID.</p>
+     * @param Id <p>ID.</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Title
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Ftitle Title
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Title.</p> 
+     * @return Ftitle <p>Title.</p>
      * @deprecated
      */
     @Deprecated
@@ -432,10 +409,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Title
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Ftitle Title
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Title.</p>
+     * @param Ftitle <p>Title.</p>
      * @deprecated
      */
     @Deprecated
@@ -444,294 +419,184 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster name. 
-     * @return ClusterName Cluster name.
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name.
-     * @param ClusterName Cluster name.
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Region ID. 
-     * @return RegionId Region ID.
+     * Get <p>Region ID.</p> 
+     * @return RegionId <p>Region ID.</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID.
-     * @param RegionId Region ID.
+     * Set <p>Region ID.</p>
+     * @param RegionId <p>Region ID.</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Region ID. 
-     * @return ZoneId Region ID.
+     * Get <p>Region ID.</p> 
+     * @return ZoneId <p>Region ID.</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Region ID.
-     * @param ZoneId Region ID.
+     * Set <p>Region ID.</p>
+     * @param ZoneId <p>Region ID.</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get User AppID. 
-     * @return AppId User AppID.
+     * Get <p>User APPID.</p> 
+     * @return AppId <p>User APPID.</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppID.
-     * @param AppId User AppID.
+     * Set <p>User APPID.</p>
+     * @param AppId <p>User APPID.</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get User UIN. 
-     * @return Uin User UIN.
+     * Get <p>User UIN.</p> 
+     * @return Uin <p>User UIN.</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User UIN.
-     * @param Uin User UIN.
+     * Set <p>User UIN.</p>
+     * @param Uin <p>User UIN.</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get <p>Project ID.</p> 
+     * @return ProjectId <p>Project ID.</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set <p>Project ID.</p>
+     * @param ProjectId <p>Project ID.</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Cluster VPCID. 
-     * @return VpcId Cluster VPCID.
+     * Get <p>Cluster VPC ID.</p> 
+     * @return VpcId <p>Cluster VPC ID.</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Cluster VPCID.
-     * @param VpcId Cluster VPCID.
+     * Set <p>Cluster VPC ID.</p>
+     * @param VpcId <p>Cluster VPC ID.</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID. 
-     * @return SubnetId Subnet ID.
+     * Get <p>Subnet ID.</p> 
+     * @return SubnetId <p>Subnet ID.</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID.
-     * @param SubnetId Subnet ID.
+     * Set <p>Subnet ID.</p>
+     * @param SubnetId <p>Subnet ID.</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li> 
-     * @return Status Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li>
+     * Get <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li> 
+     * @return Status <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li>
-     * @param Status Instance status code. Valid range:
-<li>2: the cluster is running.</li>
-<li>3: the cluster is being created.</li>
-<li>4: the cluster is being scaled out.</li>
-<li>5: Router nodes are being added to the cluster.</li>
-<li>6: components are being installed in the cluster.</li>
-<li>7: commands are being executed in the cluster.</li>
-<li>8: the service is being restarted.</li>
-<li>9: maintenance is in progress.</li>
-<li>10: the service is being suspended.</li>
-<li>11: the cluster is exiting maintenance.</li>
-<li>12: the cluster is exiting suspension.</li>
-<li>13: the configuration is being distributed.</li>
-<li>14: the cluster is being terminated.</li>
-<li>15: the Core node is being destroyed.</li>
-<li>16: the Task node is being destroyed.</li>
-<li>17: the Router node is being destroyed.</li>
-<li>18: the web proxy password is being changed.</li>
-<li>19: the cluster is being isolated.</li>
-<li>20: the cluster is undergoing a reversal transaction.</li>
-<li>21: the cluster is being recycled.</li>
-<li>22: the instance is waiting for resizing.</li>
-<li>23: the cluster has been isolated.</li>
-<li>24: the number of nodes is being reduced.</li>
-<li>33: the cluster is waiting for a refund.</li>
-<li>34: the cluster has received a refund.</li>
-<li>301: creation failed.</li>
-<li>302: scale-out failed.</li>
+     * Set <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
+     * @param Status <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Adding time. 
-     * @return AddTime Adding time.
+     * Get <p>Addition time.</p> 
+     * @return AddTime <p>Addition time.</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set Adding time.
-     * @param AddTime Adding time.
+     * Set <p>Addition time.</p>
+     * @param AddTime <p>Addition time.</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get Runtime. 
-     * @return RunTime Runtime.
+     * Get <p>Execution duration.</p> 
+     * @return RunTime <p>Execution duration.</p>
      */
     public String getRunTime() {
         return this.RunTime;
     }
 
     /**
-     * Set Runtime.
-     * @param RunTime Runtime.
+     * Set <p>Execution duration.</p>
+     * @param RunTime <p>Execution duration.</p>
      */
     public void setRunTime(String RunTime) {
         this.RunTime = RunTime;
     }
 
     /**
-     * Get Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Config Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cluster product configuration information.</p> 
+     * @return Config <p>Cluster product configuration information.</p>
      * @deprecated
      */
     @Deprecated
@@ -740,10 +605,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Config Cluster product configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cluster product configuration information.</p>
+     * @param Config <p>Cluster product configuration information.</p>
      * @deprecated
      */
     @Deprecated
@@ -752,539 +615,547 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Public network IP address of the primary node. 
-     * @return MasterIp Public network IP address of the primary node.
+     * Get <p>Public IP address of the Master node.</p> 
+     * @return MasterIp <p>Public IP address of the Master node.</p>
      */
     public String getMasterIp() {
         return this.MasterIp;
     }
 
     /**
-     * Set Public network IP address of the primary node.
-     * @param MasterIp Public network IP address of the primary node.
+     * Set <p>Public IP address of the Master node.</p>
+     * @param MasterIp <p>Public IP address of the Master node.</p>
      */
     public void setMasterIp(String MasterIp) {
         this.MasterIp = MasterIp;
     }
 
     /**
-     * Get EMR version. 
-     * @return EmrVersion EMR version.
+     * Get <p>EMR version.</p> 
+     * @return EmrVersion <p>EMR version.</p>
      */
     public String getEmrVersion() {
         return this.EmrVersion;
     }
 
     /**
-     * Set EMR version.
-     * @param EmrVersion EMR version.
+     * Set <p>EMR version.</p>
+     * @param EmrVersion <p>EMR version.</p>
      */
     public void setEmrVersion(String EmrVersion) {
         this.EmrVersion = EmrVersion;
     }
 
     /**
-     * Get Charge type. 
-     * @return ChargeType Charge type.
+     * Get <p>Billing mode.</p> 
+     * @return ChargeType <p>Billing mode.</p>
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Charge type.
-     * @param ChargeType Charge type.
+     * Set <p>Billing mode.</p>
+     * @param ChargeType <p>Billing mode.</p>
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get Transaction version. 
-     * @return TradeVersion Transaction version.
+     * Get <p>Transaction version.</p> 
+     * @return TradeVersion <p>Transaction version.</p>
      */
     public Long getTradeVersion() {
         return this.TradeVersion;
     }
 
     /**
-     * Set Transaction version.
-     * @param TradeVersion Transaction version.
+     * Set <p>Transaction version.</p>
+     * @param TradeVersion <p>Transaction version.</p>
      */
     public void setTradeVersion(Long TradeVersion) {
         this.TradeVersion = TradeVersion;
     }
 
     /**
-     * Get Resource order ID. 
-     * @return ResourceOrderId Resource order ID.
+     * Get <p>Resource order ID.</p> 
+     * @return ResourceOrderId <p>Resource order ID.</p>
      */
     public Long getResourceOrderId() {
         return this.ResourceOrderId;
     }
 
     /**
-     * Set Resource order ID.
-     * @param ResourceOrderId Resource order ID.
+     * Set <p>Resource order ID.</p>
+     * @param ResourceOrderId <p>Resource order ID.</p>
      */
     public void setResourceOrderId(Long ResourceOrderId) {
         this.ResourceOrderId = ResourceOrderId;
     }
 
     /**
-     * Get Whether it is a billing cluster. 
-     * @return IsTradeCluster Whether it is a billing cluster.
+     * Get <p>Whether it is a billable cluster.</p> 
+     * @return IsTradeCluster <p>Whether it is a billable cluster.</p>
      */
     public Long getIsTradeCluster() {
         return this.IsTradeCluster;
     }
 
     /**
-     * Set Whether it is a billing cluster.
-     * @param IsTradeCluster Whether it is a billing cluster.
+     * Set <p>Whether it is a billable cluster.</p>
+     * @param IsTradeCluster <p>Whether it is a billable cluster.</p>
      */
     public void setIsTradeCluster(Long IsTradeCluster) {
         this.IsTradeCluster = IsTradeCluster;
     }
 
     /**
-     * Get Alarm information of cluster error status. 
-     * @return AlarmInfo Alarm information of cluster error status.
+     * Get <p>Cluster error status alarm information.</p> 
+     * @return AlarmInfo <p>Cluster error status alarm information.</p>
      */
     public String getAlarmInfo() {
         return this.AlarmInfo;
     }
 
     /**
-     * Set Alarm information of cluster error status.
-     * @param AlarmInfo Alarm information of cluster error status.
+     * Set <p>Cluster error status alarm information.</p>
+     * @param AlarmInfo <p>Cluster error status alarm information.</p>
      */
     public void setAlarmInfo(String AlarmInfo) {
         this.AlarmInfo = AlarmInfo;
     }
 
     /**
-     * Get Whether to adopt new architecture. 
-     * @return IsWoodpeckerCluster Whether to adopt new architecture.
+     * Get <p>Whether a new architecture is used.</p> 
+     * @return IsWoodpeckerCluster <p>Whether a new architecture is used.</p>
      */
     public Long getIsWoodpeckerCluster() {
         return this.IsWoodpeckerCluster;
     }
 
     /**
-     * Set Whether to adopt new architecture.
-     * @param IsWoodpeckerCluster Whether to adopt new architecture.
+     * Set <p>Whether a new architecture is used.</p>
+     * @param IsWoodpeckerCluster <p>Whether a new architecture is used.</p>
      */
     public void setIsWoodpeckerCluster(Long IsWoodpeckerCluster) {
         this.IsWoodpeckerCluster = IsWoodpeckerCluster;
     }
 
     /**
-     * Get Metadatabase information. 
-     * @return MetaDb Metadatabase information.
+     * Get <p>Meta database information.</p> 
+     * @return MetaDb <p>Meta database information.</p>
      */
     public String getMetaDb() {
         return this.MetaDb;
     }
 
     /**
-     * Set Metadatabase information.
-     * @param MetaDb Metadatabase information.
+     * Set <p>Meta database information.</p>
+     * @param MetaDb <p>Meta database information.</p>
      */
     public void setMetaDb(String MetaDb) {
         this.MetaDb = MetaDb;
     }
 
     /**
-     * Get Tag information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Tag information.</p> 
+     * @return Tags <p>Tag information.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Tag information.</p>
+     * @param Tags <p>Tag information.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Hive metadata information. 
-     * @return HiveMetaDb Hive metadata information.
+     * Get <p>Hive metadata information.</p> 
+     * @return HiveMetaDb <p>Hive metadata information.</p>
      */
     public String getHiveMetaDb() {
         return this.HiveMetaDb;
     }
 
     /**
-     * Set Hive metadata information.
-     * @param HiveMetaDb Hive metadata information.
+     * Set <p>Hive metadata information.</p>
+     * @param HiveMetaDb <p>Hive metadata information.</p>
      */
     public void setHiveMetaDb(String HiveMetaDb) {
         this.HiveMetaDb = HiveMetaDb;
     }
 
     /**
-     * Get Cluster type: EMR,CLICKHOUSE,DRUID. 
-     * @return ServiceClass Cluster type: EMR,CLICKHOUSE,DRUID.
+     * Get <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p> 
+     * @return ServiceClass <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
      */
     public String getServiceClass() {
         return this.ServiceClass;
     }
 
     /**
-     * Set Cluster type: EMR,CLICKHOUSE,DRUID.
-     * @param ServiceClass Cluster type: EMR,CLICKHOUSE,DRUID.
+     * Set <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
+     * @param ServiceClass <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
      */
     public void setServiceClass(String ServiceClass) {
         this.ServiceClass = ServiceClass;
     }
 
     /**
-     * Get Alias serialization of all nodes in the cluster. 
-     * @return AliasInfo Alias serialization of all nodes in the cluster.
+     * Get <p>Serialization of the aliases of all nodes in the cluster.</p> 
+     * @return AliasInfo <p>Serialization of the aliases of all nodes in the cluster.</p>
      */
     public String getAliasInfo() {
         return this.AliasInfo;
     }
 
     /**
-     * Set Alias serialization of all nodes in the cluster.
-     * @param AliasInfo Alias serialization of all nodes in the cluster.
+     * Set <p>Serialization of the aliases of all nodes in the cluster.</p>
+     * @param AliasInfo <p>Serialization of the aliases of all nodes in the cluster.</p>
      */
     public void setAliasInfo(String AliasInfo) {
         this.AliasInfo = AliasInfo;
     }
 
     /**
-     * Get Cluster version ID. 
-     * @return ProductId Cluster version ID.
+     * Get <p>Cluster version ID.</p> 
+     * @return ProductId <p>Cluster version ID.</p>
      */
     public Long getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set Cluster version ID.
-     * @param ProductId Cluster version ID.
+     * Set <p>Cluster version ID.</p>
+     * @param ProductId <p>Cluster version ID.</p>
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get Region ID. 
-     * @return Zone Region ID.
+     * Get <p>Region ID.</p> 
+     * @return Zone <p>Region ID.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Region ID.
-     * @param Zone Region ID.
+     * Set <p>Region ID.</p>
+     * @param Zone <p>Region ID.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Scenario name. 
-     * @return SceneName Scenario name.
+     * Get <p>Scenario name.</p> 
+     * @return SceneName <p>Scenario name.</p>
      */
     public String getSceneName() {
         return this.SceneName;
     }
 
     /**
-     * Set Scenario name.
-     * @param SceneName Scenario name.
+     * Set <p>Scenario name.</p>
+     * @param SceneName <p>Scenario name.</p>
      */
     public void setSceneName(String SceneName) {
         this.SceneName = SceneName;
     }
 
     /**
-     * Get Scenario-based cluster type. 
-     * @return SceneServiceClass Scenario-based cluster type.
+     * Get <p>Scenario-based cluster type.</p> 
+     * @return SceneServiceClass <p>Scenario-based cluster type.</p>
      */
     public String getSceneServiceClass() {
         return this.SceneServiceClass;
     }
 
     /**
-     * Set Scenario-based cluster type.
-     * @param SceneServiceClass Scenario-based cluster type.
+     * Set <p>Scenario-based cluster type.</p>
+     * @param SceneServiceClass <p>Scenario-based cluster type.</p>
      */
     public void setSceneServiceClass(String SceneServiceClass) {
         this.SceneServiceClass = SceneServiceClass;
     }
 
     /**
-     * Get Scenario-based EMR version. 
-     * @return SceneEmrVersion Scenario-based EMR version.
+     * Get <p>Scenario-based EMR version.</p> 
+     * @return SceneEmrVersion <p>Scenario-based EMR version.</p>
      */
     public String getSceneEmrVersion() {
         return this.SceneEmrVersion;
     }
 
     /**
-     * Set Scenario-based EMR version.
-     * @param SceneEmrVersion Scenario-based EMR version.
+     * Set <p>Scenario-based EMR version.</p>
+     * @param SceneEmrVersion <p>Scenario-based EMR version.</p>
      */
     public void setSceneEmrVersion(String SceneEmrVersion) {
         this.SceneEmrVersion = SceneEmrVersion;
     }
 
     /**
-     * Get Scenario-based cluster type. 
-     * @return DisplayName Scenario-based cluster type.
+     * Get <p>Scenario-based cluster type.</p> 
+     * @return DisplayName <p>Scenario-based cluster type.</p>
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set Scenario-based cluster type.
-     * @param DisplayName Scenario-based cluster type.
+     * Set <p>Scenario-based cluster type.</p>
+     * @param DisplayName <p>Scenario-based cluster type.</p>
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get vpc name 
-     * @return VpcName vpc name
+     * Get <p>vpc name</p> 
+     * @return VpcName <p>vpc name</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set vpc name
-     * @param VpcName vpc name
+     * Set <p>vpc name</p>
+     * @param VpcName <p>vpc name</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get subnet name 
-     * @return SubnetName subnet name
+     * Get <p>subnet name</p> 
+     * @return SubnetName <p>subnet name</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set subnet name
-     * @param SubnetName subnet name
+     * Set <p>subnet name</p>
+     * @param SubnetName <p>subnet name</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ClusterExternalServiceInfo Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Cluster dependency.</p> 
+     * @return ClusterExternalServiceInfo <p>Cluster dependency.</p>
      */
     public ClusterExternalServiceInfo [] getClusterExternalServiceInfo() {
         return this.ClusterExternalServiceInfo;
     }
 
     /**
-     * Set Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ClusterExternalServiceInfo Cluster dependency
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Cluster dependency.</p>
+     * @param ClusterExternalServiceInfo <p>Cluster dependency.</p>
      */
     public void setClusterExternalServiceInfo(ClusterExternalServiceInfo [] ClusterExternalServiceInfo) {
         this.ClusterExternalServiceInfo = ClusterExternalServiceInfo;
     }
 
     /**
-     * Get Cluster vpcid string type. 
-     * @return UniqVpcId Cluster vpcid string type.
+     * Get <p>Cluster VPC ID, string type.</p> 
+     * @return UniqVpcId <p>Cluster VPC ID, string type.</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set Cluster vpcid string type.
-     * @param UniqVpcId Cluster vpcid string type.
+     * Set <p>Cluster VPC ID, string type.</p>
+     * @param UniqVpcId <p>Cluster VPC ID, string type.</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Subnet ID string type. 
-     * @return UniqSubnetId Subnet ID string type.
+     * Get <p>Subnet ID, string type.</p> 
+     * @return UniqSubnetId <p>Subnet ID, string type.</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Subnet ID string type.
-     * @param UniqSubnetId Subnet ID string type.
+     * Set <p>Subnet ID, string type.</p>
+     * @param UniqSubnetId <p>Subnet ID, string type.</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Node information
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TopologyInfoList Node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Node information.</p> 
+     * @return TopologyInfoList <p>Node information.</p>
      */
     public TopologyInfo [] getTopologyInfoList() {
         return this.TopologyInfoList;
     }
 
     /**
-     * Set Node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TopologyInfoList Node information
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Node information.</p>
+     * @param TopologyInfoList <p>Node information.</p>
      */
     public void setTopologyInfoList(TopologyInfo [] TopologyInfoList) {
         this.TopologyInfoList = TopologyInfoList;
     }
 
     /**
-     * Get Whether it is a cross-AZ cluster. 
-     * @return IsMultiZoneCluster Whether it is a cross-AZ cluster.
+     * Get <p>Whether it is a cross-AZ cluster.</p> 
+     * @return IsMultiZoneCluster <p>Whether it is a cross-AZ cluster.</p>
      */
     public Boolean getIsMultiZoneCluster() {
         return this.IsMultiZoneCluster;
     }
 
     /**
-     * Set Whether it is a cross-AZ cluster.
-     * @param IsMultiZoneCluster Whether it is a cross-AZ cluster.
+     * Set <p>Whether it is a cross-AZ cluster.</p>
+     * @param IsMultiZoneCluster <p>Whether it is a cross-AZ cluster.</p>
      */
     public void setIsMultiZoneCluster(Boolean IsMultiZoneCluster) {
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
     /**
-     * Get Whether to enable automatic compensation for abnormal nodes. 
-     * @return IsCvmReplace Whether to enable automatic compensation for abnormal nodes.
+     * Get <p>Whether automatic compensation for abnormal nodes is enabled.</p> 
+     * @return IsCvmReplace <p>Whether automatic compensation for abnormal nodes is enabled.</p>
      */
     public Boolean getIsCvmReplace() {
         return this.IsCvmReplace;
     }
 
     /**
-     * Set Whether to enable automatic compensation for abnormal nodes.
-     * @param IsCvmReplace Whether to enable automatic compensation for abnormal nodes.
+     * Set <p>Whether automatic compensation for abnormal nodes is enabled.</p>
+     * @param IsCvmReplace <p>Whether automatic compensation for abnormal nodes is enabled.</p>
      */
     public void setIsCvmReplace(Boolean IsCvmReplace) {
         this.IsCvmReplace = IsCvmReplace;
     }
 
     /**
-     * Get Title. 
-     * @return ClusterTitle Title.
+     * Get <p>Title.</p> 
+     * @return ClusterTitle <p>Title.</p>
      */
     public String getClusterTitle() {
         return this.ClusterTitle;
     }
 
     /**
-     * Set Title.
-     * @param ClusterTitle Title.
+     * Set <p>Title.</p>
+     * @param ClusterTitle <p>Title.</p>
      */
     public void setClusterTitle(String ClusterTitle) {
         this.ClusterTitle = ClusterTitle;
     }
 
     /**
-     * Get Cluster product configuration information
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConfigDetail Cluster product configuration information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cluster product configuration information.</p> 
+     * @return ConfigDetail <p>Cluster product configuration information.</p>
      */
     public EmrProductConfigDetail getConfigDetail() {
         return this.ConfigDetail;
     }
 
     /**
-     * Set Cluster product configuration information
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConfigDetail Cluster product configuration information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cluster product configuration information.</p>
+     * @param ConfigDetail <p>Cluster product configuration information.</p>
      */
     public void setConfigDetail(EmrProductConfigDetail ConfigDetail) {
         this.ConfigDetail = ConfigDetail;
     }
 
     /**
-     * Get Number of file systems bound to a cluster. 
-     * @return BindFileSystemNum Number of file systems bound to a cluster.
+     * Get <p>Number of file systems bound to the cluster.</p> 
+     * @return BindFileSystemNum <p>Number of file systems bound to the cluster.</p>
      */
     public Long getBindFileSystemNum() {
         return this.BindFileSystemNum;
     }
 
     /**
-     * Set Number of file systems bound to a cluster.
-     * @param BindFileSystemNum Number of file systems bound to a cluster.
+     * Set <p>Number of file systems bound to the cluster.</p>
+     * @param BindFileSystemNum <p>Number of file systems bound to the cluster.</p>
      */
     public void setBindFileSystemNum(Long BindFileSystemNum) {
         this.BindFileSystemNum = BindFileSystemNum;
     }
 
     /**
-     * Get Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterRelationInfoList Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Binding list of the RSS cluster.</p> 
+     * @return ClusterRelationInfoList <p>Binding list of the RSS cluster.</p>
      */
     public ClusterRelationMeta [] getClusterRelationInfoList() {
         return this.ClusterRelationInfoList;
     }
 
     /**
-     * Set Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterRelationInfoList Bound list of the RSS cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Binding list of the RSS cluster.</p>
+     * @param ClusterRelationInfoList <p>Binding list of the RSS cluster.</p>
      */
     public void setClusterRelationInfoList(ClusterRelationMeta [] ClusterRelationInfoList) {
         this.ClusterRelationInfoList = ClusterRelationInfoList;
     }
 
     /**
-     * Get Redis information. 
-     * @return RedisId Redis information.
+     * Get <p>Redis information.</p> 
+     * @return RedisId <p>Redis information.</p>
      */
     public String getRedisId() {
         return this.RedisId;
     }
 
     /**
-     * Set Redis information.
-     * @param RedisId Redis information.
+     * Set <p>Redis information.</p>
+     * @param RedisId <p>Redis information.</p>
      */
     public void setRedisId(String RedisId) {
         this.RedisId = RedisId;
+    }
+
+    /**
+     * Get <p>Whether IO fault self-healing is enabled.</p> 
+     * @return IsIOHungSelfRecovery <p>Whether IO fault self-healing is enabled.</p>
+     */
+    public Boolean getIsIOHungSelfRecovery() {
+        return this.IsIOHungSelfRecovery;
+    }
+
+    /**
+     * Set <p>Whether IO fault self-healing is enabled.</p>
+     * @param IsIOHungSelfRecovery <p>Whether IO fault self-healing is enabled.</p>
+     */
+    public void setIsIOHungSelfRecovery(Boolean IsIOHungSelfRecovery) {
+        this.IsIOHungSelfRecovery = IsIOHungSelfRecovery;
+    }
+
+    /**
+     * Get <p>Metadata information.</p> 
+     * @return MetaDBGroupInfo <p>Metadata information.</p>
+     */
+    public CustomMetaDBInfo [] getMetaDBGroupInfo() {
+        return this.MetaDBGroupInfo;
+    }
+
+    /**
+     * Set <p>Metadata information.</p>
+     * @param MetaDBGroupInfo <p>Metadata information.</p>
+     */
+    public void setMetaDBGroupInfo(CustomMetaDBInfo [] MetaDBGroupInfo) {
+        this.MetaDBGroupInfo = MetaDBGroupInfo;
     }
 
     public ClusterInstancesInfo() {
@@ -1448,6 +1319,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RedisId != null) {
             this.RedisId = new String(source.RedisId);
         }
+        if (source.IsIOHungSelfRecovery != null) {
+            this.IsIOHungSelfRecovery = new Boolean(source.IsIOHungSelfRecovery);
+        }
+        if (source.MetaDBGroupInfo != null) {
+            this.MetaDBGroupInfo = new CustomMetaDBInfo[source.MetaDBGroupInfo.length];
+            for (int i = 0; i < source.MetaDBGroupInfo.length; i++) {
+                this.MetaDBGroupInfo[i] = new CustomMetaDBInfo(source.MetaDBGroupInfo[i]);
+            }
+        }
     }
 
 
@@ -1502,6 +1382,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
         this.setParamArrayObj(map, prefix + "ClusterRelationInfoList.", this.ClusterRelationInfoList);
         this.setParamSimple(map, prefix + "RedisId", this.RedisId);
+        this.setParamSimple(map, prefix + "IsIOHungSelfRecovery", this.IsIOHungSelfRecovery);
+        this.setParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
 
     }
 }

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class PriceDetail extends AbstractModel {
 
     /**
-    * The node ID
+    * Node ID.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * The price formula
+    * Price calculation formula.
     */
     @SerializedName("Formula")
     @Expose
     private String Formula;
 
     /**
-    * The original price
+    * Original price.
     */
     @SerializedName("OriginalCost")
     @Expose
     private Float OriginalCost;
 
     /**
-    * The discount price
+    * Discounted price.
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-     * Get The node ID 
-     * @return ResourceId The node ID
+     * Get Node ID. 
+     * @return ResourceId Node ID.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set The node ID
-     * @param ResourceId The node ID
+     * Set Node ID.
+     * @param ResourceId Node ID.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get The price formula 
-     * @return Formula The price formula
+     * Get Price calculation formula. 
+     * @return Formula Price calculation formula.
      */
     public String getFormula() {
         return this.Formula;
     }
 
     /**
-     * Set The price formula
-     * @param Formula The price formula
+     * Set Price calculation formula.
+     * @param Formula Price calculation formula.
      */
     public void setFormula(String Formula) {
         this.Formula = Formula;
     }
 
     /**
-     * Get The original price 
-     * @return OriginalCost The original price
+     * Get Original price. 
+     * @return OriginalCost Original price.
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set The original price
-     * @param OriginalCost The original price
+     * Set Original price.
+     * @param OriginalCost Original price.
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get The discount price 
-     * @return DiscountCost The discount price
+     * Get Discounted price. 
+     * @return DiscountCost Discounted price.
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set The discount price
-     * @param DiscountCost The discount price
+     * Set Discounted price.
+     * @param DiscountCost Discounted price.
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;

@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class PodNewParameter extends AbstractModel {
 
     /**
-    * The TKE or EKS cluster ID.
+    * TKE or EKS cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Custom permissions
-Examples:
+    * Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -72,8 +72,8 @@ Examples:
     private String Config;
 
     /**
-    * Custom parameters
-Examples:
+    * Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -153,24 +153,24 @@ Examples:
     private String Parameter;
 
     /**
-     * Get The TKE or EKS cluster ID. 
-     * @return InstanceId The TKE or EKS cluster ID.
+     * Get TKE or EKS cluster ID. 
+     * @return InstanceId TKE or EKS cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The TKE or EKS cluster ID.
-     * @param InstanceId The TKE or EKS cluster ID.
+     * Set TKE or EKS cluster ID.
+     * @param InstanceId TKE or EKS cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Custom permissions
-Examples:
+     * Get Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -204,8 +204,8 @@ Examples:
     }
   ]
 } 
-     * @return Config Custom permissions
-Examples:
+     * @return Config Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -245,8 +245,8 @@ Examples:
     }
 
     /**
-     * Set Custom permissions
-Examples:
+     * Set Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -280,8 +280,8 @@ Examples:
     }
   ]
 }
-     * @param Config Custom permissions
-Examples:
+     * @param Config Custom permission.
+Example:
 {
   "apiVersion": "v1",
   "clusters": [
@@ -321,8 +321,8 @@ Examples:
     }
 
     /**
-     * Get Custom parameters
-Examples:
+     * Get Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -396,8 +396,8 @@ Examples:
       }
     }
   } 
-     * @return Parameter Custom parameters
-Examples:
+     * @return Parameter Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -477,8 +477,8 @@ Examples:
     }
 
     /**
-     * Set Custom parameters
-Examples:
+     * Set Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",
@@ -552,8 +552,8 @@ Examples:
       }
     }
   }
-     * @param Parameter Custom parameters
-Examples:
+     * @param Parameter Custom parameter.
+Example:
 {
     "apiVersion": "apps/v1",
     "kind": "Deployment",

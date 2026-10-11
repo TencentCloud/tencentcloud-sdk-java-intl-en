@@ -31,44 +31,42 @@ public class ConfigSetInfo extends AbstractModel {
     private String ConfigSet;
 
     /**
-    * The capacity scheduler will use it, where tag-related configuration is set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
-The key values are as follows:
-- labelName: Tag name, that is, tags in tag management.
-- capacity: Capacity. The value is a **numeric string**.
-- maximum-capacity: Maximum capacity. The value is a **numeric string**.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The capacity scheduler uses it to configure label-related settings. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+The key value information is as follows:
+- labelName: label name, which is the label in label management.
+- capacity: capacity. The value is a **numeric string**.
+- maximum-capacity: maximum capacity. The value is a **numeric string**.
     */
     @SerializedName("LabelParams")
     @Expose
     private ItemSeq [] LabelParams;
 
     /**
-    * Set parameters related to the configuration set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
+    * Sets the parameters related to the configuration set. The value of key is consistent with the field returned by **DescribeYarnQueue**.
 ###### Fair scheduler.
-The key values are as follows:
-- minResources: Minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxResources: Maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxChildResources: Maximum resource amount for undeclared subqueues. The value is a **numeric string** or **null**.
-- maxRunningApps: Maximum number of apps that can run concurrently. The value is a **numeric string** or **null**.
+The key value information is as follows:
+- minResources: minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxResources: maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxChildResources: maximum resource amount that can be allocated to undeclared subqueues. The value is a **numeric string** or **null**.
+- maxRunningApps: maximum number of apps that can run simultaneously. The value is a **numeric string** or **null**.
 - weight: weight. The value is a **numeric string** or **null**.
-- maxAMShare: Maximum App Master share. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
+- maxAMShare: maximum share of the App Master. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
 
 ```
 type YarnResource struct {
 	Vcores *int `json:"vcores"`
 	Memory *int `json:"memory"`
-	Type *string `json:"type"` // The value can be percent or null. When the value is percent, it indicates the percentage used; otherwise, the absolute value used is indicated. The value can be percent only for maxResources and maxChildResources.
+	Type *string `json:"type"` // The value is `percent` or `null`. When the value is `percent`, it indicates the percentage used; otherwise, it is the absolute value used. Only maxResources and maxChildResources can be set to `percent`.
 }
 ```
 
 ###### Capacity scheduler.
-The key values are as follows:
-- minimum-user-limit-percent: Minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the number range is [0,100].
-- user-limit-factor: User resource factor. The value is a **JSON string of the YarnResource type** or **null**.
-- maximum-applications: Maximum number of applications, that is, Max-Applications. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-- maximum-am-resource-percent: maximum AM percent. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
-- default-application-priority: Resource pool priority. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-Note: This field may return null, indicating that no valid values can be obtained.
+The key value information is as follows:
+- minimum-user-limit-percent: minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the numeric range is [0, 100].
+- user-limit-factor: user resource factor. The value is a **JSON string of the YarnResource type** or **null**.
+- maximum-applications: maximum number of applications (Max-Applications). The value is a **numeric string** or **null**, where the number is a positive integer.
+- maximum-am-resource-percent: maximum AM ratio. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
+- default-application-priority: resource pool priority. The value is a **numeric string** or **null**, where the number is a positive integer.
     */
     @SerializedName("BasicParams")
     @Expose
@@ -91,152 +89,144 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The capacity scheduler will use it, where tag-related configuration is set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
-The key values are as follows:
-- labelName: Tag name, that is, tags in tag management.
-- capacity: Capacity. The value is a **numeric string**.
-- maximum-capacity: Maximum capacity. The value is a **numeric string**.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LabelParams The capacity scheduler will use it, where tag-related configuration is set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
-The key values are as follows:
-- labelName: Tag name, that is, tags in tag management.
-- capacity: Capacity. The value is a **numeric string**.
-- maximum-capacity: Maximum capacity. The value is a **numeric string**.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The capacity scheduler uses it to configure label-related settings. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+The key value information is as follows:
+- labelName: label name, which is the label in label management.
+- capacity: capacity. The value is a **numeric string**.
+- maximum-capacity: maximum capacity. The value is a **numeric string**. 
+     * @return LabelParams The capacity scheduler uses it to configure label-related settings. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+The key value information is as follows:
+- labelName: label name, which is the label in label management.
+- capacity: capacity. The value is a **numeric string**.
+- maximum-capacity: maximum capacity. The value is a **numeric string**.
      */
     public ItemSeq [] getLabelParams() {
         return this.LabelParams;
     }
 
     /**
-     * Set The capacity scheduler will use it, where tag-related configuration is set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
-The key values are as follows:
-- labelName: Tag name, that is, tags in tag management.
-- capacity: Capacity. The value is a **numeric string**.
-- maximum-capacity: Maximum capacity. The value is a **numeric string**.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LabelParams The capacity scheduler will use it, where tag-related configuration is set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
-The key values are as follows:
-- labelName: Tag name, that is, tags in tag management.
-- capacity: Capacity. The value is a **numeric string**.
-- maximum-capacity: Maximum capacity. The value is a **numeric string**.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The capacity scheduler uses it to configure label-related settings. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+The key value information is as follows:
+- labelName: label name, which is the label in label management.
+- capacity: capacity. The value is a **numeric string**.
+- maximum-capacity: maximum capacity. The value is a **numeric string**.
+     * @param LabelParams The capacity scheduler uses it to configure label-related settings. The value of key is consistent with the field returned by **DescribeYarnQueue**.
+The key value information is as follows:
+- labelName: label name, which is the label in label management.
+- capacity: capacity. The value is a **numeric string**.
+- maximum-capacity: maximum capacity. The value is a **numeric string**.
      */
     public void setLabelParams(ItemSeq [] LabelParams) {
         this.LabelParams = LabelParams;
     }
 
     /**
-     * Get Set parameters related to the configuration set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
+     * Get Sets the parameters related to the configuration set. The value of key is consistent with the field returned by **DescribeYarnQueue**.
 ###### Fair scheduler.
-The key values are as follows:
-- minResources: Minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxResources: Maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxChildResources: Maximum resource amount for undeclared subqueues. The value is a **numeric string** or **null**.
-- maxRunningApps: Maximum number of apps that can run concurrently. The value is a **numeric string** or **null**.
+The key value information is as follows:
+- minResources: minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxResources: maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxChildResources: maximum resource amount that can be allocated to undeclared subqueues. The value is a **numeric string** or **null**.
+- maxRunningApps: maximum number of apps that can run simultaneously. The value is a **numeric string** or **null**.
 - weight: weight. The value is a **numeric string** or **null**.
-- maxAMShare: Maximum App Master share. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
+- maxAMShare: maximum share of the App Master. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
 
 ```
 type YarnResource struct {
 	Vcores *int `json:"vcores"`
 	Memory *int `json:"memory"`
-	Type *string `json:"type"` // The value can be percent or null. When the value is percent, it indicates the percentage used; otherwise, the absolute value used is indicated. The value can be percent only for maxResources and maxChildResources.
+	Type *string `json:"type"` // The value is `percent` or `null`. When the value is `percent`, it indicates the percentage used; otherwise, it is the absolute value used. Only maxResources and maxChildResources can be set to `percent`.
 }
 ```
 
 ###### Capacity scheduler.
-The key values are as follows:
-- minimum-user-limit-percent: Minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the number range is [0,100].
-- user-limit-factor: User resource factor. The value is a **JSON string of the YarnResource type** or **null**.
-- maximum-applications: Maximum number of applications, that is, Max-Applications. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-- maximum-am-resource-percent: maximum AM percent. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
-- default-application-priority: Resource pool priority. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BasicParams Set parameters related to the configuration set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
+The key value information is as follows:
+- minimum-user-limit-percent: minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the numeric range is [0, 100].
+- user-limit-factor: user resource factor. The value is a **JSON string of the YarnResource type** or **null**.
+- maximum-applications: maximum number of applications (Max-Applications). The value is a **numeric string** or **null**, where the number is a positive integer.
+- maximum-am-resource-percent: maximum AM ratio. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
+- default-application-priority: resource pool priority. The value is a **numeric string** or **null**, where the number is a positive integer. 
+     * @return BasicParams Sets the parameters related to the configuration set. The value of key is consistent with the field returned by **DescribeYarnQueue**.
 ###### Fair scheduler.
-The key values are as follows:
-- minResources: Minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxResources: Maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxChildResources: Maximum resource amount for undeclared subqueues. The value is a **numeric string** or **null**.
-- maxRunningApps: Maximum number of apps that can run concurrently. The value is a **numeric string** or **null**.
+The key value information is as follows:
+- minResources: minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxResources: maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxChildResources: maximum resource amount that can be allocated to undeclared subqueues. The value is a **numeric string** or **null**.
+- maxRunningApps: maximum number of apps that can run simultaneously. The value is a **numeric string** or **null**.
 - weight: weight. The value is a **numeric string** or **null**.
-- maxAMShare: Maximum App Master share. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
+- maxAMShare: maximum share of the App Master. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
 
 ```
 type YarnResource struct {
 	Vcores *int `json:"vcores"`
 	Memory *int `json:"memory"`
-	Type *string `json:"type"` // The value can be percent or null. When the value is percent, it indicates the percentage used; otherwise, the absolute value used is indicated. The value can be percent only for maxResources and maxChildResources.
+	Type *string `json:"type"` // The value is `percent` or `null`. When the value is `percent`, it indicates the percentage used; otherwise, it is the absolute value used. Only maxResources and maxChildResources can be set to `percent`.
 }
 ```
 
 ###### Capacity scheduler.
-The key values are as follows:
-- minimum-user-limit-percent: Minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the number range is [0,100].
-- user-limit-factor: User resource factor. The value is a **JSON string of the YarnResource type** or **null**.
-- maximum-applications: Maximum number of applications, that is, Max-Applications. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-- maximum-am-resource-percent: maximum AM percent. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
-- default-application-priority: Resource pool priority. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-Note: This field may return null, indicating that no valid values can be obtained.
+The key value information is as follows:
+- minimum-user-limit-percent: minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the numeric range is [0, 100].
+- user-limit-factor: user resource factor. The value is a **JSON string of the YarnResource type** or **null**.
+- maximum-applications: maximum number of applications (Max-Applications). The value is a **numeric string** or **null**, where the number is a positive integer.
+- maximum-am-resource-percent: maximum AM ratio. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
+- default-application-priority: resource pool priority. The value is a **numeric string** or **null**, where the number is a positive integer.
      */
     public Item [] getBasicParams() {
         return this.BasicParams;
     }
 
     /**
-     * Set Set parameters related to the configuration set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
+     * Set Sets the parameters related to the configuration set. The value of key is consistent with the field returned by **DescribeYarnQueue**.
 ###### Fair scheduler.
-The key values are as follows:
-- minResources: Minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxResources: Maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxChildResources: Maximum resource amount for undeclared subqueues. The value is a **numeric string** or **null**.
-- maxRunningApps: Maximum number of apps that can run concurrently. The value is a **numeric string** or **null**.
+The key value information is as follows:
+- minResources: minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxResources: maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxChildResources: maximum resource amount that can be allocated to undeclared subqueues. The value is a **numeric string** or **null**.
+- maxRunningApps: maximum number of apps that can run simultaneously. The value is a **numeric string** or **null**.
 - weight: weight. The value is a **numeric string** or **null**.
-- maxAMShare: Maximum App Master share. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
+- maxAMShare: maximum share of the App Master. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
 
 ```
 type YarnResource struct {
 	Vcores *int `json:"vcores"`
 	Memory *int `json:"memory"`
-	Type *string `json:"type"` // The value can be percent or null. When the value is percent, it indicates the percentage used; otherwise, the absolute value used is indicated. The value can be percent only for maxResources and maxChildResources.
+	Type *string `json:"type"` // The value is `percent` or `null`. When the value is `percent`, it indicates the percentage used; otherwise, it is the absolute value used. Only maxResources and maxChildResources can be set to `percent`.
 }
 ```
 
 ###### Capacity scheduler.
-The key values are as follows:
-- minimum-user-limit-percent: Minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the number range is [0,100].
-- user-limit-factor: User resource factor. The value is a **JSON string of the YarnResource type** or **null**.
-- maximum-applications: Maximum number of applications, that is, Max-Applications. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-- maximum-am-resource-percent: maximum AM percent. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
-- default-application-priority: Resource pool priority. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BasicParams Set parameters related to the configuration set. The key values are consistent with the fields returned by **DescribeYarnQueue**.
+The key value information is as follows:
+- minimum-user-limit-percent: minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the numeric range is [0, 100].
+- user-limit-factor: user resource factor. The value is a **JSON string of the YarnResource type** or **null**.
+- maximum-applications: maximum number of applications (Max-Applications). The value is a **numeric string** or **null**, where the number is a positive integer.
+- maximum-am-resource-percent: maximum AM ratio. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
+- default-application-priority: resource pool priority. The value is a **numeric string** or **null**, where the number is a positive integer.
+     * @param BasicParams Sets the parameters related to the configuration set. The value of key is consistent with the field returned by **DescribeYarnQueue**.
 ###### Fair scheduler.
-The key values are as follows:
-- minResources: Minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxResources: Maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
-- maxChildResources: Maximum resource amount for undeclared subqueues. The value is a **numeric string** or **null**.
-- maxRunningApps: Maximum number of apps that can run concurrently. The value is a **numeric string** or **null**.
+The key value information is as follows:
+- minResources: minimum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxResources: maximum resource amount. The value is a **JSON string of the YarnResource type** or **null**.
+- maxChildResources: maximum resource amount that can be allocated to undeclared subqueues. The value is a **numeric string** or **null**.
+- maxRunningApps: maximum number of apps that can run simultaneously. The value is a **numeric string** or **null**.
 - weight: weight. The value is a **numeric string** or **null**.
-- maxAMShare: Maximum App Master share. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
+- maxAMShare: maximum share of the App Master. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
 
 ```
 type YarnResource struct {
 	Vcores *int `json:"vcores"`
 	Memory *int `json:"memory"`
-	Type *string `json:"type"` // The value can be percent or null. When the value is percent, it indicates the percentage used; otherwise, the absolute value used is indicated. The value can be percent only for maxResources and maxChildResources.
+	Type *string `json:"type"` // The value is `percent` or `null`. When the value is `percent`, it indicates the percentage used; otherwise, it is the absolute value used. Only maxResources and maxChildResources can be set to `percent`.
 }
 ```
 
 ###### Capacity scheduler.
-The key values are as follows:
-- minimum-user-limit-percent: Minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the number range is [0,100].
-- user-limit-factor: User resource factor. The value is a **JSON string of the YarnResource type** or **null**.
-- maximum-applications: Maximum number of applications, that is, Max-Applications. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-- maximum-am-resource-percent: maximum AM percent. The value is a **numeric string** or **null**, where the number range is [0,1] or -1.
-- default-application-priority: Resource pool priority. The value is a **numeric string** or **null**, where the numbers must be positive integers.
-Note: This field may return null, indicating that no valid values can be obtained.
+The key value information is as follows:
+- minimum-user-limit-percent: minimum user capacity. The value is a **JSON string of the YarnResource type** or **null**, where the numeric range is [0, 100].
+- user-limit-factor: user resource factor. The value is a **JSON string of the YarnResource type** or **null**.
+- maximum-applications: maximum number of applications (Max-Applications). The value is a **numeric string** or **null**, where the number is a positive integer.
+- maximum-am-resource-percent: maximum AM ratio. The value is a **numeric string** or **null**, where the numeric range is [0, 1] or -1.
+- default-application-priority: resource pool priority. The value is a **numeric string** or **null**, where the number is a positive integer.
      */
     public void setBasicParams(Item [] BasicParams) {
         this.BasicParams = BasicParams;

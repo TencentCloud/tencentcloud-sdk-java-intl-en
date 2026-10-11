@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSparkApplicationsResponse extends AbstractModel {
 
     /**
-    * The number of returns.
+    * Number of returned items.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeSparkApplicationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The number of returns. 
-     * @return TotalCount The number of returns.
+     * Get Number of returned items. 
+     * @return TotalCount Number of returned items.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of returns.
-     * @param TotalCount The number of returns.
+     * Set Number of returned items.
+     * @param TotalCount Number of returned items.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

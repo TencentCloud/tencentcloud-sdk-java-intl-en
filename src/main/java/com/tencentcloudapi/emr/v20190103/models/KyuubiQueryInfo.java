@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KyuubiQueryInfo extends AbstractModel {
 
     /**
-    * Submitter IP address.
+    * Submission IP address.
     */
     @SerializedName("ClientIP")
     @Expose
@@ -101,23 +101,23 @@ public class KyuubiQueryInfo extends AbstractModel {
     private String StatementID;
 
     /**
-    * User who submits requests.
+    * Submission user.
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-     * Get Submitter IP address. 
-     * @return ClientIP Submitter IP address.
+     * Get Submission IP address. 
+     * @return ClientIP Submission IP address.
      */
     public String getClientIP() {
         return this.ClientIP;
     }
 
     /**
-     * Set Submitter IP address.
-     * @param ClientIP Submitter IP address.
+     * Set Submission IP address.
+     * @param ClientIP Submission IP address.
      */
     public void setClientIP(String ClientIP) {
         this.ClientIP = ClientIP;
@@ -284,16 +284,16 @@ public class KyuubiQueryInfo extends AbstractModel {
     }
 
     /**
-     * Get User who submits requests. 
-     * @return User User who submits requests.
+     * Get Submission user. 
+     * @return User Submission user.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set User who submits requests.
-     * @param User User who submits requests.
+     * Set Submission user.
+     * @param User Submission user.
      */
     public void setUser(String User) {
         this.User = User;

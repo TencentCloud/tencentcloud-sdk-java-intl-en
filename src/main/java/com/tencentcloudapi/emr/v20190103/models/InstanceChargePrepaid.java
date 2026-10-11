@@ -24,61 +24,56 @@ import java.util.HashMap;
 public class InstanceChargePrepaid extends AbstractModel {
 
     /**
-    * The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+    * Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+    * Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Boolean RenewFlag;
 
     /**
-     * Get The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60. 
-     * @return Period The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+     * Get Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60. 
+     * @return Period Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
-     * @param Period The period of monthly subscription, which defaults to 1 and is expressed in month.
-Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+     * Set Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
+     * @param Period Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li> 
-     * @return RenewFlag Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * Get Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li> 
+     * @return RenewFlag Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
      */
     public Boolean getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
-     * @param RenewFlag Whether to enable auto-renewal. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * Set Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
+     * @param RenewFlag Whether to enable auto-renewal, which defaults to no.
+<li>true: yes</li>
+<li>false: no</li>
      */
     public void setRenewFlag(Boolean RenewFlag) {
         this.RenewFlag = RenewFlag;

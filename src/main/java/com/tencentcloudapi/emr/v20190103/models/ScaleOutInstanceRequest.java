@@ -24,733 +24,739 @@ import java.util.HashMap;
 public class ScaleOutInstanceRequest extends AbstractModel {
 
     /**
-    * Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+    * <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Time span of scale-out, which needs to be used together with `TimeUnit`.
+    * <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+    * <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Client token.
+    * <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * Bootstrap script settings.
+    * <p>Bootstrap script settings.</p>
     */
     @SerializedName("PreExecutedFileSettings")
     @Expose
     private PreExecuteFileSettings [] PreExecutedFileSettings;
 
     /**
-    * Number of task nodes to be added.
+    * <p>Number of Task nodes to be scaled out.</p>
     */
     @SerializedName("TaskCount")
     @Expose
     private Long TaskCount;
 
     /**
-    * Number of core nodes to be added.
+    * <p>Number of scale-out Core nodes.</p>
     */
     @SerializedName("CoreCount")
     @Expose
     private Long CoreCount;
 
     /**
-    * Processes unnecessary for scale-out.
+    * <p>Processes, which are not required during the scale-out.</p>
     */
     @SerializedName("UnNecessaryNodeList")
     @Expose
     private Long [] UnNecessaryNodeList;
 
     /**
-    * Number of router nodes to be added.
+    * <p>Number of Router nodes to be scaled out.</p>
     */
     @SerializedName("RouterCount")
     @Expose
     private Long RouterCount;
 
     /**
-    * Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
+    * <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
     */
     @SerializedName("SoftDeployInfo")
     @Expose
     private Long [] SoftDeployInfo;
 
     /**
-    * Started process.
+    * <p>Started process.</p>
     */
     @SerializedName("ServiceNodeInfo")
     @Expose
     private Long [] ServiceNodeInfo;
 
     /**
-    * List of spread placement group IDs. Only one can be specified currently.
+    * <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * List of tags bound to added nodes.
+    * <p>List of tags bound to nodes for the scale-out.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+    * <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
     */
     @SerializedName("HardwareResourceType")
     @Expose
     private String HardwareResourceType;
 
     /**
-    * Specified information such as pod specification and source for scale-out with pod resources.
+    * <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
     */
     @SerializedName("PodSpec")
     @Expose
     private PodSpec PodSpec;
 
     /**
-    * Server group name selected for ClickHouse cluster scale-out.
+    * <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
     */
     @SerializedName("ClickHouseClusterName")
     @Expose
     private String ClickHouseClusterName;
 
     /**
-    * Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+    * <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
     */
     @SerializedName("ClickHouseClusterType")
     @Expose
     private String ClickHouseClusterType;
 
     /**
-    * Yarn node label specified for rule-based scale-out.
+    * <p>YARN node label specified for the rule-based scale-out.</p>
     */
     @SerializedName("YarnNodeLabel")
     @Expose
     private String YarnNodeLabel;
 
     /**
-    * Custom pod permission and parameter
+    * <p>Pod custom permission and parameter.</p>
     */
     @SerializedName("PodParameter")
     @Expose
     private PodParameter PodParameter;
 
     /**
-    * Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
+    * <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
     */
     @SerializedName("MasterCount")
     @Expose
     private Long MasterCount;
 
     /**
-    * Whether to start the service after scale-out. `true`: Yes; `false`: No.
+    * <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
     */
     @SerializedName("StartServiceAfterScaleOut")
     @Expose
     private String StartServiceAfterScaleOut;
 
     /**
-    * AZ, which defaults to the primary AZ of the cluster.
+    * <p>AZ. The primary AZ of the cluster is selected by default.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Subnet, which defaults to the subnet used when the cluster is created.
+    * <p>Subnet. The subnet used during cluster creation is selected by default.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Pre-defined configuration set
+    * <p>Preset configuration group.</p>
     */
     @SerializedName("ScaleOutServiceConfAssign")
     @Expose
     private String ScaleOutServiceConfAssign;
 
     /**
-    * Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+    * <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+    * <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
     */
     @SerializedName("ResourceBaseType")
     @Expose
     private String ResourceBaseType;
 
     /**
-    * Computing resource ID.
+    * <p>Computing resource ID.</p>
     */
     @SerializedName("ComputeResourceId")
     @Expose
     private String ComputeResourceId;
 
     /**
-    * Advanced settings of computing resources.
+    * <p>Advanced settings of computing resources.</p>
     */
     @SerializedName("ComputeResourceAdvanceParams")
     @Expose
     private ComputeResourceAdvanceParams ComputeResourceAdvanceParams;
 
     /**
-    * Node tag information: currently used only in Terraform.
+    * <p>Node tag information, which is currently only provided for the Terraform platform.</p>
     */
     @SerializedName("NodeMarks")
     @Expose
     private NodeMark NodeMarks;
 
     /**
-     * Get Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li> 
-     * @return TimeUnit Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+    * <p>Compute group specified for the scale-out.</p>
+    */
+    @SerializedName("WarehouseName")
+    @Expose
+    private String WarehouseName;
+
+    /**
+    * <p>Partition of a partition placement group.</p>
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+     * Get <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li> 
+     * @return TimeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
-     * @param TimeUnit Time unit of scale-out. Valid values:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-<li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+     * Set <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+     * @param TimeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Time span of scale-out, which needs to be used together with `TimeUnit`. 
-     * @return TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
+     * Get <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li> 
+     * @return TimeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Time span of scale-out, which needs to be used together with `TimeUnit`.
-     * @param TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
+     * Set <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+     * @param TimeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li> 
-     * @return PayMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+     * Get <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li> 
+     * @return PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
-     * @param PayMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+     * Set <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+     * @param PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Client token. 
-     * @return ClientToken Client token.
+     * Get <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p> 
+     * @return ClientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set Client token.
-     * @param ClientToken Client token.
+     * Set <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
+     * @param ClientToken <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get Bootstrap script settings. 
-     * @return PreExecutedFileSettings Bootstrap script settings.
+     * Get <p>Bootstrap script settings.</p> 
+     * @return PreExecutedFileSettings <p>Bootstrap script settings.</p>
      */
     public PreExecuteFileSettings [] getPreExecutedFileSettings() {
         return this.PreExecutedFileSettings;
     }
 
     /**
-     * Set Bootstrap script settings.
-     * @param PreExecutedFileSettings Bootstrap script settings.
+     * Set <p>Bootstrap script settings.</p>
+     * @param PreExecutedFileSettings <p>Bootstrap script settings.</p>
      */
     public void setPreExecutedFileSettings(PreExecuteFileSettings [] PreExecutedFileSettings) {
         this.PreExecutedFileSettings = PreExecutedFileSettings;
     }
 
     /**
-     * Get Number of task nodes to be added. 
-     * @return TaskCount Number of task nodes to be added.
+     * Get <p>Number of Task nodes to be scaled out.</p> 
+     * @return TaskCount <p>Number of Task nodes to be scaled out.</p>
      */
     public Long getTaskCount() {
         return this.TaskCount;
     }
 
     /**
-     * Set Number of task nodes to be added.
-     * @param TaskCount Number of task nodes to be added.
+     * Set <p>Number of Task nodes to be scaled out.</p>
+     * @param TaskCount <p>Number of Task nodes to be scaled out.</p>
      */
     public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 
     /**
-     * Get Number of core nodes to be added. 
-     * @return CoreCount Number of core nodes to be added.
+     * Get <p>Number of scale-out Core nodes.</p> 
+     * @return CoreCount <p>Number of scale-out Core nodes.</p>
      */
     public Long getCoreCount() {
         return this.CoreCount;
     }
 
     /**
-     * Set Number of core nodes to be added.
-     * @param CoreCount Number of core nodes to be added.
+     * Set <p>Number of scale-out Core nodes.</p>
+     * @param CoreCount <p>Number of scale-out Core nodes.</p>
      */
     public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
     /**
-     * Get Processes unnecessary for scale-out. 
-     * @return UnNecessaryNodeList Processes unnecessary for scale-out.
+     * Get <p>Processes, which are not required during the scale-out.</p> 
+     * @return UnNecessaryNodeList <p>Processes, which are not required during the scale-out.</p>
      */
     public Long [] getUnNecessaryNodeList() {
         return this.UnNecessaryNodeList;
     }
 
     /**
-     * Set Processes unnecessary for scale-out.
-     * @param UnNecessaryNodeList Processes unnecessary for scale-out.
+     * Set <p>Processes, which are not required during the scale-out.</p>
+     * @param UnNecessaryNodeList <p>Processes, which are not required during the scale-out.</p>
      */
     public void setUnNecessaryNodeList(Long [] UnNecessaryNodeList) {
         this.UnNecessaryNodeList = UnNecessaryNodeList;
     }
 
     /**
-     * Get Number of router nodes to be added. 
-     * @return RouterCount Number of router nodes to be added.
+     * Get <p>Number of Router nodes to be scaled out.</p> 
+     * @return RouterCount <p>Number of Router nodes to be scaled out.</p>
      */
     public Long getRouterCount() {
         return this.RouterCount;
     }
 
     /**
-     * Set Number of router nodes to be added.
-     * @param RouterCount Number of router nodes to be added.
+     * Set <p>Number of Router nodes to be scaled out.</p>
+     * @param RouterCount <p>Number of Router nodes to be scaled out.</p>
      */
     public void setRouterCount(Long RouterCount) {
         this.RouterCount = RouterCount;
     }
 
     /**
-     * Get Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li> 
-     * @return SoftDeployInfo Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
+     * Get <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li> 
+     * @return SoftDeployInfo <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
      */
     public Long [] getSoftDeployInfo() {
         return this.SoftDeployInfo;
     }
 
     /**
-     * Set Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
-     * @param SoftDeployInfo Deployed service.
-<li>`SoftDeployInfo` and `ServiceNodeInfo` are in the same group and mutually exclusive with `UnNecessaryNodeList`.</li>
-<li>The combination of `SoftDeployInfo` and `ServiceNodeInfo` is recommended.</li>
+     * Set <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
+     * @param SoftDeployInfo <p>Deployed service.</p><li>SoftDeployInfo and ServiceNodeInfo are parameters in the same group and are mutually exclusive with UnNecessaryNodeList.</li><li>It is recommended to use SoftDeployInfo and ServiceNodeInfo together.</li>
      */
     public void setSoftDeployInfo(Long [] SoftDeployInfo) {
         this.SoftDeployInfo = SoftDeployInfo;
     }
 
     /**
-     * Get Started process. 
-     * @return ServiceNodeInfo Started process.
+     * Get <p>Started process.</p> 
+     * @return ServiceNodeInfo <p>Started process.</p>
      */
     public Long [] getServiceNodeInfo() {
         return this.ServiceNodeInfo;
     }
 
     /**
-     * Set Started process.
-     * @param ServiceNodeInfo Started process.
+     * Set <p>Started process.</p>
+     * @param ServiceNodeInfo <p>Started process.</p>
      */
     public void setServiceNodeInfo(Long [] ServiceNodeInfo) {
         this.ServiceNodeInfo = ServiceNodeInfo;
     }
 
     /**
-     * Get List of spread placement group IDs. Only one can be specified currently. 
-     * @return DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+     * Get <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p> 
+     * @return DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set List of spread placement group IDs. Only one can be specified currently.
-     * @param DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+     * Set <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
+     * @param DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID is supported.</p>
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get List of tags bound to added nodes. 
-     * @return Tags List of tags bound to added nodes.
+     * Get <p>List of tags bound to nodes for the scale-out.</p> 
+     * @return Tags <p>List of tags bound to nodes for the scale-out.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set List of tags bound to added nodes.
-     * @param Tags List of tags bound to added nodes.
+     * Set <p>List of tags bound to nodes for the scale-out.</p>
+     * @param Tags <p>List of tags bound to nodes for the scale-out.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type. 
-     * @return HardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+     * Get <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p> 
+     * @return HardwareResourceType <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
-     * @param HardwareResourceType Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
+     * Set <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
+     * @param HardwareResourceType <p>Resource type selected for the scale-out. Valid values: &quot;HOST&quot;, &quot;POD&quot;, and &quot;MNode&quot;. HOST indicates ordinary CVM resources, POD indicates resources provided by a TKE cluster or an EKS cluster, and MNode indicates fully managed resources.</p>
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
     }
 
     /**
-     * Get Specified information such as pod specification and source for scale-out with pod resources. 
-     * @return PodSpec Specified information such as pod specification and source for scale-out with pod resources.
+     * Get <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p> 
+     * @return PodSpec <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
      */
     public PodSpec getPodSpec() {
         return this.PodSpec;
     }
 
     /**
-     * Set Specified information such as pod specification and source for scale-out with pod resources.
-     * @param PodSpec Specified information such as pod specification and source for scale-out with pod resources.
+     * Set <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
+     * @param PodSpec <p>Pod specifications and source information, which are specified when Pod resources are used for the scale-out.</p>
      */
     public void setPodSpec(PodSpec PodSpec) {
         this.PodSpec = PodSpec;
     }
 
     /**
-     * Get Server group name selected for ClickHouse cluster scale-out. 
-     * @return ClickHouseClusterName Server group name selected for ClickHouse cluster scale-out.
+     * Get <p>Machine group name selected for the ClickHouse cluster scale-out.</p> 
+     * @return ClickHouseClusterName <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
      */
     public String getClickHouseClusterName() {
         return this.ClickHouseClusterName;
     }
 
     /**
-     * Set Server group name selected for ClickHouse cluster scale-out.
-     * @param ClickHouseClusterName Server group name selected for ClickHouse cluster scale-out.
+     * Set <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
+     * @param ClickHouseClusterName <p>Machine group name selected for the ClickHouse cluster scale-out.</p>
      */
     public void setClickHouseClusterName(String ClickHouseClusterName) {
         this.ClickHouseClusterName = ClickHouseClusterName;
     }
 
     /**
-     * Get Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group). 
-     * @return ClickHouseClusterType Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+     * Get <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p> 
+     * @return ClickHouseClusterType <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
      */
     public String getClickHouseClusterType() {
         return this.ClickHouseClusterType;
     }
 
     /**
-     * Set Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
-     * @param ClickHouseClusterType Server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+     * Set <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
+     * @param ClickHouseClusterType <p>Machine group type selected for the ClickHouse cluster scale-out. Valid values: new (adds a group) and old (selects an existing group).</p>
      */
     public void setClickHouseClusterType(String ClickHouseClusterType) {
         this.ClickHouseClusterType = ClickHouseClusterType;
     }
 
     /**
-     * Get Yarn node label specified for rule-based scale-out. 
-     * @return YarnNodeLabel Yarn node label specified for rule-based scale-out.
+     * Get <p>YARN node label specified for the rule-based scale-out.</p> 
+     * @return YarnNodeLabel <p>YARN node label specified for the rule-based scale-out.</p>
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
     }
 
     /**
-     * Set Yarn node label specified for rule-based scale-out.
-     * @param YarnNodeLabel Yarn node label specified for rule-based scale-out.
+     * Set <p>YARN node label specified for the rule-based scale-out.</p>
+     * @param YarnNodeLabel <p>YARN node label specified for the rule-based scale-out.</p>
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
     }
 
     /**
-     * Get Custom pod permission and parameter 
-     * @return PodParameter Custom pod permission and parameter
+     * Get <p>Pod custom permission and parameter.</p> 
+     * @return PodParameter <p>Pod custom permission and parameter.</p>
      */
     public PodParameter getPodParameter() {
         return this.PodParameter;
     }
 
     /**
-     * Set Custom pod permission and parameter
-     * @param PodParameter Custom pod permission and parameter
+     * Set <p>Pod custom permission and parameter.</p>
+     * @param PodParameter <p>Pod custom permission and parameter.</p>
      */
     public void setPodParameter(PodParameter PodParameter) {
         this.PodParameter = PodParameter;
     }
 
     /**
-     * Get Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect. 
-     * @return MasterCount Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
+     * Get <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p> 
+     * @return MasterCount <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
      */
     public Long getMasterCount() {
         return this.MasterCount;
     }
 
     /**
-     * Set Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
-     * @param MasterCount Number of master nodes to be added.
-When a ClickHouse cluster is scaled, this parameter does not take effect.
-When a Kafka cluster is scaled, this parameter does not take effect.
-When `HardwareResourceType` is `pod`, this parameter does not take effect.
+     * Set <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
+     * @param MasterCount <p>Number of Master nodes for the scale-out.<br>When a ClickHouse cluster is used for the scale-out, this parameter does not take effect.<br>When a Kafka cluster is used for the scale-out, this parameter does not take effect.<br>When HardwareResourceType is set to POD, this parameter does not take effect.</p>
      */
     public void setMasterCount(Long MasterCount) {
         this.MasterCount = MasterCount;
     }
 
     /**
-     * Get Whether to start the service after scale-out. `true`: Yes; `false`: No. 
-     * @return StartServiceAfterScaleOut Whether to start the service after scale-out. `true`: Yes; `false`: No.
+     * Get <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p> 
+     * @return StartServiceAfterScaleOut <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
      */
     public String getStartServiceAfterScaleOut() {
         return this.StartServiceAfterScaleOut;
     }
 
     /**
-     * Set Whether to start the service after scale-out. `true`: Yes; `false`: No.
-     * @param StartServiceAfterScaleOut Whether to start the service after scale-out. `true`: Yes; `false`: No.
+     * Set <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
+     * @param StartServiceAfterScaleOut <p>Whether the service is started after the scale-out. Valid values: true (yes) and false (no).</p>
      */
     public void setStartServiceAfterScaleOut(String StartServiceAfterScaleOut) {
         this.StartServiceAfterScaleOut = StartServiceAfterScaleOut;
     }
 
     /**
-     * Get AZ, which defaults to the primary AZ of the cluster. 
-     * @return ZoneId AZ, which defaults to the primary AZ of the cluster.
+     * Get <p>AZ. The primary AZ of the cluster is selected by default.</p> 
+     * @return ZoneId <p>AZ. The primary AZ of the cluster is selected by default.</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ, which defaults to the primary AZ of the cluster.
-     * @param ZoneId AZ, which defaults to the primary AZ of the cluster.
+     * Set <p>AZ. The primary AZ of the cluster is selected by default.</p>
+     * @param ZoneId <p>AZ. The primary AZ of the cluster is selected by default.</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Subnet, which defaults to the subnet used when the cluster is created. 
-     * @return SubnetId Subnet, which defaults to the subnet used when the cluster is created.
+     * Get <p>Subnet. The subnet used during cluster creation is selected by default.</p> 
+     * @return SubnetId <p>Subnet. The subnet used during cluster creation is selected by default.</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet, which defaults to the subnet used when the cluster is created.
-     * @param SubnetId Subnet, which defaults to the subnet used when the cluster is created.
+     * Set <p>Subnet. The subnet used during cluster creation is selected by default.</p>
+     * @param SubnetId <p>Subnet. The subnet used during cluster creation is selected by default.</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Pre-defined configuration set 
-     * @return ScaleOutServiceConfAssign Pre-defined configuration set
+     * Get <p>Preset configuration group.</p> 
+     * @return ScaleOutServiceConfAssign <p>Preset configuration group.</p>
      */
     public String getScaleOutServiceConfAssign() {
         return this.ScaleOutServiceConfAssign;
     }
 
     /**
-     * Set Pre-defined configuration set
-     * @param ScaleOutServiceConfAssign Pre-defined configuration set
+     * Set <p>Preset configuration group.</p>
+     * @param ScaleOutServiceConfAssign <p>Preset configuration group.</p>
      */
     public void setScaleOutServiceConfAssign(String ScaleOutServiceConfAssign) {
         this.ScaleOutServiceConfAssign = ScaleOutServiceConfAssign;
     }
 
     /**
-     * Get Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes). 
-     * @return AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+     * Get <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p> 
+     * @return AutoRenew <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
-     * @param AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+     * Set <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * @param AutoRenew <p>Auto-renewal. Valid values: 0 (disabled) and 1 (enabled).</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used. 
-     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * Get <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p> 
+     * @return ResourceBaseType <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
      */
     public String getResourceBaseType() {
         return this.ResourceBaseType;
     }
 
     /**
-     * Set The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
-     * @param ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * Set <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
+     * @param ResourceBaseType <p>Type. Valid values: ComputeResource and EMR. Default value: EMR. If this parameter is set to EMR, InstanceId takes effect. If this parameter is set to ComputeResource, ComputeResourceId is used.</p>
      */
     public void setResourceBaseType(String ResourceBaseType) {
         this.ResourceBaseType = ResourceBaseType;
     }
 
     /**
-     * Get Computing resource ID. 
-     * @return ComputeResourceId Computing resource ID.
+     * Get <p>Computing resource ID.</p> 
+     * @return ComputeResourceId <p>Computing resource ID.</p>
      */
     public String getComputeResourceId() {
         return this.ComputeResourceId;
     }
 
     /**
-     * Set Computing resource ID.
-     * @param ComputeResourceId Computing resource ID.
+     * Set <p>Computing resource ID.</p>
+     * @param ComputeResourceId <p>Computing resource ID.</p>
      */
     public void setComputeResourceId(String ComputeResourceId) {
         this.ComputeResourceId = ComputeResourceId;
     }
 
     /**
-     * Get Advanced settings of computing resources. 
-     * @return ComputeResourceAdvanceParams Advanced settings of computing resources.
+     * Get <p>Advanced settings of computing resources.</p> 
+     * @return ComputeResourceAdvanceParams <p>Advanced settings of computing resources.</p>
      */
     public ComputeResourceAdvanceParams getComputeResourceAdvanceParams() {
         return this.ComputeResourceAdvanceParams;
     }
 
     /**
-     * Set Advanced settings of computing resources.
-     * @param ComputeResourceAdvanceParams Advanced settings of computing resources.
+     * Set <p>Advanced settings of computing resources.</p>
+     * @param ComputeResourceAdvanceParams <p>Advanced settings of computing resources.</p>
      */
     public void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams ComputeResourceAdvanceParams) {
         this.ComputeResourceAdvanceParams = ComputeResourceAdvanceParams;
     }
 
     /**
-     * Get Node tag information: currently used only in Terraform. 
-     * @return NodeMarks Node tag information: currently used only in Terraform.
+     * Get <p>Node tag information, which is currently only provided for the Terraform platform.</p> 
+     * @return NodeMarks <p>Node tag information, which is currently only provided for the Terraform platform.</p>
      */
     public NodeMark getNodeMarks() {
         return this.NodeMarks;
     }
 
     /**
-     * Set Node tag information: currently used only in Terraform.
-     * @param NodeMarks Node tag information: currently used only in Terraform.
+     * Set <p>Node tag information, which is currently only provided for the Terraform platform.</p>
+     * @param NodeMarks <p>Node tag information, which is currently only provided for the Terraform platform.</p>
      */
     public void setNodeMarks(NodeMark NodeMarks) {
         this.NodeMarks = NodeMarks;
+    }
+
+    /**
+     * Get <p>Compute group specified for the scale-out.</p> 
+     * @return WarehouseName <p>Compute group specified for the scale-out.</p>
+     */
+    public String getWarehouseName() {
+        return this.WarehouseName;
+    }
+
+    /**
+     * Set <p>Compute group specified for the scale-out.</p>
+     * @param WarehouseName <p>Compute group specified for the scale-out.</p>
+     */
+    public void setWarehouseName(String WarehouseName) {
+        this.WarehouseName = WarehouseName;
+    }
+
+    /**
+     * Get <p>Partition of a partition placement group.</p> 
+     * @return PartitionNumber <p>Partition of a partition placement group.</p>
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set <p>Partition of a partition placement group.</p>
+     * @param PartitionNumber <p>Partition of a partition placement group.</p>
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
     }
 
     public ScaleOutInstanceRequest() {
@@ -869,6 +875,12 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         if (source.NodeMarks != null) {
             this.NodeMarks = new NodeMark(source.NodeMarks);
         }
+        if (source.WarehouseName != null) {
+            this.WarehouseName = new String(source.WarehouseName);
+        }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
     }
 
 
@@ -906,6 +918,8 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         this.setParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
         this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
+        this.setParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
 
     }
 }

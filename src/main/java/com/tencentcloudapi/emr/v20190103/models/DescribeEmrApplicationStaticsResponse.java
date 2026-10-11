@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeEmrApplicationStaticsResponse extends AbstractModel {
 
     /**
-    * Application statistics
+    * Job statistics information.
     */
     @SerializedName("Statics")
     @Expose
     private ApplicationStatics [] Statics;
 
     /**
-    * Total count
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Available queue name
+    * Available queue names.
     */
     @SerializedName("Queues")
     @Expose
     private String [] Queues;
 
     /**
-    * Available usernames
+    * Available usernames.
     */
     @SerializedName("Users")
     @Expose
     private String [] Users;
 
     /**
-    * Available application type
+    * Available job types.
     */
     @SerializedName("ApplicationTypes")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeEmrApplicationStaticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Application statistics 
-     * @return Statics Application statistics
+     * Get Job statistics information. 
+     * @return Statics Job statistics information.
      */
     public ApplicationStatics [] getStatics() {
         return this.Statics;
     }
 
     /**
-     * Set Application statistics
-     * @param Statics Application statistics
+     * Set Job statistics information.
+     * @param Statics Job statistics information.
      */
     public void setStatics(ApplicationStatics [] Statics) {
         this.Statics = Statics;
     }
 
     /**
-     * Get Total count 
-     * @return TotalCount Total count
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total count
-     * @param TotalCount Total count
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Available queue name 
-     * @return Queues Available queue name
+     * Get Available queue names. 
+     * @return Queues Available queue names.
      */
     public String [] getQueues() {
         return this.Queues;
     }
 
     /**
-     * Set Available queue name
-     * @param Queues Available queue name
+     * Set Available queue names.
+     * @param Queues Available queue names.
      */
     public void setQueues(String [] Queues) {
         this.Queues = Queues;
     }
 
     /**
-     * Get Available usernames 
-     * @return Users Available usernames
+     * Get Available usernames. 
+     * @return Users Available usernames.
      */
     public String [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set Available usernames
-     * @param Users Available usernames
+     * Set Available usernames.
+     * @param Users Available usernames.
      */
     public void setUsers(String [] Users) {
         this.Users = Users;
     }
 
     /**
-     * Get Available application type 
-     * @return ApplicationTypes Available application type
+     * Get Available job types. 
+     * @return ApplicationTypes Available job types.
      */
     public String [] getApplicationTypes() {
         return this.ApplicationTypes;
     }
 
     /**
-     * Set Available application type
-     * @param ApplicationTypes Available application type
+     * Set Available job types.
+     * @param ApplicationTypes Available job types.
      */
     public void setApplicationTypes(String [] ApplicationTypes) {
         this.ApplicationTypes = ApplicationTypes;

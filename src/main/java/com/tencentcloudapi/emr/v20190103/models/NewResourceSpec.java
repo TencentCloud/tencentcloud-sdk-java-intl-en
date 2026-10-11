@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class NewResourceSpec extends AbstractModel {
 
     /**
-    * Describes master node resource
+    * Description of Master node resources.
     */
     @SerializedName("MasterResourceSpec")
     @Expose
     private Resource MasterResourceSpec;
 
     /**
-    * Describes core node resource
+    * Description of Core node resources.
     */
     @SerializedName("CoreResourceSpec")
     @Expose
     private Resource CoreResourceSpec;
 
     /**
-    * Describes task node resource
+    * Description of Task node resources.
     */
     @SerializedName("TaskResourceSpec")
     @Expose
     private Resource TaskResourceSpec;
 
     /**
-    * Number of master nodes
+    * Number of Master nodes.
     */
     @SerializedName("MasterCount")
     @Expose
     private Long MasterCount;
 
     /**
-    * Number of core nodes
+    * Number of Core nodes.
     */
     @SerializedName("CoreCount")
     @Expose
     private Long CoreCount;
 
     /**
-    * Number of task nodes
+    * Number of Task nodes.
     */
     @SerializedName("TaskCount")
     @Expose
     private Long TaskCount;
 
     /**
-    * Describes common node resource
+    * Description of Common node resources.
     */
     @SerializedName("CommonResourceSpec")
     @Expose
     private Resource CommonResourceSpec;
 
     /**
-    * Number of common nodes
+    * Number of Common nodes.
     */
     @SerializedName("CommonCount")
     @Expose
     private Long CommonCount;
 
     /**
-     * Get Describes master node resource 
-     * @return MasterResourceSpec Describes master node resource
+     * Get Description of Master node resources. 
+     * @return MasterResourceSpec Description of Master node resources.
      */
     public Resource getMasterResourceSpec() {
         return this.MasterResourceSpec;
     }
 
     /**
-     * Set Describes master node resource
-     * @param MasterResourceSpec Describes master node resource
+     * Set Description of Master node resources.
+     * @param MasterResourceSpec Description of Master node resources.
      */
     public void setMasterResourceSpec(Resource MasterResourceSpec) {
         this.MasterResourceSpec = MasterResourceSpec;
     }
 
     /**
-     * Get Describes core node resource 
-     * @return CoreResourceSpec Describes core node resource
+     * Get Description of Core node resources. 
+     * @return CoreResourceSpec Description of Core node resources.
      */
     public Resource getCoreResourceSpec() {
         return this.CoreResourceSpec;
     }
 
     /**
-     * Set Describes core node resource
-     * @param CoreResourceSpec Describes core node resource
+     * Set Description of Core node resources.
+     * @param CoreResourceSpec Description of Core node resources.
      */
     public void setCoreResourceSpec(Resource CoreResourceSpec) {
         this.CoreResourceSpec = CoreResourceSpec;
     }
 
     /**
-     * Get Describes task node resource 
-     * @return TaskResourceSpec Describes task node resource
+     * Get Description of Task node resources. 
+     * @return TaskResourceSpec Description of Task node resources.
      */
     public Resource getTaskResourceSpec() {
         return this.TaskResourceSpec;
     }
 
     /**
-     * Set Describes task node resource
-     * @param TaskResourceSpec Describes task node resource
+     * Set Description of Task node resources.
+     * @param TaskResourceSpec Description of Task node resources.
      */
     public void setTaskResourceSpec(Resource TaskResourceSpec) {
         this.TaskResourceSpec = TaskResourceSpec;
     }
 
     /**
-     * Get Number of master nodes 
-     * @return MasterCount Number of master nodes
+     * Get Number of Master nodes. 
+     * @return MasterCount Number of Master nodes.
      */
     public Long getMasterCount() {
         return this.MasterCount;
     }
 
     /**
-     * Set Number of master nodes
-     * @param MasterCount Number of master nodes
+     * Set Number of Master nodes.
+     * @param MasterCount Number of Master nodes.
      */
     public void setMasterCount(Long MasterCount) {
         this.MasterCount = MasterCount;
     }
 
     /**
-     * Get Number of core nodes 
-     * @return CoreCount Number of core nodes
+     * Get Number of Core nodes. 
+     * @return CoreCount Number of Core nodes.
      */
     public Long getCoreCount() {
         return this.CoreCount;
     }
 
     /**
-     * Set Number of core nodes
-     * @param CoreCount Number of core nodes
+     * Set Number of Core nodes.
+     * @param CoreCount Number of Core nodes.
      */
     public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
     /**
-     * Get Number of task nodes 
-     * @return TaskCount Number of task nodes
+     * Get Number of Task nodes. 
+     * @return TaskCount Number of Task nodes.
      */
     public Long getTaskCount() {
         return this.TaskCount;
     }
 
     /**
-     * Set Number of task nodes
-     * @param TaskCount Number of task nodes
+     * Set Number of Task nodes.
+     * @param TaskCount Number of Task nodes.
      */
     public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 
     /**
-     * Get Describes common node resource 
-     * @return CommonResourceSpec Describes common node resource
+     * Get Description of Common node resources. 
+     * @return CommonResourceSpec Description of Common node resources.
      */
     public Resource getCommonResourceSpec() {
         return this.CommonResourceSpec;
     }
 
     /**
-     * Set Describes common node resource
-     * @param CommonResourceSpec Describes common node resource
+     * Set Description of Common node resources.
+     * @param CommonResourceSpec Description of Common node resources.
      */
     public void setCommonResourceSpec(Resource CommonResourceSpec) {
         this.CommonResourceSpec = CommonResourceSpec;
     }
 
     /**
-     * Get Number of common nodes 
-     * @return CommonCount Number of common nodes
+     * Get Number of Common nodes. 
+     * @return CommonCount Number of Common nodes.
      */
     public Long getCommonCount() {
         return this.CommonCount;
     }
 
     /**
-     * Set Number of common nodes
-     * @param CommonCount Number of common nodes
+     * Set Number of Common nodes.
+     * @param CommonCount Number of Common nodes.
      */
     public void setCommonCount(Long CommonCount) {
         this.CommonCount = CommonCount;

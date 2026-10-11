@@ -31,14 +31,14 @@ public class DiffDetailItem extends AbstractModel {
     private String Attribute;
 
     /**
-    * Currently effective.
+    * Effective item.
     */
     @SerializedName("InEffect")
     @Expose
     private String InEffect;
 
     /**
-    * To be effective.
+    * Pending effective.
     */
     @SerializedName("PendingEffectiveness")
     @Expose
@@ -131,32 +131,32 @@ public class DiffDetailItem extends AbstractModel {
     }
 
     /**
-     * Get Currently effective. 
-     * @return InEffect Currently effective.
+     * Get Effective item. 
+     * @return InEffect Effective item.
      */
     public String getInEffect() {
         return this.InEffect;
     }
 
     /**
-     * Set Currently effective.
-     * @param InEffect Currently effective.
+     * Set Effective item.
+     * @param InEffect Effective item.
      */
     public void setInEffect(String InEffect) {
         this.InEffect = InEffect;
     }
 
     /**
-     * Get To be effective. 
-     * @return PendingEffectiveness To be effective.
+     * Get Pending effective. 
+     * @return PendingEffectiveness Pending effective.
      */
     public String getPendingEffectiveness() {
         return this.PendingEffectiveness;
     }
 
     /**
-     * Set To be effective.
-     * @param PendingEffectiveness To be effective.
+     * Set Pending effective.
+     * @param PendingEffectiveness Pending effective.
      */
     public void setPendingEffectiveness(String PendingEffectiveness) {
         this.PendingEffectiveness = PendingEffectiveness;

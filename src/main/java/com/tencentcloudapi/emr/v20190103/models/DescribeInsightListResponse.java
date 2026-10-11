@@ -32,7 +32,6 @@ public class DescribeInsightListResponse extends AbstractModel {
 
     /**
     * Insight result array.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResultList")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Insight result array.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Insight result array. 
      * @return ResultList Insight result array.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public InsightResult [] getResultList() {
         return this.ResultList;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Insight result array.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ResultList Insight result array.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResultList(InsightResult [] ResultList) {
         this.ResultList = ResultList;

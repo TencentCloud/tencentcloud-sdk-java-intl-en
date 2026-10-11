@@ -213,12 +213,35 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     private Boolean AllowUploadPhoto;
 
     /**
-    * <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+    * <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
 
     */
     @SerializedName("EnableBotBgDetection")
     @Expose
     private Boolean EnableBotBgDetection;
+
+    /**
+    * OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+    */
+    @SerializedName("OcrAutoDetectTimeout")
+    @Expose
+    private Long OcrAutoDetectTimeout;
+
+    /**
+    * OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL
+    */
+    @SerializedName("OcrModeType")
+    @Expose
+    private String OcrModeType;
 
     /**
      * Get The verification mode. Valid values:
@@ -729,9 +752,9 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     }
 
     /**
-     * Get <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+     * Get <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
  
-     * @return EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+     * @return EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
 
      */
     public Boolean getEnableBotBgDetection() {
@@ -739,13 +762,81 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     }
 
     /**
-     * Set <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+     * Set <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
 
-     * @param EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+     * @param EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
 
      */
     public void setEnableBotBgDetection(Boolean EnableBotBgDetection) {
         this.EnableBotBgDetection = EnableBotBgDetection;
+    }
+
+    /**
+     * Get OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000 
+     * @return OcrAutoDetectTimeout OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+     */
+    public Long getOcrAutoDetectTimeout() {
+        return this.OcrAutoDetectTimeout;
+    }
+
+    /**
+     * Set OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+     * @param OcrAutoDetectTimeout OCR Auto Capture Mode Timeout (ms)
+Value Range: [5000, 180000]
+Default Value: 20000
+Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+     */
+    public void setOcrAutoDetectTimeout(Long OcrAutoDetectTimeout) {
+        this.OcrAutoDetectTimeout = OcrAutoDetectTimeout;
+    }
+
+    /**
+     * Get OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL 
+     * @return OcrModeType OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL
+     */
+    public String getOcrModeType() {
+        return this.OcrModeType;
+    }
+
+    /**
+     * Set OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL
+     * @param OcrModeType OCR Capture Mode
+Enum Values:
+<li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+<li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+<li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+Default Value: OCR_DETECT_AUTO_MANUAL
+     */
+    public void setOcrModeType(String OcrModeType) {
+        this.OcrModeType = OcrModeType;
     }
 
     public ApplySdkVerificationTokenRequest() {
@@ -828,6 +919,12 @@ false : Expired HKID is rejected and cannot enter the liveness process.
         if (source.EnableBotBgDetection != null) {
             this.EnableBotBgDetection = new Boolean(source.EnableBotBgDetection);
         }
+        if (source.OcrAutoDetectTimeout != null) {
+            this.OcrAutoDetectTimeout = new Long(source.OcrAutoDetectTimeout);
+        }
+        if (source.OcrModeType != null) {
+            this.OcrModeType = new String(source.OcrModeType);
+        }
     }
 
 
@@ -857,6 +954,8 @@ false : Expired HKID is rejected and cannot enter the liveness process.
         this.setParamSimple(map, prefix + "HideProgressBar", this.HideProgressBar);
         this.setParamSimple(map, prefix + "AllowUploadPhoto", this.AllowUploadPhoto);
         this.setParamSimple(map, prefix + "EnableBotBgDetection", this.EnableBotBgDetection);
+        this.setParamSimple(map, prefix + "OcrAutoDetectTimeout", this.OcrAutoDetectTimeout);
+        this.setParamSimple(map, prefix + "OcrModeType", this.OcrModeType);
 
     }
 }

@@ -32,7 +32,6 @@ public class DescribeServiceNodeInfosResponse extends AbstractModel {
 
     /**
     * Process information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceNodeList")
     @Expose
@@ -46,9 +45,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AliasInfo;
 
     /**
-    * Supported FlagNode list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of supported flag nodes.
     */
     @SerializedName("SupportNodeFlagFilterList")
     @Expose
@@ -78,10 +75,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Process information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process information. 
      * @return ServiceNodeList Process information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ServiceNodeDetailInfo [] getServiceNodeList() {
         return this.ServiceNodeList;
@@ -89,9 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServiceNodeList Process information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceNodeList(ServiceNodeDetailInfo [] ServiceNodeList) {
         this.ServiceNodeList = ServiceNodeList;
@@ -114,24 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Supported FlagNode list
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SupportNodeFlagFilterList Supported FlagNode list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of supported flag nodes. 
+     * @return SupportNodeFlagFilterList List of supported flag nodes.
      */
     public String [] getSupportNodeFlagFilterList() {
         return this.SupportNodeFlagFilterList;
     }
 
     /**
-     * Set Supported FlagNode list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SupportNodeFlagFilterList Supported FlagNode list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of supported flag nodes.
+     * @param SupportNodeFlagFilterList List of supported flag nodes.
      */
     public void setSupportNodeFlagFilterList(String [] SupportNodeFlagFilterList) {
         this.SupportNodeFlagFilterList = SupportNodeFlagFilterList;

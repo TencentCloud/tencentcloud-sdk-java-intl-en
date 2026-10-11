@@ -24,31 +24,28 @@ import java.util.HashMap;
 public class DescribeClusterNodesResponse extends AbstractModel {
 
     /**
-    * Total number of queried nodes
+    * Total number of queried nodes.
     */
     @SerializedName("TotalCnt")
     @Expose
     private Long TotalCnt;
 
     /**
-    * List of node details
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node detailed information list.
     */
     @SerializedName("NodeList")
     @Expose
     private NodeHardwareInfo [] NodeList;
 
     /**
-    * List of tag keys owned by user
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of all tag keys for the user.
     */
     @SerializedName("TagKeys")
     @Expose
     private String [] TagKeys;
 
     /**
-    * Resource type list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Resource type list.
     */
     @SerializedName("HardwareResourceTypeList")
     @Expose
@@ -62,76 +59,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of queried nodes 
-     * @return TotalCnt Total number of queried nodes
+     * Get Total number of queried nodes. 
+     * @return TotalCnt Total number of queried nodes.
      */
     public Long getTotalCnt() {
         return this.TotalCnt;
     }
 
     /**
-     * Set Total number of queried nodes
-     * @param TotalCnt Total number of queried nodes
+     * Set Total number of queried nodes.
+     * @param TotalCnt Total number of queried nodes.
      */
     public void setTotalCnt(Long TotalCnt) {
         this.TotalCnt = TotalCnt;
     }
 
     /**
-     * Get List of node details
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NodeList List of node details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node detailed information list. 
+     * @return NodeList Node detailed information list.
      */
     public NodeHardwareInfo [] getNodeList() {
         return this.NodeList;
     }
 
     /**
-     * Set List of node details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NodeList List of node details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node detailed information list.
+     * @param NodeList Node detailed information list.
      */
     public void setNodeList(NodeHardwareInfo [] NodeList) {
         this.NodeList = NodeList;
     }
 
     /**
-     * Get List of tag keys owned by user
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TagKeys List of tag keys owned by user
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of all tag keys for the user. 
+     * @return TagKeys List of all tag keys for the user.
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set List of tag keys owned by user
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TagKeys List of tag keys owned by user
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of all tag keys for the user.
+     * @param TagKeys List of all tag keys for the user.
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;
     }
 
     /**
-     * Get Resource type list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HardwareResourceTypeList Resource type list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Resource type list. 
+     * @return HardwareResourceTypeList Resource type list.
      */
     public String [] getHardwareResourceTypeList() {
         return this.HardwareResourceTypeList;
     }
 
     /**
-     * Set Resource type list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HardwareResourceTypeList Resource type list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Resource type list.
+     * @param HardwareResourceTypeList Resource type list.
      */
     public void setHardwareResourceTypeList(String [] HardwareResourceTypeList) {
         this.HardwareResourceTypeList = HardwareResourceTypeList;

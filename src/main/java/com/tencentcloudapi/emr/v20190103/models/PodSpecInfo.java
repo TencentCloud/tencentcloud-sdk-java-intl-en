@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PodSpecInfo extends AbstractModel {
 
     /**
-    * The specified information such as pod spec and source for scale-out with pod resources.
+    * Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
     */
     @SerializedName("PodSpec")
     @Expose
     private PodNewSpec PodSpec;
 
     /**
-    * The custom pod permission and parameter.
+    * Pod custom permission and parameter.
     */
     @SerializedName("PodParameter")
     @Expose
     private PodNewParameter PodParameter;
 
     /**
-     * Get The specified information such as pod spec and source for scale-out with pod resources. 
-     * @return PodSpec The specified information such as pod spec and source for scale-out with pod resources.
+     * Get Pod specifications and source information, which are specified when Pod resources are used for the scale-out. 
+     * @return PodSpec Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
      */
     public PodNewSpec getPodSpec() {
         return this.PodSpec;
     }
 
     /**
-     * Set The specified information such as pod spec and source for scale-out with pod resources.
-     * @param PodSpec The specified information such as pod spec and source for scale-out with pod resources.
+     * Set Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
+     * @param PodSpec Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
      */
     public void setPodSpec(PodNewSpec PodSpec) {
         this.PodSpec = PodSpec;
     }
 
     /**
-     * Get The custom pod permission and parameter. 
-     * @return PodParameter The custom pod permission and parameter.
+     * Get Pod custom permission and parameter. 
+     * @return PodParameter Pod custom permission and parameter.
      */
     public PodNewParameter getPodParameter() {
         return this.PodParameter;
     }
 
     /**
-     * Set The custom pod permission and parameter.
-     * @param PodParameter The custom pod permission and parameter.
+     * Set Pod custom permission and parameter.
+     * @param PodParameter Pod custom permission and parameter.
      */
     public void setPodParameter(PodNewParameter PodParameter) {
         this.PodParameter = PodParameter;

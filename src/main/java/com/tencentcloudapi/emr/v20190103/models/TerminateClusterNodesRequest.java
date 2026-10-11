@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class TerminateClusterNodesRequest extends AbstractModel {
 
     /**
-    * The instance ID.
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The list of resources to be terminated.
+    * List of terminated resources.
     */
     @SerializedName("CvmInstanceIds")
     @Expose
     private String [] CvmInstanceIds;
 
     /**
-    * Valid values of node type:
+    * Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -49,60 +49,60 @@ public class TerminateClusterNodesRequest extends AbstractModel {
     private String NodeFlag;
 
     /**
-    * The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
+    * Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
     */
     @SerializedName("GraceDownFlag")
     @Expose
     private Boolean GraceDownFlag;
 
     /**
-    * The graceful scale-in wait time in seconds. Value range: 60–1800.
+    * Graceful scale-in waiting time. Value range: 60–1800, in seconds.
     */
     @SerializedName("GraceDownTime")
     @Expose
     private Long GraceDownTime;
 
     /**
-     * Get The instance ID. 
-     * @return InstanceId The instance ID.
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The instance ID.
-     * @param InstanceId The instance ID.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The list of resources to be terminated. 
-     * @return CvmInstanceIds The list of resources to be terminated.
+     * Get List of terminated resources. 
+     * @return CvmInstanceIds List of terminated resources.
      */
     public String [] getCvmInstanceIds() {
         return this.CvmInstanceIds;
     }
 
     /**
-     * Set The list of resources to be terminated.
-     * @param CvmInstanceIds The list of resources to be terminated.
+     * Set List of terminated resources.
+     * @param CvmInstanceIds List of terminated resources.
      */
     public void setCvmInstanceIds(String [] CvmInstanceIds) {
         this.CvmInstanceIds = CvmInstanceIds;
     }
 
     /**
-     * Get Valid values of node type:
+     * Get Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li> 
-     * @return NodeFlag Valid values of node type:
+     * @return NodeFlag Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -113,12 +113,12 @@ public class TerminateClusterNodesRequest extends AbstractModel {
     }
 
     /**
-     * Set Valid values of node type:
+     * Set Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-     * @param NodeFlag Valid values of node type:
+     * @param NodeFlag Valid values of the node type to be terminated:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -129,40 +129,40 @@ public class TerminateClusterNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li> 
-     * @return GraceDownFlag The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
+     * Get Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li> 
+     * @return GraceDownFlag Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
      */
     public Boolean getGraceDownFlag() {
         return this.GraceDownFlag;
     }
 
     /**
-     * Set The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
-     * @param GraceDownFlag The graceful scale-in feature. Valid values:
-  <li>`true`: Enabled.</li>
-  <li>`false`: Disabled.</li>
+     * Set Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
+     * @param GraceDownFlag Graceful scale-in switch.
+  <li>true: enable</li>
+  <li>false: disable</li>
      */
     public void setGraceDownFlag(Boolean GraceDownFlag) {
         this.GraceDownFlag = GraceDownFlag;
     }
 
     /**
-     * Get The graceful scale-in wait time in seconds. Value range: 60–1800. 
-     * @return GraceDownTime The graceful scale-in wait time in seconds. Value range: 60–1800.
+     * Get Graceful scale-in waiting time. Value range: 60–1800, in seconds. 
+     * @return GraceDownTime Graceful scale-in waiting time. Value range: 60–1800, in seconds.
      */
     public Long getGraceDownTime() {
         return this.GraceDownTime;
     }
 
     /**
-     * Set The graceful scale-in wait time in seconds. Value range: 60–1800.
-     * @param GraceDownTime The graceful scale-in wait time in seconds. Value range: 60–1800.
+     * Set Graceful scale-in waiting time. Value range: 60–1800, in seconds.
+     * @param GraceDownTime Graceful scale-in waiting time. Value range: 60–1800, in seconds.
      */
     public void setGraceDownTime(Long GraceDownTime) {
         this.GraceDownTime = GraceDownTime;

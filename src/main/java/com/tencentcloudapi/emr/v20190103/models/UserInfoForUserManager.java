@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class UserInfoForUserManager extends AbstractModel {
 
     /**
-    * Username
+    * Username.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * The group to which the user belongs
+    * Group to which the user belongs.
     */
     @SerializedName("UserGroup")
     @Expose
     private String UserGroup;
 
     /**
-    * Password
+    * Password.
     */
     @SerializedName("PassWord")
     @Expose
     private String PassWord;
 
     /**
-    * Remarks
+    * Remarks.
     */
     @SerializedName("ReMark")
     @Expose
@@ -59,64 +59,64 @@ public class UserInfoForUserManager extends AbstractModel {
     private String [] Groups;
 
     /**
-     * Get Username 
-     * @return UserName Username
+     * Get Username. 
+     * @return UserName Username.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Username
-     * @param UserName Username
+     * Set Username.
+     * @param UserName Username.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get The group to which the user belongs 
-     * @return UserGroup The group to which the user belongs
+     * Get Group to which the user belongs. 
+     * @return UserGroup Group to which the user belongs.
      */
     public String getUserGroup() {
         return this.UserGroup;
     }
 
     /**
-     * Set The group to which the user belongs
-     * @param UserGroup The group to which the user belongs
+     * Set Group to which the user belongs.
+     * @param UserGroup Group to which the user belongs.
      */
     public void setUserGroup(String UserGroup) {
         this.UserGroup = UserGroup;
     }
 
     /**
-     * Get Password 
-     * @return PassWord Password
+     * Get Password. 
+     * @return PassWord Password.
      */
     public String getPassWord() {
         return this.PassWord;
     }
 
     /**
-     * Set Password
-     * @param PassWord Password
+     * Set Password.
+     * @param PassWord Password.
      */
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
     }
 
     /**
-     * Get Remarks 
-     * @return ReMark Remarks
+     * Get Remarks. 
+     * @return ReMark Remarks.
      */
     public String getReMark() {
         return this.ReMark;
     }
 
     /**
-     * Set Remarks
-     * @param ReMark Remarks
+     * Set Remarks.
+     * @param ReMark Remarks.
      */
     public void setReMark(String ReMark) {
         this.ReMark = ReMark;

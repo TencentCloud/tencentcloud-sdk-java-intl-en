@@ -31,7 +31,7 @@ public class TrinoQueryInfo extends AbstractModel {
     private String Catalog;
 
     /**
-    * IP address used for submission.
+    * Submission IP address.
     */
     @SerializedName("ClientIpAddr")
     @Expose
@@ -66,7 +66,7 @@ public class TrinoQueryInfo extends AbstractModel {
     private Long DurationMillis;
 
     /**
-    * End time (seconds).
+    * End time (s).
     */
     @SerializedName("EndTime")
     @Expose
@@ -122,7 +122,7 @@ public class TrinoQueryInfo extends AbstractModel {
     private Long SqlCompileTime;
 
     /**
-    * Start time (seconds).
+    * Start time (s).
     */
     @SerializedName("StartTime")
     @Expose
@@ -143,7 +143,7 @@ public class TrinoQueryInfo extends AbstractModel {
     private String Statement;
 
     /**
-    * User who submits requests.
+    * Submission user.
     */
     @SerializedName("User")
     @Expose
@@ -155,6 +155,13 @@ public class TrinoQueryInfo extends AbstractModel {
     @SerializedName("WrittenBytes")
     @Expose
     private Long WrittenBytes;
+
+    /**
+    * Error log.
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
 
     /**
      * Get catalog 
@@ -173,16 +180,16 @@ public class TrinoQueryInfo extends AbstractModel {
     }
 
     /**
-     * Get IP address used for submission. 
-     * @return ClientIpAddr IP address used for submission.
+     * Get Submission IP address. 
+     * @return ClientIpAddr Submission IP address.
      */
     public String getClientIpAddr() {
         return this.ClientIpAddr;
     }
 
     /**
-     * Set IP address used for submission.
-     * @param ClientIpAddr IP address used for submission.
+     * Set Submission IP address.
+     * @param ClientIpAddr Submission IP address.
      */
     public void setClientIpAddr(String ClientIpAddr) {
         this.ClientIpAddr = ClientIpAddr;
@@ -253,16 +260,16 @@ public class TrinoQueryInfo extends AbstractModel {
     }
 
     /**
-     * Get End time (seconds). 
-     * @return EndTime End time (seconds).
+     * Get End time (s). 
+     * @return EndTime End time (s).
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time (seconds).
-     * @param EndTime End time (seconds).
+     * Set End time (s).
+     * @param EndTime End time (s).
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -381,16 +388,16 @@ public class TrinoQueryInfo extends AbstractModel {
     }
 
     /**
-     * Get Start time (seconds). 
-     * @return StartTime Start time (seconds).
+     * Get Start time (s). 
+     * @return StartTime Start time (s).
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time (seconds).
-     * @param StartTime Start time (seconds).
+     * Set Start time (s).
+     * @param StartTime Start time (s).
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -429,16 +436,16 @@ public class TrinoQueryInfo extends AbstractModel {
     }
 
     /**
-     * Get User who submits requests. 
-     * @return User User who submits requests.
+     * Get Submission user. 
+     * @return User Submission user.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set User who submits requests.
-     * @param User User who submits requests.
+     * Set Submission user.
+     * @param User Submission user.
      */
     public void setUser(String User) {
         this.User = User;
@@ -458,6 +465,22 @@ public class TrinoQueryInfo extends AbstractModel {
      */
     public void setWrittenBytes(Long WrittenBytes) {
         this.WrittenBytes = WrittenBytes;
+    }
+
+    /**
+     * Get Error log. 
+     * @return ErrorMessage Error log.
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set Error log.
+     * @param ErrorMessage Error log.
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
     }
 
     public TrinoQueryInfo() {
@@ -525,6 +548,9 @@ public class TrinoQueryInfo extends AbstractModel {
         if (source.WrittenBytes != null) {
             this.WrittenBytes = new Long(source.WrittenBytes);
         }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
     }
 
 
@@ -551,6 +577,7 @@ public class TrinoQueryInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Statement", this.Statement);
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "WrittenBytes", this.WrittenBytes);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
 
     }
 }

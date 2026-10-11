@@ -24,45 +24,44 @@ import java.util.HashMap;
 public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
 
     /**
-    * Original price.
+    * Original price (CNY).
     */
     @SerializedName("OriginalCost")
     @Expose
     private Float OriginalCost;
 
     /**
-    * Discounted price.
+    * Discounted price (CNY).
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-    * Time unit of resizing. Valid values:
-<li>s: second.</li>
+    * Time unit for the configuration change. Valid values:
+<li>s: indicates second.</li>
+<li>m: indicates month.</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Desizing duration.
+    * 
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Pricing details
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Price details.
     */
     @SerializedName("PriceDetail")
     @Expose
     private PriceDetail [] PriceDetail;
 
     /**
-    * New configuration price.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Price of the new configuration.
     */
     @SerializedName("NewConfigPrice")
     @Expose
@@ -76,108 +75,104 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Original price. 
-     * @return OriginalCost Original price.
+     * Get Original price (CNY). 
+     * @return OriginalCost Original price (CNY).
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set Original price.
-     * @param OriginalCost Original price.
+     * Set Original price (CNY).
+     * @param OriginalCost Original price (CNY).
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Discounted price. 
-     * @return DiscountCost Discounted price.
+     * Get Discounted price (CNY). 
+     * @return DiscountCost Discounted price (CNY).
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set Discounted price.
-     * @param DiscountCost Discounted price.
+     * Set Discounted price (CNY).
+     * @param DiscountCost Discounted price (CNY).
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get Time unit of resizing. Valid values:
-<li>s: second.</li> 
-     * @return TimeUnit Time unit of resizing. Valid values:
-<li>s: second.</li>
+     * Get Time unit for the configuration change. Valid values:
+<li>s: indicates second.</li>
+<li>m: indicates month.</li> 
+     * @return TimeUnit Time unit for the configuration change. Valid values:
+<li>s: indicates second.</li>
+<li>m: indicates month.</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Time unit of resizing. Valid values:
-<li>s: second.</li>
-     * @param TimeUnit Time unit of resizing. Valid values:
-<li>s: second.</li>
+     * Set Time unit for the configuration change. Valid values:
+<li>s: indicates second.</li>
+<li>m: indicates month.</li>
+     * @param TimeUnit Time unit for the configuration change. Valid values:
+<li>s: indicates second.</li>
+<li>m: indicates month.</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Desizing duration. 
-     * @return TimeSpan Desizing duration.
+     * Get  
+     * @return TimeSpan 
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Desizing duration.
-     * @param TimeSpan Desizing duration.
+     * Set 
+     * @param TimeSpan 
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Pricing details
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PriceDetail Pricing details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Price details. 
+     * @return PriceDetail Price details.
      */
     public PriceDetail [] getPriceDetail() {
         return this.PriceDetail;
     }
 
     /**
-     * Set Pricing details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PriceDetail Pricing details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Price details.
+     * @param PriceDetail Price details.
      */
     public void setPriceDetail(PriceDetail [] PriceDetail) {
         this.PriceDetail = PriceDetail;
     }
 
     /**
-     * Get New configuration price.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NewConfigPrice New configuration price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Price of the new configuration. 
+     * @return NewConfigPrice Price of the new configuration.
      */
     public PriceResult getNewConfigPrice() {
         return this.NewConfigPrice;
     }
 
     /**
-     * Set New configuration price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NewConfigPrice New configuration price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Price of the new configuration.
+     * @param NewConfigPrice Price of the new configuration.
      */
     public void setNewConfigPrice(PriceResult NewConfigPrice) {
         this.NewConfigPrice = NewConfigPrice;

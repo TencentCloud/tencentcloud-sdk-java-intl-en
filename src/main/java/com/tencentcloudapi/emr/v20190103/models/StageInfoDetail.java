@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StageInfoDetail extends AbstractModel {
 
     /**
-    * Steps.
+    * Step.
     */
     @SerializedName("Stage")
     @Expose
@@ -38,28 +38,28 @@ public class StageInfoDetail extends AbstractModel {
     private String Name;
 
     /**
-    * Indicates whether to display
+    * Whether it is displayed.
     */
     @SerializedName("IsShow")
     @Expose
     private Boolean IsShow;
 
     /**
-    * Whether it is a subprocess
+    * Whether it is a sub-flow.
     */
     @SerializedName("IsSubFlow")
     @Expose
     private Boolean IsSubFlow;
 
     /**
-    * Subprocess tag.
+    * Sub-flow tag.
     */
     @SerializedName("SubFlowFlag")
     @Expose
     private String SubFlowFlag;
 
     /**
-    * Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
+    * Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
     */
     @SerializedName("Status")
     @Expose
@@ -80,32 +80,28 @@ public class StageInfoDetail extends AbstractModel {
     private Float Progress;
 
     /**
-    * Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Start time.
     */
     @SerializedName("Starttime")
     @Expose
     private String Starttime;
 
     /**
-    * End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * End time.
     */
     @SerializedName("Endtime")
     @Expose
     private String Endtime;
 
     /**
-    * Whether details are included.
+    * Whether detailed information is included.
     */
     @SerializedName("HadWoodDetail")
     @Expose
     private Boolean HadWoodDetail;
 
     /**
-    * Wood subprocess ID.
+    * Wood sub-flow ID.
     */
     @SerializedName("WoodJobId")
     @Expose
@@ -119,7 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String LanguageKey;
 
     /**
-    * Reason for stage failure.
+    * Reason for the stage failure.
     */
     @SerializedName("FailedReason")
     @Expose
@@ -133,23 +129,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TimeConsuming;
 
     /**
-    * id, for frontend
+    * ID used by the frontend.
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get Steps. 
-     * @return Stage Steps.
+     * Get Step. 
+     * @return Stage Step.
      */
     public String getStage() {
         return this.Stage;
     }
 
     /**
-     * Set Steps.
-     * @param Stage Steps.
+     * Set Step.
+     * @param Stage Step.
      */
     public void setStage(String Stage) {
         this.Stage = Stage;
@@ -172,64 +168,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Indicates whether to display 
-     * @return IsShow Indicates whether to display
+     * Get Whether it is displayed. 
+     * @return IsShow Whether it is displayed.
      */
     public Boolean getIsShow() {
         return this.IsShow;
     }
 
     /**
-     * Set Indicates whether to display
-     * @param IsShow Indicates whether to display
+     * Set Whether it is displayed.
+     * @param IsShow Whether it is displayed.
      */
     public void setIsShow(Boolean IsShow) {
         this.IsShow = IsShow;
     }
 
     /**
-     * Get Whether it is a subprocess 
-     * @return IsSubFlow Whether it is a subprocess
+     * Get Whether it is a sub-flow. 
+     * @return IsSubFlow Whether it is a sub-flow.
      */
     public Boolean getIsSubFlow() {
         return this.IsSubFlow;
     }
 
     /**
-     * Set Whether it is a subprocess
-     * @param IsSubFlow Whether it is a subprocess
+     * Set Whether it is a sub-flow.
+     * @param IsSubFlow Whether it is a sub-flow.
      */
     public void setIsSubFlow(Boolean IsSubFlow) {
         this.IsSubFlow = IsSubFlow;
     }
 
     /**
-     * Get Subprocess tag. 
-     * @return SubFlowFlag Subprocess tag.
+     * Get Sub-flow tag. 
+     * @return SubFlowFlag Sub-flow tag.
      */
     public String getSubFlowFlag() {
         return this.SubFlowFlag;
     }
 
     /**
-     * Set Subprocess tag.
-     * @param SubFlowFlag Subprocess tag.
+     * Set Sub-flow tag.
+     * @param SubFlowFlag Sub-flow tag.
      */
     public void setSubFlowFlag(String SubFlowFlag) {
         this.SubFlowFlag = SubFlowFlag;
     }
 
     /**
-     * Get Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed 
-     * @return Status Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
+     * Get Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed). 
+     * @return Status Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
-     * @param Status Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
+     * Set Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
+     * @param Status Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -268,80 +264,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Start time
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Starttime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Start time. 
+     * @return Starttime Start time.
      */
     public String getStarttime() {
         return this.Starttime;
     }
 
     /**
-     * Set Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Starttime Start time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Start time.
+     * @param Starttime Start time.
      */
     public void setStarttime(String Starttime) {
         this.Starttime = Starttime;
     }
 
     /**
-     * Get End time
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Endtime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get End time. 
+     * @return Endtime End time.
      */
     public String getEndtime() {
         return this.Endtime;
     }
 
     /**
-     * Set End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Endtime End time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set End time.
+     * @param Endtime End time.
      */
     public void setEndtime(String Endtime) {
         this.Endtime = Endtime;
     }
 
     /**
-     * Get Whether details are included. 
-     * @return HadWoodDetail Whether details are included.
+     * Get Whether detailed information is included. 
+     * @return HadWoodDetail Whether detailed information is included.
      */
     public Boolean getHadWoodDetail() {
         return this.HadWoodDetail;
     }
 
     /**
-     * Set Whether details are included.
-     * @param HadWoodDetail Whether details are included.
+     * Set Whether detailed information is included.
+     * @param HadWoodDetail Whether detailed information is included.
      */
     public void setHadWoodDetail(Boolean HadWoodDetail) {
         this.HadWoodDetail = HadWoodDetail;
     }
 
     /**
-     * Get Wood subprocess ID. 
-     * @return WoodJobId Wood subprocess ID.
+     * Get Wood sub-flow ID. 
+     * @return WoodJobId Wood sub-flow ID.
      */
     public Long getWoodJobId() {
         return this.WoodJobId;
     }
 
     /**
-     * Set Wood subprocess ID.
-     * @param WoodJobId Wood subprocess ID.
+     * Set Wood sub-flow ID.
+     * @param WoodJobId Wood sub-flow ID.
      */
     public void setWoodJobId(Long WoodJobId) {
         this.WoodJobId = WoodJobId;
@@ -364,16 +344,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Reason for stage failure. 
-     * @return FailedReason Reason for stage failure.
+     * Get Reason for the stage failure. 
+     * @return FailedReason Reason for the stage failure.
      */
     public String getFailedReason() {
         return this.FailedReason;
     }
 
     /**
-     * Set Reason for stage failure.
-     * @param FailedReason Reason for stage failure.
+     * Set Reason for the stage failure.
+     * @param FailedReason Reason for the stage failure.
      */
     public void setFailedReason(String FailedReason) {
         this.FailedReason = FailedReason;
@@ -396,16 +376,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get id, for frontend 
-     * @return Id id, for frontend
+     * Get ID used by the frontend. 
+     * @return Id ID used by the frontend.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set id, for frontend
-     * @param Id id, for frontend
+     * Set ID used by the frontend.
+     * @param Id ID used by the frontend.
      */
     public void setId(Long Id) {
         this.Id = Id;

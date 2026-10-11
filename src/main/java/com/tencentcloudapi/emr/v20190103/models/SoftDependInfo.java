@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SoftDependInfo extends AbstractModel {
 
     /**
-    * The component name.
+    * Component name.
     */
     @SerializedName("SoftName")
     @Expose
     private String SoftName;
 
     /**
-    * Whether the component is required.
+    * Whether it is required.
     */
     @SerializedName("Required")
     @Expose
     private Boolean Required;
 
     /**
-     * Get The component name. 
-     * @return SoftName The component name.
+     * Get Component name. 
+     * @return SoftName Component name.
      */
     public String getSoftName() {
         return this.SoftName;
     }
 
     /**
-     * Set The component name.
-     * @param SoftName The component name.
+     * Set Component name.
+     * @param SoftName Component name.
      */
     public void setSoftName(String SoftName) {
         this.SoftName = SoftName;
     }
 
     /**
-     * Get Whether the component is required. 
-     * @return Required Whether the component is required.
+     * Get Whether it is required. 
+     * @return Required Whether it is required.
      */
     public Boolean getRequired() {
         return this.Required;
     }
 
     /**
-     * Set Whether the component is required.
-     * @param Required Whether the component is required.
+     * Set Whether it is required.
+     * @param Required Whether it is required.
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;

@@ -24,18 +24,14 @@ import java.util.HashMap;
 public class DescribeAutoScaleStrategiesResponse extends AbstractModel {
 
     /**
-    * Load-based scaling rules
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Load-based scaling rule.
     */
     @SerializedName("LoadAutoScaleStrategies")
     @Expose
     private LoadAutoScaleStrategy [] LoadAutoScaleStrategies;
 
     /**
-    * Scaling rules by time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time-based scaling rule.
     */
     @SerializedName("TimeBasedAutoScaleStrategies")
     @Expose
@@ -49,48 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Load-based scaling rules
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadAutoScaleStrategies Load-based scaling rules
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Load-based scaling rule. 
+     * @return LoadAutoScaleStrategies Load-based scaling rule.
      */
     public LoadAutoScaleStrategy [] getLoadAutoScaleStrategies() {
         return this.LoadAutoScaleStrategies;
     }
 
     /**
-     * Set Load-based scaling rules
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadAutoScaleStrategies Load-based scaling rules
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Load-based scaling rule.
+     * @param LoadAutoScaleStrategies Load-based scaling rule.
      */
     public void setLoadAutoScaleStrategies(LoadAutoScaleStrategy [] LoadAutoScaleStrategies) {
         this.LoadAutoScaleStrategies = LoadAutoScaleStrategies;
     }
 
     /**
-     * Get Scaling rules by time
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeBasedAutoScaleStrategies Scaling rules by time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time-based scaling rule. 
+     * @return TimeBasedAutoScaleStrategies Time-based scaling rule.
      */
     public TimeAutoScaleStrategy [] getTimeBasedAutoScaleStrategies() {
         return this.TimeBasedAutoScaleStrategies;
     }
 
     /**
-     * Set Scaling rules by time
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeBasedAutoScaleStrategies Scaling rules by time
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time-based scaling rule.
+     * @param TimeBasedAutoScaleStrategies Time-based scaling rule.
      */
     public void setTimeBasedAutoScaleStrategies(TimeAutoScaleStrategy [] TimeBasedAutoScaleStrategies) {
         this.TimeBasedAutoScaleStrategies = TimeBasedAutoScaleStrategies;

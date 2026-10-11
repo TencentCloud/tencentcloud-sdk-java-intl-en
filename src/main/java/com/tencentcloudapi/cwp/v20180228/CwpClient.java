@@ -50,6 +50,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add vulnerability ignore rules.
+     * @param req AddVulIgnoreRuleRequest
+     * @return AddVulIgnoreRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddVulIgnoreRuleResponse AddVulIgnoreRule(AddVulIgnoreRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddVulIgnoreRule", AddVulIgnoreRuleResponse.class);
+    }
+
+    /**
      *This API is used to ignore events or cancel ignoring in batches based on check item ID or event ID.
      * @param req ChangeRuleEventsIgnoreStatusRequest
      * @return ChangeRuleEventsIgnoreStatusResponse
@@ -251,6 +262,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Adding a Website Protection Server
+     * @param req CreateProtectServerRequest
+     * @return CreateProtectServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProtectServerResponse CreateProtectServer(CreateProtectServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProtectServer", CreateProtectServerResponse.class);
+    }
+
+    /**
      *This API is used to create or modify anti-ransomware policies.
      * @param req CreateRansomDefenseStrategyRequest
      * @return CreateRansomDefenseStrategyResponse
@@ -350,6 +372,28 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Delete a baseline rule
+     * @param req DeleteBaselineRuleRequest
+     * @return DeleteBaselineRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBaselineRuleResponse DeleteBaselineRule(DeleteBaselineRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBaselineRule", DeleteBaselineRuleResponse.class);
+    }
+
+    /**
+     *Delete baseline ignore rule.
+     * @param req DeleteBaselineRuleIgnoreRequest
+     * @return DeleteBaselineRuleIgnoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBaselineRuleIgnoreResponse DeleteBaselineRuleIgnore(DeleteBaselineRuleIgnoreRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBaselineRuleIgnore", DeleteBaselineRuleIgnoreResponse.class);
+    }
+
+    /**
      *This API is used to delete the policy by baseline policy ID.
      * @param req DeleteBaselineStrategyRequest
      * @return DeleteBaselineStrategyResponse
@@ -358,6 +402,17 @@ This API is used to call the billing payment API for payment since prepaid order
     public DeleteBaselineStrategyResponse DeleteBaselineStrategy(DeleteBaselineStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBaselineStrategy", DeleteBaselineStrategyResponse.class);
+    }
+
+    /**
+     *Delete baseline weak passwords
+     * @param req DeleteBaselineWeakPasswordRequest
+     * @return DeleteBaselineWeakPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBaselineWeakPasswordResponse DeleteBaselineWeakPassword(DeleteBaselineWeakPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBaselineWeakPassword", DeleteBaselineWeakPasswordResponse.class);
     }
 
     /**
@@ -581,6 +636,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Delete a website protection
+     * @param req DeleteProtectDirRequest
+     * @return DeleteProtectDirResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProtectDirResponse DeleteProtectDir(DeleteProtectDirRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProtectDir", DeleteProtectDirResponse.class);
+    }
+
+    /**
      *Deleting Entries from the Vulnerability Defense Allowlist
      * @param req DeleteRaspRulesRequest
      * @return DeleteRaspRulesResponse
@@ -699,6 +765,17 @@ This API is used to call the billing payment API for payment since prepaid order
     public DeleteWebHookRuleResponse DeleteWebHookRule(DeleteWebHookRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWebHookRule", DeleteWebHookRuleResponse.class);
+    }
+
+    /**
+     *Delete website tamper-proof event records
+     * @param req DeleteWebPageEventLogRequest
+     * @return DeleteWebPageEventLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWebPageEventLogResponse DeleteWebPageEventLog(DeleteWebPageEventLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWebPageEventLog", DeleteWebPageEventLogResponse.class);
     }
 
     /**
@@ -1395,6 +1472,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *This example shows you how to query the baseline policy overview statistics based on baseline policy IDs.
+     * @param req DescribeBaselineAnalysisDataRequest
+     * @return DescribeBaselineAnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineAnalysisDataResponse DescribeBaselineAnalysisData(DescribeBaselineAnalysisDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineAnalysisData", DescribeBaselineAnalysisDataResponse.class);
+    }
+
+    /**
      *This API is used to query the list of baseline basic information.
      * @param req DescribeBaselineBasicInfoRequest
      * @return DescribeBaselineBasicInfoResponse
@@ -1428,6 +1516,39 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Retrieve baseline detection detail records
+     * @param req DescribeBaselineDetectListRequest
+     * @return DescribeBaselineDetectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineDetectListResponse DescribeBaselineDetectList(DescribeBaselineDetectListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineDetectList", DescribeBaselineDetectListResponse.class);
+    }
+
+    /**
+     *Obtain baseline detection overview
+     * @param req DescribeBaselineDetectOverviewRequest
+     * @return DescribeBaselineDetectOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineDetectOverviewResponse DescribeBaselineDetectOverview(DescribeBaselineDetectOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineDetectOverview", DescribeBaselineDetectOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the baseline download list.
+     * @param req DescribeBaselineDownloadListRequest
+     * @return DescribeBaselineDownloadListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineDownloadListResponse DescribeBaselineDownloadList(DescribeBaselineDownloadListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineDownloadList", DescribeBaselineDownloadListResponse.class);
+    }
+
+    /**
      *This API is used to query the list of hosts affected by a baseline based on baseline ID.
      * @param req DescribeBaselineEffectHostListRequest
      * @return DescribeBaselineEffectHostListResponse
@@ -1439,6 +1560,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Query the baseline fix list.
+     * @param req DescribeBaselineFixListRequest
+     * @return DescribeBaselineFixListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineFixListResponse DescribeBaselineFixList(DescribeBaselineFixListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineFixList", DescribeBaselineFixListResponse.class);
+    }
+
+    /**
      *This API is used to obtain the list of hosts for baseline detection.
      * @param req DescribeBaselineHostDetectListRequest
      * @return DescribeBaselineHostDetectListResponse
@@ -1447,6 +1579,28 @@ This API is used to call the billing payment API for payment since prepaid order
     public DescribeBaselineHostDetectListResponse DescribeBaselineHostDetectList(DescribeBaselineHostDetectListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBaselineHostDetectList", DescribeBaselineHostDetectListResponse.class);
+    }
+
+    /**
+     *Retrieve the host list of ignore rules.
+     * @param req DescribeBaselineHostIgnoreListRequest
+     * @return DescribeBaselineHostIgnoreListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineHostIgnoreListResponse DescribeBaselineHostIgnoreList(DescribeBaselineHostIgnoreListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineHostIgnoreList", DescribeBaselineHostIgnoreListResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the TOP 5 server risks in the baseline.
+     * @param req DescribeBaselineHostRiskTopRequest
+     * @return DescribeBaselineHostRiskTopResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineHostRiskTopResponse DescribeBaselineHostRiskTop(DescribeBaselineHostRiskTopRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineHostRiskTop", DescribeBaselineHostRiskTopResponse.class);
     }
 
     /**
@@ -1472,6 +1626,28 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *This API is used to search the ignorable rule item list.
+     * @param req DescribeBaselineItemIgnoreListRequest
+     * @return DescribeBaselineItemIgnoreListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineItemIgnoreListResponse DescribeBaselineItemIgnoreList(DescribeBaselineItemIgnoreListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineItemIgnoreList", DescribeBaselineItemIgnoreListResponse.class);
+    }
+
+    /**
+     *Obtain Baseline Detection Item Information
+     * @param req DescribeBaselineItemInfoRequest
+     * @return DescribeBaselineItemInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineItemInfoResponse DescribeBaselineItemInfo(DescribeBaselineItemInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineItemInfo", DescribeBaselineItemInfoResponse.class);
+    }
+
+    /**
      *This API is used to obtain the list of check results on baseline check items.
      * @param req DescribeBaselineItemListRequest
      * @return DescribeBaselineItemListResponse
@@ -1480,6 +1656,17 @@ This API is used to call the billing payment API for payment since prepaid order
     public DescribeBaselineItemListResponse DescribeBaselineItemList(DescribeBaselineItemListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBaselineItemList", DescribeBaselineItemListResponse.class);
+    }
+
+    /**
+     *Query the TOP 5 baseline detection items.
+     * @param req DescribeBaselineItemRiskTopRequest
+     * @return DescribeBaselineItemRiskTopResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineItemRiskTopResponse DescribeBaselineItemRiskTop(DescribeBaselineItemRiskTopRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineItemRiskTop", DescribeBaselineItemRiskTopResponse.class);
     }
 
     /**
@@ -1513,6 +1700,50 @@ This API is used to call the billing payment API for payment since prepaid order
     public DescribeBaselineRuleResponse DescribeBaselineRule(DescribeBaselineRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBaselineRule", DescribeBaselineRuleResponse.class);
+    }
+
+    /**
+     *Obtain Baseline Classification List
+     * @param req DescribeBaselineRuleCategoryListRequest
+     * @return DescribeBaselineRuleCategoryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineRuleCategoryListResponse DescribeBaselineRuleCategoryList(DescribeBaselineRuleCategoryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineRuleCategoryList", DescribeBaselineRuleCategoryListResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the baseline rule detection list.
+     * @param req DescribeBaselineRuleDetectListRequest
+     * @return DescribeBaselineRuleDetectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineRuleDetectListResponse DescribeBaselineRuleDetectList(DescribeBaselineRuleDetectListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineRuleDetectList", DescribeBaselineRuleDetectListResponse.class);
+    }
+
+    /**
+     *Get the baseline ignore rule list.
+     * @param req DescribeBaselineRuleIgnoreListRequest
+     * @return DescribeBaselineRuleIgnoreListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineRuleIgnoreListResponse DescribeBaselineRuleIgnoreList(DescribeBaselineRuleIgnoreListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineRuleIgnoreList", DescribeBaselineRuleIgnoreListResponse.class);
+    }
+
+    /**
+     *Obtain Baseline Rule List
+     * @param req DescribeBaselineRuleListRequest
+     * @return DescribeBaselineRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineRuleListResponse DescribeBaselineRuleList(DescribeBaselineRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineRuleList", DescribeBaselineRuleListResponse.class);
     }
 
     /**
@@ -1923,6 +2154,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Querying the Machine Information Imported in Batches
+     * @param req DescribeImportMachineInfoRequest
+     * @return DescribeImportMachineInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImportMachineInfoResponse DescribeImportMachineInfo(DescribeImportMachineInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImportMachineInfo", DescribeImportMachineInfoResponse.class);
+    }
+
+    /**
      *Query java memory horse and rasp whether inject risk service configuration
      * @param req DescribeInjectRiskyServiceSwitchRequest
      * @return DescribeInjectRiskyServiceSwitchResponse
@@ -2264,6 +2506,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *This API is used to get the regional host list for web tamper protection.
+     * @param req DescribeMachineListRequest
+     * @return DescribeMachineListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMachineListResponse DescribeMachineList(DescribeMachineListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMachineList", DescribeMachineListResponse.class);
+    }
+
+    /**
      *This API is used to query the machine operating system list.
      * @param req DescribeMachineOsListRequest
      * @return DescribeMachineOsListResponse
@@ -2528,6 +2781,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *This example shows you how to obtain the list of local privilege escalation events.
+     * @param req DescribePrivilegeEventsRequest
+     * @return DescribePrivilegeEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivilegeEventsResponse DescribePrivilegeEvents(DescribePrivilegeEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivilegeEvents", DescribePrivilegeEventsResponse.class);
+    }
+
+    /**
      *This API is used to obtain the list of local privilege escalation rules.
      * @param req DescribePrivilegeRulesRequest
      * @return DescribePrivilegeRulesResponse
@@ -2580,6 +2844,28 @@ This API is used to call the billing payment API for payment since prepaid order
     public DescribeProductStatusResponse DescribeProductStatus(DescribeProductStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProductStatus", DescribeProductStatusResponse.class);
+    }
+
+    /**
+     *Web tamper-proof protection directory listing
+     * @param req DescribeProtectDirListRequest
+     * @return DescribeProtectDirListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProtectDirListResponse DescribeProtectDirList(DescribeProtectDirListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProtectDirList", DescribeProtectDirListResponse.class);
+    }
+
+    /**
+     *Query the server list information associated with the protection directory.
+     * @param req DescribeProtectDirRelatedServerRequest
+     * @return DescribeProtectDirRelatedServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProtectDirRelatedServerResponse DescribeProtectDirRelatedServer(DescribeProtectDirRelatedServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProtectDirRelatedServer", DescribeProtectDirRelatedServerResponse.class);
     }
 
     /**
@@ -3265,6 +3551,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Querying the Details of a Directory Associated with a Service Zone
+     * @param req DescribeServerRelatedDirInfoRequest
+     * @return DescribeServerRelatedDirInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerRelatedDirInfoResponse DescribeServerRelatedDirInfo(DescribeServerRelatedDirInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServerRelatedDirInfo", DescribeServerRelatedDirInfoResponse.class);
+    }
+
+    /**
      *This API is used to obtain the number of risky files pending to be processed + the number of affected servers + whether to try to detect + last detection time.
      * @param req DescribeServersAndRiskAndFirstInfoRequest
      * @return DescribeServersAndRiskAndFirstInfoResponse
@@ -3771,6 +4068,50 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Querying the List of Tampering Events
+     * @param req DescribeWebPageEventListRequest
+     * @return DescribeWebPageEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebPageEventListResponse DescribeWebPageEventList(DescribeWebPageEventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebPageEventList", DescribeWebPageEventListResponse.class);
+    }
+
+    /**
+     *Query website tamper-proof overview information
+     * @param req DescribeWebPageGeneralizeRequest
+     * @return DescribeWebPageGeneralizeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebPageGeneralizeResponse DescribeWebPageGeneralize(DescribeWebPageGeneralizeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebPageGeneralize", DescribeWebPageGeneralizeResponse.class);
+    }
+
+    /**
+     *Querying real-time protection information for website anti-tampering
+     * @param req DescribeWebPageProtectStatRequest
+     * @return DescribeWebPageProtectStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebPageProtectStatResponse DescribeWebPageProtectStat(DescribeWebPageProtectStatRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebPageProtectStat", DescribeWebPageProtectStatResponse.class);
+    }
+
+    /**
+     *Website Tamper Protection - Query webpage tamper protection server purchase information and server information
+     * @param req DescribeWebPageServiceInfoRequest
+     * @return DescribeWebPageServiceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebPageServiceInfoResponse DescribeWebPageServiceInfo(DescribeWebPageServiceInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebPageServiceInfo", DescribeWebPageServiceInfoResponse.class);
+    }
+
+    /**
      *Search patch information list
      * @param req DescribeWindowsPatchListRequest
      * @return DescribeWindowsPatchListResponse
@@ -4101,6 +4442,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Export Detection Item Result List
+     * @param req ExportBaselineItemListRequest
+     * @return ExportBaselineItemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportBaselineItemListResponse ExportBaselineItemList(ExportBaselineItemListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportBaselineItemList", ExportBaselineItemListResponse.class);
+    }
+
+    /**
      *This API is used to export the list of baselines.
      * @param req ExportBaselineListRequest
      * @return ExportBaselineListResponse
@@ -4109,6 +4461,28 @@ This API is used to call the billing payment API for payment since prepaid order
     public ExportBaselineListResponse ExportBaselineList(ExportBaselineListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportBaselineList", ExportBaselineListResponse.class);
+    }
+
+    /**
+     *This API is used to export baseline detection rules.
+     * @param req ExportBaselineRuleDetectListRequest
+     * @return ExportBaselineRuleDetectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportBaselineRuleDetectListResponse ExportBaselineRuleDetectList(ExportBaselineRuleDetectListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportBaselineRuleDetectList", ExportBaselineRuleDetectListResponse.class);
+    }
+
+    /**
+     *Export the list of weak password configurations.
+     * @param req ExportBaselineWeakPasswordListRequest
+     * @return ExportBaselineWeakPasswordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportBaselineWeakPasswordListResponse ExportBaselineWeakPasswordList(ExportBaselineWeakPasswordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportBaselineWeakPasswordList", ExportBaselineWeakPasswordListResponse.class);
     }
 
     /**
@@ -4285,6 +4659,17 @@ This API is used to call the billing payment API for payment since prepaid order
     public ExportPrivilegeEventsResponse ExportPrivilegeEvents(ExportPrivilegeEventsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportPrivilegeEvents", ExportPrivilegeEventsResponse.class);
+    }
+
+    /**
+     *Export the web tamper-proof protection directory list.
+     * @param req ExportProtectDirListRequest
+     * @return ExportProtectDirListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportProtectDirListResponse ExportProtectDirList(ExportProtectDirListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportProtectDirList", ExportProtectDirListResponse.class);
     }
 
     /**
@@ -4508,6 +4893,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *This API is used to export the tamper event list.
+     * @param req ExportWebPageEventListRequest
+     * @return ExportWebPageEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportWebPageEventListResponse ExportWebPageEventList(ExportWebPageEventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportWebPageEventList", ExportWebPageEventListResponse.class);
+    }
+
+    /**
      *Export Windows patch list
      * @param req ExportWindowsPatchListRequest
      * @return ExportWindowsPatchListResponse
@@ -4516,6 +4912,17 @@ This API is used to call the billing payment API for payment since prepaid order
     public ExportWindowsPatchListResponse ExportWindowsPatchList(ExportWindowsPatchListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportWindowsPatchList", ExportWindowsPatchListResponse.class);
+    }
+
+    /**
+     *This API is used to fix baseline detection.
+     * @param req FixBaselineDetectRequest
+     * @return FixBaselineDetectResponse
+     * @throws TencentCloudSDKException
+     */
+    public FixBaselineDetectResponse FixBaselineDetect(FixBaselineDetectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FixBaselineDetect", FixBaselineDetectResponse.class);
     }
 
     /**
@@ -4593,6 +5000,50 @@ This API is used to call the billing payment API for payment since prepaid order
     public ModifyBaselinePolicyResponse ModifyBaselinePolicy(ModifyBaselinePolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBaselinePolicy", ModifyBaselinePolicyResponse.class);
+    }
+
+    /**
+     *This API is used to change the baseline policy status.
+     * @param req ModifyBaselinePolicyStateRequest
+     * @return ModifyBaselinePolicyStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaselinePolicyStateResponse ModifyBaselinePolicyState(ModifyBaselinePolicyStateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBaselinePolicyState", ModifyBaselinePolicyStateResponse.class);
+    }
+
+    /**
+     *Make a change to a baseline detection rule
+     * @param req ModifyBaselineRuleRequest
+     * @return ModifyBaselineRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaselineRuleResponse ModifyBaselineRule(ModifyBaselineRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBaselineRule", ModifyBaselineRuleResponse.class);
+    }
+
+    /**
+     *Make a change to the baseline ignore rule.
+     * @param req ModifyBaselineRuleIgnoreRequest
+     * @return ModifyBaselineRuleIgnoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaselineRuleIgnoreResponse ModifyBaselineRuleIgnore(ModifyBaselineRuleIgnoreRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBaselineRuleIgnore", ModifyBaselineRuleIgnoreResponse.class);
+    }
+
+    /**
+     *Change or add a weak password
+     * @param req ModifyBaselineWeakPasswordRequest
+     * @return ModifyBaselineWeakPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaselineWeakPasswordResponse ModifyBaselineWeakPassword(ModifyBaselineWeakPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBaselineWeakPassword", ModifyBaselineWeakPasswordResponse.class);
     }
 
     /**
@@ -4717,6 +5168,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *This API is used to unbind machines from an authorization in batches.
+     * @param req ModifyLicenseUnBindsRequest
+     * @return ModifyLicenseUnBindsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLicenseUnBindsResponse ModifyLicenseUnBinds(ModifyLicenseUnBindsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLicenseUnBinds", ModifyLicenseUnBindsResponse.class);
+    }
+
+    /**
      *This API is used to add or modify the access configuration of logs shipped to Kafka.
      * @param req ModifyLogKafkaAccessRequest
      * @return ModifyLogKafkaAccessResponse
@@ -4794,6 +5256,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Modify Host Remark Information
+     * @param req ModifyMachineRemarkRequest
+     * @return ModifyMachineRemarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMachineRemarkResponse ModifyMachineRemark(ModifyMachineRemarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMachineRemark", ModifyMachineRemarkResponse.class);
+    }
+
+    /**
      *This API is used to update the malicious request allowlist.
      * @param req ModifyMaliciousRequestWhiteListRequest
      * @return ModifyMaliciousRequestWhiteListResponse
@@ -4846,6 +5319,17 @@ This API is used to call the billing payment API for payment since prepaid order
     public ModifyNetAttackWhiteListResponse ModifyNetAttackWhiteList(ModifyNetAttackWhiteListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNetAttackWhiteList", ModifyNetAttackWhiteListResponse.class);
+    }
+
+    /**
+     *Edit order attributes
+     * @param req ModifyOrderAttributeRequest
+     * @return ModifyOrderAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOrderAttributeResponse ModifyOrderAttribute(ModifyOrderAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOrderAttribute", ModifyOrderAttributeResponse.class);
     }
 
     /**
@@ -5050,6 +5534,28 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Creating or Modifying a Website Protection Directory
+     * @param req ModifyWebPageProtectDirRequest
+     * @return ModifyWebPageProtectDirResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWebPageProtectDirResponse ModifyWebPageProtectDir(ModifyWebPageProtectDirRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWebPageProtectDir", ModifyWebPageProtectDirResponse.class);
+    }
+
+    /**
+     *Modifying Website Protection Settings
+     * @param req ModifyWebPageProtectSettingRequest
+     * @return ModifyWebPageProtectSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWebPageProtectSettingResponse ModifyWebPageProtectSetting(ModifyWebPageProtectSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWebPageProtectSetting", ModifyWebPageProtectSettingResponse.class);
+    }
+
+    /**
      *This API is used to enable or disable website anti-tampering protection.
      * @param req ModifyWebPageProtectSwitchRequest
      * @return ModifyWebPageProtectSwitchResponse
@@ -5135,6 +5641,17 @@ This API is used to call the billing payment API for payment since prepaid order
     public RetryVulFixResponse RetryVulFix(RetryVulFixRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RetryVulFix", RetryVulFixResponse.class);
+    }
+
+    /**
+     *Initiate asset fingerprinting scan
+     * @param req ScanAssetRequest
+     * @return ScanAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScanAssetResponse ScanAsset(ScanAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScanAsset", ScanAssetResponse.class);
     }
 
     /**

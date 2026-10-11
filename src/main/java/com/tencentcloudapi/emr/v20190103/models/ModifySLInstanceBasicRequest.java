@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifySLInstanceBasicRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifySLInstanceBasicRequest extends AbstractModel {
     private String ClusterName;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

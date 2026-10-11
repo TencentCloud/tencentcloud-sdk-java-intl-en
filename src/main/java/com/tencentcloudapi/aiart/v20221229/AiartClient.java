@@ -50,16 +50,4 @@ It supports 1 concurrency by default, which means that up to 1 submitted task ca
         return this.internalRequest(req, "ChangeClothes", ChangeClothesResponse.class);
     }
 
-    /**
-     *This API is used to transfer the image style based on the image to image technology. Images with small figures, complex gestures or too many figures are not recommended.
-It supports 3 concurrency by default, which means that up to 3 submitted tasks can be processed simultaneously. Subsequent tasks can be processed only after ongoing ones are completed.
-     * @param req ImageToImageRequest
-     * @return ImageToImageResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImageToImageResponse ImageToImage(ImageToImageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImageToImage", ImageToImageResponse.class);
-    }
-
 }

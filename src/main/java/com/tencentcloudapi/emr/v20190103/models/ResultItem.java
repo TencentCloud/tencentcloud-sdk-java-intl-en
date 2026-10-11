@@ -38,7 +38,7 @@ public class ResultItem extends AbstractModel {
     private Boolean Result;
 
     /**
-    * Specify the reason for the failure in the case of creation failure.
+    * If the creation fails, specify the reason for the failure.
     */
     @SerializedName("Reason")
     @Expose
@@ -77,16 +77,16 @@ public class ResultItem extends AbstractModel {
     }
 
     /**
-     * Get Specify the reason for the failure in the case of creation failure. 
-     * @return Reason Specify the reason for the failure in the case of creation failure.
+     * Get If the creation fails, specify the reason for the failure. 
+     * @return Reason If the creation fails, specify the reason for the failure.
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set Specify the reason for the failure in the case of creation failure.
-     * @param Reason Specify the reason for the failure in the case of creation failure.
+     * Set If the creation fails, specify the reason for the failure.
+     * @param Reason If the creation fails, specify the reason for the failure.
      */
     public void setReason(String Reason) {
         this.Reason = Reason;

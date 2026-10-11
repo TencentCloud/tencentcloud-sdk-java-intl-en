@@ -31,14 +31,14 @@ public class DescribeHDFSStorageInfoRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Query information obtainment start time (seconds).
+    * Start time for obtaining queried information (s).
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Query information obtainment end time (seconds).
+    * End time for obtaining queried information (s).
     */
     @SerializedName("EndTime")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeHDFSStorageInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Query information obtainment start time (seconds). 
-     * @return StartTime Query information obtainment start time (seconds).
+     * Get Start time for obtaining queried information (s). 
+     * @return StartTime Start time for obtaining queried information (s).
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query information obtainment start time (seconds).
-     * @param StartTime Query information obtainment start time (seconds).
+     * Set Start time for obtaining queried information (s).
+     * @param StartTime Start time for obtaining queried information (s).
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query information obtainment end time (seconds). 
-     * @return EndTime Query information obtainment end time (seconds).
+     * Get End time for obtaining queried information (s). 
+     * @return EndTime End time for obtaining queried information (s).
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query information obtainment end time (seconds).
-     * @param EndTime Query information obtainment end time (seconds).
+     * Set End time for obtaining queried information (s).
+     * @param EndTime End time for obtaining queried information (s).
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ApplicationStatics extends AbstractModel {
 
     /**
-    * Queue name
+    * Queue name.
     */
     @SerializedName("Queue")
     @Expose
     private String Queue;
 
     /**
-    * Username
+    * Username.
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * Application type
+    * Job type.
     */
     @SerializedName("ApplicationType")
     @Expose
     private String ApplicationType;
 
     /**
-    * `SumMemorySeconds` meaning
+    * Meaning of SumMemorySeconds.
     */
     @SerializedName("SumMemorySeconds")
     @Expose
     private Long SumMemorySeconds;
 
     /**
-    * Total VCore Seconds
+    * Meaning of SumVCoreSeconds.
     */
     @SerializedName("SumVCoreSeconds")
     @Expose
     private Long SumVCoreSeconds;
 
     /**
-    * SumHDFSBytesWritten (with unit)
+    * SumHDFSBytesWritten (with the unit).
     */
     @SerializedName("SumHDFSBytesWritten")
     @Expose
     private String SumHDFSBytesWritten;
 
     /**
-    * SumHDFSBytesRead (with unit)
+    * SumHDFSBytesRead (with the unit).
     */
     @SerializedName("SumHDFSBytesRead")
     @Expose
     private String SumHDFSBytesRead;
 
     /**
-    * Application count
+    * Number of jobs.
     */
     @SerializedName("CountApps")
     @Expose
     private Long CountApps;
 
     /**
-     * Get Queue name 
-     * @return Queue Queue name
+     * Get Queue name. 
+     * @return Queue Queue name.
      */
     public String getQueue() {
         return this.Queue;
     }
 
     /**
-     * Set Queue name
-     * @param Queue Queue name
+     * Set Queue name.
+     * @param Queue Queue name.
      */
     public void setQueue(String Queue) {
         this.Queue = Queue;
     }
 
     /**
-     * Get Username 
-     * @return User Username
+     * Get Username. 
+     * @return User Username.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Username
-     * @param User Username
+     * Set Username.
+     * @param User Username.
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Application type 
-     * @return ApplicationType Application type
+     * Get Job type. 
+     * @return ApplicationType Job type.
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set Application type
-     * @param ApplicationType Application type
+     * Set Job type.
+     * @param ApplicationType Job type.
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get `SumMemorySeconds` meaning 
-     * @return SumMemorySeconds `SumMemorySeconds` meaning
+     * Get Meaning of SumMemorySeconds. 
+     * @return SumMemorySeconds Meaning of SumMemorySeconds.
      */
     public Long getSumMemorySeconds() {
         return this.SumMemorySeconds;
     }
 
     /**
-     * Set `SumMemorySeconds` meaning
-     * @param SumMemorySeconds `SumMemorySeconds` meaning
+     * Set Meaning of SumMemorySeconds.
+     * @param SumMemorySeconds Meaning of SumMemorySeconds.
      */
     public void setSumMemorySeconds(Long SumMemorySeconds) {
         this.SumMemorySeconds = SumMemorySeconds;
     }
 
     /**
-     * Get Total VCore Seconds 
-     * @return SumVCoreSeconds Total VCore Seconds
+     * Get Meaning of SumVCoreSeconds. 
+     * @return SumVCoreSeconds Meaning of SumVCoreSeconds.
      */
     public Long getSumVCoreSeconds() {
         return this.SumVCoreSeconds;
     }
 
     /**
-     * Set Total VCore Seconds
-     * @param SumVCoreSeconds Total VCore Seconds
+     * Set Meaning of SumVCoreSeconds.
+     * @param SumVCoreSeconds Meaning of SumVCoreSeconds.
      */
     public void setSumVCoreSeconds(Long SumVCoreSeconds) {
         this.SumVCoreSeconds = SumVCoreSeconds;
     }
 
     /**
-     * Get SumHDFSBytesWritten (with unit) 
-     * @return SumHDFSBytesWritten SumHDFSBytesWritten (with unit)
+     * Get SumHDFSBytesWritten (with the unit). 
+     * @return SumHDFSBytesWritten SumHDFSBytesWritten (with the unit).
      */
     public String getSumHDFSBytesWritten() {
         return this.SumHDFSBytesWritten;
     }
 
     /**
-     * Set SumHDFSBytesWritten (with unit)
-     * @param SumHDFSBytesWritten SumHDFSBytesWritten (with unit)
+     * Set SumHDFSBytesWritten (with the unit).
+     * @param SumHDFSBytesWritten SumHDFSBytesWritten (with the unit).
      */
     public void setSumHDFSBytesWritten(String SumHDFSBytesWritten) {
         this.SumHDFSBytesWritten = SumHDFSBytesWritten;
     }
 
     /**
-     * Get SumHDFSBytesRead (with unit) 
-     * @return SumHDFSBytesRead SumHDFSBytesRead (with unit)
+     * Get SumHDFSBytesRead (with the unit). 
+     * @return SumHDFSBytesRead SumHDFSBytesRead (with the unit).
      */
     public String getSumHDFSBytesRead() {
         return this.SumHDFSBytesRead;
     }
 
     /**
-     * Set SumHDFSBytesRead (with unit)
-     * @param SumHDFSBytesRead SumHDFSBytesRead (with unit)
+     * Set SumHDFSBytesRead (with the unit).
+     * @param SumHDFSBytesRead SumHDFSBytesRead (with the unit).
      */
     public void setSumHDFSBytesRead(String SumHDFSBytesRead) {
         this.SumHDFSBytesRead = SumHDFSBytesRead;
     }
 
     /**
-     * Get Application count 
-     * @return CountApps Application count
+     * Get Number of jobs. 
+     * @return CountApps Number of jobs.
      */
     public Long getCountApps() {
         return this.CountApps;
     }
 
     /**
-     * Set Application count
-     * @param CountApps Application count
+     * Set Number of jobs.
+     * @param CountApps Number of jobs.
      */
     public void setCountApps(Long CountApps) {
         this.CountApps = CountApps;

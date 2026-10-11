@@ -31,14 +31,14 @@ public class ModifyInspectionSettingsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Inspection type, FixedTime or RealTime.
+    * Inspection type. Valid values: FixedTime and RealTime.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Task configurations.
+    * Task configuration.
     */
     @SerializedName("Settings")
     @Expose
@@ -80,7 +80,7 @@ public class ModifyInspectionSettingsRequest extends AbstractModel {
     private String DayOfWeek;
 
     /**
-    * Number of the day in a month.
+    * Day of the month.
     */
     @SerializedName("DayOfMonth")
     @Expose
@@ -110,32 +110,32 @@ public class ModifyInspectionSettingsRequest extends AbstractModel {
     }
 
     /**
-     * Get Inspection type, FixedTime or RealTime. 
-     * @return Type Inspection type, FixedTime or RealTime.
+     * Get Inspection type. Valid values: FixedTime and RealTime. 
+     * @return Type Inspection type. Valid values: FixedTime and RealTime.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Inspection type, FixedTime or RealTime.
-     * @param Type Inspection type, FixedTime or RealTime.
+     * Set Inspection type. Valid values: FixedTime and RealTime.
+     * @param Type Inspection type. Valid values: FixedTime and RealTime.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Task configurations. 
-     * @return Settings Task configurations.
+     * Get Task configuration. 
+     * @return Settings Task configuration.
      */
     public InspectionTaskSettings [] getSettings() {
         return this.Settings;
     }
 
     /**
-     * Set Task configurations.
-     * @param Settings Task configurations.
+     * Set Task configuration.
+     * @param Settings Task configuration.
      */
     public void setSettings(InspectionTaskSettings [] Settings) {
         this.Settings = Settings;
@@ -222,16 +222,16 @@ public class ModifyInspectionSettingsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of the day in a month. 
-     * @return DayOfMonth Number of the day in a month.
+     * Get Day of the month. 
+     * @return DayOfMonth Day of the month.
      */
     public String getDayOfMonth() {
         return this.DayOfMonth;
     }
 
     /**
-     * Set Number of the day in a month.
-     * @param DayOfMonth Number of the day in a month.
+     * Set Day of the month.
+     * @param DayOfMonth Day of the month.
      */
     public void setDayOfMonth(String DayOfMonth) {
         this.DayOfMonth = DayOfMonth;

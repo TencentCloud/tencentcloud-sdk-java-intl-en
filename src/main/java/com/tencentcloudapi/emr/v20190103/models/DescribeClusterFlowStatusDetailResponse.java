@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterFlowStatusDetailResponse extends AbstractModel {
 
     /**
-    * Task step details
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task step details.
     */
     @SerializedName("StageDetails")
     @Expose
@@ -34,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FlowDesc")
     @Expose
@@ -56,22 +53,21 @@ Example: 0.8.
     private Float FlowTotalProgress;
 
     /**
-    * Overall process status definition.
-0: initializing.
-1: running.
-2: completed.
-3: completed (with skipped steps).
--1: failed.
--3: blocked.
+    * Overall flow status definition.
+0: initialized
+1: running
+2: completed
+3: completed (with skipped steps)
+-1: failed
+-3: blocked
     */
     @SerializedName("FlowTotalStatus")
     @Expose
     private Long FlowTotalStatus;
 
     /**
-    * Additional process information.
+    * Additional flow information.
 This parameter is returned when NeedExtraDetail is true.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FlowExtraDetail")
     @Expose
@@ -92,34 +88,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Task step details
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StageDetails Task step details
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task step details. 
+     * @return StageDetails Task step details.
      */
     public StageInfoDetail [] getStageDetails() {
         return this.StageDetails;
     }
 
     /**
-     * Set Task step details
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StageDetails Task step details
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task step details.
+     * @param StageDetails Task step details.
      */
     public void setStageDetails(StageInfoDetail [] StageDetails) {
         this.StageDetails = StageDetails;
     }
 
     /**
-     * Get Task parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task parameters. 
      * @return FlowDesc Task parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FlowParamsDesc [] getFlowDesc() {
         return this.FlowDesc;
@@ -127,9 +113,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FlowDesc Task parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFlowDesc(FlowParamsDesc [] FlowDesc) {
         this.FlowDesc = FlowDesc;
@@ -172,64 +156,60 @@ Example: 0.8.
     }
 
     /**
-     * Get Overall process status definition.
-0: initializing.
-1: running.
-2: completed.
-3: completed (with skipped steps).
--1: failed.
--3: blocked. 
-     * @return FlowTotalStatus Overall process status definition.
-0: initializing.
-1: running.
-2: completed.
-3: completed (with skipped steps).
--1: failed.
--3: blocked.
+     * Get Overall flow status definition.
+0: initialized
+1: running
+2: completed
+3: completed (with skipped steps)
+-1: failed
+-3: blocked 
+     * @return FlowTotalStatus Overall flow status definition.
+0: initialized
+1: running
+2: completed
+3: completed (with skipped steps)
+-1: failed
+-3: blocked
      */
     public Long getFlowTotalStatus() {
         return this.FlowTotalStatus;
     }
 
     /**
-     * Set Overall process status definition.
-0: initializing.
-1: running.
-2: completed.
-3: completed (with skipped steps).
--1: failed.
--3: blocked.
-     * @param FlowTotalStatus Overall process status definition.
-0: initializing.
-1: running.
-2: completed.
-3: completed (with skipped steps).
--1: failed.
--3: blocked.
+     * Set Overall flow status definition.
+0: initialized
+1: running
+2: completed
+3: completed (with skipped steps)
+-1: failed
+-3: blocked
+     * @param FlowTotalStatus Overall flow status definition.
+0: initialized
+1: running
+2: completed
+3: completed (with skipped steps)
+-1: failed
+-3: blocked
      */
     public void setFlowTotalStatus(Long FlowTotalStatus) {
         this.FlowTotalStatus = FlowTotalStatus;
     }
 
     /**
-     * Get Additional process information.
+     * Get Additional flow information.
+This parameter is returned when NeedExtraDetail is true. 
+     * @return FlowExtraDetail Additional flow information.
 This parameter is returned when NeedExtraDetail is true.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FlowExtraDetail Additional process information.
-This parameter is returned when NeedExtraDetail is true.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FlowExtraDetail [] getFlowExtraDetail() {
         return this.FlowExtraDetail;
     }
 
     /**
-     * Set Additional process information.
+     * Set Additional flow information.
 This parameter is returned when NeedExtraDetail is true.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FlowExtraDetail Additional process information.
+     * @param FlowExtraDetail Additional flow information.
 This parameter is returned when NeedExtraDetail is true.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFlowExtraDetail(FlowExtraDetail [] FlowExtraDetail) {
         this.FlowExtraDetail = FlowExtraDetail;

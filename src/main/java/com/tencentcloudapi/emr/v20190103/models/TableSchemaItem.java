@@ -24,30 +24,28 @@ import java.util.HashMap;
 public class TableSchemaItem extends AbstractModel {
 
     /**
-    * Column identifier
+    * Column identifier.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Whether it is sortable by this column
+    * Whether it is sortable by this column.
     */
     @SerializedName("Sortable")
     @Expose
     private Boolean Sortable;
 
     /**
-    * Whether it is filterable
+    * Whether it is filterable.
     */
     @SerializedName("WithFilter")
     @Expose
     private Boolean WithFilter;
 
     /**
-    * Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Filtered candidate set.
     */
     @SerializedName("Candidates")
     @Expose
@@ -68,72 +66,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Title;
 
     /**
-     * Get Column identifier 
-     * @return Name Column identifier
+     * Get Column identifier. 
+     * @return Name Column identifier.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Column identifier
-     * @param Name Column identifier
+     * Set Column identifier.
+     * @param Name Column identifier.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Whether it is sortable by this column 
-     * @return Sortable Whether it is sortable by this column
+     * Get Whether it is sortable by this column. 
+     * @return Sortable Whether it is sortable by this column.
      */
     public Boolean getSortable() {
         return this.Sortable;
     }
 
     /**
-     * Set Whether it is sortable by this column
-     * @param Sortable Whether it is sortable by this column
+     * Set Whether it is sortable by this column.
+     * @param Sortable Whether it is sortable by this column.
      */
     public void setSortable(Boolean Sortable) {
         this.Sortable = Sortable;
     }
 
     /**
-     * Get Whether it is filterable 
-     * @return WithFilter Whether it is filterable
+     * Get Whether it is filterable. 
+     * @return WithFilter Whether it is filterable.
      */
     public Boolean getWithFilter() {
         return this.WithFilter;
     }
 
     /**
-     * Set Whether it is filterable
-     * @param WithFilter Whether it is filterable
+     * Set Whether it is filterable.
+     * @param WithFilter Whether it is filterable.
      */
     public void setWithFilter(Boolean WithFilter) {
         this.WithFilter = WithFilter;
     }
 
     /**
-     * Get Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Candidates Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Filtered candidate set. 
+     * @return Candidates Filtered candidate set.
      */
     public String [] getCandidates() {
         return this.Candidates;
     }
 
     /**
-     * Set Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Candidates Filtered candidate set
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Filtered candidate set.
+     * @param Candidates Filtered candidate set.
      */
     public void setCandidates(String [] Candidates) {
         this.Candidates = Candidates;

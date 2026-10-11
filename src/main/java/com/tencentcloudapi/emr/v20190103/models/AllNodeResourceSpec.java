@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class AllNodeResourceSpec extends AbstractModel {
 
     /**
-    * The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Description of Master node resources.
     */
     @SerializedName("MasterResourceSpec")
     @Expose
     private NodeResourceSpec MasterResourceSpec;
 
     /**
-    * The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Description of Core node resources.
     */
     @SerializedName("CoreResourceSpec")
     @Expose
     private NodeResourceSpec CoreResourceSpec;
 
     /**
-    * The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Description of Task node resources.
     */
     @SerializedName("TaskResourceSpec")
     @Expose
     private NodeResourceSpec TaskResourceSpec;
 
     /**
-    * The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Description of Common node resources.
     */
     @SerializedName("CommonResourceSpec")
     @Expose
@@ -63,101 +59,85 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MasterCount;
 
     /**
-    * Number of core nodes.
+    * Number of Core nodes.
     */
     @SerializedName("CoreCount")
     @Expose
     private Long CoreCount;
 
     /**
-    * Number of task nodes.
+    * Number of Task nodes.
     */
     @SerializedName("TaskCount")
     @Expose
     private Long TaskCount;
 
     /**
-    * Number of common nodes.
+    * Number of Common nodes.
     */
     @SerializedName("CommonCount")
     @Expose
     private Long CommonCount;
 
     /**
-     * Get The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MasterResourceSpec The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Description of Master node resources. 
+     * @return MasterResourceSpec Description of Master node resources.
      */
     public NodeResourceSpec getMasterResourceSpec() {
         return this.MasterResourceSpec;
     }
 
     /**
-     * Set The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MasterResourceSpec The description of master nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Description of Master node resources.
+     * @param MasterResourceSpec Description of Master node resources.
      */
     public void setMasterResourceSpec(NodeResourceSpec MasterResourceSpec) {
         this.MasterResourceSpec = MasterResourceSpec;
     }
 
     /**
-     * Get The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CoreResourceSpec The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Description of Core node resources. 
+     * @return CoreResourceSpec Description of Core node resources.
      */
     public NodeResourceSpec getCoreResourceSpec() {
         return this.CoreResourceSpec;
     }
 
     /**
-     * Set The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CoreResourceSpec The description of core nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Description of Core node resources.
+     * @param CoreResourceSpec Description of Core node resources.
      */
     public void setCoreResourceSpec(NodeResourceSpec CoreResourceSpec) {
         this.CoreResourceSpec = CoreResourceSpec;
     }
 
     /**
-     * Get The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskResourceSpec The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Description of Task node resources. 
+     * @return TaskResourceSpec Description of Task node resources.
      */
     public NodeResourceSpec getTaskResourceSpec() {
         return this.TaskResourceSpec;
     }
 
     /**
-     * Set The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskResourceSpec The description of task nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Description of Task node resources.
+     * @param TaskResourceSpec Description of Task node resources.
      */
     public void setTaskResourceSpec(NodeResourceSpec TaskResourceSpec) {
         this.TaskResourceSpec = TaskResourceSpec;
     }
 
     /**
-     * Get The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CommonResourceSpec The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Description of Common node resources. 
+     * @return CommonResourceSpec Description of Common node resources.
      */
     public NodeResourceSpec getCommonResourceSpec() {
         return this.CommonResourceSpec;
     }
 
     /**
-     * Set The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CommonResourceSpec The description of common nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Description of Common node resources.
+     * @param CommonResourceSpec Description of Common node resources.
      */
     public void setCommonResourceSpec(NodeResourceSpec CommonResourceSpec) {
         this.CommonResourceSpec = CommonResourceSpec;
@@ -180,48 +160,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of core nodes. 
-     * @return CoreCount Number of core nodes.
+     * Get Number of Core nodes. 
+     * @return CoreCount Number of Core nodes.
      */
     public Long getCoreCount() {
         return this.CoreCount;
     }
 
     /**
-     * Set Number of core nodes.
-     * @param CoreCount Number of core nodes.
+     * Set Number of Core nodes.
+     * @param CoreCount Number of Core nodes.
      */
     public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
     /**
-     * Get Number of task nodes. 
-     * @return TaskCount Number of task nodes.
+     * Get Number of Task nodes. 
+     * @return TaskCount Number of Task nodes.
      */
     public Long getTaskCount() {
         return this.TaskCount;
     }
 
     /**
-     * Set Number of task nodes.
-     * @param TaskCount Number of task nodes.
+     * Set Number of Task nodes.
+     * @param TaskCount Number of Task nodes.
      */
     public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 
     /**
-     * Get Number of common nodes. 
-     * @return CommonCount Number of common nodes.
+     * Get Number of Common nodes. 
+     * @return CommonCount Number of Common nodes.
      */
     public Long getCommonCount() {
         return this.CommonCount;
     }
 
     /**
-     * Set Number of common nodes.
-     * @param CommonCount Number of common nodes.
+     * Set Number of Common nodes.
+     * @param CommonCount Number of Common nodes.
      */
     public void setCommonCount(Long CommonCount) {
         this.CommonCount = CommonCount;

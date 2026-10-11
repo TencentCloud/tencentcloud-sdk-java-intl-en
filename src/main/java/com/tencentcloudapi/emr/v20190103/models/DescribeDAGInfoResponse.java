@@ -31,8 +31,7 @@ public class DescribeDAGInfoResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * StarRocks query information list.
     */
     @SerializedName("DAGInfoList")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DAGInfoList StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get StarRocks query information list. 
+     * @return DAGInfoList StarRocks query information list.
      */
     public DAGInfo [] getDAGInfoList() {
         return this.DAGInfoList;
     }
 
     /**
-     * Set StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DAGInfoList StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set StarRocks query information list.
+     * @param DAGInfoList StarRocks query information list.
      */
     public void setDAGInfoList(DAGInfo [] DAGInfoList) {
         this.DAGInfoList = DAGInfoList;

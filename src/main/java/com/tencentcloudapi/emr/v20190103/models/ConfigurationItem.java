@@ -38,7 +38,7 @@ public class ConfigurationItem extends AbstractModel {
     private String Value;
 
     /**
-    * Name of the configuration file where the configuration item is located.
+    * Name of the configuration file where the configuration items are located.
     */
     @SerializedName("InFile")
     @Expose
@@ -77,16 +77,16 @@ public class ConfigurationItem extends AbstractModel {
     }
 
     /**
-     * Get Name of the configuration file where the configuration item is located. 
-     * @return InFile Name of the configuration file where the configuration item is located.
+     * Get Name of the configuration file where the configuration items are located. 
+     * @return InFile Name of the configuration file where the configuration items are located.
      */
     public String getInFile() {
         return this.InFile;
     }
 
     /**
-     * Set Name of the configuration file where the configuration item is located.
-     * @param InFile Name of the configuration file where the configuration item is located.
+     * Set Name of the configuration file where the configuration items are located.
+     * @param InFile Name of the configuration file where the configuration items are located.
      */
     public void setInFile(String InFile) {
         this.InFile = InFile;

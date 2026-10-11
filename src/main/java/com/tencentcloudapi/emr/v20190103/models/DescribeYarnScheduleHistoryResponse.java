@@ -25,8 +25,6 @@ public class DescribeYarnScheduleHistoryResponse extends AbstractModel {
 
     /**
     * Task details.
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tasks")
     @Expose
@@ -40,18 +38,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Total;
 
     /**
-    * Scheduling type filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scheduling type filter list.
     */
     @SerializedName("SchedulerNameList")
     @Expose
     private String [] SchedulerNameList;
 
     /**
-    * Status filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status filter list.
     */
     @SerializedName("StateList")
     @Expose
@@ -65,12 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Task details.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task details. 
      * @return Tasks Task details.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SchedulerTaskInfo [] getTasks() {
         return this.Tasks;
@@ -78,11 +68,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task details.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tasks Task details.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTasks(SchedulerTaskInfo [] Tasks) {
         this.Tasks = Tasks;
@@ -105,48 +91,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Scheduling type filter list
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SchedulerNameList Scheduling type filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scheduling type filter list. 
+     * @return SchedulerNameList Scheduling type filter list.
      */
     public String [] getSchedulerNameList() {
         return this.SchedulerNameList;
     }
 
     /**
-     * Set Scheduling type filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SchedulerNameList Scheduling type filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scheduling type filter list.
+     * @param SchedulerNameList Scheduling type filter list.
      */
     public void setSchedulerNameList(String [] SchedulerNameList) {
         this.SchedulerNameList = SchedulerNameList;
     }
 
     /**
-     * Get Status filter list
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StateList Status filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status filter list. 
+     * @return StateList Status filter list.
      */
     public Long [] getStateList() {
         return this.StateList;
     }
 
     /**
-     * Set Status filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StateList Status filter list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status filter list.
+     * @param StateList Status filter list.
      */
     public void setStateList(Long [] StateList) {
         this.StateList = StateList;

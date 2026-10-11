@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyResourceTags extends AbstractModel {
 
     /**
-    * Cluster ID or CVM ID
+    * Cluster ID or CVM ID.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 6-segment resource expression
+    * Six-segment resource expression.
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-    * Resource prefix
+    * Resource prefix.
     */
     @SerializedName("ResourcePrefix")
     @Expose
@@ -59,69 +59,69 @@ public class ModifyResourceTags extends AbstractModel {
     private String ServiceType;
 
     /**
-    * List of deleted tags
+    * List of deleted tags.
     */
     @SerializedName("DeleteTags")
     @Expose
     private Tag [] DeleteTags;
 
     /**
-    * List of added tags
+    * List of added tags.
     */
     @SerializedName("AddTags")
     @Expose
     private Tag [] AddTags;
 
     /**
-    * List of modified tags
+    * List of modified tags.
     */
     @SerializedName("ModifyTags")
     @Expose
     private Tag [] ModifyTags;
 
     /**
-     * Get Cluster ID or CVM ID 
-     * @return ResourceId Cluster ID or CVM ID
+     * Get Cluster ID or CVM ID. 
+     * @return ResourceId Cluster ID or CVM ID.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Cluster ID or CVM ID
-     * @param ResourceId Cluster ID or CVM ID
+     * Set Cluster ID or CVM ID.
+     * @param ResourceId Cluster ID or CVM ID.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 6-segment resource expression 
-     * @return Resource 6-segment resource expression
+     * Get Six-segment resource expression. 
+     * @return Resource Six-segment resource expression.
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 6-segment resource expression
-     * @param Resource 6-segment resource expression
+     * Set Six-segment resource expression.
+     * @param Resource Six-segment resource expression.
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Resource prefix 
-     * @return ResourcePrefix Resource prefix
+     * Get Resource prefix. 
+     * @return ResourcePrefix Resource prefix.
      */
     public String getResourcePrefix() {
         return this.ResourcePrefix;
     }
 
     /**
-     * Set Resource prefix
-     * @param ResourcePrefix Resource prefix
+     * Set Resource prefix.
+     * @param ResourcePrefix Resource prefix.
      */
     public void setResourcePrefix(String ResourcePrefix) {
         this.ResourcePrefix = ResourcePrefix;
@@ -160,48 +160,48 @@ public class ModifyResourceTags extends AbstractModel {
     }
 
     /**
-     * Get List of deleted tags 
-     * @return DeleteTags List of deleted tags
+     * Get List of deleted tags. 
+     * @return DeleteTags List of deleted tags.
      */
     public Tag [] getDeleteTags() {
         return this.DeleteTags;
     }
 
     /**
-     * Set List of deleted tags
-     * @param DeleteTags List of deleted tags
+     * Set List of deleted tags.
+     * @param DeleteTags List of deleted tags.
      */
     public void setDeleteTags(Tag [] DeleteTags) {
         this.DeleteTags = DeleteTags;
     }
 
     /**
-     * Get List of added tags 
-     * @return AddTags List of added tags
+     * Get List of added tags. 
+     * @return AddTags List of added tags.
      */
     public Tag [] getAddTags() {
         return this.AddTags;
     }
 
     /**
-     * Set List of added tags
-     * @param AddTags List of added tags
+     * Set List of added tags.
+     * @param AddTags List of added tags.
      */
     public void setAddTags(Tag [] AddTags) {
         this.AddTags = AddTags;
     }
 
     /**
-     * Get List of modified tags 
-     * @return ModifyTags List of modified tags
+     * Get List of modified tags. 
+     * @return ModifyTags List of modified tags.
      */
     public Tag [] getModifyTags() {
         return this.ModifyTags;
     }
 
     /**
-     * Set List of modified tags
-     * @param ModifyTags List of modified tags
+     * Set List of modified tags.
+     * @param ModifyTags List of modified tags.
      */
     public void setModifyTags(Tag [] ModifyTags) {
         this.ModifyTags = ModifyTags;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
-    * Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+    * Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
     */
     @SerializedName("DependType")
     @Expose
@@ -52,16 +52,16 @@ public class ClusterExternalServiceInfo extends AbstractModel {
     private Long ClusterStatus;
 
     /**
-     * Get Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters. 
-     * @return DependType Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+     * Get Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters). 
+     * @return DependType Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
      */
     public Long getDependType() {
         return this.DependType;
     }
 
     /**
-     * Set Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
-     * @param DependType Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+     * Set Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
+     * @param DependType Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
      */
     public void setDependType(Long DependType) {
         this.DependType = DependType;

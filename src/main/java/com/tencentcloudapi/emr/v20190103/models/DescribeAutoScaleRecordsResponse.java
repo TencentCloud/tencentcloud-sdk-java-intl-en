@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAutoScaleRecordsResponse extends AbstractModel {
 
     /**
-    * Total scale-in and scale-out records.
+    * Total number of scaling records.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeAutoScaleRecordsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total scale-in and scale-out records. 
-     * @return TotalCount Total scale-in and scale-out records.
+     * Get Total number of scaling records. 
+     * @return TotalCount Total number of scaling records.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total scale-in and scale-out records.
-     * @param TotalCount Total scale-in and scale-out records.
+     * Set Total number of scaling records.
+     * @param TotalCount Total number of scaling records.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

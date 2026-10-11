@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeResourceScheduleDiffDetailResponse extends AbstractModel {
 
     /**
-    * Details of change items.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Change item details.
     */
     @SerializedName("Details")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Details of change items.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Details Details of change items.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Change item details. 
+     * @return Details Change item details.
      */
     public DiffDetail [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set Details of change items.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Details Details of change items.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Change item details.
+     * @param Details Change item details.
      */
     public void setDetails(DiffDetail [] Details) {
         this.Details = Details;

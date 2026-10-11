@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSLInstanceListRequest extends AbstractModel {
 
     /**
-    * Instance filtering policy. Valid values: <li>clusterList: Query the list of instances except for those that have been terminated.</li> <li>monitorManage: Query the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
+    * Instance filtering policy. Valid values:<li>clusterList: Queries the list of instances except for those that have been terminated.</li><li>monitorManage: Queries the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
     */
     @SerializedName("DisplayStrategy")
     @Expose
@@ -38,44 +38,45 @@ public class DescribeSLInstanceListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of records to be returned per page. The default value is 10, and the maximum value is 100.	
+    * Number of items returned per page. Default value: 10. Maximum value: 100.
+
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Sorting field. Valid values: <li>clusterId: Sort by instance ID.</li> <li>addTime: Sort by instance creation time.</li> <li>status: Sort by instance status code.</li>
+    * Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * Sorts by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+    * Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
     */
     @SerializedName("Asc")
     @Expose
     private Long Asc;
 
     /**
-    * Custom search filters. Examples: <li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li> Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
+    * Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-     * Get Instance filtering policy. Valid values: <li>clusterList: Query the list of instances except for those that have been terminated.</li> <li>monitorManage: Query the list of instances except for those that have been terminated, are being created, or fail to be created.</li> 
-     * @return DisplayStrategy Instance filtering policy. Valid values: <li>clusterList: Query the list of instances except for those that have been terminated.</li> <li>monitorManage: Query the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
+     * Get Instance filtering policy. Valid values:<li>clusterList: Queries the list of instances except for those that have been terminated.</li><li>monitorManage: Queries the list of instances except for those that have been terminated, are being created, or fail to be created.</li> 
+     * @return DisplayStrategy Instance filtering policy. Valid values:<li>clusterList: Queries the list of instances except for those that have been terminated.</li><li>monitorManage: Queries the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
      */
     public String getDisplayStrategy() {
         return this.DisplayStrategy;
     }
 
     /**
-     * Set Instance filtering policy. Valid values: <li>clusterList: Query the list of instances except for those that have been terminated.</li> <li>monitorManage: Query the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
-     * @param DisplayStrategy Instance filtering policy. Valid values: <li>clusterList: Query the list of instances except for those that have been terminated.</li> <li>monitorManage: Query the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
+     * Set Instance filtering policy. Valid values:<li>clusterList: Queries the list of instances except for those that have been terminated.</li><li>monitorManage: Queries the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
+     * @param DisplayStrategy Instance filtering policy. Valid values:<li>clusterList: Queries the list of instances except for those that have been terminated.</li><li>monitorManage: Queries the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
      */
     public void setDisplayStrategy(String DisplayStrategy) {
         this.DisplayStrategy = DisplayStrategy;
@@ -98,64 +99,68 @@ public class DescribeSLInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of records to be returned per page. The default value is 10, and the maximum value is 100.	 
-     * @return Limit Number of records to be returned per page. The default value is 10, and the maximum value is 100.	
+     * Get Number of items returned per page. Default value: 10. Maximum value: 100.
+ 
+     * @return Limit Number of items returned per page. Default value: 10. Maximum value: 100.
+
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of records to be returned per page. The default value is 10, and the maximum value is 100.	
-     * @param Limit Number of records to be returned per page. The default value is 10, and the maximum value is 100.	
+     * Set Number of items returned per page. Default value: 10. Maximum value: 100.
+
+     * @param Limit Number of items returned per page. Default value: 10. Maximum value: 100.
+
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Sorting field. Valid values: <li>clusterId: Sort by instance ID.</li> <li>addTime: Sort by instance creation time.</li> <li>status: Sort by instance status code.</li> 
-     * @return OrderField Sorting field. Valid values: <li>clusterId: Sort by instance ID.</li> <li>addTime: Sort by instance creation time.</li> <li>status: Sort by instance status code.</li>
+     * Get Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li> 
+     * @return OrderField Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set Sorting field. Valid values: <li>clusterId: Sort by instance ID.</li> <li>addTime: Sort by instance creation time.</li> <li>status: Sort by instance status code.</li>
-     * @param OrderField Sorting field. Valid values: <li>clusterId: Sort by instance ID.</li> <li>addTime: Sort by instance creation time.</li> <li>status: Sort by instance status code.</li>
+     * Set Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
+     * @param OrderField Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get Sorts by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0. 
-     * @return Asc Sorts by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+     * Get Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0. 
+     * @return Asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set Sorts by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
-     * @param Asc Sorts by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+     * Set Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
+     * @param Asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;
     }
 
     /**
-     * Get Custom search filters. Examples: <li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li> Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li> 
-     * @return Filters Custom search filters. Examples: <li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li> Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
+     * Get Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li> 
+     * @return Filters Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Custom search filters. Examples: <li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li> Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
-     * @param Filters Custom search filters. Examples: <li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li> Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
+     * Set Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
+     * @param Filters Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class OverviewRow extends AbstractModel {
 
     /**
-    * Table name
+    * Table name.
     */
     @SerializedName("Table")
     @Expose
     private String Table;
 
     /**
-    * Number of read requests
+    * Number of read requests.
     */
     @SerializedName("ReadRequestCount")
     @Expose
     private Float ReadRequestCount;
 
     /**
-    * Number of write requests
+    * Number of write requests.
     */
     @SerializedName("WriteRequestCount")
     @Expose
     private Float WriteRequestCount;
 
     /**
-    * Current memstore size
+    * Size of the current MemStore.
     */
     @SerializedName("MemstoreSize")
     @Expose
     private Float MemstoreSize;
 
     /**
-    * Size of StoreFile in the current region
+    * Size of the StoreFile in the current region.
     */
     @SerializedName("StoreFileSize")
     @Expose
@@ -66,87 +66,87 @@ public class OverviewRow extends AbstractModel {
     private String Operation;
 
     /**
-    * StoreFile quantity. 
+    * Number of StoreFiles.
     */
     @SerializedName("StoreFileNum")
     @Expose
     private Float StoreFileNum;
 
     /**
-     * Get Table name 
-     * @return Table Table name
+     * Get Table name. 
+     * @return Table Table name.
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set Table name
-     * @param Table Table name
+     * Set Table name.
+     * @param Table Table name.
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get Number of read requests 
-     * @return ReadRequestCount Number of read requests
+     * Get Number of read requests. 
+     * @return ReadRequestCount Number of read requests.
      */
     public Float getReadRequestCount() {
         return this.ReadRequestCount;
     }
 
     /**
-     * Set Number of read requests
-     * @param ReadRequestCount Number of read requests
+     * Set Number of read requests.
+     * @param ReadRequestCount Number of read requests.
      */
     public void setReadRequestCount(Float ReadRequestCount) {
         this.ReadRequestCount = ReadRequestCount;
     }
 
     /**
-     * Get Number of write requests 
-     * @return WriteRequestCount Number of write requests
+     * Get Number of write requests. 
+     * @return WriteRequestCount Number of write requests.
      */
     public Float getWriteRequestCount() {
         return this.WriteRequestCount;
     }
 
     /**
-     * Set Number of write requests
-     * @param WriteRequestCount Number of write requests
+     * Set Number of write requests.
+     * @param WriteRequestCount Number of write requests.
      */
     public void setWriteRequestCount(Float WriteRequestCount) {
         this.WriteRequestCount = WriteRequestCount;
     }
 
     /**
-     * Get Current memstore size 
-     * @return MemstoreSize Current memstore size
+     * Get Size of the current MemStore. 
+     * @return MemstoreSize Size of the current MemStore.
      */
     public Float getMemstoreSize() {
         return this.MemstoreSize;
     }
 
     /**
-     * Set Current memstore size
-     * @param MemstoreSize Current memstore size
+     * Set Size of the current MemStore.
+     * @param MemstoreSize Size of the current MemStore.
      */
     public void setMemstoreSize(Float MemstoreSize) {
         this.MemstoreSize = MemstoreSize;
     }
 
     /**
-     * Get Size of StoreFile in the current region 
-     * @return StoreFileSize Size of StoreFile in the current region
+     * Get Size of the StoreFile in the current region. 
+     * @return StoreFileSize Size of the StoreFile in the current region.
      */
     public Float getStoreFileSize() {
         return this.StoreFileSize;
     }
 
     /**
-     * Set Size of StoreFile in the current region
-     * @param StoreFileSize Size of StoreFile in the current region
+     * Set Size of the StoreFile in the current region.
+     * @param StoreFileSize Size of the StoreFile in the current region.
      */
     public void setStoreFileSize(Float StoreFileSize) {
         this.StoreFileSize = StoreFileSize;
@@ -169,16 +169,16 @@ public class OverviewRow extends AbstractModel {
     }
 
     /**
-     * Get StoreFile quantity.  
-     * @return StoreFileNum StoreFile quantity. 
+     * Get Number of StoreFiles. 
+     * @return StoreFileNum Number of StoreFiles.
      */
     public Float getStoreFileNum() {
         return this.StoreFileNum;
     }
 
     /**
-     * Set StoreFile quantity. 
-     * @param StoreFileNum StoreFile quantity. 
+     * Set Number of StoreFiles.
+     * @param StoreFileNum Number of StoreFiles.
      */
     public void setStoreFileNum(Float StoreFileNum) {
         this.StoreFileNum = StoreFileNum;

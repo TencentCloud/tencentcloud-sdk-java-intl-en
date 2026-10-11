@@ -24,155 +24,115 @@ import java.util.HashMap;
 public class ModifyUsersOfGroupSTDRequest extends AbstractModel {
 
     /**
-    * Cluster name.
+    * <p>Cluster name.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * User group name.
+    * <p>User group name.</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * User list.
+    * <p>User list.</p>
     */
     @SerializedName("Users")
     @Expose
     private String [] Users;
 
     /**
-    * User group description.
+    * <p>User group description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
+    * <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
     */
     @SerializedName("OperateAction")
     @Expose
     private String OperateAction;
 
     /**
-     * Get Cluster name. 
-     * @return InstanceId Cluster name.
+     * Get <p>Cluster name.</p> 
+     * @return InstanceId <p>Cluster name.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster name.
-     * @param InstanceId Cluster name.
+     * Set <p>Cluster name.</p>
+     * @param InstanceId <p>Cluster name.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get User group name. 
-     * @return Group User group name.
+     * Get <p>User group name.</p> 
+     * @return Group <p>User group name.</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set User group name.
-     * @param Group User group name.
+     * Set <p>User group name.</p>
+     * @param Group <p>User group name.</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get User list. 
-     * @return Users User list.
+     * Get <p>User list.</p> 
+     * @return Users <p>User list.</p>
      */
     public String [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set User list.
-     * @param Users User list.
+     * Set <p>User list.</p>
+     * @param Users <p>User list.</p>
      */
     public void setUsers(String [] Users) {
         this.Users = Users;
     }
 
     /**
-     * Get User group description. 
-     * @return Description User group description.
+     * Get <p>User group description.</p> 
+     * @return Description <p>User group description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set User group description.
-     * @param Description User group description.
+     * Set <p>User group description.</p>
+     * @param Description <p>User group description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
- 
-     * @return OperateAction Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
+     * Get <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul> 
+     * @return OperateAction <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
      */
     public String getOperateAction() {
         return this.OperateAction;
     }
 
     /**
-     * Set Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
-     * @param OperateAction Enumeration class. Valid values: ADD, DELETE, SYNC.
-
-
-Enumeration class description.
-- ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-- DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-- SYNC: Overwrites the entire user group. An empty list clears all existing members.
-Defaults to SYNC.
-
+     * Set <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
+     * @param OperateAction <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
      */
     public void setOperateAction(String OperateAction) {
         this.OperateAction = OperateAction;

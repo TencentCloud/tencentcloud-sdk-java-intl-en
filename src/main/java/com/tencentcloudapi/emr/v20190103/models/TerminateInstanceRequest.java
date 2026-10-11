@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class TerminateInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ID of terminated node. This parameter is reserved and does not need to be configured.
+    * <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+    * <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
     */
     @SerializedName("ResourceBaseType")
     @Expose
     private String ResourceBaseType;
 
     /**
-    * Computing resource ID.
+    * <p>Computing resource ID.</p>
     */
     @SerializedName("ComputeResourceId")
     @Expose
     private String ComputeResourceId;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+    * <p>Retain the TKE cluster associated with the computing resource.</p>
+    */
+    @SerializedName("RetainTkeCluster")
+    @Expose
+    private Boolean RetainTkeCluster;
+
+    /**
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ID of terminated node. This parameter is reserved and does not need to be configured. 
-     * @return ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
+     * Get <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p> 
+     * @return ResourceIds <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set ID of terminated node. This parameter is reserved and does not need to be configured.
-     * @param ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
+     * Set <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
+     * @param ResourceIds <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used. 
-     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * Get <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p> 
+     * @return ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
      */
     public String getResourceBaseType() {
         return this.ResourceBaseType;
     }
 
     /**
-     * Set The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
-     * @param ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+     * Set <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
+     * @param ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
      */
     public void setResourceBaseType(String ResourceBaseType) {
         this.ResourceBaseType = ResourceBaseType;
     }
 
     /**
-     * Get Computing resource ID. 
-     * @return ComputeResourceId Computing resource ID.
+     * Get <p>Computing resource ID.</p> 
+     * @return ComputeResourceId <p>Computing resource ID.</p>
      */
     public String getComputeResourceId() {
         return this.ComputeResourceId;
     }
 
     /**
-     * Set Computing resource ID.
-     * @param ComputeResourceId Computing resource ID.
+     * Set <p>Computing resource ID.</p>
+     * @param ComputeResourceId <p>Computing resource ID.</p>
      */
     public void setComputeResourceId(String ComputeResourceId) {
         this.ComputeResourceId = ComputeResourceId;
+    }
+
+    /**
+     * Get <p>Retain the TKE cluster associated with the computing resource.</p> 
+     * @return RetainTkeCluster <p>Retain the TKE cluster associated with the computing resource.</p>
+     */
+    public Boolean getRetainTkeCluster() {
+        return this.RetainTkeCluster;
+    }
+
+    /**
+     * Set <p>Retain the TKE cluster associated with the computing resource.</p>
+     * @param RetainTkeCluster <p>Retain the TKE cluster associated with the computing resource.</p>
+     */
+    public void setRetainTkeCluster(Boolean RetainTkeCluster) {
+        this.RetainTkeCluster = RetainTkeCluster;
     }
 
     public TerminateInstanceRequest() {
@@ -138,6 +161,9 @@ public class TerminateInstanceRequest extends AbstractModel {
         if (source.ComputeResourceId != null) {
             this.ComputeResourceId = new String(source.ComputeResourceId);
         }
+        if (source.RetainTkeCluster != null) {
+            this.RetainTkeCluster = new Boolean(source.RetainTkeCluster);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class TerminateInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+        this.setParamSimple(map, prefix + "RetainTkeCluster", this.RetainTkeCluster);
 
     }
 }

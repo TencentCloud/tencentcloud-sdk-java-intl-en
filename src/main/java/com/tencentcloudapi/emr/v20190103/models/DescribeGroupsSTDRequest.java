@@ -31,7 +31,7 @@ public class DescribeGroupsSTDRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Description key-value pair filter, which is used for conditional filtering queries.
+    * Description key-value pair filter, which is used for conditional filter queries.
     */
     @SerializedName("Filters")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeGroupsSTDRequest extends AbstractModel {
     private Order OrderFields;
 
     /**
-    * Number of returns.
+    * Number of returned items.
     */
     @SerializedName("Limit")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeGroupsSTDRequest extends AbstractModel {
     }
 
     /**
-     * Get Description key-value pair filter, which is used for conditional filtering queries. 
-     * @return Filters Description key-value pair filter, which is used for conditional filtering queries.
+     * Get Description key-value pair filter, which is used for conditional filter queries. 
+     * @return Filters Description key-value pair filter, which is used for conditional filter queries.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Description key-value pair filter, which is used for conditional filtering queries.
-     * @param Filters Description key-value pair filter, which is used for conditional filtering queries.
+     * Set Description key-value pair filter, which is used for conditional filter queries.
+     * @param Filters Description key-value pair filter, which is used for conditional filter queries.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -107,16 +107,16 @@ public class DescribeGroupsSTDRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of returns. 
-     * @return Limit Number of returns.
+     * Get Number of returned items. 
+     * @return Limit Number of returned items.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returns.
-     * @param Limit Number of returns.
+     * Set Number of returned items.
+     * @param Limit Number of returned items.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

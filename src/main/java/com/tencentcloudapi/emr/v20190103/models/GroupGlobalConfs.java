@@ -25,7 +25,6 @@ public class GroupGlobalConfs extends AbstractModel {
 
     /**
     * Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupGlobalConf")
     @Expose
@@ -53,10 +52,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CurrentSpotPaidNodes;
 
     /**
-     * Get Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Scaling group information. 
      * @return GroupGlobalConf Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AutoScaleResourceConf getGroupGlobalConf() {
         return this.GroupGlobalConf;
@@ -64,9 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param GroupGlobalConf Scaling group information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupGlobalConf(AutoScaleResourceConf GroupGlobalConf) {
         this.GroupGlobalConf = GroupGlobalConf;

@@ -25,17 +25,14 @@ public class ItemSeq extends AbstractModel {
 
     /**
     * Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Items")
     @Expose
     private Item [] Items;
 
     /**
-     * Get Tag name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Tag name. 
      * @return Items Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Item [] getItems() {
         return this.Items;
@@ -43,9 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Items Tag name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItems(Item [] Items) {
         this.Items = Items;

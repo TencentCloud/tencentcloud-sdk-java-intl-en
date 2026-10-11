@@ -38,14 +38,14 @@ public class ModifyResourceRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * Resized CPU.
+    * Changed CPU.
     */
     @SerializedName("NewCpu")
     @Expose
     private Long NewCpu;
 
     /**
-    * Resized memory.
+    * Changed memory.
     */
     @SerializedName("NewMem")
     @Expose
@@ -59,14 +59,14 @@ public class ModifyResourceRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * Resized machine specifications.
+    * Changed machine specifications.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Node ID List.
+    * Node ID list.
     */
     @SerializedName("ResourceIdList")
     @Expose
@@ -105,32 +105,32 @@ public class ModifyResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get Resized CPU. 
-     * @return NewCpu Resized CPU.
+     * Get Changed CPU. 
+     * @return NewCpu Changed CPU.
      */
     public Long getNewCpu() {
         return this.NewCpu;
     }
 
     /**
-     * Set Resized CPU.
-     * @param NewCpu Resized CPU.
+     * Set Changed CPU.
+     * @param NewCpu Changed CPU.
      */
     public void setNewCpu(Long NewCpu) {
         this.NewCpu = NewCpu;
     }
 
     /**
-     * Get Resized memory. 
-     * @return NewMem Resized memory.
+     * Get Changed memory. 
+     * @return NewMem Changed memory.
      */
     public Long getNewMem() {
         return this.NewMem;
     }
 
     /**
-     * Set Resized memory.
-     * @param NewMem Resized memory.
+     * Set Changed memory.
+     * @param NewMem Changed memory.
      */
     public void setNewMem(Long NewMem) {
         this.NewMem = NewMem;
@@ -153,32 +153,32 @@ public class ModifyResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get Resized machine specifications. 
-     * @return InstanceType Resized machine specifications.
+     * Get Changed machine specifications. 
+     * @return InstanceType Changed machine specifications.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Resized machine specifications.
-     * @param InstanceType Resized machine specifications.
+     * Set Changed machine specifications.
+     * @param InstanceType Changed machine specifications.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Node ID List. 
-     * @return ResourceIdList Node ID List.
+     * Get Node ID list. 
+     * @return ResourceIdList Node ID list.
      */
     public String [] getResourceIdList() {
         return this.ResourceIdList;
     }
 
     /**
-     * Set Node ID List.
-     * @param ResourceIdList Node ID List.
+     * Set Node ID list.
+     * @param ResourceIdList Node ID list.
      */
     public void setResourceIdList(String [] ResourceIdList) {
         this.ResourceIdList = ResourceIdList;

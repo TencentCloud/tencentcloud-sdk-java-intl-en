@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeployYarnConfResponse extends AbstractModel {
 
     /**
-    * Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/api/1026/73259) API to obtain the process status.
+    * Flow ID after the flow is started. You can use the API [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/product/589/107224?from_cn_redirect=1) to obtain the flow status.
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class DeployYarnConfResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/api/1026/73259) API to obtain the process status. 
-     * @return FlowId Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/api/1026/73259) API to obtain the process status.
+     * Get Flow ID after the flow is started. You can use the API [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/product/589/107224?from_cn_redirect=1) to obtain the flow status. 
+     * @return FlowId Flow ID after the flow is started. You can use the API [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/product/589/107224?from_cn_redirect=1) to obtain the flow status.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/api/1026/73259) API to obtain the process status.
-     * @param FlowId Process ID after the process is started. You can use the [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/api/1026/73259) API to obtain the process status.
+     * Set Flow ID after the flow is started. You can use the API [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/product/589/107224?from_cn_redirect=1) to obtain the flow status.
+     * @param FlowId Flow ID after the flow is started. You can use the API [DescribeClusterFlowStatusDetail](https://www.tencentcloud.com/document/product/589/107224?from_cn_redirect=1) to obtain the flow status.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

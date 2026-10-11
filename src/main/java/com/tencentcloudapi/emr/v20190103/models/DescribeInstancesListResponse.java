@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstancesListResponse extends AbstractModel {
 
     /**
-    * Number of eligible instances.
+    * Total number of instances that meet the criteria.
     */
     @SerializedName("TotalCnt")
     @Expose
     private Long TotalCnt;
 
     /**
-    * Cluster instance list.
+    * Cluster list.
     */
     @SerializedName("InstancesList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstancesListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible instances. 
-     * @return TotalCnt Number of eligible instances.
+     * Get Total number of instances that meet the criteria. 
+     * @return TotalCnt Total number of instances that meet the criteria.
      */
     public Long getTotalCnt() {
         return this.TotalCnt;
     }
 
     /**
-     * Set Number of eligible instances.
-     * @param TotalCnt Number of eligible instances.
+     * Set Total number of instances that meet the criteria.
+     * @param TotalCnt Total number of instances that meet the criteria.
      */
     public void setTotalCnt(Long TotalCnt) {
         this.TotalCnt = TotalCnt;
     }
 
     /**
-     * Get Cluster instance list. 
-     * @return InstancesList Cluster instance list.
+     * Get Cluster list. 
+     * @return InstancesList Cluster list.
      */
     public EmrListInstance [] getInstancesList() {
         return this.InstancesList;
     }
 
     /**
-     * Set Cluster instance list.
-     * @param InstancesList Cluster instance list.
+     * Set Cluster list.
+     * @param InstancesList Cluster list.
      */
     public void setInstancesList(EmrListInstance [] InstancesList) {
         this.InstancesList = InstancesList;

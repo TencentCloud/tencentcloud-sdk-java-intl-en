@@ -24,16 +24,18 @@ import java.util.HashMap;
 public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
 
     /**
-    * Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+    * Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+    * Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -41,75 +43,85 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
 
     /**
     * Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Currency.
-    */
-    @SerializedName("Currency")
-    @Expose
-    private String Currency;
-
-    /**
-    * Target node specification.
+    * 
     */
     @SerializedName("UpdateSpec")
     @Expose
     private UpdateInstanceSettings UpdateSpec;
 
     /**
-    * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+    * 
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * The resource ID list for batch configuration change.
+    * Currency type. Valid values:
+<li>CNY: RMB</li>
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
+    * ID list of resources modified in batches.
     */
     @SerializedName("ResourceIdList")
     @Expose
     private String [] ResourceIdList;
 
     /**
-     * Get Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
-     * @return TimeUnit Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+     * Get Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li> 
+     * @return TimeUnit Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-     * @param TimeUnit Time unit of scaling. Valid values:
-<li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+     * Set Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+     * @param TimeUnit Time unit for the configuration change. Valid values:
+<li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+<li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li> 
-     * @return TimeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+     * Get Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li> 
+     * @return TimeSpan Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-     * @param TimeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+     * Set Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
+     * @param TimeSpan Configuration change duration, which is used together with TimeUnit.
+<li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+<li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
@@ -117,9 +129,11 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
 
     /**
      * Get Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li> 
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li> 
      * @return PayMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -127,73 +141,79 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
 
     /**
      * Set Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
      * @param PayMode Instance billing mode. Valid values:
-<li>0: pay-as-you-go.</li>
+<li>0: pay-as-you-go</li>
+<li>1: monthly subscription</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Currency. 
-     * @return Currency Currency.
-     */
-    public String getCurrency() {
-        return this.Currency;
-    }
-
-    /**
-     * Set Currency.
-     * @param Currency Currency.
-     */
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
-    }
-
-    /**
-     * Get Target node specification. 
-     * @return UpdateSpec Target node specification.
+     * Get  
+     * @return UpdateSpec 
      */
     public UpdateInstanceSettings getUpdateSpec() {
         return this.UpdateSpec;
     }
 
     /**
-     * Set Target node specification.
-     * @param UpdateSpec Target node specification.
+     * Set 
+     * @param UpdateSpec 
      */
     public void setUpdateSpec(UpdateInstanceSettings UpdateSpec) {
         this.UpdateSpec = UpdateSpec;
     }
 
     /**
-     * Get Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance. 
-     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * Get  
+     * @return Placement 
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * Set 
+     * @param Placement 
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get The resource ID list for batch configuration change. 
-     * @return ResourceIdList The resource ID list for batch configuration change.
+     * Get Currency type. Valid values:
+<li>CNY: RMB</li> 
+     * @return Currency Currency type. Valid values:
+<li>CNY: RMB</li>
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set Currency type. Valid values:
+<li>CNY: RMB</li>
+     * @param Currency Currency type. Valid values:
+<li>CNY: RMB</li>
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
+    /**
+     * Get ID list of resources modified in batches. 
+     * @return ResourceIdList ID list of resources modified in batches.
      */
     public String [] getResourceIdList() {
         return this.ResourceIdList;
     }
 
     /**
-     * Set The resource ID list for batch configuration change.
-     * @param ResourceIdList The resource ID list for batch configuration change.
+     * Set ID list of resources modified in batches.
+     * @param ResourceIdList ID list of resources modified in batches.
      */
     public void setResourceIdList(String [] ResourceIdList) {
         this.ResourceIdList = ResourceIdList;
@@ -216,14 +236,14 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
-        if (source.Currency != null) {
-            this.Currency = new String(source.Currency);
-        }
         if (source.UpdateSpec != null) {
             this.UpdateSpec = new UpdateInstanceSettings(source.UpdateSpec);
         }
         if (source.Placement != null) {
             this.Placement = new Placement(source.Placement);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
         }
         if (source.ResourceIdList != null) {
             this.ResourceIdList = new String[source.ResourceIdList.length];
@@ -241,9 +261,9 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamObj(map, prefix + "UpdateSpec.", this.UpdateSpec);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamArraySimple(map, prefix + "ResourceIdList.", this.ResourceIdList);
 
     }

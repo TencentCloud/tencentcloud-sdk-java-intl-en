@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSLInstanceListResponse extends AbstractModel {
 
     /**
-    * Total number of qualified instances	.
+    * Total number of instances that meet the criteria.	
     */
     @SerializedName("TotalCnt")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeSLInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of qualified instances	. 
-     * @return TotalCnt Total number of qualified instances	.
+     * Get Total number of instances that meet the criteria.	 
+     * @return TotalCnt Total number of instances that meet the criteria.	
      */
     public Long getTotalCnt() {
         return this.TotalCnt;
     }
 
     /**
-     * Set Total number of qualified instances	.
-     * @param TotalCnt Total number of qualified instances	.
+     * Set Total number of instances that meet the criteria.	
+     * @param TotalCnt Total number of instances that meet the criteria.	
      */
     public void setTotalCnt(Long TotalCnt) {
         this.TotalCnt = TotalCnt;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class RestartPolicy extends AbstractModel {
 
     /**
-    * Restart policy name
+    * Restart policy name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Policy display name
+    * Policy display name.
     */
     @SerializedName("DisplayName")
     @Expose
     private String DisplayName;
 
     /**
-    * Policy description
+    * Policy description.
     */
     @SerializedName("Describe")
     @Expose
     private String Describe;
 
     /**
-    * Optional range for the number of batch restarted nodes
+    * Optional range for the number of nodes restarted in batches.
     */
     @SerializedName("BatchSizeRange")
     @Expose
     private Long [] BatchSizeRange;
 
     /**
-    * Whether it is the default policy
+    * Whether it is the default policy.
     */
     @SerializedName("IsDefault")
     @Expose
     private String IsDefault;
 
     /**
-     * Get Restart policy name 
-     * @return Name Restart policy name
+     * Get Restart policy name. 
+     * @return Name Restart policy name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Restart policy name
-     * @param Name Restart policy name
+     * Set Restart policy name.
+     * @param Name Restart policy name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Policy display name 
-     * @return DisplayName Policy display name
+     * Get Policy display name. 
+     * @return DisplayName Policy display name.
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set Policy display name
-     * @param DisplayName Policy display name
+     * Set Policy display name.
+     * @param DisplayName Policy display name.
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get Policy description 
-     * @return Describe Policy description
+     * Get Policy description. 
+     * @return Describe Policy description.
      */
     public String getDescribe() {
         return this.Describe;
     }
 
     /**
-     * Set Policy description
-     * @param Describe Policy description
+     * Set Policy description.
+     * @param Describe Policy description.
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;
     }
 
     /**
-     * Get Optional range for the number of batch restarted nodes 
-     * @return BatchSizeRange Optional range for the number of batch restarted nodes
+     * Get Optional range for the number of nodes restarted in batches. 
+     * @return BatchSizeRange Optional range for the number of nodes restarted in batches.
      */
     public Long [] getBatchSizeRange() {
         return this.BatchSizeRange;
     }
 
     /**
-     * Set Optional range for the number of batch restarted nodes
-     * @param BatchSizeRange Optional range for the number of batch restarted nodes
+     * Set Optional range for the number of nodes restarted in batches.
+     * @param BatchSizeRange Optional range for the number of nodes restarted in batches.
      */
     public void setBatchSizeRange(Long [] BatchSizeRange) {
         this.BatchSizeRange = BatchSizeRange;
     }
 
     /**
-     * Get Whether it is the default policy 
-     * @return IsDefault Whether it is the default policy
+     * Get Whether it is the default policy. 
+     * @return IsDefault Whether it is the default policy.
      */
     public String getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set Whether it is the default policy
-     * @param IsDefault Whether it is the default policy
+     * Set Whether it is the default policy.
+     * @param IsDefault Whether it is the default policy.
      */
     public void setIsDefault(String IsDefault) {
         this.IsDefault = IsDefault;

@@ -24,348 +24,371 @@ import java.util.HashMap;
 public class AutoScaleRecord extends AbstractModel {
 
     /**
-    * Name of the scale-in or scale-out rule.
+    * <p>Scaling rule name.</p>
     */
     @SerializedName("StrategyName")
     @Expose
     private String StrategyName;
 
     /**
-    * "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
+    * <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
     */
     @SerializedName("ScaleAction")
     @Expose
     private String ScaleAction;
 
     /**
-    * The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
+    * <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
     */
     @SerializedName("ActionStatus")
     @Expose
     private String ActionStatus;
 
     /**
-    * Process initiation time.
+    * <p>Flow trigger time.</p>
     */
     @SerializedName("ActionTime")
     @Expose
     private String ActionTime;
 
     /**
-    * Description related to auto-scaling.
+    * <p>Scaling-related description.</p>
     */
     @SerializedName("ScaleInfo")
     @Expose
     private String ScaleInfo;
 
     /**
-    * Valid only when ScaleAction is SCALE_OUT.
+    * <p>Valid only when ScaleAction is SCALE_OUT.</p>
     */
     @SerializedName("ExpectScaleNum")
     @Expose
     private Long ExpectScaleNum;
 
     /**
-    * Process termination time.
+    * <p>Flow end time.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
+    * <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private Long StrategyType;
 
     /**
-    * Specification information used during scale-out.
+    * <p>Specifications information used during scale-out.</p>
     */
     @SerializedName("SpecInfo")
     @Expose
     private String SpecInfo;
 
     /**
-    * Compensatory scale-out. 0: disable, 1: enable.
+    * <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
     */
     @SerializedName("CompensateFlag")
     @Expose
     private Long CompensateFlag;
 
     /**
-    * Number of compensations.
+    * <p>Number of compensations.</p>
     */
     @SerializedName("CompensateCount")
     @Expose
     private Long CompensateCount;
 
     /**
-    * Number of retries.
+    * <p>Number of retries.</p>
     */
     @SerializedName("RetryCount")
     @Expose
     private Long RetryCount;
 
     /**
-    * Retry information.
+    * <p>Retry information.</p>
     */
     @SerializedName("RetryInfo")
     @Expose
     private String RetryInfo;
 
     /**
-    * Retry description in English.
+    * <p>Retry description in English.</p>
     */
     @SerializedName("RetryEnReason")
     @Expose
     private String RetryEnReason;
 
     /**
-    * Retry description.
+    * <p>Retry description.</p>
     */
     @SerializedName("RetryReason")
     @Expose
     private String RetryReason;
 
     /**
-     * Get Name of the scale-in or scale-out rule. 
-     * @return StrategyName Name of the scale-in or scale-out rule.
+    * <p>Missing category.</p>
+    */
+    @SerializedName("ShortageClass")
+    @Expose
+    private Long ShortageClass;
+
+    /**
+     * Get <p>Scaling rule name.</p> 
+     * @return StrategyName <p>Scaling rule name.</p>
      */
     public String getStrategyName() {
         return this.StrategyName;
     }
 
     /**
-     * Set Name of the scale-in or scale-out rule.
-     * @param StrategyName Name of the scale-in or scale-out rule.
+     * Set <p>Scaling rule name.</p>
+     * @param StrategyName <p>Scaling rule name.</p>
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively. 
-     * @return ScaleAction "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
+     * Get <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p> 
+     * @return ScaleAction <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
      */
     public String getScaleAction() {
         return this.ScaleAction;
     }
 
     /**
-     * Set "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
-     * @param ScaleAction "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
+     * Set <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
+     * @param ScaleAction <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
      */
     public void setScaleAction(String ScaleAction) {
         this.ScaleAction = ScaleAction;
     }
 
     /**
-     * Get The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively. 
-     * @return ActionStatus The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
+     * Get <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p> 
+     * @return ActionStatus <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
      */
     public String getActionStatus() {
         return this.ActionStatus;
     }
 
     /**
-     * Set The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
-     * @param ActionStatus The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
+     * Set <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
+     * @param ActionStatus <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
      */
     public void setActionStatus(String ActionStatus) {
         this.ActionStatus = ActionStatus;
     }
 
     /**
-     * Get Process initiation time. 
-     * @return ActionTime Process initiation time.
+     * Get <p>Flow trigger time.</p> 
+     * @return ActionTime <p>Flow trigger time.</p>
      */
     public String getActionTime() {
         return this.ActionTime;
     }
 
     /**
-     * Set Process initiation time.
-     * @param ActionTime Process initiation time.
+     * Set <p>Flow trigger time.</p>
+     * @param ActionTime <p>Flow trigger time.</p>
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;
     }
 
     /**
-     * Get Description related to auto-scaling. 
-     * @return ScaleInfo Description related to auto-scaling.
+     * Get <p>Scaling-related description.</p> 
+     * @return ScaleInfo <p>Scaling-related description.</p>
      */
     public String getScaleInfo() {
         return this.ScaleInfo;
     }
 
     /**
-     * Set Description related to auto-scaling.
-     * @param ScaleInfo Description related to auto-scaling.
+     * Set <p>Scaling-related description.</p>
+     * @param ScaleInfo <p>Scaling-related description.</p>
      */
     public void setScaleInfo(String ScaleInfo) {
         this.ScaleInfo = ScaleInfo;
     }
 
     /**
-     * Get Valid only when ScaleAction is SCALE_OUT. 
-     * @return ExpectScaleNum Valid only when ScaleAction is SCALE_OUT.
+     * Get <p>Valid only when ScaleAction is SCALE_OUT.</p> 
+     * @return ExpectScaleNum <p>Valid only when ScaleAction is SCALE_OUT.</p>
      */
     public Long getExpectScaleNum() {
         return this.ExpectScaleNum;
     }
 
     /**
-     * Set Valid only when ScaleAction is SCALE_OUT.
-     * @param ExpectScaleNum Valid only when ScaleAction is SCALE_OUT.
+     * Set <p>Valid only when ScaleAction is SCALE_OUT.</p>
+     * @param ExpectScaleNum <p>Valid only when ScaleAction is SCALE_OUT.</p>
      */
     public void setExpectScaleNum(Long ExpectScaleNum) {
         this.ExpectScaleNum = ExpectScaleNum;
     }
 
     /**
-     * Get Process termination time. 
-     * @return EndTime Process termination time.
+     * Get <p>Flow end time.</p> 
+     * @return EndTime <p>Flow end time.</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Process termination time.
-     * @param EndTime Process termination time.
+     * Set <p>Flow end time.</p>
+     * @param EndTime <p>Flow end time.</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling). 
-     * @return StrategyType Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
+     * Get <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p> 
+     * @return StrategyType <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
-     * @param StrategyType Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
+     * Set <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
+     * @param StrategyType <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get Specification information used during scale-out. 
-     * @return SpecInfo Specification information used during scale-out.
+     * Get <p>Specifications information used during scale-out.</p> 
+     * @return SpecInfo <p>Specifications information used during scale-out.</p>
      */
     public String getSpecInfo() {
         return this.SpecInfo;
     }
 
     /**
-     * Set Specification information used during scale-out.
-     * @param SpecInfo Specification information used during scale-out.
+     * Set <p>Specifications information used during scale-out.</p>
+     * @param SpecInfo <p>Specifications information used during scale-out.</p>
      */
     public void setSpecInfo(String SpecInfo) {
         this.SpecInfo = SpecInfo;
     }
 
     /**
-     * Get Compensatory scale-out. 0: disable, 1: enable. 
-     * @return CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
+     * Get <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p> 
+     * @return CompensateFlag <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
      */
     public Long getCompensateFlag() {
         return this.CompensateFlag;
     }
 
     /**
-     * Set Compensatory scale-out. 0: disable, 1: enable.
-     * @param CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
+     * Set <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
+     * @param CompensateFlag <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
      */
     public void setCompensateFlag(Long CompensateFlag) {
         this.CompensateFlag = CompensateFlag;
     }
 
     /**
-     * Get Number of compensations. 
-     * @return CompensateCount Number of compensations.
+     * Get <p>Number of compensations.</p> 
+     * @return CompensateCount <p>Number of compensations.</p>
      */
     public Long getCompensateCount() {
         return this.CompensateCount;
     }
 
     /**
-     * Set Number of compensations.
-     * @param CompensateCount Number of compensations.
+     * Set <p>Number of compensations.</p>
+     * @param CompensateCount <p>Number of compensations.</p>
      */
     public void setCompensateCount(Long CompensateCount) {
         this.CompensateCount = CompensateCount;
     }
 
     /**
-     * Get Number of retries. 
-     * @return RetryCount Number of retries.
+     * Get <p>Number of retries.</p> 
+     * @return RetryCount <p>Number of retries.</p>
      */
     public Long getRetryCount() {
         return this.RetryCount;
     }
 
     /**
-     * Set Number of retries.
-     * @param RetryCount Number of retries.
+     * Set <p>Number of retries.</p>
+     * @param RetryCount <p>Number of retries.</p>
      */
     public void setRetryCount(Long RetryCount) {
         this.RetryCount = RetryCount;
     }
 
     /**
-     * Get Retry information. 
-     * @return RetryInfo Retry information.
+     * Get <p>Retry information.</p> 
+     * @return RetryInfo <p>Retry information.</p>
      */
     public String getRetryInfo() {
         return this.RetryInfo;
     }
 
     /**
-     * Set Retry information.
-     * @param RetryInfo Retry information.
+     * Set <p>Retry information.</p>
+     * @param RetryInfo <p>Retry information.</p>
      */
     public void setRetryInfo(String RetryInfo) {
         this.RetryInfo = RetryInfo;
     }
 
     /**
-     * Get Retry description in English. 
-     * @return RetryEnReason Retry description in English.
+     * Get <p>Retry description in English.</p> 
+     * @return RetryEnReason <p>Retry description in English.</p>
      */
     public String getRetryEnReason() {
         return this.RetryEnReason;
     }
 
     /**
-     * Set Retry description in English.
-     * @param RetryEnReason Retry description in English.
+     * Set <p>Retry description in English.</p>
+     * @param RetryEnReason <p>Retry description in English.</p>
      */
     public void setRetryEnReason(String RetryEnReason) {
         this.RetryEnReason = RetryEnReason;
     }
 
     /**
-     * Get Retry description. 
-     * @return RetryReason Retry description.
+     * Get <p>Retry description.</p> 
+     * @return RetryReason <p>Retry description.</p>
      */
     public String getRetryReason() {
         return this.RetryReason;
     }
 
     /**
-     * Set Retry description.
-     * @param RetryReason Retry description.
+     * Set <p>Retry description.</p>
+     * @param RetryReason <p>Retry description.</p>
      */
     public void setRetryReason(String RetryReason) {
         this.RetryReason = RetryReason;
+    }
+
+    /**
+     * Get <p>Missing category.</p> 
+     * @return ShortageClass <p>Missing category.</p>
+     */
+    public Long getShortageClass() {
+        return this.ShortageClass;
+    }
+
+    /**
+     * Set <p>Missing category.</p>
+     * @param ShortageClass <p>Missing category.</p>
+     */
+    public void setShortageClass(Long ShortageClass) {
+        this.ShortageClass = ShortageClass;
     }
 
     public AutoScaleRecord() {
@@ -421,6 +444,9 @@ public class AutoScaleRecord extends AbstractModel {
         if (source.RetryReason != null) {
             this.RetryReason = new String(source.RetryReason);
         }
+        if (source.ShortageClass != null) {
+            this.ShortageClass = new Long(source.ShortageClass);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class AutoScaleRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "RetryInfo", this.RetryInfo);
         this.setParamSimple(map, prefix + "RetryEnReason", this.RetryEnReason);
         this.setParamSimple(map, prefix + "RetryReason", this.RetryReason);
+        this.setParamSimple(map, prefix + "ShortageClass", this.ShortageClass);
 
     }
 }

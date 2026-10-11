@@ -24,506 +24,624 @@ import java.util.HashMap;
 public class NodeSpecInstanceType extends AbstractModel {
 
     /**
-    * Specifications.
+    * <p>Specifications.</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 4
+    * <p>4</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 8, in GB.
+    * <p>8, unit: GB.</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Order, with the smaller coming first.
+    * <p>Sorting order. Smaller values come first.</p>
     */
     @SerializedName("Order")
     @Expose
     private Long Order;
 
     /**
-    * Quantity.
+    * <p>Quantity.</p>
     */
     @SerializedName("Num")
     @Expose
     private Long Num;
 
     /**
-    * Reasons for running out of stock.
+    * <p>Sold-out reason.</p>
     */
     @SerializedName("SellOutReason")
     @Expose
     private String SellOutReason;
 
     /**
-    * System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>System disk.</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private NodeSpecDisk [] SystemDisk;
 
     /**
-    * Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Data disk.</p>
     */
     @SerializedName("DataDisk")
     @Expose
     private NodeSpecDisk [] DataDisk;
 
     /**
-    * Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Local data disk.</p>
     */
     @SerializedName("LocalDataDisk")
     @Expose
     private NodeSpecDisk [] LocalDataDisk;
 
     /**
-    * Reasons for running out of stock.
+    * <p>Sold-out reason.</p>
     */
     @SerializedName("SoldOutReason")
     @Expose
     private String SoldOutReason;
 
     /**
-    * Model category.
+    * <p>Instance family.</p>
     */
     @SerializedName("InstanceFamily")
     @Expose
     private String InstanceFamily;
 
     /**
-    * Node name.
+    * <p>Node name.</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * Node type.
+    * <p>Node type.</p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Category.
+    * <p>Category.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Category name.
+    * <p>Category name.</p>
     */
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
 
     /**
-    * Category classification.
+    * <p>Category classification.</p>
     */
     @SerializedName("FamilyName")
     @Expose
     private String FamilyName;
 
     /**
-    * CPU type.
+    * <p>CPU type.</p>
     */
     @SerializedName("CpuType")
     @Expose
     private String CpuType;
 
     /**
-    * RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
+    * <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Original price.
+    * <p>Original price.</p>
     */
     @SerializedName("OriginPrice")
     @Expose
     private Float OriginPrice;
 
     /**
-    * Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Purchase duration supported by instance types using the committed use billing mode.</p>
     */
     @SerializedName("PrepaidUnderwritePeriods")
     @Expose
     private Long [] PrepaidUnderwritePeriods;
 
     /**
-    * GPU information.
+    * <p>GPU information.</p>
     */
     @SerializedName("GpuDesc")
     @Expose
     private String GpuDesc;
 
     /**
-     * Get Specifications. 
-     * @return InstanceType Specifications.
+    * <p>Number of quotas.</p>
+    */
+    @SerializedName("QuotaNum")
+    @Expose
+    private Long QuotaNum;
+
+    /**
+    * <p>Quota unit.</p>
+    */
+    @SerializedName("QuotaUnit")
+    @Expose
+    private String QuotaUnit;
+
+    /**
+    * <p>Whether a high-performance computing cluster needs to be provided.</p>
+    */
+    @SerializedName("NeedHpcClusterId")
+    @Expose
+    private Boolean NeedHpcClusterId;
+
+    /**
+    * <p>Whether it is a GPU instance type.</p>
+    */
+    @SerializedName("IsGpuInstance")
+    @Expose
+    private Boolean IsGpuInstance;
+
+    /**
+    * <p>GPU resource definition in the Kubernetes scenario.</p>
+    */
+    @SerializedName("GpuResourceKey")
+    @Expose
+    private String GpuResourceKey;
+
+    /**
+    * <p>Number of GPU cards.</p>
+    */
+    @SerializedName("GpuNum")
+    @Expose
+    private Long GpuNum;
+
+    /**
+     * Get <p>Specifications.</p> 
+     * @return InstanceType <p>Specifications.</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Specifications.
-     * @param InstanceType Specifications.
+     * Set <p>Specifications.</p>
+     * @param InstanceType <p>Specifications.</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 4 
-     * @return Cpu 4
+     * Get <p>4</p> 
+     * @return Cpu <p>4</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 4
-     * @param Cpu 4
+     * Set <p>4</p>
+     * @param Cpu <p>4</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 8, in GB. 
-     * @return Memory 8, in GB.
+     * Get <p>8, unit: GB.</p> 
+     * @return Memory <p>8, unit: GB.</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 8, in GB.
-     * @param Memory 8, in GB.
+     * Set <p>8, unit: GB.</p>
+     * @param Memory <p>8, unit: GB.</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Order, with the smaller coming first. 
-     * @return Order Order, with the smaller coming first.
+     * Get <p>Sorting order. Smaller values come first.</p> 
+     * @return Order <p>Sorting order. Smaller values come first.</p>
      */
     public Long getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Order, with the smaller coming first.
-     * @param Order Order, with the smaller coming first.
+     * Set <p>Sorting order. Smaller values come first.</p>
+     * @param Order <p>Sorting order. Smaller values come first.</p>
      */
     public void setOrder(Long Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Quantity. 
-     * @return Num Quantity.
+     * Get <p>Quantity.</p> 
+     * @return Num <p>Quantity.</p>
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set Quantity.
-     * @param Num Quantity.
+     * Set <p>Quantity.</p>
+     * @param Num <p>Quantity.</p>
      */
     public void setNum(Long Num) {
         this.Num = Num;
     }
 
     /**
-     * Get Reasons for running out of stock. 
-     * @return SellOutReason Reasons for running out of stock.
+     * Get <p>Sold-out reason.</p> 
+     * @return SellOutReason <p>Sold-out reason.</p>
      */
     public String getSellOutReason() {
         return this.SellOutReason;
     }
 
     /**
-     * Set Reasons for running out of stock.
-     * @param SellOutReason Reasons for running out of stock.
+     * Set <p>Sold-out reason.</p>
+     * @param SellOutReason <p>Sold-out reason.</p>
      */
     public void setSellOutReason(String SellOutReason) {
         this.SellOutReason = SellOutReason;
     }
 
     /**
-     * Get System disk.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SystemDisk System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>System disk.</p> 
+     * @return SystemDisk <p>System disk.</p>
      */
     public NodeSpecDisk [] getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SystemDisk System disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>System disk.</p>
+     * @param SystemDisk <p>System disk.</p>
      */
     public void setSystemDisk(NodeSpecDisk [] SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get Data disk.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataDisk Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Data disk.</p> 
+     * @return DataDisk <p>Data disk.</p>
      */
     public NodeSpecDisk [] getDataDisk() {
         return this.DataDisk;
     }
 
     /**
-     * Set Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataDisk Data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Data disk.</p>
+     * @param DataDisk <p>Data disk.</p>
      */
     public void setDataDisk(NodeSpecDisk [] DataDisk) {
         this.DataDisk = DataDisk;
     }
 
     /**
-     * Get Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LocalDataDisk Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Local data disk.</p> 
+     * @return LocalDataDisk <p>Local data disk.</p>
      */
     public NodeSpecDisk [] getLocalDataDisk() {
         return this.LocalDataDisk;
     }
 
     /**
-     * Set Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LocalDataDisk Local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Local data disk.</p>
+     * @param LocalDataDisk <p>Local data disk.</p>
      */
     public void setLocalDataDisk(NodeSpecDisk [] LocalDataDisk) {
         this.LocalDataDisk = LocalDataDisk;
     }
 
     /**
-     * Get Reasons for running out of stock. 
-     * @return SoldOutReason Reasons for running out of stock.
+     * Get <p>Sold-out reason.</p> 
+     * @return SoldOutReason <p>Sold-out reason.</p>
      */
     public String getSoldOutReason() {
         return this.SoldOutReason;
     }
 
     /**
-     * Set Reasons for running out of stock.
-     * @param SoldOutReason Reasons for running out of stock.
+     * Set <p>Sold-out reason.</p>
+     * @param SoldOutReason <p>Sold-out reason.</p>
      */
     public void setSoldOutReason(String SoldOutReason) {
         this.SoldOutReason = SoldOutReason;
     }
 
     /**
-     * Get Model category. 
-     * @return InstanceFamily Model category.
+     * Get <p>Instance family.</p> 
+     * @return InstanceFamily <p>Instance family.</p>
      */
     public String getInstanceFamily() {
         return this.InstanceFamily;
     }
 
     /**
-     * Set Model category.
-     * @param InstanceFamily Model category.
+     * Set <p>Instance family.</p>
+     * @param InstanceFamily <p>Instance family.</p>
      */
     public void setInstanceFamily(String InstanceFamily) {
         this.InstanceFamily = InstanceFamily;
     }
 
     /**
-     * Get Node name. 
-     * @return NodeName Node name.
+     * Get <p>Node name.</p> 
+     * @return NodeName <p>Node name.</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set Node name.
-     * @param NodeName Node name.
+     * Set <p>Node name.</p>
+     * @param NodeName <p>Node name.</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Node type. 
-     * @return NodeType Node type.
+     * Get <p>Node type.</p> 
+     * @return NodeType <p>Node type.</p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type.
-     * @param NodeType Node type.
+     * Set <p>Node type.</p>
+     * @param NodeType <p>Node type.</p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Category. 
-     * @return Type Category.
+     * Get <p>Category.</p> 
+     * @return Type <p>Category.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Category.
-     * @param Type Category.
+     * Set <p>Category.</p>
+     * @param Type <p>Category.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Category name. 
-     * @return TypeName Category name.
+     * Get <p>Category name.</p> 
+     * @return TypeName <p>Category name.</p>
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set Category name.
-     * @param TypeName Category name.
+     * Set <p>Category name.</p>
+     * @param TypeName <p>Category name.</p>
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get Category classification. 
-     * @return FamilyName Category classification.
+     * Get <p>Category classification.</p> 
+     * @return FamilyName <p>Category classification.</p>
      */
     public String getFamilyName() {
         return this.FamilyName;
     }
 
     /**
-     * Set Category classification.
-     * @param FamilyName Category classification.
+     * Set <p>Category classification.</p>
+     * @param FamilyName <p>Category classification.</p>
      */
     public void setFamilyName(String FamilyName) {
         this.FamilyName = FamilyName;
     }
 
     /**
-     * Get CPU type. 
-     * @return CpuType CPU type.
+     * Get <p>CPU type.</p> 
+     * @return CpuType <p>CPU type.</p>
      */
     public String getCpuType() {
         return this.CpuType;
     }
 
     /**
-     * Set CPU type.
-     * @param CpuType CPU type.
+     * Set <p>CPU type.</p>
+     * @param CpuType <p>CPU type.</p>
      */
     public void setCpuType(String CpuType) {
         this.CpuType = CpuType;
     }
 
     /**
-     * Get RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient). 
-     * @return Remark RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
+     * Get <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p> 
+     * @return Remark <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
-     * @param Remark RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
+     * Set <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
+     * @param Remark <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Original price. 
-     * @return OriginPrice Original price.
+     * Get <p>Original price.</p> 
+     * @return OriginPrice <p>Original price.</p>
      */
     public Float getOriginPrice() {
         return this.OriginPrice;
     }
 
     /**
-     * Set Original price.
-     * @param OriginPrice Original price.
+     * Set <p>Original price.</p>
+     * @param OriginPrice <p>Original price.</p>
      */
     public void setOriginPrice(Float OriginPrice) {
         this.OriginPrice = OriginPrice;
     }
 
     /**
-     * Get Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrepaidUnderwritePeriods Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Purchase duration supported by instance types using the committed use billing mode.</p> 
+     * @return PrepaidUnderwritePeriods <p>Purchase duration supported by instance types using the committed use billing mode.</p>
      */
     public Long [] getPrepaidUnderwritePeriods() {
         return this.PrepaidUnderwritePeriods;
     }
 
     /**
-     * Set Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrepaidUnderwritePeriods Supported purchase terms for committed use billing models.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Purchase duration supported by instance types using the committed use billing mode.</p>
+     * @param PrepaidUnderwritePeriods <p>Purchase duration supported by instance types using the committed use billing mode.</p>
      */
     public void setPrepaidUnderwritePeriods(Long [] PrepaidUnderwritePeriods) {
         this.PrepaidUnderwritePeriods = PrepaidUnderwritePeriods;
     }
 
     /**
-     * Get GPU information. 
-     * @return GpuDesc GPU information.
+     * Get <p>GPU information.</p> 
+     * @return GpuDesc <p>GPU information.</p>
      */
     public String getGpuDesc() {
         return this.GpuDesc;
     }
 
     /**
-     * Set GPU information.
-     * @param GpuDesc GPU information.
+     * Set <p>GPU information.</p>
+     * @param GpuDesc <p>GPU information.</p>
      */
     public void setGpuDesc(String GpuDesc) {
         this.GpuDesc = GpuDesc;
+    }
+
+    /**
+     * Get <p>Number of quotas.</p> 
+     * @return QuotaNum <p>Number of quotas.</p>
+     */
+    public Long getQuotaNum() {
+        return this.QuotaNum;
+    }
+
+    /**
+     * Set <p>Number of quotas.</p>
+     * @param QuotaNum <p>Number of quotas.</p>
+     */
+    public void setQuotaNum(Long QuotaNum) {
+        this.QuotaNum = QuotaNum;
+    }
+
+    /**
+     * Get <p>Quota unit.</p> 
+     * @return QuotaUnit <p>Quota unit.</p>
+     */
+    public String getQuotaUnit() {
+        return this.QuotaUnit;
+    }
+
+    /**
+     * Set <p>Quota unit.</p>
+     * @param QuotaUnit <p>Quota unit.</p>
+     */
+    public void setQuotaUnit(String QuotaUnit) {
+        this.QuotaUnit = QuotaUnit;
+    }
+
+    /**
+     * Get <p>Whether a high-performance computing cluster needs to be provided.</p> 
+     * @return NeedHpcClusterId <p>Whether a high-performance computing cluster needs to be provided.</p>
+     */
+    public Boolean getNeedHpcClusterId() {
+        return this.NeedHpcClusterId;
+    }
+
+    /**
+     * Set <p>Whether a high-performance computing cluster needs to be provided.</p>
+     * @param NeedHpcClusterId <p>Whether a high-performance computing cluster needs to be provided.</p>
+     */
+    public void setNeedHpcClusterId(Boolean NeedHpcClusterId) {
+        this.NeedHpcClusterId = NeedHpcClusterId;
+    }
+
+    /**
+     * Get <p>Whether it is a GPU instance type.</p> 
+     * @return IsGpuInstance <p>Whether it is a GPU instance type.</p>
+     */
+    public Boolean getIsGpuInstance() {
+        return this.IsGpuInstance;
+    }
+
+    /**
+     * Set <p>Whether it is a GPU instance type.</p>
+     * @param IsGpuInstance <p>Whether it is a GPU instance type.</p>
+     */
+    public void setIsGpuInstance(Boolean IsGpuInstance) {
+        this.IsGpuInstance = IsGpuInstance;
+    }
+
+    /**
+     * Get <p>GPU resource definition in the Kubernetes scenario.</p> 
+     * @return GpuResourceKey <p>GPU resource definition in the Kubernetes scenario.</p>
+     */
+    public String getGpuResourceKey() {
+        return this.GpuResourceKey;
+    }
+
+    /**
+     * Set <p>GPU resource definition in the Kubernetes scenario.</p>
+     * @param GpuResourceKey <p>GPU resource definition in the Kubernetes scenario.</p>
+     */
+    public void setGpuResourceKey(String GpuResourceKey) {
+        this.GpuResourceKey = GpuResourceKey;
+    }
+
+    /**
+     * Get <p>Number of GPU cards.</p> 
+     * @return GpuNum <p>Number of GPU cards.</p>
+     */
+    public Long getGpuNum() {
+        return this.GpuNum;
+    }
+
+    /**
+     * Set <p>Number of GPU cards.</p>
+     * @param GpuNum <p>Number of GPU cards.</p>
+     */
+    public void setGpuNum(Long GpuNum) {
+        this.GpuNum = GpuNum;
     }
 
     public NodeSpecInstanceType() {
@@ -609,6 +727,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.GpuDesc != null) {
             this.GpuDesc = new String(source.GpuDesc);
         }
+        if (source.QuotaNum != null) {
+            this.QuotaNum = new Long(source.QuotaNum);
+        }
+        if (source.QuotaUnit != null) {
+            this.QuotaUnit = new String(source.QuotaUnit);
+        }
+        if (source.NeedHpcClusterId != null) {
+            this.NeedHpcClusterId = new Boolean(source.NeedHpcClusterId);
+        }
+        if (source.IsGpuInstance != null) {
+            this.IsGpuInstance = new Boolean(source.IsGpuInstance);
+        }
+        if (source.GpuResourceKey != null) {
+            this.GpuResourceKey = new String(source.GpuResourceKey);
+        }
+        if (source.GpuNum != null) {
+            this.GpuNum = new Long(source.GpuNum);
+        }
     }
 
 
@@ -637,6 +773,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "OriginPrice", this.OriginPrice);
         this.setParamArraySimple(map, prefix + "PrepaidUnderwritePeriods.", this.PrepaidUnderwritePeriods);
         this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
+        this.setParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
+        this.setParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
+        this.setParamSimple(map, prefix + "NeedHpcClusterId", this.NeedHpcClusterId);
+        this.setParamSimple(map, prefix + "IsGpuInstance", this.IsGpuInstance);
+        this.setParamSimple(map, prefix + "GpuResourceKey", this.GpuResourceKey);
+        this.setParamSimple(map, prefix + "GpuNum", this.GpuNum);
 
     }
 }

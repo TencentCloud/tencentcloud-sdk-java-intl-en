@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Filters extends AbstractModel {
 
     /**
-    * Field name
+    * Field name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Filters by the field value
+    * Filter field value.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get Field name 
-     * @return Name Field name
+     * Get Field name. 
+     * @return Name Field name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Field name
-     * @param Name Field name
+     * Set Field name.
+     * @param Name Field name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Filters by the field value 
-     * @return Values Filters by the field value
+     * Get Filter field value. 
+     * @return Values Filter field value.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Filters by the field value
-     * @param Values Filters by the field value
+     * Set Filter field value.
+     * @param Values Filter field value.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

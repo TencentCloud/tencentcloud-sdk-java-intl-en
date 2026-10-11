@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TerminateClusterNodesResponse extends AbstractModel {
 
     /**
-    * The scale-in process ID.
+    * Scale-in flow ID.
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class TerminateClusterNodesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The scale-in process ID. 
-     * @return FlowId The scale-in process ID.
+     * Get Scale-in flow ID. 
+     * @return FlowId Scale-in flow ID.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set The scale-in process ID.
-     * @param FlowId The scale-in process ID.
+     * Set Scale-in flow ID.
+     * @param FlowId Scale-in flow ID.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

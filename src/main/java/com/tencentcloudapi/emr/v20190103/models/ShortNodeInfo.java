@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ShortNodeInfo extends AbstractModel {
 
     /**
-    * Node type: Master/Core/Task/Router/Common.
+    * Node type. Valid values: Master/Core/Task/Router/Common.
     */
     @SerializedName("NodeType")
     @Expose
@@ -38,16 +38,16 @@ public class ShortNodeInfo extends AbstractModel {
     private Long NodeSize;
 
     /**
-     * Get Node type: Master/Core/Task/Router/Common. 
-     * @return NodeType Node type: Master/Core/Task/Router/Common.
+     * Get Node type. Valid values: Master/Core/Task/Router/Common. 
+     * @return NodeType Node type. Valid values: Master/Core/Task/Router/Common.
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type: Master/Core/Task/Router/Common.
-     * @param NodeType Node type: Master/Core/Task/Router/Common.
+     * Set Node type. Valid values: Master/Core/Task/Router/Common.
+     * @param NodeType Node type. Valid values: Master/Core/Task/Router/Common.
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;

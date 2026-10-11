@@ -24,92 +24,115 @@ import java.util.HashMap;
 public class ModifyUserGroupRequest extends AbstractModel {
 
     /**
-    * User information list.
+    * <p>Cluster string ID.</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * <p>User information list.</p>
     */
     @SerializedName("Users")
     @Expose
     private String [] Users;
 
     /**
-    * User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
+    * <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
     */
     @SerializedName("UserGroup")
     @Expose
     private String UserGroup;
 
     /**
-    * User subgroup.
+    * <p>Secondary user group.</p>
     */
     @SerializedName("Groups")
     @Expose
     private String [] Groups;
 
     /**
-    * Remarks.
+    * <p>Remarks.</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get User information list. 
-     * @return Users User information list.
+     * Get <p>Cluster string ID.</p> 
+     * @return InstanceId <p>Cluster string ID.</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>Cluster string ID.</p>
+     * @param InstanceId <p>Cluster string ID.</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>User information list.</p> 
+     * @return Users <p>User information list.</p>
      */
     public String [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set User information list.
-     * @param Users User information list.
+     * Set <p>User information list.</p>
+     * @param Users <p>User information list.</p>
      */
     public void setUsers(String [] Users) {
         this.Users = Users;
     }
 
     /**
-     * Get User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional. 
-     * @return UserGroup User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
+     * Get <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p> 
+     * @return UserGroup <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
      */
     public String getUserGroup() {
         return this.UserGroup;
     }
 
     /**
-     * Set User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
-     * @param UserGroup User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
+     * Set <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
+     * @param UserGroup <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
      */
     public void setUserGroup(String UserGroup) {
         this.UserGroup = UserGroup;
     }
 
     /**
-     * Get User subgroup. 
-     * @return Groups User subgroup.
+     * Get <p>Secondary user group.</p> 
+     * @return Groups <p>Secondary user group.</p>
      */
     public String [] getGroups() {
         return this.Groups;
     }
 
     /**
-     * Set User subgroup.
-     * @param Groups User subgroup.
+     * Set <p>Secondary user group.</p>
+     * @param Groups <p>Secondary user group.</p>
      */
     public void setGroups(String [] Groups) {
         this.Groups = Groups;
     }
 
     /**
-     * Get Remarks. 
-     * @return Remark Remarks.
+     * Get <p>Remarks.</p> 
+     * @return Remark <p>Remarks.</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks.
-     * @param Remark Remarks.
+     * Set <p>Remarks.</p>
+     * @param Remark <p>Remarks.</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -123,6 +146,9 @@ public class ModifyUserGroupRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyUserGroupRequest(ModifyUserGroupRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.Users != null) {
             this.Users = new String[source.Users.length];
             for (int i = 0; i < source.Users.length; i++) {
@@ -148,6 +174,7 @@ public class ModifyUserGroupRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "Users.", this.Users);
         this.setParamSimple(map, prefix + "UserGroup", this.UserGroup);
         this.setParamArraySimple(map, prefix + "Groups.", this.Groups);

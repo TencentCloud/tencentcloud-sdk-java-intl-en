@@ -31,15 +31,15 @@ public class ModifyGlobalConfigRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * List of modified configurations. Key values have a one-to-one correspondence with the output parameters of the `DescribeGlobalConfig` API and are case-insensitive (if an error occurs indicating the key cannot be found, refer to the output parameters). The values are:
-1. enableResourceSchedule: Enables or disables resource scheduling. When disabling, a synchronous operation option (sync) is available with values true or false.
-2. scheduler type: scheduler.
-2. enableLabel: Enables or disables tags, with values true or false.
-2. tag directory: labelDir.
-3. whether to overwrite the user-specified queue, with values true or false.
-4. userMaxAppsDefault: program upper limit.
-5. dynamic configuration item: Corresponds to the Name field in the DefaultSettings object returned by the DescribeGlobalConfig API.
-The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, a full transmission is required to perform overwriting.
+    * List of modified configurations. Key values have a one-to-one correspondence with the response parameters of the `DescribeGlobalConfig` API and are case-insensitive (If an error occurs indicating that the key cannot be found, refer to the response parameters). Valid values:
+1. enableResourceSchedule: Whether to enable or disable resource scheduling. When it is disabled, a synchronization option with Key set to sync is available. Valid values: true and false.
+2. scheduler: Scheduler type.
+2. enableLabel: Whether to enable or disable the tag. Valid values: true and false.
+2. labelDir: Tag directory.
+3. queueMappingOverride: Whether to overwrite user-specified queue. Valid values: true and false.
+4. userMaxAppsDefault: Program upper limit.
+5. Dynamic configuration item: Name field in DefaultSettings returned by the `DescribeGlobalConfig` API.
+The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, pass all values to overwrite the existing ones.
     */
     @SerializedName("Items")
     @Expose
@@ -62,48 +62,48 @@ The values are strings. For **whether to overwrite the user-specified queue** an
     }
 
     /**
-     * Get List of modified configurations. Key values have a one-to-one correspondence with the output parameters of the `DescribeGlobalConfig` API and are case-insensitive (if an error occurs indicating the key cannot be found, refer to the output parameters). The values are:
-1. enableResourceSchedule: Enables or disables resource scheduling. When disabling, a synchronous operation option (sync) is available with values true or false.
-2. scheduler type: scheduler.
-2. enableLabel: Enables or disables tags, with values true or false.
-2. tag directory: labelDir.
-3. whether to overwrite the user-specified queue, with values true or false.
-4. userMaxAppsDefault: program upper limit.
-5. dynamic configuration item: Corresponds to the Name field in the DefaultSettings object returned by the DescribeGlobalConfig API.
-The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, a full transmission is required to perform overwriting. 
-     * @return Items List of modified configurations. Key values have a one-to-one correspondence with the output parameters of the `DescribeGlobalConfig` API and are case-insensitive (if an error occurs indicating the key cannot be found, refer to the output parameters). The values are:
-1. enableResourceSchedule: Enables or disables resource scheduling. When disabling, a synchronous operation option (sync) is available with values true or false.
-2. scheduler type: scheduler.
-2. enableLabel: Enables or disables tags, with values true or false.
-2. tag directory: labelDir.
-3. whether to overwrite the user-specified queue, with values true or false.
-4. userMaxAppsDefault: program upper limit.
-5. dynamic configuration item: Corresponds to the Name field in the DefaultSettings object returned by the DescribeGlobalConfig API.
-The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, a full transmission is required to perform overwriting.
+     * Get List of modified configurations. Key values have a one-to-one correspondence with the response parameters of the `DescribeGlobalConfig` API and are case-insensitive (If an error occurs indicating that the key cannot be found, refer to the response parameters). Valid values:
+1. enableResourceSchedule: Whether to enable or disable resource scheduling. When it is disabled, a synchronization option with Key set to sync is available. Valid values: true and false.
+2. scheduler: Scheduler type.
+2. enableLabel: Whether to enable or disable the tag. Valid values: true and false.
+2. labelDir: Tag directory.
+3. queueMappingOverride: Whether to overwrite user-specified queue. Valid values: true and false.
+4. userMaxAppsDefault: Program upper limit.
+5. Dynamic configuration item: Name field in DefaultSettings returned by the `DescribeGlobalConfig` API.
+The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, pass all values to overwrite the existing ones. 
+     * @return Items List of modified configurations. Key values have a one-to-one correspondence with the response parameters of the `DescribeGlobalConfig` API and are case-insensitive (If an error occurs indicating that the key cannot be found, refer to the response parameters). Valid values:
+1. enableResourceSchedule: Whether to enable or disable resource scheduling. When it is disabled, a synchronization option with Key set to sync is available. Valid values: true and false.
+2. scheduler: Scheduler type.
+2. enableLabel: Whether to enable or disable the tag. Valid values: true and false.
+2. labelDir: Tag directory.
+3. queueMappingOverride: Whether to overwrite user-specified queue. Valid values: true and false.
+4. userMaxAppsDefault: Program upper limit.
+5. Dynamic configuration item: Name field in DefaultSettings returned by the `DescribeGlobalConfig` API.
+The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, pass all values to overwrite the existing ones.
      */
     public Item [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List of modified configurations. Key values have a one-to-one correspondence with the output parameters of the `DescribeGlobalConfig` API and are case-insensitive (if an error occurs indicating the key cannot be found, refer to the output parameters). The values are:
-1. enableResourceSchedule: Enables or disables resource scheduling. When disabling, a synchronous operation option (sync) is available with values true or false.
-2. scheduler type: scheduler.
-2. enableLabel: Enables or disables tags, with values true or false.
-2. tag directory: labelDir.
-3. whether to overwrite the user-specified queue, with values true or false.
-4. userMaxAppsDefault: program upper limit.
-5. dynamic configuration item: Corresponds to the Name field in the DefaultSettings object returned by the DescribeGlobalConfig API.
-The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, a full transmission is required to perform overwriting.
-     * @param Items List of modified configurations. Key values have a one-to-one correspondence with the output parameters of the `DescribeGlobalConfig` API and are case-insensitive (if an error occurs indicating the key cannot be found, refer to the output parameters). The values are:
-1. enableResourceSchedule: Enables or disables resource scheduling. When disabling, a synchronous operation option (sync) is available with values true or false.
-2. scheduler type: scheduler.
-2. enableLabel: Enables or disables tags, with values true or false.
-2. tag directory: labelDir.
-3. whether to overwrite the user-specified queue, with values true or false.
-4. userMaxAppsDefault: program upper limit.
-5. dynamic configuration item: Corresponds to the Name field in the DefaultSettings object returned by the DescribeGlobalConfig API.
-The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, a full transmission is required to perform overwriting.
+     * Set List of modified configurations. Key values have a one-to-one correspondence with the response parameters of the `DescribeGlobalConfig` API and are case-insensitive (If an error occurs indicating that the key cannot be found, refer to the response parameters). Valid values:
+1. enableResourceSchedule: Whether to enable or disable resource scheduling. When it is disabled, a synchronization option with Key set to sync is available. Valid values: true and false.
+2. scheduler: Scheduler type.
+2. enableLabel: Whether to enable or disable the tag. Valid values: true and false.
+2. labelDir: Tag directory.
+3. queueMappingOverride: Whether to overwrite user-specified queue. Valid values: true and false.
+4. userMaxAppsDefault: Program upper limit.
+5. Dynamic configuration item: Name field in DefaultSettings returned by the `DescribeGlobalConfig` API.
+The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, pass all values to overwrite the existing ones.
+     * @param Items List of modified configurations. Key values have a one-to-one correspondence with the response parameters of the `DescribeGlobalConfig` API and are case-insensitive (If an error occurs indicating that the key cannot be found, refer to the response parameters). Valid values:
+1. enableResourceSchedule: Whether to enable or disable resource scheduling. When it is disabled, a synchronization option with Key set to sync is available. Valid values: true and false.
+2. scheduler: Scheduler type.
+2. enableLabel: Whether to enable or disable the tag. Valid values: true and false.
+2. labelDir: Tag directory.
+3. queueMappingOverride: Whether to overwrite user-specified queue. Valid values: true and false.
+4. userMaxAppsDefault: Program upper limit.
+5. Dynamic configuration item: Name field in DefaultSettings returned by the `DescribeGlobalConfig` API.
+The values are strings. For **whether to overwrite the user-specified queue** and **program upper limit**, null in the JSON specifications means clearing the value of this configuration. Individual configuration items can be modified. For **dynamic configurations**, pass all values to overwrite the existing ones.
      */
     public void setItems(Item [] Items) {
         this.Items = Items;

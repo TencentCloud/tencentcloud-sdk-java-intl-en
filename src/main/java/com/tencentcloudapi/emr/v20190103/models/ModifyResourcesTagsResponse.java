@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class ModifyResourcesTagsResponse extends AbstractModel {
 
     /**
-    * List of resource IDs with successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of successful resource IDs.
     */
     @SerializedName("SuccessList")
     @Expose
     private String [] SuccessList;
 
     /**
-    * List of resource IDs with failed modification
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of failed resource IDs.
     */
     @SerializedName("FailList")
     @Expose
     private String [] FailList;
 
     /**
-    * List of resource IDs with partial successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of partially successful resource IDs.
     */
     @SerializedName("PartSuccessList")
     @Expose
     private String [] PartSuccessList;
 
     /**
-    * Mapping list of cluster IDs and process IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mapping list of cluster IDs and flow IDs.
     */
     @SerializedName("ClusterToFlowIdList")
     @Expose
@@ -63,80 +59,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of resource IDs with successful modification
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuccessList List of resource IDs with successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of successful resource IDs. 
+     * @return SuccessList List of successful resource IDs.
      */
     public String [] getSuccessList() {
         return this.SuccessList;
     }
 
     /**
-     * Set List of resource IDs with successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuccessList List of resource IDs with successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of successful resource IDs.
+     * @param SuccessList List of successful resource IDs.
      */
     public void setSuccessList(String [] SuccessList) {
         this.SuccessList = SuccessList;
     }
 
     /**
-     * Get List of resource IDs with failed modification
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailList List of resource IDs with failed modification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of failed resource IDs. 
+     * @return FailList List of failed resource IDs.
      */
     public String [] getFailList() {
         return this.FailList;
     }
 
     /**
-     * Set List of resource IDs with failed modification
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailList List of resource IDs with failed modification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of failed resource IDs.
+     * @param FailList List of failed resource IDs.
      */
     public void setFailList(String [] FailList) {
         this.FailList = FailList;
     }
 
     /**
-     * Get List of resource IDs with partial successful modification
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PartSuccessList List of resource IDs with partial successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of partially successful resource IDs. 
+     * @return PartSuccessList List of partially successful resource IDs.
      */
     public String [] getPartSuccessList() {
         return this.PartSuccessList;
     }
 
     /**
-     * Set List of resource IDs with partial successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PartSuccessList List of resource IDs with partial successful modification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of partially successful resource IDs.
+     * @param PartSuccessList List of partially successful resource IDs.
      */
     public void setPartSuccessList(String [] PartSuccessList) {
         this.PartSuccessList = PartSuccessList;
     }
 
     /**
-     * Get Mapping list of cluster IDs and process IDs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterToFlowIdList Mapping list of cluster IDs and process IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mapping list of cluster IDs and flow IDs. 
+     * @return ClusterToFlowIdList Mapping list of cluster IDs and flow IDs.
      */
     public ClusterIDToFlowID [] getClusterToFlowIdList() {
         return this.ClusterToFlowIdList;
     }
 
     /**
-     * Set Mapping list of cluster IDs and process IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterToFlowIdList Mapping list of cluster IDs and process IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mapping list of cluster IDs and flow IDs.
+     * @param ClusterToFlowIdList Mapping list of cluster IDs and flow IDs.
      */
     public void setClusterToFlowIdList(ClusterIDToFlowID [] ClusterToFlowIdList) {
         this.ClusterToFlowIdList = ClusterToFlowIdList;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InsightResult extends AbstractModel {
 
     /**
-    * When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+    * When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
+    * Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
     */
     @SerializedName("Type")
     @Expose
@@ -39,33 +39,32 @@ public class InsightResult extends AbstractModel {
 
     /**
     * Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
     */
     @SerializedName("RuleID")
@@ -80,7 +79,7 @@ TEZ-TezTaskGC:TasksGC
     private String RuleName;
 
     /**
-    * Insight rules interpretation.
+    * Insight rule interpretation.
     */
     @SerializedName("RuleExplain")
     @Expose
@@ -101,7 +100,7 @@ TEZ-TezTaskGC:TasksGC
     private String Suggestion;
 
     /**
-    * Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
+    * Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
     */
     @SerializedName("Value")
     @Expose
@@ -115,61 +114,60 @@ TEZ-TezTaskGC:TasksGC
     private String ScheduleTaskExecID;
 
     /**
-    * Scheduling flow, DAG.
+    * Scheduling flow (DAG).
     */
     @SerializedName("ScheduleFlowName")
     @Expose
     private String ScheduleFlowName;
 
     /**
-    * A Task node in the scheduling flow.
+    * Task node in the scheduling flow.
     */
     @SerializedName("ScheduleTaskName")
     @Expose
     private String ScheduleTaskName;
 
     /**
-    * Core configurations for Yarn tasks.
+    * Some core configurations of the YARN task.
     */
     @SerializedName("JobConf")
     @Expose
     private String JobConf;
 
     /**
-    * Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Insight into structured information.
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-     * Get When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID. 
-     * @return ID When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+     * Get When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID. 
+     * @return ID When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
-     * @param ID When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+     * Set When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+     * @param ID When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ. 
-     * @return Type Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
+     * Get Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ. 
+     * @return Type Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
-     * @param Type Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
+     * Set Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
+     * @param Type Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -177,62 +175,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC 
      * @return RuleID Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
      */
     public String getRuleID() {
@@ -241,62 +237,60 @@ TEZ-TezTaskGC:TasksGC
 
     /**
      * Set Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
      * @param RuleID Insight rule ID.
-HIVE-ScanManyMeta: too much scanned metadata.
-HIVE-ScanManyPartition: large table scanning.
-HIVE-SlowCompile: compilation duration too long.
-HIVE-UnSuitableConfig: improper parameter.
-MAPREDUCE-MapperDataSkew: Map data skew.
-MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-MAPREDUCE-MapperSlowTask: slow map task.
+HIVE-ScanManyMeta: excessively large amount of scanned metadata
+HIVE-ScanManyPartition: large table scan
+HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+MAPREDUCE-MapperDataSkew: Map data skew
+MAPREDUCE-MapperMemWaste: MapMemory resource waste
+MAPREDUCE-MapperSlowTask: Map slow task
 MAPREDUCE-MapperTaskGC:MapperTaskGC
-MAPREDUCE-MemExceeded: peak memory exceeded.
-MAPREDUCE-ReducerDataSkew: Reduce data skew.
-MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-MAPREDUCE-ReducerSlowTask: slow reduce task.
+MAPREDUCE-MemExceeded: peak memory exceeded
+MAPREDUCE-ReducerDataSkew: Reduce data skew
+MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+MAPREDUCE-ReducerSlowTask: Reduce slow task
 MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-MAPREDUCE-SchedulingDelay: scheduling delay.
-SPARK-CpuWaste: CPU resource waste.
-SPARK-DataSkew: data skew.
+MAPREDUCE-SchedulingDelay: scheduling delay
+SPARK-CpuWaste: CPU resource waste
+SPARK-DataSkew: data skew
 SPARK-ExecutorGC:ExecutorGC
-SPARK-MemExceeded: peak memory exceeded.
-SPARK-MemWaste: Memory resource waste.
+SPARK-MemExceeded: peak memory exceeded
+SPARK-MemWaste: Memory resource waste
 SPARK-ScheduleOverhead:ScheduleOverhead
-SPARK-ScheduleSkew: scheduling skew.
-SPARK-SlowTask: slow task.
-TEZ-DataSkew: data skew.
-TEZ-MapperDataSkew: Map data skew.
-TEZ-ReducerDataSkew: Reduce data skew.
-TEZ-TezMemWaste: Memory resource waste.
-TEZ-TezSlowTask: slow task.
+SPARK-ScheduleSkew: scheduling skew
+SPARK-SlowTask: slow task
+TEZ-DataSkew: data skew
+TEZ-MapperDataSkew: Map data skew
+TEZ-ReducerDataSkew: Reduce data skew
+TEZ-TezMemWaste: Memory resource waste
+TEZ-TezSlowTask: slow task
 TEZ-TezTaskGC:TasksGC
      */
     public void setRuleID(String RuleID) {
@@ -320,16 +314,16 @@ TEZ-TezTaskGC:TasksGC
     }
 
     /**
-     * Get Insight rules interpretation. 
-     * @return RuleExplain Insight rules interpretation.
+     * Get Insight rule interpretation. 
+     * @return RuleExplain Insight rule interpretation.
      */
     public String getRuleExplain() {
         return this.RuleExplain;
     }
 
     /**
-     * Set Insight rules interpretation.
-     * @param RuleExplain Insight rules interpretation.
+     * Set Insight rule interpretation.
+     * @param RuleExplain Insight rule interpretation.
      */
     public void setRuleExplain(String RuleExplain) {
         this.RuleExplain = RuleExplain;
@@ -368,16 +362,16 @@ TEZ-TezTaskGC:TasksGC
     }
 
     /**
-     * Get Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared. 
-     * @return Value Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
+     * Get Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable. 
+     * @return Value Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
-     * @param Value Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
+     * Set Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
+     * @param Value Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
      */
     public void setValue(Long Value) {
         this.Value = Value;
@@ -400,68 +394,64 @@ TEZ-TezTaskGC:TasksGC
     }
 
     /**
-     * Get Scheduling flow, DAG. 
-     * @return ScheduleFlowName Scheduling flow, DAG.
+     * Get Scheduling flow (DAG). 
+     * @return ScheduleFlowName Scheduling flow (DAG).
      */
     public String getScheduleFlowName() {
         return this.ScheduleFlowName;
     }
 
     /**
-     * Set Scheduling flow, DAG.
-     * @param ScheduleFlowName Scheduling flow, DAG.
+     * Set Scheduling flow (DAG).
+     * @param ScheduleFlowName Scheduling flow (DAG).
      */
     public void setScheduleFlowName(String ScheduleFlowName) {
         this.ScheduleFlowName = ScheduleFlowName;
     }
 
     /**
-     * Get A Task node in the scheduling flow. 
-     * @return ScheduleTaskName A Task node in the scheduling flow.
+     * Get Task node in the scheduling flow. 
+     * @return ScheduleTaskName Task node in the scheduling flow.
      */
     public String getScheduleTaskName() {
         return this.ScheduleTaskName;
     }
 
     /**
-     * Set A Task node in the scheduling flow.
-     * @param ScheduleTaskName A Task node in the scheduling flow.
+     * Set Task node in the scheduling flow.
+     * @param ScheduleTaskName Task node in the scheduling flow.
      */
     public void setScheduleTaskName(String ScheduleTaskName) {
         this.ScheduleTaskName = ScheduleTaskName;
     }
 
     /**
-     * Get Core configurations for Yarn tasks. 
-     * @return JobConf Core configurations for Yarn tasks.
+     * Get Some core configurations of the YARN task. 
+     * @return JobConf Some core configurations of the YARN task.
      */
     public String getJobConf() {
         return this.JobConf;
     }
 
     /**
-     * Set Core configurations for Yarn tasks.
-     * @param JobConf Core configurations for Yarn tasks.
+     * Set Some core configurations of the YARN task.
+     * @param JobConf Some core configurations of the YARN task.
      */
     public void setJobConf(String JobConf) {
         this.JobConf = JobConf;
     }
 
     /**
-     * Get Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Context Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Insight into structured information. 
+     * @return Context Insight into structured information.
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Context Insight structure information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Insight into structured information.
+     * @param Context Insight into structured information.
      */
     public void setContext(String Context) {
         this.Context = Context;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class MultiZoneSetting extends AbstractModel {
 
     /**
-    * "master", "standby" or "third-party".
+    * "master", "standby", and "third-party".
     */
     @SerializedName("ZoneTag")
     @Expose
     private String ZoneTag;
 
     /**
-    * None
+    * None.
     */
     @SerializedName("VPCSettings")
     @Expose
     private VPCSettings VPCSettings;
 
     /**
-    * None
+    * None.
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * None
+    * None.
     */
     @SerializedName("ResourceSpec")
     @Expose
     private NewResourceSpec ResourceSpec;
 
     /**
-     * Get "master", "standby" or "third-party". 
-     * @return ZoneTag "master", "standby" or "third-party".
+     * Get "master", "standby", and "third-party". 
+     * @return ZoneTag "master", "standby", and "third-party".
      */
     public String getZoneTag() {
         return this.ZoneTag;
     }
 
     /**
-     * Set "master", "standby" or "third-party".
-     * @param ZoneTag "master", "standby" or "third-party".
+     * Set "master", "standby", and "third-party".
+     * @param ZoneTag "master", "standby", and "third-party".
      */
     public void setZoneTag(String ZoneTag) {
         this.ZoneTag = ZoneTag;
     }
 
     /**
-     * Get None 
-     * @return VPCSettings None
+     * Get None. 
+     * @return VPCSettings None.
      */
     public VPCSettings getVPCSettings() {
         return this.VPCSettings;
     }
 
     /**
-     * Set None
-     * @param VPCSettings None
+     * Set None.
+     * @param VPCSettings None.
      */
     public void setVPCSettings(VPCSettings VPCSettings) {
         this.VPCSettings = VPCSettings;
     }
 
     /**
-     * Get None 
-     * @return Placement None
+     * Get None. 
+     * @return Placement None.
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set None
-     * @param Placement None
+     * Set None.
+     * @param Placement None.
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get None 
-     * @return ResourceSpec None
+     * Get None. 
+     * @return ResourceSpec None.
      */
     public NewResourceSpec getResourceSpec() {
         return this.ResourceSpec;
     }
 
     /**
-     * Set None
-     * @param ResourceSpec None
+     * Set None.
+     * @param ResourceSpec None.
      */
     public void setResourceSpec(NewResourceSpec ResourceSpec) {
         this.ResourceSpec = ResourceSpec;

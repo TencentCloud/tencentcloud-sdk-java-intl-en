@@ -24,38 +24,35 @@ import java.util.HashMap;
 public class InquiryPriceScaleOutInstanceResponse extends AbstractModel {
 
     /**
-    * Original price.
+    * <p>Original price (CNY).</p>
     */
     @SerializedName("OriginalCost")
     @Expose
     private String OriginalCost;
 
     /**
-    * Discounted price.
+    * <p>Discounted price (CNY).</p>
     */
     @SerializedName("DiscountCost")
     @Expose
     private String DiscountCost;
 
     /**
-    * Time unit of scale-out. Valid values.
-<li>s: second.</li>
+    * <p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li>
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * Node spec queried for price.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Node specifications for price inquiry.</p>
     */
     @SerializedName("PriceSpec")
     @Expose
     private PriceResource PriceSpec;
 
     /**
-    * The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p>
     */
     @SerializedName("MultipleEmrPrice")
     @Expose
@@ -69,92 +66,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Original price. 
-     * @return OriginalCost Original price.
+     * Get <p>Original price (CNY).</p> 
+     * @return OriginalCost <p>Original price (CNY).</p>
      */
     public String getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set Original price.
-     * @param OriginalCost Original price.
+     * Set <p>Original price (CNY).</p>
+     * @param OriginalCost <p>Original price (CNY).</p>
      */
     public void setOriginalCost(String OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Discounted price. 
-     * @return DiscountCost Discounted price.
+     * Get <p>Discounted price (CNY).</p> 
+     * @return DiscountCost <p>Discounted price (CNY).</p>
      */
     public String getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set Discounted price.
-     * @param DiscountCost Discounted price.
+     * Set <p>Discounted price (CNY).</p>
+     * @param DiscountCost <p>Discounted price (CNY).</p>
      */
     public void setDiscountCost(String DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get Time unit of scale-out. Valid values.
-<li>s: second.</li> 
-     * @return Unit Time unit of scale-out. Valid values.
-<li>s: second.</li>
+     * Get <p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li> 
+     * @return Unit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Time unit of scale-out. Valid values.
-<li>s: second.</li>
-     * @param Unit Time unit of scale-out. Valid values.
-<li>s: second.</li>
+     * Set <p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li>
+     * @param Unit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get Node spec queried for price.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PriceSpec Node spec queried for price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Node specifications for price inquiry.</p> 
+     * @return PriceSpec <p>Node specifications for price inquiry.</p>
      */
     public PriceResource getPriceSpec() {
         return this.PriceSpec;
     }
 
     /**
-     * Set Node spec queried for price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PriceSpec Node spec queried for price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Node specifications for price inquiry.</p>
+     * @param PriceSpec <p>Node specifications for price inquiry.</p>
      */
     public void setPriceSpec(PriceResource PriceSpec) {
         this.PriceSpec = PriceSpec;
     }
 
     /**
-     * Get The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p> 
+     * @return MultipleEmrPrice <p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p>
      */
     public EmrPrice [] getMultipleEmrPrice() {
         return this.MultipleEmrPrice;
     }
 
     /**
-     * Set The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p>
+     * @param MultipleEmrPrice <p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p>
      */
     public void setMultipleEmrPrice(EmrPrice [] MultipleEmrPrice) {
         this.MultipleEmrPrice = MultipleEmrPrice;

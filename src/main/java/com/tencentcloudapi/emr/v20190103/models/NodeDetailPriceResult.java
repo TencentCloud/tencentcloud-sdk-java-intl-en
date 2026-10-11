@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class NodeDetailPriceResult extends AbstractModel {
 
     /**
-    * Node type: Master, Core, Task, Common, Router, and MySQL.
+    * Node type. Valid values: master, core, task, common, router, and mysql.
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Price details by node part
+    * Price details for each component of the node.
     */
     @SerializedName("PartDetailPrice")
     @Expose
     private PartDetailPriceItem [] PartDetailPrice;
 
     /**
-     * Get Node type: Master, Core, Task, Common, Router, and MySQL. 
-     * @return NodeType Node type: Master, Core, Task, Common, Router, and MySQL.
+     * Get Node type. Valid values: master, core, task, common, router, and mysql. 
+     * @return NodeType Node type. Valid values: master, core, task, common, router, and mysql.
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type: Master, Core, Task, Common, Router, and MySQL.
-     * @param NodeType Node type: Master, Core, Task, Common, Router, and MySQL.
+     * Set Node type. Valid values: master, core, task, common, router, and mysql.
+     * @param NodeType Node type. Valid values: master, core, task, common, router, and mysql.
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Price details by node part 
-     * @return PartDetailPrice Price details by node part
+     * Get Price details for each component of the node. 
+     * @return PartDetailPrice Price details for each component of the node.
      */
     public PartDetailPriceItem [] getPartDetailPrice() {
         return this.PartDetailPrice;
     }
 
     /**
-     * Set Price details by node part
-     * @param PartDetailPrice Price details by node part
+     * Set Price details for each component of the node.
+     * @param PartDetailPrice Price details for each component of the node.
      */
     public void setPartDetailPrice(PartDetailPriceItem [] PartDetailPrice) {
         this.PartDetailPrice = PartDetailPrice;

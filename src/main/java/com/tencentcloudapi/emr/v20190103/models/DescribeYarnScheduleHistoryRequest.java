@@ -31,14 +31,14 @@ public class DescribeYarnScheduleHistoryRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Start time
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -52,21 +52,21 @@ public class DescribeYarnScheduleHistoryRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Page size.
+    * Number of entries per page.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
+    * Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
     */
     @SerializedName("SchedulerType")
     @Expose
     private String SchedulerType;
 
     /**
-    * Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+    * Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
     */
     @SerializedName("TaskState")
     @Expose
@@ -89,32 +89,32 @@ public class DescribeYarnScheduleHistoryRequest extends AbstractModel {
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time. 
+     * @return EndTime End time.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -137,48 +137,48 @@ public class DescribeYarnScheduleHistoryRequest extends AbstractModel {
     }
 
     /**
-     * Get Page size. 
-     * @return Offset Page size.
+     * Get Number of entries per page. 
+     * @return Offset Number of entries per page.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page size.
-     * @param Offset Page size.
+     * Set Number of entries per page.
+     * @param Offset Number of entries per page.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler. 
-     * @return SchedulerType Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
+     * Get Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler. 
+     * @return SchedulerType Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
      */
     public String getSchedulerType() {
         return this.SchedulerType;
     }
 
     /**
-     * Set Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
-     * @param SchedulerType Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
+     * Set Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
+     * @param SchedulerType Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
      */
     public void setSchedulerType(String SchedulerType) {
         this.SchedulerType = SchedulerType;
     }
 
     /**
-     * Get Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all. 
-     * @return TaskState Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+     * Get Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all). 
+     * @return TaskState Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
      */
     public Long getTaskState() {
         return this.TaskState;
     }
 
     /**
-     * Set Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
-     * @param TaskState Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+     * Set Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
+     * @param TaskState Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
      */
     public void setTaskState(Long TaskState) {
         this.TaskState = TaskState;

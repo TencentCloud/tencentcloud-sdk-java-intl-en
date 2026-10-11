@@ -32,11 +32,18 @@ Default mode: default.
     private String StopPolicy;
 
     /**
-    * Thread Count
+    * Number of threads.
     */
     @SerializedName("ThreadCount")
     @Expose
     private Long ThreadCount;
+
+    /**
+    * Graceful stop timeout period (s).
+    */
+    @SerializedName("GraceDownTime")
+    @Expose
+    private Long GraceDownTime;
 
     /**
      * Get Security mode: safe.
@@ -59,19 +66,35 @@ Default mode: default.
     }
 
     /**
-     * Get Thread Count 
-     * @return ThreadCount Thread Count
+     * Get Number of threads. 
+     * @return ThreadCount Number of threads.
      */
     public Long getThreadCount() {
         return this.ThreadCount;
     }
 
     /**
-     * Set Thread Count
-     * @param ThreadCount Thread Count
+     * Set Number of threads.
+     * @param ThreadCount Number of threads.
      */
     public void setThreadCount(Long ThreadCount) {
         this.ThreadCount = ThreadCount;
+    }
+
+    /**
+     * Get Graceful stop timeout period (s). 
+     * @return GraceDownTime Graceful stop timeout period (s).
+     */
+    public Long getGraceDownTime() {
+        return this.GraceDownTime;
+    }
+
+    /**
+     * Set Graceful stop timeout period (s).
+     * @param GraceDownTime Graceful stop timeout period (s).
+     */
+    public void setGraceDownTime(Long GraceDownTime) {
+        this.GraceDownTime = GraceDownTime;
     }
 
     public StopParams() {
@@ -88,6 +111,9 @@ Default mode: default.
         if (source.ThreadCount != null) {
             this.ThreadCount = new Long(source.ThreadCount);
         }
+        if (source.GraceDownTime != null) {
+            this.GraceDownTime = new Long(source.GraceDownTime);
+        }
     }
 
 
@@ -97,6 +123,7 @@ Default mode: default.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StopPolicy", this.StopPolicy);
         this.setParamSimple(map, prefix + "ThreadCount", this.ThreadCount);
+        this.setParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
 
     }
 }

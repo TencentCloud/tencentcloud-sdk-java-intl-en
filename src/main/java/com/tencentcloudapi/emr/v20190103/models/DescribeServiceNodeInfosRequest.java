@@ -38,32 +38,31 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Page size.
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Searching fields.
+    * Searching field.
     */
     @SerializedName("SearchText")
     @Expose
     private String SearchText;
 
     /**
-    * Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
+    * 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
     */
     @SerializedName("ConfStatus")
     @Expose
     private Long ConfStatus;
 
     /**
-    * Filter criteria: Maintenance status
-
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
+    * Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
     */
     @SerializedName("MaintainStateId")
@@ -71,54 +70,53 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     private Long MaintainStateId;
 
     /**
-    * Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
+    * Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
     */
     @SerializedName("OperatorStateId")
     @Expose
     private Long OperatorStateId;
 
     /**
-    * Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
+    * Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
     */
     @SerializedName("HealthStateId")
     @Expose
     private String HealthStateId;
 
     /**
-    * Service component names (in all caps, for example, YARN).
+    * Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * Node names: master, core, task, common, and router.
+    * Node name. Valid values: master, core, task, common, and router.
     */
     @SerializedName("NodeTypeName")
     @Expose
     private String NodeTypeName;
 
     /**
-    * Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
+    * Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
     */
     @SerializedName("DataNodeMaintenanceId")
     @Expose
     private Long DataNodeMaintenanceId;
 
     /**
-    * Searchable fields (currently supported SearchType: ipv4).
+    * Searchable fields (Currently, SearchType: ipv4 is supported).
     */
     @SerializedName("SearchFields")
     @Expose
@@ -157,65 +155,63 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     }
 
     /**
-     * Get Page size. 
-     * @return Limit Page size.
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page size.
-     * @param Limit Page size.
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Searching fields. 
-     * @return SearchText Searching fields.
+     * Get Searching field. 
+     * @return SearchText Searching field.
      */
     public String getSearchText() {
         return this.SearchText;
     }
 
     /**
-     * Set Searching fields.
-     * @param SearchText Searching fields.
+     * Set Searching field.
+     * @param SearchText Searching field.
      */
     public void setSearchText(String SearchText) {
         this.SearchText = SearchText;
     }
 
     /**
-     * Get Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all. 
-     * @return ConfStatus Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
+     * Get 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'. 
+     * @return ConfStatus 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
      */
     public Long getConfStatus() {
         return this.ConfStatus;
     }
 
     /**
-     * Set Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
-     * @param ConfStatus Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
+     * Set 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
+     * @param ConfStatus 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
      */
     public void setConfStatus(Long ConfStatus) {
         this.ConfStatus = ConfStatus;
     }
 
     /**
-     * Get Filter criteria: Maintenance status
-
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
+     * Get Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
  
-     * @return MaintainStateId Filter criteria: Maintenance status
-
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
+     * @return MaintainStateId Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
      */
     public Long getMaintainStateId() {
@@ -223,17 +219,15 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     }
 
     /**
-     * Set Filter criteria: Maintenance status
+     * Set Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
-
-     * @param MaintainStateId Filter criteria: Maintenance status
-
-0 indicates all statuses.
-1 indicates normal.
-2 indicates the maintenance status.
+     * @param MaintainStateId Filter criterion, which specifies the maintenance status. Valid values:
+0: all statuses
+1: normal mode
+2: maintenance mode
 
      */
     public void setMaintainStateId(Long MaintainStateId) {
@@ -241,144 +235,140 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped. 
-     * @return OperatorStateId Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
+     * Get Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped. 
+     * @return OperatorStateId Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
      */
     public Long getOperatorStateId() {
         return this.OperatorStateId;
     }
 
     /**
-     * Set Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
-     * @param OperatorStateId Filter criteria: Operation status
-
-0 indicates all statuses.
-1 indicates started.
-2 indicates stopped.
+     * Set Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
+     * @param OperatorStateId Filter criterion, which specifies the operation status. Valid values:
+0: all statuses
+1: started
+2: stopped.
      */
     public void setOperatorStateId(Long OperatorStateId) {
         this.OperatorStateId = OperatorStateId;
     }
 
     /**
-     * Get Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected. 
-     * @return HealthStateId Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
+     * Get Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected 
+     * @return HealthStateId Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
      */
     public String getHealthStateId() {
         return this.HealthStateId;
     }
 
     /**
-     * Set Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
-     * @param HealthStateId Filter criteria: health status.
-0 indicates unavailable.
-1 indicates good.
--2 indicates unknown.
--99 indicates all.
--3 indicates potential risks.
--4 indicates undetected.
+     * Set Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
+     * @param HealthStateId Filter criterion, which specifies the health status. Valid values:
+"0": unavailable
+"1": good
+-2: unknown
+-99: all statuses
+-3: potential risk
+-4: undetected
      */
     public void setHealthStateId(String HealthStateId) {
         this.HealthStateId = HealthStateId;
     }
 
     /**
-     * Get Service component names (in all caps, for example, YARN). 
-     * @return ServiceName Service component names (in all caps, for example, YARN).
+     * Get Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required. 
+     * @return ServiceName Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set Service component names (in all caps, for example, YARN).
-     * @param ServiceName Service component names (in all caps, for example, YARN).
+     * Set Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
+     * @param ServiceName Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get Node names: master, core, task, common, and router. 
-     * @return NodeTypeName Node names: master, core, task, common, and router.
+     * Get Node name. Valid values: master, core, task, common, and router. 
+     * @return NodeTypeName Node name. Valid values: master, core, task, common, and router.
      */
     public String getNodeTypeName() {
         return this.NodeTypeName;
     }
 
     /**
-     * Set Node names: master, core, task, common, and router.
-     * @param NodeTypeName Node names: master, core, task, common, and router.
+     * Set Node name. Valid values: master, core, task, common, and router.
+     * @param NodeTypeName Node name. Valid values: master, core, task, common, and router.
      */
     public void setNodeTypeName(String NodeTypeName) {
         this.NodeTypeName = NodeTypeName;
     }
 
     /**
-     * Get Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status. 
-     * @return DataNodeMaintenanceId Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
+     * Get Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status 
+     * @return DataNodeMaintenanceId Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
      */
     public Long getDataNodeMaintenanceId() {
         return this.DataNodeMaintenanceId;
     }
 
     /**
-     * Set Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
-     * @param DataNodeMaintenanceId Filter criteria: whether DN is in the maintenance status.
-0 indicates all statuses.
-1 indicates the maintenance status.
+     * Set Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
+     * @param DataNodeMaintenanceId Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+0: all statuses
+1: maintenance status
      */
     public void setDataNodeMaintenanceId(Long DataNodeMaintenanceId) {
         this.DataNodeMaintenanceId = DataNodeMaintenanceId;
     }
 
     /**
-     * Get Searchable fields (currently supported SearchType: ipv4). 
-     * @return SearchFields Searchable fields (currently supported SearchType: ipv4).
+     * Get Searchable fields (Currently, SearchType: ipv4 is supported). 
+     * @return SearchFields Searchable fields (Currently, SearchType: ipv4 is supported).
      */
     public SearchItem [] getSearchFields() {
         return this.SearchFields;
     }
 
     /**
-     * Set Searchable fields (currently supported SearchType: ipv4).
-     * @param SearchFields Searchable fields (currently supported SearchType: ipv4).
+     * Set Searchable fields (Currently, SearchType: ipv4 is supported).
+     * @param SearchFields Searchable fields (Currently, SearchType: ipv4 is supported).
      */
     public void setSearchFields(SearchItem [] SearchFields) {
         this.SearchFields = SearchFields;

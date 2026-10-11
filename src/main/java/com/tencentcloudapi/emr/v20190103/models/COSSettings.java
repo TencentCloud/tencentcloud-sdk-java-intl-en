@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class COSSettings extends AbstractModel {
 
     /**
-    * COS `SecretId`
+    * COS SecretId
     */
     @SerializedName("CosSecretId")
     @Expose
     private String CosSecretId;
 
     /**
-    * COS `SecrectKey`
+    * COS SecrectKey
     */
     @SerializedName("CosSecretKey")
     @Expose
     private String CosSecretKey;
 
     /**
-    * COS path to log
+    * Log storage path on COS.
     */
     @SerializedName("LogOnCosPath")
     @Expose
     private String LogOnCosPath;
 
     /**
-     * Get COS `SecretId` 
-     * @return CosSecretId COS `SecretId`
+     * Get COS SecretId 
+     * @return CosSecretId COS SecretId
      */
     public String getCosSecretId() {
         return this.CosSecretId;
     }
 
     /**
-     * Set COS `SecretId`
-     * @param CosSecretId COS `SecretId`
+     * Set COS SecretId
+     * @param CosSecretId COS SecretId
      */
     public void setCosSecretId(String CosSecretId) {
         this.CosSecretId = CosSecretId;
     }
 
     /**
-     * Get COS `SecrectKey` 
-     * @return CosSecretKey COS `SecrectKey`
+     * Get COS SecrectKey 
+     * @return CosSecretKey COS SecrectKey
      */
     public String getCosSecretKey() {
         return this.CosSecretKey;
     }
 
     /**
-     * Set COS `SecrectKey`
-     * @param CosSecretKey COS `SecrectKey`
+     * Set COS SecrectKey
+     * @param CosSecretKey COS SecrectKey
      */
     public void setCosSecretKey(String CosSecretKey) {
         this.CosSecretKey = CosSecretKey;
     }
 
     /**
-     * Get COS path to log 
-     * @return LogOnCosPath COS path to log
+     * Get Log storage path on COS. 
+     * @return LogOnCosPath Log storage path on COS.
      */
     public String getLogOnCosPath() {
         return this.LogOnCosPath;
     }
 
     /**
-     * Set COS path to log
-     * @param LogOnCosPath COS path to log
+     * Set Log storage path on COS.
+     * @param LogOnCosPath Log storage path on COS.
      */
     public void setLogOnCosPath(String LogOnCosPath) {
         this.LogOnCosPath = LogOnCosPath;

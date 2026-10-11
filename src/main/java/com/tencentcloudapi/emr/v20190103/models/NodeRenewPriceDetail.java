@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class NodeRenewPriceDetail extends AbstractModel {
 
     /**
-    * Billing type (1: monthly subscription, 3: committed use).
+    * Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
     */
     @SerializedName("ChargeType")
     @Expose
@@ -45,7 +45,7 @@ public class NodeRenewPriceDetail extends AbstractModel {
     private String NodeType;
 
     /**
-    * Node private network IP.
+    * Node private network IP address.
     */
     @SerializedName("Ip")
     @Expose
@@ -66,30 +66,30 @@ public class NodeRenewPriceDetail extends AbstractModel {
     private Float OriginalCost;
 
     /**
-    * Discount price.
+    * Discounted price.
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-    * Node component renewal pricing list.
+    * Node sub-item renewal inquiry details list.
     */
     @SerializedName("RenewPriceDetails")
     @Expose
     private RenewPriceDetail [] RenewPriceDetails;
 
     /**
-     * Get Billing type (1: monthly subscription, 3: committed use). 
-     * @return ChargeType Billing type (1: monthly subscription, 3: committed use).
+     * Get Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use). 
+     * @return ChargeType Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Billing type (1: monthly subscription, 3: committed use).
-     * @param ChargeType Billing type (1: monthly subscription, 3: committed use).
+     * Set Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
+     * @param ChargeType Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
@@ -128,16 +128,16 @@ public class NodeRenewPriceDetail extends AbstractModel {
     }
 
     /**
-     * Get Node private network IP. 
-     * @return Ip Node private network IP.
+     * Get Node private network IP address. 
+     * @return Ip Node private network IP address.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Node private network IP.
-     * @param Ip Node private network IP.
+     * Set Node private network IP address.
+     * @param Ip Node private network IP address.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
@@ -176,32 +176,32 @@ public class NodeRenewPriceDetail extends AbstractModel {
     }
 
     /**
-     * Get Discount price. 
-     * @return DiscountCost Discount price.
+     * Get Discounted price. 
+     * @return DiscountCost Discounted price.
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set Discount price.
-     * @param DiscountCost Discount price.
+     * Set Discounted price.
+     * @param DiscountCost Discounted price.
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get Node component renewal pricing list. 
-     * @return RenewPriceDetails Node component renewal pricing list.
+     * Get Node sub-item renewal inquiry details list. 
+     * @return RenewPriceDetails Node sub-item renewal inquiry details list.
      */
     public RenewPriceDetail [] getRenewPriceDetails() {
         return this.RenewPriceDetails;
     }
 
     /**
-     * Set Node component renewal pricing list.
-     * @param RenewPriceDetails Node component renewal pricing list.
+     * Set Node sub-item renewal inquiry details list.
+     * @param RenewPriceDetails Node sub-item renewal inquiry details list.
      */
     public void setRenewPriceDetails(RenewPriceDetail [] RenewPriceDetails) {
         this.RenewPriceDetails = RenewPriceDetails;

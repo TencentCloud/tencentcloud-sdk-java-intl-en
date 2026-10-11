@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyResourceSchedulerRequest extends AbstractModel {
 
     /**
-    * EMR cluster ID
+    * English ID of the EMR cluster.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The original scheduler: `fair`
+    * Old scheduler: fair.
     */
     @SerializedName("OldValue")
     @Expose
     private String OldValue;
 
     /**
-    * The new scheduler: `capacity`
+    * New scheduler: capacity.
     */
     @SerializedName("NewValue")
     @Expose
     private String NewValue;
 
     /**
-     * Get EMR cluster ID 
-     * @return InstanceId EMR cluster ID
+     * Get English ID of the EMR cluster. 
+     * @return InstanceId English ID of the EMR cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set EMR cluster ID
-     * @param InstanceId EMR cluster ID
+     * Set English ID of the EMR cluster.
+     * @param InstanceId English ID of the EMR cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The original scheduler: `fair` 
-     * @return OldValue The original scheduler: `fair`
+     * Get Old scheduler: fair. 
+     * @return OldValue Old scheduler: fair.
      */
     public String getOldValue() {
         return this.OldValue;
     }
 
     /**
-     * Set The original scheduler: `fair`
-     * @param OldValue The original scheduler: `fair`
+     * Set Old scheduler: fair.
+     * @param OldValue Old scheduler: fair.
      */
     public void setOldValue(String OldValue) {
         this.OldValue = OldValue;
     }
 
     /**
-     * Get The new scheduler: `capacity` 
-     * @return NewValue The new scheduler: `capacity`
+     * Get New scheduler: capacity. 
+     * @return NewValue New scheduler: capacity.
      */
     public String getNewValue() {
         return this.NewValue;
     }
 
     /**
-     * Set The new scheduler: `capacity`
-     * @param NewValue The new scheduler: `capacity`
+     * Set New scheduler: capacity.
+     * @param NewValue New scheduler: capacity.
      */
     public void setNewValue(String NewValue) {
         this.NewValue = NewValue;

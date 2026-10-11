@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ConvertPreToPostClusterRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID.
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class ConvertPreToPostClusterRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-     * Get Cluster instance ID. 
-     * @return InstanceId Cluster instance ID.
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID.
-     * @param InstanceId Cluster instance ID.
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

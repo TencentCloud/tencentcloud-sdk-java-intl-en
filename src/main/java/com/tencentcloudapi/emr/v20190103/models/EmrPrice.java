@@ -45,8 +45,7 @@ public class EmrPrice extends AbstractModel {
     private String Unit;
 
     /**
-    * The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Price inquiry configuration.
     */
     @SerializedName("PriceSpec")
     @Expose
@@ -108,20 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PriceSpec The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Price inquiry configuration. 
+     * @return PriceSpec Price inquiry configuration.
      */
     public PriceResource getPriceSpec() {
         return this.PriceSpec;
     }
 
     /**
-     * Set The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PriceSpec The queried spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Price inquiry configuration.
+     * @param PriceSpec Price inquiry configuration.
      */
     public void setPriceSpec(PriceResource PriceSpec) {
         this.PriceSpec = PriceSpec;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DayRepeatStrategy extends AbstractModel {
 
     /**
-    * Specific time for repetition task execution, such as 01:02:00.
+    * Specific time for repetition task execution, for example, 01:02:00.
     */
     @SerializedName("ExecuteAtTimeOfDay")
     @Expose
     private String ExecuteAtTimeOfDay;
 
     /**
-    * Executing every Step days.
+    * Execute every Step days.
     */
     @SerializedName("Step")
     @Expose
     private Long Step;
 
     /**
-     * Get Specific time for repetition task execution, such as 01:02:00. 
-     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+     * Get Specific time for repetition task execution, for example, 01:02:00. 
+     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
      */
     public String getExecuteAtTimeOfDay() {
         return this.ExecuteAtTimeOfDay;
     }
 
     /**
-     * Set Specific time for repetition task execution, such as 01:02:00.
-     * @param ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+     * Set Specific time for repetition task execution, for example, 01:02:00.
+     * @param ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
      */
     public void setExecuteAtTimeOfDay(String ExecuteAtTimeOfDay) {
         this.ExecuteAtTimeOfDay = ExecuteAtTimeOfDay;
     }
 
     /**
-     * Get Executing every Step days. 
-     * @return Step Executing every Step days.
+     * Get Execute every Step days. 
+     * @return Step Execute every Step days.
      */
     public Long getStep() {
         return this.Step;
     }
 
     /**
-     * Set Executing every Step days.
-     * @param Step Executing every Step days.
+     * Set Execute every Step days.
+     * @param Step Execute every Step days.
      */
     public void setStep(Long Step) {
         this.Step = Step;

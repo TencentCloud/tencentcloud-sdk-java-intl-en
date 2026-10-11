@@ -24,23 +24,21 @@ import java.util.HashMap;
 public class DescribeInstancesResponse extends AbstractModel {
 
     /**
-    * Number of eligible instances.
+    * 
     */
     @SerializedName("TotalCnt")
     @Expose
     private Long TotalCnt;
 
     /**
-    * List of EMR instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ClusterList")
     @Expose
     private ClusterInstancesInfo [] ClusterList;
 
     /**
-    * List of tag keys associated to an instance.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TagKeys")
     @Expose
@@ -54,56 +52,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of eligible instances. 
-     * @return TotalCnt Number of eligible instances.
+     * Get  
+     * @return TotalCnt 
      */
     public Long getTotalCnt() {
         return this.TotalCnt;
     }
 
     /**
-     * Set Number of eligible instances.
-     * @param TotalCnt Number of eligible instances.
+     * Set 
+     * @param TotalCnt 
      */
     public void setTotalCnt(Long TotalCnt) {
         this.TotalCnt = TotalCnt;
     }
 
     /**
-     * Get List of EMR instance details.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterList List of EMR instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ClusterList 
      */
     public ClusterInstancesInfo [] getClusterList() {
         return this.ClusterList;
     }
 
     /**
-     * Set List of EMR instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClusterList List of EMR instance details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ClusterList 
      */
     public void setClusterList(ClusterInstancesInfo [] ClusterList) {
         this.ClusterList = ClusterList;
     }
 
     /**
-     * Get List of tag keys associated to an instance.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TagKeys List of tag keys associated to an instance.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TagKeys 
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set List of tag keys associated to an instance.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TagKeys List of tag keys associated to an instance.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TagKeys 
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;

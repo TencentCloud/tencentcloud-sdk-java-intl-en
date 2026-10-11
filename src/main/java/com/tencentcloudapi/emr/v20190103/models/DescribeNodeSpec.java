@@ -39,15 +39,13 @@ public class DescribeNodeSpec extends AbstractModel {
 
     /**
     * Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Types")
     @Expose
     private NodeSpecType [] Types;
 
     /**
-    * Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of cloud-hosted node instance specifications.
     */
     @SerializedName("CmnTypes")
     @Expose
@@ -86,10 +84,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Types array.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Types array. 
      * @return Types Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NodeSpecType [] getTypes() {
         return this.Types;
@@ -97,29 +93,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Types Types array.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTypes(NodeSpecType [] Types) {
         this.Types = Types;
     }
 
     /**
-     * Get Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CmnTypes Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of cloud-hosted node instance specifications. 
+     * @return CmnTypes List of cloud-hosted node instance specifications.
      */
     public NodeSpecType [] getCmnTypes() {
         return this.CmnTypes;
     }
 
     /**
-     * Set Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CmnTypes Cloud Managed Node (M Node) model specifications list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of cloud-hosted node instance specifications.
+     * @param CmnTypes List of cloud-hosted node instance specifications.
      */
     public void setCmnTypes(NodeSpecType [] CmnTypes) {
         this.CmnTypes = CmnTypes;

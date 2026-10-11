@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DiffHeader extends AbstractModel {
 
     /**
-    * Name
+    * Name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * ID, which is used by the front end.
+    * ID, which is used by the frontend.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get Name 
-     * @return Name Name
+     * Get Name. 
+     * @return Name Name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name
-     * @param Name Name
+     * Set Name.
+     * @param Name Name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get ID, which is used by the front end. 
-     * @return Id ID, which is used by the front end.
+     * Get ID, which is used by the frontend. 
+     * @return Id ID, which is used by the frontend.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set ID, which is used by the front end.
-     * @param Id ID, which is used by the front end.
+     * Set ID, which is used by the frontend.
+     * @param Id ID, which is used by the frontend.
      */
     public void setId(String Id) {
         this.Id = Id;

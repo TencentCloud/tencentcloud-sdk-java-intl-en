@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FlowParam extends AbstractModel {
 
     /**
-    * Process parameter key.
+    * Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
     */
@@ -33,17 +33,17 @@ FlowId: Query by FlowId.
     private String FKey;
 
     /**
-    * Parameter value
+    * Parameter value.
     */
     @SerializedName("FValue")
     @Expose
     private String FValue;
 
     /**
-     * Get Process parameter key.
+     * Get Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId. 
-     * @return FKey Process parameter key.
+     * @return FKey Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
      */
@@ -52,10 +52,10 @@ FlowId: Query by FlowId.
     }
 
     /**
-     * Set Process parameter key.
+     * Set Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
-     * @param FKey Process parameter key.
+     * @param FKey Flow parameter key.
 TraceId: Query by TraceId.
 FlowId: Query by FlowId.
      */
@@ -64,16 +64,16 @@ FlowId: Query by FlowId.
     }
 
     /**
-     * Get Parameter value 
-     * @return FValue Parameter value
+     * Get Parameter value. 
+     * @return FValue Parameter value.
      */
     public String getFValue() {
         return this.FValue;
     }
 
     /**
-     * Set Parameter value
-     * @param FValue Parameter value
+     * Set Parameter value.
+     * @param FValue Parameter value.
      */
     public void setFValue(String FValue) {
         this.FValue = FValue;

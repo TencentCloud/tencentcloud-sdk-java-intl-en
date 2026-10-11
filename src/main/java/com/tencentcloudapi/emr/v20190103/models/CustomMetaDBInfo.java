@@ -24,133 +24,187 @@ import java.util.HashMap;
 public class CustomMetaDBInfo extends AbstractModel {
 
     /**
-    * The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+    * <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
     */
     @SerializedName("MetaDataJdbcUrl")
     @Expose
     private String MetaDataJdbcUrl;
 
     /**
-    * The custom metadatabase instance username.
+    * <p>Custom MetaDB username.</p>
     */
     @SerializedName("MetaDataUser")
     @Expose
     private String MetaDataUser;
 
     /**
-    * The custom metadatabase instance password.
+    * <p>Custom MetaDB password.</p>
     */
     @SerializedName("MetaDataPass")
     @Expose
     private String MetaDataPass;
 
     /**
-    * The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+    * <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
     */
     @SerializedName("MetaType")
     @Expose
     private String MetaType;
 
     /**
-    * The EMR-MetaDB instance.
+    * <p>EMR-MetaDB instance.</p>
     */
     @SerializedName("UnifyMetaInstanceId")
     @Expose
     private String UnifyMetaInstanceId;
 
     /**
-     * Get The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname 
-     * @return MetaDataJdbcUrl The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+    * <p>Component.</p>
+    */
+    @SerializedName("Components")
+    @Expose
+    private String [] Components;
+
+    /**
+    * <p>MetaDB version.</p>
+    */
+    @SerializedName("DefaultMetaVersion")
+    @Expose
+    private String DefaultMetaVersion;
+
+    /**
+    * <p>CDBId</p>
+    */
+    @SerializedName("LinkInstanceId")
+    @Expose
+    private String LinkInstanceId;
+
+    /**
+     * Get <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p> 
+     * @return MetaDataJdbcUrl <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
      */
     public String getMetaDataJdbcUrl() {
         return this.MetaDataJdbcUrl;
     }
 
     /**
-     * Set The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
-     * @param MetaDataJdbcUrl The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+     * Set <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
+     * @param MetaDataJdbcUrl <p>Custom MetaDB JDBC connection, for example: jdbc:mysql://10.10.10.10:3306/dbname.</p>
      */
     public void setMetaDataJdbcUrl(String MetaDataJdbcUrl) {
         this.MetaDataJdbcUrl = MetaDataJdbcUrl;
     }
 
     /**
-     * Get The custom metadatabase instance username. 
-     * @return MetaDataUser The custom metadatabase instance username.
+     * Get <p>Custom MetaDB username.</p> 
+     * @return MetaDataUser <p>Custom MetaDB username.</p>
      */
     public String getMetaDataUser() {
         return this.MetaDataUser;
     }
 
     /**
-     * Set The custom metadatabase instance username.
-     * @param MetaDataUser The custom metadatabase instance username.
+     * Set <p>Custom MetaDB username.</p>
+     * @param MetaDataUser <p>Custom MetaDB username.</p>
      */
     public void setMetaDataUser(String MetaDataUser) {
         this.MetaDataUser = MetaDataUser;
     }
 
     /**
-     * Get The custom metadatabase instance password. 
-     * @return MetaDataPass The custom metadatabase instance password.
+     * Get <p>Custom MetaDB password.</p> 
+     * @return MetaDataPass <p>Custom MetaDB password.</p>
      */
     public String getMetaDataPass() {
         return this.MetaDataPass;
     }
 
     /**
-     * Set The custom metadatabase instance password.
-     * @param MetaDataPass The custom metadatabase instance password.
+     * Set <p>Custom MetaDB password.</p>
+     * @param MetaDataPass <p>Custom MetaDB password.</p>
      */
     public void setMetaDataPass(String MetaDataPass) {
         this.MetaDataPass = MetaDataPass;
     }
 
     /**
-     * Get The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li> 
-     * @return MetaType The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+     * Get <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li> 
+     * @return MetaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
      */
     public String getMetaType() {
         return this.MetaType;
     }
 
     /**
-     * Set The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
-     * @param MetaType The Hive-shared metadatabase type. Valid values:
-<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
-<li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+     * Set <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
+     * @param MetaType <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
      */
     public void setMetaType(String MetaType) {
         this.MetaType = MetaType;
     }
 
     /**
-     * Get The EMR-MetaDB instance. 
-     * @return UnifyMetaInstanceId The EMR-MetaDB instance.
+     * Get <p>EMR-MetaDB instance.</p> 
+     * @return UnifyMetaInstanceId <p>EMR-MetaDB instance.</p>
      */
     public String getUnifyMetaInstanceId() {
         return this.UnifyMetaInstanceId;
     }
 
     /**
-     * Set The EMR-MetaDB instance.
-     * @param UnifyMetaInstanceId The EMR-MetaDB instance.
+     * Set <p>EMR-MetaDB instance.</p>
+     * @param UnifyMetaInstanceId <p>EMR-MetaDB instance.</p>
      */
     public void setUnifyMetaInstanceId(String UnifyMetaInstanceId) {
         this.UnifyMetaInstanceId = UnifyMetaInstanceId;
+    }
+
+    /**
+     * Get <p>Component.</p> 
+     * @return Components <p>Component.</p>
+     */
+    public String [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set <p>Component.</p>
+     * @param Components <p>Component.</p>
+     */
+    public void setComponents(String [] Components) {
+        this.Components = Components;
+    }
+
+    /**
+     * Get <p>MetaDB version.</p> 
+     * @return DefaultMetaVersion <p>MetaDB version.</p>
+     */
+    public String getDefaultMetaVersion() {
+        return this.DefaultMetaVersion;
+    }
+
+    /**
+     * Set <p>MetaDB version.</p>
+     * @param DefaultMetaVersion <p>MetaDB version.</p>
+     */
+    public void setDefaultMetaVersion(String DefaultMetaVersion) {
+        this.DefaultMetaVersion = DefaultMetaVersion;
+    }
+
+    /**
+     * Get <p>CDBId</p> 
+     * @return LinkInstanceId <p>CDBId</p>
+     */
+    public String getLinkInstanceId() {
+        return this.LinkInstanceId;
+    }
+
+    /**
+     * Set <p>CDBId</p>
+     * @param LinkInstanceId <p>CDBId</p>
+     */
+    public void setLinkInstanceId(String LinkInstanceId) {
+        this.LinkInstanceId = LinkInstanceId;
     }
 
     public CustomMetaDBInfo() {
@@ -176,6 +230,18 @@ public class CustomMetaDBInfo extends AbstractModel {
         if (source.UnifyMetaInstanceId != null) {
             this.UnifyMetaInstanceId = new String(source.UnifyMetaInstanceId);
         }
+        if (source.Components != null) {
+            this.Components = new String[source.Components.length];
+            for (int i = 0; i < source.Components.length; i++) {
+                this.Components[i] = new String(source.Components[i]);
+            }
+        }
+        if (source.DefaultMetaVersion != null) {
+            this.DefaultMetaVersion = new String(source.DefaultMetaVersion);
+        }
+        if (source.LinkInstanceId != null) {
+            this.LinkInstanceId = new String(source.LinkInstanceId);
+        }
     }
 
 
@@ -188,6 +254,9 @@ public class CustomMetaDBInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MetaDataPass", this.MetaDataPass);
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
         this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
+        this.setParamArraySimple(map, prefix + "Components.", this.Components);
+        this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+        this.setParamSimple(map, prefix + "LinkInstanceId", this.LinkInstanceId);
 
     }
 }

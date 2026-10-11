@@ -31,8 +31,7 @@ public class DescribeTrinoQueryInfoResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Query result array.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Array of query results.
     */
     @SerializedName("QueryInfoList")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Query result array.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QueryInfoList Query result array.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Array of query results. 
+     * @return QueryInfoList Array of query results.
      */
     public TrinoQueryInfo [] getQueryInfoList() {
         return this.QueryInfoList;
     }
 
     /**
-     * Set Query result array.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QueryInfoList Query result array.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Array of query results.
+     * @param QueryInfoList Array of query results.
      */
     public void setQueryInfoList(TrinoQueryInfo [] QueryInfoList) {
         this.QueryInfoList = QueryInfoList;

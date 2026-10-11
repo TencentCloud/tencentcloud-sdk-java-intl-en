@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeResourceScheduleRequest extends AbstractModel {
 
     /**
-    * EMR cluster ID
+    * English ID of the EMR cluster.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get EMR cluster ID 
-     * @return InstanceId EMR cluster ID
+     * Get English ID of the EMR cluster. 
+     * @return InstanceId English ID of the EMR cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set EMR cluster ID
-     * @param InstanceId EMR cluster ID
+     * Set English ID of the EMR cluster.
+     * @param InstanceId English ID of the EMR cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

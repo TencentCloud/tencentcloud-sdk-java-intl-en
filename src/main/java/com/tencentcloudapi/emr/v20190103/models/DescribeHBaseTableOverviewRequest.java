@@ -31,35 +31,35 @@ public class DescribeHBaseTableOverviewRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Pagination query number offset, starting from 0.	
+    * Page number. Valid values: 0 (page 1) and 1 (page 2).
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+    * Number of items returned per page. Minimum value: 1. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Table name, supporting fuzzy matching
+    * Table name, supporting fuzzy matching.
     */
     @SerializedName("Table")
     @Expose
     private String Table;
 
     /**
-    * Field for sorting, with a default value
+    * Sorting field. It has a default value.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * asc: Ascending; desc: Descending (default)
+    * asc: ascending; desc: descending (default).
     */
     @SerializedName("OrderType")
     @Expose
@@ -82,80 +82,80 @@ public class DescribeHBaseTableOverviewRequest extends AbstractModel {
     }
 
     /**
-     * Get Pagination query number offset, starting from 0.	 
-     * @return Offset Pagination query number offset, starting from 0.	
+     * Get Page number. Valid values: 0 (page 1) and 1 (page 2). 
+     * @return Offset Page number. Valid values: 0 (page 1) and 1 (page 2).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination query number offset, starting from 0.	
-     * @param Offset Pagination query number offset, starting from 0.	
+     * Set Page number. Valid values: 0 (page 1) and 1 (page 2).
+     * @param Offset Page number. Valid values: 0 (page 1) and 1 (page 2).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Page size for pagination query. The minimum value is 1, and the maximum value is 100. 
-     * @return Limit Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+     * Get Number of items returned per page. Minimum value: 1. Maximum value: 100. 
+     * @return Limit Number of items returned per page. Minimum value: 1. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page size for pagination query. The minimum value is 1, and the maximum value is 100.
-     * @param Limit Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+     * Set Number of items returned per page. Minimum value: 1. Maximum value: 100.
+     * @param Limit Number of items returned per page. Minimum value: 1. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Table name, supporting fuzzy matching 
-     * @return Table Table name, supporting fuzzy matching
+     * Get Table name, supporting fuzzy matching. 
+     * @return Table Table name, supporting fuzzy matching.
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set Table name, supporting fuzzy matching
-     * @param Table Table name, supporting fuzzy matching
+     * Set Table name, supporting fuzzy matching.
+     * @param Table Table name, supporting fuzzy matching.
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get Field for sorting, with a default value 
-     * @return OrderField Field for sorting, with a default value
+     * Get Sorting field. It has a default value. 
+     * @return OrderField Sorting field. It has a default value.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set Field for sorting, with a default value
-     * @param OrderField Field for sorting, with a default value
+     * Set Sorting field. It has a default value.
+     * @param OrderField Sorting field. It has a default value.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get asc: Ascending; desc: Descending (default) 
-     * @return OrderType asc: Ascending; desc: Descending (default)
+     * Get asc: ascending; desc: descending (default). 
+     * @return OrderType asc: ascending; desc: descending (default).
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set asc: Ascending; desc: Descending (default)
-     * @param OrderType asc: Ascending; desc: Descending (default)
+     * Set asc: ascending; desc: descending (default).
+     * @param OrderType asc: ascending; desc: descending (default).
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;

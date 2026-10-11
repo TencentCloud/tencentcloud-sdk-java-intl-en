@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PartDetailPriceItem extends AbstractModel {
 
     /**
-    * Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+    * Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -66,16 +66,16 @@ public class PartDetailPriceItem extends AbstractModel {
     private Long GoodsNum;
 
     /**
-     * Get Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB. 
-     * @return InstanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+     * Get Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB. 
+     * @return InstanceType Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
-     * @param InstanceType Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+     * Set Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
+     * @param InstanceType Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

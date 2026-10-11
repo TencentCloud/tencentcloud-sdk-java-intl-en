@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeHiveQueriesRequest extends AbstractModel {
 
     /**
-    * The cluster ID.
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The start time in seconds.
+    * Start time (s).
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
+    * End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Starting offset for pagination. Start value: 0
+    * Starting offset for pages, starting from 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Page size. Valid range: [1,100]
+    * Number of entries per page. Value range: [1, 100].
     */
     @SerializedName("Limit")
     @Expose
@@ -80,80 +80,80 @@ public class DescribeHiveQueriesRequest extends AbstractModel {
     private Long EndTimeLte;
 
     /**
-     * Get The cluster ID. 
-     * @return InstanceId The cluster ID.
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The cluster ID.
-     * @param InstanceId The cluster ID.
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The start time in seconds. 
-     * @return StartTime The start time in seconds.
+     * Get Start time (s). 
+     * @return StartTime Start time (s).
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time in seconds.
-     * @param StartTime The start time in seconds.
+     * Set Start time (s).
+     * @param StartTime Start time (s).
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds. 
-     * @return EndTime The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
+     * Get End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day). 
+     * @return EndTime End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
-     * @param EndTime The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
+     * Set End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
+     * @param EndTime End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Starting offset for pagination. Start value: 0 
-     * @return Offset Starting offset for pagination. Start value: 0
+     * Get Starting offset for pages, starting from 0. 
+     * @return Offset Starting offset for pages, starting from 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Starting offset for pagination. Start value: 0
-     * @param Offset Starting offset for pagination. Start value: 0
+     * Set Starting offset for pages, starting from 0.
+     * @param Offset Starting offset for pages, starting from 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Page size. Valid range: [1,100] 
-     * @return Limit Page size. Valid range: [1,100]
+     * Get Number of entries per page. Value range: [1, 100]. 
+     * @return Limit Number of entries per page. Value range: [1, 100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page size. Valid range: [1,100]
-     * @param Limit Page size. Valid range: [1,100]
+     * Set Number of entries per page. Value range: [1, 100].
+     * @param Limit Number of entries per page. Value range: [1, 100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

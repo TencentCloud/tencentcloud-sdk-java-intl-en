@@ -31,21 +31,21 @@ public class DescribeInsightListRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+    * Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+    * End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+    * Number of items returned per page. Minimum value: 1. Maximum value: 100.
     */
     @SerializedName("PageSize")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeInsightListRequest extends AbstractModel {
     private Long Page;
 
     /**
-    * Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
+    * Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Whether it includes specific parameter suggestions and other information
+    * Whether information such as specific parameter suggestions is included.
     */
     @SerializedName("MustHasContext")
     @Expose
@@ -89,48 +89,48 @@ public class DescribeInsightListRequest extends AbstractModel {
     }
 
     /**
-     * Get Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying. 
-     * @return StartTime Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+     * Get Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries. 
+     * @return StartTime Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
-     * @param StartTime Start time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+     * Set Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+     * @param StartTime Start time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying. 
-     * @return EndTime End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+     * Get End time of the obtained insight result. This time is used to filter the start time of App or Hive queries. 
+     * @return EndTime End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
-     * @param EndTime End time of the obtained insight result. The time is specific for filtering the start time of App or Hive querying.
+     * Set End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
+     * @param EndTime End time of the obtained insight result. This time is used to filter the start time of App or Hive queries.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Page size for pagination query. The minimum value is 1, and the maximum value is 100. 
-     * @return PageSize Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+     * Get Number of items returned per page. Minimum value: 1. Maximum value: 100. 
+     * @return PageSize Number of items returned per page. Minimum value: 1. Maximum value: 100.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size for pagination query. The minimum value is 1, and the maximum value is 100.
-     * @param PageSize Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+     * Set Number of items returned per page. Minimum value: 1. Maximum value: 100.
+     * @param PageSize Number of items returned per page. Minimum value: 1. Maximum value: 100.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -153,32 +153,32 @@ public class DescribeInsightListRequest extends AbstractModel {
     }
 
     /**
-     * Get Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default. 
-     * @return Type Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
+     * Get Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default. 
+     * @return Type Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
-     * @param Type Query type. Types such as Hive,Spark,DLC_Spark,Spark_SQL,SCHEDULE,MapReduce,Trino are supported. All are queried by default.
+     * Set Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
+     * @param Type Query type. Types such as HIVE, SPARK, DLC_SPARK, SPARK_SQL, SCHEDULE, MAPREDUCE, and TRINO are supported. All are queried by default.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Whether it includes specific parameter suggestions and other information 
-     * @return MustHasContext Whether it includes specific parameter suggestions and other information
+     * Get Whether information such as specific parameter suggestions is included. 
+     * @return MustHasContext Whether information such as specific parameter suggestions is included.
      */
     public Boolean getMustHasContext() {
         return this.MustHasContext;
     }
 
     /**
-     * Set Whether it includes specific parameter suggestions and other information
-     * @param MustHasContext Whether it includes specific parameter suggestions and other information
+     * Set Whether information such as specific parameter suggestions is included.
+     * @param MustHasContext Whether information such as specific parameter suggestions is included.
      */
     public void setMustHasContext(Boolean MustHasContext) {
         this.MustHasContext = MustHasContext;

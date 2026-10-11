@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInspectionTaskResultResponse extends AbstractModel {
 
     /**
-    * Inspection task record, encoded in Base64 format.
+    * Inspection task record encoded in Base64 format.
     */
     @SerializedName("InspectionResultInfo")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeInspectionTaskResultResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}.
+    * Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}.
     */
     @SerializedName("TypeInfo")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeInspectionTaskResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Inspection task record, encoded in Base64 format. 
-     * @return InspectionResultInfo Inspection task record, encoded in Base64 format.
+     * Get Inspection task record encoded in Base64 format. 
+     * @return InspectionResultInfo Inspection task record encoded in Base64 format.
      */
     public String getInspectionResultInfo() {
         return this.InspectionResultInfo;
     }
 
     /**
-     * Set Inspection task record, encoded in Base64 format.
-     * @param InspectionResultInfo Inspection task record, encoded in Base64 format.
+     * Set Inspection task record encoded in Base64 format.
+     * @param InspectionResultInfo Inspection task record encoded in Base64 format.
      */
     public void setInspectionResultInfo(String InspectionResultInfo) {
         this.InspectionResultInfo = InspectionResultInfo;
@@ -84,16 +84,16 @@ public class DescribeInspectionTaskResultResponse extends AbstractModel {
     }
 
     /**
-     * Get Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}. 
-     * @return TypeInfo Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}.
+     * Get Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}. 
+     * @return TypeInfo Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}.
      */
     public String getTypeInfo() {
         return this.TypeInfo;
     }
 
     /**
-     * Set Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}.
-     * @param TypeInfo Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}.
+     * Set Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}.
+     * @param TypeInfo Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}.
      */
     public void setTypeInfo(String TypeInfo) {
         this.TypeInfo = TypeInfo;

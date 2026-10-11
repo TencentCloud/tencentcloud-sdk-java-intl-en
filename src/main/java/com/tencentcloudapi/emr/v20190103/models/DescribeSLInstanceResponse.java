@@ -38,7 +38,7 @@ public class DescribeSLInstanceResponse extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+    * Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
     */
     @SerializedName("PayMode")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeSLInstanceResponse extends AbstractModel {
     private String DiskType;
 
     /**
-    * Instance single-node disk capacity, in GB.
+    * Instance single-node disk capacity (GB).
     */
     @SerializedName("DiskSize")
     @Expose
@@ -74,7 +74,6 @@ public class DescribeSLInstanceResponse extends AbstractModel {
 
     /**
     * List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -102,14 +101,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Zone;
 
     /**
-    * Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+    * Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+    * Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -123,14 +122,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
-    * Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
+    * Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+    * Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -144,7 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long NodeNum;
 
     /**
-    * 
+    * Serverless Instance infomation
     */
     @SerializedName("SLInstance")
     @Expose
@@ -190,16 +189,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription. 
-     * @return PayMode Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+     * Get Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription). 
+     * @return PayMode Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
-     * @param PayMode Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+     * Set Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
+     * @param PayMode Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -222,16 +221,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance single-node disk capacity, in GB. 
-     * @return DiskSize Instance single-node disk capacity, in GB.
+     * Get Instance single-node disk capacity (GB). 
+     * @return DiskSize Instance single-node disk capacity (GB).
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Instance single-node disk capacity, in GB.
-     * @param DiskSize Instance single-node disk capacity, in GB.
+     * Set Instance single-node disk capacity (GB).
+     * @param DiskSize Instance single-node disk capacity (GB).
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -270,10 +269,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of tags bound to the instance. 
      * @return Tags List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -281,9 +278,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags List of tags bound to the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -338,32 +333,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00. 
-     * @return ExpireTime Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+     * Get Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned. 
+     * @return ExpireTime Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
-     * @param ExpireTime Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+     * Set Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
+     * @param ExpireTime Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00. 
-     * @return IsolateTime Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+     * Get Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned. 
+     * @return IsolateTime Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
-     * @param IsolateTime Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+     * Set Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
+     * @param IsolateTime Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
@@ -386,32 +381,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED". 
-     * @return Status Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
+     * Get Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED"). 
+     * @return Status Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
-     * @param Status Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
+     * Set Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
+     * @param Status Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0. 
-     * @return AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+     * Get Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0. 
+     * @return AutoRenewFlag Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
-     * @param AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+     * Set Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
+     * @param AutoRenewFlag Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -434,16 +429,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SLInstance 
+     * Get Serverless Instance infomation 
+     * @return SLInstance Serverless Instance infomation
      */
     public SLInstance [] getSLInstance() {
         return this.SLInstance;
     }
 
     /**
-     * Set 
-     * @param SLInstance 
+     * Set Serverless Instance infomation
+     * @param SLInstance Serverless Instance infomation
      */
     public void setSLInstance(SLInstance [] SLInstance) {
         this.SLInstance = SLInstance;

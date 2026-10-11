@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CustomMetaInfo extends AbstractModel {
 
     /**
-    * JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+    * Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
     */
     @SerializedName("MetaDataJdbcUrl")
     @Expose
     private String MetaDataJdbcUrl;
 
     /**
-    * Custom MetaDB instance username
+    * Custom MetaDB username.
     */
     @SerializedName("MetaDataUser")
     @Expose
     private String MetaDataUser;
 
     /**
-    * Custom MetaDB instance password
+    * Custom MetaDB password.
     */
     @SerializedName("MetaDataPass")
     @Expose
     private String MetaDataPass;
 
     /**
-     * Get JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://` 
-     * @return MetaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+     * Get Custom MetaDB JDBC connection, which starts with jdbc:mysql://. 
+     * @return MetaDataJdbcUrl Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
      */
     public String getMetaDataJdbcUrl() {
         return this.MetaDataJdbcUrl;
     }
 
     /**
-     * Set JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
-     * @param MetaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+     * Set Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
+     * @param MetaDataJdbcUrl Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
      */
     public void setMetaDataJdbcUrl(String MetaDataJdbcUrl) {
         this.MetaDataJdbcUrl = MetaDataJdbcUrl;
     }
 
     /**
-     * Get Custom MetaDB instance username 
-     * @return MetaDataUser Custom MetaDB instance username
+     * Get Custom MetaDB username. 
+     * @return MetaDataUser Custom MetaDB username.
      */
     public String getMetaDataUser() {
         return this.MetaDataUser;
     }
 
     /**
-     * Set Custom MetaDB instance username
-     * @param MetaDataUser Custom MetaDB instance username
+     * Set Custom MetaDB username.
+     * @param MetaDataUser Custom MetaDB username.
      */
     public void setMetaDataUser(String MetaDataUser) {
         this.MetaDataUser = MetaDataUser;
     }
 
     /**
-     * Get Custom MetaDB instance password 
-     * @return MetaDataPass Custom MetaDB instance password
+     * Get Custom MetaDB password. 
+     * @return MetaDataPass Custom MetaDB password.
      */
     public String getMetaDataPass() {
         return this.MetaDataPass;
     }
 
     /**
-     * Set Custom MetaDB instance password
-     * @param MetaDataPass Custom MetaDB instance password
+     * Set Custom MetaDB password.
+     * @param MetaDataPass Custom MetaDB password.
      */
     public void setMetaDataPass(String MetaDataPass) {
         this.MetaDataPass = MetaDataPass;

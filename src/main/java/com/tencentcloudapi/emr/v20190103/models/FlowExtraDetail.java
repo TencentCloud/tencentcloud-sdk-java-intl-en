@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FlowExtraDetail extends AbstractModel {
 
     /**
-    * Additional information title.
+    * Title of additional information.
     */
     @SerializedName("Title")
     @Expose
@@ -32,33 +32,30 @@ public class FlowExtraDetail extends AbstractModel {
 
     /**
     * Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Detail")
     @Expose
     private FlowParamsDesc [] Detail;
 
     /**
-     * Get Additional information title. 
-     * @return Title Additional information title.
+     * Get Title of additional information. 
+     * @return Title Title of additional information.
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set Additional information title.
-     * @param Title Additional information title.
+     * Set Title of additional information.
+     * @param Title Title of additional information.
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get Additional information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information. 
      * @return Detail Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FlowParamsDesc [] getDetail() {
         return this.Detail;
@@ -66,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Detail Additional information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetail(FlowParamsDesc [] Detail) {
         this.Detail = Detail;

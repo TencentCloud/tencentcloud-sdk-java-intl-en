@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class PreExecuteFileSettings extends AbstractModel {
 
     /**
-    * COS path to script, which has been disused
+    * Script path on COS, which has been deprecated.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Execution script parameter
+    * Script execution parameter.
     */
     @SerializedName("Args")
     @Expose
     private String [] Args;
 
     /**
-    * COS bucket name, which has been disused
+    * COS bucket name, which has been deprecated.
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * COS region name, which has been disused
+    * COS region name, which has been deprecated.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * COS domain data, which has been disused
+    * COS domain data, which has been deprecated.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Execution sequence
+    * Execution order.
     */
     @SerializedName("RunOrder")
     @Expose
     private Long RunOrder;
 
     /**
-    * `resourceAfter` or `clusterAfter`
+    * Whether resourceAfter or clusterAfter is used.
     */
     @SerializedName("WhenRun")
     @Expose
     private String WhenRun;
 
     /**
-    * Script name, which has been disused
+    * Script file name, which has been deprecated.
     */
     @SerializedName("CosFileName")
     @Expose
     private String CosFileName;
 
     /**
-    * COS address of script
+    * COS address of the script.
     */
     @SerializedName("CosFileURI")
     @Expose
     private String CosFileURI;
 
     /**
-    * COS `SecretId`
+    * COS SecretId.
     */
     @SerializedName("CosSecretId")
     @Expose
     private String CosSecretId;
 
     /**
-    * COS `SecretKey`
+    * COS SecretKey.
     */
     @SerializedName("CosSecretKey")
     @Expose
     private String CosSecretKey;
 
     /**
-    * COS `appid`, which has been disused
+    * COS APPID, which has been deprecated.
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * Remarks
+    * Remarks.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get COS path to script, which has been disused 
-     * @return Path COS path to script, which has been disused
+     * Get Script path on COS, which has been deprecated. 
+     * @return Path Script path on COS, which has been deprecated.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set COS path to script, which has been disused
-     * @param Path COS path to script, which has been disused
+     * Set Script path on COS, which has been deprecated.
+     * @param Path Script path on COS, which has been deprecated.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Execution script parameter 
-     * @return Args Execution script parameter
+     * Get Script execution parameter. 
+     * @return Args Script execution parameter.
      */
     public String [] getArgs() {
         return this.Args;
     }
 
     /**
-     * Set Execution script parameter
-     * @param Args Execution script parameter
+     * Set Script execution parameter.
+     * @param Args Script execution parameter.
      */
     public void setArgs(String [] Args) {
         this.Args = Args;
     }
 
     /**
-     * Get COS bucket name, which has been disused 
-     * @return Bucket COS bucket name, which has been disused
+     * Get COS bucket name, which has been deprecated. 
+     * @return Bucket COS bucket name, which has been deprecated.
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set COS bucket name, which has been disused
-     * @param Bucket COS bucket name, which has been disused
+     * Set COS bucket name, which has been deprecated.
+     * @param Bucket COS bucket name, which has been deprecated.
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get COS region name, which has been disused 
-     * @return Region COS region name, which has been disused
+     * Get COS region name, which has been deprecated. 
+     * @return Region COS region name, which has been deprecated.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set COS region name, which has been disused
-     * @param Region COS region name, which has been disused
+     * Set COS region name, which has been deprecated.
+     * @param Region COS region name, which has been deprecated.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get COS domain data, which has been disused 
-     * @return Domain COS domain data, which has been disused
+     * Get COS domain data, which has been deprecated. 
+     * @return Domain COS domain data, which has been deprecated.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set COS domain data, which has been disused
-     * @param Domain COS domain data, which has been disused
+     * Set COS domain data, which has been deprecated.
+     * @param Domain COS domain data, which has been deprecated.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Execution sequence 
-     * @return RunOrder Execution sequence
+     * Get Execution order. 
+     * @return RunOrder Execution order.
      */
     public Long getRunOrder() {
         return this.RunOrder;
     }
 
     /**
-     * Set Execution sequence
-     * @param RunOrder Execution sequence
+     * Set Execution order.
+     * @param RunOrder Execution order.
      */
     public void setRunOrder(Long RunOrder) {
         this.RunOrder = RunOrder;
     }
 
     /**
-     * Get `resourceAfter` or `clusterAfter` 
-     * @return WhenRun `resourceAfter` or `clusterAfter`
+     * Get Whether resourceAfter or clusterAfter is used. 
+     * @return WhenRun Whether resourceAfter or clusterAfter is used.
      */
     public String getWhenRun() {
         return this.WhenRun;
     }
 
     /**
-     * Set `resourceAfter` or `clusterAfter`
-     * @param WhenRun `resourceAfter` or `clusterAfter`
+     * Set Whether resourceAfter or clusterAfter is used.
+     * @param WhenRun Whether resourceAfter or clusterAfter is used.
      */
     public void setWhenRun(String WhenRun) {
         this.WhenRun = WhenRun;
     }
 
     /**
-     * Get Script name, which has been disused 
-     * @return CosFileName Script name, which has been disused
+     * Get Script file name, which has been deprecated. 
+     * @return CosFileName Script file name, which has been deprecated.
      */
     public String getCosFileName() {
         return this.CosFileName;
     }
 
     /**
-     * Set Script name, which has been disused
-     * @param CosFileName Script name, which has been disused
+     * Set Script file name, which has been deprecated.
+     * @param CosFileName Script file name, which has been deprecated.
      */
     public void setCosFileName(String CosFileName) {
         this.CosFileName = CosFileName;
     }
 
     /**
-     * Get COS address of script 
-     * @return CosFileURI COS address of script
+     * Get COS address of the script. 
+     * @return CosFileURI COS address of the script.
      */
     public String getCosFileURI() {
         return this.CosFileURI;
     }
 
     /**
-     * Set COS address of script
-     * @param CosFileURI COS address of script
+     * Set COS address of the script.
+     * @param CosFileURI COS address of the script.
      */
     public void setCosFileURI(String CosFileURI) {
         this.CosFileURI = CosFileURI;
     }
 
     /**
-     * Get COS `SecretId` 
-     * @return CosSecretId COS `SecretId`
+     * Get COS SecretId. 
+     * @return CosSecretId COS SecretId.
      */
     public String getCosSecretId() {
         return this.CosSecretId;
     }
 
     /**
-     * Set COS `SecretId`
-     * @param CosSecretId COS `SecretId`
+     * Set COS SecretId.
+     * @param CosSecretId COS SecretId.
      */
     public void setCosSecretId(String CosSecretId) {
         this.CosSecretId = CosSecretId;
     }
 
     /**
-     * Get COS `SecretKey` 
-     * @return CosSecretKey COS `SecretKey`
+     * Get COS SecretKey. 
+     * @return CosSecretKey COS SecretKey.
      */
     public String getCosSecretKey() {
         return this.CosSecretKey;
     }
 
     /**
-     * Set COS `SecretKey`
-     * @param CosSecretKey COS `SecretKey`
+     * Set COS SecretKey.
+     * @param CosSecretKey COS SecretKey.
      */
     public void setCosSecretKey(String CosSecretKey) {
         this.CosSecretKey = CosSecretKey;
     }
 
     /**
-     * Get COS `appid`, which has been disused 
-     * @return AppId COS `appid`, which has been disused
+     * Get COS APPID, which has been deprecated. 
+     * @return AppId COS APPID, which has been deprecated.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set COS `appid`, which has been disused
-     * @param AppId COS `appid`, which has been disused
+     * Set COS APPID, which has been deprecated.
+     * @param AppId COS APPID, which has been deprecated.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get Remarks. 
+     * @return Remark Remarks.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set Remarks.
+     * @param Remark Remarks.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

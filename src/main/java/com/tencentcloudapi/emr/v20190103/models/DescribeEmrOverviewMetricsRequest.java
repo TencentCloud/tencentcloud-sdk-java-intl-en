@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEmrOverviewMetricsRequest extends AbstractModel {
 
     /**
-    * End time
+    * End time.
     */
     @SerializedName("End")
     @Expose
     private Long End;
 
     /**
-    * Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+    * Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
     */
     @SerializedName("Metric")
     @Expose
@@ -52,14 +52,14 @@ public class DescribeEmrOverviewMetricsRequest extends AbstractModel {
     private String Downsample;
 
     /**
-    * Start time, not required for pie charts
+    * Start time, which is not required for pie charts.
     */
     @SerializedName("Start")
     @Expose
     private Long Start;
 
     /**
-    * Aggregation method, for future use
+    * Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
     */
     @SerializedName("Aggregator")
     @Expose
@@ -73,32 +73,32 @@ public class DescribeEmrOverviewMetricsRequest extends AbstractModel {
     private String Tags;
 
     /**
-     * Get End time 
-     * @return End End time
+     * Get End time. 
+     * @return End End time.
      */
     public Long getEnd() {
         return this.End;
     }
 
     /**
-     * Set End time
-     * @param End End time
+     * Set End time.
+     * @param End End time.
      */
     public void setEnd(Long End) {
         this.End = End;
     }
 
     /**
-     * Get Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount. 
-     * @return Metric Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+     * Get Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity). 
+     * @return Metric Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
-     * @param Metric Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+     * Set Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
+     * @param Metric Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
@@ -137,32 +137,32 @@ public class DescribeEmrOverviewMetricsRequest extends AbstractModel {
     }
 
     /**
-     * Get Start time, not required for pie charts 
-     * @return Start Start time, not required for pie charts
+     * Get Start time, which is not required for pie charts. 
+     * @return Start Start time, which is not required for pie charts.
      */
     public Long getStart() {
         return this.Start;
     }
 
     /**
-     * Set Start time, not required for pie charts
-     * @param Start Start time, not required for pie charts
+     * Set Start time, which is not required for pie charts.
+     * @param Start Start time, which is not required for pie charts.
      */
     public void setStart(Long Start) {
         this.Start = Start;
     }
 
     /**
-     * Get Aggregation method, for future use 
-     * @return Aggregator Aggregation method, for future use
+     * Get Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed. 
+     * @return Aggregator Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
      */
     public String getAggregator() {
         return this.Aggregator;
     }
 
     /**
-     * Set Aggregation method, for future use
-     * @param Aggregator Aggregation method, for future use
+     * Set Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
+     * @param Aggregator Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
      */
     public void setAggregator(String Aggregator) {
         this.Aggregator = Aggregator;

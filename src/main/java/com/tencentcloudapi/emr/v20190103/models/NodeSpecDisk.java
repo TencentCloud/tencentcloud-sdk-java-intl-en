@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class NodeSpecDisk extends AbstractModel {
 
     /**
-    * Quantity.
+    * Number.
     */
     @SerializedName("Count")
     @Expose
@@ -52,16 +52,23 @@ public class NodeSpecDisk extends AbstractModel {
     private Long DefaultDiskSize;
 
     /**
-     * Get Quantity. 
-     * @return Count Quantity.
+    * Whether it is a special data disk, for example, a single-replica disk.
+    */
+    @SerializedName("IsSpecialDisk")
+    @Expose
+    private Boolean IsSpecialDisk;
+
+    /**
+     * Get Number. 
+     * @return Count Number.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Quantity.
-     * @param Count Quantity.
+     * Set Number.
+     * @param Count Number.
      */
     public void setCount(Long Count) {
         this.Count = Count;
@@ -115,6 +122,22 @@ public class NodeSpecDisk extends AbstractModel {
         this.DefaultDiskSize = DefaultDiskSize;
     }
 
+    /**
+     * Get Whether it is a special data disk, for example, a single-replica disk. 
+     * @return IsSpecialDisk Whether it is a special data disk, for example, a single-replica disk.
+     */
+    public Boolean getIsSpecialDisk() {
+        return this.IsSpecialDisk;
+    }
+
+    /**
+     * Set Whether it is a special data disk, for example, a single-replica disk.
+     * @param IsSpecialDisk Whether it is a special data disk, for example, a single-replica disk.
+     */
+    public void setIsSpecialDisk(Boolean IsSpecialDisk) {
+        this.IsSpecialDisk = IsSpecialDisk;
+    }
+
     public NodeSpecDisk() {
     }
 
@@ -135,6 +158,9 @@ public class NodeSpecDisk extends AbstractModel {
         if (source.DefaultDiskSize != null) {
             this.DefaultDiskSize = new Long(source.DefaultDiskSize);
         }
+        if (source.IsSpecialDisk != null) {
+            this.IsSpecialDisk = new Boolean(source.IsSpecialDisk);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class NodeSpecDisk extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DefaultDiskSize", this.DefaultDiskSize);
+        this.setParamSimple(map, prefix + "IsSpecialDisk", this.IsSpecialDisk);
 
     }
 }

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class WeekRepeatStrategy extends AbstractModel {
 
     /**
-    * Specific time for repetition task execution, such as 01:02:00.
+    * Specific time for repetition task execution, for example, 01:02:00.
     */
     @SerializedName("ExecuteAtTimeOfDay")
     @Expose
     private String ExecuteAtTimeOfDay;
 
     /**
-    * Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
     */
     @SerializedName("DaysOfWeek")
     @Expose
     private Long [] DaysOfWeek;
 
     /**
-     * Get Specific time for repetition task execution, such as 01:02:00. 
-     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+     * Get Specific time for repetition task execution, for example, 01:02:00. 
+     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
      */
     public String getExecuteAtTimeOfDay() {
         return this.ExecuteAtTimeOfDay;
     }
 
     /**
-     * Set Specific time for repetition task execution, such as 01:02:00.
-     * @param ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+     * Set Specific time for repetition task execution, for example, 01:02:00.
+     * @param ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
      */
     public void setExecuteAtTimeOfDay(String ExecuteAtTimeOfDay) {
         this.ExecuteAtTimeOfDay = ExecuteAtTimeOfDay;
     }
 
     /**
-     * Get Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DaysOfWeek Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday. 
+     * @return DaysOfWeek Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
      */
     public Long [] getDaysOfWeek() {
         return this.DaysOfWeek;
     }
 
     /**
-     * Set Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DaysOfWeek Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
+     * @param DaysOfWeek Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
      */
     public void setDaysOfWeek(Long [] DaysOfWeek) {
         this.DaysOfWeek = DaysOfWeek;

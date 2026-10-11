@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeResourceScheduleResponse extends AbstractModel {
 
     /**
-    * Whether to enable the resource scheduling feature
+    * Whether the resource scheduling feature is enabled.
     */
     @SerializedName("OpenSwitch")
     @Expose
     private Boolean OpenSwitch;
 
     /**
-    * The resource scheduler in service
+    * Resource scheduler in use.
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * Fair Scheduler information
+    * Information of the fair scheduler.
     */
     @SerializedName("FSInfo")
     @Expose
     private String FSInfo;
 
     /**
-    * Capacity Scheduler information
+    * Information of the capacity scheduler.
     */
     @SerializedName("CSInfo")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeResourceScheduleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether to enable the resource scheduling feature 
-     * @return OpenSwitch Whether to enable the resource scheduling feature
+     * Get Whether the resource scheduling feature is enabled. 
+     * @return OpenSwitch Whether the resource scheduling feature is enabled.
      */
     public Boolean getOpenSwitch() {
         return this.OpenSwitch;
     }
 
     /**
-     * Set Whether to enable the resource scheduling feature
-     * @param OpenSwitch Whether to enable the resource scheduling feature
+     * Set Whether the resource scheduling feature is enabled.
+     * @param OpenSwitch Whether the resource scheduling feature is enabled.
      */
     public void setOpenSwitch(Boolean OpenSwitch) {
         this.OpenSwitch = OpenSwitch;
     }
 
     /**
-     * Get The resource scheduler in service 
-     * @return Scheduler The resource scheduler in service
+     * Get Resource scheduler in use. 
+     * @return Scheduler Resource scheduler in use.
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set The resource scheduler in service
-     * @param Scheduler The resource scheduler in service
+     * Set Resource scheduler in use.
+     * @param Scheduler Resource scheduler in use.
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get Fair Scheduler information 
-     * @return FSInfo Fair Scheduler information
+     * Get Information of the fair scheduler. 
+     * @return FSInfo Information of the fair scheduler.
      */
     public String getFSInfo() {
         return this.FSInfo;
     }
 
     /**
-     * Set Fair Scheduler information
-     * @param FSInfo Fair Scheduler information
+     * Set Information of the fair scheduler.
+     * @param FSInfo Information of the fair scheduler.
      */
     public void setFSInfo(String FSInfo) {
         this.FSInfo = FSInfo;
     }
 
     /**
-     * Get Capacity Scheduler information 
-     * @return CSInfo Capacity Scheduler information
+     * Get Information of the capacity scheduler. 
+     * @return CSInfo Information of the capacity scheduler.
      */
     public String getCSInfo() {
         return this.CSInfo;
     }
 
     /**
-     * Set Capacity Scheduler information
-     * @param CSInfo Capacity Scheduler information
+     * Set Information of the capacity scheduler.
+     * @param CSInfo Information of the capacity scheduler.
      */
     public void setCSInfo(String CSInfo) {
         this.CSInfo = CSInfo;

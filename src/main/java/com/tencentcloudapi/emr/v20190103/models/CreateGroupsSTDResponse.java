@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateGroupsSTDResponse extends AbstractModel {
 
     /**
-    * Output result of each user group.
+    * Response result of each user group.
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateGroupsSTDResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Output result of each user group. 
-     * @return Data Output result of each user group.
+     * Get Response result of each user group. 
+     * @return Data Response result of each user group.
      */
     public ResultItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Output result of each user group.
-     * @param Data Output result of each user group.
+     * Set Response result of each user group.
+     * @param Data Response result of each user group.
      */
     public void setData(ResultItem [] Data) {
         this.Data = Data;

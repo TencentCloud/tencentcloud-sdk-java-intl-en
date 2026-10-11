@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class HostVolumeContext extends AbstractModel {
 
     /**
-    * Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+    * Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
     */
     @SerializedName("VolumePath")
     @Expose
     private String VolumePath;
 
     /**
-     * Get Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod. 
-     * @return VolumePath Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+     * Get Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod. 
+     * @return VolumePath Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
      */
     public String getVolumePath() {
         return this.VolumePath;
     }
 
     /**
-     * Set Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-     * @param VolumePath Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+     * Set Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
+     * @param VolumePath Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
      */
     public void setVolumePath(String VolumePath) {
         this.VolumePath = VolumePath;

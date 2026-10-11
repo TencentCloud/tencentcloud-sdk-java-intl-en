@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DefaultSetting extends AbstractModel {
 
     /**
-    * Name: the key for input parameters.
+    * Name, which is used as the key for request parameters.
     */
     @SerializedName("Name")
     @Expose
@@ -45,7 +45,7 @@ public class DefaultSetting extends AbstractModel {
     private String Prompt;
 
     /**
-    * Key: display the configuration item in the configuration file.
+    * Key, which is used to display the configuration items in the configuration file.
     */
     @SerializedName("Key")
     @Expose
@@ -59,16 +59,16 @@ public class DefaultSetting extends AbstractModel {
     private String Value;
 
     /**
-     * Get Name: the key for input parameters. 
-     * @return Name Name: the key for input parameters.
+     * Get Name, which is used as the key for request parameters. 
+     * @return Name Name, which is used as the key for request parameters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name: the key for input parameters.
-     * @param Name Name: the key for input parameters.
+     * Set Name, which is used as the key for request parameters.
+     * @param Name Name, which is used as the key for request parameters.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -107,16 +107,16 @@ public class DefaultSetting extends AbstractModel {
     }
 
     /**
-     * Get Key: display the configuration item in the configuration file. 
-     * @return Key Key: display the configuration item in the configuration file.
+     * Get Key, which is used to display the configuration items in the configuration file. 
+     * @return Key Key, which is used to display the configuration items in the configuration file.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key: display the configuration item in the configuration file.
-     * @param Key Key: display the configuration item in the configuration file.
+     * Set Key, which is used to display the configuration items in the configuration file.
+     * @param Key Key, which is used to display the configuration items in the configuration file.
      */
     public void setKey(String Key) {
         this.Key = Key;

@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class PodVolume extends AbstractModel {
 
     /**
-    * Storage type, which can be "pvc" or "hostpath".
+    * Storage type. Valid values: "pvc" and "hostpath".
     */
     @SerializedName("VolumeType")
     @Expose
     private String VolumeType;
 
     /**
-    * This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * When VolumeType is set to "pvc", this parameter takes effect.
     */
     @SerializedName("PVCVolume")
     @Expose
     private PersistentVolumeContext PVCVolume;
 
     /**
-    * This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * When VolumeType is set to "hostpath", this parameter takes effect.
     */
     @SerializedName("HostVolume")
     @Expose
     private HostVolumeContext HostVolume;
 
     /**
-     * Get Storage type, which can be "pvc" or "hostpath". 
-     * @return VolumeType Storage type, which can be "pvc" or "hostpath".
+     * Get Storage type. Valid values: "pvc" and "hostpath". 
+     * @return VolumeType Storage type. Valid values: "pvc" and "hostpath".
      */
     public String getVolumeType() {
         return this.VolumeType;
     }
 
     /**
-     * Set Storage type, which can be "pvc" or "hostpath".
-     * @param VolumeType Storage type, which can be "pvc" or "hostpath".
+     * Set Storage type. Valid values: "pvc" and "hostpath".
+     * @param VolumeType Storage type. Valid values: "pvc" and "hostpath".
      */
     public void setVolumeType(String VolumeType) {
         this.VolumeType = VolumeType;
     }
 
     /**
-     * Get This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PVCVolume This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get When VolumeType is set to "pvc", this parameter takes effect. 
+     * @return PVCVolume When VolumeType is set to "pvc", this parameter takes effect.
      */
     public PersistentVolumeContext getPVCVolume() {
         return this.PVCVolume;
     }
 
     /**
-     * Set This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PVCVolume This field will take effect if `VolumeType` is `pvc`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set When VolumeType is set to "pvc", this parameter takes effect.
+     * @param PVCVolume When VolumeType is set to "pvc", this parameter takes effect.
      */
     public void setPVCVolume(PersistentVolumeContext PVCVolume) {
         this.PVCVolume = PVCVolume;
     }
 
     /**
-     * Get This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostVolume This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get When VolumeType is set to "hostpath", this parameter takes effect. 
+     * @return HostVolume When VolumeType is set to "hostpath", this parameter takes effect.
      */
     public HostVolumeContext getHostVolume() {
         return this.HostVolume;
     }
 
     /**
-     * Set This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostVolume This field will take effect if `VolumeType` is `hostpath`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set When VolumeType is set to "hostpath", this parameter takes effect.
+     * @param HostVolume When VolumeType is set to "hostpath", this parameter takes effect.
      */
     public void setHostVolume(HostVolumeContext HostVolume) {
         this.HostVolume = HostVolume;

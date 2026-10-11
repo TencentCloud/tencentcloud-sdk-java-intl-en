@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AssetFilters extends AbstractModel {
 
     /**
-    * Name of filter key
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * One or more filter values
+    * 
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Whether to use fuzzy query
+    * 
     */
     @SerializedName("ExactMatch")
     @Expose
     private Boolean ExactMatch;
 
     /**
-     * Get Name of filter key 
-     * @return Name Name of filter key
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of filter key
-     * @param Name Name of filter key
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get One or more filter values 
-     * @return Values One or more filter values
+     * Get  
+     * @return Values 
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set One or more filter values
-     * @param Values One or more filter values
+     * Set 
+     * @param Values 
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Whether to use fuzzy query 
-     * @return ExactMatch Whether to use fuzzy query
+     * Get  
+     * @return ExactMatch 
      */
     public Boolean getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Whether to use fuzzy query
-     * @param ExactMatch Whether to use fuzzy query
+     * Set 
+     * @param ExactMatch 
      */
     public void setExactMatch(Boolean ExactMatch) {
         this.ExactMatch = ExactMatch;

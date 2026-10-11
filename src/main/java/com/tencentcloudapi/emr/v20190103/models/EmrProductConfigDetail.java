@@ -25,7 +25,6 @@ public class EmrProductConfigDetail extends AbstractModel {
 
     /**
     * Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SoftInfo")
     @Expose
@@ -60,43 +59,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ComNodeSize;
 
     /**
-    * Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Master node resources.
     */
     @SerializedName("MasterResource")
     @Expose
     private ResourceDetail MasterResource;
 
     /**
-    * Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Core node resources.
     */
     @SerializedName("CoreResource")
     @Expose
     private ResourceDetail CoreResource;
 
     /**
-    * Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task node resources.
     */
     @SerializedName("TaskResource")
     @Expose
     private ResourceDetail TaskResource;
 
     /**
-    * Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Common node resources.
     */
     @SerializedName("ComResource")
     @Expose
     private ResourceDetail ComResource;
 
     /**
-    * Whether to use COS.
+    * Whether COS is used.
     */
     @SerializedName("OnCos")
     @Expose
@@ -138,7 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SecurityGroup;
 
     /**
-    * Whether to enable CBS encryption.
+    * Whether CBS encryption is enabled.
     */
     @SerializedName("CbsEncrypt")
     @Expose
@@ -153,7 +144,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SecurityGroups")
     @Expose
@@ -167,10 +157,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PublicKeyId;
 
     /**
-     * Get Software information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Software information. 
      * @return SoftInfo Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSoftInfo() {
         return this.SoftInfo;
@@ -178,9 +166,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SoftInfo Software information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSoftInfo(String [] SoftInfo) {
         this.SoftInfo = SoftInfo;
@@ -251,112 +237,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MasterResource Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Master node resources. 
+     * @return MasterResource Master node resources.
      */
     public ResourceDetail getMasterResource() {
         return this.MasterResource;
     }
 
     /**
-     * Set Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MasterResource Primary node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Master node resources.
+     * @param MasterResource Master node resources.
      */
     public void setMasterResource(ResourceDetail MasterResource) {
         this.MasterResource = MasterResource;
     }
 
     /**
-     * Get Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CoreResource Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Core node resources. 
+     * @return CoreResource Core node resources.
      */
     public ResourceDetail getCoreResource() {
         return this.CoreResource;
     }
 
     /**
-     * Set Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CoreResource Core node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Core node resources.
+     * @param CoreResource Core node resources.
      */
     public void setCoreResource(ResourceDetail CoreResource) {
         this.CoreResource = CoreResource;
     }
 
     /**
-     * Get Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskResource Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task node resources. 
+     * @return TaskResource Task node resources.
      */
     public ResourceDetail getTaskResource() {
         return this.TaskResource;
     }
 
     /**
-     * Set Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskResource Task node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task node resources.
+     * @param TaskResource Task node resources.
      */
     public void setTaskResource(ResourceDetail TaskResource) {
         this.TaskResource = TaskResource;
     }
 
     /**
-     * Get Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComResource Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Common node resources. 
+     * @return ComResource Common node resources.
      */
     public ResourceDetail getComResource() {
         return this.ComResource;
     }
 
     /**
-     * Set Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ComResource Common node resources
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Common node resources.
+     * @param ComResource Common node resources.
      */
     public void setComResource(ResourceDetail ComResource) {
         this.ComResource = ComResource;
     }
 
     /**
-     * Get Whether to use COS. 
-     * @return OnCos Whether to use COS.
+     * Get Whether COS is used. 
+     * @return OnCos Whether COS is used.
      */
     public Boolean getOnCos() {
         return this.OnCos;
     }
 
     /**
-     * Set Whether to use COS.
-     * @param OnCos Whether to use COS.
+     * Set Whether COS is used.
+     * @param OnCos Whether COS is used.
      */
     public void setOnCos(Boolean OnCos) {
         this.OnCos = OnCos;
@@ -443,16 +397,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable CBS encryption. 
-     * @return CbsEncrypt Whether to enable CBS encryption.
+     * Get Whether CBS encryption is enabled. 
+     * @return CbsEncrypt Whether CBS encryption is enabled.
      */
     public Long getCbsEncrypt() {
         return this.CbsEncrypt;
     }
 
     /**
-     * Set Whether to enable CBS encryption.
-     * @param CbsEncrypt Whether to enable CBS encryption.
+     * Set Whether CBS encryption is enabled.
+     * @param CbsEncrypt Whether CBS encryption is enabled.
      */
     public void setCbsEncrypt(Long CbsEncrypt) {
         this.CbsEncrypt = CbsEncrypt;
@@ -475,10 +429,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Security group.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Security group. 
      * @return SecurityGroups Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSecurityGroups() {
         return this.SecurityGroups;
@@ -486,9 +438,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SecurityGroups Security group.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSecurityGroups(String [] SecurityGroups) {
         this.SecurityGroups = SecurityGroups;

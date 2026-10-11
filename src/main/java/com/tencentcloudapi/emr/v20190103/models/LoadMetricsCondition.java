@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class LoadMetricsCondition extends AbstractModel {
 
     /**
-    * Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
+    * Rule statistics cycle. One, three, and five minutes are supported.
     */
     @SerializedName("StatisticPeriod")
     @Expose
     private Long StatisticPeriod;
 
     /**
-    * Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+    * Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
     */
     @SerializedName("TriggerThreshold")
     @Expose
@@ -52,40 +52,39 @@ public class LoadMetricsCondition extends AbstractModel {
     private Long MetricId;
 
     /**
-    * Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Triggering condition.
     */
     @SerializedName("Conditions")
     @Expose
     private TriggerCondition [] Conditions;
 
     /**
-     * Get Rule statistics cycle. Options include 1 min, 3 min, and 5 min. 
-     * @return StatisticPeriod Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
+     * Get Rule statistics cycle. One, three, and five minutes are supported. 
+     * @return StatisticPeriod Rule statistics cycle. One, three, and five minutes are supported.
      */
     public Long getStatisticPeriod() {
         return this.StatisticPeriod;
     }
 
     /**
-     * Set Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
-     * @param StatisticPeriod Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
+     * Set Rule statistics cycle. One, three, and five minutes are supported.
+     * @param StatisticPeriod Rule statistics cycle. One, three, and five minutes are supported.
      */
     public void setStatisticPeriod(Long StatisticPeriod) {
         this.StatisticPeriod = StatisticPeriod;
     }
 
     /**
-     * Get Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times. 
-     * @return TriggerThreshold Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+     * Get Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times. 
+     * @return TriggerThreshold Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
      */
     public Long getTriggerThreshold() {
         return this.TriggerThreshold;
     }
 
     /**
-     * Set Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
-     * @param TriggerThreshold Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+     * Set Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
+     * @param TriggerThreshold Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
      */
     public void setTriggerThreshold(Long TriggerThreshold) {
         this.TriggerThreshold = TriggerThreshold;
@@ -124,20 +123,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Conditions Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Triggering condition. 
+     * @return Conditions Triggering condition.
      */
     public TriggerCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Conditions Trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Triggering condition.
+     * @param Conditions Triggering condition.
      */
     public void setConditions(TriggerCondition [] Conditions) {
         this.Conditions = Conditions;

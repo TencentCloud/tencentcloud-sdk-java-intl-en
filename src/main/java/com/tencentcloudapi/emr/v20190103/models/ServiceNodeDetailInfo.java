@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServiceNodeDetailInfo extends AbstractModel {
 
     /**
-    * Process node IP
+    * Process node IP address.
     */
     @SerializedName("Ip")
     @Expose
@@ -38,42 +38,42 @@ public class ServiceNodeDetailInfo extends AbstractModel {
     private Long NodeType;
 
     /**
-    * Process name
+    * Process name.
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * Service component status
+    * Service component status.
     */
     @SerializedName("ServiceStatus")
     @Expose
     private Long ServiceStatus;
 
     /**
-    * Process monitoring status
+    * Process monitoring status.
     */
     @SerializedName("MonitorStatus")
     @Expose
     private Long MonitorStatus;
 
     /**
-    * Service component status
+    * Service component status.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Process port information
+    * Process port information.
     */
     @SerializedName("PortsInfo")
     @Expose
     private String PortsInfo;
 
     /**
-    * Last restart time.
+    * Latest restart time.
     */
     @SerializedName("LastRestartTime")
     @Expose
@@ -101,16 +101,14 @@ public class ServiceNodeDetailInfo extends AbstractModel {
     private String ConfGroupName;
 
     /**
-    * Whether the node needs to be restarted
+    * Whether the node needs to be restarted.
     */
     @SerializedName("ConfStatus")
     @Expose
     private Long ConfStatus;
 
     /**
-    * Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process detection information.
     */
     @SerializedName("ServiceDetectionInfo")
     @Expose
@@ -124,9 +122,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String NodeFlagFilter;
 
     /**
-    * Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process health status.
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -140,16 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsSupportRoleMonitor;
 
     /**
-    * Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Suspension policy.
     */
     @SerializedName("StopPolicies")
     @Expose
     private RestartPolicy [] StopPolicies;
 
     /**
-    * Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+    * Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
     */
     @SerializedName("HAState")
     @Expose
@@ -170,23 +164,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsFederation;
 
     /**
-    * Whether the DataNode is in maintenance status.
+    * Whether the DataNode is in the maintenance status.
     */
     @SerializedName("DataNodeMaintenanceState")
     @Expose
     private Long DataNodeMaintenanceState;
 
     /**
-     * Get Process node IP 
-     * @return Ip Process node IP
+     * Get Process node IP address. 
+     * @return Ip Process node IP address.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Process node IP
-     * @param Ip Process node IP
+     * Set Process node IP address.
+     * @param Ip Process node IP address.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
@@ -209,96 +203,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Process name 
-     * @return NodeName Process name
+     * Get Process name. 
+     * @return NodeName Process name.
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set Process name
-     * @param NodeName Process name
+     * Set Process name.
+     * @param NodeName Process name.
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Service component status 
-     * @return ServiceStatus Service component status
+     * Get Service component status. 
+     * @return ServiceStatus Service component status.
      */
     public Long getServiceStatus() {
         return this.ServiceStatus;
     }
 
     /**
-     * Set Service component status
-     * @param ServiceStatus Service component status
+     * Set Service component status.
+     * @param ServiceStatus Service component status.
      */
     public void setServiceStatus(Long ServiceStatus) {
         this.ServiceStatus = ServiceStatus;
     }
 
     /**
-     * Get Process monitoring status 
-     * @return MonitorStatus Process monitoring status
+     * Get Process monitoring status. 
+     * @return MonitorStatus Process monitoring status.
      */
     public Long getMonitorStatus() {
         return this.MonitorStatus;
     }
 
     /**
-     * Set Process monitoring status
-     * @param MonitorStatus Process monitoring status
+     * Set Process monitoring status.
+     * @param MonitorStatus Process monitoring status.
      */
     public void setMonitorStatus(Long MonitorStatus) {
         this.MonitorStatus = MonitorStatus;
     }
 
     /**
-     * Get Service component status 
-     * @return Status Service component status
+     * Get Service component status. 
+     * @return Status Service component status.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Service component status
-     * @param Status Service component status
+     * Set Service component status.
+     * @param Status Service component status.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Process port information 
-     * @return PortsInfo Process port information
+     * Get Process port information. 
+     * @return PortsInfo Process port information.
      */
     public String getPortsInfo() {
         return this.PortsInfo;
     }
 
     /**
-     * Set Process port information
-     * @param PortsInfo Process port information
+     * Set Process port information.
+     * @param PortsInfo Process port information.
      */
     public void setPortsInfo(String PortsInfo) {
         this.PortsInfo = PortsInfo;
     }
 
     /**
-     * Get Last restart time. 
-     * @return LastRestartTime Last restart time.
+     * Get Latest restart time. 
+     * @return LastRestartTime Latest restart time.
      */
     public String getLastRestartTime() {
         return this.LastRestartTime;
     }
 
     /**
-     * Set Last restart time.
-     * @param LastRestartTime Last restart time.
+     * Set Latest restart time.
+     * @param LastRestartTime Latest restart time.
      */
     public void setLastRestartTime(String LastRestartTime) {
         this.LastRestartTime = LastRestartTime;
@@ -353,40 +347,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the node needs to be restarted 
-     * @return ConfStatus Whether the node needs to be restarted
+     * Get Whether the node needs to be restarted. 
+     * @return ConfStatus Whether the node needs to be restarted.
      */
     public Long getConfStatus() {
         return this.ConfStatus;
     }
 
     /**
-     * Set Whether the node needs to be restarted
-     * @param ConfStatus Whether the node needs to be restarted
+     * Set Whether the node needs to be restarted.
+     * @param ConfStatus Whether the node needs to be restarted.
      */
     public void setConfStatus(Long ConfStatus) {
         this.ConfStatus = ConfStatus;
     }
 
     /**
-     * Get Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceDetectionInfo Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process detection information. 
+     * @return ServiceDetectionInfo Process detection information.
      */
     public ServiceProcessFunctionInfo [] getServiceDetectionInfo() {
         return this.ServiceDetectionInfo;
     }
 
     /**
-     * Set Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceDetectionInfo Process detection information
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process detection information.
+     * @param ServiceDetectionInfo Process detection information.
      */
     public void setServiceDetectionInfo(ServiceProcessFunctionInfo [] ServiceDetectionInfo) {
         this.ServiceDetectionInfo = ServiceDetectionInfo;
@@ -409,24 +395,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HealthStatus Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process health status. 
+     * @return HealthStatus Process health status.
      */
     public HealthStatus getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HealthStatus Process health status
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process health status.
+     * @param HealthStatus Process health status.
      */
     public void setHealthStatus(HealthStatus HealthStatus) {
         this.HealthStatus = HealthStatus;
@@ -449,40 +427,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StopPolicies Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Suspension policy. 
+     * @return StopPolicies Suspension policy.
      */
     public RestartPolicy [] getStopPolicies() {
         return this.StopPolicies;
     }
 
     /**
-     * Set Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StopPolicies Suspension policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Suspension policy.
+     * @param StopPolicies Suspension policy.
      */
     public void setStopPolicies(RestartPolicy [] StopPolicies) {
         this.StopPolicies = StopPolicies;
     }
 
     /**
-     * Get Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error. 
-     * @return HAState Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+     * Get Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported. 
+     * @return HAState Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
      */
     public String getHAState() {
         return this.HAState;
     }
 
     /**
-     * Set Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
-     * @param HAState Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+     * Set Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
+     * @param HAState Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
      */
     public void setHAState(String HAState) {
         this.HAState = HAState;
@@ -521,16 +491,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the DataNode is in maintenance status. 
-     * @return DataNodeMaintenanceState Whether the DataNode is in maintenance status.
+     * Get Whether the DataNode is in the maintenance status. 
+     * @return DataNodeMaintenanceState Whether the DataNode is in the maintenance status.
      */
     public Long getDataNodeMaintenanceState() {
         return this.DataNodeMaintenanceState;
     }
 
     /**
-     * Set Whether the DataNode is in maintenance status.
-     * @param DataNodeMaintenanceState Whether the DataNode is in maintenance status.
+     * Set Whether the DataNode is in the maintenance status.
+     * @param DataNodeMaintenanceState Whether the DataNode is in the maintenance status.
      */
     public void setDataNodeMaintenanceState(Long DataNodeMaintenanceState) {
         this.DataNodeMaintenanceState = DataNodeMaintenanceState;

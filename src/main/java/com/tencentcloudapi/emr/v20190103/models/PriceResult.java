@@ -31,7 +31,7 @@ public class PriceResult extends AbstractModel {
     private Float OriginalCost;
 
     /**
-    * Discount price.
+    * Discounted price.
     */
     @SerializedName("DiscountCost")
     @Expose
@@ -54,16 +54,16 @@ public class PriceResult extends AbstractModel {
     }
 
     /**
-     * Get Discount price. 
-     * @return DiscountCost Discount price.
+     * Get Discounted price. 
+     * @return DiscountCost Discounted price.
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set Discount price.
-     * @param DiscountCost Discount price.
+     * Set Discounted price.
+     * @param DiscountCost Discounted price.
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;

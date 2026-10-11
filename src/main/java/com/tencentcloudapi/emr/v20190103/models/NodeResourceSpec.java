@@ -24,138 +24,164 @@ import java.util.HashMap;
 public class NodeResourceSpec extends AbstractModel {
 
     /**
-    * specifications type, such as S2.MEDIUM8.
+    * <p>Specifications type, such as S2.MEDIUM8.</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>System disk. The number of system disks does not exceed 1.</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private DiskSpecInfo [] SystemDisk;
 
     /**
-    * The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>List of tags to be bound.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
     */
     @SerializedName("DataDisk")
     @Expose
     private DiskSpecInfo [] DataDisk;
 
     /**
-    * The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Local data disk.</p>
     */
     @SerializedName("LocalDataDisk")
     @Expose
     private DiskSpecInfo [] LocalDataDisk;
 
     /**
-     * Get specifications type, such as S2.MEDIUM8. 
-     * @return InstanceType specifications type, such as S2.MEDIUM8.
+    * <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+    */
+    @SerializedName("SoftwareConfig")
+    @Expose
+    private ServiceDeploy [] SoftwareConfig;
+
+    /**
+    * <p>Custom hostname.</p>
+    */
+    @SerializedName("CustomNodeName")
+    @Expose
+    private String CustomNodeName;
+
+    /**
+     * Get <p>Specifications type, such as S2.MEDIUM8.</p> 
+     * @return InstanceType <p>Specifications type, such as S2.MEDIUM8.</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set specifications type, such as S2.MEDIUM8.
-     * @param InstanceType specifications type, such as S2.MEDIUM8.
+     * Set <p>Specifications type, such as S2.MEDIUM8.</p>
+     * @param InstanceType <p>Specifications type, such as S2.MEDIUM8.</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SystemDisk The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>System disk. The number of system disks does not exceed 1.</p> 
+     * @return SystemDisk <p>System disk. The number of system disks does not exceed 1.</p>
      */
     public DiskSpecInfo [] getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SystemDisk The system disk, which can be up to 1 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>System disk. The number of system disks does not exceed 1.</p>
+     * @param SystemDisk <p>System disk. The number of system disks does not exceed 1.</p>
      */
     public void setSystemDisk(DiskSpecInfo [] SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>List of tags to be bound.</p> 
+     * @return Tags <p>List of tags to be bound.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags The list of tags to be bound.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>List of tags to be bound.</p>
+     * @param Tags <p>List of tags to be bound.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataDisk The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p> 
+     * @return DataDisk <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
      */
     public DiskSpecInfo [] getDataDisk() {
         return this.DataDisk;
     }
 
     /**
-     * Set The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataDisk The cloud data disk, which can be up to 15 PCS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
+     * @param DataDisk <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
      */
     public void setDataDisk(DiskSpecInfo [] DataDisk) {
         this.DataDisk = DataDisk;
     }
 
     /**
-     * Get The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LocalDataDisk The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Local data disk.</p> 
+     * @return LocalDataDisk <p>Local data disk.</p>
      */
     public DiskSpecInfo [] getLocalDataDisk() {
         return this.LocalDataDisk;
     }
 
     /**
-     * Set The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LocalDataDisk The local data disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Local data disk.</p>
+     * @param LocalDataDisk <p>Local data disk.</p>
      */
     public void setLocalDataDisk(DiskSpecInfo [] LocalDataDisk) {
         this.LocalDataDisk = LocalDataDisk;
+    }
+
+    /**
+     * Get <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p> 
+     * @return SoftwareConfig <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+     */
+    public ServiceDeploy [] getSoftwareConfig() {
+        return this.SoftwareConfig;
+    }
+
+    /**
+     * Set <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+     * @param SoftwareConfig <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+     */
+    public void setSoftwareConfig(ServiceDeploy [] SoftwareConfig) {
+        this.SoftwareConfig = SoftwareConfig;
+    }
+
+    /**
+     * Get <p>Custom hostname.</p> 
+     * @return CustomNodeName <p>Custom hostname.</p>
+     */
+    public String getCustomNodeName() {
+        return this.CustomNodeName;
+    }
+
+    /**
+     * Set <p>Custom hostname.</p>
+     * @param CustomNodeName <p>Custom hostname.</p>
+     */
+    public void setCustomNodeName(String CustomNodeName) {
+        this.CustomNodeName = CustomNodeName;
     }
 
     public NodeResourceSpec() {
@@ -193,6 +219,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.LocalDataDisk[i] = new DiskSpecInfo(source.LocalDataDisk[i]);
             }
         }
+        if (source.SoftwareConfig != null) {
+            this.SoftwareConfig = new ServiceDeploy[source.SoftwareConfig.length];
+            for (int i = 0; i < source.SoftwareConfig.length; i++) {
+                this.SoftwareConfig[i] = new ServiceDeploy(source.SoftwareConfig[i]);
+            }
+        }
+        if (source.CustomNodeName != null) {
+            this.CustomNodeName = new String(source.CustomNodeName);
+        }
     }
 
 
@@ -205,6 +240,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
         this.setParamArrayObj(map, prefix + "LocalDataDisk.", this.LocalDataDisk);
+        this.setParamArrayObj(map, prefix + "SoftwareConfig.", this.SoftwareConfig);
+        this.setParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
 
     }
 }

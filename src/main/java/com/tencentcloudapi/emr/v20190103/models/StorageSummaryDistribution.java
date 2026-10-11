@@ -39,7 +39,6 @@ public class StorageSummaryDistribution extends AbstractModel {
 
     /**
     * Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Dps")
     @Expose
@@ -78,10 +77,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Sampling value. 
      * @return Dps Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Dps [] getDps() {
         return this.Dps;
@@ -89,9 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Dps Sampling value.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDps(Dps [] Dps) {
         this.Dps = Dps;

@@ -24,31 +24,28 @@ import java.util.HashMap;
 public class ZoneResourceConfiguration extends AbstractModel {
 
     /**
-    * The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
     */
     @SerializedName("VirtualPrivateCloud")
     @Expose
     private VirtualPrivateCloud VirtualPrivateCloud;
 
     /**
-    * The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifications of all node resources.
     */
     @SerializedName("AllNodeResourceSpec")
     @Expose
     private AllNodeResourceSpec AllNodeResourceSpec;
 
     /**
-    * Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+    * In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
@@ -58,71 +55,59 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ZoneTag;
 
     /**
-     * Get The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VirtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID. 
+     * @return VirtualPrivateCloud VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
      */
     public VirtualPrivateCloud getVirtualPrivateCloud() {
         return this.VirtualPrivateCloud;
     }
 
     /**
-     * Set The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VirtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
+     * @param VirtualPrivateCloud VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
      */
     public void setVirtualPrivateCloud(VirtualPrivateCloud VirtualPrivateCloud) {
         this.VirtualPrivateCloud = VirtualPrivateCloud;
     }
 
     /**
-     * Get The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance. 
+     * @return Placement Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
+     * @param Placement Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AllNodeResourceSpec The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifications of all node resources. 
+     * @return AllNodeResourceSpec Specifications of all node resources.
      */
     public AllNodeResourceSpec getAllNodeResourceSpec() {
         return this.AllNodeResourceSpec;
     }
 
     /**
-     * Set The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AllNodeResourceSpec The specs of all nodes.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifications of all node resources.
+     * @param AllNodeResourceSpec Specifications of all node resources.
      */
     public void setAllNodeResourceSpec(AllNodeResourceSpec AllNodeResourceSpec) {
         this.AllNodeResourceSpec = AllNodeResourceSpec;
     }
 
     /**
-     * Get Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+     * Get In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li> 
-     * @return ZoneTag Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+     * @return ZoneTag In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
@@ -132,11 +117,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+     * Set In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
-     * @param ZoneTag Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+     * @param ZoneTag In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>

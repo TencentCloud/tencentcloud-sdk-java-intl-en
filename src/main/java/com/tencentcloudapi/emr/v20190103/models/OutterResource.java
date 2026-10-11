@@ -24,252 +24,207 @@ import java.util.HashMap;
 public class OutterResource extends AbstractModel {
 
     /**
-    * Specification
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifications.
     */
     @SerializedName("Spec")
     @Expose
     private String Spec;
 
     /**
-    * Specification name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifications name.
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Hard disk type.
     */
     @SerializedName("StorageType")
     @Expose
     private Long StorageType;
 
     /**
-    * Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Hard disk type.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * System disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+    * System disk size.
     */
     @SerializedName("RootSize")
     @Expose
     private Long RootSize;
 
     /**
-    * Memory size
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Memory size.
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Number of CPUs
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Hard disk size.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Specification
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifications.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * Get Specification
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Spec Specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifications. 
+     * @return Spec Specifications.
      */
     public String getSpec() {
         return this.Spec;
     }
 
     /**
-     * Set Specification
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Spec Specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifications.
+     * @param Spec Specifications.
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get Specification name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SpecName Specification name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifications name. 
+     * @return SpecName Specifications name.
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set Specification name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SpecName Specification name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifications name.
+     * @param SpecName Specifications name.
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get Disk type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StorageType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Hard disk type. 
+     * @return StorageType Hard disk type.
      */
     public Long getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StorageType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Hard disk type.
+     * @param StorageType Hard disk type.
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Disk type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DiskType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Hard disk type. 
+     * @return DiskType Hard disk type.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DiskType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Hard disk type.
+     * @param DiskType Hard disk type.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get System disk size
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RootSize System disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get System disk size. 
+     * @return RootSize System disk size.
      */
     public Long getRootSize() {
         return this.RootSize;
     }
 
     /**
-     * Set System disk size
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RootSize System disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set System disk size.
+     * @param RootSize System disk size.
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
     }
 
     /**
-     * Get Memory size
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MemSize Memory size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Memory size. 
+     * @return MemSize Memory size.
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Memory size
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MemSize Memory size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Memory size.
+     * @param MemSize Memory size.
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Number of CPUs
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Cpu Number of CPUs
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPUs
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Cpu Number of CPUs
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Disk size
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DiskSize Disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Hard disk size. 
+     * @return DiskSize Hard disk size.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Disk size
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DiskSize Disk size
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Hard disk size.
+     * @param DiskSize Hard disk size.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Specification
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType Specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifications. 
+     * @return InstanceType Specifications.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Specification
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType Specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifications.
+     * @param InstanceType Specifications.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

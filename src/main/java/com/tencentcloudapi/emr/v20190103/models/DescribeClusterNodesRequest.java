@@ -24,22 +24,24 @@ import java.util.HashMap;
 public class DescribeClusterNodesRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID in the format of emr-xxxxxxxx
+    * Cluster ID, such as emr-xxxxxxxx.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+    * Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
     */
     @SerializedName("NodeFlag")
     @Expose
@@ -53,14 +55,14 @@ Note: only the above values are supported for the time being. Entering other val
     private Boolean ExportDb;
 
     /**
-    * Page number. Default value: 0, indicating the first page.
+    * Page number. The default value is 0, indicating the first page.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+    * Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
     */
     @SerializedName("Limit")
@@ -68,92 +70,100 @@ If both offset and limit are not set, or both are set to 0, all data will be ret
     private Long Limit;
 
     /**
-    * Resource type. Valid values: all, host, pod. Default value: all
+    * Resource type. Valid values: all (default), host, and pod.
     */
     @SerializedName("HardwareResourceType")
     @Expose
     private String HardwareResourceType;
 
     /**
-    * Searchable field
+    * Searchable fields.
     */
     @SerializedName("SearchFields")
     @Expose
     private SearchItem [] SearchFields;
 
     /**
-    * Order field.
+    * Sorting field.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * Ascending or not. 1: ascending; 0: descending.
+    * Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
     */
     @SerializedName("Asc")
     @Expose
     private Long Asc;
 
     /**
-     * Get Cluster instance ID in the format of emr-xxxxxxxx 
-     * @return InstanceId Cluster instance ID in the format of emr-xxxxxxxx
+     * Get Cluster ID, such as emr-xxxxxxxx. 
+     * @return InstanceId Cluster ID, such as emr-xxxxxxxx.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID in the format of emr-xxxxxxxx
-     * @param InstanceId Cluster instance ID in the format of emr-xxxxxxxx
+     * Set Cluster ID, such as emr-xxxxxxxx.
+     * @param InstanceId Cluster ID, such as emr-xxxxxxxx.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors. 
-     * @return NodeFlag Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+     * Get Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error. 
+     * @return NodeFlag Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
      */
     public String getNodeFlag() {
         return this.NodeFlag;
     }
 
     /**
-     * Set Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
-     * @param NodeFlag Node flag. Valid values:
-<li>all: gets the information of nodes in all types except TencentDB information.</li>
-<li>master: gets master node information.</li>
-<li>core: gets core node information.</li>
-<li>task: gets task node information.</li>
-<li>common: gets common node information.</li>
-<li>router: gets router node information.</li>
-<li>db: gets TencentDB information in normal status.</li>
-Note: only the above values are supported for the time being. Entering other values will cause errors.
+     * Set Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
+     * @param NodeFlag Node identifier. Valid values:
+<li>all: indicates retrieving all types of nodes, except CDB information.</li>
+<li>master: indicates retrieving Master node information.</li>
+<li>core: indicates retrieving Core node information.</li>
+<li>task: indicates retrieving Task node information.</li>
+<li>common: indicates retrieving Common node information.</li>
+<li>router: indicates retrieving Router node information.</li>
+<li>db: indicates retrieving CDB information in the normal status.</li>
+<li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+<li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+Note: Only the values above are supported currently. Entering other values will result in an error.
      */
     public void setNodeFlag(String NodeFlag) {
         this.NodeFlag = NodeFlag;
@@ -176,25 +186,25 @@ Note: only the above values are supported for the time being. Entering other val
     }
 
     /**
-     * Get Page number. Default value: 0, indicating the first page. 
-     * @return Offset Page number. Default value: 0, indicating the first page.
+     * Get Page number. The default value is 0, indicating the first page. 
+     * @return Offset Page number. The default value is 0, indicating the first page.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number. Default value: 0, indicating the first page.
-     * @param Offset Page number. Default value: 0, indicating the first page.
+     * Set Page number. The default value is 0, indicating the first page.
+     * @param Offset Page number. The default value is 0, indicating the first page.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * Get Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned. 
-     * @return Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * @return Limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
      */
     public Long getLimit() {
@@ -202,9 +212,9 @@ If both offset and limit are not set, or both are set to 0, all data will be ret
     }
 
     /**
-     * Set Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * Set Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
-     * @param Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * @param Limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both offset and limit are not set, or both are set to 0, all data will be returned.
      */
     public void setLimit(Long Limit) {
@@ -212,64 +222,64 @@ If both offset and limit are not set, or both are set to 0, all data will be ret
     }
 
     /**
-     * Get Resource type. Valid values: all, host, pod. Default value: all 
-     * @return HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
+     * Get Resource type. Valid values: all (default), host, and pod. 
+     * @return HardwareResourceType Resource type. Valid values: all (default), host, and pod.
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set Resource type. Valid values: all, host, pod. Default value: all
-     * @param HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
+     * Set Resource type. Valid values: all (default), host, and pod.
+     * @param HardwareResourceType Resource type. Valid values: all (default), host, and pod.
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
     }
 
     /**
-     * Get Searchable field 
-     * @return SearchFields Searchable field
+     * Get Searchable fields. 
+     * @return SearchFields Searchable fields.
      */
     public SearchItem [] getSearchFields() {
         return this.SearchFields;
     }
 
     /**
-     * Set Searchable field
-     * @param SearchFields Searchable field
+     * Set Searchable fields.
+     * @param SearchFields Searchable fields.
      */
     public void setSearchFields(SearchItem [] SearchFields) {
         this.SearchFields = SearchFields;
     }
 
     /**
-     * Get Order field. 
-     * @return OrderField Order field.
+     * Get Sorting field. 
+     * @return OrderField Sorting field.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set Order field.
-     * @param OrderField Order field.
+     * Set Sorting field.
+     * @param OrderField Sorting field.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get Ascending or not. 1: ascending; 0: descending. 
-     * @return Asc Ascending or not. 1: ascending; 0: descending.
+     * Get Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no). 
+     * @return Asc Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set Ascending or not. 1: ascending; 0: descending.
-     * @param Asc Ascending or not. 1: ascending; 0: descending.
+     * Set Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
+     * @param Asc Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;

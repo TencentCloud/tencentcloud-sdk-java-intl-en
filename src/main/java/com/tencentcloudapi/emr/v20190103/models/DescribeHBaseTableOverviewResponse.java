@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeHBaseTableOverviewResponse extends AbstractModel {
 
     /**
-    * Overview data array
+    * Overview data array.
     */
     @SerializedName("TableMonitorList")
     @Expose
     private OverviewRow [] TableMonitorList;
 
     /**
-    * Overview data array length
+    * Overview data array length.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Table schema information
+    * Table schema information.
     */
     @SerializedName("SchemaList")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeHBaseTableOverviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Overview data array 
-     * @return TableMonitorList Overview data array
+     * Get Overview data array. 
+     * @return TableMonitorList Overview data array.
      */
     public OverviewRow [] getTableMonitorList() {
         return this.TableMonitorList;
     }
 
     /**
-     * Set Overview data array
-     * @param TableMonitorList Overview data array
+     * Set Overview data array.
+     * @param TableMonitorList Overview data array.
      */
     public void setTableMonitorList(OverviewRow [] TableMonitorList) {
         this.TableMonitorList = TableMonitorList;
     }
 
     /**
-     * Get Overview data array length 
-     * @return TotalCount Overview data array length
+     * Get Overview data array length. 
+     * @return TotalCount Overview data array length.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Overview data array length
-     * @param TotalCount Overview data array length
+     * Set Overview data array length.
+     * @param TotalCount Overview data array length.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Table schema information 
-     * @return SchemaList Table schema information
+     * Get Table schema information. 
+     * @return SchemaList Table schema information.
      */
     public TableSchemaItem [] getSchemaList() {
         return this.SchemaList;
     }
 
     /**
-     * Set Table schema information
-     * @param SchemaList Table schema information
+     * Set Table schema information.
+     * @param SchemaList Table schema information.
      */
     public void setSchemaList(TableSchemaItem [] SchemaList) {
         this.SchemaList = SchemaList;

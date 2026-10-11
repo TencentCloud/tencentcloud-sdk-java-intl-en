@@ -52,14 +52,14 @@ public class DescribeSparkQueriesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Page size. Valid range: [1,100].
+    * Number of entries per page. Value range: [1, 100].
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Execution status: RUNNING,COMPLETED, FAILED.
+    * Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
     */
     @SerializedName("Status")
     @Expose
@@ -130,32 +130,32 @@ public class DescribeSparkQueriesRequest extends AbstractModel {
     }
 
     /**
-     * Get Page size. Valid range: [1,100]. 
-     * @return Limit Page size. Valid range: [1,100].
+     * Get Number of entries per page. Value range: [1, 100]. 
+     * @return Limit Number of entries per page. Value range: [1, 100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page size. Valid range: [1,100].
-     * @param Limit Page size. Valid range: [1,100].
+     * Set Number of entries per page. Value range: [1, 100].
+     * @param Limit Number of entries per page. Value range: [1, 100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Execution status: RUNNING,COMPLETED, FAILED. 
-     * @return Status Execution status: RUNNING,COMPLETED, FAILED.
+     * Get Execution status. Valid values: RUNNING, COMPLETED, and FAILED. 
+     * @return Status Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Execution status: RUNNING,COMPLETED, FAILED.
-     * @param Status Execution status: RUNNING,COMPLETED, FAILED.
+     * Set Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
+     * @param Status Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
      */
     public void setStatus(String [] Status) {
         this.Status = Status;

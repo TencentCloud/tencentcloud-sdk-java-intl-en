@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SchedulerTaskInfo extends AbstractModel {
 
     /**
-    * Scheduler type
+    * Scheduler type.
     */
     @SerializedName("SchedulerName")
     @Expose
     private String SchedulerName;
 
     /**
-    * Operation type
+    * Operation type.
     */
     @SerializedName("OperatorName")
     @Expose
@@ -60,39 +60,38 @@ public class SchedulerTaskInfo extends AbstractModel {
 
     /**
     * Details.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Details")
     @Expose
     private SchedulerTaskDetail [] Details;
 
     /**
-     * Get Scheduler type 
-     * @return SchedulerName Scheduler type
+     * Get Scheduler type. 
+     * @return SchedulerName Scheduler type.
      */
     public String getSchedulerName() {
         return this.SchedulerName;
     }
 
     /**
-     * Set Scheduler type
-     * @param SchedulerName Scheduler type
+     * Set Scheduler type.
+     * @param SchedulerName Scheduler type.
      */
     public void setSchedulerName(String SchedulerName) {
         this.SchedulerName = SchedulerName;
     }
 
     /**
-     * Get Operation type 
-     * @return OperatorName Operation type
+     * Get Operation type. 
+     * @return OperatorName Operation type.
      */
     public String getOperatorName() {
         return this.OperatorName;
     }
 
     /**
-     * Set Operation type
-     * @param OperatorName Operation type
+     * Set Operation type.
+     * @param OperatorName Operation type.
      */
     public void setOperatorName(String OperatorName) {
         this.OperatorName = OperatorName;
@@ -147,10 +146,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Details.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Details. 
      * @return Details Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SchedulerTaskDetail [] getDetails() {
         return this.Details;
@@ -158,9 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Details Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetails(SchedulerTaskDetail [] Details) {
         this.Details = Details;

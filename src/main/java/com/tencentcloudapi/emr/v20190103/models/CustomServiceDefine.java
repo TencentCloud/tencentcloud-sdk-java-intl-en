@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CustomServiceDefine extends AbstractModel {
 
     /**
-    * Custom parameter key
+    * Custom parameter key.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Custom parameter value
+    * Custom parameter value.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Custom parameter key 
-     * @return Name Custom parameter key
+     * Get Custom parameter key. 
+     * @return Name Custom parameter key.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Custom parameter key
-     * @param Name Custom parameter key
+     * Set Custom parameter key.
+     * @param Name Custom parameter key.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Custom parameter value 
-     * @return Value Custom parameter value
+     * Get Custom parameter value. 
+     * @return Value Custom parameter value.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Custom parameter value
-     * @param Value Custom parameter value
+     * Set Custom parameter value.
+     * @param Value Custom parameter value.
      */
     public void setValue(String Value) {
         this.Value = Value;

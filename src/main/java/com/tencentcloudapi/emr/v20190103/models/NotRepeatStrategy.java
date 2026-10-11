@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class NotRepeatStrategy extends AbstractModel {
 
     /**
-    * The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+    * Exact time when the task was executed. Format: "2020-07-13 00:00:00".
     */
     @SerializedName("ExecuteAt")
     @Expose
     private String ExecuteAt;
 
     /**
-     * Get The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00". 
-     * @return ExecuteAt The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+     * Get Exact time when the task was executed. Format: "2020-07-13 00:00:00". 
+     * @return ExecuteAt Exact time when the task was executed. Format: "2020-07-13 00:00:00".
      */
     public String getExecuteAt() {
         return this.ExecuteAt;
     }
 
     /**
-     * Set The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
-     * @param ExecuteAt The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+     * Set Exact time when the task was executed. Format: "2020-07-13 00:00:00".
+     * @param ExecuteAt Exact time when the task was executed. Format: "2020-07-13 00:00:00".
      */
     public void setExecuteAt(String ExecuteAt) {
         this.ExecuteAt = ExecuteAt;

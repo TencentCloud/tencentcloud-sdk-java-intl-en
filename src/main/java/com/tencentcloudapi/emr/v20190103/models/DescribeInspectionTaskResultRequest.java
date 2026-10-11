@@ -52,7 +52,7 @@ public class DescribeInspectionTaskResultRequest extends AbstractModel {
     private Long EndTime;
 
     /**
-    * Page size.
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
@@ -130,16 +130,16 @@ public class DescribeInspectionTaskResultRequest extends AbstractModel {
     }
 
     /**
-     * Get Page size. 
-     * @return Limit Page size.
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page size.
-     * @param Limit Page size.
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

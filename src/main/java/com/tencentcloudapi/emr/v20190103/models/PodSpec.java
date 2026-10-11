@@ -24,85 +24,84 @@ import java.util.HashMap;
 public class PodSpec extends AbstractModel {
 
     /**
-    * Identifier of external resource provider, such as "cls-a1cd23fa".
+    * Identifier of the external resource provider, for example, "cls-a1cd23fa".
     */
     @SerializedName("ResourceProviderIdentifier")
     @Expose
     private String ResourceProviderIdentifier;
 
     /**
-    * Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+    * Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
     */
     @SerializedName("ResourceProviderType")
     @Expose
     private String ResourceProviderType;
 
     /**
-    * Purpose of the resource, which means the node type and can only be "TASK".
+    * Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Number of CPUs
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory size in GB.
+    * Memory size (GB).
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+    * The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
     */
     @SerializedName("DataVolumes")
     @Expose
     private String [] DataVolumes;
 
     /**
-    * EKS cluster - CPU type. Valid values: `intel` and `amd`.
+    * CPU type for the EKS cluster, currently supporting intel and amd.
     */
     @SerializedName("CpuType")
     @Expose
     private String CpuType;
 
     /**
-    * Data directory mounting information of the pod node.
+    * Mounting information of the node data directory on Pod.
     */
     @SerializedName("PodVolumes")
     @Expose
     private PodVolume [] PodVolumes;
 
     /**
-    * Whether floating specification is used. `1`: Yes; `0`: No.
+    * Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
     */
     @SerializedName("IsDynamicSpec")
     @Expose
     private Long IsDynamicSpec;
 
     /**
-    * Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Floating specification.
     */
     @SerializedName("DynamicPodSpec")
     @Expose
     private DynamicPodSpec DynamicPodSpec;
 
     /**
-    * Unique ID of VPC network.
+    * Unique ID of the VPC.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Unique ID of a VPC subnet.
+    * Unique ID of the VPC subnet.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -116,196 +115,192 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PodName;
 
     /**
-     * Get Identifier of external resource provider, such as "cls-a1cd23fa". 
-     * @return ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
+     * Get Identifier of the external resource provider, for example, "cls-a1cd23fa". 
+     * @return ResourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
      */
     public String getResourceProviderIdentifier() {
         return this.ResourceProviderIdentifier;
     }
 
     /**
-     * Set Identifier of external resource provider, such as "cls-a1cd23fa".
-     * @param ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
+     * Set Identifier of the external resource provider, for example, "cls-a1cd23fa".
+     * @param ResourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
      */
     public void setResourceProviderIdentifier(String ResourceProviderIdentifier) {
         this.ResourceProviderIdentifier = ResourceProviderIdentifier;
     }
 
     /**
-     * Get Type of external resource provider, such as "tke". Currently, only "tke" is supported. 
-     * @return ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+     * Get Type of the external resource provider, for example, "tke". Currently, only "tke" is supported. 
+     * @return ResourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
      */
     public String getResourceProviderType() {
         return this.ResourceProviderType;
     }
 
     /**
-     * Set Type of external resource provider, such as "tke". Currently, only "tke" is supported.
-     * @param ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+     * Set Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+     * @param ResourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
      */
     public void setResourceProviderType(String ResourceProviderType) {
         this.ResourceProviderType = ResourceProviderType;
     }
 
     /**
-     * Get Purpose of the resource, which means the node type and can only be "TASK". 
-     * @return NodeType Purpose of the resource, which means the node type and can only be "TASK".
+     * Get Purpose of the resource, that is, the node type. Currently only "TASK" is supported. 
+     * @return NodeType Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Purpose of the resource, which means the node type and can only be "TASK".
-     * @param NodeType Purpose of the resource, which means the node type and can only be "TASK".
+     * Set Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+     * @param NodeType Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Number of CPUs 
-     * @return Cpu Number of CPUs
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPUs
-     * @param Cpu Number of CPUs
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory size in GB. 
-     * @return Memory Memory size in GB.
+     * Get Memory size (GB). 
+     * @return Memory Memory size (GB).
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory size in GB.
-     * @param Memory Memory size in GB.
+     * Set Memory size (GB).
+     * @param Memory Memory size (GB).
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused) 
-     * @return DataVolumes Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * Get The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated. 
+     * @return DataVolumes The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
      */
     public String [] getDataVolumes() {
         return this.DataVolumes;
     }
 
     /**
-     * Set Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
-     * @param DataVolumes Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * Set The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
+     * @param DataVolumes The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
      */
     public void setDataVolumes(String [] DataVolumes) {
         this.DataVolumes = DataVolumes;
     }
 
     /**
-     * Get EKS cluster - CPU type. Valid values: `intel` and `amd`. 
-     * @return CpuType EKS cluster - CPU type. Valid values: `intel` and `amd`.
+     * Get CPU type for the EKS cluster, currently supporting intel and amd. 
+     * @return CpuType CPU type for the EKS cluster, currently supporting intel and amd.
      */
     public String getCpuType() {
         return this.CpuType;
     }
 
     /**
-     * Set EKS cluster - CPU type. Valid values: `intel` and `amd`.
-     * @param CpuType EKS cluster - CPU type. Valid values: `intel` and `amd`.
+     * Set CPU type for the EKS cluster, currently supporting intel and amd.
+     * @param CpuType CPU type for the EKS cluster, currently supporting intel and amd.
      */
     public void setCpuType(String CpuType) {
         this.CpuType = CpuType;
     }
 
     /**
-     * Get Data directory mounting information of the pod node. 
-     * @return PodVolumes Data directory mounting information of the pod node.
+     * Get Mounting information of the node data directory on Pod. 
+     * @return PodVolumes Mounting information of the node data directory on Pod.
      */
     public PodVolume [] getPodVolumes() {
         return this.PodVolumes;
     }
 
     /**
-     * Set Data directory mounting information of the pod node.
-     * @param PodVolumes Data directory mounting information of the pod node.
+     * Set Mounting information of the node data directory on Pod.
+     * @param PodVolumes Mounting information of the node data directory on Pod.
      */
     public void setPodVolumes(PodVolume [] PodVolumes) {
         this.PodVolumes = PodVolumes;
     }
 
     /**
-     * Get Whether floating specification is used. `1`: Yes; `0`: No. 
-     * @return IsDynamicSpec Whether floating specification is used. `1`: Yes; `0`: No.
+     * Get Whether it is a floating specification. Valid values: 1 (yes) and 0 (no). 
+     * @return IsDynamicSpec Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
      */
     public Long getIsDynamicSpec() {
         return this.IsDynamicSpec;
     }
 
     /**
-     * Set Whether floating specification is used. `1`: Yes; `0`: No.
-     * @param IsDynamicSpec Whether floating specification is used. `1`: Yes; `0`: No.
+     * Set Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
+     * @param IsDynamicSpec Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
      */
     public void setIsDynamicSpec(Long IsDynamicSpec) {
         this.IsDynamicSpec = IsDynamicSpec;
     }
 
     /**
-     * Get Floating specification
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DynamicPodSpec Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Floating specification. 
+     * @return DynamicPodSpec Floating specification.
      */
     public DynamicPodSpec getDynamicPodSpec() {
         return this.DynamicPodSpec;
     }
 
     /**
-     * Set Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DynamicPodSpec Floating specification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Floating specification.
+     * @param DynamicPodSpec Floating specification.
      */
     public void setDynamicPodSpec(DynamicPodSpec DynamicPodSpec) {
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
     /**
-     * Get Unique ID of VPC network. 
-     * @return VpcId Unique ID of VPC network.
+     * Get Unique ID of the VPC. 
+     * @return VpcId Unique ID of the VPC.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Unique ID of VPC network.
-     * @param VpcId Unique ID of VPC network.
+     * Set Unique ID of the VPC.
+     * @param VpcId Unique ID of the VPC.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Unique ID of a VPC subnet. 
-     * @return SubnetId Unique ID of a VPC subnet.
+     * Get Unique ID of the VPC subnet. 
+     * @return SubnetId Unique ID of the VPC subnet.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Unique ID of a VPC subnet.
-     * @param SubnetId Unique ID of a VPC subnet.
+     * Set Unique ID of the VPC subnet.
+     * @param SubnetId Unique ID of the VPC subnet.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

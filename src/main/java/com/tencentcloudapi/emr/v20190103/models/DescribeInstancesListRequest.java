@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeInstancesListRequest extends AbstractModel {
 
     /**
-    * Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+    * Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
     */
     @SerializedName("DisplayStrategy")
     @Expose
     private String DisplayStrategy;
 
     /**
-    * Page number. Default value: `0`, indicating the first page.
+    * Page number. The default value is 0, indicating the first page.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+    * Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
     */
     @SerializedName("Limit")
@@ -46,62 +46,69 @@ If both limit and offset are 0, all records will be queried.
     private Long Limit;
 
     /**
-    * Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+    * Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+    * Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
     */
     @SerializedName("Asc")
     @Expose
     private Long Asc;
 
     /**
-    * Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+    * Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-     * Get Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li> 
-     * @return DisplayStrategy Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+    * Default value 0 for regular clusters and 2 for TKE clusters.
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
+     * Get Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li> 
+     * @return DisplayStrategy Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
      */
     public String getDisplayStrategy() {
         return this.DisplayStrategy;
     }
 
     /**
-     * Set Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
-     * @param DisplayStrategy Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+     * Set Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
+     * @param DisplayStrategy Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
      */
     public void setDisplayStrategy(String DisplayStrategy) {
         this.DisplayStrategy = DisplayStrategy;
     }
 
     /**
-     * Get Page number. Default value: `0`, indicating the first page. 
-     * @return Offset Page number. Default value: `0`, indicating the first page.
+     * Get Page number. The default value is 0, indicating the first page. 
+     * @return Offset Page number. The default value is 0, indicating the first page.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number. Default value: `0`, indicating the first page.
-     * @param Offset Page number. Default value: `0`, indicating the first page.
+     * Set Page number. The default value is 0, indicating the first page.
+     * @param Offset Page number. The default value is 0, indicating the first page.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * Get Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried. 
-     * @return Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * @return Limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
      */
     public Long getLimit() {
@@ -109,9 +116,9 @@ If both limit and offset are 0, all records will be queried.
     }
 
     /**
-     * Set Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * Set Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
-     * @param Limit Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+     * @param Limit Number of items returned per page. Default value: 100. Maximum value: 100.
 If both limit and offset are 0, all records will be queried.
      */
     public void setLimit(Long Limit) {
@@ -119,51 +126,67 @@ If both limit and offset are 0, all records will be queried.
     }
 
     /**
-     * Get Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li> 
-     * @return OrderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+     * Get Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li> 
+     * @return OrderField Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
-     * @param OrderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+     * Set Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
+     * @param OrderField Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0. 
-     * @return Asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+     * Get Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0. 
+     * @return Asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
-     * @param Asc Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+     * Set Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
+     * @param Asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;
     }
 
     /**
-     * Get Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>. 
-     * @return Filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+     * Get Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li> 
+     * @return Filters Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
-     * @param Filters Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+     * Set Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
+     * @param Filters Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get Default value 0 for regular clusters and 2 for TKE clusters. 
+     * @return ClusterType Default value 0 for regular clusters and 2 for TKE clusters.
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Default value 0 for regular clusters and 2 for TKE clusters.
+     * @param ClusterType Default value 0 for regular clusters and 2 for TKE clusters.
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
     }
 
     public DescribeInstancesListRequest() {
@@ -195,6 +218,9 @@ If both limit and offset are 0, all records will be queried.
                 this.Filters[i] = new Filters(source.Filters[i]);
             }
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
     }
 
 
@@ -208,6 +234,7 @@ If both limit and offset are 0, all records will be queried.
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "Asc", this.Asc);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

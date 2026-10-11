@@ -32,7 +32,6 @@ public class DescribeSparkQueriesResponse extends AbstractModel {
 
     /**
     * Result list.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Results")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Result list.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Result list. 
      * @return Results Result list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SparkQuery [] getResults() {
         return this.Results;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Result list.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Results Result list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResults(SparkQuery [] Results) {
         this.Results = Results;

@@ -24,80 +24,79 @@ import java.util.HashMap;
 public class PodNewSpec extends AbstractModel {
 
     /**
-    * The identifier of an external resource provider, such as "cls-a1cd23fa".
+    * Identifier of the external resource provider, for example, "cls-a1cd23fa".
     */
     @SerializedName("ResourceProviderIdentifier")
     @Expose
     private String ResourceProviderIdentifier;
 
     /**
-    * The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
+    * Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
     */
     @SerializedName("ResourceProviderType")
     @Expose
     private String ResourceProviderType;
 
     /**
-    * The purpose of the resource, which means the node type and can only be "TASK".
+    * Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
     */
     @SerializedName("NodeFlag")
     @Expose
     private String NodeFlag;
 
     /**
-    * The number of CPUs.
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * The memory size in GB.
+    * Memory size (GB).
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * The EKS cluster - CPU type. Valid values: `intel` and `amd`.
+    * CPU type for the EKS cluster, currently supporting intel and amd.
     */
     @SerializedName("CpuType")
     @Expose
     private String CpuType;
 
     /**
-    * The data directory mounting information of the pod node.
+    * Mounting information of the node data directory on Pod.
     */
     @SerializedName("PodVolumes")
     @Expose
     private PodVolume [] PodVolumes;
 
     /**
-    * Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+    * Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
     */
     @SerializedName("EnableDynamicSpecFlag")
     @Expose
     private Boolean EnableDynamicSpecFlag;
 
     /**
-    * The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Floating specification.
     */
     @SerializedName("DynamicPodSpec")
     @Expose
     private DynamicPodSpec DynamicPodSpec;
 
     /**
-    * Unique ID of VPC network.
+    * Unique ID of the VPC.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Unique ID of a VPC subnet.
+    * Unique ID of the VPC subnet.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -111,188 +110,191 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PodName;
 
     /**
-     * Get The identifier of an external resource provider, such as "cls-a1cd23fa". 
-     * @return ResourceProviderIdentifier The identifier of an external resource provider, such as "cls-a1cd23fa".
+    * Other account authorization information.
+    */
+    @SerializedName("OtherAccountInfo")
+    @Expose
+    private OtherAccountInfo OtherAccountInfo;
+
+    /**
+     * Get Identifier of the external resource provider, for example, "cls-a1cd23fa". 
+     * @return ResourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
      */
     public String getResourceProviderIdentifier() {
         return this.ResourceProviderIdentifier;
     }
 
     /**
-     * Set The identifier of an external resource provider, such as "cls-a1cd23fa".
-     * @param ResourceProviderIdentifier The identifier of an external resource provider, such as "cls-a1cd23fa".
+     * Set Identifier of the external resource provider, for example, "cls-a1cd23fa".
+     * @param ResourceProviderIdentifier Identifier of the external resource provider, for example, "cls-a1cd23fa".
      */
     public void setResourceProviderIdentifier(String ResourceProviderIdentifier) {
         this.ResourceProviderIdentifier = ResourceProviderIdentifier;
     }
 
     /**
-     * Get The type of the external resource provider, such as "tke". Currently, only "tke" is supported. 
-     * @return ResourceProviderType The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
+     * Get Type of the external resource provider, for example, "tke". Currently, only "tke" is supported. 
+     * @return ResourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
      */
     public String getResourceProviderType() {
         return this.ResourceProviderType;
     }
 
     /**
-     * Set The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
-     * @param ResourceProviderType The type of the external resource provider, such as "tke". Currently, only "tke" is supported.
+     * Set Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
+     * @param ResourceProviderType Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
      */
     public void setResourceProviderType(String ResourceProviderType) {
         this.ResourceProviderType = ResourceProviderType;
     }
 
     /**
-     * Get The purpose of the resource, which means the node type and can only be "TASK". 
-     * @return NodeFlag The purpose of the resource, which means the node type and can only be "TASK".
+     * Get Purpose of the resource, that is, the node type. Currently only "TASK" is supported. 
+     * @return NodeFlag Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
      */
     public String getNodeFlag() {
         return this.NodeFlag;
     }
 
     /**
-     * Set The purpose of the resource, which means the node type and can only be "TASK".
-     * @param NodeFlag The purpose of the resource, which means the node type and can only be "TASK".
+     * Set Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
+     * @param NodeFlag Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
      */
     public void setNodeFlag(String NodeFlag) {
         this.NodeFlag = NodeFlag;
     }
 
     /**
-     * Get The number of CPUs. 
-     * @return Cpu The number of CPUs.
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set The number of CPUs.
-     * @param Cpu The number of CPUs.
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get The memory size in GB. 
-     * @return Memory The memory size in GB.
+     * Get Memory size (GB). 
+     * @return Memory Memory size (GB).
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set The memory size in GB.
-     * @param Memory The memory size in GB.
+     * Set Memory size (GB).
+     * @param Memory Memory size (GB).
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get The EKS cluster - CPU type. Valid values: `intel` and `amd`. 
-     * @return CpuType The EKS cluster - CPU type. Valid values: `intel` and `amd`.
+     * Get CPU type for the EKS cluster, currently supporting intel and amd. 
+     * @return CpuType CPU type for the EKS cluster, currently supporting intel and amd.
      */
     public String getCpuType() {
         return this.CpuType;
     }
 
     /**
-     * Set The EKS cluster - CPU type. Valid values: `intel` and `amd`.
-     * @param CpuType The EKS cluster - CPU type. Valid values: `intel` and `amd`.
+     * Set CPU type for the EKS cluster, currently supporting intel and amd.
+     * @param CpuType CPU type for the EKS cluster, currently supporting intel and amd.
      */
     public void setCpuType(String CpuType) {
         this.CpuType = CpuType;
     }
 
     /**
-     * Get The data directory mounting information of the pod node. 
-     * @return PodVolumes The data directory mounting information of the pod node.
+     * Get Mounting information of the node data directory on Pod. 
+     * @return PodVolumes Mounting information of the node data directory on Pod.
      */
     public PodVolume [] getPodVolumes() {
         return this.PodVolumes;
     }
 
     /**
-     * Set The data directory mounting information of the pod node.
-     * @param PodVolumes The data directory mounting information of the pod node.
+     * Set Mounting information of the node data directory on Pod.
+     * @param PodVolumes Mounting information of the node data directory on Pod.
      */
     public void setPodVolumes(PodVolume [] PodVolumes) {
         this.PodVolumes = PodVolumes;
     }
 
     /**
-     * Get Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li> 
-     * @return EnableDynamicSpecFlag Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+     * Get Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li> 
+     * @return EnableDynamicSpecFlag Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
      */
     public Boolean getEnableDynamicSpecFlag() {
         return this.EnableDynamicSpecFlag;
     }
 
     /**
-     * Set Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
-     * @param EnableDynamicSpecFlag Whether the dynamic spec is used. Valid values:
-<li>`true`: Yes</li>
-<li>`false` (default): No</li>
+     * Set Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
+     * @param EnableDynamicSpecFlag Whether it is a floating specification. Default: false. Valid values:
+<li>true: yes</li>
+<li>false: no</li>
      */
     public void setEnableDynamicSpecFlag(Boolean EnableDynamicSpecFlag) {
         this.EnableDynamicSpecFlag = EnableDynamicSpecFlag;
     }
 
     /**
-     * Get The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DynamicPodSpec The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Floating specification. 
+     * @return DynamicPodSpec Floating specification.
      */
     public DynamicPodSpec getDynamicPodSpec() {
         return this.DynamicPodSpec;
     }
 
     /**
-     * Set The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DynamicPodSpec The dynamic spec.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Floating specification.
+     * @param DynamicPodSpec Floating specification.
      */
     public void setDynamicPodSpec(DynamicPodSpec DynamicPodSpec) {
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
     /**
-     * Get Unique ID of VPC network. 
-     * @return VpcId Unique ID of VPC network.
+     * Get Unique ID of the VPC. 
+     * @return VpcId Unique ID of the VPC.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Unique ID of VPC network.
-     * @param VpcId Unique ID of VPC network.
+     * Set Unique ID of the VPC.
+     * @param VpcId Unique ID of the VPC.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Unique ID of a VPC subnet. 
-     * @return SubnetId Unique ID of a VPC subnet.
+     * Get Unique ID of the VPC subnet. 
+     * @return SubnetId Unique ID of the VPC subnet.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Unique ID of a VPC subnet.
-     * @param SubnetId Unique ID of a VPC subnet.
+     * Set Unique ID of the VPC subnet.
+     * @param SubnetId Unique ID of the VPC subnet.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -312,6 +314,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
+    }
+
+    /**
+     * Get Other account authorization information. 
+     * @return OtherAccountInfo Other account authorization information.
+     */
+    public OtherAccountInfo getOtherAccountInfo() {
+        return this.OtherAccountInfo;
+    }
+
+    /**
+     * Set Other account authorization information.
+     * @param OtherAccountInfo Other account authorization information.
+     */
+    public void setOtherAccountInfo(OtherAccountInfo OtherAccountInfo) {
+        this.OtherAccountInfo = OtherAccountInfo;
     }
 
     public PodNewSpec() {
@@ -361,6 +379,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.PodName != null) {
             this.PodName = new String(source.PodName);
         }
+        if (source.OtherAccountInfo != null) {
+            this.OtherAccountInfo = new OtherAccountInfo(source.OtherAccountInfo);
+        }
     }
 
 
@@ -380,6 +401,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamObj(map, prefix + "OtherAccountInfo.", this.OtherAccountInfo);
 
     }
 }

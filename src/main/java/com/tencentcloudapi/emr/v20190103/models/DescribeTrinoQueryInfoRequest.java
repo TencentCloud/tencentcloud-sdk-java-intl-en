@@ -31,21 +31,21 @@ public class DescribeTrinoQueryInfoRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Obtain the start time for querying information (s).
+    * Start time for obtaining queried information (s).
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Obtain the end time for querying information (s).
+    * End time for obtaining queried information (s).
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Page size for pagination queries. Minimum value: 1; maximum value: 100.
+    * Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
     */
     @SerializedName("PageSize")
     @Expose
@@ -75,48 +75,48 @@ public class DescribeTrinoQueryInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Obtain the start time for querying information (s). 
-     * @return StartTime Obtain the start time for querying information (s).
+     * Get Start time for obtaining queried information (s). 
+     * @return StartTime Start time for obtaining queried information (s).
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Obtain the start time for querying information (s).
-     * @param StartTime Obtain the start time for querying information (s).
+     * Set Start time for obtaining queried information (s).
+     * @param StartTime Start time for obtaining queried information (s).
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Obtain the end time for querying information (s). 
-     * @return EndTime Obtain the end time for querying information (s).
+     * Get End time for obtaining queried information (s). 
+     * @return EndTime End time for obtaining queried information (s).
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Obtain the end time for querying information (s).
-     * @param EndTime Obtain the end time for querying information (s).
+     * Set End time for obtaining queried information (s).
+     * @param EndTime End time for obtaining queried information (s).
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Page size for pagination queries. Minimum value: 1; maximum value: 100. 
-     * @return PageSize Page size for pagination queries. Minimum value: 1; maximum value: 100.
+     * Get Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100. 
+     * @return PageSize Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size for pagination queries. Minimum value: 1; maximum value: 100.
-     * @param PageSize Page size for pagination queries. Minimum value: 1; maximum value: 100.
+     * Set Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
+     * @param PageSize Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class FairGlobalConfig extends AbstractModel {
 
     /**
-    * Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Program upper limit</p> on the corresponding page.
     */
     @SerializedName("UserMaxAppsDefault")
     @Expose
     private Long UserMaxAppsDefault;
 
     /**
-     * Get Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserMaxAppsDefault Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Program upper limit</p> on the corresponding page. 
+     * @return UserMaxAppsDefault <p>Program upper limit</p> on the corresponding page.
      */
     public Long getUserMaxAppsDefault() {
         return this.UserMaxAppsDefault;
     }
 
     /**
-     * Set Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserMaxAppsDefault Corresponds to <p>Program Upper Limit</p> of the page.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Program upper limit</p> on the corresponding page.
+     * @param UserMaxAppsDefault <p>Program upper limit</p> on the corresponding page.
      */
     public void setUserMaxAppsDefault(Long UserMaxAppsDefault) {
         this.UserMaxAppsDefault = UserMaxAppsDefault;

@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class PodParameter extends AbstractModel {
 
     /**
-    * ID of TKE or EKS cluster
+    * TKE or EKS cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Custom permissions
+    * Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -72,7 +72,7 @@ Example:
     private String Config;
 
     /**
-    * Custom parameters
+    * Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -153,27 +153,27 @@ Example:
     private String Parameter;
 
     /**
-     * Get ID of TKE or EKS cluster 
-     * @return ClusterId ID of TKE or EKS cluster
+     * Get TKE or EKS cluster ID. 
+     * @return ClusterId TKE or EKS cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set ID of TKE or EKS cluster
-     * @param ClusterId ID of TKE or EKS cluster
+     * Set TKE or EKS cluster ID.
+     * @param ClusterId TKE or EKS cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Custom permissions
+     * Get Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -204,11 +204,11 @@ Example:
     }
   ]
 } 
-     * @return Config Custom permissions
+     * @return Config Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -245,11 +245,11 @@ Example:
     }
 
     /**
-     * Set Custom permissions
+     * Set Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -280,11 +280,11 @@ Example:
     }
   ]
 }
-     * @param Config Custom permissions
+     * @param Config Custom permission.
 Example:
 {
   "apiVersion": "v1",
-  "Clusters": [
+  "clusters": [
     {
       "cluster": {
         "certificate-authority-data": "xxxxxx==",
@@ -321,7 +321,7 @@ Example:
     }
 
     /**
-     * Get Custom parameters
+     * Get Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -396,7 +396,7 @@ Example:
       }
     }
   } 
-     * @return Parameter Custom parameters
+     * @return Parameter Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -477,7 +477,7 @@ Example:
     }
 
     /**
-     * Set Custom parameters
+     * Set Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",
@@ -552,7 +552,7 @@ Example:
       }
     }
   }
-     * @param Parameter Custom parameters
+     * @param Parameter Custom parameter.
 Example:
 {
     "apiVersion": "apps/v1",

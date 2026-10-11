@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MachineTag extends AbstractModel {
 
     /**
-    * Associated tag ID
+    * 
     */
     @SerializedName("Rid")
     @Expose
     private Long Rid;
 
     /**
-    * Tag name
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Tag ID
+    * 
     */
     @SerializedName("TagId")
     @Expose
     private Long TagId;
 
     /**
-     * Get Associated tag ID 
-     * @return Rid Associated tag ID
+     * Get  
+     * @return Rid 
      */
     public Long getRid() {
         return this.Rid;
     }
 
     /**
-     * Set Associated tag ID
-     * @param Rid Associated tag ID
+     * Set 
+     * @param Rid 
      */
     public void setRid(Long Rid) {
         this.Rid = Rid;
     }
 
     /**
-     * Get Tag name 
-     * @return Name Tag name
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Tag name
-     * @param Name Tag name
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Tag ID 
-     * @return TagId Tag ID
+     * Get  
+     * @return TagId 
      */
     public Long getTagId() {
         return this.TagId;
     }
 
     /**
-     * Set Tag ID
-     * @param TagId Tag ID
+     * Set 
+     * @param TagId 
      */
     public void setTagId(Long TagId) {
         this.TagId = TagId;

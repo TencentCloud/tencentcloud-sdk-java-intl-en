@@ -24,37 +24,35 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
-    * Original price.
+    * <p>Original price (CNY).</p>
     */
     @SerializedName("OriginalCost")
     @Expose
     private Float OriginalCost;
 
     /**
-    * Discounted price.
+    * <p>Discounted price (CNY).</p>
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-    * Time unit of purchase instances. Valid values.
-<li>s: seconds.</li>
+    * <p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Instance purchase duration.
+    * <p>Instance purchase duration.</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * The price list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Price list.</p>
     */
     @SerializedName("PriceList")
     @Expose
@@ -68,88 +66,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Original price. 
-     * @return OriginalCost Original price.
+     * Get <p>Original price (CNY).</p> 
+     * @return OriginalCost <p>Original price (CNY).</p>
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
     }
 
     /**
-     * Set Original price.
-     * @param OriginalCost Original price.
+     * Set <p>Original price (CNY).</p>
+     * @param OriginalCost <p>Original price (CNY).</p>
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;
     }
 
     /**
-     * Get Discounted price. 
-     * @return DiscountCost Discounted price.
+     * Get <p>Discounted price (CNY).</p> 
+     * @return DiscountCost <p>Discounted price (CNY).</p>
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set Discounted price.
-     * @param DiscountCost Discounted price.
+     * Set <p>Discounted price (CNY).</p>
+     * @param DiscountCost <p>Discounted price (CNY).</p>
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;
     }
 
     /**
-     * Get Time unit of purchase instances. Valid values.
-<li>s: seconds.</li> 
-     * @return TimeUnit Time unit of purchase instances. Valid values.
-<li>s: seconds.</li>
+     * Get <p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li> 
+     * @return TimeUnit <p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Time unit of purchase instances. Valid values.
-<li>s: seconds.</li>
-     * @param TimeUnit Time unit of purchase instances. Valid values.
-<li>s: seconds.</li>
+     * Set <p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li>
+     * @param TimeUnit <p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Instance purchase duration. 
-     * @return TimeSpan Instance purchase duration.
+     * Get <p>Instance purchase duration.</p> 
+     * @return TimeSpan <p>Instance purchase duration.</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Instance purchase duration.
-     * @param TimeSpan Instance purchase duration.
+     * Set <p>Instance purchase duration.</p>
+     * @param TimeSpan <p>Instance purchase duration.</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get The price list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PriceList The price list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Price list.</p> 
+     * @return PriceList <p>Price list.</p>
      */
     public ZoneDetailPriceResult [] getPriceList() {
         return this.PriceList;
     }
 
     /**
-     * Set The price list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PriceList The price list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Price list.</p>
+     * @param PriceList <p>Price list.</p>
      */
     public void setPriceList(ZoneDetailPriceResult [] PriceList) {
         this.PriceList = PriceList;

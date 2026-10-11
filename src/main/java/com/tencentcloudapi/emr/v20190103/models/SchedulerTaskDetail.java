@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SchedulerTaskDetail extends AbstractModel {
 
     /**
-    * Steps.
+    * Step.
     */
     @SerializedName("Step")
     @Expose
@@ -52,16 +52,16 @@ public class SchedulerTaskDetail extends AbstractModel {
     private Long JobId;
 
     /**
-     * Get Steps. 
-     * @return Step Steps.
+     * Get Step. 
+     * @return Step Step.
      */
     public String getStep() {
         return this.Step;
     }
 
     /**
-     * Set Steps.
-     * @param Step Steps.
+     * Set Step.
+     * @param Step Step.
      */
     public void setStep(String Step) {
         this.Step = Step;

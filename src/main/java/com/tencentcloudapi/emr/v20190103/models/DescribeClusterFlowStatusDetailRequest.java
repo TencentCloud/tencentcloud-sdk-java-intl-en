@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterFlowStatusDetailRequest extends AbstractModel {
 
     /**
-    * EMR instance ID
+    * EMR instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,24 +38,24 @@ public class DescribeClusterFlowStatusDetailRequest extends AbstractModel {
     private FlowParam FlowParam;
 
     /**
-    * Whether to return additional task information.
-The default value is false.
+    * Whether additional task information is returned.
+Default value: false.
     */
     @SerializedName("NeedExtraDetail")
     @Expose
     private Boolean NeedExtraDetail;
 
     /**
-     * Get EMR instance ID 
-     * @return InstanceId EMR instance ID
+     * Get EMR instance ID. 
+     * @return InstanceId EMR instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set EMR instance ID
-     * @param InstanceId EMR instance ID
+     * Set EMR instance ID.
+     * @param InstanceId EMR instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -78,20 +78,20 @@ The default value is false.
     }
 
     /**
-     * Get Whether to return additional task information.
-The default value is false. 
-     * @return NeedExtraDetail Whether to return additional task information.
-The default value is false.
+     * Get Whether additional task information is returned.
+Default value: false. 
+     * @return NeedExtraDetail Whether additional task information is returned.
+Default value: false.
      */
     public Boolean getNeedExtraDetail() {
         return this.NeedExtraDetail;
     }
 
     /**
-     * Set Whether to return additional task information.
-The default value is false.
-     * @param NeedExtraDetail Whether to return additional task information.
-The default value is false.
+     * Set Whether additional task information is returned.
+Default value: false.
+     * @param NeedExtraDetail Whether additional task information is returned.
+Default value: false.
      */
     public void setNeedExtraDetail(Boolean NeedExtraDetail) {
         this.NeedExtraDetail = NeedExtraDetail;

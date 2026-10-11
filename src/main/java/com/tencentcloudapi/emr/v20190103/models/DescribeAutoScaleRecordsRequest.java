@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAutoScaleRecordsRequest extends AbstractModel {
 
     /**
-    * The instance ID.
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,8 +33,8 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
     /**
     * Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
 
     */
     @SerializedName("Filters")
@@ -42,44 +42,44 @@ ScaleAction: 1 (scale out), 2 (scale in).
     private KeyValue [] Filters;
 
     /**
-    * Pagination parameters.
+    * Pagination parameter.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Pagination parameters. Maximum value: 100
+    * Number of entries per page. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Whether it is automatic scaling (0) or managed scaling (1)
+    * Whether it is an auto scaling (0) or managed scaling (1) operation.
     */
     @SerializedName("RecordSource")
     @Expose
     private Long RecordSource;
 
     /**
-    * Ascending or not. 1: ascending, 0: descending.
+    * Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
     */
     @SerializedName("Asc")
     @Expose
     private Long Asc;
 
     /**
-     * Get The instance ID. 
-     * @return InstanceId The instance ID.
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The instance ID.
-     * @param InstanceId The instance ID.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -88,13 +88,13 @@ ScaleAction: 1 (scale out), 2 (scale in).
     /**
      * Get Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
  
      * @return Filters Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
 
      */
     public KeyValue [] getFilters() {
@@ -104,13 +104,13 @@ ScaleAction: 1 (scale out), 2 (scale in).
     /**
      * Set Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
 
      * @param Filters Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
 Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-ScaleAction: 1 (scale out), 2 (scale in).
+ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+ScaleAction: 1 (scale-out) and 2 (scale-in).
 
      */
     public void setFilters(KeyValue [] Filters) {
@@ -118,64 +118,64 @@ ScaleAction: 1 (scale out), 2 (scale in).
     }
 
     /**
-     * Get Pagination parameters. 
-     * @return Offset Pagination parameters.
+     * Get Pagination parameter. 
+     * @return Offset Pagination parameter.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination parameters.
-     * @param Offset Pagination parameters.
+     * Set Pagination parameter.
+     * @param Offset Pagination parameter.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Pagination parameters. Maximum value: 100 
-     * @return Limit Pagination parameters. Maximum value: 100
+     * Get Number of entries per page. Maximum value: 100. 
+     * @return Limit Number of entries per page. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination parameters. Maximum value: 100
-     * @param Limit Pagination parameters. Maximum value: 100
+     * Set Number of entries per page. Maximum value: 100.
+     * @param Limit Number of entries per page. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Whether it is automatic scaling (0) or managed scaling (1) 
-     * @return RecordSource Whether it is automatic scaling (0) or managed scaling (1)
+     * Get Whether it is an auto scaling (0) or managed scaling (1) operation. 
+     * @return RecordSource Whether it is an auto scaling (0) or managed scaling (1) operation.
      */
     public Long getRecordSource() {
         return this.RecordSource;
     }
 
     /**
-     * Set Whether it is automatic scaling (0) or managed scaling (1)
-     * @param RecordSource Whether it is automatic scaling (0) or managed scaling (1)
+     * Set Whether it is an auto scaling (0) or managed scaling (1) operation.
+     * @param RecordSource Whether it is an auto scaling (0) or managed scaling (1) operation.
      */
     public void setRecordSource(Long RecordSource) {
         this.RecordSource = RecordSource;
     }
 
     /**
-     * Get Ascending or not. 1: ascending, 0: descending. 
-     * @return Asc Ascending or not. 1: ascending, 0: descending.
+     * Get Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no). 
+     * @return Asc Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set Ascending or not. 1: ascending, 0: descending.
-     * @param Asc Ascending or not. 1: ascending, 0: descending.
+     * Set Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
+     * @param Asc Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;

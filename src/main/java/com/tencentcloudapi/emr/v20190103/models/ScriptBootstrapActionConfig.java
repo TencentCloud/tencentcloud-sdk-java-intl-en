@@ -24,31 +24,31 @@ import java.util.HashMap;
 public class ScriptBootstrapActionConfig extends AbstractModel {
 
     /**
-    * The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+    * COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
     */
     @SerializedName("CosFileURI")
     @Expose
     private String CosFileURI;
 
     /**
-    * The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
+    * Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
     */
     @SerializedName("ExecutionMoment")
     @Expose
     private String ExecutionMoment;
 
     /**
-    * The execution script parameter. The parameter format must comply with standard shell specifications.
+    * Execution script parameters. For the parameter format, follow standard Shell specifications.
     */
     @SerializedName("Args")
     @Expose
     private String [] Args;
 
     /**
-    * The script file name.
+    * Script file name.
     */
     @SerializedName("CosFileName")
     @Expose
@@ -62,76 +62,76 @@ public class ScriptBootstrapActionConfig extends AbstractModel {
     private String Remark;
 
     /**
-     * Get The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket). 
-     * @return CosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+     * Get COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket). 
+     * @return CosFileURI COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
      */
     public String getCosFileURI() {
         return this.CosFileURI;
     }
 
     /**
-     * Set The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
-     * @param CosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+     * Set COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+     * @param CosFileURI COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
      */
     public void setCosFileURI(String CosFileURI) {
         this.CosFileURI = CosFileURI;
     }
 
     /**
-     * Get The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li> 
-     * @return ExecutionMoment The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
+     * Get Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li> 
+     * @return ExecutionMoment Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
      */
     public String getExecutionMoment() {
         return this.ExecutionMoment;
     }
 
     /**
-     * Set The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
-     * @param ExecutionMoment The execution time of the bootstrap action script. Valid values:
-<li>`resourceAfter`: After node initialization</li>
-<li>`clusterAfter`: After cluster start</li>
-<li>`clusterBefore`: Before cluster start</li>
+     * Set Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
+     * @param ExecutionMoment Time range for the bootstrap script execution.
+<li>resourceAfter: after node initialization</li>
+<li>clusterAfter: after cluster startup</li>
+<li>clusterBefore: before cluster startup</li>
      */
     public void setExecutionMoment(String ExecutionMoment) {
         this.ExecutionMoment = ExecutionMoment;
     }
 
     /**
-     * Get The execution script parameter. The parameter format must comply with standard shell specifications. 
-     * @return Args The execution script parameter. The parameter format must comply with standard shell specifications.
+     * Get Execution script parameters. For the parameter format, follow standard Shell specifications. 
+     * @return Args Execution script parameters. For the parameter format, follow standard Shell specifications.
      */
     public String [] getArgs() {
         return this.Args;
     }
 
     /**
-     * Set The execution script parameter. The parameter format must comply with standard shell specifications.
-     * @param Args The execution script parameter. The parameter format must comply with standard shell specifications.
+     * Set Execution script parameters. For the parameter format, follow standard Shell specifications.
+     * @param Args Execution script parameters. For the parameter format, follow standard Shell specifications.
      */
     public void setArgs(String [] Args) {
         this.Args = Args;
     }
 
     /**
-     * Get The script file name. 
-     * @return CosFileName The script file name.
+     * Get Script file name. 
+     * @return CosFileName Script file name.
      */
     public String getCosFileName() {
         return this.CosFileName;
     }
 
     /**
-     * Set The script file name.
-     * @param CosFileName The script file name.
+     * Set Script file name.
+     * @param CosFileName Script file name.
      */
     public void setCosFileName(String CosFileName) {
         this.CosFileName = CosFileName;

@@ -24,207 +24,217 @@ import java.util.HashMap;
 public class InquiryPriceRenewInstanceRequest extends AbstractModel {
 
     /**
-    * How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
+    * Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Instance billing mode.
+    * Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+    * Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * Unit of time for instance renewal.
+    * Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Currency.
+    * Currency type. Valid values:
+<li>CNY: RMB</li>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+    * 
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+    * Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
     */
     @SerializedName("ModifyPayMode")
     @Expose
     private Long ModifyPayMode;
 
     /**
-    * Whether the renewal price for every node is required.
+    * Whether to return the renewal price for each node.
     */
     @SerializedName("NeedDetail")
     @Expose
     private Boolean NeedDetail;
 
     /**
-    * Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+    * Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get How long the instance will be renewed for, which needs to be used together with `TimeUnit`. 
-     * @return TimeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
+     * Get Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month. 
+     * @return TimeSpan Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
-     * @param TimeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
+     * Set Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
+     * @param TimeSpan Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Instance billing mode. 
-     * @return PayMode Instance billing mode.
+     * Get Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription. 
+     * @return PayMode Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Instance billing mode.
-     * @param PayMode Instance billing mode.
+     * Set Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
+     * @param PayMode Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware). 
-     * @return ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+     * Get Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr). 
+     * @return ResourceIds Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-     * @param ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+     * Set Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
+     * @param ResourceIds Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get Unit of time for instance renewal. 
-     * @return TimeUnit Unit of time for instance renewal.
+     * Get Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li> 
+     * @return TimeUnit Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Unit of time for instance renewal.
-     * @param TimeUnit Unit of time for instance renewal.
+     * Set Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
+     * @param TimeUnit Time unit for instance renewal. Valid values:
+<li>m: indicates month.</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Currency. 
-     * @return Currency Currency.
+     * Get Currency type. Valid values:
+<li>CNY: RMB</li> 
+     * @return Currency Currency type. Valid values:
+<li>CNY: RMB</li>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency.
-     * @param Currency Currency.
+     * Set Currency type. Valid values:
+<li>CNY: RMB</li>
+     * @param Currency Currency type. Valid values:
+<li>CNY: RMB</li>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance. 
-     * @return Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * Get  
+     * @return Placement 
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     * @param Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * Set 
+     * @param Placement 
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes 
-     * @return ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+     * Get Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes). 
+     * @return ModifyPayMode Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
      */
     public Long getModifyPayMode() {
         return this.ModifyPayMode;
     }
 
     /**
-     * Set Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
-     * @param ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+     * Set Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
+     * @param ModifyPayMode Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
      */
     public void setModifyPayMode(Long ModifyPayMode) {
         this.ModifyPayMode = ModifyPayMode;
     }
 
     /**
-     * Get Whether the renewal price for every node is required. 
-     * @return NeedDetail Whether the renewal price for every node is required.
+     * Get Whether to return the renewal price for each node. 
+     * @return NeedDetail Whether to return the renewal price for each node.
      */
     public Boolean getNeedDetail() {
         return this.NeedDetail;
     }
 
     /**
-     * Set Whether the renewal price for every node is required.
-     * @param NeedDetail Whether the renewal price for every node is required.
+     * Set Whether to return the renewal price for each node.
+     * @param NeedDetail Whether to return the renewal price for each node.
      */
     public void setNeedDetail(Boolean NeedDetail) {
         this.NeedDetail = NeedDetail;
     }
 
     /**
-     * Get Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster. 
-     * @return InstanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+     * Get Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster. 
+     * @return InstanceId Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
-     * @param InstanceId Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+     * Set Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
+     * @param InstanceId Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

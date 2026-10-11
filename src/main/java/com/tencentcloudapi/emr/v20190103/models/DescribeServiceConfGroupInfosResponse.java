@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeServiceConfGroupInfosResponse extends AbstractModel {
 
     /**
-    * List size.
+    * Number of entries in the list.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeServiceConfGroupInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List size. 
-     * @return TotalCount List size.
+     * Get Number of entries in the list. 
+     * @return TotalCount Number of entries in the list.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set List size.
-     * @param TotalCount List size.
+     * Set Number of entries in the list.
+     * @param TotalCount Number of entries in the list.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

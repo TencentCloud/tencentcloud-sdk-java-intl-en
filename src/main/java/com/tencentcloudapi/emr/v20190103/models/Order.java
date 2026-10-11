@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Order extends AbstractModel {
 
     /**
-    * Order field.
+    * Sorting field.
     */
     @SerializedName("Name")
     @Expose
@@ -38,16 +38,16 @@ public class Order extends AbstractModel {
     private String Direction;
 
     /**
-     * Get Order field. 
-     * @return Name Order field.
+     * Get Sorting field. 
+     * @return Name Sorting field.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Order field.
-     * @param Name Order field.
+     * Set Sorting field.
+     * @param Name Sorting field.
      */
     public void setName(String Name) {
         this.Name = Name;

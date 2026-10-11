@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ZoneDetailPriceResult extends AbstractModel {
 
     /**
-    * Availability zone ID.
+    * AZ ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Price details by node
+    * Price details for different nodes.
     */
     @SerializedName("NodeDetailPrice")
     @Expose
     private NodeDetailPriceResult [] NodeDetailPrice;
 
     /**
-     * Get Availability zone ID. 
-     * @return ZoneId Availability zone ID.
+     * Get AZ ID. 
+     * @return ZoneId AZ ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Availability zone ID.
-     * @param ZoneId Availability zone ID.
+     * Set AZ ID.
+     * @param ZoneId AZ ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Price details by node 
-     * @return NodeDetailPrice Price details by node
+     * Get Price details for different nodes. 
+     * @return NodeDetailPrice Price details for different nodes.
      */
     public NodeDetailPriceResult [] getNodeDetailPrice() {
         return this.NodeDetailPrice;
     }
 
     /**
-     * Set Price details by node
-     * @param NodeDetailPrice Price details by node
+     * Set Price details for different nodes.
+     * @param NodeDetailPrice Price details for different nodes.
      */
     public void setNodeDetailPrice(NodeDetailPriceResult [] NodeDetailPrice) {
         this.NodeDetailPrice = NodeDetailPrice;

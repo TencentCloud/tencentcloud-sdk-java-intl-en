@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AddNodeResourceConfigRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID.
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Node type: Core, Task, and Router.
+    * Node type. Valid values: CORE, TASK, and ROUTER.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -52,7 +52,7 @@ public class AddNodeResourceConfigRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+    * Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
     */
     @SerializedName("IsDefault")
     @Expose
@@ -73,7 +73,7 @@ public class AddNodeResourceConfigRequest extends AbstractModel {
     private Resource [] MultipleResourceConfig;
 
     /**
-    * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+    * Type. Valid values: ComputeResource and EMR. Default value: EMR.
     */
     @SerializedName("ResourceBaseType")
     @Expose
@@ -94,32 +94,32 @@ public class AddNodeResourceConfigRequest extends AbstractModel {
     private String HardwareResourceType;
 
     /**
-     * Get Cluster instance ID. 
-     * @return InstanceId Cluster instance ID.
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID.
-     * @param InstanceId Cluster instance ID.
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Node type: Core, Task, and Router. 
-     * @return ResourceType Node type: Core, Task, and Router.
+     * Get Node type. Valid values: CORE, TASK, and ROUTER. 
+     * @return ResourceType Node type. Valid values: CORE, TASK, and ROUTER.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Node type: Core, Task, and Router.
-     * @param ResourceType Node type: Core, Task, and Router.
+     * Set Node type. Valid values: CORE, TASK, and ROUTER.
+     * @param ResourceType Node type. Valid values: CORE, TASK, and ROUTER.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -158,16 +158,16 @@ public class AddNodeResourceConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply. 
-     * @return IsDefault Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+     * Get Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply. 
+     * @return IsDefault Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
      */
     public String getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
-     * @param IsDefault Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+     * Set Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
+     * @param IsDefault Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
      */
     public void setIsDefault(String IsDefault) {
         this.IsDefault = IsDefault;
@@ -206,16 +206,16 @@ public class AddNodeResourceConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get The type can be ComputeResource, EMR, or a default value. The default value is EMR. 
-     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * Get Type. Valid values: ComputeResource and EMR. Default value: EMR. 
+     * @return ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
      */
     public String getResourceBaseType() {
         return this.ResourceBaseType;
     }
 
     /**
-     * Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-     * @param ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * Set Type. Valid values: ComputeResource and EMR. Default value: EMR.
+     * @param ResourceBaseType Type. Valid values: ComputeResource and EMR. Default value: EMR.
      */
     public void setResourceBaseType(String ResourceBaseType) {
         this.ResourceBaseType = ResourceBaseType;

@@ -31,7 +31,7 @@ public class ModifyAutoScaleStrategyRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+    * Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
     */
     @SerializedName("StrategyType")
     @Expose
@@ -45,7 +45,7 @@ public class ModifyAutoScaleStrategyRequest extends AbstractModel {
     private LoadAutoScaleStrategy [] LoadAutoScaleStrategies;
 
     /**
-    * Rule for time-based scaling
+    * Time-based scaling rule.
     */
     @SerializedName("TimeAutoScaleStrategies")
     @Expose
@@ -75,16 +75,16 @@ public class ModifyAutoScaleStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time 
-     * @return StrategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+     * Get Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time). 
+     * @return StrategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
-     * @param StrategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+     * Set Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
+     * @param StrategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;
@@ -107,16 +107,16 @@ public class ModifyAutoScaleStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get Rule for time-based scaling 
-     * @return TimeAutoScaleStrategies Rule for time-based scaling
+     * Get Time-based scaling rule. 
+     * @return TimeAutoScaleStrategies Time-based scaling rule.
      */
     public TimeAutoScaleStrategy [] getTimeAutoScaleStrategies() {
         return this.TimeAutoScaleStrategies;
     }
 
     /**
-     * Set Rule for time-based scaling
-     * @param TimeAutoScaleStrategies Rule for time-based scaling
+     * Set Time-based scaling rule.
+     * @param TimeAutoScaleStrategies Time-based scaling rule.
      */
     public void setTimeAutoScaleStrategies(TimeAutoScaleStrategy [] TimeAutoScaleStrategies) {
         this.TimeAutoScaleStrategies = TimeAutoScaleStrategies;

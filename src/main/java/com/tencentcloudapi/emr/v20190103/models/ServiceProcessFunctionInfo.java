@@ -31,26 +31,21 @@ public class ServiceProcessFunctionInfo extends AbstractModel {
     private String DetectAlert;
 
     /**
-    * Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection feature description.
     */
     @SerializedName("DetetcFunctionKey")
     @Expose
     private String DetetcFunctionKey;
 
     /**
-    * Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection feature result.
     */
     @SerializedName("DetetcFunctionValue")
     @Expose
     private String DetetcFunctionValue;
 
     /**
-    * Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection result.
     */
     @SerializedName("DetetcTime")
     @Expose
@@ -94,12 +89,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetetcFunctionKey Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection feature description. 
+     * @return DetetcFunctionKey Detection feature description.
      * @deprecated
      */
     @Deprecated
@@ -108,12 +99,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetetcFunctionKey Detection feature description
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection feature description.
+     * @param DetetcFunctionKey Detection feature description.
      * @deprecated
      */
     @Deprecated
@@ -122,12 +109,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetetcFunctionValue Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection feature result. 
+     * @return DetetcFunctionValue Detection feature result.
      * @deprecated
      */
     @Deprecated
@@ -136,12 +119,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetetcFunctionValue Detection feature result
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection feature result.
+     * @param DetetcFunctionValue Detection feature result.
      * @deprecated
      */
     @Deprecated
@@ -150,10 +129,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Detection results.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetetcTime Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection result. 
+     * @return DetetcTime Detection result.
      * @deprecated
      */
     @Deprecated
@@ -162,10 +139,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetetcTime Detection results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection result.
+     * @param DetetcTime Detection result.
      * @deprecated
      */
     @Deprecated

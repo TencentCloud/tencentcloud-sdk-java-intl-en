@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceBasicRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID.
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,23 +45,23 @@ public class ModifyInstanceBasicRequest extends AbstractModel {
     private String ResourceBaseType;
 
     /**
-    * Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+    * ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
     */
     @SerializedName("ComputeResourceId")
     @Expose
     private String ComputeResourceId;
 
     /**
-     * Get Cluster instance ID. 
-     * @return InstanceId Cluster instance ID.
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID.
-     * @param InstanceId Cluster instance ID.
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -100,16 +100,16 @@ public class ModifyInstanceBasicRequest extends AbstractModel {
     }
 
     /**
-     * Get Computing resource ID that needs to be modified, and can be used together with ResourceBaseType. 
-     * @return ComputeResourceId Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+     * Get ID of the computing resource that needs to be modified. Used together with ResourceBaseType. 
+     * @return ComputeResourceId ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
      */
     public String getComputeResourceId() {
         return this.ComputeResourceId;
     }
 
     /**
-     * Set Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
-     * @param ComputeResourceId Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+     * Set ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
+     * @param ComputeResourceId ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
      */
     public void setComputeResourceId(String ComputeResourceId) {
         this.ComputeResourceId = ComputeResourceId;

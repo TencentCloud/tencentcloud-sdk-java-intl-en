@@ -53,7 +53,6 @@ public class OverviewMetricData extends AbstractModel {
 
     /**
     * Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataPoints")
     @Expose
@@ -61,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -132,10 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Sampling point data. 
      * @return DataPoints Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDataPoints() {
         return this.DataPoints;
@@ -143,19 +139,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DataPoints Sampling point data.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataPoints(String [] DataPoints) {
         this.DataPoints = DataPoints;
     }
 
     /**
-     * Get Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Metric tags. 
      * @return Tags Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MetricTags getTags() {
         return this.Tags;
@@ -163,9 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Metric tags.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(MetricTags Tags) {
         this.Tags = Tags;

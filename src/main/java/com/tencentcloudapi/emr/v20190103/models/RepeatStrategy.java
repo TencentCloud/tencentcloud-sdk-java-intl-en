@@ -31,43 +31,35 @@ public class RepeatStrategy extends AbstractModel {
     private String RepeatType;
 
     /**
-    * Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Daily repetition rule, effective when RepeatType is set to DAY.
     */
     @SerializedName("DayRepeat")
     @Expose
     private DayRepeatStrategy DayRepeat;
 
     /**
-    * Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Weekly repetition rule, effective when RepeatType is set to DOW.
     */
     @SerializedName("WeekRepeat")
     @Expose
     private WeekRepeatStrategy WeekRepeat;
 
     /**
-    * Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Monthly repetition rule, effective when RepeatType is set to DOM.
     */
     @SerializedName("MonthRepeat")
     @Expose
     private MonthRepeatStrategy MonthRepeat;
 
     /**
-    * One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * One-time execution rule, effective when RepeatType is set to NONE.
     */
     @SerializedName("NotRepeat")
     @Expose
     private NotRepeatStrategy NotRepeat;
 
     /**
-    * Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+    * Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
     */
     @SerializedName("Expire")
     @Expose
@@ -97,112 +89,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DayRepeat Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Daily repetition rule, effective when RepeatType is set to DAY. 
+     * @return DayRepeat Daily repetition rule, effective when RepeatType is set to DAY.
      */
     public DayRepeatStrategy getDayRepeat() {
         return this.DayRepeat;
     }
 
     /**
-     * Set Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DayRepeat Daily repetition rule, which is effective when RepeatType is set to DAY
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Daily repetition rule, effective when RepeatType is set to DAY.
+     * @param DayRepeat Daily repetition rule, effective when RepeatType is set to DAY.
      */
     public void setDayRepeat(DayRepeatStrategy DayRepeat) {
         this.DayRepeat = DayRepeat;
     }
 
     /**
-     * Get Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WeekRepeat Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Weekly repetition rule, effective when RepeatType is set to DOW. 
+     * @return WeekRepeat Weekly repetition rule, effective when RepeatType is set to DOW.
      */
     public WeekRepeatStrategy getWeekRepeat() {
         return this.WeekRepeat;
     }
 
     /**
-     * Set Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WeekRepeat Weekly repetition rule, effective when RepeatType is DOW
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Weekly repetition rule, effective when RepeatType is set to DOW.
+     * @param WeekRepeat Weekly repetition rule, effective when RepeatType is set to DOW.
      */
     public void setWeekRepeat(WeekRepeatStrategy WeekRepeat) {
         this.WeekRepeat = WeekRepeat;
     }
 
     /**
-     * Get Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MonthRepeat Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Monthly repetition rule, effective when RepeatType is set to DOM. 
+     * @return MonthRepeat Monthly repetition rule, effective when RepeatType is set to DOM.
      */
     public MonthRepeatStrategy getMonthRepeat() {
         return this.MonthRepeat;
     }
 
     /**
-     * Set Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MonthRepeat Monthly repetition rule, valid when RepeatType is DOM
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Monthly repetition rule, effective when RepeatType is set to DOM.
+     * @param MonthRepeat Monthly repetition rule, effective when RepeatType is set to DOM.
      */
     public void setMonthRepeat(MonthRepeatStrategy MonthRepeat) {
         this.MonthRepeat = MonthRepeat;
     }
 
     /**
-     * Get One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NotRepeat One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get One-time execution rule, effective when RepeatType is set to NONE. 
+     * @return NotRepeat One-time execution rule, effective when RepeatType is set to NONE.
      */
     public NotRepeatStrategy getNotRepeat() {
         return this.NotRepeat;
     }
 
     /**
-     * Set One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NotRepeat One-time execution rule, valid when RepeatType is NONE
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set One-time execution rule, effective when RepeatType is set to NONE.
+     * @param NotRepeat One-time execution rule, effective when RepeatType is set to NONE.
      */
     public void setNotRepeat(NotRepeatStrategy NotRepeat) {
         this.NotRepeat = NotRepeat;
     }
 
     /**
-     * Get Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required. 
-     * @return Expire Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+     * Get Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required. 
+     * @return Expire Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
      */
     public String getExpire() {
         return this.Expire;
     }
 
     /**
-     * Set Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
-     * @param Expire Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+     * Set Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
+     * @param Expire Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
      */
     public void setExpire(String Expire) {
         this.Expire = Expire;

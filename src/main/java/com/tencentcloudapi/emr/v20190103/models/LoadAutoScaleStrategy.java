@@ -38,79 +38,84 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private String StrategyName;
 
     /**
-    * Cooling time for a rule to take effect.
+    * Cooldown time for a rule to take effect.
     */
     @SerializedName("CalmDownTime")
     @Expose
     private Long CalmDownTime;
 
     /**
-    * Scaling action. 1: scale-out, 2: scale-in.
+    * Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
     */
     @SerializedName("ScaleAction")
     @Expose
     private Long ScaleAction;
 
     /**
-    * Scaling amount each time the rule takes effect.
+    * Number of scaling items each time the rule takes effect.
     */
     @SerializedName("ScaleNum")
     @Expose
     private Long ScaleNum;
 
     /**
-    * Metric processing method. 1: MAX, 2: MIN, 3: AVG.
+    * Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
     */
     @SerializedName("ProcessMethod")
     @Expose
     private Long ProcessMethod;
 
     /**
-    * Rule priority, which is not applicable during adding. The default is auto-increment.
+    * Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * Rule status. 1: enabled, 3: disabled.
+    * Rule status. Valid values: 1 (enabled) and 3 (disabled).
     */
     @SerializedName("StrategyStatus")
     @Expose
     private Long StrategyStatus;
 
     /**
-    * Specified Yarn Node Label for rule scale-out.
+    * YARN node label specified for the rule-based scale-out.
     */
     @SerializedName("YarnNodeLabel")
     @Expose
     private String YarnNodeLabel;
 
     /**
-    * Effective time of the rule
+    * Effective time of the rule.
     */
     @SerializedName("PeriodValid")
     @Expose
     private String PeriodValid;
 
     /**
-    * Graceful scale-in switch
+    * Graceful scale-in switch.
     */
     @SerializedName("GraceDownFlag")
     @Expose
     private Boolean GraceDownFlag;
 
     /**
-    * Graceful scale-in wait time
+    * Graceful scale-in wait time.
     */
     @SerializedName("GraceDownTime")
     @Expose
     private Long GraceDownTime;
 
     /**
-    * Bound tag list
+    * Whether to enable task protection.
+    */
+    @SerializedName("GraceDownProtectFlag")
+    @Expose
+    private Boolean GraceDownProtectFlag;
 
-Note: This field may return null, indicating that no valid values can be obtained.
+    /**
+    * Bound tag list.
     */
     @SerializedName("Tags")
     @Expose
@@ -124,26 +129,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ConfigGroupAssigned;
 
     /**
-    * Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+    * Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
     */
     @SerializedName("MeasureMethod")
     @Expose
     private String MeasureMethod;
 
     /**
-    * Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
     */
     @SerializedName("SoftDeployDesc")
     @Expose
     private String [] SoftDeployDesc;
 
     /**
-    * Startup process list, such as ["NodeManager"].
+    * Startup process list, for example, ["NodeManager"].
     */
     @SerializedName("ServiceNodeDesc")
     @Expose
@@ -151,23 +155,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceNodeInfo")
     @Expose
     private Long [] ServiceNodeInfo;
 
     /**
-    * Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
     */
     @SerializedName("SoftDeployInfo")
     @Expose
     private Long [] SoftDeployInfo;
 
     /**
-    * Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Multi-metric triggering condition.
     */
     @SerializedName("LoadMetricsConditions")
     @Expose
@@ -181,11 +182,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long GroupId;
 
     /**
-    * Soft (for example, YARN).
+    * Soft. Example value: yarn.
     */
     @SerializedName("Soft")
     @Expose
     private String Soft;
+
+    /**
+    * Task protection time.
+    */
+    @SerializedName("GraceDownProtectTime")
+    @Expose
+    private Long GraceDownProtectTime;
 
     /**
      * Get Rule ID. 
@@ -220,184 +228,192 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cooling time for a rule to take effect. 
-     * @return CalmDownTime Cooling time for a rule to take effect.
+     * Get Cooldown time for a rule to take effect. 
+     * @return CalmDownTime Cooldown time for a rule to take effect.
      */
     public Long getCalmDownTime() {
         return this.CalmDownTime;
     }
 
     /**
-     * Set Cooling time for a rule to take effect.
-     * @param CalmDownTime Cooling time for a rule to take effect.
+     * Set Cooldown time for a rule to take effect.
+     * @param CalmDownTime Cooldown time for a rule to take effect.
      */
     public void setCalmDownTime(Long CalmDownTime) {
         this.CalmDownTime = CalmDownTime;
     }
 
     /**
-     * Get Scaling action. 1: scale-out, 2: scale-in. 
-     * @return ScaleAction Scaling action. 1: scale-out, 2: scale-in.
+     * Get Scaling action. Valid values: 1 (scale-out) and 2 (scale-in). 
+     * @return ScaleAction Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
      */
     public Long getScaleAction() {
         return this.ScaleAction;
     }
 
     /**
-     * Set Scaling action. 1: scale-out, 2: scale-in.
-     * @param ScaleAction Scaling action. 1: scale-out, 2: scale-in.
+     * Set Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
+     * @param ScaleAction Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
      */
     public void setScaleAction(Long ScaleAction) {
         this.ScaleAction = ScaleAction;
     }
 
     /**
-     * Get Scaling amount each time the rule takes effect. 
-     * @return ScaleNum Scaling amount each time the rule takes effect.
+     * Get Number of scaling items each time the rule takes effect. 
+     * @return ScaleNum Number of scaling items each time the rule takes effect.
      */
     public Long getScaleNum() {
         return this.ScaleNum;
     }
 
     /**
-     * Set Scaling amount each time the rule takes effect.
-     * @param ScaleNum Scaling amount each time the rule takes effect.
+     * Set Number of scaling items each time the rule takes effect.
+     * @param ScaleNum Number of scaling items each time the rule takes effect.
      */
     public void setScaleNum(Long ScaleNum) {
         this.ScaleNum = ScaleNum;
     }
 
     /**
-     * Get Metric processing method. 1: MAX, 2: MIN, 3: AVG. 
-     * @return ProcessMethod Metric processing method. 1: MAX, 2: MIN, 3: AVG.
+     * Get Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG). 
+     * @return ProcessMethod Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
      */
     public Long getProcessMethod() {
         return this.ProcessMethod;
     }
 
     /**
-     * Set Metric processing method. 1: MAX, 2: MIN, 3: AVG.
-     * @param ProcessMethod Metric processing method. 1: MAX, 2: MIN, 3: AVG.
+     * Set Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
+     * @param ProcessMethod Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
      */
     public void setProcessMethod(Long ProcessMethod) {
         this.ProcessMethod = ProcessMethod;
     }
 
     /**
-     * Get Rule priority, which is not applicable during adding. The default is auto-increment. 
-     * @return Priority Rule priority, which is not applicable during adding. The default is auto-increment.
+     * Get Rule priority, which is invalid during addition. By default, the auto-increment rule is used. 
+     * @return Priority Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Rule priority, which is not applicable during adding. The default is auto-increment.
-     * @param Priority Rule priority, which is not applicable during adding. The default is auto-increment.
+     * Set Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
+     * @param Priority Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get Rule status. 1: enabled, 3: disabled. 
-     * @return StrategyStatus Rule status. 1: enabled, 3: disabled.
+     * Get Rule status. Valid values: 1 (enabled) and 3 (disabled). 
+     * @return StrategyStatus Rule status. Valid values: 1 (enabled) and 3 (disabled).
      */
     public Long getStrategyStatus() {
         return this.StrategyStatus;
     }
 
     /**
-     * Set Rule status. 1: enabled, 3: disabled.
-     * @param StrategyStatus Rule status. 1: enabled, 3: disabled.
+     * Set Rule status. Valid values: 1 (enabled) and 3 (disabled).
+     * @param StrategyStatus Rule status. Valid values: 1 (enabled) and 3 (disabled).
      */
     public void setStrategyStatus(Long StrategyStatus) {
         this.StrategyStatus = StrategyStatus;
     }
 
     /**
-     * Get Specified Yarn Node Label for rule scale-out. 
-     * @return YarnNodeLabel Specified Yarn Node Label for rule scale-out.
+     * Get YARN node label specified for the rule-based scale-out. 
+     * @return YarnNodeLabel YARN node label specified for the rule-based scale-out.
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
     }
 
     /**
-     * Set Specified Yarn Node Label for rule scale-out.
-     * @param YarnNodeLabel Specified Yarn Node Label for rule scale-out.
+     * Set YARN node label specified for the rule-based scale-out.
+     * @param YarnNodeLabel YARN node label specified for the rule-based scale-out.
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
     }
 
     /**
-     * Get Effective time of the rule 
-     * @return PeriodValid Effective time of the rule
+     * Get Effective time of the rule. 
+     * @return PeriodValid Effective time of the rule.
      */
     public String getPeriodValid() {
         return this.PeriodValid;
     }
 
     /**
-     * Set Effective time of the rule
-     * @param PeriodValid Effective time of the rule
+     * Set Effective time of the rule.
+     * @param PeriodValid Effective time of the rule.
      */
     public void setPeriodValid(String PeriodValid) {
         this.PeriodValid = PeriodValid;
     }
 
     /**
-     * Get Graceful scale-in switch 
-     * @return GraceDownFlag Graceful scale-in switch
+     * Get Graceful scale-in switch. 
+     * @return GraceDownFlag Graceful scale-in switch.
      */
     public Boolean getGraceDownFlag() {
         return this.GraceDownFlag;
     }
 
     /**
-     * Set Graceful scale-in switch
-     * @param GraceDownFlag Graceful scale-in switch
+     * Set Graceful scale-in switch.
+     * @param GraceDownFlag Graceful scale-in switch.
      */
     public void setGraceDownFlag(Boolean GraceDownFlag) {
         this.GraceDownFlag = GraceDownFlag;
     }
 
     /**
-     * Get Graceful scale-in wait time 
-     * @return GraceDownTime Graceful scale-in wait time
+     * Get Graceful scale-in wait time. 
+     * @return GraceDownTime Graceful scale-in wait time.
      */
     public Long getGraceDownTime() {
         return this.GraceDownTime;
     }
 
     /**
-     * Set Graceful scale-in wait time
-     * @param GraceDownTime Graceful scale-in wait time
+     * Set Graceful scale-in wait time.
+     * @param GraceDownTime Graceful scale-in wait time.
      */
     public void setGraceDownTime(Long GraceDownTime) {
         this.GraceDownTime = GraceDownTime;
     }
 
     /**
-     * Get Bound tag list
+     * Get Whether to enable task protection. 
+     * @return GraceDownProtectFlag Whether to enable task protection.
+     */
+    public Boolean getGraceDownProtectFlag() {
+        return this.GraceDownProtectFlag;
+    }
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Bound tag list
+    /**
+     * Set Whether to enable task protection.
+     * @param GraceDownProtectFlag Whether to enable task protection.
+     */
+    public void setGraceDownProtectFlag(Boolean GraceDownProtectFlag) {
+        this.GraceDownProtectFlag = GraceDownProtectFlag;
+    }
 
-Note: This field may return null, indicating that no valid values can be obtained.
+    /**
+     * Get Bound tag list. 
+     * @return Tags Bound tag list.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Bound tag list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Bound tag list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bound tag list.
+     * @param Tags Bound tag list.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -420,78 +436,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine. 
-     * @return MeasureMethod Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+     * Get Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine. 
+     * @return MeasureMethod Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
      */
     public String getMeasureMethod() {
         return this.MeasureMethod;
     }
 
     /**
-     * Set Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
-     * @param MeasureMethod Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+     * Set Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
+     * @param MeasureMethod Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
      */
     public void setMeasureMethod(String MeasureMethod) {
         this.MeasureMethod = MeasureMethod;
     }
 
     /**
-     * Get Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SoftDeployDesc Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"]. 
+     * @return SoftDeployDesc List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
      */
     public String [] getSoftDeployDesc() {
         return this.SoftDeployDesc;
     }
 
     /**
-     * Set Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SoftDeployDesc Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
+     * @param SoftDeployDesc List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
      */
     public void setSoftDeployDesc(String [] SoftDeployDesc) {
         this.SoftDeployDesc = SoftDeployDesc;
     }
 
     /**
-     * Get Startup process list, such as ["NodeManager"]. 
-     * @return ServiceNodeDesc Startup process list, such as ["NodeManager"].
+     * Get Startup process list, for example, ["NodeManager"]. 
+     * @return ServiceNodeDesc Startup process list, for example, ["NodeManager"].
      */
     public String getServiceNodeDesc() {
         return this.ServiceNodeDesc;
     }
 
     /**
-     * Set Startup process list, such as ["NodeManager"].
-     * @param ServiceNodeDesc Startup process list, such as ["NodeManager"].
+     * Set Startup process list, for example, ["NodeManager"].
+     * @param ServiceNodeDesc Startup process list, for example, ["NodeManager"].
      */
     public void setServiceNodeDesc(String ServiceNodeDesc) {
         this.ServiceNodeDesc = ServiceNodeDesc;
     }
 
     /**
-     * Get Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Startup process list. 
      * @return ServiceNodeInfo Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getServiceNodeInfo() {
         return this.ServiceNodeInfo;
@@ -499,49 +509,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServiceNodeInfo Startup process list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceNodeInfo(Long [] ServiceNodeInfo) {
         this.ServiceNodeInfo = ServiceNodeInfo;
     }
 
     /**
-     * Get Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1). 
+     * @return SoftDeployInfo List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
      */
     public Long [] getSoftDeployInfo() {
         return this.SoftDeployInfo;
     }
 
     /**
-     * Set Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
+     * @param SoftDeployInfo List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
      */
     public void setSoftDeployInfo(Long [] SoftDeployInfo) {
         this.SoftDeployInfo = SoftDeployInfo;
     }
 
     /**
-     * Get Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadMetricsConditions Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Multi-metric triggering condition. 
+     * @return LoadMetricsConditions Multi-metric triggering condition.
      */
     public LoadMetricsConditions getLoadMetricsConditions() {
         return this.LoadMetricsConditions;
     }
 
     /**
-     * Set Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadMetricsConditions Multi-metric trigger condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Multi-metric triggering condition.
+     * @param LoadMetricsConditions Multi-metric triggering condition.
      */
     public void setLoadMetricsConditions(LoadMetricsConditions LoadMetricsConditions) {
         this.LoadMetricsConditions = LoadMetricsConditions;
@@ -564,19 +564,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Soft (for example, YARN). 
-     * @return Soft Soft (for example, YARN).
+     * Get Soft. Example value: yarn. 
+     * @return Soft Soft. Example value: yarn.
      */
     public String getSoft() {
         return this.Soft;
     }
 
     /**
-     * Set Soft (for example, YARN).
-     * @param Soft Soft (for example, YARN).
+     * Set Soft. Example value: yarn.
+     * @param Soft Soft. Example value: yarn.
      */
     public void setSoft(String Soft) {
         this.Soft = Soft;
+    }
+
+    /**
+     * Get Task protection time. 
+     * @return GraceDownProtectTime Task protection time.
+     */
+    public Long getGraceDownProtectTime() {
+        return this.GraceDownProtectTime;
+    }
+
+    /**
+     * Set Task protection time.
+     * @param GraceDownProtectTime Task protection time.
+     */
+    public void setGraceDownProtectTime(Long GraceDownProtectTime) {
+        this.GraceDownProtectTime = GraceDownProtectTime;
     }
 
     public LoadAutoScaleStrategy() {
@@ -623,6 +639,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.GraceDownTime != null) {
             this.GraceDownTime = new Long(source.GraceDownTime);
         }
+        if (source.GraceDownProtectFlag != null) {
+            this.GraceDownProtectFlag = new Boolean(source.GraceDownProtectFlag);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -665,6 +684,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Soft != null) {
             this.Soft = new String(source.Soft);
         }
+        if (source.GraceDownProtectTime != null) {
+            this.GraceDownProtectTime = new Long(source.GraceDownProtectTime);
+        }
     }
 
 
@@ -684,6 +706,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PeriodValid", this.PeriodValid);
         this.setParamSimple(map, prefix + "GraceDownFlag", this.GraceDownFlag);
         this.setParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
+        this.setParamSimple(map, prefix + "GraceDownProtectFlag", this.GraceDownProtectFlag);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ConfigGroupAssigned", this.ConfigGroupAssigned);
         this.setParamSimple(map, prefix + "MeasureMethod", this.MeasureMethod);
@@ -694,6 +717,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "LoadMetricsConditions.", this.LoadMetricsConditions);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Soft", this.Soft);
+        this.setParamSimple(map, prefix + "GraceDownProtectTime", this.GraceDownProtectTime);
 
     }
 }

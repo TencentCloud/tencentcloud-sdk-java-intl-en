@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class ModifySLInstanceRequest extends AbstractModel {
 
     /**
-    * Instance unique identifier (string).
+    * <p>Instance unique identifier (string).</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Region name to be changed.
+    * <p>Name of the region to be changed.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
+    * <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+    * <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-     * Get Instance unique identifier (string). 
-     * @return InstanceId Instance unique identifier (string).
+    * <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+     * Get <p>Instance unique identifier (string).</p> 
+     * @return InstanceId <p>Instance unique identifier (string).</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance unique identifier (string).
-     * @param InstanceId Instance unique identifier (string).
+     * Set <p>Instance unique identifier (string).</p>
+     * @param InstanceId <p>Instance unique identifier (string).</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Region name to be changed. 
-     * @return Zone Region name to be changed.
+     * Get <p>Name of the region to be changed.</p> 
+     * @return Zone <p>Name of the region to be changed.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Region name to be changed.
-     * @param Zone Region name to be changed.
+     * Set <p>Name of the region to be changed.</p>
+     * @param Zone <p>Name of the region to be changed.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50. 
-     * @return NodeNum Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
+     * Get <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p> 
+     * @return NodeNum <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
-     * @param NodeNum Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
+     * Set <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
+     * @param NodeNum <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808. 
-     * @return ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+     * Get <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p> 
+     * @return ClientToken <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
-     * @param ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+     * Set <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+     * @param ClientToken <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p> 
+     * @return DiskSize <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+     * @param DiskSize <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
     }
 
     public ModifySLInstanceRequest() {
@@ -135,6 +158,9 @@ public class ModifySLInstanceRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifySLInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
 
     }
 }

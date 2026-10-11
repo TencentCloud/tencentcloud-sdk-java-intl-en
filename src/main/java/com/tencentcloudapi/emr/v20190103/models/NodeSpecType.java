@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class NodeSpecType extends AbstractModel {
 
     /**
-    * Model series.
+    * Instance type series.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Model series name.
+    * Instance type series name.
     */
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
 
     /**
-    * Order.
+    * Sorting order.
     */
     @SerializedName("Order")
     @Expose
     private Long Order;
 
     /**
-    * InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Array of instance families.
     */
     @SerializedName("InstanceFamilies")
     @Expose
     private NodeSpecFamily [] InstanceFamilies;
 
     /**
-     * Get Model series. 
-     * @return Type Model series.
+     * Get Instance type series. 
+     * @return Type Instance type series.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Model series.
-     * @param Type Model series.
+     * Set Instance type series.
+     * @param Type Instance type series.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Model series name. 
-     * @return TypeName Model series name.
+     * Get Instance type series name. 
+     * @return TypeName Instance type series name.
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set Model series name.
-     * @param TypeName Model series name.
+     * Set Instance type series name.
+     * @param TypeName Instance type series name.
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get Order. 
-     * @return Order Order.
+     * Get Sorting order. 
+     * @return Order Sorting order.
      */
     public Long getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Order.
-     * @param Order Order.
+     * Set Sorting order.
+     * @param Order Sorting order.
      */
     public void setOrder(Long Order) {
         this.Order = Order;
     }
 
     /**
-     * Get InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceFamilies InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Array of instance families. 
+     * @return InstanceFamilies Array of instance families.
      */
     public NodeSpecFamily [] getInstanceFamilies() {
         return this.InstanceFamilies;
     }
 
     /**
-     * Set InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceFamilies InstanceFamily array.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Array of instance families.
+     * @param InstanceFamilies Array of instance families.
      */
     public void setInstanceFamilies(NodeSpecFamily [] InstanceFamilies) {
         this.InstanceFamilies = InstanceFamilies;

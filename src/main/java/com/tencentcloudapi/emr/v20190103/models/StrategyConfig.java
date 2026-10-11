@@ -24,29 +24,29 @@ import java.util.HashMap;
 public class StrategyConfig extends AbstractModel {
 
     /**
-    * 0: disable rolling restart.
-1: enable rolling start.
+    * 0: disables rolling restart.
+1: enables rolling start.
     */
     @SerializedName("RollingRestartSwitch")
     @Expose
     private Long RollingRestartSwitch;
 
     /**
-    * Rolling restart quantity per batch, which is up to 99999.
+    * Number of instances to restart per batch for rolling restart. Maximum value: 99999.
     */
     @SerializedName("BatchSize")
     @Expose
     private Long BatchSize;
 
     /**
-    * Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+    * Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
     */
     @SerializedName("TimeWait")
     @Expose
     private Long TimeWait;
 
     /**
-    * Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+    * Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
     */
     @SerializedName("DealOnFail")
     @Expose
@@ -54,85 +54,82 @@ public class StrategyConfig extends AbstractModel {
 
     /**
     * Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Args")
     @Expose
     private Arg [] Args;
 
     /**
-     * Get 0: disable rolling restart.
-1: enable rolling start. 
-     * @return RollingRestartSwitch 0: disable rolling restart.
-1: enable rolling start.
+     * Get 0: disables rolling restart.
+1: enables rolling start. 
+     * @return RollingRestartSwitch 0: disables rolling restart.
+1: enables rolling start.
      */
     public Long getRollingRestartSwitch() {
         return this.RollingRestartSwitch;
     }
 
     /**
-     * Set 0: disable rolling restart.
-1: enable rolling start.
-     * @param RollingRestartSwitch 0: disable rolling restart.
-1: enable rolling start.
+     * Set 0: disables rolling restart.
+1: enables rolling start.
+     * @param RollingRestartSwitch 0: disables rolling restart.
+1: enables rolling start.
      */
     public void setRollingRestartSwitch(Long RollingRestartSwitch) {
         this.RollingRestartSwitch = RollingRestartSwitch;
     }
 
     /**
-     * Get Rolling restart quantity per batch, which is up to 99999. 
-     * @return BatchSize Rolling restart quantity per batch, which is up to 99999.
+     * Get Number of instances to restart per batch for rolling restart. Maximum value: 99999. 
+     * @return BatchSize Number of instances to restart per batch for rolling restart. Maximum value: 99999.
      */
     public Long getBatchSize() {
         return this.BatchSize;
     }
 
     /**
-     * Set Rolling restart quantity per batch, which is up to 99999.
-     * @param BatchSize Rolling restart quantity per batch, which is up to 99999.
+     * Set Number of instances to restart per batch for rolling restart. Maximum value: 99999.
+     * @param BatchSize Number of instances to restart per batch for rolling restart. Maximum value: 99999.
      */
     public void setBatchSize(Long BatchSize) {
         this.BatchSize = BatchSize;
     }
 
     /**
-     * Get Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds. 
-     * @return TimeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+     * Get Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds. 
+     * @return TimeWait Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
      */
     public Long getTimeWait() {
         return this.TimeWait;
     }
 
     /**
-     * Set Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
-     * @param TimeWait Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+     * Set Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
+     * @param TimeWait Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
      */
     public void setTimeWait(Long TimeWait) {
         this.TimeWait = TimeWait;
     }
 
     /**
-     * Get Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure. 
-     * @return DealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+     * Get Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure). 
+     * @return DealOnFail Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
      */
     public Long getDealOnFail() {
         return this.DealOnFail;
     }
 
     /**
-     * Set Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
-     * @param DealOnFail Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+     * Set Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
+     * @param DealOnFail Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
      */
     public void setDealOnFail(Long DealOnFail) {
         this.DealOnFail = DealOnFail;
     }
 
     /**
-     * Get Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Parameters required in the instruction. 
      * @return Args Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Arg [] getArgs() {
         return this.Args;
@@ -140,9 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Args Parameters required in the instruction.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setArgs(Arg [] Args) {
         this.Args = Args;

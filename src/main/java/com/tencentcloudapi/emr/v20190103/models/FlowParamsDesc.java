@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FlowParamsDesc extends AbstractModel {
 
     /**
-    * Parameter key
+    * Parameter key.
     */
     @SerializedName("PKey")
     @Expose
@@ -38,16 +38,16 @@ public class FlowParamsDesc extends AbstractModel {
     private String PValue;
 
     /**
-     * Get Parameter key 
-     * @return PKey Parameter key
+     * Get Parameter key. 
+     * @return PKey Parameter key.
      */
     public String getPKey() {
         return this.PKey;
     }
 
     /**
-     * Set Parameter key
-     * @param PKey Parameter key
+     * Set Parameter key.
+     * @param PKey Parameter key.
      */
     public void setPKey(String PKey) {
         this.PKey = PKey;

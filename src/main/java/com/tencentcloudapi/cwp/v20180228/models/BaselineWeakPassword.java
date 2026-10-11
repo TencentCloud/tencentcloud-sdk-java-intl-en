@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class BaselineWeakPassword extends AbstractModel {
 
     /**
-    * Password ID
+    * Password Id
     */
     @SerializedName("PasswordId")
     @Expose
     private Long PasswordId;
 
     /**
-    * Password
+    * Password.
     */
     @SerializedName("WeakPassword")
     @Expose
@@ -52,32 +52,32 @@ public class BaselineWeakPassword extends AbstractModel {
     private String ModifyTime;
 
     /**
-     * Get Password ID 
-     * @return PasswordId Password ID
+     * Get Password Id 
+     * @return PasswordId Password Id
      */
     public Long getPasswordId() {
         return this.PasswordId;
     }
 
     /**
-     * Set Password ID
-     * @param PasswordId Password ID
+     * Set Password Id
+     * @param PasswordId Password Id
      */
     public void setPasswordId(Long PasswordId) {
         this.PasswordId = PasswordId;
     }
 
     /**
-     * Get Password 
-     * @return WeakPassword Password
+     * Get Password. 
+     * @return WeakPassword Password.
      */
     public String getWeakPassword() {
         return this.WeakPassword;
     }
 
     /**
-     * Set Password
-     * @param WeakPassword Password
+     * Set Password.
+     * @param WeakPassword Password.
      */
     public void setWeakPassword(String WeakPassword) {
         this.WeakPassword = WeakPassword;

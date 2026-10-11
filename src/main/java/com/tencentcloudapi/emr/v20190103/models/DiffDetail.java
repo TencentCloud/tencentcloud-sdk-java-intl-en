@@ -39,7 +39,6 @@ public class DiffDetail extends AbstractModel {
 
     /**
     * Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Rows")
     @Expose
@@ -47,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Header")
     @Expose
@@ -86,10 +84,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Detailed data to be rendered. 
      * @return Rows Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DiffDetailItem [] getRows() {
         return this.Rows;
@@ -97,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Rows Detailed data to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRows(DiffDetailItem [] Rows) {
         this.Rows = Rows;
     }
 
     /**
-     * Get Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Header information to be rendered. 
      * @return Header Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DiffHeader [] getHeader() {
         return this.Header;
@@ -117,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Header Header information to be rendered.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHeader(DiffHeader [] Header) {
         this.Header = Header;

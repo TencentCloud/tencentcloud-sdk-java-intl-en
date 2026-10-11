@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInspectionSettingsResponse extends AbstractModel {
 
     /**
-    * Description of the returned value.
+    * Return value description.
     */
     @SerializedName("Info")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyInspectionSettingsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Description of the returned value. 
-     * @return Info Description of the returned value.
+     * Get Return value description. 
+     * @return Info Return value description.
      */
     public String getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Description of the returned value.
-     * @param Info Description of the returned value.
+     * Set Return value description.
+     * @param Info Return value description.
      */
     public void setInfo(String Info) {
         this.Info = Info;

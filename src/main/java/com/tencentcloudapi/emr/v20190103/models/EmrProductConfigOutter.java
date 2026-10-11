@@ -24,112 +24,98 @@ import java.util.HashMap;
 public class EmrProductConfigOutter extends AbstractModel {
 
     /**
-    * Software information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Software information.
     */
     @SerializedName("SoftInfo")
     @Expose
     private String [] SoftInfo;
 
     /**
-    * Number of master nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of Master nodes.
     */
     @SerializedName("MasterNodeSize")
     @Expose
     private Long MasterNodeSize;
 
     /**
-    * Number of core nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of Core nodes.
     */
     @SerializedName("CoreNodeSize")
     @Expose
     private Long CoreNodeSize;
 
     /**
-    * Number of task nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of Task nodes.
     */
     @SerializedName("TaskNodeSize")
     @Expose
     private Long TaskNodeSize;
 
     /**
-    * Number of common nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of Common nodes.
     */
     @SerializedName("ComNodeSize")
     @Expose
     private Long ComNodeSize;
 
     /**
-    * Master node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Master node resources.
     */
     @SerializedName("MasterResource")
     @Expose
     private OutterResource MasterResource;
 
     /**
-    * Core node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Core node resources.
     */
     @SerializedName("CoreResource")
     @Expose
     private OutterResource CoreResource;
 
     /**
-    * Task node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Task node resources.
     */
     @SerializedName("TaskResource")
     @Expose
     private OutterResource TaskResource;
 
     /**
-    * Common node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Common node resources.
     */
     @SerializedName("ComResource")
     @Expose
     private OutterResource ComResource;
 
     /**
-    * Whether COS is used
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether COS is used.
     */
     @SerializedName("OnCos")
     @Expose
     private Boolean OnCos;
 
     /**
-    * Billing mode
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Charge type.
     */
     @SerializedName("ChargeType")
     @Expose
     private Long ChargeType;
 
     /**
-    * Number of router nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of Router nodes.
     */
     @SerializedName("RouterNodeSize")
     @Expose
     private Long RouterNodeSize;
 
     /**
-    * Whether HA is supported
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether HA is supported.
     */
     @SerializedName("SupportHA")
     @Expose
     private Boolean SupportHA;
 
     /**
-    * Whether secure mode is supported
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether security mode is supported.
     */
     @SerializedName("SecurityOn")
     @Expose
@@ -137,23 +123,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Initial security group ID of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SecurityGroup")
     @Expose
     private String SecurityGroup;
 
     /**
-    * Whether to enable CBS encryption
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether CBS encryption is enabled.
     */
     @SerializedName("CbsEncrypt")
     @Expose
     private Long CbsEncrypt;
 
     /**
-    * Custom application role
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Custom application role.
     */
     @SerializedName("ApplicationRole")
     @Expose
@@ -161,305 +144,245 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Security group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SecurityGroups")
     @Expose
     private String [] SecurityGroups;
 
     /**
-    * SSH key ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * SSH key ID.
     */
     @SerializedName("PublicKeyId")
     @Expose
     private String PublicKeyId;
 
     /**
-     * Get Software information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SoftInfo Software information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Software information. 
+     * @return SoftInfo Software information.
      */
     public String [] getSoftInfo() {
         return this.SoftInfo;
     }
 
     /**
-     * Set Software information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SoftInfo Software information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Software information.
+     * @param SoftInfo Software information.
      */
     public void setSoftInfo(String [] SoftInfo) {
         this.SoftInfo = SoftInfo;
     }
 
     /**
-     * Get Number of master nodes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MasterNodeSize Number of master nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of Master nodes. 
+     * @return MasterNodeSize Number of Master nodes.
      */
     public Long getMasterNodeSize() {
         return this.MasterNodeSize;
     }
 
     /**
-     * Set Number of master nodes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MasterNodeSize Number of master nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of Master nodes.
+     * @param MasterNodeSize Number of Master nodes.
      */
     public void setMasterNodeSize(Long MasterNodeSize) {
         this.MasterNodeSize = MasterNodeSize;
     }
 
     /**
-     * Get Number of core nodes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoreNodeSize Number of core nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of Core nodes. 
+     * @return CoreNodeSize Number of Core nodes.
      */
     public Long getCoreNodeSize() {
         return this.CoreNodeSize;
     }
 
     /**
-     * Set Number of core nodes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoreNodeSize Number of core nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of Core nodes.
+     * @param CoreNodeSize Number of Core nodes.
      */
     public void setCoreNodeSize(Long CoreNodeSize) {
         this.CoreNodeSize = CoreNodeSize;
     }
 
     /**
-     * Get Number of task nodes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TaskNodeSize Number of task nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of Task nodes. 
+     * @return TaskNodeSize Number of Task nodes.
      */
     public Long getTaskNodeSize() {
         return this.TaskNodeSize;
     }
 
     /**
-     * Set Number of task nodes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TaskNodeSize Number of task nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of Task nodes.
+     * @param TaskNodeSize Number of Task nodes.
      */
     public void setTaskNodeSize(Long TaskNodeSize) {
         this.TaskNodeSize = TaskNodeSize;
     }
 
     /**
-     * Get Number of common nodes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ComNodeSize Number of common nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of Common nodes. 
+     * @return ComNodeSize Number of Common nodes.
      */
     public Long getComNodeSize() {
         return this.ComNodeSize;
     }
 
     /**
-     * Set Number of common nodes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ComNodeSize Number of common nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of Common nodes.
+     * @param ComNodeSize Number of Common nodes.
      */
     public void setComNodeSize(Long ComNodeSize) {
         this.ComNodeSize = ComNodeSize;
     }
 
     /**
-     * Get Master node resource
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MasterResource Master node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Master node resources. 
+     * @return MasterResource Master node resources.
      */
     public OutterResource getMasterResource() {
         return this.MasterResource;
     }
 
     /**
-     * Set Master node resource
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MasterResource Master node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Master node resources.
+     * @param MasterResource Master node resources.
      */
     public void setMasterResource(OutterResource MasterResource) {
         this.MasterResource = MasterResource;
     }
 
     /**
-     * Get Core node resource
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoreResource Core node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Core node resources. 
+     * @return CoreResource Core node resources.
      */
     public OutterResource getCoreResource() {
         return this.CoreResource;
     }
 
     /**
-     * Set Core node resource
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoreResource Core node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Core node resources.
+     * @param CoreResource Core node resources.
      */
     public void setCoreResource(OutterResource CoreResource) {
         this.CoreResource = CoreResource;
     }
 
     /**
-     * Get Task node resource
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TaskResource Task node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Task node resources. 
+     * @return TaskResource Task node resources.
      */
     public OutterResource getTaskResource() {
         return this.TaskResource;
     }
 
     /**
-     * Set Task node resource
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TaskResource Task node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Task node resources.
+     * @param TaskResource Task node resources.
      */
     public void setTaskResource(OutterResource TaskResource) {
         this.TaskResource = TaskResource;
     }
 
     /**
-     * Get Common node resource
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ComResource Common node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Common node resources. 
+     * @return ComResource Common node resources.
      */
     public OutterResource getComResource() {
         return this.ComResource;
     }
 
     /**
-     * Set Common node resource
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ComResource Common node resource
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Common node resources.
+     * @param ComResource Common node resources.
      */
     public void setComResource(OutterResource ComResource) {
         this.ComResource = ComResource;
     }
 
     /**
-     * Get Whether COS is used
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OnCos Whether COS is used
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether COS is used. 
+     * @return OnCos Whether COS is used.
      */
     public Boolean getOnCos() {
         return this.OnCos;
     }
 
     /**
-     * Set Whether COS is used
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OnCos Whether COS is used
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether COS is used.
+     * @param OnCos Whether COS is used.
      */
     public void setOnCos(Boolean OnCos) {
         this.OnCos = OnCos;
     }
 
     /**
-     * Get Billing mode
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ChargeType Billing mode
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Charge type. 
+     * @return ChargeType Charge type.
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Billing mode
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ChargeType Billing mode
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Charge type.
+     * @param ChargeType Charge type.
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get Number of router nodes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RouterNodeSize Number of router nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of Router nodes. 
+     * @return RouterNodeSize Number of Router nodes.
      */
     public Long getRouterNodeSize() {
         return this.RouterNodeSize;
     }
 
     /**
-     * Set Number of router nodes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RouterNodeSize Number of router nodes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of Router nodes.
+     * @param RouterNodeSize Number of Router nodes.
      */
     public void setRouterNodeSize(Long RouterNodeSize) {
         this.RouterNodeSize = RouterNodeSize;
     }
 
     /**
-     * Get Whether HA is supported
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SupportHA Whether HA is supported
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether HA is supported. 
+     * @return SupportHA Whether HA is supported.
      */
     public Boolean getSupportHA() {
         return this.SupportHA;
     }
 
     /**
-     * Set Whether HA is supported
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SupportHA Whether HA is supported
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether HA is supported.
+     * @param SupportHA Whether HA is supported.
      */
     public void setSupportHA(Boolean SupportHA) {
         this.SupportHA = SupportHA;
     }
 
     /**
-     * Get Whether secure mode is supported
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SecurityOn Whether secure mode is supported
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether security mode is supported. 
+     * @return SecurityOn Whether security mode is supported.
      */
     public Boolean getSecurityOn() {
         return this.SecurityOn;
     }
 
     /**
-     * Set Whether secure mode is supported
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SecurityOn Whether secure mode is supported
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether security mode is supported.
+     * @param SecurityOn Whether security mode is supported.
      */
     public void setSecurityOn(Boolean SecurityOn) {
         this.SecurityOn = SecurityOn;
     }
 
     /**
-     * Get Initial security group ID of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Initial security group ID of the cluster. 
      * @return SecurityGroup Initial security group ID of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
@@ -467,59 +390,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Initial security group ID of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SecurityGroup Initial security group ID of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * Get Whether to enable CBS encryption
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CbsEncrypt Whether to enable CBS encryption
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether CBS encryption is enabled. 
+     * @return CbsEncrypt Whether CBS encryption is enabled.
      */
     public Long getCbsEncrypt() {
         return this.CbsEncrypt;
     }
 
     /**
-     * Set Whether to enable CBS encryption
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CbsEncrypt Whether to enable CBS encryption
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether CBS encryption is enabled.
+     * @param CbsEncrypt Whether CBS encryption is enabled.
      */
     public void setCbsEncrypt(Long CbsEncrypt) {
         this.CbsEncrypt = CbsEncrypt;
     }
 
     /**
-     * Get Custom application role
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return ApplicationRole Custom application role
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get Custom application role. 
+     * @return ApplicationRole Custom application role.
      */
     public String getApplicationRole() {
         return this.ApplicationRole;
     }
 
     /**
-     * Set Custom application role
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param ApplicationRole Custom application role
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set Custom application role.
+     * @param ApplicationRole Custom application role.
      */
     public void setApplicationRole(String ApplicationRole) {
         this.ApplicationRole = ApplicationRole;
     }
 
     /**
-     * Get Security group ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Security group ID. 
      * @return SecurityGroups Security group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSecurityGroups() {
         return this.SecurityGroups;
@@ -527,29 +438,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Security group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SecurityGroups Security group ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSecurityGroups(String [] SecurityGroups) {
         this.SecurityGroups = SecurityGroups;
     }
 
     /**
-     * Get SSH key ID
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return PublicKeyId SSH key ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get SSH key ID. 
+     * @return PublicKeyId SSH key ID.
      */
     public String getPublicKeyId() {
         return this.PublicKeyId;
     }
 
     /**
-     * Set SSH key ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param PublicKeyId SSH key ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set SSH key ID.
+     * @param PublicKeyId SSH key ID.
      */
     public void setPublicKeyId(String PublicKeyId) {
         this.PublicKeyId = PublicKeyId;

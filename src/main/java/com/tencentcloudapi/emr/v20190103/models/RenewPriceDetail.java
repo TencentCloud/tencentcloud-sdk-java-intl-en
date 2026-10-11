@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RenewPriceDetail extends AbstractModel {
 
     /**
-    * Billing item name.
+    * Billable item name.
     */
     @SerializedName("BillingName")
     @Expose
@@ -52,23 +52,23 @@ public class RenewPriceDetail extends AbstractModel {
     private Float OriginalCost;
 
     /**
-    * Discount price.
+    * Discounted price.
     */
     @SerializedName("DiscountCost")
     @Expose
     private Float DiscountCost;
 
     /**
-     * Get Billing item name. 
-     * @return BillingName Billing item name.
+     * Get Billable item name. 
+     * @return BillingName Billable item name.
      */
     public String getBillingName() {
         return this.BillingName;
     }
 
     /**
-     * Set Billing item name.
-     * @param BillingName Billing item name.
+     * Set Billable item name.
+     * @param BillingName Billable item name.
      */
     public void setBillingName(String BillingName) {
         this.BillingName = BillingName;
@@ -123,16 +123,16 @@ public class RenewPriceDetail extends AbstractModel {
     }
 
     /**
-     * Get Discount price. 
-     * @return DiscountCost Discount price.
+     * Get Discounted price. 
+     * @return DiscountCost Discounted price.
      */
     public Float getDiscountCost() {
         return this.DiscountCost;
     }
 
     /**
-     * Set Discount price.
-     * @param DiscountCost Discount price.
+     * Set Discounted price.
+     * @param DiscountCost Discounted price.
      */
     public void setDiscountCost(Float DiscountCost) {
         this.DiscountCost = DiscountCost;

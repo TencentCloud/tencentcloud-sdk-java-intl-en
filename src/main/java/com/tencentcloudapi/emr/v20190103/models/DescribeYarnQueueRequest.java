@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeYarnQueueRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Scheduler. The values are as follows:
+    * Scheduler. Valid values:
 
 1. capacity
 2. fair
@@ -41,27 +41,27 @@ public class DescribeYarnQueueRequest extends AbstractModel {
     private String Scheduler;
 
     /**
-     * Get Cluster ID 
-     * @return InstanceId Cluster ID
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster ID
-     * @param InstanceId Cluster ID
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Scheduler. The values are as follows:
+     * Get Scheduler. Valid values:
 
 1. capacity
 2. fair 
-     * @return Scheduler Scheduler. The values are as follows:
+     * @return Scheduler Scheduler. Valid values:
 
 1. capacity
 2. fair
@@ -71,11 +71,11 @@ public class DescribeYarnQueueRequest extends AbstractModel {
     }
 
     /**
-     * Set Scheduler. The values are as follows:
+     * Set Scheduler. Valid values:
 
 1. capacity
 2. fair
-     * @param Scheduler Scheduler. The values are as follows:
+     * @param Scheduler Scheduler. Valid values:
 
 1. capacity
 2. fair

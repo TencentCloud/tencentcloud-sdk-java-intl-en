@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class DescribeEmrApplicationStaticsRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Start time in the format of timestamp. Unit: seconds.
+    * Start timestamp (s).
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time in the format of timestamp. Unit: seconds.
+    * End timestamp (s).
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Queue name used for filtering
+    * Filtered queue name.
     */
     @SerializedName("Queues")
     @Expose
     private String [] Queues;
 
     /**
-    * Username used for filtering
+    * Filtered username.
     */
     @SerializedName("Users")
     @Expose
     private String [] Users;
 
     /**
-    * Application type used for filtering
+    * Filtered job type.
     */
     @SerializedName("ApplicationTypes")
     @Expose
     private String [] ApplicationTypes;
 
     /**
-    * Group field. Valid values: `queue`, `user`, and `applicationType`.
+    * Grouping field. Valid values: queue, user, and applicationType.
     */
     @SerializedName("GroupBy")
     @Expose
     private String [] GroupBy;
 
     /**
-    * Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+    * Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Order type. Valid values: `0` (descending) and `1`(ascending).
+    * Sorting order. Valid values: 0 (descending) and 1 (ascending).
     */
     @SerializedName("IsAsc")
     @Expose
     private Long IsAsc;
 
     /**
-    * Page number
+    * Page number.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Page capacity in the range of [10,100].
+    * Number of entries per page. Value range: [10, 100].
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Cluster ID 
-     * @return InstanceId Cluster ID
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster ID
-     * @param InstanceId Cluster ID
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Start time in the format of timestamp. Unit: seconds. 
-     * @return StartTime Start time in the format of timestamp. Unit: seconds.
+     * Get Start timestamp (s). 
+     * @return StartTime Start timestamp (s).
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time in the format of timestamp. Unit: seconds.
-     * @param StartTime Start time in the format of timestamp. Unit: seconds.
+     * Set Start timestamp (s).
+     * @param StartTime Start timestamp (s).
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time in the format of timestamp. Unit: seconds. 
-     * @return EndTime End time in the format of timestamp. Unit: seconds.
+     * Get End timestamp (s). 
+     * @return EndTime End timestamp (s).
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time in the format of timestamp. Unit: seconds.
-     * @param EndTime End time in the format of timestamp. Unit: seconds.
+     * Set End timestamp (s).
+     * @param EndTime End timestamp (s).
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Queue name used for filtering 
-     * @return Queues Queue name used for filtering
+     * Get Filtered queue name. 
+     * @return Queues Filtered queue name.
      */
     public String [] getQueues() {
         return this.Queues;
     }
 
     /**
-     * Set Queue name used for filtering
-     * @param Queues Queue name used for filtering
+     * Set Filtered queue name.
+     * @param Queues Filtered queue name.
      */
     public void setQueues(String [] Queues) {
         this.Queues = Queues;
     }
 
     /**
-     * Get Username used for filtering 
-     * @return Users Username used for filtering
+     * Get Filtered username. 
+     * @return Users Filtered username.
      */
     public String [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set Username used for filtering
-     * @param Users Username used for filtering
+     * Set Filtered username.
+     * @param Users Filtered username.
      */
     public void setUsers(String [] Users) {
         this.Users = Users;
     }
 
     /**
-     * Get Application type used for filtering 
-     * @return ApplicationTypes Application type used for filtering
+     * Get Filtered job type. 
+     * @return ApplicationTypes Filtered job type.
      */
     public String [] getApplicationTypes() {
         return this.ApplicationTypes;
     }
 
     /**
-     * Set Application type used for filtering
-     * @param ApplicationTypes Application type used for filtering
+     * Set Filtered job type.
+     * @param ApplicationTypes Filtered job type.
      */
     public void setApplicationTypes(String [] ApplicationTypes) {
         this.ApplicationTypes = ApplicationTypes;
     }
 
     /**
-     * Get Group field. Valid values: `queue`, `user`, and `applicationType`. 
-     * @return GroupBy Group field. Valid values: `queue`, `user`, and `applicationType`.
+     * Get Grouping field. Valid values: queue, user, and applicationType. 
+     * @return GroupBy Grouping field. Valid values: queue, user, and applicationType.
      */
     public String [] getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set Group field. Valid values: `queue`, `user`, and `applicationType`.
-     * @param GroupBy Group field. Valid values: `queue`, `user`, and `applicationType`.
+     * Set Grouping field. Valid values: queue, user, and applicationType.
+     * @param GroupBy Grouping field. Valid values: queue, user, and applicationType.
      */
     public void setGroupBy(String [] GroupBy) {
         this.GroupBy = GroupBy;
     }
 
     /**
-     * Get Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`. 
-     * @return OrderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+     * Get Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead. 
+     * @return OrderBy Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
-     * @param OrderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+     * Set Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
+     * @param OrderBy Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Order type. Valid values: `0` (descending) and `1`(ascending). 
-     * @return IsAsc Order type. Valid values: `0` (descending) and `1`(ascending).
+     * Get Sorting order. Valid values: 0 (descending) and 1 (ascending). 
+     * @return IsAsc Sorting order. Valid values: 0 (descending) and 1 (ascending).
      */
     public Long getIsAsc() {
         return this.IsAsc;
     }
 
     /**
-     * Set Order type. Valid values: `0` (descending) and `1`(ascending).
-     * @param IsAsc Order type. Valid values: `0` (descending) and `1`(ascending).
+     * Set Sorting order. Valid values: 0 (descending) and 1 (ascending).
+     * @param IsAsc Sorting order. Valid values: 0 (descending) and 1 (ascending).
      */
     public void setIsAsc(Long IsAsc) {
         this.IsAsc = IsAsc;
     }
 
     /**
-     * Get Page number 
-     * @return Offset Page number
+     * Get Page number. 
+     * @return Offset Page number.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number
-     * @param Offset Page number
+     * Set Page number.
+     * @param Offset Page number.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Page capacity in the range of [10,100]. 
-     * @return Limit Page capacity in the range of [10,100].
+     * Get Number of entries per page. Value range: [10, 100]. 
+     * @return Limit Number of entries per page. Value range: [10, 100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page capacity in the range of [10,100].
-     * @param Limit Page capacity in the range of [10,100].
+     * Set Number of entries per page. Value range: [10, 100].
+     * @param Limit Number of entries per page. Value range: [10, 100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

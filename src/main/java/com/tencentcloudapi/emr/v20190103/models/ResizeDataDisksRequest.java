@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResizeDataDisksRequest extends AbstractModel {
 
     /**
-    * ID of the EMR cluster instance.
+    * ID of the EMR cluster.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,7 +45,7 @@ public class ResizeDataDisksRequest extends AbstractModel {
     private String [] CvmInstanceIds;
 
     /**
-    * ID of the cloud disk to be scaled out.
+    * ID of the cloud disks to be scaled out.
     */
     @SerializedName("DiskIds")
     @Expose
@@ -59,16 +59,16 @@ public class ResizeDataDisksRequest extends AbstractModel {
     private Boolean ResizeAll;
 
     /**
-     * Get ID of the EMR cluster instance. 
-     * @return InstanceId ID of the EMR cluster instance.
+     * Get ID of the EMR cluster. 
+     * @return InstanceId ID of the EMR cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the EMR cluster instance.
-     * @param InstanceId ID of the EMR cluster instance.
+     * Set ID of the EMR cluster.
+     * @param InstanceId ID of the EMR cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -107,16 +107,16 @@ public class ResizeDataDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the cloud disk to be scaled out. 
-     * @return DiskIds ID of the cloud disk to be scaled out.
+     * Get ID of the cloud disks to be scaled out. 
+     * @return DiskIds ID of the cloud disks to be scaled out.
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set ID of the cloud disk to be scaled out.
-     * @param DiskIds ID of the cloud disk to be scaled out.
+     * Set ID of the cloud disks to be scaled out.
+     * @param DiskIds ID of the cloud disks to be scaled out.
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;

@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class StartStopServiceOrMonitorRequest extends AbstractModel {
 
     /**
-    * The cluster ID.
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
+    * Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
     */
     @SerializedName("OpType")
     @Expose
     private String OpType;
 
     /**
-    * The operation scope.
+    * Operation scope.
     */
     @SerializedName("OpScope")
     @Expose
     private OpScope OpScope;
 
     /**
-    * The operation policy.
+    * Operation policy.
     */
     @SerializedName("StrategyConfig")
     @Expose
@@ -64,91 +64,91 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
     private StopParams StopParams;
 
     /**
-    * This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+    * This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
     */
     @SerializedName("KeepMonitorButNotRecoverProcess")
     @Expose
     private Boolean KeepMonitorButNotRecoverProcess;
 
     /**
-     * Get The cluster ID. 
-     * @return InstanceId The cluster ID.
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The cluster ID.
-     * @param InstanceId The cluster ID.
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li> 
-     * @return OpType The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
+     * Get Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li> 
+     * @return OpType Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
      */
     public String getOpType() {
         return this.OpType;
     }
 
     /**
-     * Set The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
-     * @param OpType The operation type. Valid values:
-<li>StartService: Start service</li>
-<li>StopService: Stop service</li>
-<li>StartMonitor: Start maintenance</li>
-<li>StopMonitor: Stop maintenance</li>
-<li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
+     * Set Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
+     * @param OpType Operation type. Valid values:
+<li>StartService: Start the service.</li>
+<li>StopService: Stop the service.</li>
+<li>StartMonitor: Exit maintenance.</li>
+<li>StopMonitor: Enter maintenance.</li>
+<li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
      */
     public void setOpType(String OpType) {
         this.OpType = OpType;
     }
 
     /**
-     * Get The operation scope. 
-     * @return OpScope The operation scope.
+     * Get Operation scope. 
+     * @return OpScope Operation scope.
      */
     public OpScope getOpScope() {
         return this.OpScope;
     }
 
     /**
-     * Set The operation scope.
-     * @param OpScope The operation scope.
+     * Set Operation scope.
+     * @param OpScope Operation scope.
      */
     public void setOpScope(OpScope OpScope) {
         this.OpScope = OpScope;
     }
 
     /**
-     * Get The operation policy. 
-     * @return StrategyConfig The operation policy.
+     * Get Operation policy. 
+     * @return StrategyConfig Operation policy.
      */
     public StrategyConfig getStrategyConfig() {
         return this.StrategyConfig;
     }
 
     /**
-     * Set The operation policy.
-     * @param StrategyConfig The operation policy.
+     * Set Operation policy.
+     * @param StrategyConfig Operation policy.
      */
     public void setStrategyConfig(StrategyConfig StrategyConfig) {
         this.StrategyConfig = StrategyConfig;
@@ -171,16 +171,16 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
     }
 
     /**
-     * Get This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them. 
-     * @return KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     * Get This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them. 
+     * @return KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
      */
     public Boolean getKeepMonitorButNotRecoverProcess() {
         return this.KeepMonitorButNotRecoverProcess;
     }
 
     /**
-     * Set This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
-     * @param KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     * Set This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
+     * @param KeepMonitorButNotRecoverProcess This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
      */
     public void setKeepMonitorButNotRecoverProcess(Boolean KeepMonitorButNotRecoverProcess) {
         this.KeepMonitorButNotRecoverProcess = KeepMonitorButNotRecoverProcess;

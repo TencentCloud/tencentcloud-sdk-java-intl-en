@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ScaleOutNodeConfig extends AbstractModel {
 
     /**
-    * Valid values of node type:
+    * Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -35,19 +35,19 @@ public class ScaleOutNodeConfig extends AbstractModel {
     private String NodeFlag;
 
     /**
-    * The number of nodes.
+    * Number of scale-out nodes.
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-     * Get Valid values of node type:
+     * Get Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li> 
-     * @return NodeFlag Valid values of node type:
+     * @return NodeFlag Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -58,12 +58,12 @@ public class ScaleOutNodeConfig extends AbstractModel {
     }
 
     /**
-     * Set Valid values of node type:
+     * Set Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-     * @param NodeFlag Valid values of node type:
+     * @param NodeFlag Valid values for the scale-out node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
@@ -74,16 +74,16 @@ public class ScaleOutNodeConfig extends AbstractModel {
     }
 
     /**
-     * Get The number of nodes. 
-     * @return NodeCount The number of nodes.
+     * Get Number of scale-out nodes. 
+     * @return NodeCount Number of scale-out nodes.
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set The number of nodes.
-     * @param NodeCount The number of nodes.
+     * Set Number of scale-out nodes.
+     * @param NodeCount Number of scale-out nodes.
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;

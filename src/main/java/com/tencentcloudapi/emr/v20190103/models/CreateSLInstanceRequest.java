@@ -31,35 +31,35 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
+    * Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
+    * Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD).
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
+    * Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive.
+    * Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive.
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50.
+    * Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50.
     */
     @SerializedName("ZoneSettings")
     @Expose
@@ -80,18 +80,25 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private PrePaySetting PrePaySetting;
 
     /**
-    * The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+    * Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * Deployment Mode
+    * Deployment mode.
     */
     @SerializedName("DeploymentMode")
     @Expose
     private String DeploymentMode;
+
+    /**
+    * Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits.
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
 
     /**
      * Get Instance name. 
@@ -110,80 +117,80 @@ public class CreateSLInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go. 
-     * @return PayMode Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
+     * Get Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription). 
+     * @return PayMode Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
-     * @param PayMode Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go.
+     * Set Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
+     * @param PayMode Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage. 
-     * @return DiskType Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
+     * Get Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD). 
+     * @return DiskType Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD).
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
-     * @param DiskType Instance storage type. Fill in CLOUD_HSSD to represent high-performance cloud storage.
+     * Set Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD).
+     * @param DiskType Instance storage type. Valid values: CLOUD_HSSD (Enhanced SSD) and CLOUD_BSSD (Balanced SSD).
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100. 
-     * @return DiskSize The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
+     * Get Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100. 
+     * @return DiskSize Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
-     * @param DiskSize The disk capacity of a single node of the instance, in GB. The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
+     * Set Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
+     * @param DiskSize Disk capacity of a single node of the instance (GB). The disk capacity of a single node should be greater than or equal to 100 and less than or equal to 250 x the number of CPU cores. The capacity adjustment step is 100.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive. 
-     * @return NodeType Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive.
+     * Get Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive. 
+     * @return NodeType Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive.
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive.
-     * @param NodeType Instance node specification. You can fill in 4C16G, 8C32G, 16C64G, or 32C128G, which is case-insensitive.
+     * Set Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive.
+     * @param NodeType Instance node specifications. Valid values: 4C16G, 8C32G, 16C64G, and 32C128G. The value is case-insensitive.
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50. 
-     * @return ZoneSettings Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50.
+     * Get Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50. 
+     * @return ZoneSettings Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50.
      */
     public ZoneSetting [] getZoneSettings() {
         return this.ZoneSettings;
     }
 
     /**
-     * Set Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50.
-     * @param ZoneSettings Detailed configuration of the instance AZ. Currently, multiple availability zones are supported. The number of AZs must be 1 or 3, including the region names, VPC information, and number of nodes. The total number of nodes across all zones must be greater than or equal to 3 and less than or equal to 50.
+     * Set Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50.
+     * @param ZoneSettings Detailed configuration of the instance AZ, including the region name, VPC information, and number of nodes. Currently, multiple AZs are supported. The number of AZs must be 1 or 3, and the total number of nodes across all AZs must be greater than or equal to 3 and less than or equal to 50.
      */
     public void setZoneSettings(ZoneSetting [] ZoneSettings) {
         this.ZoneSettings = ZoneSettings;
@@ -222,35 +229,51 @@ public class CreateSLInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808. 
-     * @return ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+     * Get Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808. 
+     * @return ClientToken Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
-     * @param ClientToken The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+     * Set Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+     * @param ClientToken Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get Deployment Mode 
-     * @return DeploymentMode Deployment Mode
+     * Get Deployment mode. 
+     * @return DeploymentMode Deployment mode.
      */
     public String getDeploymentMode() {
         return this.DeploymentMode;
     }
 
     /**
-     * Set Deployment Mode
-     * @param DeploymentMode Deployment Mode
+     * Set Deployment mode.
+     * @param DeploymentMode Deployment mode.
      */
     public void setDeploymentMode(String DeploymentMode) {
         this.DeploymentMode = DeploymentMode;
+    }
+
+    /**
+     * Get Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits. 
+     * @return UserName Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits.
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits.
+     * @param UserName Service username, which is optional for services without the need to set usernames. The value can contain 8 to 16 characters, including uppercase letters, lowercase letters, and digits.
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
     }
 
     public CreateSLInstanceRequest() {
@@ -297,6 +320,9 @@ public class CreateSLInstanceRequest extends AbstractModel {
         if (source.DeploymentMode != null) {
             this.DeploymentMode = new String(source.DeploymentMode);
         }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
     }
 
 
@@ -314,6 +340,7 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
 
     }
 }

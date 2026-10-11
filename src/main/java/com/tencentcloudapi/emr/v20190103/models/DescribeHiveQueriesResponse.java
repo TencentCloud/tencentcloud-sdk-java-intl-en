@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHiveQueriesResponse extends AbstractModel {
 
     /**
-    * Total items
+    * Total number of entries.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * Result list
+    * Result list.
     */
     @SerializedName("Results")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHiveQueriesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total items 
-     * @return Total Total items
+     * Get Total number of entries. 
+     * @return Total Total number of entries.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total items
-     * @param Total Total items
+     * Set Total number of entries.
+     * @param Total Total number of entries.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get Result list 
-     * @return Results Result list
+     * Get Result list. 
+     * @return Results Result list.
      */
     public HiveQuery [] getResults() {
         return this.Results;
     }
 
     /**
-     * Set Result list
-     * @param Results Result list
+     * Set Result list.
+     * @param Results Result list.
      */
     public void setResults(HiveQuery [] Results) {
         this.Results = Results;

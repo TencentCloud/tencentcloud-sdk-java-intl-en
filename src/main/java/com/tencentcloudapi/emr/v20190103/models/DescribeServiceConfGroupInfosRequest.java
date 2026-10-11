@@ -52,7 +52,7 @@ public class DescribeServiceConfGroupInfosRequest extends AbstractModel {
     private Long PageNo;
 
     /**
-    * Page size.
+    * Number of entries per page.
     */
     @SerializedName("PageSize")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeServiceConfGroupInfosRequest extends AbstractModel {
     }
 
     /**
-     * Get Page size. 
-     * @return PageSize Page size.
+     * Get Number of entries per page. 
+     * @return PageSize Number of entries per page.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size.
-     * @param PageSize Page size.
+     * Set Number of entries per page.
+     * @param PageSize Number of entries per page.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

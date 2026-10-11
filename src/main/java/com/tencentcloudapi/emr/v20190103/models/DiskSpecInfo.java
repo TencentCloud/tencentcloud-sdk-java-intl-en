@@ -31,26 +31,27 @@ public class DiskSpecInfo extends AbstractModel {
     private Long Count;
 
     /**
-    * Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+    * System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
 
     */
     @SerializedName("DiskType")
@@ -58,7 +59,7 @@ Valid values of the data disk type.
     private String DiskType;
 
     /**
-    * Data capacity in GB.
+    * Data capacity (GB).
     */
     @SerializedName("DiskSize")
     @Expose
@@ -88,47 +89,49 @@ Valid values of the data disk type.
     }
 
     /**
-     * Get Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+     * Get System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
  
-     * @return DiskType Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+     * @return DiskType System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
 
      */
     public String getDiskType() {
@@ -136,47 +139,49 @@ Valid values of the data disk type.
     }
 
     /**
-     * Set Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+     * Set System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
 
-     * @param DiskType Valid values of the system disk type:
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
 
-Valid values of the data disk type.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-<li>LOCAL_BASIC: Local Disk.</li>
-<li>LOCAL_SSD: Local SSD.</li>
-<li>CLOUD_HSSD: Enhanced SSD.</li>
-<li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-<li>CLOUD_TSSD: Tremendous SSD.</li>
-<li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-<li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-<li>CLOUD_BSSD: Balanced SSD.</li>
-<li>REMOTE_SSD: Remote SSD.</li>
+     * @param DiskType System disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+
+Data disk type. Valid values:
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium Disk</li>
+<li>CLOUD_BASIC: Cloud Basic Disk</li>
+<li>LOCAL_BASIC: Local Basic Disk</li>
+<li>LOCAL_SSD: Local SSD</li>
+
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+<li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+<li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>REMOTE_SSD: Remote SSD Disk</li>
 
      */
     public void setDiskType(String DiskType) {
@@ -184,16 +189,16 @@ Valid values of the data disk type.
     }
 
     /**
-     * Get Data capacity in GB. 
-     * @return DiskSize Data capacity in GB.
+     * Get Data capacity (GB). 
+     * @return DiskSize Data capacity (GB).
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Data capacity in GB.
-     * @param DiskSize Data capacity in GB.
+     * Set Data capacity (GB).
+     * @param DiskSize Data capacity (GB).
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;

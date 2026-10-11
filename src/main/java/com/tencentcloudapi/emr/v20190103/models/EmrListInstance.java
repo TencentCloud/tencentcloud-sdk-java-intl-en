@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class EmrListInstance extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
+    * Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * Cluster name
+    * Cluster name.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Cluster region
+    * Cluster region.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * User APPID
+    * User APPID.
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * Running time
+    * Running time.
     */
     @SerializedName("RunTime")
     @Expose
     private String RunTime;
 
     /**
-    * Cluster IP
+    * Cluster IP address.
     */
     @SerializedName("MasterIp")
     @Expose
     private String MasterIp;
 
     /**
-    * Cluster version
+    * Cluster version.
     */
     @SerializedName("EmrVersion")
     @Expose
     private String EmrVersion;
 
     /**
-    * Cluster billing mode
+    * Cluster billing type.
     */
     @SerializedName("ChargeType")
     @Expose
     private Long ChargeType;
 
     /**
-    * EMR ID
+    * emr ID
     */
     @SerializedName("Id")
     @Expose
@@ -143,15 +143,14 @@ public class EmrListInstance extends AbstractModel {
     private String Zone;
 
     /**
-    * Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+    * Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Instance tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -172,28 +171,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long IsWoodpeckerCluster;
 
     /**
-    * VPC name in Chinese.
+    * VPC.
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * Subnet in Chinese.
+    * Subnet.
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * String VpcId.
+    * VPC ID (string).
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * String subnet.
+    * Subnet (string).
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -214,15 +213,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Boolean IsMultiZoneCluster;
 
     /**
-    * Whether it is a cluster created by a cluster CVM.
+    * Whether it is a manually created cluster.
     */
     @SerializedName("IsHandsCluster")
     @Expose
     private Boolean IsHandsCluster;
 
     /**
-    * Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * External client component information.
     */
     @SerializedName("OutSideSoftInfo")
     @Expose
@@ -243,183 +241,183 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsDedicatedCluster;
 
     /**
-    * Cluster supports for cloning.
+    * Whether cloning is supported for the cluster.
     */
     @SerializedName("IsSupportClone")
     @Expose
     private Boolean IsSupportClone;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted. 
-     * @return StatusDesc Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
+     * Get Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted. 
+     * @return StatusDesc Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
-     * @param StatusDesc Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
+     * Set Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
+     * @param StatusDesc Common status. Valid values: cluster in production, cluster running, cluster creating, cluster disabled, and cluster deleted.
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get Cluster name. 
+     * @return ClusterName Cluster name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set Cluster name.
+     * @param ClusterName Cluster name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Cluster region 
-     * @return ZoneId Cluster region
+     * Get Cluster region. 
+     * @return ZoneId Cluster region.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Cluster region
-     * @param ZoneId Cluster region
+     * Set Cluster region.
+     * @param ZoneId Cluster region.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get User APPID 
-     * @return AppId User APPID
+     * Get User APPID. 
+     * @return AppId User APPID.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User APPID
-     * @param AppId User APPID
+     * Set User APPID.
+     * @param AppId User APPID.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Creation time 
-     * @return AddTime Creation time
+     * Get Creation time. 
+     * @return AddTime Creation time.
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set Creation time
-     * @param AddTime Creation time
+     * Set Creation time.
+     * @param AddTime Creation time.
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get Running time 
-     * @return RunTime Running time
+     * Get Running time. 
+     * @return RunTime Running time.
      */
     public String getRunTime() {
         return this.RunTime;
     }
 
     /**
-     * Set Running time
-     * @param RunTime Running time
+     * Set Running time.
+     * @param RunTime Running time.
      */
     public void setRunTime(String RunTime) {
         this.RunTime = RunTime;
     }
 
     /**
-     * Get Cluster IP 
-     * @return MasterIp Cluster IP
+     * Get Cluster IP address. 
+     * @return MasterIp Cluster IP address.
      */
     public String getMasterIp() {
         return this.MasterIp;
     }
 
     /**
-     * Set Cluster IP
-     * @param MasterIp Cluster IP
+     * Set Cluster IP address.
+     * @param MasterIp Cluster IP address.
      */
     public void setMasterIp(String MasterIp) {
         this.MasterIp = MasterIp;
     }
 
     /**
-     * Get Cluster version 
-     * @return EmrVersion Cluster version
+     * Get Cluster version. 
+     * @return EmrVersion Cluster version.
      */
     public String getEmrVersion() {
         return this.EmrVersion;
     }
 
     /**
-     * Set Cluster version
-     * @param EmrVersion Cluster version
+     * Set Cluster version.
+     * @param EmrVersion Cluster version.
      */
     public void setEmrVersion(String EmrVersion) {
         this.EmrVersion = EmrVersion;
     }
 
     /**
-     * Get Cluster billing mode 
-     * @return ChargeType Cluster billing mode
+     * Get Cluster billing type. 
+     * @return ChargeType Cluster billing type.
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Cluster billing mode
-     * @param ChargeType Cluster billing mode
+     * Set Cluster billing type.
+     * @param ChargeType Cluster billing type.
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get EMR ID 
-     * @return Id EMR ID
+     * Get emr ID 
+     * @return Id emr ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set EMR ID
-     * @param Id EMR ID
+     * Set emr ID
+     * @param Id emr ID
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -522,36 +520,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating). 
-     * @return Status Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+     * Get Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating). 
+     * @return Status Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
-     * @param Status Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+     * Set Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
+     * @param Status Status code. Valid values: -2 (cluster deleted), -1 (cluster disabled), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Tags Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Instance tag. 
+     * @return Tags Instance tag.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Tags Instance tag
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Instance tag.
+     * @param Tags Instance tag.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -590,64 +584,64 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get VPC name in Chinese. 
-     * @return VpcName VPC name in Chinese.
+     * Get VPC. 
+     * @return VpcName VPC.
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC name in Chinese.
-     * @param VpcName VPC name in Chinese.
+     * Set VPC.
+     * @param VpcName VPC.
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get Subnet in Chinese. 
-     * @return SubnetName Subnet in Chinese.
+     * Get Subnet. 
+     * @return SubnetName Subnet.
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set Subnet in Chinese.
-     * @param SubnetName Subnet in Chinese.
+     * Set Subnet.
+     * @param SubnetName Subnet.
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get String VpcId. 
-     * @return UniqVpcId String VpcId.
+     * Get VPC ID (string). 
+     * @return UniqVpcId VPC ID (string).
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set String VpcId.
-     * @param UniqVpcId String VpcId.
+     * Set VPC ID (string).
+     * @param UniqVpcId VPC ID (string).
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get String subnet. 
-     * @return UniqSubnetId String subnet.
+     * Get Subnet (string). 
+     * @return UniqSubnetId Subnet (string).
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set String subnet.
-     * @param UniqSubnetId String subnet.
+     * Set Subnet (string).
+     * @param UniqSubnetId Subnet (string).
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
@@ -686,36 +680,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Whether it is a cluster created by a cluster CVM. 
-     * @return IsHandsCluster Whether it is a cluster created by a cluster CVM.
+     * Get Whether it is a manually created cluster. 
+     * @return IsHandsCluster Whether it is a manually created cluster.
      */
     public Boolean getIsHandsCluster() {
         return this.IsHandsCluster;
     }
 
     /**
-     * Set Whether it is a cluster created by a cluster CVM.
-     * @param IsHandsCluster Whether it is a cluster created by a cluster CVM.
+     * Set Whether it is a manually created cluster.
+     * @param IsHandsCluster Whether it is a manually created cluster.
      */
     public void setIsHandsCluster(Boolean IsHandsCluster) {
         this.IsHandsCluster = IsHandsCluster;
     }
 
     /**
-     * Get Client component information.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutSideSoftInfo Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get External client component information. 
+     * @return OutSideSoftInfo External client component information.
      */
     public SoftDependInfo [] getOutSideSoftInfo() {
         return this.OutSideSoftInfo;
     }
 
     /**
-     * Set Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutSideSoftInfo Client component information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set External client component information.
+     * @param OutSideSoftInfo External client component information.
      */
     public void setOutSideSoftInfo(SoftDependInfo [] OutSideSoftInfo) {
         this.OutSideSoftInfo = OutSideSoftInfo;
@@ -754,16 +744,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster supports for cloning. 
-     * @return IsSupportClone Cluster supports for cloning.
+     * Get Whether cloning is supported for the cluster. 
+     * @return IsSupportClone Whether cloning is supported for the cluster.
      */
     public Boolean getIsSupportClone() {
         return this.IsSupportClone;
     }
 
     /**
-     * Set Cluster supports for cloning.
-     * @param IsSupportClone Cluster supports for cloning.
+     * Set Whether cloning is supported for the cluster.
+     * @param IsSupportClone Whether cloning is supported for the cluster.
      */
     public void setIsSupportClone(Boolean IsSupportClone) {
         this.IsSupportClone = IsSupportClone;

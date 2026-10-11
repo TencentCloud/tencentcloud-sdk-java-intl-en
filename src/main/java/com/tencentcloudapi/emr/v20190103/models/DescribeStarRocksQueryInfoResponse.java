@@ -31,8 +31,7 @@ public class DescribeStarRocksQueryInfoResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * StarRocks query information list.
     */
     @SerializedName("StarRocksQueryInfoList")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StarRocksQueryInfoList StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get StarRocks query information list. 
+     * @return StarRocksQueryInfoList StarRocks query information list.
      */
     public StarRocksQueryInfo [] getStarRocksQueryInfoList() {
         return this.StarRocksQueryInfoList;
     }
 
     /**
-     * Set StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StarRocksQueryInfoList StarRocks information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set StarRocks query information list.
+     * @param StarRocksQueryInfoList StarRocks query information list.
      */
     public void setStarRocksQueryInfoList(StarRocksQueryInfo [] StarRocksQueryInfoList) {
         this.StarRocksQueryInfoList = StarRocksQueryInfoList;

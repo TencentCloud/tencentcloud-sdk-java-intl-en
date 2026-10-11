@@ -31,9 +31,7 @@ public class Arg extends AbstractModel {
     private String Key;
 
     /**
-    * Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Value list.
     */
     @SerializedName("Values")
     @Expose
@@ -56,24 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Value List
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Values Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Value list. 
+     * @return Values Value list.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Values Value List
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Value list.
+     * @param Values Value list.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

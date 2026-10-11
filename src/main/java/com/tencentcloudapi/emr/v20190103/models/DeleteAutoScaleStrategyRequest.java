@@ -31,7 +31,7 @@ public class DeleteAutoScaleStrategyRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+    * Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
     */
     @SerializedName("StrategyType")
     @Expose
@@ -68,16 +68,16 @@ public class DeleteAutoScaleStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules. 
-     * @return StrategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+     * Get Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule). 
+     * @return StrategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
-     * @param StrategyType Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time rules.
+     * Set Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
+     * @param StrategyType Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time rule).
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;

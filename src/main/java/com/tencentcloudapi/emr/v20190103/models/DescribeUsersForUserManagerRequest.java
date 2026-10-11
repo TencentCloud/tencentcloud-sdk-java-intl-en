@@ -24,120 +24,120 @@ import java.util.HashMap;
 public class DescribeUsersForUserManagerRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Page number
+    * Page number.
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-    * Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+    * Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * User list query filter
+    * User list filter.
     */
     @SerializedName("UserManagerFilter")
     @Expose
     private UserManagerFilter UserManagerFilter;
 
     /**
-    * Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+    * Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
     */
     @SerializedName("NeedKeytabInfo")
     @Expose
     private Boolean NeedKeytabInfo;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Page number 
-     * @return PageNo Page number
+     * Get Page number. 
+     * @return PageNo Page number.
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set Page number
-     * @param PageNo Page number
+     * Set Page number.
+     * @param PageNo Page number.
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;
     }
 
     /**
-     * Get Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried. 
-     * @return PageSize Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+     * Get Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried. 
+     * @return PageSize Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
-     * @param PageSize Pagination size.
-All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+     * Set Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
+     * @param PageSize Number of entries per page.
+All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get User list query filter 
-     * @return UserManagerFilter User list query filter
+     * Get User list filter. 
+     * @return UserManagerFilter User list filter.
      */
     public UserManagerFilter getUserManagerFilter() {
         return this.UserManagerFilter;
     }
 
     /**
-     * Set User list query filter
-     * @param UserManagerFilter User list query filter
+     * Set User list filter.
+     * @param UserManagerFilter User list filter.
      */
     public void setUserManagerFilter(UserManagerFilter UserManagerFilter) {
         this.UserManagerFilter = UserManagerFilter;
     }
 
     /**
-     * Get Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`. 
-     * @return NeedKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+     * Get Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false. 
+     * @return NeedKeytabInfo Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
      */
     public Boolean getNeedKeytabInfo() {
         return this.NeedKeytabInfo;
     }
 
     /**
-     * Set Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
-     * @param NeedKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+     * Set Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
+     * @param NeedKeytabInfo Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
      */
     public void setNeedKeytabInfo(Boolean NeedKeytabInfo) {
         this.NeedKeytabInfo = NeedKeytabInfo;

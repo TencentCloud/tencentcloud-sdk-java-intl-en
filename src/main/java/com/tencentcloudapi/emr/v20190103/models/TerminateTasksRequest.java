@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TerminateTasksRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * 
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+    * Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get  
+     * @return InstanceId 
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set 
+     * @param InstanceId 
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware). 
-     * @return ResourceIds List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+     * Get Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr). 
+     * @return ResourceIds Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-     * @param ResourceIds List of resource IDs of the node to be terminated. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+     * Set Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
+     * @param ResourceIds Resource ID list for nodes pending termination. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;

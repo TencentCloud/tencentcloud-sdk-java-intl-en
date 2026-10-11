@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class NodeMark extends AbstractModel {
 
     /**
-    * Node type: master, core, task, router.
+    * Node type. Valid values: master, core, task, and router.
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
+    * Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
     */
     @SerializedName("NodeNames")
     @Expose
     private String [] NodeNames;
 
     /**
-    * Availability zone name.
+    * AZ name.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get Node type: master, core, task, router. 
-     * @return NodeType Node type: master, core, task, router.
+     * Get Node type. Valid values: master, core, task, and router. 
+     * @return NodeType Node type. Valid values: master, core, task, and router.
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type: master, core, task, router.
-     * @param NodeType Node type: master, core, task, router.
+     * Set Node type. Valid values: master, core, task, and router.
+     * @param NodeType Node type. Valid values: master, core, task, and router.
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type. 
-     * @return NodeNames Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
+     * Get Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type. 
+     * @return NodeNames Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
      */
     public String [] getNodeNames() {
         return this.NodeNames;
     }
 
     /**
-     * Set Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
-     * @param NodeNames Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
+     * Set Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
+     * @param NodeNames Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
      */
     public void setNodeNames(String [] NodeNames) {
         this.NodeNames = NodeNames;
     }
 
     /**
-     * Get Availability zone name. 
-     * @return Zone Availability zone name.
+     * Get AZ name. 
+     * @return Zone AZ name.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone name.
-     * @param Zone Availability zone name.
+     * Set AZ name.
+     * @param Zone AZ name.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ZoneSetting extends AbstractModel {
 
     /**
-    * Availability zone name
+    * AZ name.
     */
     @SerializedName("Zone")
     @Expose
@@ -45,16 +45,16 @@ public class ZoneSetting extends AbstractModel {
     private Long NodeNum;
 
     /**
-     * Get Availability zone name 
-     * @return Zone Availability zone name
+     * Get AZ name. 
+     * @return Zone AZ name.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone name
-     * @param Zone Availability zone name
+     * Set AZ name.
+     * @param Zone AZ name.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

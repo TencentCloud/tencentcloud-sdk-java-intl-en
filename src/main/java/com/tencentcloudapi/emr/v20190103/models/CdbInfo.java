@@ -59,7 +59,7 @@ public class CdbInfo extends AbstractModel {
     private Long Volume;
 
     /**
-    * Service identifier.
+    * Service flag.
     */
     @SerializedName("Service")
     @Expose
@@ -80,7 +80,7 @@ public class CdbInfo extends AbstractModel {
     private String ApplyTime;
 
     /**
-    * Billing type.
+    * Payment type.
     */
     @SerializedName("PayType")
     @Expose
@@ -209,16 +209,16 @@ public class CdbInfo extends AbstractModel {
     }
 
     /**
-     * Get Service identifier. 
-     * @return Service Service identifier.
+     * Get Service flag. 
+     * @return Service Service flag.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Service identifier.
-     * @param Service Service identifier.
+     * Set Service flag.
+     * @param Service Service flag.
      */
     public void setService(String Service) {
         this.Service = Service;
@@ -257,16 +257,16 @@ public class CdbInfo extends AbstractModel {
     }
 
     /**
-     * Get Billing type. 
-     * @return PayType Billing type.
+     * Get Payment type. 
+     * @return PayType Payment type.
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set Billing type.
-     * @param PayType Billing type.
+     * Set Payment type.
+     * @param PayType Payment type.
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;

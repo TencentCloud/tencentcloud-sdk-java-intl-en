@@ -31,51 +31,49 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     private String StrategyName;
 
     /**
-    * Cooling time after policy trigger, during which auto scaling cannot be triggered.
+    * Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
     */
     @SerializedName("IntervalTime")
     @Expose
     private Long IntervalTime;
 
     /**
-    * Scaling action. 1: scale-out, 2: scale-in.
+    * Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
     */
     @SerializedName("ScaleAction")
     @Expose
     private Long ScaleAction;
 
     /**
-    * Scaling amount.
+    * Number of scaling operations.
     */
     @SerializedName("ScaleNum")
     @Expose
     private Long ScaleNum;
 
     /**
-    * Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
+    * (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
     */
     @SerializedName("StrategyStatus")
     @Expose
     private Long StrategyStatus;
 
     /**
-    * Rule priority. The smaller value indicates the higher priority.
+    * Rule priority. A smaller value indicates a higher priority.
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
+    * When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
     */
     @SerializedName("RetryValidTime")
     @Expose
     private Long RetryValidTime;
 
     /**
-    * Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time scaling repetition policy.
     */
     @SerializedName("RepeatStrategy")
     @Expose
@@ -103,9 +101,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long GraceDownTime;
 
     /**
-    * Bound tag list
+    * Whether to enable task protection.
+    */
+    @SerializedName("GraceDownProtectFlag")
+    @Expose
+    private Boolean GraceDownProtectFlag;
 
-Note: This field may return null, indicating that no valid values can be obtained.
+    /**
+    * Bound tag list.
     */
     @SerializedName("Tags")
     @Expose
@@ -119,49 +122,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ConfigGroupAssigned;
 
     /**
-    * Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+    * Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
     */
     @SerializedName("MeasureMethod")
     @Expose
     private String MeasureMethod;
 
     /**
-    * Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
+    * Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
     */
     @SerializedName("TerminatePolicy")
     @Expose
     private String TerminatePolicy;
 
     /**
-    * Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
+    * Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
     */
     @SerializedName("MaxUse")
     @Expose
     private Long MaxUse;
 
     /**
-    * Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
     */
     @SerializedName("SoftDeployInfo")
     @Expose
     private Long [] SoftDeployInfo;
 
     /**
-    * Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Startup process list.
     */
     @SerializedName("ServiceNodeInfo")
     @Expose
     private Long [] ServiceNodeInfo;
 
     /**
-    * Compensatory scale-out. 0: disable, 1: enable.
+    * Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
     */
     @SerializedName("CompensateFlag")
     @Expose
@@ -175,11 +175,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long GroupId;
 
     /**
-    * Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
+    * Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
     */
     @SerializedName("GraceDownLabel")
     @Expose
     private TkeLabel [] GraceDownLabel;
+
+    /**
+    * Task protection time.
+    */
+    @SerializedName("GraceDownProtectTime")
+    @Expose
+    private Long GraceDownProtectTime;
 
     /**
      * Get Policy name, which is unique within one cluster. 
@@ -198,120 +205,112 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cooling time after policy trigger, during which auto scaling cannot be triggered. 
-     * @return IntervalTime Cooling time after policy trigger, during which auto scaling cannot be triggered.
+     * Get Cooldown time after the policy is triggered, during which auto scaling cannot be triggered. 
+     * @return IntervalTime Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
      */
     public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
     /**
-     * Set Cooling time after policy trigger, during which auto scaling cannot be triggered.
-     * @param IntervalTime Cooling time after policy trigger, during which auto scaling cannot be triggered.
+     * Set Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
+     * @param IntervalTime Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
      */
     public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
     /**
-     * Get Scaling action. 1: scale-out, 2: scale-in. 
-     * @return ScaleAction Scaling action. 1: scale-out, 2: scale-in.
+     * Get Scaling action. Valid values: 1 (scale-out) and 2 (scale-in). 
+     * @return ScaleAction Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
      */
     public Long getScaleAction() {
         return this.ScaleAction;
     }
 
     /**
-     * Set Scaling action. 1: scale-out, 2: scale-in.
-     * @param ScaleAction Scaling action. 1: scale-out, 2: scale-in.
+     * Set Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
+     * @param ScaleAction Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
      */
     public void setScaleAction(Long ScaleAction) {
         this.ScaleAction = ScaleAction;
     }
 
     /**
-     * Get Scaling amount. 
-     * @return ScaleNum Scaling amount.
+     * Get Number of scaling operations. 
+     * @return ScaleNum Number of scaling operations.
      */
     public Long getScaleNum() {
         return this.ScaleNum;
     }
 
     /**
-     * Set Scaling amount.
-     * @param ScaleNum Scaling amount.
+     * Set Number of scaling operations.
+     * @param ScaleNum Number of scaling operations.
      */
     public void setScaleNum(Long ScaleNum) {
         this.ScaleNum = ScaleNum;
     }
 
     /**
-     * Get Rule status. 1: valid; 2: invalid; 3: suspended. This field is required. 
-     * @return StrategyStatus Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
+     * Get (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended). 
+     * @return StrategyStatus (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
      */
     public Long getStrategyStatus() {
         return this.StrategyStatus;
     }
 
     /**
-     * Set Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
-     * @param StrategyStatus Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
+     * Set (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
+     * @param StrategyStatus (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
      */
     public void setStrategyStatus(Long StrategyStatus) {
         this.StrategyStatus = StrategyStatus;
     }
 
     /**
-     * Get Rule priority. The smaller value indicates the higher priority. 
-     * @return Priority Rule priority. The smaller value indicates the higher priority.
+     * Get Rule priority. A smaller value indicates a higher priority. 
+     * @return Priority Rule priority. A smaller value indicates a higher priority.
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Rule priority. The smaller value indicates the higher priority.
-     * @param Priority Rule priority. The smaller value indicates the higher priority.
+     * Set Rule priority. A smaller value indicates a higher priority.
+     * @param Priority Rule priority. A smaller value indicates a higher priority.
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range. 
-     * @return RetryValidTime When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
+     * Get When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range. 
+     * @return RetryValidTime When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
      */
     public Long getRetryValidTime() {
         return this.RetryValidTime;
     }
 
     /**
-     * Set When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
-     * @param RetryValidTime When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
+     * Set When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
+     * @param RetryValidTime When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
      */
     public void setRetryValidTime(Long RetryValidTime) {
         this.RetryValidTime = RetryValidTime;
     }
 
     /**
-     * Get Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RepeatStrategy Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time scaling repetition policy. 
+     * @return RepeatStrategy Time scaling repetition policy.
      */
     public RepeatStrategy getRepeatStrategy() {
         return this.RepeatStrategy;
     }
 
     /**
-     * Set Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RepeatStrategy Time scaling repetition policy
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time scaling repetition policy.
+     * @param RepeatStrategy Time scaling repetition policy.
      */
     public void setRepeatStrategy(RepeatStrategy RepeatStrategy) {
         this.RepeatStrategy = RepeatStrategy;
@@ -366,24 +365,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Bound tag list
+     * Get Whether to enable task protection. 
+     * @return GraceDownProtectFlag Whether to enable task protection.
+     */
+    public Boolean getGraceDownProtectFlag() {
+        return this.GraceDownProtectFlag;
+    }
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Bound tag list
+    /**
+     * Set Whether to enable task protection.
+     * @param GraceDownProtectFlag Whether to enable task protection.
+     */
+    public void setGraceDownProtectFlag(Boolean GraceDownProtectFlag) {
+        this.GraceDownProtectFlag = GraceDownProtectFlag;
+    }
 
-Note: This field may return null, indicating that no valid values can be obtained.
+    /**
+     * Get Bound tag list. 
+     * @return Tags Bound tag list.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Bound tag list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Bound tag list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bound tag list.
+     * @param Tags Bound tag list.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -406,124 +413,112 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine. 
-     * @return MeasureMethod Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+     * Get Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine. 
+     * @return MeasureMethod Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
      */
     public String getMeasureMethod() {
         return this.MeasureMethod;
     }
 
     /**
-     * Set Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
-     * @param MeasureMethod Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-"DEFAULT" indicates the default method, which is the same as "INSTANCE".
-"INSTANCE" indicates calculation based on nodes (default mode).
-"CPU" indicates calculation based on the quantity of cores of the machine.
-"MEMORYGB" indicates calculation based on the memory size of the machine.
+     * Set Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
+     * @param MeasureMethod Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+"DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+"INSTANCE" indicates the calculation method based on nodes. This is the default method.
+"CPU" indicates the calculation method based on the number of cores of the machine.
+"MEMORYGB" indicates the calculation method based on the memory size of the machine.
      */
     public void setMeasureMethod(String MeasureMethod) {
         this.MeasureMethod = MeasureMethod;
     }
 
     /**
-     * Get Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction. 
-     * @return TerminatePolicy Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
+     * Get Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination. 
+     * @return TerminatePolicy Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
      */
     public String getTerminatePolicy() {
         return this.TerminatePolicy;
     }
 
     /**
-     * Set Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
-     * @param TerminatePolicy Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
+     * Set Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
+     * @param TerminatePolicy Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
      */
     public void setTerminatePolicy(String TerminatePolicy) {
         this.TerminatePolicy = TerminatePolicy;
     }
 
     /**
-     * Get Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours. 
-     * @return MaxUse Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
+     * Get Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours. 
+     * @return MaxUse Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
      */
     public Long getMaxUse() {
         return this.MaxUse;
     }
 
     /**
-     * Set Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
-     * @param MaxUse Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
+     * Set Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
+     * @param MaxUse Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
      */
     public void setMaxUse(Long MaxUse) {
         this.MaxUse = MaxUse;
     }
 
     /**
-     * Get Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SoftDeployInfo Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1). 
+     * @return SoftDeployInfo List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
      */
     public Long [] getSoftDeployInfo() {
         return this.SoftDeployInfo;
     }
 
     /**
-     * Set Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SoftDeployInfo Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
+     * @param SoftDeployInfo List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
      */
     public void setSoftDeployInfo(Long [] SoftDeployInfo) {
         this.SoftDeployInfo = SoftDeployInfo;
     }
 
     /**
-     * Get Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceNodeInfo Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Startup process list. 
+     * @return ServiceNodeInfo Startup process list.
      */
     public Long [] getServiceNodeInfo() {
         return this.ServiceNodeInfo;
     }
 
     /**
-     * Set Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceNodeInfo Startup process list
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Startup process list.
+     * @param ServiceNodeInfo Startup process list.
      */
     public void setServiceNodeInfo(Long [] ServiceNodeInfo) {
         this.ServiceNodeInfo = ServiceNodeInfo;
     }
 
     /**
-     * Get Compensatory scale-out. 0: disable, 1: enable. 
-     * @return CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
+     * Get Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled). 
+     * @return CompensateFlag Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
      */
     public Long getCompensateFlag() {
         return this.CompensateFlag;
     }
 
     /**
-     * Set Compensatory scale-out. 0: disable, 1: enable.
-     * @param CompensateFlag Compensatory scale-out. 0: disable, 1: enable.
+     * Set Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
+     * @param CompensateFlag Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
      */
     public void setCompensateFlag(Long CompensateFlag) {
         this.CompensateFlag = CompensateFlag;
@@ -546,19 +541,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed. 
-     * @return GraceDownLabel Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
+     * Get Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed. 
+     * @return GraceDownLabel Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
      */
     public TkeLabel [] getGraceDownLabel() {
         return this.GraceDownLabel;
     }
 
     /**
-     * Set Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
-     * @param GraceDownLabel Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
+     * Set Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
+     * @param GraceDownLabel Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
      */
     public void setGraceDownLabel(TkeLabel [] GraceDownLabel) {
         this.GraceDownLabel = GraceDownLabel;
+    }
+
+    /**
+     * Get Task protection time. 
+     * @return GraceDownProtectTime Task protection time.
+     */
+    public Long getGraceDownProtectTime() {
+        return this.GraceDownProtectTime;
+    }
+
+    /**
+     * Set Task protection time.
+     * @param GraceDownProtectTime Task protection time.
+     */
+    public void setGraceDownProtectTime(Long GraceDownProtectTime) {
+        this.GraceDownProtectTime = GraceDownProtectTime;
     }
 
     public TimeAutoScaleStrategy() {
@@ -602,6 +613,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.GraceDownTime != null) {
             this.GraceDownTime = new Long(source.GraceDownTime);
         }
+        if (source.GraceDownProtectFlag != null) {
+            this.GraceDownProtectFlag = new Boolean(source.GraceDownProtectFlag);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -644,6 +658,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.GraceDownLabel[i] = new TkeLabel(source.GraceDownLabel[i]);
             }
         }
+        if (source.GraceDownProtectTime != null) {
+            this.GraceDownProtectTime = new Long(source.GraceDownProtectTime);
+        }
     }
 
 
@@ -662,6 +679,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "StrategyId", this.StrategyId);
         this.setParamSimple(map, prefix + "GraceDownFlag", this.GraceDownFlag);
         this.setParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
+        this.setParamSimple(map, prefix + "GraceDownProtectFlag", this.GraceDownProtectFlag);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ConfigGroupAssigned", this.ConfigGroupAssigned);
         this.setParamSimple(map, prefix + "MeasureMethod", this.MeasureMethod);
@@ -672,6 +690,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CompensateFlag", this.CompensateFlag);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArrayObj(map, prefix + "GraceDownLabel.", this.GraceDownLabel);
+        this.setParamSimple(map, prefix + "GraceDownProtectTime", this.GraceDownProtectTime);
 
     }
 }

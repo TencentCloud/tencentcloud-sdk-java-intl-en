@@ -38,7 +38,7 @@ public class StarRocksQueryInfo extends AbstractModel {
     private Long CPUCost;
 
     /**
-    * Default DB.
+    * Default database.
     */
     @SerializedName("DefaultDB")
     @Expose
@@ -80,14 +80,14 @@ public class StarRocksQueryInfo extends AbstractModel {
     private Long MemCost;
 
     /**
-    * CPU usage (ns) at the plan stage.
+    * CPU consumption in the plan phase (ns).
     */
     @SerializedName("PlanCpuCosts")
     @Expose
     private Long PlanCpuCosts;
 
     /**
-    * Memory usage (bytes) at the plan stage.
+    * Memory consumption in the plan phase (bytes).
     */
     @SerializedName("PlanMemCosts")
     @Expose
@@ -157,6 +157,13 @@ public class StarRocksQueryInfo extends AbstractModel {
     private String User;
 
     /**
+    * Error code.
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private String ErrorCode;
+
+    /**
      * Get Submission IP address. 
      * @return ClientIP Submission IP address.
      */
@@ -189,16 +196,16 @@ public class StarRocksQueryInfo extends AbstractModel {
     }
 
     /**
-     * Get Default DB. 
-     * @return DefaultDB Default DB.
+     * Get Default database. 
+     * @return DefaultDB Default database.
      */
     public String getDefaultDB() {
         return this.DefaultDB;
     }
 
     /**
-     * Set Default DB.
-     * @param DefaultDB Default DB.
+     * Set Default database.
+     * @param DefaultDB Default database.
      */
     public void setDefaultDB(String DefaultDB) {
         this.DefaultDB = DefaultDB;
@@ -285,32 +292,32 @@ public class StarRocksQueryInfo extends AbstractModel {
     }
 
     /**
-     * Get CPU usage (ns) at the plan stage. 
-     * @return PlanCpuCosts CPU usage (ns) at the plan stage.
+     * Get CPU consumption in the plan phase (ns). 
+     * @return PlanCpuCosts CPU consumption in the plan phase (ns).
      */
     public Long getPlanCpuCosts() {
         return this.PlanCpuCosts;
     }
 
     /**
-     * Set CPU usage (ns) at the plan stage.
-     * @param PlanCpuCosts CPU usage (ns) at the plan stage.
+     * Set CPU consumption in the plan phase (ns).
+     * @param PlanCpuCosts CPU consumption in the plan phase (ns).
      */
     public void setPlanCpuCosts(Long PlanCpuCosts) {
         this.PlanCpuCosts = PlanCpuCosts;
     }
 
     /**
-     * Get Memory usage (bytes) at the plan stage. 
-     * @return PlanMemCosts Memory usage (bytes) at the plan stage.
+     * Get Memory consumption in the plan phase (bytes). 
+     * @return PlanMemCosts Memory consumption in the plan phase (bytes).
      */
     public Long getPlanMemCosts() {
         return this.PlanMemCosts;
     }
 
     /**
-     * Set Memory usage (bytes) at the plan stage.
-     * @param PlanMemCosts Memory usage (bytes) at the plan stage.
+     * Set Memory consumption in the plan phase (bytes).
+     * @param PlanMemCosts Memory consumption in the plan phase (bytes).
      */
     public void setPlanMemCosts(Long PlanMemCosts) {
         this.PlanMemCosts = PlanMemCosts;
@@ -460,6 +467,22 @@ public class StarRocksQueryInfo extends AbstractModel {
         this.User = User;
     }
 
+    /**
+     * Get Error code. 
+     * @return ErrorCode Error code.
+     */
+    public String getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set Error code.
+     * @param ErrorCode Error code.
+     */
+    public void setErrorCode(String ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
     public StarRocksQueryInfo() {
     }
 
@@ -525,6 +548,9 @@ public class StarRocksQueryInfo extends AbstractModel {
         if (source.User != null) {
             this.User = new String(source.User);
         }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
     }
 
 
@@ -551,6 +577,7 @@ public class StarRocksQueryInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutionState", this.ExecutionState);
         this.setParamSimple(map, prefix + "ExecutionStatement", this.ExecutionStatement);
         this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
 
     }
 }

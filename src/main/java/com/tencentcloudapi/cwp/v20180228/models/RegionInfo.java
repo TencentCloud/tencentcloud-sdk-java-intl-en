@@ -31,7 +31,7 @@ public class RegionInfo extends AbstractModel {
     private String Region;
 
     /**
-    * Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+    * Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
     */
     @SerializedName("RegionName")
     @Expose
@@ -45,7 +45,7 @@ public class RegionInfo extends AbstractModel {
     private Long RegionId;
 
     /**
-    * Region code, such as gz, sh, and bj
+    * Region code, such as gz, sh, and bj
     */
     @SerializedName("RegionCode")
     @Expose
@@ -75,16 +75,16 @@ public class RegionInfo extends AbstractModel {
     }
 
     /**
-     * Get Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing) 
-     * @return RegionName Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+     * Get Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing) 
+     * @return RegionName Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
-     * @param RegionName Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+     * Set Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+     * @param RegionName Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
@@ -107,16 +107,16 @@ public class RegionInfo extends AbstractModel {
     }
 
     /**
-     * Get Region code, such as gz, sh, and bj 
-     * @return RegionCode Region code, such as gz, sh, and bj
+     * Get Region code, such as gz, sh, and bj 
+     * @return RegionCode Region code, such as gz, sh, and bj
      */
     public String getRegionCode() {
         return this.RegionCode;
     }
 
     /**
-     * Set Region code, such as gz, sh, and bj
-     * @param RegionCode Region code, such as gz, sh, and bj
+     * Set Region code, such as gz, sh, and bj
+     * @param RegionCode Region code, such as gz, sh, and bj
      */
     public void setRegionCode(String RegionCode) {
         this.RegionCode = RegionCode;

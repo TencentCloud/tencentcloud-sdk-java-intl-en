@@ -45,7 +45,7 @@ public class AddMetricScaleStrategyRequest extends AbstractModel {
     private LoadAutoScaleStrategy LoadAutoScaleStrategy;
 
     /**
-    * Rule for time-based scaling
+    * Time-based scaling rule.
     */
     @SerializedName("TimeAutoScaleStrategy")
     @Expose
@@ -100,16 +100,16 @@ public class AddMetricScaleStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get Rule for time-based scaling 
-     * @return TimeAutoScaleStrategy Rule for time-based scaling
+     * Get Time-based scaling rule. 
+     * @return TimeAutoScaleStrategy Time-based scaling rule.
      */
     public TimeAutoScaleStrategy getTimeAutoScaleStrategy() {
         return this.TimeAutoScaleStrategy;
     }
 
     /**
-     * Set Rule for time-based scaling
-     * @param TimeAutoScaleStrategy Rule for time-based scaling
+     * Set Time-based scaling rule.
+     * @param TimeAutoScaleStrategy Time-based scaling rule.
      */
     public void setTimeAutoScaleStrategy(TimeAutoScaleStrategy TimeAutoScaleStrategy) {
         this.TimeAutoScaleStrategy = TimeAutoScaleStrategy;

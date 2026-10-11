@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class MonthRepeatStrategy extends AbstractModel {
 
     /**
-    * Specific time for repetition task execution, such as 01:02:00.
+    * Specific time for repetition task execution, for example, 01:02:00.
     */
     @SerializedName("ExecuteAtTimeOfDay")
     @Expose
     private String ExecuteAtTimeOfDay;
 
     /**
-    * Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
     */
     @SerializedName("DaysOfMonthRange")
     @Expose
     private Long [] DaysOfMonthRange;
 
     /**
-     * Get Specific time for repetition task execution, such as 01:02:00. 
-     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+     * Get Specific time for repetition task execution, for example, 01:02:00. 
+     * @return ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
      */
     public String getExecuteAtTimeOfDay() {
         return this.ExecuteAtTimeOfDay;
     }
 
     /**
-     * Set Specific time for repetition task execution, such as 01:02:00.
-     * @param ExecuteAtTimeOfDay Specific time for repetition task execution, such as 01:02:00.
+     * Set Specific time for repetition task execution, for example, 01:02:00.
+     * @param ExecuteAtTimeOfDay Specific time for repetition task execution, for example, 01:02:00.
      */
     public void setExecuteAtTimeOfDay(String ExecuteAtTimeOfDay) {
         this.ExecuteAtTimeOfDay = ExecuteAtTimeOfDay;
     }
 
     /**
-     * Get Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DaysOfMonthRange Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month. 
+     * @return DaysOfMonthRange Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
      */
     public Long [] getDaysOfMonthRange() {
         return this.DaysOfMonthRange;
     }
 
     /**
-     * Set Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DaysOfMonthRange Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
+     * @param DaysOfMonthRange Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
      */
     public void setDaysOfMonthRange(Long [] DaysOfMonthRange) {
         this.DaysOfMonthRange = DaysOfMonthRange;

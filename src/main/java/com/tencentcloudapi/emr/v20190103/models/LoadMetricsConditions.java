@@ -24,56 +24,51 @@ import java.util.HashMap;
 public class LoadMetricsConditions extends AbstractModel {
 
     /**
-    * Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule trigger condition.
     */
     @SerializedName("LoadMetrics")
     @Expose
     private LoadMetricsCondition [] LoadMetrics;
 
     /**
-    * 0: all conditions should be met.
-1: any one of the conditions is met.
+    * 0: All conditions are met.
+1: Any one of the conditions is met.
     */
     @SerializedName("Match")
     @Expose
     private Long Match;
 
     /**
-     * Get Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadMetrics Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule trigger condition. 
+     * @return LoadMetrics Rule trigger condition.
      */
     public LoadMetricsCondition [] getLoadMetrics() {
         return this.LoadMetrics;
     }
 
     /**
-     * Set Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadMetrics Trigger rule condition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule trigger condition.
+     * @param LoadMetrics Rule trigger condition.
      */
     public void setLoadMetrics(LoadMetricsCondition [] LoadMetrics) {
         this.LoadMetrics = LoadMetrics;
     }
 
     /**
-     * Get 0: all conditions should be met.
-1: any one of the conditions is met. 
-     * @return Match 0: all conditions should be met.
-1: any one of the conditions is met.
+     * Get 0: All conditions are met.
+1: Any one of the conditions is met. 
+     * @return Match 0: All conditions are met.
+1: Any one of the conditions is met.
      */
     public Long getMatch() {
         return this.Match;
     }
 
     /**
-     * Set 0: all conditions should be met.
-1: any one of the conditions is met.
-     * @param Match 0: all conditions should be met.
-1: any one of the conditions is met.
+     * Set 0: All conditions are met.
+1: Any one of the conditions is met.
+     * @param Match 0: All conditions are met.
+1: Any one of the conditions is met.
      */
     public void setMatch(Long Match) {
         this.Match = Match;

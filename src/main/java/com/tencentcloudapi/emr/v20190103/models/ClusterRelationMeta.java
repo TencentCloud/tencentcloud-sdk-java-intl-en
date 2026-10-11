@@ -31,8 +31,7 @@ public class ClusterRelationMeta extends AbstractModel {
     private String ClusterType;
 
     /**
-    * Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of cluster IDs.
     */
     @SerializedName("ClusterIdList")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterIdList Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of cluster IDs. 
+     * @return ClusterIdList List of cluster IDs.
      */
     public String [] getClusterIdList() {
         return this.ClusterIdList;
     }
 
     /**
-     * Set Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterIdList Cluster ID list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of cluster IDs.
+     * @param ClusterIdList List of cluster IDs.
      */
     public void setClusterIdList(String [] ClusterIdList) {
         this.ClusterIdList = ClusterIdList;

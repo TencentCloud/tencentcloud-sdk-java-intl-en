@@ -24,622 +24,693 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel {
 
     /**
-    * The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
+    * <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p>
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-    * Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
+    * <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li>
     */
     @SerializedName("EnableSupportHAFlag")
     @Expose
     private Boolean EnableSupportHAFlag;
 
     /**
-    * The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
+    * <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
+    * <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+    * <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
 
     /**
-    * The configuration of cluster application scenario and supported components.
+    * <p>Cluster application scenario and supported deployment component configuration.</p>
     */
     @SerializedName("SceneSoftwareConfig")
     @Expose
     private SceneSoftwareConfig SceneSoftwareConfig;
 
     /**
-    * The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
+    * <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
+    * <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+    * <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
     */
     @SerializedName("ScriptBootstrapActionConfig")
     @Expose
     private ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig;
 
     /**
-    * Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+    * <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
+    * <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
     */
     @SerializedName("NeedMasterWan")
     @Expose
     private String NeedMasterWan;
 
     /**
-    * Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
+    * <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li>
     */
     @SerializedName("EnableRemoteLoginFlag")
     @Expose
     private Boolean EnableRemoteLoginFlag;
 
     /**
-    * Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+    * <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li>
     */
     @SerializedName("EnableKerberosFlag")
     @Expose
     private Boolean EnableKerberosFlag;
 
     /**
-    * [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
+    * <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p>
     */
     @SerializedName("CustomConf")
     @Expose
     private String CustomConf;
 
     /**
-    * The tag description list. This parameter is used to bind a tag to a resource instance.
+    * <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+    * <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+    * <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li>
     */
     @SerializedName("EnableCbsEncryptFlag")
     @Expose
     private Boolean EnableCbsEncryptFlag;
 
     /**
-    * The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
+    * <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p>
     */
     @SerializedName("MetaDBInfo")
     @Expose
     private CustomMetaDBInfo MetaDBInfo;
 
     /**
-    * The shared component information.
+    * <p>Shared component information.</p>
     */
     @SerializedName("DependService")
     @Expose
     private DependService [] DependService;
 
     /**
-    * The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+    * <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
     */
     @SerializedName("ZoneResourceConfiguration")
     @Expose
     private ZoneResourceConfiguration [] ZoneResourceConfiguration;
 
     /**
-    * COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+    * <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
     */
     @SerializedName("CosBucket")
     @Expose
     private String CosBucket;
 
     /**
-    * Node identifier information: currently used only in Terraform.
+    * <p>Node flag information, which is currently only provided for the Terraform platform.</p>
     */
     @SerializedName("NodeMarks")
     @Expose
     private NodeMark [] NodeMarks;
 
     /**
-    * clb id
+    * <p>clb id</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-     * Get The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1). 
-     * @return ProductVersion The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
+    * <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p>
+    */
+    @SerializedName("DefaultMetaVersion")
+    @Expose
+    private String DefaultMetaVersion;
+
+    /**
+    * <p>Whether database audit is enabled.</p>
+    */
+    @SerializedName("NeedCdbAudit")
+    @Expose
+    private Long NeedCdbAudit;
+
+    /**
+    * <p>Source IP address, which is specified in the security group.</p>
+    */
+    @SerializedName("SgIP")
+    @Expose
+    private String SgIP;
+
+    /**
+    * <p>Partition of a partition placement group.</p>
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+    * <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+    */
+    @SerializedName("WebUiVersion")
+    @Expose
+    private Long WebUiVersion;
+
+    /**
+    * <p>Whether the system disk is encrypted.</p>
+    */
+    @SerializedName("EnableCbsSysEncryptFlag")
+    @Expose
+    private Boolean EnableCbsSysEncryptFlag;
+
+    /**
+    * <p>Custom MetaDB data.</p>
+    */
+    @SerializedName("MetaDBGroupInfo")
+    @Expose
+    private CustomMetaDBInfo [] MetaDBGroupInfo;
+
+    /**
+     * Get <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p> 
+     * @return ProductVersion <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p>
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
-     * @param ProductVersion The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
+     * Set <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p>
+     * @param ProductVersion <p>EMR product version name, for example, EMR-V2.3.0 (EMR 2.3.0). Currently, product version names can be queried. For details, see <a href="https://www.tencentcloud.com/document/product/589/66338?from_cn_redirect=1">Product Version Name</a>.</p>
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
     }
 
     /**
-     * Get Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li> 
-     * @return EnableSupportHAFlag Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
+     * Get <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li> 
+     * @return EnableSupportHAFlag <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li>
      */
     public Boolean getEnableSupportHAFlag() {
         return this.EnableSupportHAFlag;
     }
 
     /**
-     * Set Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
-     * @param EnableSupportHAFlag Whether to enable high availability for nodes. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
+     * Set <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li>
+     * @param EnableSupportHAFlag <p>Whether to enable high availability for the node. Valid values:</p><li>true: yes</li><li>false: no</li>
      */
     public void setEnableSupportHAFlag(Boolean EnableSupportHAFlag) {
         this.EnableSupportHAFlag = EnableSupportHAFlag;
     }
 
     /**
-     * Get The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li> 
-     * @return InstanceName The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
+     * Get <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li> 
+     * @return InstanceName <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
-     * @param InstanceName The instance name.
-<li>Length limit: 6-36 characters.</li>
-<li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
+     * Set <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
+     * @param InstanceName <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li> 
-     * @return InstanceChargeType The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
+     * Get <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li> 
+     * @return InstanceChargeType <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
-     * @param InstanceChargeType The instance billing mode. Valid values:
-<li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
+     * Set <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li>
+     * @param InstanceChargeType <p>Instance billing mode. Valid values:</p><li>PREPAID: prepaid, that is, yearly/monthly subscription</li><li>POSTPAID_BY_HOUR: pay-as-you-go on an hourly basis</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li> 
-     * @return LoginSettings The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+     * Get <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li> 
+     * @return LoginSettings <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
-     * @param LoginSettings The instance login setting. This parameter allows you to set a login password or key for your purchased node.
-<li>If a key is set, the password will be used for login to the native component WebUI only.</li>
-<li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+     * Set <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
+     * @param LoginSettings <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get The configuration of cluster application scenario and supported components. 
-     * @return SceneSoftwareConfig The configuration of cluster application scenario and supported components.
+     * Get <p>Cluster application scenario and supported deployment component configuration.</p> 
+     * @return SceneSoftwareConfig <p>Cluster application scenario and supported deployment component configuration.</p>
      */
     public SceneSoftwareConfig getSceneSoftwareConfig() {
         return this.SceneSoftwareConfig;
     }
 
     /**
-     * Set The configuration of cluster application scenario and supported components.
-     * @param SceneSoftwareConfig The configuration of cluster application scenario and supported components.
+     * Set <p>Cluster application scenario and supported deployment component configuration.</p>
+     * @param SceneSoftwareConfig <p>Cluster application scenario and supported deployment component configuration.</p>
      */
     public void setSceneSoftwareConfig(SceneSoftwareConfig SceneSoftwareConfig) {
         this.SceneSoftwareConfig = SceneSoftwareConfig;
     }
 
     /**
-     * Get The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`. 
-     * @return InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
+     * Get <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p> 
+     * @return InstanceChargePrepaid <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
-     * @param InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
+     * Set <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
+     * @param InstanceChargePrepaid <p>Parameter settings related to yearly/monthly subscription. This parameter can be used to specify the purchase duration of a yearly/monthly subscription instance, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode of the specified instance is prepaid.</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response. 
-     * @return SecurityGroupIds The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
+     * Get <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p> 
+     * @return SecurityGroupIds <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
-     * @param SecurityGroupIds The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
+     * Set <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
+     * @param SecurityGroupIds <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings. 
-     * @return ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+     * Get <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p> 
+     * @return ScriptBootstrapActionConfig <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
      */
     public ScriptBootstrapActionConfig [] getScriptBootstrapActionConfig() {
         return this.ScriptBootstrapActionConfig;
     }
 
     /**
-     * Set The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
-     * @param ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+     * Set <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
+     * @param ScriptBootstrapActionConfig <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
      */
     public void setScriptBootstrapActionConfig(ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig) {
         this.ScriptBootstrapActionConfig = ScriptBootstrapActionConfig;
     }
 
     /**
-     * Get Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808. 
-     * @return ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+     * Get <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p> 
+     * @return ClientToken <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
-     * @param ClientToken Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
+     * Set <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
+     * @param ClientToken <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default. 
-     * @return NeedMasterWan Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
+     * Get <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node. 
+     * @return NeedMasterWan <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
      */
     public String getNeedMasterWan() {
         return this.NeedMasterWan;
     }
 
     /**
-     * Set Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
-     * @param NeedMasterWan Whether to enable public IP access for master nodes. Valid values:
-<li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
-<li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
+     * Set <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
+     * @param NeedMasterWan <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
      */
     public void setNeedMasterWan(String NeedMasterWan) {
         this.NeedMasterWan = NeedMasterWan;
     }
 
     /**
-     * Get Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li> 
-     * @return EnableRemoteLoginFlag Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
+     * Get <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li> 
+     * @return EnableRemoteLoginFlag <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li>
      */
     public Boolean getEnableRemoteLoginFlag() {
         return this.EnableRemoteLoginFlag;
     }
 
     /**
-     * Set Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
-     * @param EnableRemoteLoginFlag Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>
+     * Set <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li>
+     * @param EnableRemoteLoginFlag <p>Whether to enable remote login in the public network. (When SecurityGroupId is not empty, this parameter is invalid.) If this parameter is left empty, it is disabled by default. Valid values:</p><li>true: enable</li><li>false: disable</li>
      */
     public void setEnableRemoteLoginFlag(Boolean EnableRemoteLoginFlag) {
         this.EnableRemoteLoginFlag = EnableRemoteLoginFlag;
     }
 
     /**
-     * Get Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li> 
-     * @return EnableKerberosFlag Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * Get <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li> 
+     * @return EnableKerberosFlag <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li>
      */
     public Boolean getEnableKerberosFlag() {
         return this.EnableKerberosFlag;
     }
 
     /**
-     * Set Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
-     * @param EnableKerberosFlag Whether to enable Kerberos authentication. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * Set <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li>
+     * @param EnableKerberosFlag <p>Whether to enable Kerberos authentication. It is disabled by default. Valid values:</p><li>true: enabled</li><li>false: disabled</li>
      */
     public void setEnableKerberosFlag(Boolean EnableKerberosFlag) {
         this.EnableKerberosFlag = EnableKerberosFlag;
     }
 
     /**
-     * Get [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1) 
-     * @return CustomConf [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
+     * Get <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p> 
+     * @return CustomConf <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p>
      */
     public String getCustomConf() {
         return this.CustomConf;
     }
 
     /**
-     * Set [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
-     * @param CustomConf [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
+     * Set <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p>
+     * @param CustomConf <p><a href="https://www.tencentcloud.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1">Custom software configuration.</a></p>
      */
     public void setCustomConf(String CustomConf) {
         this.CustomConf = CustomConf;
     }
 
     /**
-     * Get The tag description list. This parameter is used to bind a tag to a resource instance. 
-     * @return Tags The tag description list. This parameter is used to bind a tag to a resource instance.
+     * Get <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p> 
+     * @return Tags <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set The tag description list. This parameter is used to bind a tag to a resource instance.
-     * @param Tags The tag description list. This parameter is used to bind a tag to a resource instance.
+     * Set <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
+     * @param Tags <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response. 
-     * @return DisasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+     * Get <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p> 
+     * @return DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
-     * @param DisasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
-You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+     * Set <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
+     * @param DisasterRecoverGroupIds <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the DisasterRecoverGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1">DescribeDisasterRecoverGroups</a>.</p>
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li> 
-     * @return EnableCbsEncryptFlag Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * Get <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li> 
+     * @return EnableCbsEncryptFlag <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li>
      */
     public Boolean getEnableCbsEncryptFlag() {
         return this.EnableCbsEncryptFlag;
     }
 
     /**
-     * Set Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
-     * @param EnableCbsEncryptFlag Whether to enable the cluster-level CBS encryption. Valid values:
-<li>`true`: Enable</li>
-<li>`false` (default): Disable</li>
+     * Set <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li>
+     * @param EnableCbsEncryptFlag <p>Whether to enable cluster-level CBS encryption. It is not encrypted by default. Valid values:</p><li>true: encrypted</li><li>false: not encrypted</li>
      */
     public void setEnableCbsEncryptFlag(Boolean EnableCbsEncryptFlag) {
         this.EnableCbsEncryptFlag = EnableCbsEncryptFlag;
     }
 
     /**
-     * Get The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required. 
-     * @return MetaDBInfo The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
+     * Get <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p> 
+     * @return MetaDBInfo <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p>
      */
     public CustomMetaDBInfo getMetaDBInfo() {
         return this.MetaDBInfo;
     }
 
     /**
-     * Set The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
-     * @param MetaDBInfo The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
-If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
-If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
+     * Set <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p>
+     * @param MetaDBInfo <p>MetaDB information. When MetaType is set to EMR_NEW_META, MetaDataJdbcUrl, MetaDataUser, MetaDataPass, and UnifyMetaInstanceId can be left empty.<br>When MetaType is set to EMR_EXIT_META, set UnifyMetaInstanceId.<br>When MetaType is set to USER_CUSTOM_META, set MetaDataJdbcUrl, MetaDataUser, and MetaDataPass.</p>
      */
     public void setMetaDBInfo(CustomMetaDBInfo MetaDBInfo) {
         this.MetaDBInfo = MetaDBInfo;
     }
 
     /**
-     * Get The shared component information. 
-     * @return DependService The shared component information.
+     * Get <p>Shared component information.</p> 
+     * @return DependService <p>Shared component information.</p>
      */
     public DependService [] getDependService() {
         return this.DependService;
     }
 
     /**
-     * Set The shared component information.
-     * @param DependService The shared component information.
+     * Set <p>Shared component information.</p>
+     * @param DependService <p>Shared component information.</p>
      */
     public void setDependService(DependService [] DependService) {
         this.DependService = DependService;
     }
 
     /**
-     * Get The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required. 
-     * @return ZoneResourceConfiguration The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+     * Get <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p> 
+     * @return ZoneResourceConfiguration <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
      */
     public ZoneResourceConfiguration [] getZoneResourceConfiguration() {
         return this.ZoneResourceConfiguration;
     }
 
     /**
-     * Set The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
-     * @param ZoneResourceConfiguration The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+     * Set <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
+     * @param ZoneResourceConfiguration <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
      */
     public void setZoneResourceConfiguration(ZoneResourceConfiguration [] ZoneResourceConfiguration) {
         this.ZoneResourceConfiguration = ZoneResourceConfiguration;
     }
 
     /**
-     * Get COS bucket path, which is used when you create StarRocks compute-storage separation clusters. 
-     * @return CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     * Get <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p> 
+     * @return CosBucket <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
      */
     public String getCosBucket() {
         return this.CosBucket;
     }
 
     /**
-     * Set COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
-     * @param CosBucket COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+     * Set <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
+     * @param CosBucket <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
     }
 
     /**
-     * Get Node identifier information: currently used only in Terraform. 
-     * @return NodeMarks Node identifier information: currently used only in Terraform.
+     * Get <p>Node flag information, which is currently only provided for the Terraform platform.</p> 
+     * @return NodeMarks <p>Node flag information, which is currently only provided for the Terraform platform.</p>
      */
     public NodeMark [] getNodeMarks() {
         return this.NodeMarks;
     }
 
     /**
-     * Set Node identifier information: currently used only in Terraform.
-     * @param NodeMarks Node identifier information: currently used only in Terraform.
+     * Set <p>Node flag information, which is currently only provided for the Terraform platform.</p>
+     * @param NodeMarks <p>Node flag information, which is currently only provided for the Terraform platform.</p>
      */
     public void setNodeMarks(NodeMark [] NodeMarks) {
         this.NodeMarks = NodeMarks;
     }
 
     /**
-     * Get clb id 
-     * @return LoadBalancerId clb id
+     * Get <p>clb id</p> 
+     * @return LoadBalancerId <p>clb id</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set clb id
-     * @param LoadBalancerId clb id
+     * Set <p>clb id</p>
+     * @param LoadBalancerId <p>clb id</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
+    }
+
+    /**
+     * Get <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p> 
+     * @return DefaultMetaVersion <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p>
+     */
+    public String getDefaultMetaVersion() {
+        return this.DefaultMetaVersion;
+    }
+
+    /**
+     * Set <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p>
+     * @param DefaultMetaVersion <p>Database version. Valid values: mysql8/tdsql8/mysql5.</p>
+     */
+    public void setDefaultMetaVersion(String DefaultMetaVersion) {
+        this.DefaultMetaVersion = DefaultMetaVersion;
+    }
+
+    /**
+     * Get <p>Whether database audit is enabled.</p> 
+     * @return NeedCdbAudit <p>Whether database audit is enabled.</p>
+     */
+    public Long getNeedCdbAudit() {
+        return this.NeedCdbAudit;
+    }
+
+    /**
+     * Set <p>Whether database audit is enabled.</p>
+     * @param NeedCdbAudit <p>Whether database audit is enabled.</p>
+     */
+    public void setNeedCdbAudit(Long NeedCdbAudit) {
+        this.NeedCdbAudit = NeedCdbAudit;
+    }
+
+    /**
+     * Get <p>Source IP address, which is specified in the security group.</p> 
+     * @return SgIP <p>Source IP address, which is specified in the security group.</p>
+     */
+    public String getSgIP() {
+        return this.SgIP;
+    }
+
+    /**
+     * Set <p>Source IP address, which is specified in the security group.</p>
+     * @param SgIP <p>Source IP address, which is specified in the security group.</p>
+     */
+    public void setSgIP(String SgIP) {
+        this.SgIP = SgIP;
+    }
+
+    /**
+     * Get <p>Partition of a partition placement group.</p> 
+     * @return PartitionNumber <p>Partition of a partition placement group.</p>
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set <p>Partition of a partition placement group.</p>
+     * @param PartitionNumber <p>Partition of a partition placement group.</p>
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
+    }
+
+    /**
+     * Get <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p> 
+     * @return WebUiVersion <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+     */
+    public Long getWebUiVersion() {
+        return this.WebUiVersion;
+    }
+
+    /**
+     * Set <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+     * @param WebUiVersion <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+     */
+    public void setWebUiVersion(Long WebUiVersion) {
+        this.WebUiVersion = WebUiVersion;
+    }
+
+    /**
+     * Get <p>Whether the system disk is encrypted.</p> 
+     * @return EnableCbsSysEncryptFlag <p>Whether the system disk is encrypted.</p>
+     */
+    public Boolean getEnableCbsSysEncryptFlag() {
+        return this.EnableCbsSysEncryptFlag;
+    }
+
+    /**
+     * Set <p>Whether the system disk is encrypted.</p>
+     * @param EnableCbsSysEncryptFlag <p>Whether the system disk is encrypted.</p>
+     */
+    public void setEnableCbsSysEncryptFlag(Boolean EnableCbsSysEncryptFlag) {
+        this.EnableCbsSysEncryptFlag = EnableCbsSysEncryptFlag;
+    }
+
+    /**
+     * Get <p>Custom MetaDB data.</p> 
+     * @return MetaDBGroupInfo <p>Custom MetaDB data.</p>
+     */
+    public CustomMetaDBInfo [] getMetaDBGroupInfo() {
+        return this.MetaDBGroupInfo;
+    }
+
+    /**
+     * Set <p>Custom MetaDB data.</p>
+     * @param MetaDBGroupInfo <p>Custom MetaDB data.</p>
+     */
+    public void setMetaDBGroupInfo(CustomMetaDBInfo [] MetaDBGroupInfo) {
+        this.MetaDBGroupInfo = MetaDBGroupInfo;
     }
 
     public CreateClusterRequest() {
@@ -740,6 +811,30 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
         if (source.LoadBalancerId != null) {
             this.LoadBalancerId = new String(source.LoadBalancerId);
         }
+        if (source.DefaultMetaVersion != null) {
+            this.DefaultMetaVersion = new String(source.DefaultMetaVersion);
+        }
+        if (source.NeedCdbAudit != null) {
+            this.NeedCdbAudit = new Long(source.NeedCdbAudit);
+        }
+        if (source.SgIP != null) {
+            this.SgIP = new String(source.SgIP);
+        }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
+        if (source.WebUiVersion != null) {
+            this.WebUiVersion = new Long(source.WebUiVersion);
+        }
+        if (source.EnableCbsSysEncryptFlag != null) {
+            this.EnableCbsSysEncryptFlag = new Boolean(source.EnableCbsSysEncryptFlag);
+        }
+        if (source.MetaDBGroupInfo != null) {
+            this.MetaDBGroupInfo = new CustomMetaDBInfo[source.MetaDBGroupInfo.length];
+            for (int i = 0; i < source.MetaDBGroupInfo.length; i++) {
+                this.MetaDBGroupInfo[i] = new CustomMetaDBInfo(source.MetaDBGroupInfo[i]);
+            }
+        }
     }
 
 
@@ -770,6 +865,13 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+        this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+        this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
+        this.setParamSimple(map, prefix + "SgIP", this.SgIP);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+        this.setParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
+        this.setParamSimple(map, prefix + "EnableCbsSysEncryptFlag", this.EnableCbsSysEncryptFlag);
+        this.setParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
 
     }
 }

@@ -39,7 +39,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add scaling rules by load and time.
+     *This API is used to add an automatic scaling rule by load and time.
      * @param req AddMetricScaleStrategyRequest
      * @return AddMetricScaleStrategyResponse
      * @throws TencentCloudSDKException
@@ -50,7 +50,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add node specifications of the current cluster.
+     *This API is used to add node specifications for the current cluster.
      * @param req AddNodeResourceConfigRequest
      * @return AddNodeResourceConfigResponse
      * @throws TencentCloudSDKException
@@ -61,8 +61,8 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *This API is available for clusters with OpenLDAP components configured.
-This API is used to add user lists (user management).
+     *This API is used for clusters with the OpenLDAP component installed.
+This API is used to add a user list (user management).
      * @param req AddUsersForUserManagerRequest
      * @return AddUsersForUserManagerResponse
      * @throws TencentCloudSDKException
@@ -73,7 +73,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to mount cloud disks.
+     *This API is used to mount a cloud disk.
      * @param req AttachDisksRequest
      * @return AttachDisksResponse
      * @throws TencentCloudSDKException
@@ -84,7 +84,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding cdb).
+     *This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding CDB).
      * @param req ConvertPreToPostClusterRequest
      * @return ConvertPreToPostClusterResponse
      * @throws TencentCloudSDKException
@@ -95,7 +95,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to create an EMR cluster instance.
+     *This API is used to create an EMR cluster.
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
      * @throws TencentCloudSDKException
@@ -106,7 +106,18 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to create user groups in batches under User Management.
+     *This API is used to create a DynamicInstance in a containerized EMR on TKE cluster.
+     * @param req CreateDynamicInstanceRequest
+     * @return CreateDynamicInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDynamicInstanceResponse CreateDynamicInstance(CreateDynamicInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDynamicInstance", CreateDynamicInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to create user groups in batches in user management.
      * @param req CreateGroupsSTDRequest
      * @return CreateGroupsSTDResponse
      * @throws TencentCloudSDKException
@@ -117,7 +128,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to create an EMR cluster instance.
+     *This API is used to create an EMR cluster.
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
      * @throws TencentCloudSDKException
@@ -128,7 +139,8 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to create a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the InstanceId of the created instance and the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+     *This API is used to create a Serverless instance, for example, HBase, StarRocks, and TCBase instances.- This API is successfully called, and a Serverless instance is created. If the instance creation request succeeds, InstanceId of the instance and RequestID of the request are returned.
+- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling the DescribeInstancesList API, and the StatusDesc field for the current instance can be returned.
      * @param req CreateSLInstanceRequest
      * @return CreateSLInstanceResponse
      * @throws TencentCloudSDKException
@@ -139,7 +151,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to delete automatic scaling rules. Nodes scaled based on these rules are destroyed in the background.
+     *This API is used to delete an automatic scaling rule. Nodes scaled based on this rule are terminated in the backend.
      * @param req DeleteAutoScaleStrategyRequest
      * @return DeleteAutoScaleStrategyResponse
      * @throws TencentCloudSDKException
@@ -161,7 +173,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to delete the node specifications of the current cluster.
+     *This API is used to delete node specifications of the current cluster.
      * @param req DeleteNodeResourceConfigRequest
      * @return DeleteNodeResourceConfigResponse
      * @throws TencentCloudSDKException
@@ -172,7 +184,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to bring the configuration into effect in YARN resource scheduling after deployment.
+     *This API is used to bring the deployment into effect in YARN resource scheduling.
      * @param req DeployYarnConfRequest
      * @return DeployYarnConfResponse
      * @throws TencentCloudSDKException
@@ -183,7 +195,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to access the global configuration of automatic scaling.
+     *This API is used to obtain the global configuration of auto scaling.
      * @param req DescribeAutoScaleGroupGlobalConfRequest
      * @return DescribeAutoScaleGroupGlobalConfResponse
      * @throws TencentCloudSDKException
@@ -194,7 +206,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to inquiry detailed records of cluster autoscaling.
+     *This API is used to obtain the detailed automatic scaling records of a cluster.
      * @param req DescribeAutoScaleRecordsRequest
      * @return DescribeAutoScaleRecordsResponse
      * @throws TencentCloudSDKException
@@ -205,7 +217,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to access automatic scaling rules.
+     *This API is used to obtain an automatic scaling rule.
      * @param req DescribeAutoScaleStrategiesRequest
      * @return DescribeAutoScaleStrategiesResponse
      * @throws TencentCloudSDKException
@@ -216,7 +228,18 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the EMR task running details status.
+     *This API is used to obtain a bootstrap script.
+     * @param req DescribeBootScriptRequest
+     * @return DescribeBootScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBootScriptResponse DescribeBootScript(DescribeBootScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBootScript", DescribeBootScriptResponse.class);
+    }
+
+    /**
+     *This API is used to query the running status details of an EMR cluster task.
      * @param req DescribeClusterFlowStatusDetailRequest
      * @return DescribeClusterFlowStatusDetailResponse
      * @throws TencentCloudSDKException
@@ -227,7 +250,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the information of nodes in a cluster.
+     *This API is used to query information of a cluster node.
      * @param req DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse
      * @throws TencentCloudSDKException
@@ -249,7 +272,40 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the YARN application statistics API.
+     *This API is used to describe the details of a DynamicInstance in an EMR on TKE cluster.
+     * @param req DescribeDynamicInstanceDetailRequest
+     * @return DescribeDynamicInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDynamicInstanceDetailResponse DescribeDynamicInstanceDetail(DescribeDynamicInstanceDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDynamicInstanceDetail", DescribeDynamicInstanceDetailResponse.class);
+    }
+
+    /**
+     *This API is used to describe the DynamicInstance list of an EMR on TKE cluster.
+     * @param req DescribeDynamicInstanceListRequest
+     * @return DescribeDynamicInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDynamicInstanceListResponse DescribeDynamicInstanceList(DescribeDynamicInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDynamicInstanceList", DescribeDynamicInstanceListResponse.class);
+    }
+
+    /**
+     *This API is used to query EMR event monitoring data.
+     * @param req DescribeEMREventListRequest
+     * @return DescribeEMREventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEMREventListResponse DescribeEMREventList(DescribeEMREventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEMREventList", DescribeEMREventListResponse.class);
+    }
+
+    /**
+     *This API is used to query the YARN task statistics information.
      * @param req DescribeEmrApplicationStaticsRequest
      * @return DescribeEmrApplicationStaticsResponse
      * @throws TencentCloudSDKException
@@ -260,7 +316,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the metric data on the monitoring overview page.
+     *This API is used to query metric data on the monitoring overview page.
      * @param req DescribeEmrOverviewMetricsRequest
      * @return DescribeEmrOverviewMetricsResponse
      * @throws TencentCloudSDKException
@@ -271,7 +327,18 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the global configurations of YARN Resource Scheduling.
+     *This API is used to query the export configuration.
+     * @param req DescribeExportConfsRequest
+     * @return DescribeExportConfsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportConfsResponse DescribeExportConfs(DescribeExportConfsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExportConfs", DescribeExportConfsResponse.class);
+    }
+
+    /**
+     *This API is used to query the global configuration of YARN resource scheduling.
      * @param req DescribeGlobalConfigRequest
      * @return DescribeGlobalConfigResponse
      * @throws TencentCloudSDKException
@@ -293,7 +360,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to access the overview of HBase table-level monitoring data.
+     *This API is used to obtain an overview of HBase table-level monitoring data.
      * @param req DescribeHBaseTableOverviewRequest
      * @return DescribeHBaseTableOverviewResponse
      * @throws TencentCloudSDKException
@@ -304,7 +371,29 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query information of file(s) stored in HDFS.
+     *This API is used to obtain the read/write rate at the HBase table level.
+     * @param req DescribeHBaseTableRequestMetricRequest
+     * @return DescribeHBaseTableRequestMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHBaseTableRequestMetricResponse DescribeHBaseTableRequestMetric(DescribeHBaseTableRequestMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHBaseTableRequestMetric", DescribeHBaseTableRequestMetricResponse.class);
+    }
+
+    /**
+     *This API is used to query the StoreSize monitoring metric data at the HBase table level.
+     * @param req DescribeHBaseTableStoreSizeMetricRequest
+     * @return DescribeHBaseTableStoreSizeMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHBaseTableStoreSizeMetricResponse DescribeHBaseTableStoreSizeMetric(DescribeHBaseTableStoreSizeMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHBaseTableStoreSizeMetric", DescribeHBaseTableStoreSizeMetricResponse.class);
+    }
+
+    /**
+     *This API is used to query information of files stored in HDFS.
      * @param req DescribeHDFSStorageInfoRequest
      * @return DescribeHDFSStorageInfoResponse
      * @throws TencentCloudSDKException
@@ -315,7 +404,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to inquiry Hive query data.
+     *This API is used to obtain Hive query information.
      * @param req DescribeHiveQueriesRequest
      * @return DescribeHiveQueriesResponse
      * @throws TencentCloudSDKException
@@ -348,7 +437,18 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the information of instances in a cluster.
+     *This API is used to obtain the instance operation logs.
+     * @param req DescribeInstanceOplogRequest
+     * @return DescribeInstanceOplogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceOplogResponse DescribeInstanceOplog(DescribeInstanceOplogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceOplog", DescribeInstanceOplogResponse.class);
+    }
+
+    /**
+     *This API is used to query cluster information.
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
@@ -370,7 +470,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query Kyuubi query information.
+     *This API is used to obtain Kyuubi query information.
      * @param req DescribeKyuubiQueryInfoRequest
      * @return DescribeKyuubiQueryInfoResponse
      * @throws TencentCloudSDKException
@@ -381,7 +481,18 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query data disk information of nodes.
+     *This API is used to obtain cluster MetaDB data.
+     * @param req DescribeMetaDBInfoRequest
+     * @return DescribeMetaDBInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetaDBInfoResponse DescribeMetaDBInfo(DescribeMetaDBInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetaDBInfo", DescribeMetaDBInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query data disk information of a node.
      * @param req DescribeNodeDataDisksRequest
      * @return DescribeNodeDataDisksResponse
      * @throws TencentCloudSDKException
@@ -414,7 +525,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query YARN resource scheduling information. It has been deprecated. You can use the DescribeYarnQueue API to query queue information.
+     *This API is used to query YARN resource scheduling information. It has been deprecated. Please use `DescribeYarnQueue` to query queue information.
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
      * @throws TencentCloudSDKException
@@ -425,7 +536,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query change details in YARN resource scheduling.
+     *This API is used to query the change details of YARN resource scheduling.
      * @param req DescribeResourceScheduleDiffDetailRequest
      * @return DescribeResourceScheduleDiffDetailResponse
      * @throws TencentCloudSDKException
@@ -436,7 +547,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the basic information of Serverless HBase instances.
+     *This API is used to query basic information of a Serverless HBase instance.
      * @param req DescribeSLInstanceRequest
      * @return DescribeSLInstanceResponse
      * @throws TencentCloudSDKException
@@ -447,7 +558,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the detailed information of the Serverless HBase instance list.
+     *This API is used to query detailed information of the Serverless HBase instance list.
      * @param req DescribeSLInstanceListRequest
      * @return DescribeSLInstanceListResponse
      * @throws TencentCloudSDKException
@@ -480,7 +591,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to obtain a Spark application list.
+     *This API is used to obtain the Spark application list.
      * @param req DescribeSparkApplicationsRequest
      * @return DescribeSparkApplicationsResponse
      * @throws TencentCloudSDKException
@@ -491,7 +602,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the Spark query information list.
+     *This API is used to obtain the Spark query information list.
      * @param req DescribeSparkQueriesRequest
      * @return DescribeSparkQueriesResponse
      * @throws TencentCloudSDKException
@@ -502,7 +613,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query StarRocks information.
+     *This API is used to obtain StarRocks query information.
      * @param req DescribeStarRocksQueryInfoRequest
      * @return DescribeStarRocksQueryInfoResponse
      * @throws TencentCloudSDKException
@@ -513,7 +624,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query Trino(PrestoSQL) query information.
+     *This API is used to obtain Trino (PrestoSQL) query information.
      * @param req DescribeTrinoQueryInfoRequest
      * @return DescribeTrinoQueryInfoResponse
      * @throws TencentCloudSDKException
@@ -524,8 +635,8 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is available for clusters with OpenLDAP components configured.
-This API is used to export users in batches. For a Kerberos cluster, set `NeedKeytabInfo` to `true` to obtain the download link of the Keytab file. If `SupportDownLoadKeyTab` is `true`, but `DownLoadKeyTabUrl` is null, the Keytab file is not ready yet (being generated) in the backend.
+     *This API is used for clusters with the OpenLDAP component installed.
+This API is used to export users in batches. For a Kerberos cluster, if the keytab file download link is required, set NeedKeytabInfo to true. Note: If SupportDownLoadKeyTab is set to true but DownLoadKeyTabUrl is an empty string, the keytab file is not ready (being generated).
      * @param req DescribeUsersForUserManagerRequest
      * @return DescribeUsersForUserManagerResponse
      * @throws TencentCloudSDKException
@@ -547,7 +658,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to view the YARN resource scheduling history. It has been deprecated. You can use the Process Center to view the history records.
+     *This API is used to view the YARN resource scheduling history. It has been deprecated. Please use Task Center to view the history records.
      * @param req DescribeYarnScheduleHistoryRequest
      * @return DescribeYarnScheduleHistoryResponse
      * @throws TencentCloudSDKException
@@ -558,7 +669,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to query price of instance creation.
+     *This API is used to inquire the price for instance creation.
      * @param req InquiryPriceCreateInstanceRequest
      * @return InquiryPriceCreateInstanceResponse
      * @throws TencentCloudSDKException
@@ -569,7 +680,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to query the price for renewal.
+     *This API is used to inquire the price for renewal.
      * @param req InquiryPriceRenewInstanceRequest
      * @return InquiryPriceRenewInstanceResponse
      * @throws TencentCloudSDKException
@@ -580,7 +691,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to query price of scale-out.
+     *This API is used to inquire the price for a scale-out.
      * @param req InquiryPriceScaleOutInstanceRequest
      * @return InquiryPriceScaleOutInstanceResponse
      * @throws TencentCloudSDKException
@@ -591,7 +702,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to query price of scaling.
+     *This API is used to inquire the price for the configuration change.
      * @param req InquiryPriceUpdateInstanceRequest
      * @return InquiryPriceUpdateInstanceResponse
      * @throws TencentCloudSDKException
@@ -602,8 +713,19 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
-     *This API is used to introduce the prerequisite prepaid clusters.
-This API is used to enable or disable automatic renewal at the resource level.
+     *This API is used to install a component. For components dependent on the MetaDB, a CDB order may be required. The components that can be installed on the current cluster and the components that might require a CDB order can be viewed via InstallSoftWareInfo.
+     * @param req InstallSoftwareRequest
+     * @return InstallSoftwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallSoftwareResponse InstallSoftware(InstallSoftwareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstallSoftware", InstallSoftwareResponse.class);
+    }
+
+    /**
+     *This API is used to introduce the prerequisites for a prepaid cluster.
+This API is used to enable or disable auto-renewal at the resource level.
      * @param req ModifyAutoRenewFlagRequest
      * @return ModifyAutoRenewFlagResponse
      * @throws TencentCloudSDKException
@@ -614,7 +736,7 @@ This API is used to enable or disable automatic renewal at the resource level.
     }
 
     /**
-     *This API is used to modify automatic scaling rules.
+     *This API is used to modify an automatic scaling rule.
      * @param req ModifyAutoScaleStrategyRequest
      * @return ModifyAutoScaleStrategyResponse
      * @throws TencentCloudSDKException
@@ -625,7 +747,29 @@ This API is used to enable or disable automatic renewal at the resource level.
     }
 
     /**
-     *This API is used to modify the global configuration of YARN Resource Scheduling.
+     *This API is used to modify a bootstrap script.
+     * @param req ModifyBootScriptRequest
+     * @return ModifyBootScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBootScriptResponse ModifyBootScript(ModifyBootScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBootScript", ModifyBootScriptResponse.class);
+    }
+
+    /**
+     *This API is used to update a DynamicInstance in a containerized EMR on TKE cluster.
+     * @param req ModifyDynamicInstanceRequest
+     * @return ModifyDynamicInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDynamicInstanceResponse ModifyDynamicInstance(ModifyDynamicInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDynamicInstance", ModifyDynamicInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to modify the global configuration of YARN resource scheduling.
      * @param req ModifyGlobalConfigRequest
      * @return ModifyGlobalConfigResponse
      * @throws TencentCloudSDKException
@@ -636,7 +780,7 @@ This API is used to enable or disable automatic renewal at the resource level.
     }
 
     /**
-     *This API is used to set inspection task configurations.
+     *This API is used to set the inspection task configuration.
      * @param req ModifyInspectionSettingsRequest
      * @return ModifyInspectionSettingsResponse
      * @throws TencentCloudSDKException
@@ -647,7 +791,7 @@ This API is used to enable or disable automatic renewal at the resource level.
     }
 
     /**
-     *This API is used to modify a cluster name.
+     *This API is used to modify the cluster name.
      * @param req ModifyInstanceBasicRequest
      * @return ModifyInstanceBasicResponse
      * @throws TencentCloudSDKException
@@ -658,7 +802,7 @@ This API is used to enable or disable automatic renewal at the resource level.
     }
 
     /**
-     *This API is used to resize an instance.
+     *This API is used to change the instance configuration.
      * @param req ModifyResourceRequest
      * @return ModifyResourceResponse
      * @throws TencentCloudSDKException
@@ -682,7 +826,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
     }
 
     /**
-     *This API is used to modify a YARN resource scheduler. After the modification, you can click Deploy to bring it into effect.
+     *This API is used to modify a YARN resource scheduler. After the modification, click Deploy to make the modification take effect.
      * @param req ModifyResourceSchedulerRequest
      * @return ModifyResourceSchedulerResponse
      * @throws TencentCloudSDKException
@@ -693,7 +837,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
     }
 
     /**
-     *This API is used to forcibly modify tags.
+     *This API is used to forcibly modify a tag.
      * @param req ModifyResourcesTagsRequest
      * @return ModifyResourcesTagsResponse
      * @throws TencentCloudSDKException
@@ -704,7 +848,9 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
     }
 
     /**
-     *This API is used to resize a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+     *This API is used to change the configuration of a Serverless HBase instance.
+- This API is successfully called, and a Serverless HBase instance is created. If the instance creation request succeeds, RequestID of the request is returned.
+- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling the DescribeInstancesList API, and the StatusDesc field for the current instance can be returned.
      * @param req ModifySLInstanceRequest
      * @return ModifySLInstanceResponse
      * @throws TencentCloudSDKException
@@ -715,7 +861,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
     }
 
     /**
-     *This API is used to modify the Serverless HBase instance name.
+     *This API is used to modify the Serverless HBase instance name.
      * @param req ModifySLInstanceBasicRequest
      * @return ModifySLInstanceBasicResponse
      * @throws TencentCloudSDKException
@@ -726,7 +872,18 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
     }
 
     /**
-     *This API is used to modify user groups under User Management.
+     *Configuration import and delivery
+     * @param req ModifyServiceParamsByExportConfsRequest
+     * @return ModifyServiceParamsByExportConfsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceParamsByExportConfsResponse ModifyServiceParamsByExportConfs(ModifyServiceParamsByExportConfsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyServiceParamsByExportConfs", ModifyServiceParamsByExportConfsResponse.class);
+    }
+
+    /**
+     *This API is used to modify a user group in user management.
      * @param req ModifyUserGroupRequest
      * @return ModifyUserGroupResponse
      * @throws TencentCloudSDKException
@@ -737,7 +894,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
     }
 
     /**
-     *This API is used to change user password (user management).
+     *This API is used to modify a user password (user management).
      * @param req ModifyUserManagerPwdRequest
      * @return ModifyUserManagerPwdResponse
      * @throws TencentCloudSDKException
@@ -748,7 +905,7 @@ This API is used to modify the resource configuration of YARN Resource Schedulin
     }
 
     /**
-     *This API is used to change the user information of user groups.
+     *This API is used to change user information in a user group.
      * @param req ModifyUsersOfGroupSTDRequest
      * @return ModifyUsersOfGroupSTDResponse
      * @throws TencentCloudSDKException
@@ -794,7 +951,7 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to scale out the cloud data disk.
+     *This API is used to scale out cloud data disks.
      * @param req ResizeDataDisksRequest
      * @return ResizeDataDisksResponse
      * @throws TencentCloudSDKException
@@ -805,7 +962,7 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to scale out a cluster.
+     *This API is used to scale out cluster nodes.
      * @param req ScaleOutClusterRequest
      * @return ScaleOutClusterResponse
      * @throws TencentCloudSDKException
@@ -816,7 +973,7 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to scale out instances.
+     *This API is used to scale out nodes.
      * @param req ScaleOutInstanceRequest
      * @return ScaleOutInstanceResponse
      * @throws TencentCloudSDKException
@@ -827,7 +984,7 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to set specifications for a node in the current cluster to default or not.
+     *This API is used to set specifications of a node in the current cluster as the default or cancel the default setting.
      * @param req SetNodeResourceConfigDefaultRequest
      * @return SetNodeResourceConfigDefaultResponse
      * @throws TencentCloudSDKException
@@ -838,7 +995,7 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to start, stop, or restart services.
+     *This API is used to execute operations such as starting, stopping, and restarting a service.
      * @param req StartStopServiceOrMonitorRequest
      * @return StartStopServiceOrMonitorResponse
      * @throws TencentCloudSDKException
@@ -849,7 +1006,7 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to terminate cluster nodes.
+     *This API is used to terminate a cluster node.
      * @param req TerminateClusterNodesRequest
      * @return TerminateClusterNodesResponse
      * @throws TencentCloudSDKException
@@ -860,7 +1017,18 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
+     *This API is used to terminate a DynamicInstance in a containerized EMR on TKE cluster.
+     * @param req TerminateDynamicInstancesRequest
+     * @return TerminateDynamicInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateDynamicInstancesResponse TerminateDynamicInstances(TerminateDynamicInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateDynamicInstances", TerminateDynamicInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to terminate an EMR instance. It is supported only for the officially billed version of EMR.
      * @param req TerminateInstanceRequest
      * @return TerminateInstanceResponse
      * @throws TencentCloudSDKException
@@ -871,7 +1039,7 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to terminate a Serverless HBase instance.
+     *This API is used to terminate a Serverless HBase instance.
      * @param req TerminateSLInstanceRequest
      * @return TerminateSLInstanceResponse
      * @throws TencentCloudSDKException
@@ -882,7 +1050,7 @@ This API is used to bring configurations into effect after deployment. It has be
     }
 
     /**
-     *This API is used to terminate a task node.
+     *This API is used to scale in Task nodes.
      * @param req TerminateTasksRequest
      * @return TerminateTasksResponse
      * @throws TencentCloudSDKException

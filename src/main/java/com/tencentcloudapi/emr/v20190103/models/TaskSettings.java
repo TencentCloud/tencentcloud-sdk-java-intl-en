@@ -45,7 +45,7 @@ public class TaskSettings extends AbstractModel {
     private String Key;
 
     /**
-    * Whether it is editable, "true" or "false".
+    * Whether it is editable. Valid values: true and false.
     */
     @SerializedName("Editable")
     @Expose
@@ -100,16 +100,16 @@ public class TaskSettings extends AbstractModel {
     }
 
     /**
-     * Get Whether it is editable, "true" or "false". 
-     * @return Editable Whether it is editable, "true" or "false".
+     * Get Whether it is editable. Valid values: true and false. 
+     * @return Editable Whether it is editable. Valid values: true and false.
      */
     public String getEditable() {
         return this.Editable;
     }
 
     /**
-     * Set Whether it is editable, "true" or "false".
-     * @param Editable Whether it is editable, "true" or "false".
+     * Set Whether it is editable. Valid values: true and false.
+     * @param Editable Whether it is editable. Valid values: true and false.
      */
     public void setEditable(String Editable) {
         this.Editable = Editable;

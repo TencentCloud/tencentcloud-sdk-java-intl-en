@@ -39,7 +39,6 @@ public class DescribeGlobalConfigResponse extends AbstractModel {
 
     /**
     * Information of the fair scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CapacityGlobalConfig")
     @Expose
@@ -47,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Information of the capacity scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FairGlobalConfig")
     @Expose
@@ -100,10 +98,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of the fair scheduler.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Information of the fair scheduler. 
      * @return CapacityGlobalConfig Information of the fair scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CapacityGlobalConfig getCapacityGlobalConfig() {
         return this.CapacityGlobalConfig;
@@ -111,19 +107,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Information of the fair scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CapacityGlobalConfig Information of the fair scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCapacityGlobalConfig(CapacityGlobalConfig CapacityGlobalConfig) {
         this.CapacityGlobalConfig = CapacityGlobalConfig;
     }
 
     /**
-     * Get Information of the capacity scheduler.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Information of the capacity scheduler. 
      * @return FairGlobalConfig Information of the capacity scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FairGlobalConfig getFairGlobalConfig() {
         return this.FairGlobalConfig;
@@ -131,9 +123,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Information of the capacity scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FairGlobalConfig Information of the capacity scheduler.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFairGlobalConfig(FairGlobalConfig FairGlobalConfig) {
         this.FairGlobalConfig = FairGlobalConfig;

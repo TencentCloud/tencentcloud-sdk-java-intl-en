@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TriggerCondition extends AbstractModel {
 
     /**
-    * Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
+    * Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
     */
     @SerializedName("CompareMethod")
     @Expose
     private Long CompareMethod;
 
     /**
-    * Conditional threshold.
+    * Condition threshold.
     */
     @SerializedName("Threshold")
     @Expose
     private Float Threshold;
 
     /**
-     * Get Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to 
-     * @return CompareMethod Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
+     * Get Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to. 
+     * @return CompareMethod Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
      */
     public Long getCompareMethod() {
         return this.CompareMethod;
     }
 
     /**
-     * Set Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
-     * @param CompareMethod Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
+     * Set Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
+     * @param CompareMethod Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
      */
     public void setCompareMethod(Long CompareMethod) {
         this.CompareMethod = CompareMethod;
     }
 
     /**
-     * Get Conditional threshold. 
-     * @return Threshold Conditional threshold.
+     * Get Condition threshold. 
+     * @return Threshold Condition threshold.
      */
     public Float getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set Conditional threshold.
-     * @param Threshold Conditional threshold.
+     * Set Condition threshold.
+     * @param Threshold Condition threshold.
      */
     public void setThreshold(Float Threshold) {
         this.Threshold = Threshold;

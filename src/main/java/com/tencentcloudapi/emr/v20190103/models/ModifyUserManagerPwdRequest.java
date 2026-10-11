@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class ModifyUserManagerPwdRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Username
+    * <p>Username.</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Password
+    * <p>Password.</p>
     */
     @SerializedName("PassWord")
     @Expose
     private String PassWord;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+    * <p>Whether to synchronize the password.</p>
+    */
+    @SerializedName("SyncPwd")
+    @Expose
+    private Boolean SyncPwd;
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return InstanceId <p>Cluster ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set <p>Cluster ID.</p>
+     * @param InstanceId <p>Cluster ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Username 
-     * @return UserName Username
+     * Get <p>Username.</p> 
+     * @return UserName <p>Username.</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Username
-     * @param UserName Username
+     * Set <p>Username.</p>
+     * @param UserName <p>Username.</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Password 
-     * @return PassWord Password
+     * Get <p>Password.</p> 
+     * @return PassWord <p>Password.</p>
      */
     public String getPassWord() {
         return this.PassWord;
     }
 
     /**
-     * Set Password
-     * @param PassWord Password
+     * Set <p>Password.</p>
+     * @param PassWord <p>Password.</p>
      */
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
+    }
+
+    /**
+     * Get <p>Whether to synchronize the password.</p> 
+     * @return SyncPwd <p>Whether to synchronize the password.</p>
+     */
+    public Boolean getSyncPwd() {
+        return this.SyncPwd;
+    }
+
+    /**
+     * Set <p>Whether to synchronize the password.</p>
+     * @param SyncPwd <p>Whether to synchronize the password.</p>
+     */
+    public void setSyncPwd(Boolean SyncPwd) {
+        this.SyncPwd = SyncPwd;
     }
 
     public ModifyUserManagerPwdRequest() {
@@ -109,6 +132,9 @@ public class ModifyUserManagerPwdRequest extends AbstractModel {
         if (source.PassWord != null) {
             this.PassWord = new String(source.PassWord);
         }
+        if (source.SyncPwd != null) {
+            this.SyncPwd = new Boolean(source.SyncPwd);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifyUserManagerPwdRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
+        this.setParamSimple(map, prefix + "SyncPwd", this.SyncPwd);
 
     }
 }

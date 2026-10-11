@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DependService extends AbstractModel {
 
     /**
-    * The shared component name.
+    * Shared component name.
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * The cluster to which the shared component belongs.
+    * Shared component cluster.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get The shared component name. 
-     * @return ServiceName The shared component name.
+     * Get Shared component name. 
+     * @return ServiceName Shared component name.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set The shared component name.
-     * @param ServiceName The shared component name.
+     * Set Shared component name.
+     * @param ServiceName Shared component name.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get The cluster to which the shared component belongs. 
-     * @return InstanceId The cluster to which the shared component belongs.
+     * Get Shared component cluster. 
+     * @return InstanceId Shared component cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The cluster to which the shared component belongs.
-     * @param InstanceId The cluster to which the shared component belongs.
+     * Set Shared component cluster.
+     * @param InstanceId Shared component cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

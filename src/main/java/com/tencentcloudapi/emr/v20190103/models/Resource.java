@@ -24,362 +24,394 @@ import java.util.HashMap;
 public class Resource extends AbstractModel {
 
     /**
-    * Node specifications description, such as CVM.SA2.
+    * <p>Node specification description, such as CVM.SA2.</p>
     */
     @SerializedName("Spec")
     @Expose
     private String Spec;
 
     /**
-    * Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
+    * <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
     */
     @SerializedName("StorageType")
     @Expose
     private Long StorageType;
 
     /**
-    * Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
+    * <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Memory capacity, in MB.
+    * <p>Memory capacity (MB).</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Number of CPU cores.
+    * <p>Number of CPU cores.</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Data disk capacity.
+    * <p>Data disk capacity.</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * System disk capacity.
+    * <p>System disk capacity.</p>
     */
     @SerializedName("RootSize")
     @Expose
     private Long RootSize;
 
     /**
-    * List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
     */
     @SerializedName("MultiDisks")
     @Expose
     private MultiDisk [] MultiDisks;
 
     /**
-    * List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>List of tags to be bound.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Specifications type, such as S2.MEDIUM8.
+    * <p>Specifications type, such as S2.MEDIUM8.</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Number of local disks. This field is deprecated.
+    * <p>Number of local disks. This field has been deprecated.</p>
     */
     @SerializedName("LocalDiskNum")
     @Expose
     private Long LocalDiskNum;
 
     /**
-    * Number of local disks, such as 2.
+    * <p>Number of local disks, such as 2.</p>
     */
     @SerializedName("DiskNum")
     @Expose
     private Long DiskNum;
 
     /**
-    * GPU information.
+    * <p>GPU information.</p>
     */
     @SerializedName("GpuDesc")
     @Expose
     private String GpuDesc;
 
     /**
-     * Get Node specifications description, such as CVM.SA2. 
-     * @return Spec Node specifications description, such as CVM.SA2.
+    * <p>Number of partitions in a placement group.</p>
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+    * <p>High-performance cluster ID.</p>
+    */
+    @SerializedName("HCCHpcClusterId")
+    @Expose
+    private String HCCHpcClusterId;
+
+    /**
+    * <p>Custom hostname.</p>
+    */
+    @SerializedName("CustomNodeName")
+    @Expose
+    private String CustomNodeName;
+
+    /**
+    * <p>GPU image driver configuration.</p>
+    */
+    @SerializedName("GpuImageDriver")
+    @Expose
+    private GpuImageDriverSpec GpuImageDriver;
+
+    /**
+     * Get <p>Node specification description, such as CVM.SA2.</p> 
+     * @return Spec <p>Node specification description, such as CVM.SA2.</p>
      */
     public String getSpec() {
         return this.Spec;
     }
 
     /**
-     * Set Node specifications description, such as CVM.SA2.
-     * @param Spec Node specifications description, such as CVM.SA2.
+     * Set <p>Node specification description, such as CVM.SA2.</p>
+     * @param Spec <p>Node specification description, such as CVM.SA2.</p>
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type. 
-     * @return StorageType Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
+     * Get <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p> 
+     * @return StorageType <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
      */
     public Long getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
-     * @param StorageType Storage type.
-Valid values:
-<li>4: Cloud SSD.</li>
-<li>5: Premium Cloud Disk.</li>
-<li>6: Enhanced SSD.</li>
-<li>11: Throughput HDD.</li>
-<li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
+     * Set <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
+     * @param StorageType <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li> 
-     * @return DiskType Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
+     * Get <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p> 
+     * @return DiskType <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
-     * @param DiskType Disk type.
-Valid values.
-<li>CLOUD_SSD: Cloud SSD.</li>
-<li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-<li>CLOUD_BASIC: Cloud Disk.</li>
+     * Set <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
+     * @param DiskType <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Memory capacity, in MB. 
-     * @return MemSize Memory capacity, in MB.
+     * Get <p>Memory capacity (MB).</p> 
+     * @return MemSize <p>Memory capacity (MB).</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Memory capacity, in MB.
-     * @param MemSize Memory capacity, in MB.
+     * Set <p>Memory capacity (MB).</p>
+     * @param MemSize <p>Memory capacity (MB).</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Number of CPU cores. 
-     * @return Cpu Number of CPU cores.
+     * Get <p>Number of CPU cores.</p> 
+     * @return Cpu <p>Number of CPU cores.</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores.
-     * @param Cpu Number of CPU cores.
+     * Set <p>Number of CPU cores.</p>
+     * @param Cpu <p>Number of CPU cores.</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Data disk capacity. 
-     * @return DiskSize Data disk capacity.
+     * Get <p>Data disk capacity.</p> 
+     * @return DiskSize <p>Data disk capacity.</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Data disk capacity.
-     * @param DiskSize Data disk capacity.
+     * Set <p>Data disk capacity.</p>
+     * @param DiskSize <p>Data disk capacity.</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get System disk capacity. 
-     * @return RootSize System disk capacity.
+     * Get <p>System disk capacity.</p> 
+     * @return RootSize <p>System disk capacity.</p>
      */
     public Long getRootSize() {
         return this.RootSize;
     }
 
     /**
-     * Set System disk capacity.
-     * @param RootSize System disk capacity.
+     * Set <p>System disk capacity.</p>
+     * @param RootSize <p>System disk capacity.</p>
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
     }
 
     /**
-     * Get List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MultiDisks List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p> 
+     * @return MultiDisks <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
      */
     public MultiDisk [] getMultiDisks() {
         return this.MultiDisks;
     }
 
     /**
-     * Set List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MultiDisks List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
+     * @param MultiDisks <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
      */
     public void setMultiDisks(MultiDisk [] MultiDisks) {
         this.MultiDisks = MultiDisks;
     }
 
     /**
-     * Get List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Tags List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>List of tags to be bound.</p> 
+     * @return Tags <p>List of tags to be bound.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Tags List of tags to be bound
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>List of tags to be bound.</p>
+     * @param Tags <p>List of tags to be bound.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Specifications type, such as S2.MEDIUM8. 
-     * @return InstanceType Specifications type, such as S2.MEDIUM8.
+     * Get <p>Specifications type, such as S2.MEDIUM8.</p> 
+     * @return InstanceType <p>Specifications type, such as S2.MEDIUM8.</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Specifications type, such as S2.MEDIUM8.
-     * @param InstanceType Specifications type, such as S2.MEDIUM8.
+     * Set <p>Specifications type, such as S2.MEDIUM8.</p>
+     * @param InstanceType <p>Specifications type, such as S2.MEDIUM8.</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Number of local disks. This field is deprecated. 
-     * @return LocalDiskNum Number of local disks. This field is deprecated.
+     * Get <p>Number of local disks. This field has been deprecated.</p> 
+     * @return LocalDiskNum <p>Number of local disks. This field has been deprecated.</p>
      */
     public Long getLocalDiskNum() {
         return this.LocalDiskNum;
     }
 
     /**
-     * Set Number of local disks. This field is deprecated.
-     * @param LocalDiskNum Number of local disks. This field is deprecated.
+     * Set <p>Number of local disks. This field has been deprecated.</p>
+     * @param LocalDiskNum <p>Number of local disks. This field has been deprecated.</p>
      */
     public void setLocalDiskNum(Long LocalDiskNum) {
         this.LocalDiskNum = LocalDiskNum;
     }
 
     /**
-     * Get Number of local disks, such as 2. 
-     * @return DiskNum Number of local disks, such as 2.
+     * Get <p>Number of local disks, such as 2.</p> 
+     * @return DiskNum <p>Number of local disks, such as 2.</p>
      */
     public Long getDiskNum() {
         return this.DiskNum;
     }
 
     /**
-     * Set Number of local disks, such as 2.
-     * @param DiskNum Number of local disks, such as 2.
+     * Set <p>Number of local disks, such as 2.</p>
+     * @param DiskNum <p>Number of local disks, such as 2.</p>
      */
     public void setDiskNum(Long DiskNum) {
         this.DiskNum = DiskNum;
     }
 
     /**
-     * Get GPU information. 
-     * @return GpuDesc GPU information.
+     * Get <p>GPU information.</p> 
+     * @return GpuDesc <p>GPU information.</p>
      */
     public String getGpuDesc() {
         return this.GpuDesc;
     }
 
     /**
-     * Set GPU information.
-     * @param GpuDesc GPU information.
+     * Set <p>GPU information.</p>
+     * @param GpuDesc <p>GPU information.</p>
      */
     public void setGpuDesc(String GpuDesc) {
         this.GpuDesc = GpuDesc;
+    }
+
+    /**
+     * Get <p>Number of partitions in a placement group.</p> 
+     * @return PartitionNumber <p>Number of partitions in a placement group.</p>
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set <p>Number of partitions in a placement group.</p>
+     * @param PartitionNumber <p>Number of partitions in a placement group.</p>
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
+    }
+
+    /**
+     * Get <p>High-performance cluster ID.</p> 
+     * @return HCCHpcClusterId <p>High-performance cluster ID.</p>
+     */
+    public String getHCCHpcClusterId() {
+        return this.HCCHpcClusterId;
+    }
+
+    /**
+     * Set <p>High-performance cluster ID.</p>
+     * @param HCCHpcClusterId <p>High-performance cluster ID.</p>
+     */
+    public void setHCCHpcClusterId(String HCCHpcClusterId) {
+        this.HCCHpcClusterId = HCCHpcClusterId;
+    }
+
+    /**
+     * Get <p>Custom hostname.</p> 
+     * @return CustomNodeName <p>Custom hostname.</p>
+     */
+    public String getCustomNodeName() {
+        return this.CustomNodeName;
+    }
+
+    /**
+     * Set <p>Custom hostname.</p>
+     * @param CustomNodeName <p>Custom hostname.</p>
+     */
+    public void setCustomNodeName(String CustomNodeName) {
+        this.CustomNodeName = CustomNodeName;
+    }
+
+    /**
+     * Get <p>GPU image driver configuration.</p> 
+     * @return GpuImageDriver <p>GPU image driver configuration.</p>
+     */
+    public GpuImageDriverSpec getGpuImageDriver() {
+        return this.GpuImageDriver;
+    }
+
+    /**
+     * Set <p>GPU image driver configuration.</p>
+     * @param GpuImageDriver <p>GPU image driver configuration.</p>
+     */
+    public void setGpuImageDriver(GpuImageDriverSpec GpuImageDriver) {
+        this.GpuImageDriver = GpuImageDriver;
     }
 
     public Resource() {
@@ -435,6 +467,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.GpuDesc != null) {
             this.GpuDesc = new String(source.GpuDesc);
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
+        if (source.HCCHpcClusterId != null) {
+            this.HCCHpcClusterId = new String(source.HCCHpcClusterId);
+        }
+        if (source.CustomNodeName != null) {
+            this.CustomNodeName = new String(source.CustomNodeName);
+        }
+        if (source.GpuImageDriver != null) {
+            this.GpuImageDriver = new GpuImageDriverSpec(source.GpuImageDriver);
+        }
     }
 
 
@@ -455,6 +499,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
         this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
         this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+        this.setParamSimple(map, prefix + "HCCHpcClusterId", this.HCCHpcClusterId);
+        this.setParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
+        this.setParamObj(map, prefix + "GpuImageDriver.", this.GpuImageDriver);
 
     }
 }

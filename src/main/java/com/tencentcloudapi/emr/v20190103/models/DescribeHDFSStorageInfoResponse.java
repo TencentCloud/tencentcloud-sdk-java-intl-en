@@ -31,8 +31,7 @@ public class DescribeHDFSStorageInfoResponse extends AbstractModel {
     private Long SampleTime;
 
     /**
-    * Hdfs storage details.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * HDFS storage details.
     */
     @SerializedName("StorageSummaryDistribution")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Hdfs storage details.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageSummaryDistribution Hdfs storage details.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get HDFS storage details. 
+     * @return StorageSummaryDistribution HDFS storage details.
      */
     public StorageSummaryDistribution [] getStorageSummaryDistribution() {
         return this.StorageSummaryDistribution;
     }
 
     /**
-     * Set Hdfs storage details.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageSummaryDistribution Hdfs storage details.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set HDFS storage details.
+     * @param StorageSummaryDistribution HDFS storage details.
      */
     public void setStorageSummaryDistribution(StorageSummaryDistribution [] StorageSummaryDistribution) {
         this.StorageSummaryDistribution = StorageSummaryDistribution;

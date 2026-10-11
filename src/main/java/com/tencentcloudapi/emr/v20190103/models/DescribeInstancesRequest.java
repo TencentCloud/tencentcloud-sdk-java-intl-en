@@ -25,37 +25,38 @@ public class DescribeInstancesRequest extends AbstractModel {
 
     /**
     * Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
     */
     @SerializedName("DisplayStrategy")
     @Expose
     private String DisplayStrategy;
 
     /**
-    * Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
+    * Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Page number. Default value: 0, indicating the first page.
+    * 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results per page. Default value: 10. Maximum value: 100
+    * Number of items returned per page. Default value: 100. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
+    * It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
     */
     @SerializedName("ProjectId")
     @Expose
@@ -63,18 +64,17 @@ public class DescribeInstancesRequest extends AbstractModel {
 
     /**
     * Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
+    * Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
     */
     @SerializedName("Asc")
     @Expose
@@ -82,13 +82,11 @@ public class DescribeInstancesRequest extends AbstractModel {
 
     /**
      * Get Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li> 
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li> 
      * @return DisplayStrategy Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
      */
     public String getDisplayStrategy() {
         return this.DisplayStrategy;
@@ -96,77 +94,83 @@ public class DescribeInstancesRequest extends AbstractModel {
 
     /**
      * Set Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
      * @param DisplayStrategy Cluster filtering policy. Valid values:
-<li>clusterList: queries the list of clusters except terminated ones.</li>
-<li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-<li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+<li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+<li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
      */
     public void setDisplayStrategy(String DisplayStrategy) {
         this.DisplayStrategy = DisplayStrategy;
     }
 
     /**
-     * Get Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned. 
-     * @return InstanceIds Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
+     * Get Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned. 
+     * @return InstanceIds Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
-     * @param InstanceIds Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
+     * Set Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
+     * @param InstanceIds Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Page number. Default value: 0, indicating the first page. 
-     * @return Offset Page number. Default value: 0, indicating the first page.
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number. Default value: 0, indicating the first page.
-     * @param Offset Page number. Default value: 0, indicating the first page.
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results per page. Default value: 10. Maximum value: 100 
-     * @return Limit Number of returned results per page. Default value: 10. Maximum value: 100
+     * Get Number of items returned per page. Default value: 100. Maximum value: 100. 
+     * @return Limit Number of items returned per page. Default value: 100. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results per page. Default value: 10. Maximum value: 100
-     * @param Limit Number of returned results per page. Default value: 10. Maximum value: 100
+     * Set Number of items returned per page. Default value: 100. Maximum value: 100.
+     * @param Limit Number of items returned per page. Default value: 100. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned. 
-     * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
+     * Get It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1). 
+     * @return ProjectId It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
-     * @param ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
+     * Set It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
+     * @param ProjectId It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -174,13 +178,13 @@ public class DescribeInstancesRequest extends AbstractModel {
 
     /**
      * Get Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li> 
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li> 
      * @return OrderField Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
      */
     public String getOrderField() {
         return this.OrderField;
@@ -188,37 +192,33 @@ public class DescribeInstancesRequest extends AbstractModel {
 
     /**
      * Set Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
      * @param OrderField Sorting field. Valid values:
-<li>clusterId: sorts by cluster ID.</li>
-<li>addTime: sorts by instance creation time.</li>
-<li>status: sorts by instance status code.</li>
+<li>clusterId: sort by instance ID.</li>
+<li>addTime: sort by instance creation time.</li>
+<li>status: sort by instance status code.</li>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0. 
-     * @return Asc Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
+     * Get Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0. 
+     * @return Asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
-     * @param Asc Sorts according to `OrderField` in ascending or descending order. Valid values:
-<li>0: descending order.</li>
-<li>1: ascending order.</li>Default value: 0.
+     * Set Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
+     * @param Asc Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+<li>1: ascending order</li>The default value is 0.
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyResourcesTagsRequest extends AbstractModel {
 
     /**
-    * Tag type. Valid values: Cluster and Node
+    * Tag type. Valid values: Cluster and Node.
     */
     @SerializedName("ModifyType")
     @Expose
     private String ModifyType;
 
     /**
-    * Tag information
+    * Tag information.
     */
     @SerializedName("ModifyResourceTagsInfoList")
     @Expose
     private ModifyResourceTags [] ModifyResourceTagsInfoList;
 
     /**
-     * Get Tag type. Valid values: Cluster and Node 
-     * @return ModifyType Tag type. Valid values: Cluster and Node
+     * Get Tag type. Valid values: Cluster and Node. 
+     * @return ModifyType Tag type. Valid values: Cluster and Node.
      */
     public String getModifyType() {
         return this.ModifyType;
     }
 
     /**
-     * Set Tag type. Valid values: Cluster and Node
-     * @param ModifyType Tag type. Valid values: Cluster and Node
+     * Set Tag type. Valid values: Cluster and Node.
+     * @param ModifyType Tag type. Valid values: Cluster and Node.
      */
     public void setModifyType(String ModifyType) {
         this.ModifyType = ModifyType;
     }
 
     /**
-     * Get Tag information 
-     * @return ModifyResourceTagsInfoList Tag information
+     * Get Tag information. 
+     * @return ModifyResourceTagsInfoList Tag information.
      */
     public ModifyResourceTags [] getModifyResourceTagsInfoList() {
         return this.ModifyResourceTagsInfoList;
     }
 
     /**
-     * Set Tag information
-     * @param ModifyResourceTagsInfoList Tag information
+     * Set Tag information.
+     * @param ModifyResourceTagsInfoList Tag information.
      */
     public void setModifyResourceTagsInfoList(ModifyResourceTags [] ModifyResourceTagsInfoList) {
         this.ModifyResourceTagsInfoList = ModifyResourceTagsInfoList;

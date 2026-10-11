@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DynamicPodSpec extends AbstractModel {
 
     /**
-    * Minimum number of CPUs
+    * Minimum number of required CPU cores.
     */
     @SerializedName("RequestCpu")
     @Expose
     private Float RequestCpu;
 
     /**
-    * Maximum number of CPUs
+    * Maximum number of required CPU cores.
     */
     @SerializedName("LimitCpu")
     @Expose
     private Float LimitCpu;
 
     /**
-    * Minimum memory in MB
+    * Minimum required memory capacity (MB).
     */
     @SerializedName("RequestMemory")
     @Expose
     private Float RequestMemory;
 
     /**
-    * Maximum memory in MB
+    * Maximum required memory capacity (MB).
     */
     @SerializedName("LimitMemory")
     @Expose
     private Float LimitMemory;
 
     /**
-     * Get Minimum number of CPUs 
-     * @return RequestCpu Minimum number of CPUs
+     * Get Minimum number of required CPU cores. 
+     * @return RequestCpu Minimum number of required CPU cores.
      */
     public Float getRequestCpu() {
         return this.RequestCpu;
     }
 
     /**
-     * Set Minimum number of CPUs
-     * @param RequestCpu Minimum number of CPUs
+     * Set Minimum number of required CPU cores.
+     * @param RequestCpu Minimum number of required CPU cores.
      */
     public void setRequestCpu(Float RequestCpu) {
         this.RequestCpu = RequestCpu;
     }
 
     /**
-     * Get Maximum number of CPUs 
-     * @return LimitCpu Maximum number of CPUs
+     * Get Maximum number of required CPU cores. 
+     * @return LimitCpu Maximum number of required CPU cores.
      */
     public Float getLimitCpu() {
         return this.LimitCpu;
     }
 
     /**
-     * Set Maximum number of CPUs
-     * @param LimitCpu Maximum number of CPUs
+     * Set Maximum number of required CPU cores.
+     * @param LimitCpu Maximum number of required CPU cores.
      */
     public void setLimitCpu(Float LimitCpu) {
         this.LimitCpu = LimitCpu;
     }
 
     /**
-     * Get Minimum memory in MB 
-     * @return RequestMemory Minimum memory in MB
+     * Get Minimum required memory capacity (MB). 
+     * @return RequestMemory Minimum required memory capacity (MB).
      */
     public Float getRequestMemory() {
         return this.RequestMemory;
     }
 
     /**
-     * Set Minimum memory in MB
-     * @param RequestMemory Minimum memory in MB
+     * Set Minimum required memory capacity (MB).
+     * @param RequestMemory Minimum required memory capacity (MB).
      */
     public void setRequestMemory(Float RequestMemory) {
         this.RequestMemory = RequestMemory;
     }
 
     /**
-     * Get Maximum memory in MB 
-     * @return LimitMemory Maximum memory in MB
+     * Get Maximum required memory capacity (MB). 
+     * @return LimitMemory Maximum required memory capacity (MB).
      */
     public Float getLimitMemory() {
         return this.LimitMemory;
     }
 
     /**
-     * Set Maximum memory in MB
-     * @param LimitMemory Maximum memory in MB
+     * Set Maximum required memory capacity (MB).
+     * @param LimitMemory Maximum required memory capacity (MB).
      */
     public void setLimitMemory(Float LimitMemory) {
         this.LimitMemory = LimitMemory;

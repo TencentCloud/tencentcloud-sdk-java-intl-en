@@ -31,11 +31,11 @@ public class ResetYarnConfigRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Alias of the configuration to be reset. The options are as follows:
+    * Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
     */
     @SerializedName("Key")
     @Expose
@@ -58,32 +58,32 @@ public class ResetYarnConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Alias of the configuration to be reset. The options are as follows:
+     * Get Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration. 
-     * @return Key Alias of the configuration to be reset. The options are as follows:
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration. 
+     * @return Key Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Alias of the configuration to be reset. The options are as follows:
+     * Set Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
-     * @param Key Alias of the configuration to be reset. The options are as follows:
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
+     * @param Key Alias of the configuration to be reset. Valid values:
 
-- capacityLabel: Reset the tag management configuration.
-- fair: Reset the fair scheduling configuration.
-- capacity: Reset the capacity scheduling configuration.
+- capacityLabel: resets the tag management configuration.
+- fair: resets the fair scheduling configuration.
+- capacity: resets the capacity scheduling configuration.
      */
     public void setKey(String Key) {
         this.Key = Key;

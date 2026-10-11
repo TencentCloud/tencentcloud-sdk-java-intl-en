@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AddUsersForUserManagerRequest extends AbstractModel {
 
     /**
-    * Cluster string ID
+    * Cluster string ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * User information list
+    * User information list.
     */
     @SerializedName("UserManagerUserList")
     @Expose
     private UserInfoForUserManager [] UserManagerUserList;
 
     /**
-     * Get Cluster string ID 
-     * @return InstanceId Cluster string ID
+     * Get Cluster string ID. 
+     * @return InstanceId Cluster string ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster string ID
-     * @param InstanceId Cluster string ID
+     * Set Cluster string ID.
+     * @param InstanceId Cluster string ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get User information list 
-     * @return UserManagerUserList User information list
+     * Get User information list. 
+     * @return UserManagerUserList User information list.
      */
     public UserInfoForUserManager [] getUserManagerUserList() {
         return this.UserManagerUserList;
     }
 
     /**
-     * Set User information list
-     * @param UserManagerUserList User information list
+     * Set User information list.
+     * @param UserManagerUserList User information list.
      */
     public void setUserManagerUserList(UserInfoForUserManager [] UserManagerUserList) {
         this.UserManagerUserList = UserManagerUserList;

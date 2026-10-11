@@ -24,317 +24,325 @@ import java.util.HashMap;
 public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
 
     /**
-    * Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+    * <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+    * <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * ID of the AZ where an instance resides.
+    * <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+    * <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Number of core nodes to be added.
+    * <p>Number of Core nodes to be scaled out.</p>
     */
     @SerializedName("CoreCount")
     @Expose
     private Long CoreCount;
 
     /**
-    * Number of task nodes to be added.
+    * <p>Number of Task nodes to be scaled out.</p>
     */
     @SerializedName("TaskCount")
     @Expose
     private Long TaskCount;
 
     /**
-    * Currency.
+    * <p>Currency type. Valid values:</p><li>CNY: RMB</li>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * Number of router nodes to be added.
+    * <p>Number of Router nodes to be scaled out.</p>
     */
     @SerializedName("RouterCount")
     @Expose
     private Long RouterCount;
 
     /**
-    * Number of master nodes to be added.
+    * <p>Number of Master nodes to be scaled out.</p>
     */
     @SerializedName("MasterCount")
     @Expose
     private Long MasterCount;
 
     /**
-    * The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+    * <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
     */
     @SerializedName("ResourceBaseType")
     @Expose
     private String ResourceBaseType;
 
     /**
-    * Computing resource ID.
+    * <p>Computing resource ID.</p>
     */
     @SerializedName("ComputeResourceId")
     @Expose
     private String ComputeResourceId;
 
     /**
-    * Scale-out resource type.
+    * <p>Scale-out resource type.</p>
     */
     @SerializedName("HardwareResourceType")
     @Expose
     private String HardwareResourceType;
 
     /**
-     * Get Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
-     * @return TimeUnit Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+    * <p>Node group ID.</p>
+    */
+    @SerializedName("NodeGroupId")
+    @Expose
+    private String NodeGroupId;
+
+    /**
+     * Get <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li> 
+     * @return TimeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-     * @param TimeUnit Time unit of scale-out. Valid value:
-<li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+     * Set <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
+     * @param TimeUnit <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li> 
-     * @return TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+     * Get <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li> 
+     * @return TimeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-     * @param TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
-<li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+     * Set <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
+     * @param TimeSpan <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get ID of the AZ where an instance resides. 
-     * @return ZoneId ID of the AZ where an instance resides.
+     * Get <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p> 
+     * @return ZoneId <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the AZ where an instance resides.
-     * @param ZoneId ID of the AZ where an instance resides.
+     * Set <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
+     * @param ZoneId <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li> 
-     * @return PayMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+     * Get <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li> 
+     * @return PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
-     * @param PayMode Instance billing mode. Valid value:
-<li>0: Pay-as-you-go.</li>
+     * Set <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
+     * @param PayMode <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Number of core nodes to be added. 
-     * @return CoreCount Number of core nodes to be added.
+     * Get <p>Number of Core nodes to be scaled out.</p> 
+     * @return CoreCount <p>Number of Core nodes to be scaled out.</p>
      */
     public Long getCoreCount() {
         return this.CoreCount;
     }
 
     /**
-     * Set Number of core nodes to be added.
-     * @param CoreCount Number of core nodes to be added.
+     * Set <p>Number of Core nodes to be scaled out.</p>
+     * @param CoreCount <p>Number of Core nodes to be scaled out.</p>
      */
     public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
     /**
-     * Get Number of task nodes to be added. 
-     * @return TaskCount Number of task nodes to be added.
+     * Get <p>Number of Task nodes to be scaled out.</p> 
+     * @return TaskCount <p>Number of Task nodes to be scaled out.</p>
      */
     public Long getTaskCount() {
         return this.TaskCount;
     }
 
     /**
-     * Set Number of task nodes to be added.
-     * @param TaskCount Number of task nodes to be added.
+     * Set <p>Number of Task nodes to be scaled out.</p>
+     * @param TaskCount <p>Number of Task nodes to be scaled out.</p>
      */
     public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 
     /**
-     * Get Currency. 
-     * @return Currency Currency.
+     * Get <p>Currency type. Valid values:</p><li>CNY: RMB</li> 
+     * @return Currency <p>Currency type. Valid values:</p><li>CNY: RMB</li>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency.
-     * @param Currency Currency.
+     * Set <p>Currency type. Valid values:</p><li>CNY: RMB</li>
+     * @param Currency <p>Currency type. Valid values:</p><li>CNY: RMB</li>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get Number of router nodes to be added. 
-     * @return RouterCount Number of router nodes to be added.
+     * Get <p>Number of Router nodes to be scaled out.</p> 
+     * @return RouterCount <p>Number of Router nodes to be scaled out.</p>
      */
     public Long getRouterCount() {
         return this.RouterCount;
     }
 
     /**
-     * Set Number of router nodes to be added.
-     * @param RouterCount Number of router nodes to be added.
+     * Set <p>Number of Router nodes to be scaled out.</p>
+     * @param RouterCount <p>Number of Router nodes to be scaled out.</p>
      */
     public void setRouterCount(Long RouterCount) {
         this.RouterCount = RouterCount;
     }
 
     /**
-     * Get Number of master nodes to be added. 
-     * @return MasterCount Number of master nodes to be added.
+     * Get <p>Number of Master nodes to be scaled out.</p> 
+     * @return MasterCount <p>Number of Master nodes to be scaled out.</p>
      */
     public Long getMasterCount() {
         return this.MasterCount;
     }
 
     /**
-     * Set Number of master nodes to be added.
-     * @param MasterCount Number of master nodes to be added.
+     * Set <p>Number of Master nodes to be scaled out.</p>
+     * @param MasterCount <p>Number of Master nodes to be scaled out.</p>
      */
     public void setMasterCount(Long MasterCount) {
         this.MasterCount = MasterCount;
     }
 
     /**
-     * Get The type can be ComputeResource, EMR, or a default value. The default value is EMR. 
-     * @return ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * Get <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p> 
+     * @return ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
      */
     public String getResourceBaseType() {
         return this.ResourceBaseType;
     }
 
     /**
-     * Set The type can be ComputeResource, EMR, or a default value. The default value is EMR.
-     * @param ResourceBaseType The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+     * Set <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
+     * @param ResourceBaseType <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
      */
     public void setResourceBaseType(String ResourceBaseType) {
         this.ResourceBaseType = ResourceBaseType;
     }
 
     /**
-     * Get Computing resource ID. 
-     * @return ComputeResourceId Computing resource ID.
+     * Get <p>Computing resource ID.</p> 
+     * @return ComputeResourceId <p>Computing resource ID.</p>
      */
     public String getComputeResourceId() {
         return this.ComputeResourceId;
     }
 
     /**
-     * Set Computing resource ID.
-     * @param ComputeResourceId Computing resource ID.
+     * Set <p>Computing resource ID.</p>
+     * @param ComputeResourceId <p>Computing resource ID.</p>
      */
     public void setComputeResourceId(String ComputeResourceId) {
         this.ComputeResourceId = ComputeResourceId;
     }
 
     /**
-     * Get Scale-out resource type. 
-     * @return HardwareResourceType Scale-out resource type.
+     * Get <p>Scale-out resource type.</p> 
+     * @return HardwareResourceType <p>Scale-out resource type.</p>
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set Scale-out resource type.
-     * @param HardwareResourceType Scale-out resource type.
+     * Set <p>Scale-out resource type.</p>
+     * @param HardwareResourceType <p>Scale-out resource type.</p>
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
+    }
+
+    /**
+     * Get <p>Node group ID.</p> 
+     * @return NodeGroupId <p>Node group ID.</p>
+     */
+    public String getNodeGroupId() {
+        return this.NodeGroupId;
+    }
+
+    /**
+     * Set <p>Node group ID.</p>
+     * @param NodeGroupId <p>Node group ID.</p>
+     */
+    public void setNodeGroupId(String NodeGroupId) {
+        this.NodeGroupId = NodeGroupId;
     }
 
     public InquiryPriceScaleOutInstanceRequest() {
@@ -384,6 +392,9 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         if (source.HardwareResourceType != null) {
             this.HardwareResourceType = new String(source.HardwareResourceType);
         }
+        if (source.NodeGroupId != null) {
+            this.NodeGroupId = new String(source.NodeGroupId);
+        }
     }
 
 
@@ -404,6 +415,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+        this.setParamSimple(map, prefix + "NodeGroupId", this.NodeGroupId);
 
     }
 }

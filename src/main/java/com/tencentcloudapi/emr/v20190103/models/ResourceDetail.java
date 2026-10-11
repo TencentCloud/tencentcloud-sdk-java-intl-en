@@ -66,7 +66,7 @@ public class ResourceDetail extends AbstractModel {
     private Long MemSize;
 
     /**
-    * Number of CPUs.
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
@@ -183,16 +183,16 @@ public class ResourceDetail extends AbstractModel {
     }
 
     /**
-     * Get Number of CPUs. 
-     * @return Cpu Number of CPUs.
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPUs.
-     * @param Cpu Number of CPUs.
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

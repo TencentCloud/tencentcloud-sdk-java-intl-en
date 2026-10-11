@@ -31,8 +31,7 @@ public class DescribeKyuubiQueryInfoResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Kyuubi information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Kyuubi query information list.
     */
     @SerializedName("KyuubiQueryInfoList")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Kyuubi information list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KyuubiQueryInfoList Kyuubi information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Kyuubi query information list. 
+     * @return KyuubiQueryInfoList Kyuubi query information list.
      */
     public KyuubiQueryInfo [] getKyuubiQueryInfoList() {
         return this.KyuubiQueryInfoList;
     }
 
     /**
-     * Set Kyuubi information list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KyuubiQueryInfoList Kyuubi information list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Kyuubi query information list.
+     * @param KyuubiQueryInfoList Kyuubi query information list.
      */
     public void setKyuubiQueryInfoList(KyuubiQueryInfo [] KyuubiQueryInfoList) {
         this.KyuubiQueryInfoList = KyuubiQueryInfoList;

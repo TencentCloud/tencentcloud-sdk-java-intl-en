@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VirtualPrivateCloud extends AbstractModel {
 
     /**
-    * The VPC ID.
+    * VPC ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The subnet ID.
+    * Subnet ID
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get The VPC ID. 
-     * @return VpcId The VPC ID.
+     * Get VPC ID 
+     * @return VpcId VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The VPC ID.
-     * @param VpcId The VPC ID.
+     * Set VPC ID
+     * @param VpcId VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The subnet ID. 
-     * @return SubnetId The subnet ID.
+     * Get Subnet ID 
+     * @return SubnetId Subnet ID
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set The subnet ID.
-     * @param SubnetId The subnet ID.
+     * Set Subnet ID
+     * @param SubnetId Subnet ID
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class MachineExtraInfo extends AbstractModel {
 
     /**
-    * Public IP address
+    * 
     */
     @SerializedName("WanIP")
     @Expose
     private String WanIP;
 
     /**
-    * Private IP address
+    * 
     */
     @SerializedName("PrivateIP")
     @Expose
     private String PrivateIP;
 
     /**
-    * Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
+    * 
     */
     @SerializedName("NetworkType")
     @Expose
     private Long NetworkType;
 
     /**
-    * Network Name, returns vpc_id in the case of a VPC network
+    * 
     */
     @SerializedName("NetworkName")
     @Expose
     private String NetworkName;
 
     /**
-    * Instance ID
+    * 
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * host name
+    * 
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-     * Get Public IP address 
-     * @return WanIP Public IP address
+     * Get  
+     * @return WanIP 
      */
     public String getWanIP() {
         return this.WanIP;
     }
 
     /**
-     * Set Public IP address
-     * @param WanIP Public IP address
+     * Set 
+     * @param WanIP 
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get Private IP address 
-     * @return PrivateIP Private IP address
+     * Get  
+     * @return PrivateIP 
      */
     public String getPrivateIP() {
         return this.PrivateIP;
     }
 
     /**
-     * Set Private IP address
-     * @param PrivateIP Private IP address
+     * Set 
+     * @param PrivateIP 
      */
     public void setPrivateIP(String PrivateIP) {
         this.PrivateIP = PrivateIP;
     }
 
     /**
-     * Get Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network 
-     * @return NetworkType Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
+     * Get  
+     * @return NetworkType 
      */
     public Long getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-     * @param NetworkType Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
+     * Set 
+     * @param NetworkType 
      */
     public void setNetworkType(Long NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get Network Name, returns vpc_id in the case of a VPC network 
-     * @return NetworkName Network Name, returns vpc_id in the case of a VPC network
+     * Get  
+     * @return NetworkName 
      */
     public String getNetworkName() {
         return this.NetworkName;
     }
 
     /**
-     * Set Network Name, returns vpc_id in the case of a VPC network
-     * @param NetworkName Network Name, returns vpc_id in the case of a VPC network
+     * Set 
+     * @param NetworkName 
      */
     public void setNetworkName(String NetworkName) {
         this.NetworkName = NetworkName;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceID Instance ID
+     * Get  
+     * @return InstanceID 
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceID Instance ID
+     * Set 
+     * @param InstanceID 
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get host name 
-     * @return HostName host name
+     * Get  
+     * @return HostName 
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set host name
-     * @param HostName host name
+     * Set 
+     * @param HostName 
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;

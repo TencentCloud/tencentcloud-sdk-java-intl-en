@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNodeDataDisksRequest extends AbstractModel {
 
     /**
-    * ID of the EMR cluster instance.
+    * ID of the EMR cluster.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
     private String InnerSearch;
 
     /**
-    * Number of items returned per page. The default value is 100, and the maximum value is 100.
+    * Number of items returned per page. Default value: 100. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -66,16 +66,24 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get ID of the EMR cluster instance. 
-     * @return InstanceId ID of the EMR cluster instance.
+    * Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+    */
+    @SerializedName("Scene")
+    @Expose
+    private String Scene;
+
+    /**
+     * Get ID of the EMR cluster. 
+     * @return InstanceId ID of the EMR cluster.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the EMR cluster instance.
-     * @param InstanceId ID of the EMR cluster instance.
+     * Set ID of the EMR cluster.
+     * @param InstanceId ID of the EMR cluster.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -130,16 +138,16 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of items returned per page. The default value is 100, and the maximum value is 100. 
-     * @return Limit Number of items returned per page. The default value is 100, and the maximum value is 100.
+     * Get Number of items returned per page. Default value: 100. Maximum value: 100. 
+     * @return Limit Number of items returned per page. Default value: 100. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of items returned per page. The default value is 100, and the maximum value is 100.
-     * @param Limit Number of items returned per page. The default value is 100, and the maximum value is 100.
+     * Set Number of items returned per page. Default value: 100. Maximum value: 100.
+     * @param Limit Number of items returned per page. Default value: 100. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -159,6 +167,26 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk. 
+     * @return Scene Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+     */
+    public String getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * Set Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+     * @param Scene Scenario value. Valid values:
+ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+     */
+    public void setScene(String Scene) {
+        this.Scene = Scene;
     }
 
     public DescribeNodeDataDisksRequest() {
@@ -193,6 +221,9 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
     }
 
 
@@ -206,6 +237,7 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InnerSearch", this.InnerSearch);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
 
     }
 }

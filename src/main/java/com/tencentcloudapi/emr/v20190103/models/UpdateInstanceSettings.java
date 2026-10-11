@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class UpdateInstanceSettings extends AbstractModel {
 
     /**
-    * Memory capacity in GB
+    * Memory capacity, in GB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Number of CPU cores
+    * Number of CPU cores.
     */
     @SerializedName("CPUCores")
     @Expose
     private Long CPUCores;
 
     /**
-    * Machine resource ID (EMR resource identifier)
+    * Machine resource ID (EMR resource identifier).
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Target machine specification
+    * Changed machine specifications.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * Get Memory capacity in GB 
-     * @return Memory Memory capacity in GB
+     * Get Memory capacity, in GB. 
+     * @return Memory Memory capacity, in GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory capacity in GB
-     * @param Memory Memory capacity in GB
+     * Set Memory capacity, in GB.
+     * @param Memory Memory capacity, in GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Number of CPU cores 
-     * @return CPUCores Number of CPU cores
+     * Get Number of CPU cores. 
+     * @return CPUCores Number of CPU cores.
      */
     public Long getCPUCores() {
         return this.CPUCores;
     }
 
     /**
-     * Set Number of CPU cores
-     * @param CPUCores Number of CPU cores
+     * Set Number of CPU cores.
+     * @param CPUCores Number of CPU cores.
      */
     public void setCPUCores(Long CPUCores) {
         this.CPUCores = CPUCores;
     }
 
     /**
-     * Get Machine resource ID (EMR resource identifier) 
-     * @return ResourceId Machine resource ID (EMR resource identifier)
+     * Get Machine resource ID (EMR resource identifier). 
+     * @return ResourceId Machine resource ID (EMR resource identifier).
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Machine resource ID (EMR resource identifier)
-     * @param ResourceId Machine resource ID (EMR resource identifier)
+     * Set Machine resource ID (EMR resource identifier).
+     * @param ResourceId Machine resource ID (EMR resource identifier).
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Target machine specification 
-     * @return InstanceType Target machine specification
+     * Get Changed machine specifications. 
+     * @return InstanceType Changed machine specifications.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Target machine specification
-     * @param InstanceType Target machine specification
+     * Set Changed machine specifications.
+     * @param InstanceType Changed machine specifications.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

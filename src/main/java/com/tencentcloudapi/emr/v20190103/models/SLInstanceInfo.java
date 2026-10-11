@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SLInstanceInfo extends AbstractModel {
 
     /**
-    * Instance string ID.
+    * Cluster string ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Instance numeric ID
+    * Cluster ID.
     */
     @SerializedName("Id")
     @Expose
@@ -52,14 +52,14 @@ public class SLInstanceInfo extends AbstractModel {
     private String HealthStatus;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Region ID
+    * Region ID.
     */
     @SerializedName("RegionId")
     @Expose
@@ -80,7 +80,7 @@ public class SLInstanceInfo extends AbstractModel {
     private String Zone;
 
     /**
-    * User APP ID.
+    * User APPID.
     */
     @SerializedName("AppId")
     @Expose
@@ -94,6 +94,13 @@ public class SLInstanceInfo extends AbstractModel {
     private Long VpcId;
 
     /**
+    * Primary AZ VPC name.
+    */
+    @SerializedName("VpcName")
+    @Expose
+    private String VpcName;
+
+    /**
     * Primary AZ subnet ID.
     */
     @SerializedName("SubnetId")
@@ -101,7 +108,14 @@ public class SLInstanceInfo extends AbstractModel {
     private Long SubnetId;
 
     /**
-    * Status code
+    * Primary AZ subnet name.
+    */
+    @SerializedName("SubnetName")
+    @Expose
+    private String SubnetName;
+
+    /**
+    * Status code.
     */
     @SerializedName("Status")
     @Expose
@@ -115,7 +129,7 @@ public class SLInstanceInfo extends AbstractModel {
     private String AddTime;
 
     /**
-    * Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
+    * Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
     */
     @SerializedName("PayMode")
     @Expose
@@ -123,7 +137,6 @@ public class SLInstanceInfo extends AbstractModel {
 
     /**
     * Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ZoneSettings")
     @Expose
@@ -131,60 +144,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
+    * Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+    * Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+    * Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get Instance string ID. 
-     * @return ClusterId Instance string ID.
+    * Primary/standby deployment role.
+    */
+    @SerializedName("DeployRole")
+    @Expose
+    private String DeployRole;
+
+    /**
+    * WebUI address.
+    */
+    @SerializedName("WebUIUrl")
+    @Expose
+    private String WebUIUrl;
+
+    /**
+     * Get Cluster string ID. 
+     * @return ClusterId Cluster string ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Instance string ID.
-     * @param ClusterId Instance string ID.
+     * Set Cluster string ID.
+     * @param ClusterId Cluster string ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Instance numeric ID 
-     * @return Id Instance numeric ID
+     * Get Cluster ID. 
+     * @return Id Cluster ID.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Instance numeric ID
-     * @param Id Instance numeric ID
+     * Set Cluster ID.
+     * @param Id Cluster ID.
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -223,32 +249,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance name 
-     * @return ClusterName Instance name
+     * Get Instance name. 
+     * @return ClusterName Instance name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Instance name
-     * @param ClusterName Instance name
+     * Set Instance name.
+     * @param ClusterName Instance name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Region ID 
-     * @return RegionId Region ID
+     * Get Region ID. 
+     * @return RegionId Region ID.
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID
-     * @param RegionId Region ID
+     * Set Region ID.
+     * @param RegionId Region ID.
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
@@ -287,16 +313,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User APP ID. 
-     * @return AppId User APP ID.
+     * Get User APPID. 
+     * @return AppId User APPID.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User APP ID.
-     * @param AppId User APP ID.
+     * Set User APPID.
+     * @param AppId User APPID.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -319,6 +345,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Primary AZ VPC name. 
+     * @return VpcName Primary AZ VPC name.
+     */
+    public String getVpcName() {
+        return this.VpcName;
+    }
+
+    /**
+     * Set Primary AZ VPC name.
+     * @param VpcName Primary AZ VPC name.
+     */
+    public void setVpcName(String VpcName) {
+        this.VpcName = VpcName;
+    }
+
+    /**
      * Get Primary AZ subnet ID. 
      * @return SubnetId Primary AZ subnet ID.
      */
@@ -335,16 +377,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status code 
-     * @return Status Status code
+     * Get Primary AZ subnet name. 
+     * @return SubnetName Primary AZ subnet name.
+     */
+    public String getSubnetName() {
+        return this.SubnetName;
+    }
+
+    /**
+     * Set Primary AZ subnet name.
+     * @param SubnetName Primary AZ subnet name.
+     */
+    public void setSubnetName(String SubnetName) {
+        this.SubnetName = SubnetName;
+    }
+
+    /**
+     * Get Status code. 
+     * @return Status Status code.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status code
-     * @param Status Status code
+     * Set Status code.
+     * @param Status Status code.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -367,26 +425,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription. 
-     * @return PayMode Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
+     * Get Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription. 
+     * @return PayMode Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
-     * @param PayMode Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
+     * Set Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
+     * @param PayMode Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Multi-AZ information. 
      * @return ZoneSettings Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ZoneSetting [] getZoneSettings() {
         return this.ZoneSettings;
@@ -394,19 +450,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ZoneSettings Multi-AZ information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setZoneSettings(ZoneSetting [] ZoneSettings) {
         this.ZoneSettings = ZoneSettings;
     }
 
     /**
-     * Get Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Instance tag. 
      * @return Tags Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -414,60 +466,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Instance tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0. 
-     * @return AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
+     * Get Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0. 
+     * @return AutoRenewFlag Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
-     * @param AutoRenewFlag Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
+     * Set Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
+     * @param AutoRenewFlag Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00. 
-     * @return IsolateTime Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+     * Get Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned. 
+     * @return IsolateTime Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
-     * @param IsolateTime Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+     * Set Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
+     * @param IsolateTime Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00. 
-     * @return ExpireTime Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+     * Get Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned. 
+     * @return ExpireTime Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
-     * @param ExpireTime Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+     * Set Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
+     * @param ExpireTime Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get Primary/standby deployment role. 
+     * @return DeployRole Primary/standby deployment role.
+     */
+    public String getDeployRole() {
+        return this.DeployRole;
+    }
+
+    /**
+     * Set Primary/standby deployment role.
+     * @param DeployRole Primary/standby deployment role.
+     */
+    public void setDeployRole(String DeployRole) {
+        this.DeployRole = DeployRole;
+    }
+
+    /**
+     * Get WebUI address. 
+     * @return WebUIUrl WebUI address.
+     */
+    public String getWebUIUrl() {
+        return this.WebUIUrl;
+    }
+
+    /**
+     * Set WebUI address.
+     * @param WebUIUrl WebUI address.
+     */
+    public void setWebUIUrl(String WebUIUrl) {
+        this.WebUIUrl = WebUIUrl;
     }
 
     public SLInstanceInfo() {
@@ -508,8 +590,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.VpcId != null) {
             this.VpcId = new Long(source.VpcId);
         }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
         if (source.SubnetId != null) {
             this.SubnetId = new Long(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
@@ -541,6 +629,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.DeployRole != null) {
+            this.DeployRole = new String(source.DeployRole);
+        }
+        if (source.WebUIUrl != null) {
+            this.WebUIUrl = new String(source.WebUIUrl);
+        }
     }
 
 
@@ -558,7 +652,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
@@ -567,6 +663,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "DeployRole", this.DeployRole);
+        this.setParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
 
     }
 }

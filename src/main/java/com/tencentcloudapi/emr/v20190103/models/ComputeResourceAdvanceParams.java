@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class ComputeResourceAdvanceParams extends AbstractModel {
 
     /**
-    * Node label array.
+    * <p>Node Label array.</p>
     */
     @SerializedName("Labels")
     @Expose
     private TkeLabel [] Labels;
 
     /**
-    * Node taint.
+    * <p>Node taint.</p>
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * Base64-encoded user script: executed before node initializing.
+    * <p>Base64-encoded user script, which is executed before node initialization.</p>
     */
     @SerializedName("PreStartUserScript")
     @Expose
     private String PreStartUserScript;
 
     /**
-    * Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+    * <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
     */
     @SerializedName("UserScript")
     @Expose
     private String UserScript;
 
     /**
-     * Get Node label array. 
-     * @return Labels Node label array.
+    * <p>Node group ID.</p>
+    */
+    @SerializedName("TkeClusterNodePool")
+    @Expose
+    private String TkeClusterNodePool;
+
+    /**
+    * <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+    */
+    @SerializedName("NodePoolJoinMode")
+    @Expose
+    private String NodePoolJoinMode;
+
+    /**
+     * Get <p>Node Label array.</p> 
+     * @return Labels <p>Node Label array.</p>
      */
     public TkeLabel [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set Node label array.
-     * @param Labels Node label array.
+     * Set <p>Node Label array.</p>
+     * @param Labels <p>Node Label array.</p>
      */
     public void setLabels(TkeLabel [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get Node taint. 
-     * @return Taints Node taint.
+     * Get <p>Node taint.</p> 
+     * @return Taints <p>Node taint.</p>
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set Node taint.
-     * @param Taints Node taint.
+     * Set <p>Node taint.</p>
+     * @param Taints <p>Node taint.</p>
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get Base64-encoded user script: executed before node initializing. 
-     * @return PreStartUserScript Base64-encoded user script: executed before node initializing.
+     * Get <p>Base64-encoded user script, which is executed before node initialization.</p> 
+     * @return PreStartUserScript <p>Base64-encoded user script, which is executed before node initialization.</p>
      */
     public String getPreStartUserScript() {
         return this.PreStartUserScript;
     }
 
     /**
-     * Set Base64-encoded user script: executed before node initializing.
-     * @param PreStartUserScript Base64-encoded user script: executed before node initializing.
+     * Set <p>Base64-encoded user script, which is executed before node initialization.</p>
+     * @param PreStartUserScript <p>Base64-encoded user script, which is executed before node initialization.</p>
      */
     public void setPreStartUserScript(String PreStartUserScript) {
         this.PreStartUserScript = PreStartUserScript;
     }
 
     /**
-     * Get Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/. 
-     * @return UserScript Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+     * Get <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p> 
+     * @return UserScript <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
      */
     public String getUserScript() {
         return this.UserScript;
     }
 
     /**
-     * Set Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
-     * @param UserScript Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+     * Set <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
+     * @param UserScript <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
      */
     public void setUserScript(String UserScript) {
         this.UserScript = UserScript;
+    }
+
+    /**
+     * Get <p>Node group ID.</p> 
+     * @return TkeClusterNodePool <p>Node group ID.</p>
+     */
+    public String getTkeClusterNodePool() {
+        return this.TkeClusterNodePool;
+    }
+
+    /**
+     * Set <p>Node group ID.</p>
+     * @param TkeClusterNodePool <p>Node group ID.</p>
+     */
+    public void setTkeClusterNodePool(String TkeClusterNodePool) {
+        this.TkeClusterNodePool = TkeClusterNodePool;
+    }
+
+    /**
+     * Get <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p> 
+     * @return NodePoolJoinMode <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+     */
+    public String getNodePoolJoinMode() {
+        return this.NodePoolJoinMode;
+    }
+
+    /**
+     * Set <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+     * @param NodePoolJoinMode <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+     */
+    public void setNodePoolJoinMode(String NodePoolJoinMode) {
+        this.NodePoolJoinMode = NodePoolJoinMode;
     }
 
     public ComputeResourceAdvanceParams() {
@@ -141,6 +187,12 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
         if (source.UserScript != null) {
             this.UserScript = new String(source.UserScript);
         }
+        if (source.TkeClusterNodePool != null) {
+            this.TkeClusterNodePool = new String(source.TkeClusterNodePool);
+        }
+        if (source.NodePoolJoinMode != null) {
+            this.NodePoolJoinMode = new String(source.NodePoolJoinMode);
+        }
     }
 
 
@@ -152,6 +204,8 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
+        this.setParamSimple(map, prefix + "TkeClusterNodePool", this.TkeClusterNodePool);
+        this.setParamSimple(map, prefix + "NodePoolJoinMode", this.NodePoolJoinMode);
 
     }
 }

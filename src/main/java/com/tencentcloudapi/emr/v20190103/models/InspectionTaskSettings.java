@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InspectionTaskSettings extends AbstractModel {
 
     /**
-    * Unique identifier for inspection tasks.
+    * Unique identifier for the inspection task.
     */
     @SerializedName("TaskType")
     @Expose
@@ -52,7 +52,7 @@ public class InspectionTaskSettings extends AbstractModel {
     private TaskSettings [] TaskSettings;
 
     /**
-    * Whether it is selected, with the valid values of "true" and "false".
+    * Whether it is selected. Valid values: "true" and "false".
     */
     @SerializedName("Selected")
     @Expose
@@ -73,16 +73,16 @@ public class InspectionTaskSettings extends AbstractModel {
     private String SettingsJson;
 
     /**
-     * Get Unique identifier for inspection tasks. 
-     * @return TaskType Unique identifier for inspection tasks.
+     * Get Unique identifier for the inspection task. 
+     * @return TaskType Unique identifier for the inspection task.
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Unique identifier for inspection tasks.
-     * @param TaskType Unique identifier for inspection tasks.
+     * Set Unique identifier for the inspection task.
+     * @param TaskType Unique identifier for the inspection task.
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -137,16 +137,16 @@ public class InspectionTaskSettings extends AbstractModel {
     }
 
     /**
-     * Get Whether it is selected, with the valid values of "true" and "false". 
-     * @return Selected Whether it is selected, with the valid values of "true" and "false".
+     * Get Whether it is selected. Valid values: "true" and "false". 
+     * @return Selected Whether it is selected. Valid values: "true" and "false".
      */
     public String getSelected() {
         return this.Selected;
     }
 
     /**
-     * Set Whether it is selected, with the valid values of "true" and "false".
-     * @param Selected Whether it is selected, with the valid values of "true" and "false".
+     * Set Whether it is selected. Valid values: "true" and "false".
+     * @param Selected Whether it is selected. Valid values: "true" and "false".
      */
     public void setSelected(String Selected) {
         this.Selected = Selected;

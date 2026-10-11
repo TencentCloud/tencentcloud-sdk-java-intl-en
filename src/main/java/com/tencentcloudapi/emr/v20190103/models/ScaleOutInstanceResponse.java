@@ -24,43 +24,42 @@ import java.util.HashMap;
 public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Order number.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Order number.</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * Client Token.
+    * <p>Client token.</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * Scale-out process ID.
+    * <p>Scale-out flow ID.</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * Large order number.
+    * <p>Large order number.</p>
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * TraceId for scale-out.
+    * <p>TraceId for the scale-out.</p>
     */
     @SerializedName("TraceId")
     @Expose
@@ -74,100 +73,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Order number.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealNames Order number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Order number.</p> 
+     * @return DealNames <p>Order number.</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order number.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealNames Order number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Order number.</p>
+     * @param DealNames <p>Order number.</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get Client Token. 
-     * @return ClientToken Client Token.
+     * Get <p>Client token.</p> 
+     * @return ClientToken <p>Client token.</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set Client Token.
-     * @param ClientToken Client Token.
+     * Set <p>Client token.</p>
+     * @param ClientToken <p>Client token.</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get Scale-out process ID. 
-     * @return FlowId Scale-out process ID.
+     * Get <p>Scale-out flow ID.</p> 
+     * @return FlowId <p>Scale-out flow ID.</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Scale-out process ID.
-     * @param FlowId Scale-out process ID.
+     * Set <p>Scale-out flow ID.</p>
+     * @param FlowId <p>Scale-out flow ID.</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Large order number. 
-     * @return BillId Large order number.
+     * Get <p>Large order number.</p> 
+     * @return BillId <p>Large order number.</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set Large order number.
-     * @param BillId Large order number.
+     * Set <p>Large order number.</p>
+     * @param BillId <p>Large order number.</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get TraceId for scale-out. 
-     * @return TraceId TraceId for scale-out.
+     * Get <p>TraceId for the scale-out.</p> 
+     * @return TraceId <p>TraceId for the scale-out.</p>
      */
     public String getTraceId() {
         return this.TraceId;
     }
 
     /**
-     * Set TraceId for scale-out.
-     * @param TraceId TraceId for scale-out.
+     * Set <p>TraceId for the scale-out.</p>
+     * @param TraceId <p>TraceId for the scale-out.</p>
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;

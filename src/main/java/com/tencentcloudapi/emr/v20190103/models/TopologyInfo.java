@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class TopologyInfo extends AbstractModel {
 
     /**
-    * Availability zone ID.
+    * AZ ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Availability information.
+    * AZ information.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Subnet information.
     */
     @SerializedName("SubnetInfoList")
     @Expose
     private SubnetInfo [] SubnetInfoList;
 
     /**
-    * Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Node information.
     */
     @SerializedName("NodeInfoList")
     @Expose
     private ShortNodeInfo [] NodeInfoList;
 
     /**
-     * Get Availability zone ID. 
-     * @return ZoneId Availability zone ID.
+     * Get AZ ID. 
+     * @return ZoneId AZ ID.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Availability zone ID.
-     * @param ZoneId Availability zone ID.
+     * Set AZ ID.
+     * @param ZoneId AZ ID.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Availability information. 
-     * @return Zone Availability information.
+     * Get AZ information. 
+     * @return Zone AZ information.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability information.
-     * @param Zone Availability information.
+     * Set AZ information.
+     * @param Zone AZ information.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SubnetInfoList Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Subnet information. 
+     * @return SubnetInfoList Subnet information.
      */
     public SubnetInfo [] getSubnetInfoList() {
         return this.SubnetInfoList;
     }
 
     /**
-     * Set Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SubnetInfoList Subnet information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Subnet information.
+     * @param SubnetInfoList Subnet information.
      */
     public void setSubnetInfoList(SubnetInfo [] SubnetInfoList) {
         this.SubnetInfoList = SubnetInfoList;
     }
 
     /**
-     * Get Node information
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return NodeInfoList Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Node information. 
+     * @return NodeInfoList Node information.
      */
     public ShortNodeInfo [] getNodeInfoList() {
         return this.NodeInfoList;
     }
 
     /**
-     * Set Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param NodeInfoList Node information
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Node information.
+     * @param NodeInfoList Node information.
      */
     public void setNodeInfoList(ShortNodeInfo [] NodeInfoList) {
         this.NodeInfoList = NodeInfoList;

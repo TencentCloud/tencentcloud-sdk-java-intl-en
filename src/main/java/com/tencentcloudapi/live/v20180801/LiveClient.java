@@ -714,19 +714,6 @@ Referer information is included in HTTP requests. After you enable referer confi
     }
 
     /**
-     *This API is used to get the list of disabled streams.
-
-Note: this API is used for query only and should not be relied too much upon in important business scenarios.
-     * @param req DescribeLiveForbidStreamListRequest
-     * @return DescribeLiveForbidStreamListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLiveForbidStreamList", DescribeLiveForbidStreamListResponse.class);
-    }
-
-    /**
      *This API is used to query the playback authentication key.
      * @param req DescribeLivePlayAuthKeyRequest
      * @return DescribeLivePlayAuthKeyResponse
@@ -1022,6 +1009,17 @@ If the start time and end time are not on the same day or if the data of specifi
     public DescribeLiveWatermarksResponse DescribeLiveWatermarks(DescribeLiveWatermarksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLiveWatermarks", DescribeLiveWatermarksResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the pull stream IP whitelist list of the origin server.
+     * @param req DescribeOriginWhiteIpListRequest
+     * @return DescribeOriginWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginWhiteIpListResponse DescribeOriginWhiteIpList(DescribeOriginWhiteIpListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOriginWhiteIpList", DescribeOriginWhiteIpListResponse.class);
     }
 
     /**

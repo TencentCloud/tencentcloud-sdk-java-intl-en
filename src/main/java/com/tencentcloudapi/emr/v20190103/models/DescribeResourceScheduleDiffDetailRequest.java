@@ -31,7 +31,7 @@ public class DescribeResourceScheduleDiffDetailRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+    * Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
     */
     @SerializedName("Scheduler")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeResourceScheduleDiffDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used. 
-     * @return Scheduler Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+     * Get Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used. 
+     * @return Scheduler Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
-     * @param Scheduler Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+     * Set Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
+     * @param Scheduler Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;

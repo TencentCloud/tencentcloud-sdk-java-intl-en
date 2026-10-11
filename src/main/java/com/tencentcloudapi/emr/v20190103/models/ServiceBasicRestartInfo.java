@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ServiceBasicRestartInfo extends AbstractModel {
 
     /**
-    * The service name (required), such as HDFS.
+    * Service name, required. Example: HDFS.
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * If it is left empty, all processes will be operated on.
+    * If not provided, it indicates all processes.
     */
     @SerializedName("ComponentInfoList")
     @Expose
     private ComponentBasicRestartInfo [] ComponentInfoList;
 
     /**
-     * Get The service name (required), such as HDFS. 
-     * @return ServiceName The service name (required), such as HDFS.
+     * Get Service name, required. Example: HDFS. 
+     * @return ServiceName Service name, required. Example: HDFS.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set The service name (required), such as HDFS.
-     * @param ServiceName The service name (required), such as HDFS.
+     * Set Service name, required. Example: HDFS.
+     * @param ServiceName Service name, required. Example: HDFS.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get If it is left empty, all processes will be operated on. 
-     * @return ComponentInfoList If it is left empty, all processes will be operated on.
+     * Get If not provided, it indicates all processes. 
+     * @return ComponentInfoList If not provided, it indicates all processes.
      */
     public ComponentBasicRestartInfo [] getComponentInfoList() {
         return this.ComponentInfoList;
     }
 
     /**
-     * Set If it is left empty, all processes will be operated on.
-     * @param ComponentInfoList If it is left empty, all processes will be operated on.
+     * Set If not provided, it indicates all processes.
+     * @param ComponentInfoList If not provided, it indicates all processes.
      */
     public void setComponentInfoList(ComponentBasicRestartInfo [] ComponentInfoList) {
         this.ComponentInfoList = ComponentInfoList;

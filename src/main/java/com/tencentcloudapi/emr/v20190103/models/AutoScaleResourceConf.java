@@ -24,394 +24,440 @@ import java.util.HashMap;
 public class AutoScaleResourceConf extends AbstractModel {
 
     /**
-    * Configuration ID.
+    * <p>Configuration ID.</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Cluster instance ID.
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private Long ClusterId;
 
     /**
-    * Minimum number of instances retained for automatic scaling
+    * <p>Minimum number of reserved instances for auto scaling.</p>
     */
     @SerializedName("ScaleLowerBound")
     @Expose
     private Long ScaleLowerBound;
 
     /**
-    * Maximum number of instances for auto scaling
+    * <p>Maximum number of instances for auto scaling.</p>
     */
     @SerializedName("ScaleUpperBound")
     @Expose
     private Long ScaleUpperBound;
 
     /**
-    * Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
+    * <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
     */
     @SerializedName("StrategyType")
     @Expose
     private Long StrategyType;
 
     /**
-    * Next scale-out time.
+    * <p>Next scale-out time.</p>
     */
     @SerializedName("NextTimeCanScale")
     @Expose
     private Long NextTimeCanScale;
 
     /**
-    * Graceful scale-in switch.
+    * <p>Graceful scale-in switch.</p>
     */
     @SerializedName("GraceDownFlag")
     @Expose
     private Boolean GraceDownFlag;
 
     /**
-    * "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
+    * <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
     */
     @SerializedName("HardwareType")
     @Expose
     private String HardwareType;
 
     /**
-    * "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
+    * <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
+    * <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
     */
     @SerializedName("PostPayPercentMin")
     @Expose
     private Long PostPayPercentMin;
 
     /**
-    * When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
+    * <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
     */
     @SerializedName("ChangeToPod")
     @Expose
     private Long ChangeToPod;
 
     /**
-    * Scaling group name.
+    * <p>Scaling group name.</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * Tag.
+    * <p>Tag.</p>
     */
     @SerializedName("YarnNodeLabel")
     @Expose
     private String YarnNodeLabel;
 
     /**
-    * Scaling group status.
+    * <p>Corresponding computing group.</p>
+    */
+    @SerializedName("WarehouseName")
+    @Expose
+    private String WarehouseName;
+
+    /**
+    * <p>Scaling group status.</p>
     */
     @SerializedName("GroupStatus")
     @Expose
     private Long GroupStatus;
 
     /**
-    * Parallel scaling. 0: disabled; 1: enabled.
+    * <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
     */
     @SerializedName("Parallel")
     @Expose
     private Long Parallel;
 
     /**
-    * Whether MNode is supported.
+    * <p>Whether MNode is supported.</p>
     */
     @SerializedName("EnableMNode")
     @Expose
     private Long EnableMNode;
 
     /**
-    * More scaling group settings.
+    * <p>More scaling group settings.</p>
     */
     @SerializedName("ExtraAdvanceAttrs")
     @Expose
     private AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs;
 
     /**
-     * Get Configuration ID. 
-     * @return Id Configuration ID.
+    * <p>Custom hostname.</p>
+    */
+    @SerializedName("CustomNodeName")
+    @Expose
+    private String CustomNodeName;
+
+    /**
+     * Get <p>Configuration ID.</p> 
+     * @return Id <p>Configuration ID.</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Configuration ID.
-     * @param Id Configuration ID.
+     * Set <p>Configuration ID.</p>
+     * @param Id <p>Configuration ID.</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Cluster instance ID. 
-     * @return ClusterId Cluster instance ID.
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public Long getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster instance ID.
-     * @param ClusterId Cluster instance ID.
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(Long ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Minimum number of instances retained for automatic scaling 
-     * @return ScaleLowerBound Minimum number of instances retained for automatic scaling
+     * Get <p>Minimum number of reserved instances for auto scaling.</p> 
+     * @return ScaleLowerBound <p>Minimum number of reserved instances for auto scaling.</p>
      */
     public Long getScaleLowerBound() {
         return this.ScaleLowerBound;
     }
 
     /**
-     * Set Minimum number of instances retained for automatic scaling
-     * @param ScaleLowerBound Minimum number of instances retained for automatic scaling
+     * Set <p>Minimum number of reserved instances for auto scaling.</p>
+     * @param ScaleLowerBound <p>Minimum number of reserved instances for auto scaling.</p>
      */
     public void setScaleLowerBound(Long ScaleLowerBound) {
         this.ScaleLowerBound = ScaleLowerBound;
     }
 
     /**
-     * Get Maximum number of instances for auto scaling 
-     * @return ScaleUpperBound Maximum number of instances for auto scaling
+     * Get <p>Maximum number of instances for auto scaling.</p> 
+     * @return ScaleUpperBound <p>Maximum number of instances for auto scaling.</p>
      */
     public Long getScaleUpperBound() {
         return this.ScaleUpperBound;
     }
 
     /**
-     * Set Maximum number of instances for auto scaling
-     * @param ScaleUpperBound Maximum number of instances for auto scaling
+     * Set <p>Maximum number of instances for auto scaling.</p>
+     * @param ScaleUpperBound <p>Maximum number of instances for auto scaling.</p>
      */
     public void setScaleUpperBound(Long ScaleUpperBound) {
         this.ScaleUpperBound = ScaleUpperBound;
     }
 
     /**
-     * Get Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule 
-     * @return StrategyType Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
+     * Get <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p> 
+     * @return StrategyType <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
-     * @param StrategyType Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
+     * Set <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
+     * @param StrategyType <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get Next scale-out time. 
-     * @return NextTimeCanScale Next scale-out time.
+     * Get <p>Next scale-out time.</p> 
+     * @return NextTimeCanScale <p>Next scale-out time.</p>
      */
     public Long getNextTimeCanScale() {
         return this.NextTimeCanScale;
     }
 
     /**
-     * Set Next scale-out time.
-     * @param NextTimeCanScale Next scale-out time.
+     * Set <p>Next scale-out time.</p>
+     * @param NextTimeCanScale <p>Next scale-out time.</p>
      */
     public void setNextTimeCanScale(Long NextTimeCanScale) {
         this.NextTimeCanScale = NextTimeCanScale;
     }
 
     /**
-     * Get Graceful scale-in switch. 
-     * @return GraceDownFlag Graceful scale-in switch.
+     * Get <p>Graceful scale-in switch.</p> 
+     * @return GraceDownFlag <p>Graceful scale-in switch.</p>
      */
     public Boolean getGraceDownFlag() {
         return this.GraceDownFlag;
     }
 
     /**
-     * Set Graceful scale-in switch.
-     * @param GraceDownFlag Graceful scale-in switch.
+     * Set <p>Graceful scale-in switch.</p>
+     * @param GraceDownFlag <p>Graceful scale-in switch.</p>
      */
     public void setGraceDownFlag(Boolean GraceDownFlag) {
         this.GraceDownFlag = GraceDownFlag;
     }
 
     /**
-     * Get "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM". 
-     * @return HardwareType "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
+     * Get <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p> 
+     * @return HardwareType <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
      */
     public String getHardwareType() {
         return this.HardwareType;
     }
 
     /**
-     * Set "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
-     * @param HardwareType "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
+     * Set <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
+     * @param HardwareType <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
      */
     public void setHardwareType(String HardwareType) {
         this.HardwareType = HardwareType;
     }
 
     /**
-     * Get "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go. 
-     * @return PayMode "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
+     * Get <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p> 
+     * @return PayMode <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
-     * @param PayMode "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
+     * Set <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
+     * @param PayMode <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer. 
-     * @return PostPayPercentMin The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
+     * Get <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p> 
+     * @return PostPayPercentMin <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
      */
     public Long getPostPayPercentMin() {
         return this.PostPayPercentMin;
     }
 
     /**
-     * Set The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
-     * @param PostPayPercentMin The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
+     * Set <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
+     * @param PostPayPercentMin <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
      */
     public void setPostPayPercentMin(Long PostPayPercentMin) {
         this.PostPayPercentMin = PostPayPercentMin;
     }
 
     /**
-     * Get When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled). 
-     * @return ChangeToPod When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
+     * Get <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p> 
+     * @return ChangeToPod <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
      */
     public Long getChangeToPod() {
         return this.ChangeToPod;
     }
 
     /**
-     * Set When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
-     * @param ChangeToPod When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
+     * Set <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
+     * @param ChangeToPod <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
      */
     public void setChangeToPod(Long ChangeToPod) {
         this.ChangeToPod = ChangeToPod;
     }
 
     /**
-     * Get Scaling group name. 
-     * @return GroupName Scaling group name.
+     * Get <p>Scaling group name.</p> 
+     * @return GroupName <p>Scaling group name.</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Scaling group name.
-     * @param GroupName Scaling group name.
+     * Set <p>Scaling group name.</p>
+     * @param GroupName <p>Scaling group name.</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get Tag. 
-     * @return YarnNodeLabel Tag.
+     * Get <p>Tag.</p> 
+     * @return YarnNodeLabel <p>Tag.</p>
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
     }
 
     /**
-     * Set Tag.
-     * @param YarnNodeLabel Tag.
+     * Set <p>Tag.</p>
+     * @param YarnNodeLabel <p>Tag.</p>
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
     }
 
     /**
-     * Get Scaling group status. 
-     * @return GroupStatus Scaling group status.
+     * Get <p>Corresponding computing group.</p> 
+     * @return WarehouseName <p>Corresponding computing group.</p>
+     */
+    public String getWarehouseName() {
+        return this.WarehouseName;
+    }
+
+    /**
+     * Set <p>Corresponding computing group.</p>
+     * @param WarehouseName <p>Corresponding computing group.</p>
+     */
+    public void setWarehouseName(String WarehouseName) {
+        this.WarehouseName = WarehouseName;
+    }
+
+    /**
+     * Get <p>Scaling group status.</p> 
+     * @return GroupStatus <p>Scaling group status.</p>
      */
     public Long getGroupStatus() {
         return this.GroupStatus;
     }
 
     /**
-     * Set Scaling group status.
-     * @param GroupStatus Scaling group status.
+     * Set <p>Scaling group status.</p>
+     * @param GroupStatus <p>Scaling group status.</p>
      */
     public void setGroupStatus(Long GroupStatus) {
         this.GroupStatus = GroupStatus;
     }
 
     /**
-     * Get Parallel scaling. 0: disabled; 1: enabled. 
-     * @return Parallel Parallel scaling. 0: disabled; 1: enabled.
+     * Get <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p> 
+     * @return Parallel <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
      */
     public Long getParallel() {
         return this.Parallel;
     }
 
     /**
-     * Set Parallel scaling. 0: disabled; 1: enabled.
-     * @param Parallel Parallel scaling. 0: disabled; 1: enabled.
+     * Set <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * @param Parallel <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
      */
     public void setParallel(Long Parallel) {
         this.Parallel = Parallel;
     }
 
     /**
-     * Get Whether MNode is supported. 
-     * @return EnableMNode Whether MNode is supported.
+     * Get <p>Whether MNode is supported.</p> 
+     * @return EnableMNode <p>Whether MNode is supported.</p>
      */
     public Long getEnableMNode() {
         return this.EnableMNode;
     }
 
     /**
-     * Set Whether MNode is supported.
-     * @param EnableMNode Whether MNode is supported.
+     * Set <p>Whether MNode is supported.</p>
+     * @param EnableMNode <p>Whether MNode is supported.</p>
      */
     public void setEnableMNode(Long EnableMNode) {
         this.EnableMNode = EnableMNode;
     }
 
     /**
-     * Get More scaling group settings. 
-     * @return ExtraAdvanceAttrs More scaling group settings.
+     * Get <p>More scaling group settings.</p> 
+     * @return ExtraAdvanceAttrs <p>More scaling group settings.</p>
      */
     public AutoScaleGroupAdvanceAttrs getExtraAdvanceAttrs() {
         return this.ExtraAdvanceAttrs;
     }
 
     /**
-     * Set More scaling group settings.
-     * @param ExtraAdvanceAttrs More scaling group settings.
+     * Set <p>More scaling group settings.</p>
+     * @param ExtraAdvanceAttrs <p>More scaling group settings.</p>
      */
     public void setExtraAdvanceAttrs(AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs) {
         this.ExtraAdvanceAttrs = ExtraAdvanceAttrs;
+    }
+
+    /**
+     * Get <p>Custom hostname.</p> 
+     * @return CustomNodeName <p>Custom hostname.</p>
+     */
+    public String getCustomNodeName() {
+        return this.CustomNodeName;
+    }
+
+    /**
+     * Set <p>Custom hostname.</p>
+     * @param CustomNodeName <p>Custom hostname.</p>
+     */
+    public void setCustomNodeName(String CustomNodeName) {
+        this.CustomNodeName = CustomNodeName;
     }
 
     public AutoScaleResourceConf() {
@@ -461,6 +507,9 @@ public class AutoScaleResourceConf extends AbstractModel {
         if (source.YarnNodeLabel != null) {
             this.YarnNodeLabel = new String(source.YarnNodeLabel);
         }
+        if (source.WarehouseName != null) {
+            this.WarehouseName = new String(source.WarehouseName);
+        }
         if (source.GroupStatus != null) {
             this.GroupStatus = new Long(source.GroupStatus);
         }
@@ -472,6 +521,9 @@ public class AutoScaleResourceConf extends AbstractModel {
         }
         if (source.ExtraAdvanceAttrs != null) {
             this.ExtraAdvanceAttrs = new AutoScaleGroupAdvanceAttrs(source.ExtraAdvanceAttrs);
+        }
+        if (source.CustomNodeName != null) {
+            this.CustomNodeName = new String(source.CustomNodeName);
         }
     }
 
@@ -493,10 +545,12 @@ public class AutoScaleResourceConf extends AbstractModel {
         this.setParamSimple(map, prefix + "ChangeToPod", this.ChangeToPod);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+        this.setParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
         this.setParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
         this.setParamSimple(map, prefix + "Parallel", this.Parallel);
         this.setParamSimple(map, prefix + "EnableMNode", this.EnableMNode);
         this.setParamObj(map, prefix + "ExtraAdvanceAttrs.", this.ExtraAdvanceAttrs);
+        this.setParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
 
     }
 }

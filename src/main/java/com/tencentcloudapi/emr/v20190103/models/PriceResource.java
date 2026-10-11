@@ -73,8 +73,7 @@ public class PriceResource extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cloud disk list.
     */
     @SerializedName("MultiDisks")
     @Expose
@@ -95,8 +94,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceType;
 
     /**
-    * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -236,20 +234,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MultiDisks List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cloud disk list. 
+     * @return MultiDisks Cloud disk list.
      */
     public MultiDisk [] getMultiDisks() {
         return this.MultiDisks;
     }
 
     /**
-     * Set List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MultiDisks List of cloud disks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cloud disk list.
+     * @param MultiDisks Cloud disk list.
      */
     public void setMultiDisks(MultiDisk [] MultiDisks) {
         this.MultiDisks = MultiDisks;
@@ -288,20 +282,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tags Tag.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tags Tag.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

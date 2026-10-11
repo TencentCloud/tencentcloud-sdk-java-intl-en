@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class ComponentBasicRestartInfo extends AbstractModel {
 
     /**
-    * Process name which is required, such as NameNode.
+    * (Required) Process name, for example, NameNode.
     */
     @SerializedName("ComponentName")
     @Expose
     private String ComponentName;
 
     /**
-    * The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of operation IP addresses.
     */
     @SerializedName("IpList")
     @Expose
     private String [] IpList;
 
     /**
-     * Get Process name which is required, such as NameNode. 
-     * @return ComponentName Process name which is required, such as NameNode.
+     * Get (Required) Process name, for example, NameNode. 
+     * @return ComponentName (Required) Process name, for example, NameNode.
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set Process name which is required, such as NameNode.
-     * @param ComponentName Process name which is required, such as NameNode.
+     * Set (Required) Process name, for example, NameNode.
+     * @param ComponentName (Required) Process name, for example, NameNode.
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IpList The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of operation IP addresses. 
+     * @return IpList List of operation IP addresses.
      */
     public String [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IpList The target IP list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of operation IP addresses.
+     * @param IpList List of operation IP addresses.
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;

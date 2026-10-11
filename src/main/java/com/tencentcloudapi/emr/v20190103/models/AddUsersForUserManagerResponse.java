@@ -24,23 +24,21 @@ import java.util.HashMap;
 public class AddUsersForUserManagerResponse extends AbstractModel {
 
     /**
-    * The user list that is successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * List of successfully added users.
     */
     @SerializedName("SuccessUserList")
     @Expose
     private String [] SuccessUserList;
 
     /**
-    * The user list that is not successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * List of users failed to be added.
     */
     @SerializedName("FailedUserList")
     @Expose
     private String [] FailedUserList;
 
     /**
-    * Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+    * Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started.
     */
     @SerializedName("FlowId")
     @Expose
@@ -54,56 +52,48 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RequestId;
 
     /**
-     * Get The user list that is successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SuccessUserList The user list that is successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get List of successfully added users. 
+     * @return SuccessUserList List of successfully added users.
      */
     public String [] getSuccessUserList() {
         return this.SuccessUserList;
     }
 
     /**
-     * Set The user list that is successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SuccessUserList The user list that is successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set List of successfully added users.
+     * @param SuccessUserList List of successfully added users.
      */
     public void setSuccessUserList(String [] SuccessUserList) {
         this.SuccessUserList = SuccessUserList;
     }
 
     /**
-     * Get The user list that is not successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return FailedUserList The user list that is not successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get List of users failed to be added. 
+     * @return FailedUserList List of users failed to be added.
      */
     public String [] getFailedUserList() {
         return this.FailedUserList;
     }
 
     /**
-     * Set The user list that is not successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param FailedUserList The user list that is not successfully added
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set List of users failed to be added.
+     * @param FailedUserList List of users failed to be added.
      */
     public void setFailedUserList(String [] FailedUserList) {
         this.FailedUserList = FailedUserList;
     }
 
     /**
-     * Get Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched. 
-     * @return FlowId Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+     * Get Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started. 
+     * @return FlowId Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
-     * @param FlowId Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+     * Set Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started.
+     * @param FlowId Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

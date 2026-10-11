@@ -73,7 +73,7 @@ public class SparkQuery extends AbstractModel {
     private Long ScanFileNum;
 
     /**
-    * Total data volume scanned by query (bytes).
+    * Total scanned and queried data volume (bytes).
     */
     @SerializedName("ScanTotalData")
     @Expose
@@ -81,7 +81,6 @@ public class SparkQuery extends AbstractModel {
 
     /**
     * Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -242,26 +241,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total data volume scanned by query (bytes). 
-     * @return ScanTotalData Total data volume scanned by query (bytes).
+     * Get Total scanned and queried data volume (bytes). 
+     * @return ScanTotalData Total scanned and queried data volume (bytes).
      */
     public Long getScanTotalData() {
         return this.ScanTotalData;
     }
 
     /**
-     * Set Total data volume scanned by query (bytes).
-     * @param ScanTotalData Total data volume scanned by query (bytes).
+     * Set Total scanned and queried data volume (bytes).
+     * @param ScanTotalData Total scanned and queried data volume (bytes).
      */
     public void setScanTotalData(Long ScanTotalData) {
         this.ScanTotalData = ScanTotalData;
     }
 
     /**
-     * Get Application ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application ID. 
      * @return ApplicationId Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getApplicationId() {
         return this.ApplicationId;
@@ -269,9 +266,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationId Application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationId(String [] ApplicationId) {
         this.ApplicationId = ApplicationId;

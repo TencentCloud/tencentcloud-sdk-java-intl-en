@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeUsersForUserManagerResponse extends AbstractModel {
 
     /**
-    * Total number
+    * Total number.
     */
     @SerializedName("TotalCnt")
     @Expose
     private Long TotalCnt;
 
     /**
-    * User information list
-Note: This field may return null, indicating that no valid value can be obtained.
+    * User information list.
     */
     @SerializedName("UserManagerUserList")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String RequestId;
 
     /**
-     * Get Total number 
-     * @return TotalCnt Total number
+     * Get Total number. 
+     * @return TotalCnt Total number.
      */
     public Long getTotalCnt() {
         return this.TotalCnt;
     }
 
     /**
-     * Set Total number
-     * @param TotalCnt Total number
+     * Set Total number.
+     * @param TotalCnt Total number.
      */
     public void setTotalCnt(Long TotalCnt) {
         this.TotalCnt = TotalCnt;
     }
 
     /**
-     * Get User information list
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UserManagerUserList User information list
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get User information list. 
+     * @return UserManagerUserList User information list.
      */
     public UserManagerUserBriefInfo [] getUserManagerUserList() {
         return this.UserManagerUserList;
     }
 
     /**
-     * Set User information list
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UserManagerUserList User information list
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set User information list.
+     * @param UserManagerUserList User information list.
      */
     public void setUserManagerUserList(UserManagerUserBriefInfo [] UserManagerUserList) {
         this.UserManagerUserList = UserManagerUserList;

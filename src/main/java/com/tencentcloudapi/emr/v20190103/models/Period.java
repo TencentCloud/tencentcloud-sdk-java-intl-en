@@ -31,7 +31,7 @@ public class Period extends AbstractModel {
     private Long TimeSpan;
 
     /**
-    * Time unit, "m" stands for month.
+    * Time unit. "m" stands for month(s).
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -54,16 +54,16 @@ public class Period extends AbstractModel {
     }
 
     /**
-     * Get Time unit, "m" stands for month. 
-     * @return TimeUnit Time unit, "m" stands for month.
+     * Get Time unit. "m" stands for month(s). 
+     * @return TimeUnit Time unit. "m" stands for month(s).
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Time unit, "m" stands for month.
-     * @param TimeUnit Time unit, "m" stands for month.
+     * Set Time unit. "m" stands for month(s).
+     * @param TimeUnit Time unit. "m" stands for month(s).
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

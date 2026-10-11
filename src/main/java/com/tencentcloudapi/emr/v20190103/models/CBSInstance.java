@@ -66,7 +66,7 @@ public class CBSInstance extends AbstractModel {
     private Boolean DeleteWithInstance;
 
     /**
-    * Cloud disk billing type.
+    * Cloud disk billing mode.
     */
     @SerializedName("DiskChargeType")
     @Expose
@@ -94,7 +94,7 @@ public class CBSInstance extends AbstractModel {
     private String DeadlineTime;
 
     /**
-    * Whether the cloud disk is mounted on the cloud host.
+    * Whether the cloud disk is mounted on the CVM.
     */
     @SerializedName("Attached")
     @Expose
@@ -108,15 +108,14 @@ public class CBSInstance extends AbstractModel {
     private Long DifferDaysOfDeadline;
 
     /**
-    * InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the CVM instance to which this cloud disk is currently mounted.
     */
     @SerializedName("InstanceIdList")
     @Expose
     private String [] InstanceIdList;
 
     /**
-    * ID of the cloud host to which the Cloud disk is mounted.
+    * ID of the CVM to which the cloud disk is mounted.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -142,6 +141,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("UnderwriteExpiredTime")
     @Expose
     private String UnderwriteExpiredTime;
+
+    /**
+    * Tag.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+    * Cloud disk additional performance value. Unit: MB/s.
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
 
     /**
      * Get Cloud disk ID. 
@@ -240,16 +253,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cloud disk billing type. 
-     * @return DiskChargeType Cloud disk billing type.
+     * Get Cloud disk billing mode. 
+     * @return DiskChargeType Cloud disk billing mode.
      */
     public String getDiskChargeType() {
         return this.DiskChargeType;
     }
 
     /**
-     * Set Cloud disk billing type.
-     * @param DiskChargeType Cloud disk billing type.
+     * Set Cloud disk billing mode.
+     * @param DiskChargeType Cloud disk billing mode.
      */
     public void setDiskChargeType(String DiskChargeType) {
         this.DiskChargeType = DiskChargeType;
@@ -304,16 +317,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the cloud disk is mounted on the cloud host. 
-     * @return Attached Whether the cloud disk is mounted on the cloud host.
+     * Get Whether the cloud disk is mounted on the CVM. 
+     * @return Attached Whether the cloud disk is mounted on the CVM.
      */
     public Boolean getAttached() {
         return this.Attached;
     }
 
     /**
-     * Set Whether the cloud disk is mounted on the cloud host.
-     * @param Attached Whether the cloud disk is mounted on the cloud host.
+     * Set Whether the cloud disk is mounted on the CVM.
+     * @param Attached Whether the cloud disk is mounted on the CVM.
      */
     public void setAttached(Boolean Attached) {
         this.Attached = Attached;
@@ -336,36 +349,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceIdList InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID of the CVM instance to which this cloud disk is currently mounted. 
+     * @return InstanceIdList ID of the CVM instance to which this cloud disk is currently mounted.
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceIdList InstanceId of the CVM instance to which this cloud disk is currently mounted.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the CVM instance to which this cloud disk is currently mounted.
+     * @param InstanceIdList ID of the CVM instance to which this cloud disk is currently mounted.
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;
     }
 
     /**
-     * Get ID of the cloud host to which the Cloud disk is mounted. 
-     * @return InstanceId ID of the cloud host to which the Cloud disk is mounted.
+     * Get ID of the CVM to which the cloud disk is mounted. 
+     * @return InstanceId ID of the CVM to which the cloud disk is mounted.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the cloud host to which the Cloud disk is mounted.
-     * @param InstanceId ID of the cloud host to which the Cloud disk is mounted.
+     * Set ID of the CVM to which the cloud disk is mounted.
+     * @param InstanceId ID of the CVM to which the cloud disk is mounted.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -417,6 +426,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setUnderwriteExpiredTime(String UnderwriteExpiredTime) {
         this.UnderwriteExpiredTime = UnderwriteExpiredTime;
+    }
+
+    /**
+     * Get Tag. 
+     * @return Tags Tag.
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag.
+     * @param Tags Tag.
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Cloud disk additional performance value. Unit: MB/s. 
+     * @return ThroughputPerformance Cloud disk additional performance value. Unit: MB/s.
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set Cloud disk additional performance value. Unit: MB/s.
+     * @param ThroughputPerformance Cloud disk additional performance value. Unit: MB/s.
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
     }
 
     public CBSInstance() {
@@ -481,6 +522,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UnderwriteExpiredTime != null) {
             this.UnderwriteExpiredTime = new String(source.UnderwriteExpiredTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
     }
 
 
@@ -505,6 +555,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "EmrResourceId", this.EmrResourceId);
         this.setParamSimple(map, prefix + "UnderwriteExpiredTime", this.UnderwriteExpiredTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyYarnQueueV2Request extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Scheduler type. The values are as follows:
+    * Scheduler type. Valid values:
 
 1. capacity
 2. fair
@@ -41,34 +41,34 @@ public class ModifyYarnQueueV2Request extends AbstractModel {
     private String Scheduler;
 
     /**
-    * Resource pool data
+    * Resource pool data.
     */
     @SerializedName("ConfigModifyInfoList")
     @Expose
     private ConfigModifyInfoV2 [] ConfigModifyInfoList;
 
     /**
-     * Get Cluster ID 
-     * @return InstanceId Cluster ID
+     * Get Cluster ID. 
+     * @return InstanceId Cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster ID
-     * @param InstanceId Cluster ID
+     * Set Cluster ID.
+     * @param InstanceId Cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Scheduler type. The values are as follows:
+     * Get Scheduler type. Valid values:
 
 1. capacity
 2. fair 
-     * @return Scheduler Scheduler type. The values are as follows:
+     * @return Scheduler Scheduler type. Valid values:
 
 1. capacity
 2. fair
@@ -78,11 +78,11 @@ public class ModifyYarnQueueV2Request extends AbstractModel {
     }
 
     /**
-     * Set Scheduler type. The values are as follows:
+     * Set Scheduler type. Valid values:
 
 1. capacity
 2. fair
-     * @param Scheduler Scheduler type. The values are as follows:
+     * @param Scheduler Scheduler type. Valid values:
 
 1. capacity
 2. fair
@@ -92,16 +92,16 @@ public class ModifyYarnQueueV2Request extends AbstractModel {
     }
 
     /**
-     * Get Resource pool data 
-     * @return ConfigModifyInfoList Resource pool data
+     * Get Resource pool data. 
+     * @return ConfigModifyInfoList Resource pool data.
      */
     public ConfigModifyInfoV2 [] getConfigModifyInfoList() {
         return this.ConfigModifyInfoList;
     }
 
     /**
-     * Set Resource pool data
-     * @param ConfigModifyInfoList Resource pool data
+     * Set Resource pool data.
+     * @param ConfigModifyInfoList Resource pool data.
      */
     public void setConfigModifyInfoList(ConfigModifyInfoV2 [] ConfigModifyInfoList) {
         this.ConfigModifyInfoList = ConfigModifyInfoList;

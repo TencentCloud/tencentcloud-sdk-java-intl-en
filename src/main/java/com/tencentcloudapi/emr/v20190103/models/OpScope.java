@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class OpScope extends AbstractModel {
 
     /**
-    * The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Operation scope, with information of the service to be operated.
     */
     @SerializedName("ServiceInfoList")
     @Expose
     private ServiceBasicRestartInfo [] ServiceInfoList;
 
     /**
-     * Get The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceInfoList The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Operation scope, with information of the service to be operated. 
+     * @return ServiceInfoList Operation scope, with information of the service to be operated.
      */
     public ServiceBasicRestartInfo [] getServiceInfoList() {
         return this.ServiceInfoList;
     }
 
     /**
-     * Set The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceInfoList The information of the services to operate on.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Operation scope, with information of the service to be operated.
+     * @param ServiceInfoList Operation scope, with information of the service to be operated.
      */
     public void setServiceInfoList(ServiceBasicRestartInfo [] ServiceInfoList) {
         this.ServiceInfoList = ServiceInfoList;
